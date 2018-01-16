@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.vastsum.properties.WeifactoryProperties",
+      "name": "com.vastsum.weifactory",
+      "type": "com.vastsum.properties.WeifactoryProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.vastsum.properties.WeifactoryProperties",
+      "name": "com.vastsum.weifactory.alisms",
+      "type": "com.vastsum.properties.AliSmsProperties"
+    },
+    {
+      "sourceType": "com.vastsum.properties.WeifactoryProperties",
+      "name": "com.vastsum.weifactory.image",
+      "type": "com.vastsum.properties.ImageProperties"
+    },
+    {
+      "sourceType": "com.vastsum.properties.WeifactoryProperties",
+      "name": "com.vastsum.weifactory.sms",
+      "type": "com.vastsum.core.properties.SmsProperties"
+    }
+  ]
+}

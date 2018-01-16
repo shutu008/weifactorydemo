@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vastsum.dao.MechanismMapper">
+  <resultMap id="BaseResultMap" type="com.vastsum.entity.Mechanism">
+    <id column="mechanism_id" jdbcType="INTEGER" property="mechanismId" />
+    <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+    <result column="timely_intervention" jdbcType="BIT" property="timelyIntervention" />
+    <result column="air_disinfection" jdbcType="BIT" property="airDisinfection" />
+    <result column="liquid_disinfection" jdbcType="BIT" property="liquidDisinfection" />
+    <result column="wind" jdbcType="BIT" property="wind" />
+    <result column="compressor" jdbcType="BIT" property="compressor" />
+    <result column="spray" jdbcType="BIT" property="spray" />
+    <result column="led_top_1" jdbcType="BIT" property="ledTop1" />
+    <result column="led_top_2" jdbcType="BIT" property="ledTop2" />
+    <result column="led_top_3" jdbcType="BIT" property="ledTop3" />
+    <result column="led_middle_1" jdbcType="BIT" property="ledMiddle1" />
+    <result column="led_middle_2" jdbcType="BIT" property="ledMiddle2" />
+    <result column="led_middle_3" jdbcType="BIT" property="ledMiddle3" />
+    <result column="led_bottom_1" jdbcType="BIT" property="ledBottom1" />
+    <result column="led_bottom_2" jdbcType="BIT" property="ledBottom2" />
+    <result column="led_bottom_3" jdbcType="BIT" property="ledBottom3" />
+    <result column="heat_1" jdbcType="BIT" property="heat1" />
+    <result column="heat_2" jdbcType="BIT" property="heat2" />
+    <result column="heat_3" jdbcType="BIT" property="heat3" />
+    <result column="waterin_1" jdbcType="BIT" property="waterin1" />
+    <result column="waterin_2" jdbcType="BIT" property="waterin2" />
+    <result column="waterin_3" jdbcType="BIT" property="waterin3" />
+    <result column="waterout_1" jdbcType="BIT" property="waterout1" />
+    <result column="waterout_2" jdbcType="BIT" property="waterout2" />
+    <result column="waterout_3" jdbcType="BIT" property="waterout3" />
+    <result column="seedled" jdbcType="BIT" property="seedled" />
+    <result column="seedspray" jdbcType="BIT" property="seedspray" />
+    <result column="pump" jdbcType="BIT" property="pump" />
+    <result column="fan_1" jdbcType="BIT" property="fan1" />
+    <result column="fan_2" jdbcType="BIT" property="fan2" />
+    <result column="fan_3" jdbcType="BIT" property="fan3" />
+    <result column="addwater" jdbcType="BIT" property="addwater" />
+    <result column="drainage" jdbcType="BIT" property="drainage" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    mechanism_id, device_id, timely_intervention, air_disinfection, liquid_disinfection, 
+    wind, compressor, spray, led_top_1, led_top_2, led_top_3, led_middle_1, led_middle_2, 
+    led_middle_3, led_bottom_1, led_bottom_2, led_bottom_3, heat_1, heat_2, heat_3, waterin_1, 
+    waterin_2, waterin_3, waterout_1, waterout_2, waterout_3, seedled, seedspray, pump, 
+    fan_1, fan_2, fan_3, addwater, drainage
+  </sql>
+  <select id="selectByExample" parameterType="com.vastsum.entity.MechanismExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from mechanism
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from mechanism
+    where mechanism_id = #{mechanismId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from mechanism
+    where mechanism_id = #{mechanismId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.vastsum.entity.MechanismExample">
+    delete from mechanism
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.vastsum.entity.Mechanism">
+    insert into mechanism (mechanism_id, device_id, timely_intervention, 
+      air_disinfection, liquid_disinfection, wind, 
+      compressor, spray, led_top_1, led_top_2, 
+      led_top_3, led_middle_1, led_middle_2, 
+      led_middle_3, led_bottom_1, led_bottom_2, 
+      led_bottom_3, heat_1, heat_2, heat_3, 
+      waterin_1, waterin_2, waterin_3, waterout_1, 
+      waterout_2, waterout_3, seedled, 
+      seedspray, pump, fan_1, fan_2, 
+      fan_3, addwater, drainage)
+    values (#{mechanismId,jdbcType=INTEGER}, #{deviceId,jdbcType=INTEGER}, #{timelyIntervention,jdbcType=BIT}, 
+      #{airDisinfection,jdbcType=BIT}, #{liquidDisinfection,jdbcType=BIT}, #{wind,jdbcType=BIT}, 
+      #{compressor,jdbcType=BIT}, #{spray,jdbcType=BIT}, #{ledTop1,jdbcType=BIT}, #{ledTop2,jdbcType=BIT}, 
+      #{ledTop3,jdbcType=BIT}, #{ledMiddle1,jdbcType=BIT}, #{ledMiddle2,jdbcType=BIT}, 
+      #{ledMiddle3,jdbcType=BIT}, #{ledBottom1,jdbcType=BIT}, #{ledBottom2,jdbcType=BIT}, 
+      #{ledBottom3,jdbcType=BIT}, #{heat1,jdbcType=BIT}, #{heat2,jdbcType=BIT}, #{heat3,jdbcType=BIT}, 
+      #{waterin1,jdbcType=BIT}, #{waterin2,jdbcType=BIT}, #{waterin3,jdbcType=BIT}, #{waterout1,jdbcType=BIT}, 
+      #{waterout2,jdbcType=BIT}, #{waterout3,jdbcType=BIT}, #{seedled,jdbcType=BIT}, 
+      #{seedspray,jdbcType=BIT}, #{pump,jdbcType=BIT}, #{fan1,jdbcType=BIT}, #{fan2,jdbcType=BIT}, 
+      #{fan3,jdbcType=BIT}, #{addwater,jdbcType=BIT}, #{drainage,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.vastsum.entity.Mechanism">
+    insert into mechanism
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mechanismId != null">
+        mechanism_id,
+      </if>
+      <if test="deviceId != null">
+        device_id,
+      </if>
+      <if test="timelyIntervention != null">
+        timely_intervention,
+      </if>
+      <if test="airDisinfection != null">
+        air_disinfection,
+      </if>
+      <if test="liquidDisinfection != null">
+        liquid_disinfection,
+      </if>
+      <if test="wind != null">
+        wind,
+      </if>
+      <if test="compressor != null">
+        compressor,
+      </if>
+      <if test="spray != null">
+        spray,
+      </if>
+      <if test="ledTop1 != null">
+        led_top_1,
+      </if>
+      <if test="ledTop2 != null">
+        led_top_2,
+      </if>
+      <if test="ledTop3 != null">
+        led_top_3,
+      </if>
+      <if test="ledMiddle1 != null">
+        led_middle_1,
+      </if>
+      <if test="ledMiddle2 != null">
+        led_middle_2,
+      </if>
+      <if test="ledMiddle3 != null">
+        led_middle_3,
+      </if>
+      <if test="ledBottom1 != null">
+        led_bottom_1,
+      </if>
+      <if test="ledBottom2 != null">
+        led_bottom_2,
+      </if>
+      <if test="ledBottom3 != null">
+        led_bottom_3,
+      </if>
+      <if test="heat1 != null">
+        heat_1,
+      </if>
+      <if test="heat2 != null">
+        heat_2,
+      </if>
+      <if test="heat3 != null">
+        heat_3,
+      </if>
+      <if test="waterin1 != null">
+        waterin_1,
+      </if>
+      <if test="waterin2 != null">
+        waterin_2,
+      </if>
+      <if test="waterin3 != null">
+        waterin_3,
+      </if>
+      <if test="waterout1 != null">
+        waterout_1,
+      </if>
+      <if test="waterout2 != null">
+        waterout_2,
+      </if>
+      <if test="waterout3 != null">
+        waterout_3,
+      </if>
+      <if test="seedled != null">
+        seedled,
+      </if>
+      <if test="seedspray != null">
+        seedspray,
+      </if>
+      <if test="pump != null">
+        pump,
+      </if>
+      <if test="fan1 != null">
+        fan_1,
+      </if>
+      <if test="fan2 != null">
+        fan_2,
+      </if>
+      <if test="fan3 != null">
+        fan_3,
+      </if>
+      <if test="addwater != null">
+        addwater,
+      </if>
+      <if test="drainage != null">
+        drainage,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mechanismId != null">
+        #{mechanismId,jdbcType=INTEGER},
+      </if>
+      <if test="deviceId != null">
+        #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="timelyIntervention != null">
+        #{timelyIntervention,jdbcType=BIT},
+      </if>
+      <if test="airDisinfection != null">
+        #{airDisinfection,jdbcType=BIT},
+      </if>
+      <if test="liquidDisinfection != null">
+        #{liquidDisinfection,jdbcType=BIT},
+      </if>
+      <if test="wind != null">
+        #{wind,jdbcType=BIT},
+      </if>
+      <if test="compressor != null">
+        #{compressor,jdbcType=BIT},
+      </if>
+      <if test="spray != null">
+        #{spray,jdbcType=BIT},
+      </if>
+      <if test="ledTop1 != null">
+        #{ledTop1,jdbcType=BIT},
+      </if>
+      <if test="ledTop2 != null">
+        #{ledTop2,jdbcType=BIT},
+      </if>
+      <if test="ledTop3 != null">
+        #{ledTop3,jdbcType=BIT},
+      </if>
+      <if test="ledMiddle1 != null">
+        #{ledMiddle1,jdbcType=BIT},
+      </if>
+      <if test="ledMiddle2 != null">
+        #{ledMiddle2,jdbcType=BIT},
+      </if>
+      <if test="ledMiddle3 != null">
+        #{ledMiddle3,jdbcType=BIT},
+      </if>
+      <if test="ledBottom1 != null">
+        #{ledBottom1,jdbcType=BIT},
+      </if>
+      <if test="ledBottom2 != null">
+        #{ledBottom2,jdbcType=BIT},
+      </if>
+      <if test="ledBottom3 != null">
+        #{ledBottom3,jdbcType=BIT},
+      </if>
+      <if test="heat1 != null">
+        #{heat1,jdbcType=BIT},
+      </if>
+      <if test="heat2 != null">
+        #{heat2,jdbcType=BIT},
+      </if>
+      <if test="heat3 != null">
+        #{heat3,jdbcType=BIT},
+      </if>
+      <if test="waterin1 != null">
+        #{waterin1,jdbcType=BIT},
+      </if>
+      <if test="waterin2 != null">
+        #{waterin2,jdbcType=BIT},
+      </if>
+      <if test="waterin3 != null">
+        #{waterin3,jdbcType=BIT},
+      </if>
+      <if test="waterout1 != null">
+        #{waterout1,jdbcType=BIT},
+      </if>
+      <if test="waterout2 != null">
+        #{waterout2,jdbcType=BIT},
+      </if>
+      <if test="waterout3 != null">
+        #{waterout3,jdbcType=BIT},
+      </if>
+      <if test="seedled != null">
+        #{seedled,jdbcType=BIT},
+      </if>
+      <if test="seedspray != null">
+        #{seedspray,jdbcType=BIT},
+      </if>
+      <if test="pump != null">
+        #{pump,jdbcType=BIT},
+      </if>
+      <if test="fan1 != null">
+        #{fan1,jdbcType=BIT},
+      </if>
+      <if test="fan2 != null">
+        #{fan2,jdbcType=BIT},
+      </if>
+      <if test="fan3 != null">
+        #{fan3,jdbcType=BIT},
+      </if>
+      <if test="addwater != null">
+        #{addwater,jdbcType=BIT},
+      </if>
+      <if test="drainage != null">
+        #{drainage,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.vastsum.entity.MechanismExample" resultType="java.lang.Long">
+    select count(*) from mechanism
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update mechanism
+    <set>
+      <if test="record.mechanismId != null">
+        mechanism_id = #{record.mechanismId,jdbcType=INTEGER},
+      </if>
+      <if test="record.deviceId != null">
+        device_id = #{record.deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="record.timelyIntervention != null">
+        timely_intervention = #{record.timelyIntervention,jdbcType=BIT},
+      </if>
+      <if test="record.airDisinfection != null">
+        air_disinfection = #{record.airDisinfection,jdbcType=BIT},
+      </if>
+      <if test="record.liquidDisinfection != null">
+        liquid_disinfection = #{record.liquidDisinfection,jdbcType=BIT},
+      </if>
+      <if test="record.wind != null">
+        wind = #{record.wind,jdbcType=BIT},
+      </if>
+      <if test="record.compressor != null">
+        compressor = #{record.compressor,jdbcType=BIT},
+      </if>
+      <if test="record.spray != null">
+        spray = #{record.spray,jdbcType=BIT},
+      </if>
+      <if test="record.ledTop1 != null">
+        led_top_1 = #{record.ledTop1,jdbcType=BIT},
+      </if>
+      <if test="record.ledTop2 != null">
+        led_top_2 = #{record.ledTop2,jdbcType=BIT},
+      </if>
+      <if test="record.ledTop3 != null">
+        led_top_3 = #{record.ledTop3,jdbcType=BIT},
+      </if>
+      <if test="record.ledMiddle1 != null">
+        led_middle_1 = #{record.ledMiddle1,jdbcType=BIT},
+      </if>
+      <if test="record.ledMiddle2 != null">
+        led_middle_2 = #{record.ledMiddle2,jdbcType=BIT},
+      </if>
+      <if test="record.ledMiddle3 != null">
+        led_middle_3 = #{record.ledMiddle3,jdbcType=BIT},
+      </if>
+      <if test="record.ledBottom1 != null">
+        led_bottom_1 = #{record.ledBottom1,jdbcType=BIT},
+      </if>
+      <if test="record.ledBottom2 != null">
+        led_bottom_2 = #{record.ledBottom2,jdbcType=BIT},
+      </if>
+      <if test="record.ledBottom3 != null">
+        led_bottom_3 = #{record.ledBottom3,jdbcType=BIT},
+      </if>
+      <if test="record.heat1 != null">
+        heat_1 = #{record.heat1,jdbcType=BIT},
+      </if>
+      <if test="record.heat2 != null">
+        heat_2 = #{record.heat2,jdbcType=BIT},
+      </if>
+      <if test="record.heat3 != null">
+        heat_3 = #{record.heat3,jdbcType=BIT},
+      </if>
+      <if test="record.waterin1 != null">
+        waterin_1 = #{record.waterin1,jdbcType=BIT},
+      </if>
+      <if test="record.waterin2 != null">
+        waterin_2 = #{record.waterin2,jdbcType=BIT},
+      </if>
+      <if test="record.waterin3 != null">
+        waterin_3 = #{record.waterin3,jdbcType=BIT},
+      </if>
+      <if test="record.waterout1 != null">
+        waterout_1 = #{record.waterout1,jdbcType=BIT},
+      </if>
+      <if test="record.waterout2 != null">
+        waterout_2 = #{record.waterout2,jdbcType=BIT},
+      </if>
+      <if test="record.waterout3 != null">
+        waterout_3 = #{record.waterout3,jdbcType=BIT},
+      </if>
+      <if test="record.seedled != null">
+        seedled = #{record.seedled,jdbcType=BIT},
+      </if>
+      <if test="record.seedspray != null">
+        seedspray = #{record.seedspray,jdbcType=BIT},
+      </if>
+      <if test="record.pump != null">
+        pump = #{record.pump,jdbcType=BIT},
+      </if>
+      <if test="record.fan1 != null">
+        fan_1 = #{record.fan1,jdbcType=BIT},
+      </if>
+      <if test="record.fan2 != null">
+        fan_2 = #{record.fan2,jdbcType=BIT},
+      </if>
+      <if test="record.fan3 != null">
+        fan_3 = #{record.fan3,jdbcType=BIT},
+      </if>
+      <if test="record.addwater != null">
+        addwater = #{record.addwater,jdbcType=BIT},
+      </if>
+      <if test="record.drainage != null">
+        drainage = #{record.drainage,jdbcType=BIT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update mechanism
+    set mechanism_id = #{record.mechanismId,jdbcType=INTEGER},
+      device_id = #{record.deviceId,jdbcType=INTEGER},
+      timely_intervention = #{record.timelyIntervention,jdbcType=BIT},
+      air_disinfection = #{record.airDisinfection,jdbcType=BIT},
+      liquid_disinfection = #{record.liquidDisinfection,jdbcType=BIT},
+      wind = #{record.wind,jdbcType=BIT},
+      compressor = #{record.compressor,jdbcType=BIT},
+      spray = #{record.spray,jdbcType=BIT},
+      led_top_1 = #{record.ledTop1,jdbcType=BIT},
+      led_top_2 = #{record.ledTop2,jdbcType=BIT},
+      led_top_3 = #{record.ledTop3,jdbcType=BIT},
+      led_middle_1 = #{record.ledMiddle1,jdbcType=BIT},
+      led_middle_2 = #{record.ledMiddle2,jdbcType=BIT},
+      led_middle_3 = #{record.ledMiddle3,jdbcType=BIT},
+      led_bottom_1 = #{record.ledBottom1,jdbcType=BIT},
+      led_bottom_2 = #{record.ledBottom2,jdbcType=BIT},
+      led_bottom_3 = #{record.ledBottom3,jdbcType=BIT},
+      heat_1 = #{record.heat1,jdbcType=BIT},
+      heat_2 = #{record.heat2,jdbcType=BIT},
+      heat_3 = #{record.heat3,jdbcType=BIT},
+      waterin_1 = #{record.waterin1,jdbcType=BIT},
+      waterin_2 = #{record.waterin2,jdbcType=BIT},
+      waterin_3 = #{record.waterin3,jdbcType=BIT},
+      waterout_1 = #{record.waterout1,jdbcType=BIT},
+      waterout_2 = #{record.waterout2,jdbcType=BIT},
+      waterout_3 = #{record.waterout3,jdbcType=BIT},
+      seedled = #{record.seedled,jdbcType=BIT},
+      seedspray = #{record.seedspray,jdbcType=BIT},
+      pump = #{record.pump,jdbcType=BIT},
+      fan_1 = #{record.fan1,jdbcType=BIT},
+      fan_2 = #{record.fan2,jdbcType=BIT},
+      fan_3 = #{record.fan3,jdbcType=BIT},
+      addwater = #{record.addwater,jdbcType=BIT},
+      drainage = #{record.drainage,jdbcType=BIT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.vastsum.entity.Mechanism">
+    update mechanism
+    <set>
+      <if test="deviceId != null">
+        device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="timelyIntervention != null">
+        timely_intervention = #{timelyIntervention,jdbcType=BIT},
+      </if>
+      <if test="airDisinfection != null">
+        air_disinfection = #{airDisinfection,jdbcType=BIT},
+      </if>
+      <if test="liquidDisinfection != null">
+        liquid_disinfection = #{liquidDisinfection,jdbcType=BIT},
+      </if>
+      <if test="wind != null">
+        wind = #{wind,jdbcType=BIT},
+      </if>
+      <if test="compressor != null">
+        compressor = #{compressor,jdbcType=BIT},
+      </if>
+      <if test="spray != null">
+        spray = #{spray,jdbcType=BIT},
+      </if>
+      <if test="ledTop1 != null">
+        led_top_1 = #{ledTop1,jdbcType=BIT},
+      </if>
+      <if test="ledTop2 != null">
+        led_top_2 = #{ledTop2,jdbcType=BIT},
+      </if>
+      <if test="ledTop3 != null">
+        led_top_3 = #{ledTop3,jdbcType=BIT},
+      </if>
+      <if test="ledMiddle1 != null">
+        led_middle_1 = #{ledMiddle1,jdbcType=BIT},
+      </if>
+      <if test="ledMiddle2 != null">
+        led_middle_2 = #{ledMiddle2,jdbcType=BIT},
+      </if>
+      <if test="ledMiddle3 != null">
+        led_middle_3 = #{ledMiddle3,jdbcType=BIT},
+      </if>
+      <if test="ledBottom1 != null">
+        led_bottom_1 = #{ledBottom1,jdbcType=BIT},
+      </if>
+      <if test="ledBottom2 != null">
+        led_bottom_2 = #{ledBottom2,jdbcType=BIT},
+      </if>
+      <if test="ledBottom3 != null">
+        led_bottom_3 = #{ledBottom3,jdbcType=BIT},
+      </if>
+      <if test="heat1 != null">
+        heat_1 = #{heat1,jdbcType=BIT},
+      </if>
+      <if test="heat2 != null">
+        heat_2 = #{heat2,jdbcType=BIT},
+      </if>
+      <if test="heat3 != null">
+        heat_3 = #{heat3,jdbcType=BIT},
+      </if>
+      <if test="waterin1 != null">
+        waterin_1 = #{waterin1,jdbcType=BIT},
+      </if>
+      <if test="waterin2 != null">
+        waterin_2 = #{waterin2,jdbcType=BIT},
+      </if>
+      <if test="waterin3 != null">
+        waterin_3 = #{waterin3,jdbcType=BIT},
+      </if>
+      <if test="waterout1 != null">
+        waterout_1 = #{waterout1,jdbcType=BIT},
+      </if>
+      <if test="waterout2 != null">
+        waterout_2 = #{waterout2,jdbcType=BIT},
+      </if>
+      <if test="waterout3 != null">
+        waterout_3 = #{waterout3,jdbcType=BIT},
+      </if>
+      <if test="seedled != null">
+        seedled = #{seedled,jdbcType=BIT},
+      </if>
+      <if test="seedspray != null">
+        seedspray = #{seedspray,jdbcType=BIT},
+      </if>
+      <if test="pump != null">
+        pump = #{pump,jdbcType=BIT},
+      </if>
+      <if test="fan1 != null">
+        fan_1 = #{fan1,jdbcType=BIT},
+      </if>
+      <if test="fan2 != null">
+        fan_2 = #{fan2,jdbcType=BIT},
+      </if>
+      <if test="fan3 != null">
+        fan_3 = #{fan3,jdbcType=BIT},
+      </if>
+      <if test="addwater != null">
+        addwater = #{addwater,jdbcType=BIT},
+      </if>
+      <if test="drainage != null">
+        drainage = #{drainage,jdbcType=BIT},
+      </if>
+    </set>
+    where mechanism_id = #{mechanismId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.Mechanism">
+    update mechanism
+    set device_id = #{deviceId,jdbcType=INTEGER},
+      timely_intervention = #{timelyIntervention,jdbcType=BIT},
+      air_disinfection = #{airDisinfection,jdbcType=BIT},
+      liquid_disinfection = #{liquidDisinfection,jdbcType=BIT},
+      wind = #{wind,jdbcType=BIT},
+      compressor = #{compressor,jdbcType=BIT},
+      spray = #{spray,jdbcType=BIT},
+      led_top_1 = #{ledTop1,jdbcType=BIT},
+      led_top_2 = #{ledTop2,jdbcType=BIT},
+      led_top_3 = #{ledTop3,jdbcType=BIT},
+      led_middle_1 = #{ledMiddle1,jdbcType=BIT},
+      led_middle_2 = #{ledMiddle2,jdbcType=BIT},
+      led_middle_3 = #{ledMiddle3,jdbcType=BIT},
+      led_bottom_1 = #{ledBottom1,jdbcType=BIT},
+      led_bottom_2 = #{ledBottom2,jdbcType=BIT},
+      led_bottom_3 = #{ledBottom3,jdbcType=BIT},
+      heat_1 = #{heat1,jdbcType=BIT},
+      heat_2 = #{heat2,jdbcType=BIT},
+      heat_3 = #{heat3,jdbcType=BIT},
+      waterin_1 = #{waterin1,jdbcType=BIT},
+      waterin_2 = #{waterin2,jdbcType=BIT},
+      waterin_3 = #{waterin3,jdbcType=BIT},
+      waterout_1 = #{waterout1,jdbcType=BIT},
+      waterout_2 = #{waterout2,jdbcType=BIT},
+      waterout_3 = #{waterout3,jdbcType=BIT},
+      seedled = #{seedled,jdbcType=BIT},
+      seedspray = #{seedspray,jdbcType=BIT},
+      pump = #{pump,jdbcType=BIT},
+      fan_1 = #{fan1,jdbcType=BIT},
+      fan_2 = #{fan2,jdbcType=BIT},
+      fan_3 = #{fan3,jdbcType=BIT},
+      addwater = #{addwater,jdbcType=BIT},
+      drainage = #{drainage,jdbcType=BIT}
+    where mechanism_id = #{mechanismId,jdbcType=INTEGER}
+  </update>
+</mapper>
