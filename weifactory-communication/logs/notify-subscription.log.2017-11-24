@@ -1,0 +1,1089 @@
+2017-11-23 21:52:19,569 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Thu Nov 23 21:52:19 CST 2017]; root of context hierarchy
+2017-11-23 21:52:19,710 - Loading XML bean definitions from class path resource [spring-rmi.xml]
+2017-11-23 21:52:20,220 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-11-23 21:52:21,384 - Looking for RMI registry at port '8100'
+2017-11-23 21:52:22,697 - Could not detect RMI registry - creating new one
+2017-11-23 21:52:22,820 - Binding service 'ControlService' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[192.168.25.1:8100](local),objID:[0:0:0, 0]]]]
+2017-11-23 21:52:23,048 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-11-23 21:52:23,247 - Using default implementation for ThreadExecutor
+2017-11-23 21:52:23,278 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-23 21:52:23,278 - Quartz Scheduler v.2.2.3 created.
+2017-11-23 21:52:23,280 - RAMJobStore initialized.
+2017-11-23 21:52:23,281 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-23 21:52:23,281 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-23 21:52:23,281 - Quartz scheduler version: 2.2.3
+2017-11-23 21:52:23,283 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@7ac0e420
+2017-11-23 21:52:23,579 - Starting beans in phase 2147483647
+2017-11-23 21:52:23,579 - Starting Quartz Scheduler now
+2017-11-23 21:52:23,579 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-23 21:52:23,585 - Starting beans in phase 2147483647
+2017-11-23 21:52:24,610 - [id: 0x4abc5b7f] REGISTERED
+2017-11-23 21:52:24,614 - [id: 0x4abc5b7f] BIND: 0.0.0.0/0.0.0.0:8765
+2017-11-23 21:52:24,620 - [id: 0x4abc5b7f, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-11-23 21:52:41,634 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Thu Nov 23 21:52:41 CST 2017]; root of context hierarchy
+2017-11-23 21:52:41,797 - Loading XML bean definitions from class path resource [spring-rmi.xml]
+2017-11-23 21:52:42,138 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-11-23 21:52:43,369 - Looking for RMI registry at port '8100'
+2017-11-23 21:52:43,987 - Binding service 'ControlService' to RMI registry: RegistryImpl_Stub[UnicastRef [liveRef: [endpoint:[192.168.25.1:8100](remote),objID:[0:0:0, 0]]]]
+2017-11-23 21:52:44,163 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-11-23 21:52:44,393 - Using default implementation for ThreadExecutor
+2017-11-23 21:52:44,418 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-23 21:52:44,418 - Quartz Scheduler v.2.2.3 created.
+2017-11-23 21:52:44,420 - RAMJobStore initialized.
+2017-11-23 21:52:44,421 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-23 21:52:44,422 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-23 21:52:44,422 - Quartz scheduler version: 2.2.3
+2017-11-23 21:52:44,423 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6ad59d92
+2017-11-23 21:52:44,528 - Starting beans in phase 2147483647
+2017-11-23 21:52:44,529 - Starting Quartz Scheduler now
+2017-11-23 21:52:44,531 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-23 21:52:44,541 - Starting beans in phase 2147483647
+2017-11-23 21:52:45,386 - [id: 0x87105e0a] REGISTERED
+2017-11-23 21:52:45,391 - [id: 0x87105e0a] BIND: 0.0.0.0/0.0.0.0:8765
+2017-11-23 21:52:45,395 - [id: 0x87105e0a] CLOSE
+2017-11-23 21:52:45,397 - [id: 0x87105e0a] UNREGISTERED
+2017-11-23 21:52:57,147 - 客户端启动！！！
+2017-11-23 21:52:58,602 - [id: 0x4abc5b7f, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xf532d1c0, L:/127.0.0.1:8765 - R:/127.0.0.1:7153]
+2017-11-23 21:52:58,692 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 21:52:58,693 - 获取客户端ip:/127.0.0.1:7153
+2017-11-23 21:52:58,729 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 21:52:58,729 - 进行激活验证：返回时间戳为:1511445178729
+2017-11-23 21:52:59,677 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0xf532d1c0, L:/127.0.0.1:8765 - R:/127.0.0.1:7153]
+2017-11-23 21:52:59,812 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 21:52:59,815 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123132#
+2017-11-23 21:52:59,817 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:52:59,959 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123132#-数据处理结果：1
+2017-11-23 21:52:59,960 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123132#
+2017-11-23 21:52:59,960 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:00,022 - 本次定时任务开始时间：2017-11-23 21:53:00
+2017-11-23 21:53:00,095 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123132#-数据处理结果：1
+2017-11-23 21:53:00,097 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123132#
+2017-11-23 21:53:00,097 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:00,228 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123132#-数据处理结果：1
+2017-11-23 21:53:00,229 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123142#
+2017-11-23 21:53:00,229 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:00,354 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:00,355 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123142#
+2017-11-23 21:53:00,355 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:00,498 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:00,499 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123142#
+2017-11-23 21:53:00,499 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:00,669 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:00,670 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123142#
+2017-11-23 21:53:00,670 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:00,822 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:00,823 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123142#
+2017-11-23 21:53:00,823 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:00,969 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:00,970 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123142#
+2017-11-23 21:53:00,970 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:01,099 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:01,100 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123142#
+2017-11-23 21:53:01,100 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:01,234 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:01,235 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123142#
+2017-11-23 21:53:01,235 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:01,382 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:01,384 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123142#
+2017-11-23 21:53:01,384 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:01,532 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:01,533 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123142#
+2017-11-23 21:53:01,533 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:01,676 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123142#-数据处理结果：1
+2017-11-23 21:53:01,677 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123142#
+2017-11-23 21:53:01,677 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:01,829 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:01,830 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123142#
+2017-11-23 21:53:01,830 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:01,983 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:01,984 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#2506786123142#
+2017-11-23 21:53:01,984 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:02,102 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#2506786123142#-数据处理结果：1
+2017-11-23 21:53:02,103 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#2506786123142#
+2017-11-23 21:53:02,103 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 21:53:02,227 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#2506786123142#-数据处理结果：1
+2017-11-23 21:54:00,012 - 本次定时任务开始时间：2017-11-23 21:54:00
+2017-11-23 21:55:00,001 - 本次定时任务开始时间：2017-11-23 21:55:00
+2017-11-23 21:56:00,005 - 本次定时任务开始时间：2017-11-23 21:56:00
+2017-11-23 21:57:00,007 - 本次定时任务开始时间：2017-11-23 21:57:00
+2017-11-23 21:58:00,001 - 本次定时任务开始时间：2017-11-23 21:58:00
+2017-11-23 21:59:00,009 - 本次定时任务开始时间：2017-11-23 21:59:00
+2017-11-23 22:00:00,001 - 本次定时任务开始时间：2017-11-23 22:00:00
+2017-11-23 22:01:00,001 - 本次定时任务开始时间：2017-11-23 22:01:00
+2017-11-23 22:02:00,001 - 本次定时任务开始时间：2017-11-23 22:02:00
+2017-11-23 22:03:00,003 - 本次定时任务开始时间：2017-11-23 22:03:00
+2017-11-23 22:04:00,005 - 本次定时任务开始时间：2017-11-23 22:04:00
+2017-11-23 22:05:00,015 - 本次定时任务开始时间：2017-11-23 22:05:00
+2017-11-23 22:06:00,001 - 本次定时任务开始时间：2017-11-23 22:06:00
+2017-11-23 22:07:00,001 - 本次定时任务开始时间：2017-11-23 22:07:00
+2017-11-23 22:08:00,007 - 本次定时任务开始时间：2017-11-23 22:08:00
+2017-11-23 22:09:00,008 - 本次定时任务开始时间：2017-11-23 22:09:00
+2017-11-23 22:10:00,010 - 本次定时任务开始时间：2017-11-23 22:10:00
+2017-11-23 22:11:00,003 - 本次定时任务开始时间：2017-11-23 22:11:00
+2017-11-23 22:12:00,004 - 本次定时任务开始时间：2017-11-23 22:12:00
+2017-11-23 22:13:00,004 - 本次定时任务开始时间：2017-11-23 22:13:00
+2017-11-23 22:14:00,001 - 本次定时任务开始时间：2017-11-23 22:14:00
+2017-11-23 22:15:00,020 - 本次定时任务开始时间：2017-11-23 22:15:00
+2017-11-23 22:16:00,002 - 本次定时任务开始时间：2017-11-23 22:16:00
+2017-11-23 22:17:00,002 - 本次定时任务开始时间：2017-11-23 22:17:00
+2017-11-23 22:18:00,001 - 本次定时任务开始时间：2017-11-23 22:18:00
+2017-11-23 22:19:00,001 - 本次定时任务开始时间：2017-11-23 22:19:00
+2017-11-23 22:20:00,000 - 本次定时任务开始时间：2017-11-23 22:20:00
+2017-11-23 22:21:00,001 - 本次定时任务开始时间：2017-11-23 22:21:00
+2017-11-23 22:21:22,673 - 客户端启动！！！
+2017-11-23 22:21:24,156 - [id: 0x4abc5b7f, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x6ecc7209, L:/127.0.0.1:8765 - R:/127.0.0.1:7841]
+2017-11-23 22:21:24,159 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:21:24,159 - 获取客户端ip:/127.0.0.1:7841
+2017-11-23 22:21:24,229 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:21:24,229 - 进行激活验证：返回时间戳为:1511446884229
+2017-11-23 22:21:24,362 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x6ecc7209, L:/127.0.0.1:8765 - R:/127.0.0.1:7841]
+2017-11-23 22:21:24,478 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:21:24,480 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123133#
+2017-11-23 22:21:24,480 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:24,602 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123133#-数据处理结果：1
+2017-11-23 22:21:24,603 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123133#
+2017-11-23 22:21:24,603 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:24,769 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123133#-数据处理结果：1
+2017-11-23 22:21:24,770 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123133#
+2017-11-23 22:21:24,770 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:24,923 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123133#-数据处理结果：1
+2017-11-23 22:21:24,924 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123143#
+2017-11-23 22:21:24,924 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:25,077 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:25,077 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123143#
+2017-11-23 22:21:25,078 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:25,231 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:25,231 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123143#
+2017-11-23 22:21:25,231 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:25,381 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:25,382 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123143#
+2017-11-23 22:21:25,382 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:25,533 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:25,534 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123143#
+2017-11-23 22:21:25,534 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:25,706 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:25,706 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123143#
+2017-11-23 22:21:25,707 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:25,845 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:25,846 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123143#
+2017-11-23 22:21:25,846 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:25,985 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:25,986 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123143#
+2017-11-23 22:21:25,986 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:26,124 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:26,124 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123143#
+2017-11-23 22:21:26,125 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:26,273 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:26,273 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123143#
+2017-11-23 22:21:26,274 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:26,430 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123143#-数据处理结果：1
+2017-11-23 22:21:26,430 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123143#
+2017-11-23 22:21:26,431 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:26,552 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:26,552 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123143#
+2017-11-23 22:21:26,553 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:26,715 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:26,716 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123143#
+2017-11-23 22:21:26,716 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:26,858 - 获取的数据为：#ZWGC2017100800004#16#2#26.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:26,858 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123143#
+2017-11-23 22:21:26,859 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-11-23 22:21:27,008 - 获取的数据为：#ZWGC2017100800004#17#2#27.2#2506786123143#-数据处理结果：1
+2017-11-23 22:21:58,319 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Thu Nov 23 22:21:58 CST 2017]; root of context hierarchy
+2017-11-23 22:21:58,467 - Loading XML bean definitions from class path resource [spring-rmi.xml]
+2017-11-23 22:21:58,786 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-11-23 22:22:00,112 - Looking for RMI registry at port '8100'
+2017-11-23 22:22:01,739 - Could not detect RMI registry - creating new one
+2017-11-23 22:22:01,817 - Binding service 'ControlService' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[192.168.25.1:8100](local),objID:[0:0:0, 0]]]]
+2017-11-23 22:22:01,936 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-11-23 22:22:02,075 - Using default implementation for ThreadExecutor
+2017-11-23 22:22:02,096 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-23 22:22:02,096 - Quartz Scheduler v.2.2.3 created.
+2017-11-23 22:22:02,097 - RAMJobStore initialized.
+2017-11-23 22:22:02,098 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-23 22:22:02,099 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-23 22:22:02,099 - Quartz scheduler version: 2.2.3
+2017-11-23 22:22:02,100 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@289710d9
+2017-11-23 22:22:02,177 - Starting beans in phase 2147483647
+2017-11-23 22:22:02,177 - Starting Quartz Scheduler now
+2017-11-23 22:22:02,177 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-23 22:22:02,181 - Starting beans in phase 2147483647
+2017-11-23 22:22:02,896 - [id: 0x3af1f527] REGISTERED
+2017-11-23 22:22:02,898 - [id: 0x3af1f527] BIND: 0.0.0.0/0.0.0.0:8765
+2017-11-23 22:22:02,905 - [id: 0x3af1f527, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-11-23 22:22:22,503 - 客户端启动！！！
+2017-11-23 22:22:24,289 - [id: 0x3af1f527, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x43018ba6, L:/127.0.0.1:8765 - R:/127.0.0.1:7932]
+2017-11-23 22:22:24,348 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:22:24,349 - 获取客户端ip:/127.0.0.1:7932
+2017-11-23 22:22:24,382 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:22:24,382 - 进行激活验证：返回时间戳为:1511446944382
+2017-11-23 22:22:24,968 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x43018ba6, L:/127.0.0.1:8765 - R:/127.0.0.1:7932]
+2017-11-23 22:22:25,094 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:22:25,098 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123134#
+2017-11-23 22:22:25,235 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123134#-数据处理结果：1
+2017-11-23 22:22:25,235 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123134#
+2017-11-23 22:22:25,387 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:22:25,388 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123134#
+2017-11-23 22:22:25,546 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:22:25,547 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123144#
+2017-11-23 22:22:25,693 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:25,693 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123144#
+2017-11-23 22:22:25,839 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:25,839 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123144#
+2017-11-23 22:22:25,981 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:25,981 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123144#
+2017-11-23 22:22:26,129 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:26,130 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123144#
+2017-11-23 22:22:26,297 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:26,298 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123144#
+2017-11-23 22:22:26,427 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:26,427 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123144#
+2017-11-23 22:22:26,554 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:26,554 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123144#
+2017-11-23 22:22:26,698 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:26,699 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123144#
+2017-11-23 22:22:26,819 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:26,820 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123144#
+2017-11-23 22:22:26,949 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123144#-数据处理结果：1
+2017-11-23 22:22:26,950 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123144#
+2017-11-23 22:22:27,090 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:27,090 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123144#
+2017-11-23 22:22:27,268 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:22:27,268 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123144#
+2017-11-23 22:22:27,476 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-11-23 22:22:27,568 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-11-23 22:22:27,703 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123144#
+2017-11-23 22:23:00,033 - 本次定时任务开始时间：2017-11-23 22:23:00
+2017-11-23 22:23:17,545 - 客户端启动！！！
+2017-11-23 22:23:19,300 - [id: 0x3af1f527, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x294d3829, L:/127.0.0.1:8765 - R:/127.0.0.1:7988]
+2017-11-23 22:23:19,320 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:23:19,320 - 获取客户端ip:/127.0.0.1:7988
+2017-11-23 22:23:19,376 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:23:19,376 - 进行激活验证：返回时间戳为:1511446999376
+2017-11-23 22:23:19,506 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x294d3829, L:/127.0.0.1:8765 - R:/127.0.0.1:7988]
+2017-11-23 22:23:19,636 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:23:19,637 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123134#
+2017-11-23 22:23:19,794 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123134#-数据处理结果：1
+2017-11-23 22:23:19,794 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123134#
+2017-11-23 22:23:19,945 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:23:19,946 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123134#
+2017-11-23 22:23:20,068 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:23:20,069 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123144#
+2017-11-23 22:23:20,210 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:20,211 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123144#
+2017-11-23 22:23:20,335 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:20,335 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123144#
+2017-11-23 22:23:20,471 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:20,472 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123144#
+2017-11-23 22:23:20,626 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:20,626 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123144#
+2017-11-23 22:23:20,793 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:20,794 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123144#
+2017-11-23 22:23:20,944 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:20,945 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123144#
+2017-11-23 22:23:21,091 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:21,092 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123144#
+2017-11-23 22:23:21,235 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:21,235 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123144#
+2017-11-23 22:23:21,365 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:21,366 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123144#
+2017-11-23 22:23:21,513 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123144#-数据处理结果：1
+2017-11-23 22:23:21,514 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123144#
+2017-11-23 22:23:21,658 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:21,658 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123144#
+2017-11-23 22:23:21,826 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:23:21,827 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123144#
+2017-11-23 22:23:21,952 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123144#
+2017-11-23 22:24:00,004 - 本次定时任务开始时间：2017-11-23 22:24:00
+2017-11-23 22:25:00,005 - 本次定时任务开始时间：2017-11-23 22:25:00
+2017-11-23 22:26:00,002 - 本次定时任务开始时间：2017-11-23 22:26:00
+2017-11-23 22:26:21,138 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:394)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:443)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:31)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:338)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2237)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:153)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:144)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:196)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 7 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:213)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:297)
+	... 26 more
+2017-11-23 22:26:21,144 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Could not get JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:394)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:443)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:31)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1038)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:338)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2237)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:153)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:144)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:196)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:77)
+	... 7 more
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:213)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:297)
+	... 26 more
+2017-11-23 22:26:53,831 - 客户端启动！！！
+2017-11-23 22:26:55,854 - [id: 0x3af1f527, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xb466cfdb, L:/127.0.0.1:8765 - R:/127.0.0.1:8123]
+2017-11-23 22:26:55,909 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:26:55,909 - 获取客户端ip:/127.0.0.1:8123
+2017-11-23 22:26:55,971 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:26:55,971 - 进行激活验证：返回时间戳为:1511447215971
+2017-11-23 22:26:56,118 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0xb466cfdb, L:/127.0.0.1:8765 - R:/127.0.0.1:8123]
+2017-11-23 22:26:56,238 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:26:56,239 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123134#
+2017-11-23 22:26:56,380 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123134#-数据处理结果：1
+2017-11-23 22:26:56,381 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123134#
+2017-11-23 22:26:56,542 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:26:56,543 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123134#
+2017-11-23 22:26:56,703 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:26:56,703 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123144#
+2017-11-23 22:26:56,839 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:56,839 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123144#
+2017-11-23 22:26:56,966 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:56,967 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123144#
+2017-11-23 22:26:57,109 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:57,110 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123144#
+2017-11-23 22:26:57,237 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:57,238 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123144#
+2017-11-23 22:26:57,380 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:57,381 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123144#
+2017-11-23 22:26:57,519 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:57,520 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123144#
+2017-11-23 22:26:57,662 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:57,663 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123144#
+2017-11-23 22:26:57,819 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:57,819 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123144#
+2017-11-23 22:26:57,944 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:57,944 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123144#
+2017-11-23 22:26:58,080 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123144#-数据处理结果：1
+2017-11-23 22:26:58,080 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123144#
+2017-11-23 22:26:58,233 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:58,233 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123144#
+2017-11-23 22:26:58,374 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:26:58,374 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123144#
+2017-11-23 22:26:58,492 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123144#
+2017-11-23 22:27:00,001 - 本次定时任务开始时间：2017-11-23 22:27:00
+2017-11-23 22:27:29,673 - 客户端启动！！！
+2017-11-23 22:27:31,236 - [id: 0x3af1f527, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xf198a161, L:/127.0.0.1:8765 - R:/127.0.0.1:8180]
+2017-11-23 22:27:31,250 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:27:31,250 - 获取客户端ip:/127.0.0.1:8180
+2017-11-23 22:27:31,328 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:27:31,328 - 进行激活验证：返回时间戳为:1511447251328
+2017-11-23 22:27:31,477 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0xf198a161, L:/127.0.0.1:8765 - R:/127.0.0.1:8180]
+2017-11-23 22:27:31,598 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:27:31,599 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123134#
+2017-11-23 22:27:31,707 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123134#-数据处理结果：1
+2017-11-23 22:27:31,707 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123134#
+2017-11-23 22:27:31,847 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:27:31,847 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123134#
+2017-11-23 22:27:31,979 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:27:31,979 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123144#
+2017-11-23 22:27:32,113 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:32,114 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123144#
+2017-11-23 22:27:32,227 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:32,228 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123144#
+2017-11-23 22:27:32,376 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:32,376 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123144#
+2017-11-23 22:27:32,500 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:32,501 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123144#
+2017-11-23 22:27:32,656 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:32,657 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123144#
+2017-11-23 22:27:32,803 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:32,803 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123144#
+2017-11-23 22:27:32,951 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:32,951 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123144#
+2017-11-23 22:27:33,116 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:33,117 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123144#
+2017-11-23 22:27:33,249 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:33,250 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123144#
+2017-11-23 22:27:33,419 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123144#-数据处理结果：1
+2017-11-23 22:27:33,419 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123144#
+2017-11-23 22:27:33,567 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:33,568 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123144#
+2017-11-23 22:27:33,694 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:27:33,695 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123144#
+2017-11-23 22:27:33,811 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123144#
+2017-11-23 22:28:00,001 - 本次定时任务开始时间：2017-11-23 22:28:00
+2017-11-23 22:28:32,389 - 客户端启动！！！
+2017-11-23 22:28:33,959 - [id: 0x3af1f527, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x88e3a6c7, L:/127.0.0.1:8765 - R:/127.0.0.1:8261]
+2017-11-23 22:28:33,973 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:28:33,974 - 获取客户端ip:/127.0.0.1:8261
+2017-11-23 22:28:34,079 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:28:34,079 - 进行激活验证：返回时间戳为:1511447314079
+2017-11-23 22:28:34,263 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x88e3a6c7, L:/127.0.0.1:8765 - R:/127.0.0.1:8261]
+2017-11-23 22:28:34,400 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:28:34,401 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123134#
+2017-11-23 22:28:34,540 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123134#-数据处理结果：1
+2017-11-23 22:28:34,541 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123134#
+2017-11-23 22:28:34,680 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:28:34,681 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123134#
+2017-11-23 22:28:34,813 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:28:34,814 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123144#
+2017-11-23 22:28:34,945 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:34,946 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123144#
+2017-11-23 22:28:35,140 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:35,140 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123144#
+2017-11-23 22:28:35,276 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:35,277 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123144#
+2017-11-23 22:28:35,409 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:35,410 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123144#
+2017-11-23 22:28:35,542 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:35,543 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123144#
+2017-11-23 22:28:35,691 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:35,692 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123144#
+2017-11-23 22:28:35,839 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:35,839 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123144#
+2017-11-23 22:28:35,977 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:35,977 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123144#
+2017-11-23 22:28:36,095 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:36,096 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123144#
+2017-11-23 22:28:36,211 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123144#-数据处理结果：1
+2017-11-23 22:28:36,211 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123144#
+2017-11-23 22:28:36,337 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:36,337 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123144#
+2017-11-23 22:28:36,492 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:28:36,492 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123144#
+2017-11-23 22:28:36,605 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123144#
+2017-11-23 22:29:00,002 - 本次定时任务开始时间：2017-11-23 22:29:00
+2017-11-23 22:29:22,530 - 客户端启动！！！
+2017-11-23 22:29:24,224 - [id: 0x3af1f527, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x651d3a84, L:/127.0.0.1:8765 - R:/127.0.0.1:8333]
+2017-11-23 22:29:24,230 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:29:24,230 - 获取客户端ip:/127.0.0.1:8333
+2017-11-23 22:29:24,307 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:29:24,307 - 进行激活验证：返回时间戳为:1511447364307
+2017-11-23 22:29:24,451 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x651d3a84, L:/127.0.0.1:8765 - R:/127.0.0.1:8333]
+2017-11-23 22:29:24,598 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:29:24,599 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123134#
+2017-11-23 22:29:24,752 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123134#-数据处理结果：1
+2017-11-23 22:29:24,753 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123134#
+2017-11-23 22:29:24,973 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:29:24,974 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123134#
+2017-11-23 22:29:25,404 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:29:25,404 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123144#
+2017-11-23 22:29:26,216 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:26,217 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123144#
+2017-11-23 22:29:26,817 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:26,818 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123144#
+2017-11-23 22:29:27,368 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:27,369 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123144#
+2017-11-23 22:29:27,546 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:27,546 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123144#
+2017-11-23 22:29:27,712 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:27,713 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123144#
+2017-11-23 22:29:27,853 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:27,854 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123144#
+2017-11-23 22:29:28,047 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:28,048 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123144#
+2017-11-23 22:29:28,225 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:28,225 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123144#
+2017-11-23 22:29:28,375 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:28,376 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123144#
+2017-11-23 22:29:28,570 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123144#-数据处理结果：1
+2017-11-23 22:29:28,571 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123144#
+2017-11-23 22:29:28,751 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:28,751 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123144#
+2017-11-23 22:29:28,899 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:29:28,899 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123144#
+2017-11-23 22:29:42,858 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123144#
+2017-11-23 22:30:43,668 - 本次定时任务开始时间：2017-11-23 22:30:41
+2017-11-23 22:31:00,000 - 本次定时任务开始时间：2017-11-23 22:31:00
+2017-11-23 22:32:00,027 - 本次定时任务开始时间：2017-11-23 22:32:00
+2017-11-23 22:33:00,074 - 本次定时任务开始时间：2017-11-23 22:33:00
+2017-11-23 22:33:02,858 - 客户端启动！！！
+2017-11-23 22:33:04,395 - [id: 0x3af1f527, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x1db713d5, L:/127.0.0.1:8765 - R:/127.0.0.1:8590]
+2017-11-23 22:33:04,411 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:33:04,412 - 获取客户端ip:/127.0.0.1:8590
+2017-11-23 22:33:04,514 - 来自客户端的原始数据：ZWGC201710080008
+2017-11-23 22:33:04,514 - 进行激活验证：返回时间戳为:1511447584514
+2017-11-23 22:33:04,677 - 设备序列号已经与设备绑定,设备序列号：ZWGC201710080008;Channel对象：[id: 0x1db713d5, L:/127.0.0.1:8765 - R:/127.0.0.1:8590]
+2017-11-23 22:34:00,001 - 本次定时任务开始时间：2017-11-23 22:34:00
+2017-11-23 22:34:43,679 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Thu Nov 23 22:34:43 CST 2017]; root of context hierarchy
+2017-11-23 22:34:43,810 - Loading XML bean definitions from class path resource [spring-rmi.xml]
+2017-11-23 22:34:44,152 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-11-23 22:34:45,696 - Looking for RMI registry at port '8100'
+2017-11-23 22:34:47,207 - Could not detect RMI registry - creating new one
+2017-11-23 22:34:47,300 - Binding service 'ControlService' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[192.168.25.1:8100](local),objID:[0:0:0, 0]]]]
+2017-11-23 22:34:47,427 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-11-23 22:34:47,568 - Using default implementation for ThreadExecutor
+2017-11-23 22:34:47,597 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-23 22:34:47,597 - Quartz Scheduler v.2.2.3 created.
+2017-11-23 22:34:47,598 - RAMJobStore initialized.
+2017-11-23 22:34:47,599 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-23 22:34:47,599 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-23 22:34:47,599 - Quartz scheduler version: 2.2.3
+2017-11-23 22:34:47,601 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@289710d9
+2017-11-23 22:34:47,695 - Starting beans in phase 2147483647
+2017-11-23 22:34:47,696 - Starting Quartz Scheduler now
+2017-11-23 22:34:47,696 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-23 22:34:47,706 - Starting beans in phase 2147483647
+2017-11-23 22:34:48,506 - [id: 0x8259b632] REGISTERED
+2017-11-23 22:34:48,508 - [id: 0x8259b632] BIND: 0.0.0.0/0.0.0.0:8765
+2017-11-23 22:34:48,516 - [id: 0x8259b632, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-11-23 22:34:59,044 - 客户端启动！！！
+2017-11-23 22:35:00,031 - 本次定时任务开始时间：2017-11-23 22:35:00
+2017-11-23 22:35:01,372 - [id: 0x8259b632, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x5bb7d594, L:/127.0.0.1:8765 - R:/127.0.0.1:8680]
+2017-11-23 22:35:01,421 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:35:01,422 - 获取客户端ip:/127.0.0.1:8680
+2017-11-23 22:35:01,523 - 来自客户端的原始数据：ZWGC201710080008
+2017-11-23 22:35:01,524 - 进行激活验证：返回时间戳为:1511447701524
+2017-11-23 22:35:01,719 - 设备序列号已经与设备绑定,设备序列号：ZWGC201710080008;Channel对象：[id: 0x5bb7d594, L:/127.0.0.1:8765 - R:/127.0.0.1:8680]
+2017-11-23 22:35:01,815 - 来自客户端的原始数据：#ZWGC2017100800008#1#1#13.2#2506786123134#
+2017-11-23 22:35:01,815 - 进行激活验证：返回时间戳为:1511447701815
+2017-11-23 22:35:01,944 - 设备序列号已经与设备绑定,设备序列号：#ZWGC2017100800008#1#1#13.2#2506786123134#;Channel对象：[id: 0x5bb7d594, L:/127.0.0.1:8765 ! R:/127.0.0.1:8680]
+2017-11-23 22:35:01,945 - 来自客户端的原始数据：#ZWGC2017100800008#2#1#24.2#2506786123134#
+2017-11-23 22:35:02,092 - 获取的数据为：#ZWGC2017100800008#2#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:35:02,093 - 来自客户端的原始数据：#ZWGC2017100800008#3#1#24.2#2506786123134#
+2017-11-23 22:35:02,236 - 获取的数据为：#ZWGC2017100800008#3#1#24.2#2506786123134#-数据处理结果：1
+2017-11-23 22:35:02,237 - 来自客户端的原始数据：#ZWGC2017100800008#4#1#15.2#2506786123144#
+2017-11-23 22:35:02,386 - 获取的数据为：#ZWGC2017100800008#4#1#15.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:02,387 - 来自客户端的原始数据：#ZWGC2017100800008#5#1#23.2#2506786123144#
+2017-11-23 22:35:02,522 - 获取的数据为：#ZWGC2017100800008#5#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:02,523 - 来自客户端的原始数据：#ZWGC2017100800008#6#1#33.2#2506786123144#
+2017-11-23 22:35:02,656 - 获取的数据为：#ZWGC2017100800008#6#1#33.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:02,656 - 来自客户端的原始数据：#ZWGC2017100800008#7#1#25.2#2506786123144#
+2017-11-23 22:35:02,767 - 获取的数据为：#ZWGC2017100800008#7#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:02,767 - 来自客户端的原始数据：#ZWGC2017100800008#8#1#73.2#2506786123144#
+2017-11-23 22:35:02,901 - 获取的数据为：#ZWGC2017100800008#8#1#73.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:02,902 - 来自客户端的原始数据：#ZWGC2017100800008#9#1#23.2#2506786123144#
+2017-11-23 22:35:03,033 - 获取的数据为：#ZWGC2017100800008#9#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:03,034 - 来自客户端的原始数据：#ZWGC2017100800008#10#1#13.2#2506786123144#
+2017-11-23 22:35:03,168 - 获取的数据为：#ZWGC2017100800008#10#1#13.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:03,168 - 来自客户端的原始数据：#ZWGC2017100800008#11#1#53.2#2506786123144#
+2017-11-23 22:35:03,287 - 获取的数据为：#ZWGC2017100800008#11#1#53.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:03,287 - 来自客户端的原始数据：#ZWGC2017100800008#12#1#63.2#2506786123144#
+2017-11-23 22:35:03,397 - 获取的数据为：#ZWGC2017100800008#12#1#63.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:03,398 - 来自客户端的原始数据：#ZWGC2017100800008#13#1#23.4#2506786123144#
+2017-11-23 22:35:03,586 - 获取的数据为：#ZWGC2017100800008#13#1#23.4#2506786123144#-数据处理结果：1
+2017-11-23 22:35:03,586 - 来自客户端的原始数据：#ZWGC2017100800008#14#1#23.2#2506786123144#
+2017-11-23 22:35:03,707 - 获取的数据为：#ZWGC2017100800008#14#1#23.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:03,707 - 来自客户端的原始数据：#ZWGC2017100800008#15#1#25.2#2506786123144#
+2017-11-23 22:35:03,845 - 获取的数据为：#ZWGC2017100800008#15#1#25.2#2506786123144#-数据处理结果：1
+2017-11-23 22:35:03,845 - 来自客户端的原始数据：#ZWGC2017100800008#16#2#26.2#2506786123144#
+2017-11-23 22:35:04,140 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-11-23 22:35:04,197 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-11-23 22:35:04,302 - 来自客户端的原始数据：#ZWGC2017100800008#17#2#27.2#2506786123144#
+2017-11-23 22:36:00,002 - 本次定时任务开始时间：2017-11-23 22:36:00
+2017-11-23 22:36:35,347 - 客户端启动！！！
+2017-11-23 22:36:37,318 - [id: 0x8259b632, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xb296d4c3, L:/127.0.0.1:8765 - R:/127.0.0.1:8743]
+2017-11-23 22:36:37,332 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:36:37,333 - 获取客户端ip:/127.0.0.1:8743
+2017-11-23 22:36:37,451 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:36:37,451 - 进行激活验证：返回时间戳为:1511447797451
+2017-11-23 22:36:37,603 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0xb296d4c3, L:/127.0.0.1:8765 - R:/127.0.0.1:8743]
+2017-11-23 22:36:37,720 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:36:37,724 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123135#
+2017-11-23 22:36:37,869 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123135#-数据处理结果：1
+2017-11-23 22:36:37,870 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123135#
+2017-11-23 22:36:38,002 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:36:38,003 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123135#
+2017-11-23 22:36:38,154 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:36:38,155 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123145#
+2017-11-23 22:36:38,301 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:38,301 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123145#
+2017-11-23 22:36:38,461 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:38,462 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123145#
+2017-11-23 22:36:38,689 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:38,690 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123145#
+2017-11-23 22:36:38,935 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:38,936 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123145#
+2017-11-23 22:36:39,162 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:39,162 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123145#
+2017-11-23 22:36:39,665 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:39,666 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123145#
+2017-11-23 22:36:40,000 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:40,000 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123145#
+2017-11-23 22:36:40,590 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:40,590 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123145#
+2017-11-23 22:36:40,784 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:40,785 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123145#
+2017-11-23 22:36:40,882 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123145#-数据处理结果：1
+2017-11-23 22:36:40,882 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123145#
+2017-11-23 22:36:41,024 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:41,025 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123145#
+2017-11-23 22:36:41,164 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:36:41,164 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123145#
+2017-11-23 22:36:41,295 - 设备异常处理结果：0
+2017-11-23 22:36:41,295 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123145#
+2017-11-23 22:36:41,415 - 设备异常处理结果：0
+2017-11-23 22:37:00,019 - 本次定时任务开始时间：2017-11-23 22:37:00
+2017-11-23 22:37:58,607 - 客户端启动！！！
+2017-11-23 22:38:00,051 - 本次定时任务开始时间：2017-11-23 22:38:00
+2017-11-23 22:38:00,348 - [id: 0x8259b632, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xe3ed2fef, L:/127.0.0.1:8765 - R:/127.0.0.1:8812]
+2017-11-23 22:38:00,375 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:38:00,376 - 获取客户端ip:/127.0.0.1:8812
+2017-11-23 22:38:00,444 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:38:00,444 - 进行激活验证：返回时间戳为:1511447880444
+2017-11-23 22:38:00,581 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0xe3ed2fef, L:/127.0.0.1:8765 - R:/127.0.0.1:8812]
+2017-11-23 22:38:00,724 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:38:00,725 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123135#
+2017-11-23 22:38:00,872 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123135#-数据处理结果：1
+2017-11-23 22:38:00,873 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123135#
+2017-11-23 22:38:01,025 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:38:01,025 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123135#
+2017-11-23 22:38:01,195 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:38:01,196 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123145#
+2017-11-23 22:38:01,381 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:01,382 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123145#
+2017-11-23 22:38:01,563 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:01,564 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123145#
+2017-11-23 22:38:01,720 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:01,721 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123145#
+2017-11-23 22:38:01,869 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:01,869 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123145#
+2017-11-23 22:38:02,052 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:02,053 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123145#
+2017-11-23 22:38:02,219 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:02,220 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123145#
+2017-11-23 22:38:02,355 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:02,355 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123145#
+2017-11-23 22:38:02,507 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:02,508 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123145#
+2017-11-23 22:38:02,634 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:02,634 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123145#
+2017-11-23 22:38:02,798 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123145#-数据处理结果：1
+2017-11-23 22:38:02,799 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123145#
+2017-11-23 22:38:02,955 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:02,956 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123145#
+2017-11-23 22:38:03,108 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:03,109 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123145#
+2017-11-23 22:38:03,433 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123145#
+2017-11-23 22:38:48,906 - 客户端启动！！！
+2017-11-23 22:38:50,465 - [id: 0x8259b632, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x630c7f4c, L:/127.0.0.1:8765 - R:/127.0.0.1:8871]
+2017-11-23 22:38:50,499 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:38:50,500 - 获取客户端ip:/127.0.0.1:8871
+2017-11-23 22:38:50,554 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:38:50,554 - 进行激活验证：返回时间戳为:1511447930554
+2017-11-23 22:38:51,453 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x630c7f4c, L:/127.0.0.1:8765 - R:/127.0.0.1:8871]
+2017-11-23 22:38:52,130 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:38:52,132 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123135#
+2017-11-23 22:38:53,634 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123135#-数据处理结果：1
+2017-11-23 22:38:53,634 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123135#
+2017-11-23 22:38:54,849 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:38:54,850 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123135#
+2017-11-23 22:38:54,979 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:38:54,980 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123145#
+2017-11-23 22:38:55,117 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:55,118 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123145#
+2017-11-23 22:38:55,261 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:55,262 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123145#
+2017-11-23 22:38:55,410 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:55,411 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123145#
+2017-11-23 22:38:55,585 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:55,585 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123145#
+2017-11-23 22:38:55,731 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:55,731 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123145#
+2017-11-23 22:38:55,884 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:55,885 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123145#
+2017-11-23 22:38:56,017 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:56,018 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123145#
+2017-11-23 22:38:56,160 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:56,160 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123145#
+2017-11-23 22:38:56,319 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:56,319 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123145#
+2017-11-23 22:38:56,491 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123145#-数据处理结果：1
+2017-11-23 22:38:56,492 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123145#
+2017-11-23 22:38:56,630 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:56,631 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123145#
+2017-11-23 22:38:56,770 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:38:56,771 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123145#
+2017-11-23 22:38:57,051 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123145#
+2017-11-23 22:39:00,011 - 本次定时任务开始时间：2017-11-23 22:39:00
+2017-11-23 22:40:00,001 - 本次定时任务开始时间：2017-11-23 22:40:00
+2017-11-23 22:41:00,010 - 本次定时任务开始时间：2017-11-23 22:41:00
+2017-11-23 22:42:00,064 - 本次定时任务开始时间：2017-11-23 22:42:00
+2017-11-23 22:42:56,563 - 客户端启动！！！
+2017-11-23 22:42:58,241 - [id: 0x8259b632, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x4ab362e3, L:/127.0.0.1:8765 - R:/127.0.0.1:9039]
+2017-11-23 22:42:58,262 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:42:58,263 - 获取客户端ip:/127.0.0.1:9039
+2017-11-23 22:42:58,337 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:42:58,337 - 进行激活验证：返回时间戳为:1511448178337
+2017-11-23 22:43:00,005 - 本次定时任务开始时间：2017-11-23 22:43:00
+2017-11-23 22:43:03,266 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x4ab362e3, L:/127.0.0.1:8765 - R:/127.0.0.1:9039]
+2017-11-23 22:43:03,441 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:43:03,441 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123135#
+2017-11-23 22:43:03,710 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123135#-数据处理结果：1
+2017-11-23 22:43:03,711 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123135#
+2017-11-23 22:43:03,858 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:43:03,859 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123135#
+2017-11-23 22:43:04,187 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:43:04,188 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123145#
+2017-11-23 22:43:04,344 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:04,345 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123145#
+2017-11-23 22:43:04,506 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:04,506 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123145#
+2017-11-23 22:43:04,651 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:04,652 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123145#
+2017-11-23 22:43:04,789 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:04,789 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123145#
+2017-11-23 22:43:04,928 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:04,928 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123145#
+2017-11-23 22:43:05,061 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:05,062 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123145#
+2017-11-23 22:43:05,204 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:05,204 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123145#
+2017-11-23 22:43:05,382 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:05,382 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123145#
+2017-11-23 22:43:05,527 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:05,528 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123145#
+2017-11-23 22:43:05,696 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123145#-数据处理结果：1
+2017-11-23 22:43:05,697 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123145#
+2017-11-23 22:43:05,830 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:05,830 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123145#
+2017-11-23 22:43:05,967 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:05,968 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123145#
+2017-11-23 22:43:06,268 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123145#
+2017-11-23 22:43:41,280 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Thu Nov 23 22:43:41 CST 2017]; root of context hierarchy
+2017-11-23 22:43:41,443 - Loading XML bean definitions from class path resource [spring-rmi.xml]
+2017-11-23 22:43:41,736 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-11-23 22:43:42,781 - Looking for RMI registry at port '8100'
+2017-11-23 22:43:44,769 - Could not detect RMI registry - creating new one
+2017-11-23 22:43:44,851 - Binding service 'ControlService' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[192.168.25.1:8100](local),objID:[0:0:0, 0]]]]
+2017-11-23 22:43:44,970 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-11-23 22:43:45,119 - Using default implementation for ThreadExecutor
+2017-11-23 22:43:45,148 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-23 22:43:45,148 - Quartz Scheduler v.2.2.3 created.
+2017-11-23 22:43:45,151 - RAMJobStore initialized.
+2017-11-23 22:43:45,153 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-23 22:43:45,153 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-23 22:43:45,153 - Quartz scheduler version: 2.2.3
+2017-11-23 22:43:45,155 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@289710d9
+2017-11-23 22:43:45,266 - Starting beans in phase 2147483647
+2017-11-23 22:43:45,266 - Starting Quartz Scheduler now
+2017-11-23 22:43:45,267 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-23 22:43:45,273 - Starting beans in phase 2147483647
+2017-11-23 22:43:46,242 - [id: 0x15754921] REGISTERED
+2017-11-23 22:43:46,245 - [id: 0x15754921] BIND: 0.0.0.0/0.0.0.0:8765
+2017-11-23 22:43:46,252 - [id: 0x15754921, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-11-23 22:43:49,868 - 客户端启动！！！
+2017-11-23 22:43:51,892 - [id: 0x15754921, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x54e558a4, L:/127.0.0.1:8765 - R:/127.0.0.1:9138]
+2017-11-23 22:43:52,023 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:43:52,024 - 获取客户端ip:/127.0.0.1:9138
+2017-11-23 22:43:52,102 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:43:52,102 - 进行激活验证：返回时间戳为:1511448232102
+2017-11-23 22:43:52,840 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x54e558a4, L:/127.0.0.1:8765 - R:/127.0.0.1:9138]
+2017-11-23 22:43:52,979 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:43:52,983 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123135#
+2017-11-23 22:43:53,160 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123135#-数据处理结果：1
+2017-11-23 22:43:53,161 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123135#
+2017-11-23 22:43:53,363 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:43:53,364 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123135#
+2017-11-23 22:43:53,520 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:43:53,521 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123145#
+2017-11-23 22:43:53,680 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:53,681 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123145#
+2017-11-23 22:43:53,838 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:53,839 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123145#
+2017-11-23 22:43:54,013 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:54,013 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123145#
+2017-11-23 22:43:54,175 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:54,176 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123145#
+2017-11-23 22:43:54,342 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:54,343 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123145#
+2017-11-23 22:43:54,501 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:54,502 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123145#
+2017-11-23 22:43:54,669 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:54,670 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123145#
+2017-11-23 22:43:54,791 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:54,792 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123145#
+2017-11-23 22:43:54,948 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:54,949 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123145#
+2017-11-23 22:43:55,072 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123145#-数据处理结果：1
+2017-11-23 22:43:55,073 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123145#
+2017-11-23 22:43:55,208 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:55,209 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123145#
+2017-11-23 22:43:55,354 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:43:55,355 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123145#
+2017-11-23 22:43:55,625 - 设备异常处理结果：1
+2017-11-23 22:43:55,626 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123145#
+2017-11-23 22:43:55,906 - 设备异常处理结果：1
+2017-11-23 22:44:00,032 - 本次定时任务开始时间：2017-11-23 22:44:00
+2017-11-23 22:45:00,033 - 本次定时任务开始时间：2017-11-23 22:45:00
+2017-11-23 22:46:00,017 - 本次定时任务开始时间：2017-11-23 22:46:00
+2017-11-23 22:46:07,519 - 客户端启动！！！
+2017-11-23 22:46:09,783 - [id: 0x15754921, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xb72c2234, L:/127.0.0.1:8765 - R:/127.0.0.1:9230]
+2017-11-23 22:46:09,810 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:46:09,811 - 获取客户端ip:/127.0.0.1:9230
+2017-11-23 22:46:09,864 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:46:09,864 - 进行激活验证：返回时间戳为:1511448369864
+2017-11-23 22:46:10,057 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0xb72c2234, L:/127.0.0.1:8765 - R:/127.0.0.1:9230]
+2017-11-23 22:46:10,180 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:46:10,181 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123135#
+2017-11-23 22:46:10,359 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123135#-数据处理结果：1
+2017-11-23 22:46:10,360 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123135#
+2017-11-23 22:46:10,494 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:46:10,494 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123135#
+2017-11-23 22:46:10,650 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:46:10,651 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123145#
+2017-11-23 22:46:10,794 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:10,795 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123145#
+2017-11-23 22:46:11,017 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:11,017 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123145#
+2017-11-23 22:46:11,273 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:11,274 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123145#
+2017-11-23 22:46:12,561 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:12,562 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123145#
+2017-11-23 22:46:12,774 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:12,774 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123145#
+2017-11-23 22:46:12,997 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:12,998 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123145#
+2017-11-23 22:46:13,149 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:13,150 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123145#
+2017-11-23 22:46:13,326 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:13,327 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123145#
+2017-11-23 22:46:13,460 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:13,461 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123145#
+2017-11-23 22:46:13,591 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123145#-数据处理结果：1
+2017-11-23 22:46:13,592 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123145#
+2017-11-23 22:46:13,718 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:13,718 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123145#
+2017-11-23 22:46:13,841 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:13,842 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123145#
+2017-11-23 22:46:14,127 - 设备异常处理结果：1
+2017-11-23 22:46:14,127 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123145#
+2017-11-23 22:46:14,394 - 设备异常处理结果：1
+2017-11-23 22:46:39,247 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Thu Nov 23 22:46:39 CST 2017]; root of context hierarchy
+2017-11-23 22:46:39,402 - Loading XML bean definitions from class path resource [spring-rmi.xml]
+2017-11-23 22:46:39,756 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-11-23 22:46:40,743 - Looking for RMI registry at port '8100'
+2017-11-23 22:46:43,251 - Could not detect RMI registry - creating new one
+2017-11-23 22:46:43,346 - Binding service 'ControlService' to RMI registry: RegistryImpl[UnicastServerRef [liveRef: [endpoint:[192.168.25.1:8100](local),objID:[0:0:0, 0]]]]
+2017-11-23 22:46:43,612 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-11-23 22:46:43,892 - Using default implementation for ThreadExecutor
+2017-11-23 22:46:43,928 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-11-23 22:46:43,928 - Quartz Scheduler v.2.2.3 created.
+2017-11-23 22:46:43,930 - RAMJobStore initialized.
+2017-11-23 22:46:43,931 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-11-23 22:46:43,931 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-11-23 22:46:43,932 - Quartz scheduler version: 2.2.3
+2017-11-23 22:46:43,935 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@289710d9
+2017-11-23 22:46:44,049 - Starting beans in phase 2147483647
+2017-11-23 22:46:44,050 - Starting Quartz Scheduler now
+2017-11-23 22:46:44,050 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-11-23 22:46:44,056 - Starting beans in phase 2147483647
+2017-11-23 22:46:45,061 - [id: 0xe2490ad8] REGISTERED
+2017-11-23 22:46:45,064 - [id: 0xe2490ad8] BIND: 0.0.0.0/0.0.0.0:8765
+2017-11-23 22:46:45,071 - [id: 0xe2490ad8, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-11-23 22:46:50,289 - 客户端启动！！！
+2017-11-23 22:46:52,213 - [id: 0xe2490ad8, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x1cf52c83, L:/127.0.0.1:8765 - R:/127.0.0.1:9324]
+2017-11-23 22:46:52,302 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:46:52,303 - 获取客户端ip:/127.0.0.1:9324
+2017-11-23 22:46:52,336 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:46:52,337 - 进行激活验证：返回时间戳为:1511448412337
+2017-11-23 22:46:52,941 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0x1cf52c83, L:/127.0.0.1:8765 - R:/127.0.0.1:9324]
+2017-11-23 22:46:53,082 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:46:53,085 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#13.2#2506786123135#
+2017-11-23 22:46:53,232 - 获取的数据为：#ZWGC2017100800004#1#1#13.2#2506786123135#-数据处理结果：1
+2017-11-23 22:46:53,233 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#2506786123135#
+2017-11-23 22:46:53,392 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:46:53,393 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#2506786123135#
+2017-11-23 22:46:53,552 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#2506786123135#-数据处理结果：1
+2017-11-23 22:46:53,553 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#15.2#2506786123145#
+2017-11-23 22:46:53,697 - 获取的数据为：#ZWGC2017100800004#4#1#15.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:53,698 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#2506786123145#
+2017-11-23 22:46:53,875 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:53,875 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#2506786123145#
+2017-11-23 22:46:54,015 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:54,016 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#2506786123145#
+2017-11-23 22:46:54,196 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:54,196 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#2506786123145#
+2017-11-23 22:46:54,345 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:54,346 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#2506786123145#
+2017-11-23 22:46:54,508 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:54,509 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#2506786123145#
+2017-11-23 22:46:54,630 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:54,630 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#2506786123145#
+2017-11-23 22:46:54,778 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:54,779 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#2506786123145#
+2017-11-23 22:46:54,932 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:54,933 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#2506786123145#
+2017-11-23 22:46:55,063 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#2506786123145#-数据处理结果：1
+2017-11-23 22:46:55,064 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#2506786123145#
+2017-11-23 22:46:55,219 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:55,219 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#2506786123145#
+2017-11-23 22:46:55,392 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#2506786123145#-数据处理结果：1
+2017-11-23 22:46:55,393 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#26.2#2506786123145#
+2017-11-23 22:46:55,690 - 设备异常处理结果：1
+2017-11-23 22:46:55,691 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#27.2#2506786123145#
+2017-11-23 22:46:55,974 - 设备异常处理结果：1
+2017-11-23 22:47:00,019 - 本次定时任务开始时间：2017-11-23 22:47:00
+2017-11-23 22:48:00,002 - 本次定时任务开始时间：2017-11-23 22:48:00
+2017-11-23 22:48:09,426 - 客户端启动！！！
+2017-11-23 22:48:11,190 - [id: 0xe2490ad8, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xf3469fca, L:/127.0.0.1:8765 - R:/127.0.0.1:9389]
+2017-11-23 22:48:11,208 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-11-23 22:48:11,209 - 获取客户端ip:/127.0.0.1:9389
+2017-11-23 22:48:11,275 - 来自客户端的原始数据：ZWGC2017100800004
+2017-11-23 22:48:11,275 - 进行激活验证：返回时间戳为:1511448491275
+2017-11-23 22:48:11,740 - 设备序列号已经与设备绑定,设备序列号：ZWGC2017100800004;Channel对象：[id: 0xf3469fca, L:/127.0.0.1:8765 - R:/127.0.0.1:9389]
+2017-11-23 22:48:11,893 - 序列号为ZWGC2017100800004的设备已经激活
+2017-11-23 22:48:11,894 - 来自客户端的原始数据：#ZWGC2017100800004#1#2#传感器出错#2506786123136#
+2017-11-23 22:48:12,272 - 设备异常处理结果：1
+2017-11-23 22:48:12,272 - 来自客户端的原始数据：#ZWGC2017100800004#2#2#传感器出错#2506786123136#
+2017-11-23 22:48:12,598 - 设备异常处理结果：1
+2017-11-23 22:48:12,599 - 来自客户端的原始数据：#ZWGC2017100800004#3#2#传感器出错#2506786123136#
+2017-11-23 22:48:12,899 - 设备异常处理结果：1
+2017-11-23 22:48:12,900 - 来自客户端的原始数据：#ZWGC2017100800004#4#2#传感器出错#2506786123146#
+2017-11-23 22:48:13,183 - 设备异常处理结果：1
+2017-11-23 22:48:13,183 - 来自客户端的原始数据：#ZWGC2017100800004#5#2#传感器出错#2506786123146#
+2017-11-23 22:48:13,468 - 设备异常处理结果：1
+2017-11-23 22:48:13,469 - 来自客户端的原始数据：#ZWGC2017100800004#6#2#传感器出错#2506786123146#
+2017-11-23 22:48:13,732 - 设备异常处理结果：1
+2017-11-23 22:48:13,732 - 来自客户端的原始数据：#ZWGC2017100800004#7#2#传感器出错#2506786123146#
+2017-11-23 22:48:13,998 - 设备异常处理结果：1
+2017-11-23 22:48:13,998 - 来自客户端的原始数据：#ZWGC2017100800004#8#2#传感器出错#2506786123146#
+2017-11-23 22:48:14,278 - 设备异常处理结果：1
+2017-11-23 22:48:14,279 - 来自客户端的原始数据：#ZWGC2017100800004#9#2#传感器出错#2506786123146#
+2017-11-23 22:48:14,534 - 设备异常处理结果：1
+2017-11-23 22:48:14,535 - 来自客户端的原始数据：#ZWGC2017100800004#10#2#传感器出错#2506786123146#
+2017-11-23 22:48:14,738 - 设备异常处理结果：1
+2017-11-23 22:48:14,739 - 来自客户端的原始数据：#ZWGC2017100800004#11#2#传感器出错#2506786123146#
+2017-11-23 22:48:15,008 - 设备异常处理结果：1
+2017-11-23 22:48:15,009 - 来自客户端的原始数据：#ZWGC2017100800004#12#2#传感器出错#2506786123146#
+2017-11-23 22:48:15,293 - 设备异常处理结果：1
+2017-11-23 22:48:15,293 - 来自客户端的原始数据：#ZWGC2017100800004#13#2#传感器出错#2506786123146#
+2017-11-23 22:48:15,525 - 设备异常处理结果：1
+2017-11-23 22:48:15,525 - 来自客户端的原始数据：#ZWGC2017100800004#14#2#传感器出错#2506786123146#
+2017-11-23 22:48:15,825 - 设备异常处理结果：1
+2017-11-23 22:48:15,826 - 来自客户端的原始数据：#ZWGC2017100800004#15#2#传感器出错#2506786123146#
+2017-11-23 22:48:16,073 - 设备异常处理结果：1
+2017-11-23 22:48:16,074 - 来自客户端的原始数据：#ZWGC2017100800004#16#2#传感器出错#2506786123146#
+2017-11-23 22:48:16,317 - 设备异常处理结果：1
+2017-11-23 22:48:16,318 - 来自客户端的原始数据：#ZWGC2017100800004#17#2#传感器出错#2506786123146#
+2017-11-23 22:48:16,562 - 设备异常处理结果：1
+2017-11-24 21:09:56,955 - 本次定时任务开始时间：2017-11-24 21:09:56
+2017-11-24 21:10:00,001 - 本次定时任务开始时间：2017-11-24 21:10:00
+2017-11-24 21:11:00,001 - 本次定时任务开始时间：2017-11-24 21:11:00
+2017-11-24 21:12:00,002 - 本次定时任务开始时间：2017-11-24 21:12:00
+2017-11-24 21:13:00,022 - 本次定时任务开始时间：2017-11-24 21:13:00
+2017-11-24 21:14:00,002 - 本次定时任务开始时间：2017-11-24 21:14:00
+2017-11-24 21:15:00,002 - 本次定时任务开始时间：2017-11-24 21:15:00
+2017-11-24 21:16:00,001 - 本次定时任务开始时间：2017-11-24 21:16:00

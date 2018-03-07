@@ -1,0 +1,2293 @@
+2017-10-15 12:55:46,415 - 客户端启动！！！
+2017-10-15 12:56:16,850 - 客户端启动！！！
+2017-10-15 12:59:09,270 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 12:59:09 CST 2017]; root of context hierarchy
+2017-10-15 12:59:09,418 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 12:59:10,738 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 12:59:11,139 - Using default implementation for ThreadExecutor
+2017-10-15 12:59:11,169 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 12:59:11,174 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 12:59:11,177 - RAMJobStore initialized.
+2017-10-15 12:59:11,178 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 12:59:11,179 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 12:59:11,179 - Quartz scheduler version: 2.2.3
+2017-10-15 12:59:11,182 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@53251a66
+2017-10-15 12:59:11,364 - Starting beans in phase 2147483647
+2017-10-15 12:59:11,365 - Starting Quartz Scheduler now
+2017-10-15 12:59:11,365 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 12:59:11,379 - Starting beans in phase 2147483647
+2017-10-15 12:59:12,686 - [id: 0xdc9e4281] REGISTERED
+2017-10-15 12:59:12,689 - [id: 0xdc9e4281] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 12:59:12,697 - [id: 0xdc9e4281, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 12:59:52,130 - 客户端启动！！！
+2017-10-15 12:59:54,003 - [id: 0xdc9e4281, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x9bd923f6, L:/127.0.0.1:8765 - R:/127.0.0.1:3944]
+2017-10-15 12:59:54,044 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@379485fe: startup date [Sun Oct 15 12:59:54 CST 2017]; root of context hierarchy
+2017-10-15 12:59:54,044 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 12:59:54,233 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 12:59:54,292 - Using default implementation for ThreadExecutor
+2017-10-15 12:59:54,293 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 12:59:54,293 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 12:59:54,293 - RAMJobStore initialized.
+2017-10-15 12:59:54,293 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 12:59:54,294 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 12:59:54,294 - Quartz scheduler version: 2.2.3
+2017-10-15 12:59:54,294 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6e981363
+2017-10-15 12:59:54,339 - Starting beans in phase 2147483647
+2017-10-15 12:59:54,339 - Starting Quartz Scheduler now
+2017-10-15 12:59:54,339 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 12:59:54,354 - 获取客户端ip:/127.0.0.1:3944
+2017-10-15 12:59:54,978 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 12:59:55,162 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:55,297 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:55,409 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:55,568 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:55,684 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:55,802 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:55,925 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:56,059 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:56,189 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:56,344 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:57,685 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:57,841 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:57,993 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861210#-数据处理结果：1
+2017-10-15 12:59:58,158 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:58,280 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:58,430 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861210#-数据处理结果：1
+2017-10-15 12:59:58,548 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861210#-数据处理结果：1
+2017-10-15 13:00:00,015 - 本次定时任务开始时间：2017-10-15 13:00:00
+2017-10-15 13:00:00,015 - 本次定时任务开始时间：2017-10-15 13:00:00
+2017-10-15 13:00:47,161 - 客户端启动！！！
+2017-10-15 13:00:49,199 - [id: 0xdc9e4281, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x2a7552ff, L:/127.0.0.1:8765 - R:/127.0.0.1:4024]
+2017-10-15 13:00:49,249 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7e7c0a65: startup date [Sun Oct 15 13:00:49 CST 2017]; root of context hierarchy
+2017-10-15 13:00:49,250 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:00:49,382 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:00:49,445 - Using default implementation for ThreadExecutor
+2017-10-15 13:00:49,447 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:00:49,447 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:00:49,447 - RAMJobStore initialized.
+2017-10-15 13:00:49,447 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:00:49,447 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:00:49,447 - Quartz scheduler version: 2.2.3
+2017-10-15 13:00:49,447 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@f1b483d
+2017-10-15 13:00:49,487 - Starting beans in phase 2147483647
+2017-10-15 13:00:49,487 - Starting Quartz Scheduler now
+2017-10-15 13:00:49,487 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:00:49,518 - 获取客户端ip:/127.0.0.1:4024
+2017-10-15 13:00:49,653 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:00:49,811 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:49,957 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:50,107 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:50,245 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:50,385 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:50,567 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:50,689 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:50,853 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:50,971 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:51,116 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:51,255 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:51,385 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:51,509 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861220#-数据处理结果：1
+2017-10-15 13:00:51,658 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:51,796 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:51,921 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861220#-数据处理结果：1
+2017-10-15 13:00:52,068 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861220#-数据处理结果：1
+2017-10-15 13:01:00,001 - 本次定时任务开始时间：2017-10-15 13:01:00
+2017-10-15 13:01:00,002 - 本次定时任务开始时间：2017-10-15 13:01:00
+2017-10-15 13:01:00,002 - 本次定时任务开始时间：2017-10-15 13:01:00
+2017-10-15 13:02:00,002 - 本次定时任务开始时间：2017-10-15 13:02:00
+2017-10-15 13:02:00,003 - 本次定时任务开始时间：2017-10-15 13:02:00
+2017-10-15 13:02:00,002 - 本次定时任务开始时间：2017-10-15 13:02:00
+2017-10-15 13:03:00,002 - 本次定时任务开始时间：2017-10-15 13:03:00
+2017-10-15 13:03:00,002 - 本次定时任务开始时间：2017-10-15 13:03:00
+2017-10-15 13:03:00,006 - 本次定时任务开始时间：2017-10-15 13:03:00
+2017-10-15 13:04:00,004 - 本次定时任务开始时间：2017-10-15 13:04:00
+2017-10-15 13:04:00,019 - 本次定时任务开始时间：2017-10-15 13:04:00
+2017-10-15 13:04:00,033 - 本次定时任务开始时间：2017-10-15 13:04:00
+2017-10-15 13:04:30,078 - 客户端启动！！！
+2017-10-15 13:04:31,911 - [id: 0xdc9e4281, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x70650c7f, L:/127.0.0.1:8765 - R:/127.0.0.1:4208]
+2017-10-15 13:04:31,914 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2c8f1cb4: startup date [Sun Oct 15 13:04:31 CST 2017]; root of context hierarchy
+2017-10-15 13:04:31,914 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:04:32,039 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:04:32,085 - Using default implementation for ThreadExecutor
+2017-10-15 13:04:32,087 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:04:32,087 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:04:32,087 - RAMJobStore initialized.
+2017-10-15 13:04:32,087 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:04:32,087 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:04:32,087 - Quartz scheduler version: 2.2.3
+2017-10-15 13:04:32,088 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@3947aacf
+2017-10-15 13:04:32,121 - Starting beans in phase 2147483647
+2017-10-15 13:04:32,121 - Starting Quartz Scheduler now
+2017-10-15 13:04:32,121 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:04:32,210 - 获取客户端ip:/127.0.0.1:4208
+2017-10-15 13:04:32,355 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:04:32,498 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:32,666 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:32,804 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:32,958 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:33,101 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:33,232 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:33,376 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:33,504 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:33,633 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:33,781 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:33,913 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:34,035 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:34,187 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861230#-数据处理结果：1
+2017-10-15 13:04:34,332 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:34,481 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:34,598 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861230#-数据处理结果：1
+2017-10-15 13:04:34,757 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861230#-数据处理结果：1
+2017-10-15 13:05:00,017 - 本次定时任务开始时间：2017-10-15 13:05:00
+2017-10-15 13:05:00,022 - 本次定时任务开始时间：2017-10-15 13:05:00
+2017-10-15 13:05:00,023 - 本次定时任务开始时间：2017-10-15 13:05:00
+2017-10-15 13:05:00,029 - 本次定时任务开始时间：2017-10-15 13:05:00
+2017-10-15 13:06:00,008 - 本次定时任务开始时间：2017-10-15 13:06:00
+2017-10-15 13:06:00,012 - 本次定时任务开始时间：2017-10-15 13:06:00
+2017-10-15 13:06:00,012 - 本次定时任务开始时间：2017-10-15 13:06:00
+2017-10-15 13:06:00,016 - 本次定时任务开始时间：2017-10-15 13:06:00
+2017-10-15 13:06:59,433 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 13:06:59 CST 2017]; root of context hierarchy
+2017-10-15 13:06:59,573 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:07:00,757 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:07:01,085 - Using default implementation for ThreadExecutor
+2017-10-15 13:07:01,151 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:07:01,151 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:07:01,154 - RAMJobStore initialized.
+2017-10-15 13:07:01,156 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:07:01,157 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:07:01,166 - Quartz scheduler version: 2.2.3
+2017-10-15 13:07:01,169 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@53251a66
+2017-10-15 13:07:01,367 - Starting beans in phase 2147483647
+2017-10-15 13:07:01,368 - Starting Quartz Scheduler now
+2017-10-15 13:07:01,368 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:07:01,395 - 本次定时任务开始时间：2017-10-15 13:07:01
+2017-10-15 13:07:01,431 - Starting beans in phase 2147483647
+2017-10-15 13:07:03,349 - [id: 0xd787b97d] REGISTERED
+2017-10-15 13:07:03,352 - [id: 0xd787b97d] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 13:07:03,358 - [id: 0xd787b97d, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 13:07:12,290 - 客户端启动！！！
+2017-10-15 13:07:14,495 - [id: 0xd787b97d, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x3142b8a7, L:/127.0.0.1:8765 - R:/127.0.0.1:4368]
+2017-10-15 13:07:14,559 - 获取客户端ip:/127.0.0.1:4368
+2017-10-15 13:07:14,736 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:07:15,072 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:15,209 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:15,334 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:15,457 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:15,578 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:15,720 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:15,842 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:15,966 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:16,108 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:16,226 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:16,372 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:16,494 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:16,623 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861230#-数据处理结果：1
+2017-10-15 13:07:16,756 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:16,882 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:17,013 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:17,147 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861230#-数据处理结果：1
+2017-10-15 13:07:40,034 - 客户端启动！！！
+2017-10-15 13:07:41,893 - [id: 0xd787b97d, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x3d2e090a, L:/127.0.0.1:8765 - R:/127.0.0.1:4421]
+2017-10-15 13:07:41,927 - Failed to initialize a channel. Closing: [id: 0x3d2e090a, L:/127.0.0.1:8765 - R:/127.0.0.1:4421]
+io.netty.channel.ChannelPipelineException: com.vastsum.main.ServerHandler is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:587)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:199)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:392)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:379)
+	at com.vastsum.main.Server$1.initChannel(Server.java:59)
+	at com.vastsum.main.Server$1.initChannel(Server.java:51)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:113)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:105)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.access$000(DefaultChannelPipeline.java:44)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1387)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1122)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:647)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:506)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:419)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:478)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:418)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:454)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+2017-10-15 13:08:00,007 - 本次定时任务开始时间：2017-10-15 13:08:00
+2017-10-15 13:08:33,019 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 13:08:33 CST 2017]; root of context hierarchy
+2017-10-15 13:08:33,155 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:08:34,317 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:08:34,854 - Using default implementation for ThreadExecutor
+2017-10-15 13:08:34,945 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:08:34,945 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:08:34,948 - RAMJobStore initialized.
+2017-10-15 13:08:34,950 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:08:34,962 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:08:34,962 - Quartz scheduler version: 2.2.3
+2017-10-15 13:08:34,966 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 13:08:35,117 - Starting beans in phase 2147483647
+2017-10-15 13:08:35,120 - Starting Quartz Scheduler now
+2017-10-15 13:08:35,120 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:08:35,135 - Starting beans in phase 2147483647
+2017-10-15 13:08:36,666 - [id: 0x576bc955] REGISTERED
+2017-10-15 13:08:36,668 - [id: 0x576bc955] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 13:08:36,673 - [id: 0x576bc955, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 13:08:53,933 - 客户端启动！！！
+2017-10-15 13:08:55,717 - [id: 0x576bc955, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x00df1c26, L:/127.0.0.1:8765 - R:/127.0.0.1:4513]
+2017-10-15 13:08:55,850 - 获取客户端ip:/127.0.0.1:4513
+2017-10-15 13:08:56,498 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:08:56,648 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:56,780 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:56,910 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:57,037 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:57,155 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:57,280 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:57,414 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:57,534 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:57,660 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:57,815 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:57,944 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:58,087 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:58,225 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861250#-数据处理结果：1
+2017-10-15 13:08:58,344 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:58,483 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:58,618 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861250#-数据处理结果：1
+2017-10-15 13:08:58,768 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861250#-数据处理结果：1
+2017-10-15 13:09:00,014 - 本次定时任务开始时间：2017-10-15 13:09:00
+2017-10-15 13:10:00,003 - 本次定时任务开始时间：2017-10-15 13:10:00
+2017-10-15 13:10:29,243 - 客户端启动！！！
+2017-10-15 13:10:31,066 - [id: 0x576bc955, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xcc5351bf, L:/127.0.0.1:8765 - R:/127.0.0.1:4592]
+2017-10-15 13:10:31,089 - 获取客户端ip:/127.0.0.1:4592
+2017-10-15 13:10:31,138 - 数据转化过程中出现异常！
+2017-10-15 13:11:00,002 - 本次定时任务开始时间：2017-10-15 13:11:00
+2017-10-15 13:11:22,134 - 客户端启动！！！
+2017-10-15 13:11:23,896 - [id: 0x576bc955, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xb350be77, L:/127.0.0.1:8765 - R:/127.0.0.1:4629]
+2017-10-15 13:11:23,965 - 获取客户端ip:/127.0.0.1:4629
+2017-10-15 13:11:23,981 - 数据转化过程中出现异常！
+2017-10-15 13:12:00,002 - 本次定时任务开始时间：2017-10-15 13:12:00
+2017-10-15 13:13:00,002 - 本次定时任务开始时间：2017-10-15 13:13:00
+2017-10-15 13:13:35,574 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 13:13:35 CST 2017]; root of context hierarchy
+2017-10-15 13:13:35,736 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:13:37,026 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:13:37,545 - Using default implementation for ThreadExecutor
+2017-10-15 13:13:37,586 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:13:37,586 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:13:37,588 - RAMJobStore initialized.
+2017-10-15 13:13:37,590 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:13:37,590 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:13:37,590 - Quartz scheduler version: 2.2.3
+2017-10-15 13:13:37,597 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 13:13:37,724 - Starting beans in phase 2147483647
+2017-10-15 13:13:37,724 - Starting Quartz Scheduler now
+2017-10-15 13:13:37,725 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:13:37,733 - Starting beans in phase 2147483647
+2017-10-15 13:13:39,546 - [id: 0x04583c59] REGISTERED
+2017-10-15 13:13:39,548 - [id: 0x04583c59] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 13:13:39,555 - [id: 0x04583c59, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 13:13:58,954 - 客户端启动！！！
+2017-10-15 13:14:00,016 - 本次定时任务开始时间：2017-10-15 13:14:00
+2017-10-15 13:14:01,228 - [id: 0x04583c59, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x6ba42195, L:/127.0.0.1:8765 - R:/127.0.0.1:4757]
+2017-10-15 13:14:01,289 - 获取客户端ip:/127.0.0.1:4757
+2017-10-15 13:14:01,680 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:14:01,821 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:01,954 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:02,212 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:02,397 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:02,570 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:02,709 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:02,836 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:02,970 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:03,156 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:03,297 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:03,429 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:03,557 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:03,682 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861270#-数据处理结果：1
+2017-10-15 13:14:03,810 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:03,934 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:04,073 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861270#-数据处理结果：1
+2017-10-15 13:14:04,264 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861270#-数据处理结果：1
+2017-10-15 13:15:00,003 - 本次定时任务开始时间：2017-10-15 13:15:00
+2017-10-15 13:16:00,006 - 本次定时任务开始时间：2017-10-15 13:16:00
+2017-10-15 13:16:03,052 - 客户端启动！！！
+2017-10-15 13:16:04,983 - [id: 0x04583c59, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x03eea72b, L:/127.0.0.1:8765 - R:/127.0.0.1:4834]
+2017-10-15 13:16:05,117 - 获取客户端ip:/127.0.0.1:4834
+2017-10-15 13:16:05,118 - 数据转化过程中出现异常！
+2017-10-15 13:16:05,281 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:05,401 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:05,565 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:05,699 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:05,839 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:06,000 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:06,133 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:06,596 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:06,729 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:06,852 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:07,445 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:07,566 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861280#-数据处理结果：1
+2017-10-15 13:16:07,703 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861280#-数据处理结果：1
+2017-10-15 13:17:00,001 - 本次定时任务开始时间：2017-10-15 13:17:00
+2017-10-15 13:22:25,763 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 13:22:25 CST 2017]; root of context hierarchy
+2017-10-15 13:22:26,012 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:22:27,824 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:22:28,588 - Using default implementation for ThreadExecutor
+2017-10-15 13:22:28,640 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:22:28,643 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:22:28,645 - RAMJobStore initialized.
+2017-10-15 13:22:28,652 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:22:28,652 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:22:28,653 - Quartz scheduler version: 2.2.3
+2017-10-15 13:22:28,658 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 13:22:28,817 - Starting beans in phase 2147483647
+2017-10-15 13:22:28,818 - Starting Quartz Scheduler now
+2017-10-15 13:22:28,818 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:22:28,854 - Starting beans in phase 2147483647
+2017-10-15 13:22:31,189 - [id: 0x972f210a] REGISTERED
+2017-10-15 13:22:31,192 - [id: 0x972f210a] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 13:22:31,200 - [id: 0x972f210a, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 13:23:00,033 - 本次定时任务开始时间：2017-10-15 13:23:00
+2017-10-15 13:23:01,054 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-10-15 13:23:01,164 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-10-15 13:23:01,267 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [CALL process_sensor(200)]; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:419)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:443)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:30)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.sql.SQLException: Column count doesn't match value count at row 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2531)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:848)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:742)
+	at org.springframework.jdbc.core.JdbcTemplate$1ExecuteStatementCallback.doInStatement(JdbcTemplate.java:435)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:408)
+	... 6 more
+2017-10-15 13:23:01,270 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [CALL process_sensor(200)]; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [CALL process_sensor(200)]; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:419)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:443)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:30)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+Caused by: java.sql.SQLException: Column count doesn't match value count at row 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2531)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:848)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:742)
+	at org.springframework.jdbc.core.JdbcTemplate$1ExecuteStatementCallback.doInStatement(JdbcTemplate.java:435)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:408)
+	... 6 more
+2017-10-15 13:23:15,979 - 客户端启动！！！
+2017-10-15 13:23:18,749 - [id: 0x972f210a, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x2b8cd94d, L:/127.0.0.1:8765 - R:/127.0.0.1:5205]
+2017-10-15 13:23:18,792 - 获取客户端ip:/127.0.0.1:5205
+2017-10-15 13:23:19,018 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:23:19,234 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:19,359 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:19,512 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:19,636 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:19,765 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:19,889 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:20,053 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:20,205 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:20,335 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:20,472 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:20,596 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:20,765 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:20,900 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861290#-数据处理结果：1
+2017-10-15 13:23:21,047 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:21,208 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:21,358 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861290#-数据处理结果：1
+2017-10-15 13:23:21,513 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861290#-数据处理结果：1
+2017-10-15 13:24:00,008 - 本次定时任务开始时间：2017-10-15 13:24:00
+2017-10-15 13:24:00,339 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [CALL process_sensor(200)]; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:419)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:443)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:30)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.sql.SQLException: Column count doesn't match value count at row 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2531)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:848)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:742)
+	at org.springframework.jdbc.core.JdbcTemplate$1ExecuteStatementCallback.doInStatement(JdbcTemplate.java:435)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:408)
+	... 6 more
+2017-10-15 13:24:00,340 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [CALL process_sensor(200)]; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [CALL process_sensor(200)]; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:419)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:443)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:30)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+Caused by: java.sql.SQLException: Column count doesn't match value count at row 1
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2531)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:848)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:742)
+	at org.springframework.jdbc.core.JdbcTemplate$1ExecuteStatementCallback.doInStatement(JdbcTemplate.java:435)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:408)
+	... 6 more
+2017-10-15 13:28:26,736 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 13:28:26 CST 2017]; root of context hierarchy
+2017-10-15 13:28:27,001 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:28:28,667 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:28:29,071 - Using default implementation for ThreadExecutor
+2017-10-15 13:28:29,118 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:28:29,119 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:28:29,133 - RAMJobStore initialized.
+2017-10-15 13:28:29,136 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:28:29,136 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:28:29,136 - Quartz scheduler version: 2.2.3
+2017-10-15 13:28:29,139 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 13:28:29,550 - Starting beans in phase 2147483647
+2017-10-15 13:28:29,551 - Starting Quartz Scheduler now
+2017-10-15 13:28:29,552 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:28:29,569 - Starting beans in phase 2147483647
+2017-10-15 13:28:31,844 - [id: 0x7b80f7d0] REGISTERED
+2017-10-15 13:28:31,848 - [id: 0x7b80f7d0] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 13:28:31,855 - [id: 0x7b80f7d0, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 13:28:43,469 - 客户端启动！！！
+2017-10-15 13:28:45,832 - [id: 0x7b80f7d0, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x74259c37, L:/127.0.0.1:8765 - R:/127.0.0.1:5344]
+2017-10-15 13:28:45,933 - 获取客户端ip:/127.0.0.1:5344
+2017-10-15 13:28:47,062 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:28:47,205 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:47,354 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:47,489 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:47,659 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:47,807 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:47,932 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:48,056 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:48,198 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:48,325 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:48,463 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:48,623 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:48,783 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:48,923 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861300#-数据处理结果：1
+2017-10-15 13:28:49,124 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:49,280 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:49,421 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861300#-数据处理结果：1
+2017-10-15 13:28:49,563 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861300#-数据处理结果：1
+2017-10-15 13:29:00,019 - 本次定时任务开始时间：2017-10-15 13:29:00
+2017-10-15 13:30:00,008 - 本次定时任务开始时间：2017-10-15 13:30:00
+2017-10-15 13:31:00,004 - 本次定时任务开始时间：2017-10-15 13:31:00
+2017-10-15 13:32:00,001 - 本次定时任务开始时间：2017-10-15 13:32:00
+2017-10-15 13:33:33,569 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 13:33:33 CST 2017]; root of context hierarchy
+2017-10-15 13:33:33,830 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:33:37,348 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:33:37,657 - Using default implementation for ThreadExecutor
+2017-10-15 13:33:37,699 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:33:37,700 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:33:37,702 - RAMJobStore initialized.
+2017-10-15 13:33:37,704 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:33:37,705 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:33:37,706 - Quartz scheduler version: 2.2.3
+2017-10-15 13:33:37,711 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 13:33:37,807 - Starting beans in phase 2147483647
+2017-10-15 13:33:37,808 - Starting Quartz Scheduler now
+2017-10-15 13:33:37,808 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:33:37,817 - Starting beans in phase 2147483647
+2017-10-15 13:33:39,600 - [id: 0xee8c6ea2] REGISTERED
+2017-10-15 13:33:39,602 - [id: 0xee8c6ea2] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 13:33:39,610 - [id: 0xee8c6ea2, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 13:33:54,733 - 客户端启动！！！
+2017-10-15 13:33:56,390 - [id: 0xee8c6ea2, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x7ad31f77, L:/127.0.0.1:8765 - R:/127.0.0.1:5562]
+2017-10-15 13:33:56,500 - 获取客户端ip:/127.0.0.1:5562
+2017-10-15 13:33:57,329 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:34:22,925 - 本次定时任务开始时间：2017-10-15 13:34:22
+2017-10-15 13:34:23,029 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:28,336 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:28,939 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:29,486 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:55,392 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:56,004 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:56,569 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:57,267 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:58,381 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861310#-数据处理结果：1
+2017-10-15 13:34:59,047 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861310#-数据处理结果：1
+2017-10-15 13:35:00,172 - 本次定时任务开始时间：2017-10-15 13:35:00
+2017-10-15 13:35:00,306 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861310#-数据处理结果：1
+2017-10-15 13:35:01,328 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861310#-数据处理结果：1
+2017-10-15 13:35:02,560 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861310#-数据处理结果：1
+2017-10-15 13:35:02,990 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861310#-数据处理结果：1
+2017-10-15 13:35:04,667 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861310#-数据处理结果：1
+2017-10-15 13:35:06,399 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861310#-数据处理结果：1
+2017-10-15 13:35:06,971 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861310#-数据处理结果：1
+2017-10-15 13:36:00,084 - 本次定时任务开始时间：2017-10-15 13:36:00
+2017-10-15 13:36:07,867 - 客户端启动！！！
+2017-10-15 13:36:09,426 - [id: 0xee8c6ea2, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xcf8f6728, L:/127.0.0.1:8765 - R:/127.0.0.1:5623]
+2017-10-15 13:36:09,477 - 获取客户端ip:/127.0.0.1:5623
+2017-10-15 13:36:09,519 - 数据转化过程中出现异常！
+2017-10-15 13:37:00,003 - 本次定时任务开始时间：2017-10-15 13:37:00
+2017-10-15 13:38:00,001 - 本次定时任务开始时间：2017-10-15 13:38:00
+2017-10-15 13:38:23,943 - 客户端启动！！！
+2017-10-15 13:38:48,106 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 13:38:48 CST 2017]; root of context hierarchy
+2017-10-15 13:38:48,306 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 13:38:49,572 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 13:38:50,251 - Using default implementation for ThreadExecutor
+2017-10-15 13:38:50,307 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 13:38:50,308 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 13:38:50,313 - RAMJobStore initialized.
+2017-10-15 13:38:50,315 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 13:38:50,315 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 13:38:50,315 - Quartz scheduler version: 2.2.3
+2017-10-15 13:38:50,318 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 13:38:50,426 - Starting beans in phase 2147483647
+2017-10-15 13:38:50,426 - Starting Quartz Scheduler now
+2017-10-15 13:38:50,444 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 13:38:50,459 - Starting beans in phase 2147483647
+2017-10-15 13:38:51,894 - [id: 0x2c25b883] REGISTERED
+2017-10-15 13:38:51,897 - [id: 0x2c25b883] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 13:38:51,902 - [id: 0x2c25b883, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 13:39:00,023 - 本次定时任务开始时间：2017-10-15 13:39:00
+2017-10-15 13:39:06,725 - 客户端启动！！！
+2017-10-15 13:39:08,463 - [id: 0x2c25b883, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x222146e9, L:/127.0.0.1:8765 - R:/127.0.0.1:5719]
+2017-10-15 13:39:08,582 - 获取客户端ip:/127.0.0.1:5719
+2017-10-15 13:39:09,959 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 13:39:10,090 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:10,235 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:10,367 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:11,049 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:11,202 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:11,352 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:11,482 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:11,620 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:11,768 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:11,894 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:12,035 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:12,160 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:12,290 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861330#-数据处理结果：1
+2017-10-15 13:39:12,426 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:12,539 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:12,688 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861330#-数据处理结果：1
+2017-10-15 13:39:12,843 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861330#-数据处理结果：1
+2017-10-15 13:40:00,004 - 本次定时任务开始时间：2017-10-15 13:40:00
+2017-10-15 13:41:00,003 - 本次定时任务开始时间：2017-10-15 13:41:00
+2017-10-15 13:42:00,004 - 本次定时任务开始时间：2017-10-15 13:42:00
+2017-10-15 13:43:00,001 - 本次定时任务开始时间：2017-10-15 13:43:00
+2017-10-15 13:44:00,002 - 本次定时任务开始时间：2017-10-15 13:44:00
+2017-10-15 13:45:00,002 - 本次定时任务开始时间：2017-10-15 13:45:00
+2017-10-15 13:46:00,002 - 本次定时任务开始时间：2017-10-15 13:46:00
+2017-10-15 13:47:00,000 - 本次定时任务开始时间：2017-10-15 13:47:00
+2017-10-15 13:48:00,033 - 本次定时任务开始时间：2017-10-15 13:48:00
+2017-10-15 13:49:00,002 - 本次定时任务开始时间：2017-10-15 13:49:00
+2017-10-15 13:50:00,007 - 本次定时任务开始时间：2017-10-15 13:50:00
+2017-10-15 13:51:00,001 - 本次定时任务开始时间：2017-10-15 13:51:00
+2017-10-15 13:52:00,002 - 本次定时任务开始时间：2017-10-15 13:52:00
+2017-10-15 13:53:00,001 - 本次定时任务开始时间：2017-10-15 13:53:00
+2017-10-15 13:54:00,014 - 本次定时任务开始时间：2017-10-15 13:54:00
+2017-10-15 13:55:00,004 - 本次定时任务开始时间：2017-10-15 13:55:00
+2017-10-15 13:56:00,006 - 本次定时任务开始时间：2017-10-15 13:56:00
+2017-10-15 13:57:00,007 - 本次定时任务开始时间：2017-10-15 13:57:00
+2017-10-15 13:57:39,069 - 客户端启动！！！
+2017-10-15 13:57:41,454 - [id: 0x2c25b883, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x3c5d71ca, L:/127.0.0.1:8765 - R:/127.0.0.1:5981]
+2017-10-15 13:57:41,538 - 获取客户端ip:/127.0.0.1:5981
+2017-10-15 13:57:41,540 - 数据转化过程中出现异常！
+2017-10-15 13:57:41,698 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:41,833 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:41,981 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:42,106 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:42,245 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:42,369 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:42,515 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:42,656 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:42,799 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:42,960 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:43,087 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:43,244 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:43,393 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861330#-数据处理结果：1
+2017-10-15 13:57:43,523 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:43,638 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:43,816 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861330#-数据处理结果：1
+2017-10-15 13:57:43,966 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861330#-数据处理结果：1
+2017-10-15 13:58:00,004 - 本次定时任务开始时间：2017-10-15 13:58:00
+2017-10-15 13:59:00,007 - 本次定时任务开始时间：2017-10-15 13:59:00
+2017-10-15 14:00:10,236 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 14:00:10 CST 2017]; root of context hierarchy
+2017-10-15 14:00:10,411 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 14:00:12,041 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 14:00:12,540 - Using default implementation for ThreadExecutor
+2017-10-15 14:00:12,577 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 14:00:12,578 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 14:00:12,580 - RAMJobStore initialized.
+2017-10-15 14:00:12,581 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 14:00:12,581 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 14:00:12,582 - Quartz scheduler version: 2.2.3
+2017-10-15 14:00:12,585 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 14:00:12,695 - Starting beans in phase 2147483647
+2017-10-15 14:00:12,695 - Starting Quartz Scheduler now
+2017-10-15 14:00:12,696 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 14:00:12,705 - Starting beans in phase 2147483647
+2017-10-15 14:00:14,751 - [id: 0x4982b86b] REGISTERED
+2017-10-15 14:00:14,753 - [id: 0x4982b86b] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 14:00:14,761 - [id: 0x4982b86b, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 14:00:29,308 - 客户端启动！！！
+2017-10-15 14:00:31,877 - [id: 0x4982b86b, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xabf417d8, L:/127.0.0.1:8765 - R:/127.0.0.1:6090]
+2017-10-15 14:00:31,996 - 获取客户端ip:/127.0.0.1:6090
+2017-10-15 14:00:32,739 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 14:00:32,881 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:33,007 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:33,146 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:33,290 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:33,427 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:33,588 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:33,701 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:33,836 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:33,981 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:34,110 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:34,244 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:34,401 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:34,538 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861340#-数据处理结果：1
+2017-10-15 14:00:34,685 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:34,830 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:35,009 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861340#-数据处理结果：1
+2017-10-15 14:00:35,132 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861340#-数据处理结果：1
+2017-10-15 14:01:00,023 - 本次定时任务开始时间：2017-10-15 14:01:00
+2017-10-15 14:02:00,002 - 本次定时任务开始时间：2017-10-15 14:02:00
+2017-10-15 14:03:00,000 - 本次定时任务开始时间：2017-10-15 14:03:00
+2017-10-15 14:03:40,679 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 14:03:40 CST 2017]; root of context hierarchy
+2017-10-15 14:03:40,883 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 14:03:42,404 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 14:03:42,899 - Using default implementation for ThreadExecutor
+2017-10-15 14:03:42,942 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 14:03:42,943 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 14:03:42,945 - RAMJobStore initialized.
+2017-10-15 14:03:42,947 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 14:03:42,947 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 14:03:42,947 - Quartz scheduler version: 2.2.3
+2017-10-15 14:03:42,950 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 14:03:43,058 - Starting beans in phase 2147483647
+2017-10-15 14:03:43,059 - Starting Quartz Scheduler now
+2017-10-15 14:03:43,059 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 14:03:43,070 - Starting beans in phase 2147483647
+2017-10-15 14:03:45,107 - [id: 0x4cecc6fd] REGISTERED
+2017-10-15 14:03:45,109 - [id: 0x4cecc6fd] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 14:03:45,117 - [id: 0x4cecc6fd, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 14:03:45,708 - 客户端启动！！！
+2017-10-15 14:06:20,031 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 14:06:19 CST 2017]; root of context hierarchy
+2017-10-15 14:06:20,267 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 14:06:21,714 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 14:06:22,143 - Using default implementation for ThreadExecutor
+2017-10-15 14:06:22,198 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 14:06:22,198 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 14:06:22,205 - RAMJobStore initialized.
+2017-10-15 14:06:22,207 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 14:06:22,208 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 14:06:22,208 - Quartz scheduler version: 2.2.3
+2017-10-15 14:06:22,212 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 14:06:22,356 - Starting beans in phase 2147483647
+2017-10-15 14:06:22,357 - Starting Quartz Scheduler now
+2017-10-15 14:06:22,365 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 14:06:22,380 - Starting beans in phase 2147483647
+2017-10-15 14:06:23,962 - [id: 0xcd1a5995] REGISTERED
+2017-10-15 14:06:23,965 - [id: 0xcd1a5995] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 14:06:23,970 - [id: 0xcd1a5995, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 14:06:25,713 - 客户端启动！！！
+2017-10-15 14:06:28,172 - [id: 0xcd1a5995, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x7b4a18fc, L:/127.0.0.1:8765 - R:/127.0.0.1:6293]
+2017-10-15 14:06:28,232 - 获取客户端ip:/127.0.0.1:6293
+2017-10-15 14:06:28,951 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 14:06:29,098 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:29,236 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:29,389 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:29,521 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:29,682 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:29,804 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:30,600 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:30,749 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:30,882 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:31,013 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:31,155 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:31,292 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:31,449 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861350#-数据处理结果：1
+2017-10-15 14:06:31,614 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:31,760 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:31,879 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861350#-数据处理结果：1
+2017-10-15 14:06:32,022 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861350#-数据处理结果：1
+2017-10-15 14:07:00,014 - 本次定时任务开始时间：2017-10-15 14:07:00
+2017-10-15 14:09:42,835 - 客户端启动！！！
+2017-10-15 14:17:56,033 - 客户端启动！！！
+2017-10-15 14:18:24,569 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 14:18:24 CST 2017]; root of context hierarchy
+2017-10-15 14:18:24,726 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 14:18:26,289 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 14:18:26,758 - Using default implementation for ThreadExecutor
+2017-10-15 14:18:26,808 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 14:18:26,811 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 14:18:26,816 - RAMJobStore initialized.
+2017-10-15 14:18:26,819 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 14:18:26,820 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 14:18:26,821 - Quartz scheduler version: 2.2.3
+2017-10-15 14:18:26,831 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 14:18:26,961 - Starting beans in phase 2147483647
+2017-10-15 14:18:26,962 - Starting Quartz Scheduler now
+2017-10-15 14:18:26,962 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 14:18:26,977 - Starting beans in phase 2147483647
+2017-10-15 14:18:28,295 - [id: 0x0548e744] REGISTERED
+2017-10-15 14:18:28,298 - [id: 0x0548e744] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 14:18:28,305 - [id: 0x0548e744, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 14:18:35,742 - 客户端启动！！！
+2017-10-15 14:18:56,313 - 客户端启动！！！
+2017-10-15 14:19:00,018 - 本次定时任务开始时间：2017-10-15 14:19:00
+2017-10-15 14:19:19,351 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 14:19:19 CST 2017]; root of context hierarchy
+2017-10-15 14:19:19,482 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 14:19:21,066 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 14:19:21,421 - Using default implementation for ThreadExecutor
+2017-10-15 14:19:21,543 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 14:19:21,543 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 14:19:21,548 - RAMJobStore initialized.
+2017-10-15 14:19:21,605 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 14:19:21,614 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 14:19:21,615 - Quartz scheduler version: 2.2.3
+2017-10-15 14:19:21,619 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 14:19:21,787 - Starting beans in phase 2147483647
+2017-10-15 14:19:21,787 - Starting Quartz Scheduler now
+2017-10-15 14:19:21,788 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 14:19:21,798 - Starting beans in phase 2147483647
+2017-10-15 14:19:24,447 - [id: 0x5e5952b5] REGISTERED
+2017-10-15 14:19:24,450 - [id: 0x5e5952b5] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 14:19:24,458 - [id: 0x5e5952b5, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 14:19:29,011 - 客户端启动！！！
+2017-10-15 14:19:40,981 - 客户端启动！！！
+2017-10-15 14:19:43,246 - [id: 0x5e5952b5, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x7b0f8761, L:/127.0.0.1:8765 - R:/127.0.0.1:6642]
+2017-10-15 14:19:43,286 - 获取客户端ip:/127.0.0.1:6642
+2017-10-15 14:19:44,573 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 14:19:44,725 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:44,868 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:45,004 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:45,135 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:45,261 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:45,393 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:46,725 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:46,857 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:47,015 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:47,186 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:47,337 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:47,494 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:47,622 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861350#-数据处理结果：1
+2017-10-15 14:19:47,743 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:47,888 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:48,032 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861350#-数据处理结果：1
+2017-10-15 14:19:48,175 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861350#-数据处理结果：1
+2017-10-15 14:20:00,029 - 本次定时任务开始时间：2017-10-15 14:20:00
+2017-10-15 14:21:00,001 - 本次定时任务开始时间：2017-10-15 14:21:00
+2017-10-15 14:21:34,353 - 客户端启动！！！
+2017-10-15 14:22:00,002 - 本次定时任务开始时间：2017-10-15 14:22:00
+2017-10-15 14:23:00,005 - 本次定时任务开始时间：2017-10-15 14:23:00
+2017-10-15 14:24:00,003 - 本次定时任务开始时间：2017-10-15 14:24:00
+2017-10-15 14:25:00,005 - 本次定时任务开始时间：2017-10-15 14:25:00
+2017-10-15 14:26:00,002 - 本次定时任务开始时间：2017-10-15 14:26:00
+2017-10-15 14:27:00,002 - 本次定时任务开始时间：2017-10-15 14:27:00
+2017-10-15 14:28:00,005 - 本次定时任务开始时间：2017-10-15 14:28:00
+2017-10-15 14:29:00,009 - 本次定时任务开始时间：2017-10-15 14:29:00
+2017-10-15 14:29:39,127 - 客户端启动！！！
+2017-10-15 14:30:00,002 - 本次定时任务开始时间：2017-10-15 14:30:00
+2017-10-15 14:31:00,004 - 本次定时任务开始时间：2017-10-15 14:31:00
+2017-10-15 14:31:01,435 - 客户端启动！！！
+2017-10-15 14:32:00,001 - 本次定时任务开始时间：2017-10-15 14:32:00
+2017-10-15 14:33:00,002 - 本次定时任务开始时间：2017-10-15 14:33:00
+2017-10-15 14:34:00,006 - 本次定时任务开始时间：2017-10-15 14:34:00
+2017-10-15 14:35:00,009 - 本次定时任务开始时间：2017-10-15 14:35:00
+2017-10-15 14:36:00,002 - 本次定时任务开始时间：2017-10-15 14:36:00
+2017-10-15 14:37:00,003 - 本次定时任务开始时间：2017-10-15 14:37:00
+2017-10-15 14:38:00,004 - 本次定时任务开始时间：2017-10-15 14:38:00
+2017-10-15 14:39:00,002 - 本次定时任务开始时间：2017-10-15 14:39:00
+2017-10-15 14:40:00,005 - 本次定时任务开始时间：2017-10-15 14:40:00
+2017-10-15 14:41:00,003 - 本次定时任务开始时间：2017-10-15 14:41:00
+2017-10-15 14:42:00,000 - 本次定时任务开始时间：2017-10-15 14:42:00
+2017-10-15 14:43:00,019 - 本次定时任务开始时间：2017-10-15 14:43:00
+2017-10-15 14:44:00,003 - 本次定时任务开始时间：2017-10-15 14:44:00
+2017-10-15 14:45:00,007 - 本次定时任务开始时间：2017-10-15 14:45:00
+2017-10-15 14:45:17,841 - 客户端启动！！！
+2017-10-15 14:46:00,002 - 本次定时任务开始时间：2017-10-15 14:46:00
+2017-10-15 14:47:00,005 - 本次定时任务开始时间：2017-10-15 14:47:00
+2017-10-15 14:47:14,244 - 客户端启动！！！
+2017-10-15 14:47:53,801 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sun Oct 15 14:47:53 CST 2017]; root of context hierarchy
+2017-10-15 14:47:53,944 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 14:47:55,642 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 14:47:56,210 - Using default implementation for ThreadExecutor
+2017-10-15 14:47:56,244 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 14:47:56,244 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 14:47:56,283 - RAMJobStore initialized.
+2017-10-15 14:47:56,286 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 14:47:56,287 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 14:47:56,287 - Quartz scheduler version: 2.2.3
+2017-10-15 14:47:56,291 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@53251a66
+2017-10-15 14:47:56,584 - Starting beans in phase 2147483647
+2017-10-15 14:47:56,584 - Starting Quartz Scheduler now
+2017-10-15 14:47:56,585 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 14:47:56,594 - Starting beans in phase 2147483647
+2017-10-15 14:47:58,981 - [id: 0x27c1f74a] REGISTERED
+2017-10-15 14:47:58,984 - [id: 0x27c1f74a] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 14:47:58,991 - [id: 0x27c1f74a, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 14:48:00,013 - 本次定时任务开始时间：2017-10-15 14:48:00
+2017-10-15 14:48:06,071 - 客户端启动！！！
+2017-10-15 14:48:08,240 - [id: 0x27c1f74a, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xfb095a37, L:/127.0.0.1:8765 - R:/127.0.0.1:7206]
+2017-10-15 14:48:08,339 - 获取客户端ip:/127.0.0.1:7206
+2017-10-15 14:48:08,374 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 14:48:08,738 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 14:48:08,743 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861351#
+2017-10-15 14:48:08,898 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:08,899 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861351#
+2017-10-15 14:48:09,049 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:09,050 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861351#
+2017-10-15 14:48:09,202 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:09,202 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861351#
+2017-10-15 14:48:09,333 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:09,334 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861351#
+2017-10-15 14:48:09,489 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:09,490 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861351#
+2017-10-15 14:48:09,622 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:09,623 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861351#
+2017-10-15 14:48:09,774 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:09,775 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861351#
+2017-10-15 14:48:09,920 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:09,921 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861351#
+2017-10-15 14:48:10,057 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:10,058 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861351#
+2017-10-15 14:48:10,277 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:10,277 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861351#
+2017-10-15 14:48:10,436 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:10,437 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861351#
+2017-10-15 14:48:10,582 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:10,582 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861351#
+2017-10-15 14:48:10,710 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861351#-数据处理结果：1
+2017-10-15 14:48:10,710 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861351#
+2017-10-15 14:48:10,856 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:10,856 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861351#
+2017-10-15 14:48:10,967 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:10,968 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861351#
+2017-10-15 14:48:11,098 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:11,099 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861351#
+2017-10-15 14:48:11,276 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861351#-数据处理结果：1
+2017-10-15 14:48:30,127 - 客户端启动！！！
+2017-10-15 14:48:31,884 - [id: 0x27c1f74a, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x8c07ed02, L:/127.0.0.1:8765 - R:/127.0.0.1:7250]
+2017-10-15 14:48:32,010 - Failed to initialize a channel. Closing: [id: 0x8c07ed02, L:/127.0.0.1:8765 - R:/127.0.0.1:7250]
+io.netty.channel.ChannelPipelineException: com.vastsum.main.ServerHandler is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:587)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:199)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:392)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:379)
+	at com.vastsum.main.Server$1.initChannel(Server.java:58)
+	at com.vastsum.main.Server$1.initChannel(Server.java:50)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:113)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:105)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.access$000(DefaultChannelPipeline.java:44)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1387)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1122)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:647)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:506)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:419)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:478)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:418)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:454)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+2017-10-15 14:49:00,005 - 本次定时任务开始时间：2017-10-15 14:49:00
+2017-10-15 14:50:00,003 - 本次定时任务开始时间：2017-10-15 14:50:00
+2017-10-15 14:51:00,003 - 本次定时任务开始时间：2017-10-15 14:51:00
+2017-10-15 14:52:00,005 - 本次定时任务开始时间：2017-10-15 14:52:00
+2017-10-15 14:53:00,002 - 本次定时任务开始时间：2017-10-15 14:53:00
+2017-10-15 14:54:00,003 - 本次定时任务开始时间：2017-10-15 14:54:00
+2017-10-15 14:54:20,395 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 14:54:20 CST 2017]; root of context hierarchy
+2017-10-15 14:54:20,550 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 14:54:22,046 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 14:54:22,637 - Using default implementation for ThreadExecutor
+2017-10-15 14:54:22,756 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 14:54:22,757 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 14:54:22,761 - RAMJobStore initialized.
+2017-10-15 14:54:22,763 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 14:54:22,764 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 14:54:22,765 - Quartz scheduler version: 2.2.3
+2017-10-15 14:54:22,774 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 14:54:22,928 - Starting beans in phase 2147483647
+2017-10-15 14:54:22,929 - Starting Quartz Scheduler now
+2017-10-15 14:54:22,929 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 14:54:22,941 - Starting beans in phase 2147483647
+2017-10-15 14:54:24,674 - [id: 0x8659954b] REGISTERED
+2017-10-15 14:54:24,677 - [id: 0x8659954b] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 14:54:24,685 - [id: 0x8659954b, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 14:54:37,430 - 客户端启动！！！
+2017-10-15 14:54:39,514 - [id: 0x8659954b, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xa65891fc, L:/127.0.0.1:8765 - R:/127.0.0.1:7444]
+2017-10-15 14:54:39,587 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 14:54:39,588 - 获取客户端ip:/127.0.0.1:7444
+2017-10-15 14:54:39,633 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 14:54:40,320 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 14:54:40,325 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861353#
+2017-10-15 14:54:40,451 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:40,452 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861353#
+2017-10-15 14:54:40,592 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:40,593 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861353#
+2017-10-15 14:54:40,723 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:40,724 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861353#
+2017-10-15 14:54:40,855 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:40,856 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861353#
+2017-10-15 14:54:41,004 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:41,005 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861353#
+2017-10-15 14:54:41,138 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:41,138 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861353#
+2017-10-15 14:54:41,255 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:41,256 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861353#
+2017-10-15 14:54:41,393 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:41,394 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861353#
+2017-10-15 14:54:41,514 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:41,515 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861353#
+2017-10-15 14:54:41,656 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:41,657 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861353#
+2017-10-15 14:54:41,788 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:41,789 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861353#
+2017-10-15 14:54:41,936 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:41,937 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861353#
+2017-10-15 14:54:42,079 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861353#-数据处理结果：1
+2017-10-15 14:54:42,080 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861353#
+2017-10-15 14:54:42,223 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:42,224 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861353#
+2017-10-15 14:54:42,351 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:42,351 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861353#
+2017-10-15 14:54:42,481 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861353#-数据处理结果：1
+2017-10-15 14:54:42,482 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861353#
+2017-10-15 14:54:42,610 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861353#-数据处理结果：1
+2017-10-15 14:55:00,022 - 本次定时任务开始时间：2017-10-15 14:55:00
+2017-10-15 14:55:16,182 - 客户端启动！！！
+2017-10-15 14:55:18,242 - [id: 0x8659954b, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xe4d3454f, L:/127.0.0.1:8765 - R:/127.0.0.1:7491]
+2017-10-15 14:55:18,261 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 14:55:18,262 - 获取客户端ip:/127.0.0.1:7491
+2017-10-15 14:55:18,315 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 14:55:18,315 - 数据转化过程中出现异常！
+2017-10-15 14:56:00,007 - 本次定时任务开始时间：2017-10-15 14:56:00
+2017-10-15 14:57:00,003 - 本次定时任务开始时间：2017-10-15 14:57:00
+2017-10-15 14:58:00,038 - 本次定时任务开始时间：2017-10-15 14:58:00
+2017-10-15 14:59:00,012 - 本次定时任务开始时间：2017-10-15 14:59:00
+2017-10-15 15:00:00,002 - 本次定时任务开始时间：2017-10-15 15:00:00
+2017-10-15 15:01:00,003 - 本次定时任务开始时间：2017-10-15 15:01:00
+2017-10-15 15:01:56,414 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 15:01:56 CST 2017]; root of context hierarchy
+2017-10-15 15:01:56,559 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 15:01:57,837 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 15:01:58,274 - Using default implementation for ThreadExecutor
+2017-10-15 15:01:58,318 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 15:01:58,318 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 15:01:58,320 - RAMJobStore initialized.
+2017-10-15 15:01:58,321 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 15:01:58,321 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 15:01:58,321 - Quartz scheduler version: 2.2.3
+2017-10-15 15:01:58,324 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 15:01:58,599 - Starting beans in phase 2147483647
+2017-10-15 15:01:58,599 - Starting Quartz Scheduler now
+2017-10-15 15:01:58,600 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 15:01:58,606 - Starting beans in phase 2147483647
+2017-10-15 15:01:59,869 - [id: 0xe5d2af7c] REGISTERED
+2017-10-15 15:01:59,872 - [id: 0xe5d2af7c] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 15:01:59,878 - [id: 0xe5d2af7c, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 15:02:00,015 - 本次定时任务开始时间：2017-10-15 15:02:00
+2017-10-15 15:02:03,455 - 客户端启动！！！
+2017-10-15 15:02:05,374 - [id: 0xe5d2af7c, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x18426355, L:/127.0.0.1:8765 - R:/127.0.0.1:7750]
+2017-10-15 15:02:05,411 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:02:05,412 - 获取客户端ip:/127.0.0.1:7750
+2017-10-15 15:02:05,490 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:02:05,634 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 15:02:05,638 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861354#
+2017-10-15 15:02:05,640 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:05,792 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:05,793 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861354#
+2017-10-15 15:02:05,794 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:05,937 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:05,938 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861354#
+2017-10-15 15:02:05,938 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:06,057 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:06,057 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861354#
+2017-10-15 15:02:06,058 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:06,209 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:06,210 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861354#
+2017-10-15 15:02:06,210 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:06,353 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:06,354 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861354#
+2017-10-15 15:02:06,354 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:06,478 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:06,478 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861354#
+2017-10-15 15:02:06,478 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:06,621 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:06,621 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861354#
+2017-10-15 15:02:06,621 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:06,750 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:06,750 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861354#
+2017-10-15 15:02:06,751 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:06,906 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:06,907 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861354#
+2017-10-15 15:02:06,907 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:07,043 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:07,044 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861354#
+2017-10-15 15:02:07,044 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:07,169 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:07,170 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861354#
+2017-10-15 15:02:07,170 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:07,309 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:07,310 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861354#
+2017-10-15 15:02:07,310 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:07,424 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861354#-数据处理结果：1
+2017-10-15 15:02:07,425 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861354#
+2017-10-15 15:02:07,425 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:07,565 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:07,566 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861354#
+2017-10-15 15:02:07,566 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:07,677 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:07,678 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861354#
+2017-10-15 15:02:07,678 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:07,811 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:07,812 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861354#
+2017-10-15 15:02:07,812 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:07,950 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:14,451 - 客户端启动！！！
+2017-10-15 15:02:16,243 - [id: 0xe5d2af7c, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xde3fa96e, L:/127.0.0.1:8765 - R:/127.0.0.1:7792]
+2017-10-15 15:02:16,340 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:02:16,340 - 获取客户端ip:/127.0.0.1:7792
+2017-10-15 15:02:16,342 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:02:16,342 - 数据转化过程中出现异常！
+2017-10-15 15:02:16,342 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:16,343 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861354#
+2017-10-15 15:02:16,344 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:16,479 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:16,480 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861354#
+2017-10-15 15:02:16,480 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:16,605 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:16,606 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861354#
+2017-10-15 15:02:16,606 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:16,751 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:16,751 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861354#
+2017-10-15 15:02:16,751 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:16,882 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:16,883 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861354#
+2017-10-15 15:02:16,883 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:17,015 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:17,015 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861354#
+2017-10-15 15:02:17,016 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:17,150 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:17,151 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861354#
+2017-10-15 15:02:17,151 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:17,279 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:17,279 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861354#
+2017-10-15 15:02:17,279 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:17,409 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:17,409 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861354#
+2017-10-15 15:02:17,409 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:17,538 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:17,538 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861354#
+2017-10-15 15:02:17,538 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:17,751 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:17,751 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861354#
+2017-10-15 15:02:17,752 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:17,866 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:17,867 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861354#
+2017-10-15 15:02:17,867 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:17,992 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:17,992 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861354#
+2017-10-15 15:02:17,993 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:18,130 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861354#-数据处理结果：1
+2017-10-15 15:02:18,130 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861354#
+2017-10-15 15:02:18,131 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:18,256 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:18,256 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861354#
+2017-10-15 15:02:18,256 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:18,381 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:18,381 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861354#
+2017-10-15 15:02:18,381 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:18,506 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:18,507 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861354#
+2017-10-15 15:02:18,507 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:02:18,624 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861354#-数据处理结果：1
+2017-10-15 15:02:42,803 - 客户端启动！！！
+2017-10-15 15:02:44,522 - [id: 0xe5d2af7c, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x07613e40, L:/127.0.0.1:8765 - R:/127.0.0.1:7833]
+2017-10-15 15:02:44,553 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:02:44,554 - 获取客户端ip:/127.0.0.1:7833
+2017-10-15 15:02:44,602 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:02:44,602 - 数据转化过程中出现异常！
+2017-10-15 15:02:44,602 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:03:00,003 - 本次定时任务开始时间：2017-10-15 15:03:00
+2017-10-15 15:04:00,002 - 本次定时任务开始时间：2017-10-15 15:04:00
+2017-10-15 15:05:00,003 - 本次定时任务开始时间：2017-10-15 15:05:00
+2017-10-15 15:06:00,009 - 本次定时任务开始时间：2017-10-15 15:06:00
+2017-10-15 15:07:00,006 - 本次定时任务开始时间：2017-10-15 15:07:00
+2017-10-15 15:08:00,002 - 本次定时任务开始时间：2017-10-15 15:08:00
+2017-10-15 15:09:00,001 - 本次定时任务开始时间：2017-10-15 15:09:00
+2017-10-15 15:10:00,002 - 本次定时任务开始时间：2017-10-15 15:10:00
+2017-10-15 15:11:00,001 - 本次定时任务开始时间：2017-10-15 15:11:00
+2017-10-15 15:12:00,001 - 本次定时任务开始时间：2017-10-15 15:12:00
+2017-10-15 15:13:00,005 - 本次定时任务开始时间：2017-10-15 15:13:00
+2017-10-15 15:14:00,004 - 本次定时任务开始时间：2017-10-15 15:14:00
+2017-10-15 15:15:00,008 - 本次定时任务开始时间：2017-10-15 15:15:00
+2017-10-15 15:16:00,008 - 本次定时任务开始时间：2017-10-15 15:16:00
+2017-10-15 15:17:00,009 - 本次定时任务开始时间：2017-10-15 15:17:00
+2017-10-15 15:18:00,010 - 本次定时任务开始时间：2017-10-15 15:18:00
+2017-10-15 15:19:00,010 - 本次定时任务开始时间：2017-10-15 15:19:00
+2017-10-15 15:20:00,006 - 本次定时任务开始时间：2017-10-15 15:20:00
+2017-10-15 15:21:00,001 - 本次定时任务开始时间：2017-10-15 15:21:00
+2017-10-15 15:22:00,007 - 本次定时任务开始时间：2017-10-15 15:22:00
+2017-10-15 15:23:00,008 - 本次定时任务开始时间：2017-10-15 15:23:00
+2017-10-15 15:24:00,004 - 本次定时任务开始时间：2017-10-15 15:24:00
+2017-10-15 15:25:00,000 - 本次定时任务开始时间：2017-10-15 15:25:00
+2017-10-15 15:26:00,003 - 本次定时任务开始时间：2017-10-15 15:26:00
+2017-10-15 15:27:00,003 - 本次定时任务开始时间：2017-10-15 15:27:00
+2017-10-15 15:28:00,001 - 本次定时任务开始时间：2017-10-15 15:28:00
+2017-10-15 15:29:00,001 - 本次定时任务开始时间：2017-10-15 15:29:00
+2017-10-15 15:30:00,003 - 本次定时任务开始时间：2017-10-15 15:30:00
+2017-10-15 15:31:00,003 - 本次定时任务开始时间：2017-10-15 15:31:00
+2017-10-15 15:31:02,088 - 客户端启动！！！
+2017-10-15 15:31:03,874 - [id: 0xe5d2af7c, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x886b193c, L:/127.0.0.1:8765 - R:/127.0.0.1:8194]
+2017-10-15 15:31:03,877 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:31:03,878 - 获取客户端ip:/127.0.0.1:8194
+2017-10-15 15:31:03,931 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:31:03,932 - 数据转化过程中出现异常！
+2017-10-15 15:31:03,932 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:32:00,005 - 本次定时任务开始时间：2017-10-15 15:32:00
+2017-10-15 15:32:19,801 - 客户端启动！！！
+2017-10-15 15:32:21,489 - [id: 0xe5d2af7c, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x5820fa52, L:/127.0.0.1:8765 - R:/127.0.0.1:8228]
+2017-10-15 15:32:21,627 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:32:21,627 - 获取客户端ip:/127.0.0.1:8228
+2017-10-15 15:32:21,629 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:33:28,689 - 数据转化过程中出现异常！
+2017-10-15 15:33:28,689 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:28,691 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861354#
+2017-10-15 15:33:32,993 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:32,997 - 本次定时任务开始时间：2017-10-15 15:33:32
+2017-10-15 15:33:33,116 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:33,116 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861354#
+2017-10-15 15:33:33,899 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:34,014 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:34,015 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861354#
+2017-10-15 15:33:35,276 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:35,396 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:35,397 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861354#
+2017-10-15 15:33:35,880 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:36,017 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:36,017 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861354#
+2017-10-15 15:33:36,489 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:36,626 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:36,626 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861354#
+2017-10-15 15:33:36,959 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:37,103 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:37,104 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861354#
+2017-10-15 15:33:37,293 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:37,409 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:37,409 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861354#
+2017-10-15 15:33:37,704 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:37,841 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:37,841 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861354#
+2017-10-15 15:33:48,854 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:48,993 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:48,994 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861354#
+2017-10-15 15:33:48,994 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:49,119 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:49,119 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861354#
+2017-10-15 15:33:49,120 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:49,261 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:49,261 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861354#
+2017-10-15 15:33:49,261 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:49,383 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861354#-数据处理结果：1
+2017-10-15 15:33:49,383 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861354#
+2017-10-15 15:33:49,383 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:33:49,503 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861354#-数据处理结果：1
+2017-10-15 15:34:00,001 - 本次定时任务开始时间：2017-10-15 15:34:00
+2017-10-15 15:35:00,001 - 本次定时任务开始时间：2017-10-15 15:35:00
+2017-10-15 15:36:00,003 - 本次定时任务开始时间：2017-10-15 15:36:00
+2017-10-15 15:37:00,009 - 本次定时任务开始时间：2017-10-15 15:37:00
+2017-10-15 15:38:00,001 - 本次定时任务开始时间：2017-10-15 15:38:00
+2017-10-15 15:39:00,002 - 本次定时任务开始时间：2017-10-15 15:39:00
+2017-10-15 15:40:00,006 - 本次定时任务开始时间：2017-10-15 15:40:00
+2017-10-15 15:41:00,002 - 本次定时任务开始时间：2017-10-15 15:41:00
+2017-10-15 15:41:22,647 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 15:41:22 CST 2017]; root of context hierarchy
+2017-10-15 15:41:22,837 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 15:41:24,058 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 15:41:24,684 - Using default implementation for ThreadExecutor
+2017-10-15 15:41:24,734 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 15:41:24,735 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 15:41:24,737 - RAMJobStore initialized.
+2017-10-15 15:41:24,740 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 15:41:24,742 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 15:41:24,743 - Quartz scheduler version: 2.2.3
+2017-10-15 15:41:24,746 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 15:41:25,024 - Starting beans in phase 2147483647
+2017-10-15 15:41:25,025 - Starting Quartz Scheduler now
+2017-10-15 15:41:25,027 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 15:41:25,039 - Starting beans in phase 2147483647
+2017-10-15 15:41:26,285 - [id: 0xa450f592] REGISTERED
+2017-10-15 15:41:26,288 - [id: 0xa450f592] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 15:41:26,294 - [id: 0xa450f592, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 15:41:47,900 - 客户端启动！！！
+2017-10-15 15:41:49,568 - [id: 0xa450f592, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x6355861c, L:/127.0.0.1:8765 - R:/127.0.0.1:8372]
+2017-10-15 15:41:49,606 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:41:49,608 - 获取客户端ip:/127.0.0.1:8372
+2017-10-15 15:41:49,700 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:41:50,336 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 15:41:50,341 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861355#
+2017-10-15 15:41:50,342 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:50,476 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:50,477 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861355#
+2017-10-15 15:41:50,477 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:50,618 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:50,619 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861355#
+2017-10-15 15:41:50,619 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:50,754 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:50,755 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861355#
+2017-10-15 15:41:50,755 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:50,926 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:50,927 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861355#
+2017-10-15 15:41:50,927 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:51,053 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:51,054 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861355#
+2017-10-15 15:41:51,054 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:51,176 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:51,177 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861355#
+2017-10-15 15:41:51,178 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:51,305 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:51,306 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861355#
+2017-10-15 15:41:51,306 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:51,454 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:51,455 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861355#
+2017-10-15 15:41:51,455 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:51,583 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:51,584 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861355#
+2017-10-15 15:41:51,584 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:51,742 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:51,743 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861355#
+2017-10-15 15:41:51,743 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:51,901 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:51,902 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861355#
+2017-10-15 15:41:51,902 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:52,031 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:52,031 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861355#
+2017-10-15 15:41:52,032 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:52,210 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861355#-数据处理结果：1
+2017-10-15 15:41:52,211 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861355#
+2017-10-15 15:41:52,211 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:52,341 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:52,342 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861355#
+2017-10-15 15:41:52,342 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:52,497 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:52,497 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861355#
+2017-10-15 15:41:52,498 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:52,658 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861355#-数据处理结果：1
+2017-10-15 15:41:52,658 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861355#
+2017-10-15 15:41:52,659 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:41:52,791 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861355#-数据处理结果：1
+2017-10-15 15:42:00,020 - 本次定时任务开始时间：2017-10-15 15:42:00
+2017-10-15 15:42:15,122 - 客户端启动！！！
+2017-10-15 15:42:16,897 - [id: 0xa450f592, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x1581279f, L:/127.0.0.1:8765 - R:/127.0.0.1:8414]
+2017-10-15 15:42:16,905 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:42:16,905 - 获取客户端ip:/127.0.0.1:8414
+2017-10-15 15:42:17,029 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:42:17,033 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861356#
+2017-10-15 15:42:17,033 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:17,173 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:17,174 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861356#
+2017-10-15 15:42:17,174 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:17,302 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:17,303 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861356#
+2017-10-15 15:42:17,303 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:17,428 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:17,429 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861356#
+2017-10-15 15:42:17,429 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:17,576 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:17,576 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861356#
+2017-10-15 15:42:17,577 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:17,714 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:17,715 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861356#
+2017-10-15 15:42:17,715 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:17,864 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:17,865 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861356#
+2017-10-15 15:42:17,865 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:17,982 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:17,983 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861356#
+2017-10-15 15:42:17,983 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:18,190 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:18,191 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861356#
+2017-10-15 15:42:18,191 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:18,343 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:18,344 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861356#
+2017-10-15 15:42:18,344 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:18,458 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:18,459 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861356#
+2017-10-15 15:42:18,459 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:18,581 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:18,582 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861356#
+2017-10-15 15:42:18,582 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:18,711 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:18,712 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861356#
+2017-10-15 15:42:18,712 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:18,830 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861356#-数据处理结果：1
+2017-10-15 15:42:18,832 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861356#
+2017-10-15 15:42:18,832 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:18,970 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:18,971 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861356#
+2017-10-15 15:42:18,971 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:19,091 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:19,092 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861356#
+2017-10-15 15:42:19,092 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:19,213 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861356#-数据处理结果：1
+2017-10-15 15:42:19,213 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861356#
+2017-10-15 15:42:19,213 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:42:19,342 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861356#-数据处理结果：1
+2017-10-15 15:43:00,013 - 本次定时任务开始时间：2017-10-15 15:43:00
+2017-10-15 15:44:00,003 - 本次定时任务开始时间：2017-10-15 15:44:00
+2017-10-15 15:44:38,087 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 15:44:38 CST 2017]; root of context hierarchy
+2017-10-15 15:44:38,220 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 15:44:39,411 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 15:44:39,799 - Using default implementation for ThreadExecutor
+2017-10-15 15:44:39,963 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 15:44:39,963 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 15:44:39,968 - RAMJobStore initialized.
+2017-10-15 15:44:39,970 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 15:44:39,970 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 15:44:39,970 - Quartz scheduler version: 2.2.3
+2017-10-15 15:44:39,975 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 15:44:40,226 - Starting beans in phase 2147483647
+2017-10-15 15:44:40,227 - Starting Quartz Scheduler now
+2017-10-15 15:44:40,228 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 15:44:40,243 - Starting beans in phase 2147483647
+2017-10-15 15:44:42,208 - [id: 0x846edbf7] REGISTERED
+2017-10-15 15:44:42,211 - [id: 0x846edbf7] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 15:44:42,216 - [id: 0x846edbf7, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 15:44:50,059 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 15:44:50 CST 2017]; root of context hierarchy
+2017-10-15 15:44:50,200 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 15:44:51,348 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 15:44:51,756 - Using default implementation for ThreadExecutor
+2017-10-15 15:44:51,818 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 15:44:51,819 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 15:44:51,820 - RAMJobStore initialized.
+2017-10-15 15:44:51,822 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 15:44:51,823 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 15:44:51,823 - Quartz scheduler version: 2.2.3
+2017-10-15 15:44:51,825 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@5a9f4771
+2017-10-15 15:44:51,937 - Starting beans in phase 2147483647
+2017-10-15 15:44:51,938 - Starting Quartz Scheduler now
+2017-10-15 15:44:51,938 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 15:44:51,950 - Starting beans in phase 2147483647
+2017-10-15 15:44:53,294 - [id: 0xa1ee8f06] REGISTERED
+2017-10-15 15:44:53,296 - [id: 0xa1ee8f06] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 15:44:53,301 - [id: 0xa1ee8f06] CLOSE
+2017-10-15 15:44:53,302 - [id: 0xa1ee8f06] UNREGISTERED
+2017-10-15 15:45:00,015 - 本次定时任务开始时间：2017-10-15 15:45:00
+2017-10-15 15:45:06,734 - 客户端启动！！！
+2017-10-15 15:45:08,467 - [id: 0x846edbf7, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xd3bb1cf5, L:/127.0.0.1:8765 - R:/127.0.0.1:8543]
+2017-10-15 15:45:08,587 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:45:08,588 - 获取客户端ip:/127.0.0.1:8543
+2017-10-15 15:45:08,620 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:45:09,186 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 15:45:09,191 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861357#
+2017-10-15 15:45:09,192 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:09,320 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:09,321 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861357#
+2017-10-15 15:45:09,321 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:09,437 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:09,438 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861357#
+2017-10-15 15:45:09,438 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:09,579 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:09,580 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861357#
+2017-10-15 15:45:09,580 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:09,700 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:09,701 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861357#
+2017-10-15 15:45:09,701 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:09,827 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:09,828 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861357#
+2017-10-15 15:45:09,828 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:09,969 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:09,970 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861357#
+2017-10-15 15:45:09,970 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:10,107 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:10,108 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861357#
+2017-10-15 15:45:10,109 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:10,223 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:10,224 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861357#
+2017-10-15 15:45:10,224 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:10,341 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:10,342 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861357#
+2017-10-15 15:45:10,342 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:10,481 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:10,482 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861357#
+2017-10-15 15:45:10,482 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:10,606 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:10,607 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861357#
+2017-10-15 15:45:10,608 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:10,734 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:10,735 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861357#
+2017-10-15 15:45:10,735 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:10,885 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861357#-数据处理结果：1
+2017-10-15 15:45:10,885 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861357#
+2017-10-15 15:45:10,885 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:11,007 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:11,008 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861357#
+2017-10-15 15:45:11,008 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:11,138 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:11,139 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861357#
+2017-10-15 15:45:11,139 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:11,268 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:11,269 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861357#
+2017-10-15 15:45:11,269 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:11,396 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:17,501 - 客户端启动！！！
+2017-10-15 15:45:19,315 - [id: 0x846edbf7, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xd29d25bd, L:/127.0.0.1:8765 - R:/127.0.0.1:8586]
+2017-10-15 15:45:19,356 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:45:19,357 - 获取客户端ip:/127.0.0.1:8586
+2017-10-15 15:45:19,397 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:45:19,398 - 已经激活的设备再次连接服务器，返回时间戳为：1508053519397
+2017-10-15 15:45:19,401 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861357#
+2017-10-15 15:45:19,402 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:19,536 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:19,537 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861357#
+2017-10-15 15:45:19,537 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:19,669 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:19,670 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861357#
+2017-10-15 15:45:19,670 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:19,800 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:19,801 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861357#
+2017-10-15 15:45:19,801 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:19,937 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:19,937 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861357#
+2017-10-15 15:45:19,938 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:20,082 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:20,083 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861357#
+2017-10-15 15:45:20,083 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:20,212 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:20,212 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861357#
+2017-10-15 15:45:20,212 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:20,345 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:20,345 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861357#
+2017-10-15 15:45:20,345 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:20,473 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:20,474 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861357#
+2017-10-15 15:45:20,475 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:20,603 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:20,604 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861357#
+2017-10-15 15:45:20,681 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:20,821 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:20,821 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861357#
+2017-10-15 15:45:20,821 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:20,976 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:20,977 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861357#
+2017-10-15 15:45:20,977 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:21,113 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:21,113 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861357#
+2017-10-15 15:45:21,114 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:21,254 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861357#-数据处理结果：1
+2017-10-15 15:45:21,255 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861357#
+2017-10-15 15:45:21,256 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:21,390 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:21,390 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861357#
+2017-10-15 15:45:21,390 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:21,523 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:21,525 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861357#
+2017-10-15 15:45:21,525 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:21,656 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861357#-数据处理结果：1
+2017-10-15 15:45:21,657 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861357#
+2017-10-15 15:45:21,657 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:45:21,786 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861357#-数据处理结果：1
+2017-10-15 15:51:41,697 - 客户端启动！！！
+2017-10-15 15:52:34,371 - 客户端启动！！！
+2017-10-15 15:54:10,136 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 15:54:10 CST 2017]; root of context hierarchy
+2017-10-15 15:54:10,255 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 15:54:11,431 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 15:54:11,928 - Using default implementation for ThreadExecutor
+2017-10-15 15:54:12,024 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 15:54:12,024 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 15:54:12,026 - RAMJobStore initialized.
+2017-10-15 15:54:12,028 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 15:54:12,028 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 15:54:12,028 - Quartz scheduler version: 2.2.3
+2017-10-15 15:54:12,031 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@53251a66
+2017-10-15 15:54:12,301 - Starting beans in phase 2147483647
+2017-10-15 15:54:12,302 - Starting Quartz Scheduler now
+2017-10-15 15:54:12,303 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 15:54:12,313 - Starting beans in phase 2147483647
+2017-10-15 15:54:13,748 - [id: 0xd25b72eb] REGISTERED
+2017-10-15 15:54:13,752 - [id: 0xd25b72eb] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 15:54:13,758 - [id: 0xd25b72eb, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 15:54:34,368 - 客户端启动！！！
+2017-10-15 15:54:36,273 - [id: 0xd25b72eb, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x32fe6a4c, L:/127.0.0.1:8765 - R:/127.0.0.1:8980]
+2017-10-15 15:54:36,308 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:54:36,309 - 获取客户端ip:/127.0.0.1:8980
+2017-10-15 15:54:36,389 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 15:54:37,241 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 15:54:37,245 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861358#
+2017-10-15 15:54:37,247 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:37,379 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:37,380 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861358#
+2017-10-15 15:54:37,381 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:37,518 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:37,519 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861358#
+2017-10-15 15:54:37,519 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:37,630 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:37,631 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861358#
+2017-10-15 15:54:37,631 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:37,766 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:37,767 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861358#
+2017-10-15 15:54:37,767 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:37,893 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:37,894 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861358#
+2017-10-15 15:54:37,894 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:38,044 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:38,045 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861358#
+2017-10-15 15:54:38,045 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:38,176 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:38,177 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861358#
+2017-10-15 15:54:38,177 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:38,316 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:38,317 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861358#
+2017-10-15 15:54:38,317 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:38,454 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:38,455 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861358#
+2017-10-15 15:54:38,455 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:38,596 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:38,597 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861358#
+2017-10-15 15:54:38,597 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:38,722 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:38,723 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861358#
+2017-10-15 15:54:38,723 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:38,866 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:38,866 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861358#
+2017-10-15 15:54:38,867 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:38,988 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861358#-数据处理结果：1
+2017-10-15 15:54:38,989 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861358#
+2017-10-15 15:54:38,989 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:39,112 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:39,113 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861358#
+2017-10-15 15:54:39,113 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:39,236 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:39,237 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861358#
+2017-10-15 15:54:39,237 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:39,356 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861358#-数据处理结果：1
+2017-10-15 15:54:39,357 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861358#
+2017-10-15 15:54:39,357 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 15:54:39,475 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861358#-数据处理结果：1
+2017-10-15 15:55:00,027 - 本次定时任务开始时间：2017-10-15 15:55:00
+2017-10-15 15:56:00,003 - 本次定时任务开始时间：2017-10-15 15:56:00
+2017-10-15 15:56:45,743 - 客户端启动！！！
+2017-10-15 15:56:47,070 - [id: 0xd25b72eb, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xb5096b2d, L:/127.0.0.1:8765 - R:/127.0.0.1:9037]
+2017-10-15 15:56:47,075 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 15:56:47,076 - Failed to initialize a channel. Closing: [id: 0xb5096b2d, L:/127.0.0.1:8765 - R:/127.0.0.1:9037]
+io.netty.channel.ChannelPipelineException: com.vastsum.main.ServerHandler is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:587)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:199)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:392)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:379)
+	at com.vastsum.main.Server$1.initChannel(Server.java:61)
+	at com.vastsum.main.Server$1.initChannel(Server.java:53)
+	at io.netty.channel.ChannelInitializer.initChannel(ChannelInitializer.java:113)
+	at io.netty.channel.ChannelInitializer.handlerAdded(ChannelInitializer.java:105)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAdded0(DefaultChannelPipeline.java:597)
+	at io.netty.channel.DefaultChannelPipeline.access$000(DefaultChannelPipeline.java:44)
+	at io.netty.channel.DefaultChannelPipeline$PendingHandlerAddedTask.execute(DefaultChannelPipeline.java:1387)
+	at io.netty.channel.DefaultChannelPipeline.callHandlerAddedForAllHandlers(DefaultChannelPipeline.java:1122)
+	at io.netty.channel.DefaultChannelPipeline.invokeHandlerAddedIfNeeded(DefaultChannelPipeline.java:647)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:506)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$200(AbstractChannel.java:419)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:478)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:418)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:454)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:873)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+2017-10-15 15:57:00,006 - 本次定时任务开始时间：2017-10-15 15:57:00
+2017-10-15 15:58:00,005 - 本次定时任务开始时间：2017-10-15 15:58:00
+2017-10-15 15:59:00,002 - 本次定时任务开始时间：2017-10-15 15:59:00
+2017-10-15 16:00:00,003 - 本次定时任务开始时间：2017-10-15 16:00:00
+2017-10-15 16:01:00,001 - 本次定时任务开始时间：2017-10-15 16:01:00
+2017-10-15 16:02:00,002 - 本次定时任务开始时间：2017-10-15 16:02:00
+2017-10-15 16:06:47,764 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 16:06:47 CST 2017]; root of context hierarchy
+2017-10-15 16:06:47,920 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 16:06:49,099 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 16:06:49,616 - Using default implementation for ThreadExecutor
+2017-10-15 16:06:49,651 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 16:06:49,651 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 16:06:49,654 - RAMJobStore initialized.
+2017-10-15 16:06:49,656 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 16:06:49,656 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 16:06:49,656 - Quartz scheduler version: 2.2.3
+2017-10-15 16:06:49,659 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@13d4992d
+2017-10-15 16:06:49,759 - Starting beans in phase 2147483647
+2017-10-15 16:06:49,759 - Starting Quartz Scheduler now
+2017-10-15 16:06:49,759 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 16:06:49,767 - Starting beans in phase 2147483647
+2017-10-15 16:06:51,171 - [id: 0xe30bb100] REGISTERED
+2017-10-15 16:06:51,174 - [id: 0xe30bb100] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 16:06:51,181 - [id: 0xe30bb100, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 16:06:52,866 - 客户端启动！！！
+2017-10-15 16:06:54,631 - [id: 0xe30bb100, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x7fa8c679, L:/127.0.0.1:8765 - R:/127.0.0.1:9273]
+2017-10-15 16:06:54,733 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 16:06:54,734 - 获取客户端ip:/127.0.0.1:9273
+2017-10-15 16:06:54,765 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 16:06:55,816 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 16:06:55,821 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861358#
+2017-10-15 16:06:55,823 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:55,978 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:55,979 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861358#
+2017-10-15 16:06:55,979 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:56,106 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:56,107 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861358#
+2017-10-15 16:06:56,107 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:56,228 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:56,229 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861358#
+2017-10-15 16:06:56,229 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:56,375 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:56,376 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861358#
+2017-10-15 16:06:56,376 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:56,498 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:56,499 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861358#
+2017-10-15 16:06:56,499 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:56,622 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:56,623 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861358#
+2017-10-15 16:06:56,623 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:56,767 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:56,768 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861358#
+2017-10-15 16:06:56,768 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:56,905 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:56,906 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861358#
+2017-10-15 16:06:56,906 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:57,050 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:57,051 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861358#
+2017-10-15 16:06:57,052 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:57,188 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:57,189 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861358#
+2017-10-15 16:06:57,189 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:57,324 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:57,325 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861358#
+2017-10-15 16:06:57,325 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:57,456 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:57,456 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861358#
+2017-10-15 16:06:57,457 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:57,579 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861358#-数据处理结果：1
+2017-10-15 16:06:57,580 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861358#
+2017-10-15 16:06:57,580 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:57,732 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:57,733 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861358#
+2017-10-15 16:06:57,733 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:57,855 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:57,856 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861358#
+2017-10-15 16:06:57,856 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:57,985 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861358#-数据处理结果：1
+2017-10-15 16:06:57,985 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861358#
+2017-10-15 16:06:57,986 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:06:58,108 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861358#-数据处理结果：1
+2017-10-15 16:07:00,012 - 本次定时任务开始时间：2017-10-15 16:07:00
+2017-10-15 16:07:01,425 - 客户端启动！！！
+2017-10-15 16:07:03,150 - [id: 0xe30bb100, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x9893be6e, L:/127.0.0.1:8765 - R:/127.0.0.1:9316]
+2017-10-15 16:07:03,167 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 16:07:03,168 - 获取客户端ip:/127.0.0.1:9316
+2017-10-15 16:07:03,249 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 16:07:03,353 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 16:07:03,354 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#35067861351#
+2017-10-15 16:07:03,354 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:03,482 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:03,483 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#35067861351#
+2017-10-15 16:07:03,483 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:03,622 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:03,623 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#35067861351#
+2017-10-15 16:07:03,623 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:03,753 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:03,753 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#35067861351#
+2017-10-15 16:07:03,754 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:03,897 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:03,898 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#35067861351#
+2017-10-15 16:07:03,898 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:04,038 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:04,038 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#35067861351#
+2017-10-15 16:07:04,039 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:04,175 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:04,176 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#35067861351#
+2017-10-15 16:07:04,176 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:04,301 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:04,301 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#35067861351#
+2017-10-15 16:07:04,302 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:04,447 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:04,448 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#35067861351#
+2017-10-15 16:07:04,448 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:04,610 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:04,611 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#35067861351#
+2017-10-15 16:07:04,611 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:04,752 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:04,753 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#35067861351#
+2017-10-15 16:07:04,753 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:04,879 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:04,879 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#35067861351#
+2017-10-15 16:07:04,880 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:05,021 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:05,022 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#35067861351#
+2017-10-15 16:07:05,022 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:05,147 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#35067861351#-数据处理结果：1
+2017-10-15 16:07:05,147 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#35067861351#
+2017-10-15 16:07:05,147 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:05,297 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:05,297 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#35067861351#
+2017-10-15 16:07:05,298 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:05,428 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:05,428 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#35067861351#
+2017-10-15 16:07:05,428 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:05,575 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#35067861351#-数据处理结果：1
+2017-10-15 16:07:05,575 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#35067861351#
+2017-10-15 16:07:05,575 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:07:05,718 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#35067861351#-数据处理结果：1
+2017-10-15 16:08:00,002 - 本次定时任务开始时间：2017-10-15 16:08:00
+2017-10-15 16:12:46,464 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 16:12:46 CST 2017]; root of context hierarchy
+2017-10-15 16:12:46,610 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 16:12:47,695 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 16:12:48,009 - Using default implementation for ThreadExecutor
+2017-10-15 16:12:48,057 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 16:12:48,057 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 16:12:48,079 - RAMJobStore initialized.
+2017-10-15 16:12:48,086 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 16:12:48,087 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 16:12:48,087 - Quartz scheduler version: 2.2.3
+2017-10-15 16:12:48,090 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@13d4992d
+2017-10-15 16:12:48,275 - Starting beans in phase 2147483647
+2017-10-15 16:12:48,276 - Starting Quartz Scheduler now
+2017-10-15 16:12:48,279 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 16:12:48,307 - Starting beans in phase 2147483647
+2017-10-15 16:12:49,891 - [id: 0x0bb278e6] REGISTERED
+2017-10-15 16:12:49,894 - [id: 0x0bb278e6] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 16:12:49,900 - [id: 0x0bb278e6, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 16:12:53,183 - 客户端启动！！！
+2017-10-15 16:12:54,818 - [id: 0x0bb278e6, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x48f3b298, L:/127.0.0.1:8765 - R:/127.0.0.1:9470]
+2017-10-15 16:12:54,872 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 16:12:54,873 - 获取客户端ip:/127.0.0.1:9470
+2017-10-15 16:12:54,929 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 16:12:55,509 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 16:12:55,514 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861358#
+2017-10-15 16:12:55,515 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:55,641 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:55,642 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861358#
+2017-10-15 16:12:55,642 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:55,770 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:55,771 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861358#
+2017-10-15 16:12:55,771 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:55,909 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:55,909 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861358#
+2017-10-15 16:12:55,909 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:56,041 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:56,042 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861358#
+2017-10-15 16:12:56,042 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:56,171 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:56,172 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861358#
+2017-10-15 16:12:56,172 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:56,302 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:56,302 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861358#
+2017-10-15 16:12:56,303 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:56,440 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:56,441 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861358#
+2017-10-15 16:12:56,441 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:56,569 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:56,570 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861358#
+2017-10-15 16:12:56,570 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:56,737 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:56,737 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861358#
+2017-10-15 16:12:56,738 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:56,862 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:56,863 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861358#
+2017-10-15 16:12:56,863 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:57,004 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:57,005 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861358#
+2017-10-15 16:12:57,005 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:57,122 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:57,123 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861358#
+2017-10-15 16:12:57,123 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:57,263 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861358#-数据处理结果：1
+2017-10-15 16:12:57,264 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861358#
+2017-10-15 16:12:57,264 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:57,376 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:57,377 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861358#
+2017-10-15 16:12:57,377 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:57,514 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:57,514 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861358#
+2017-10-15 16:12:57,515 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:57,632 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861358#-数据处理结果：1
+2017-10-15 16:12:57,633 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861358#
+2017-10-15 16:12:57,633 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:12:57,762 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:00,017 - 本次定时任务开始时间：2017-10-15 16:13:00
+2017-10-15 16:13:05,203 - 客户端启动！！！
+2017-10-15 16:13:06,784 - [id: 0x0bb278e6, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xd1f44a5b, L:/127.0.0.1:8765 - R:/127.0.0.1:9516]
+2017-10-15 16:13:06,795 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 16:13:06,795 - 获取客户端ip:/127.0.0.1:9516
+2017-10-15 16:13:06,849 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 16:13:06,978 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 16:13:06,979 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#35067861351#
+2017-10-15 16:13:06,979 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:07,091 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:07,092 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#35067861351#
+2017-10-15 16:13:07,092 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:07,230 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:07,231 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#35067861351#
+2017-10-15 16:13:07,231 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:07,384 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:07,385 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#35067861351#
+2017-10-15 16:13:07,385 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:07,538 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:07,539 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#35067861351#
+2017-10-15 16:13:07,539 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:07,656 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:07,656 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#35067861351#
+2017-10-15 16:13:07,657 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:07,793 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:07,794 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#35067861351#
+2017-10-15 16:13:07,794 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:07,931 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:07,932 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#35067861351#
+2017-10-15 16:13:07,932 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:08,127 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:08,128 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#35067861351#
+2017-10-15 16:13:08,128 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:08,269 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:08,270 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#35067861351#
+2017-10-15 16:13:08,270 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:08,393 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:08,394 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#35067861351#
+2017-10-15 16:13:08,394 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:08,547 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:08,547 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#35067861351#
+2017-10-15 16:13:08,547 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:08,681 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:08,682 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#35067861351#
+2017-10-15 16:13:08,682 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:08,843 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#35067861351#-数据处理结果：1
+2017-10-15 16:13:08,844 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#35067861351#
+2017-10-15 16:13:08,844 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:08,979 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:08,979 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#35067861351#
+2017-10-15 16:13:08,980 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:09,095 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:09,096 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#35067861351#
+2017-10-15 16:13:09,096 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:09,227 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:09,228 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#35067861351#
+2017-10-15 16:13:09,228 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:09,347 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#35067861351#-数据处理结果：1
+2017-10-15 16:13:21,250 - 客户端启动！！！
+2017-10-15 16:13:22,982 - [id: 0x0bb278e6, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x790c52c6, L:/127.0.0.1:8765 - R:/127.0.0.1:9557]
+2017-10-15 16:13:23,012 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 16:13:23,013 - 获取客户端ip:/127.0.0.1:9557
+2017-10-15 16:13:23,063 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 16:13:23,177 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 16:13:23,178 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861358#
+2017-10-15 16:13:23,178 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:23,304 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:23,305 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861358#
+2017-10-15 16:13:23,305 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:23,451 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:23,451 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861358#
+2017-10-15 16:13:23,451 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:23,577 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:23,577 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861358#
+2017-10-15 16:13:23,578 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:23,702 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:23,702 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861358#
+2017-10-15 16:13:23,703 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:23,851 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:23,852 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861358#
+2017-10-15 16:13:23,852 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:23,982 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:23,983 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861358#
+2017-10-15 16:13:23,983 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:24,118 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:24,118 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861358#
+2017-10-15 16:13:24,119 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:24,274 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:24,276 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861358#
+2017-10-15 16:13:24,276 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:24,441 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:24,442 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861358#
+2017-10-15 16:13:24,442 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:24,570 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:24,570 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861358#
+2017-10-15 16:13:24,571 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:24,693 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:24,694 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861358#
+2017-10-15 16:13:24,694 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:24,811 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:24,812 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861358#
+2017-10-15 16:13:24,812 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:24,925 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861358#-数据处理结果：1
+2017-10-15 16:13:24,925 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861358#
+2017-10-15 16:13:24,926 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:25,062 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:25,063 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861358#
+2017-10-15 16:13:25,063 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:25,177 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:25,178 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861358#
+2017-10-15 16:13:25,178 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:25,302 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861358#-数据处理结果：1
+2017-10-15 16:13:25,302 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861358#
+2017-10-15 16:13:25,303 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:13:25,447 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861358#-数据处理结果：1
+2017-10-15 16:14:00,001 - 本次定时任务开始时间：2017-10-15 16:14:00
+2017-10-15 16:15:00,004 - 本次定时任务开始时间：2017-10-15 16:15:00
+2017-10-15 16:16:00,002 - 本次定时任务开始时间：2017-10-15 16:16:00
+2017-10-15 16:16:44,010 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7494e528: startup date [Sun Oct 15 16:16:44 CST 2017]; root of context hierarchy
+2017-10-15 16:16:44,174 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-15 16:16:45,192 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-15 16:16:45,385 - Using default implementation for ThreadExecutor
+2017-10-15 16:16:45,425 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-15 16:16:45,425 - Quartz Scheduler v.2.2.3 created.
+2017-10-15 16:16:45,430 - RAMJobStore initialized.
+2017-10-15 16:16:45,434 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-15 16:16:45,434 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-15 16:16:45,434 - Quartz scheduler version: 2.2.3
+2017-10-15 16:16:45,440 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@13d4992d
+2017-10-15 16:16:45,546 - Starting beans in phase 2147483647
+2017-10-15 16:16:45,547 - Starting Quartz Scheduler now
+2017-10-15 16:16:45,554 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-15 16:16:45,568 - Starting beans in phase 2147483647
+2017-10-15 16:16:47,427 - [id: 0x0f5e95f3] REGISTERED
+2017-10-15 16:16:47,429 - [id: 0x0f5e95f3] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-15 16:16:47,435 - [id: 0x0f5e95f3, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-15 16:16:59,241 - 客户端启动！！！
+2017-10-15 16:17:00,023 - 本次定时任务开始时间：2017-10-15 16:17:00
+2017-10-15 16:17:01,699 - [id: 0x0f5e95f3, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xe68d0bab, L:/127.0.0.1:8765 - R:/127.0.0.1:9684]
+2017-10-15 16:17:01,781 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 16:17:01,782 - 获取客户端ip:/127.0.0.1:9684
+2017-10-15 16:17:01,911 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 16:17:01,911 - 进行激活验证：返回时间戳为:1508055421911
+2017-10-15 16:17:02,063 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 16:17:02,067 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#15067861358#
+2017-10-15 16:17:02,069 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:02,194 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:02,195 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#15067861358#
+2017-10-15 16:17:02,195 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:02,326 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:02,327 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#15067861358#
+2017-10-15 16:17:02,328 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:02,485 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:02,486 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#15067861358#
+2017-10-15 16:17:02,486 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:02,626 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:02,627 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#15067861358#
+2017-10-15 16:17:02,627 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:02,802 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:02,803 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#15067861358#
+2017-10-15 16:17:02,803 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:02,932 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:02,933 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#15067861358#
+2017-10-15 16:17:02,933 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:03,070 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:03,071 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#15067861358#
+2017-10-15 16:17:03,071 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:03,191 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:03,192 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#15067861358#
+2017-10-15 16:17:03,192 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:03,328 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:03,329 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#15067861358#
+2017-10-15 16:17:03,329 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:03,464 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:03,465 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#15067861358#
+2017-10-15 16:17:03,465 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:03,591 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:03,592 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#15067861358#
+2017-10-15 16:17:03,592 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:03,723 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:03,724 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#15067861358#
+2017-10-15 16:17:03,724 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:03,794 - 客户端启动！！！
+2017-10-15 16:17:03,877 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861358#-数据处理结果：1
+2017-10-15 16:17:03,878 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#15067861358#
+2017-10-15 16:17:03,878 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:04,013 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:04,014 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#15067861358#
+2017-10-15 16:17:04,014 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:04,142 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:04,143 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#15067861358#
+2017-10-15 16:17:04,143 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:04,278 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:04,279 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#15067861358#
+2017-10-15 16:17:04,279 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:04,430 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861358#-数据处理结果：1
+2017-10-15 16:17:05,555 - [id: 0x0f5e95f3, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xed1f1385, L:/127.0.0.1:8765 - R:/127.0.0.1:9724]
+2017-10-15 16:17:05,652 - 获取的springbean:com.vastsum.main.ServerHandler
+2017-10-15 16:17:05,653 - 获取客户端ip:/127.0.0.1:9724
+2017-10-15 16:17:05,654 - 来自客户端的原始数据：ZWGC2017100800004
+2017-10-15 16:17:05,654 - 进行激活验证：返回时间戳为:1508055425654
+2017-10-15 16:17:05,789 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-15 16:17:05,790 - 来自客户端的原始数据：#ZWGC2017100800004#1#1#23.2#35067861351#
+2017-10-15 16:17:05,790 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:05,911 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:05,912 - 来自客户端的原始数据：#ZWGC2017100800004#2#1#24.2#35067861351#
+2017-10-15 16:17:05,912 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:06,046 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:06,046 - 来自客户端的原始数据：#ZWGC2017100800004#3#1#24.2#35067861351#
+2017-10-15 16:17:06,047 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:06,172 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:06,172 - 来自客户端的原始数据：#ZWGC2017100800004#4#1#25.2#35067861351#
+2017-10-15 16:17:06,173 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:06,324 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:06,325 - 来自客户端的原始数据：#ZWGC2017100800004#5#1#23.2#35067861351#
+2017-10-15 16:17:06,325 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:06,563 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:06,564 - 来自客户端的原始数据：#ZWGC2017100800004#6#1#33.2#35067861351#
+2017-10-15 16:17:06,564 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:06,690 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:06,691 - 来自客户端的原始数据：#ZWGC2017100800004#7#1#25.2#35067861351#
+2017-10-15 16:17:06,691 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:06,833 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:06,834 - 来自客户端的原始数据：#ZWGC2017100800004#8#1#73.2#35067861351#
+2017-10-15 16:17:06,834 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:06,959 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:06,960 - 来自客户端的原始数据：#ZWGC2017100800004#9#1#23.2#35067861351#
+2017-10-15 16:17:06,960 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:07,101 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:07,101 - 来自客户端的原始数据：#ZWGC2017100800004#10#1#13.2#35067861351#
+2017-10-15 16:17:07,101 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:07,244 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:07,244 - 来自客户端的原始数据：#ZWGC2017100800004#11#1#53.2#35067861351#
+2017-10-15 16:17:07,244 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:07,372 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:07,373 - 来自客户端的原始数据：#ZWGC2017100800004#12#1#63.2#35067861351#
+2017-10-15 16:17:07,373 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:07,510 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:07,511 - 来自客户端的原始数据：#ZWGC2017100800004#13#1#23.4#35067861351#
+2017-10-15 16:17:07,511 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:07,683 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#35067861351#-数据处理结果：1
+2017-10-15 16:17:07,683 - 来自客户端的原始数据：#ZWGC2017100800004#14#1#23.2#35067861351#
+2017-10-15 16:17:07,683 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:07,820 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:07,821 - 来自客户端的原始数据：#ZWGC2017100800004#15#1#25.2#35067861351#
+2017-10-15 16:17:07,821 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:07,944 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:07,945 - 来自客户端的原始数据：#ZWGC2017100800004#16#0#26.2#35067861351#
+2017-10-15 16:17:07,945 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:08,065 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#35067861351#-数据处理结果：1
+2017-10-15 16:17:08,066 - 来自客户端的原始数据：#ZWGC2017100800004#17#0#27.2#35067861351#
+2017-10-15 16:17:08,066 - jdbcTemplate spring bean:org.springframework.jdbc.core.JdbcTemplate
+2017-10-15 16:17:08,195 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#35067861351#-数据处理结果：1
+2017-10-15 16:18:00,014 - 本次定时任务开始时间：2017-10-15 16:18:00
+2017-10-15 16:22:03,101 - 客户端启动！！！
+2017-10-15 16:22:23,109 - 客户端启动！！！
+2017-10-15 17:03:43,494 - 客户端启动！！！
+2017-10-15 18:23:20,963 - 客户端启动！！！
+2017-10-15 18:38:54,378 - 客户端启动！！！
+2017-10-15 18:58:21,384 - 客户端启动！！！
+2017-10-15 19:19:46,480 - 客户端启动！！！

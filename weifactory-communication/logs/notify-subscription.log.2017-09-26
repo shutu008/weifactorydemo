@@ -1,0 +1,39 @@
+2017-09-26 00:11:57,395 - 客户端启动！！！
+2017-09-26 00:13:08,527 - 客户端启动！！！
+2017-09-26 23:04:57,023 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1963006a: startup date [Tue Sep 26 23:04:57 CST 2017]; root of context hierarchy
+2017-09-26 23:04:57,134 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-26 23:04:57,594 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-26 23:05:42,652 - 客户端启动！！！
+2017-09-26 23:05:43,719 - 服务器端处理程序开始执行
+2017-09-26 23:05:44,931 - 数据处理结果：1
+2017-09-26 23:06:48,391 - 客户端启动！！！
+2017-09-26 23:06:49,382 - 服务器端处理程序开始执行
+2017-09-26 23:06:49,519 - 数据处理结果：1
+2017-09-26 23:10:35,320 - 客户端启动！！！
+2017-09-26 23:10:36,309 - 服务器端处理程序开始执行
+2017-09-26 23:10:36,454 - 数据处理结果：1
+2017-09-26 23:13:55,275 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f1fba17: startup date [Tue Sep 26 23:13:55 CST 2017]; root of context hierarchy
+2017-09-26 23:13:55,396 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-26 23:13:56,037 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-26 23:14:48,028 - 客户端启动！！！
+2017-09-26 23:15:05,522 - 服务器端处理程序开始执行
+2017-09-26 23:15:06,027 - 数据处理结果：1
+2017-09-26 23:27:30,320 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f1fba17: startup date [Tue Sep 26 23:27:30 CST 2017]; root of context hierarchy
+2017-09-26 23:27:30,450 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-26 23:27:31,003 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-26 23:27:38,570 - 客户端启动！！！
+2017-09-26 23:27:39,643 - 服务器端处理程序开始执行
+2017-09-26 23:27:40,225 - 数据处理结果：1
+2017-09-26 23:38:33,829 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f1fba17: startup date [Tue Sep 26 23:38:33 CST 2017]; root of context hierarchy
+2017-09-26 23:38:33,946 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-26 23:38:34,539 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-26 23:38:58,621 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f1fba17: startup date [Tue Sep 26 23:38:58 CST 2017]; root of context hierarchy
+2017-09-26 23:38:58,736 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-26 23:38:59,312 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-26 23:39:08,720 - 客户端启动！！！
+2017-09-26 23:39:09,800 - 服务器端处理程序开始执行
+2017-09-26 23:46:55,796 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f1fba17: startup date [Tue Sep 26 23:46:55 CST 2017]; root of context hierarchy
+2017-09-26 23:46:55,929 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-26 23:46:56,479 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-26 23:47:16,842 - 客户端启动！！！
+2017-09-26 23:47:17,986 - 服务器端处理程序开始执行

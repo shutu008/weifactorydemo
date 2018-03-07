@@ -1,0 +1,170 @@
+2017-09-27 20:26:54,808 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1963006a: startup date [Wed Sep 27 20:26:54 CST 2017]; root of context hierarchy
+2017-09-27 20:26:54,942 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 20:26:55,396 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 20:29:20,520 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f1fba17: startup date [Wed Sep 27 20:29:20 CST 2017]; root of context hierarchy
+2017-09-27 20:29:20,625 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 20:29:21,178 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 20:29:33,080 - 客户端启动！！！
+2017-09-27 20:29:34,085 - 服务器端处理程序开始执行
+2017-09-27 20:29:34,921 - 数据处理结果：1
+2017-09-27 20:30:29,513 - 客户端启动！！！
+2017-09-27 20:30:30,412 - Failed to initialize a channel. Closing: [id: 0x7dd9f388, /127.0.0.1:12878 => /127.0.0.1:8765]
+io.netty.channel.ChannelPipelineException: com.vastsum.main.ServerHandler is not a @Sharable handler, so can't be added or removed multiple times.
+	at io.netty.channel.DefaultChannelPipeline.checkMultiplicity(DefaultChannelPipeline.java:565)
+	at io.netty.channel.DefaultChannelPipeline.addLast0(DefaultChannelPipeline.java:152)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:146)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:329)
+	at io.netty.channel.DefaultChannelPipeline.addLast(DefaultChannelPipeline.java:300)
+	at com.vastsum.main.Server$1.initChannel(Server.java:38)
+	at com.vastsum.main.Server$1.initChannel(Server.java:36)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:69)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeChannelRegisteredNow(ChannelHandlerInvokerUtil.java:32)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeChannelRegistered(DefaultChannelHandlerInvoker.java:50)
+	at io.netty.channel.PausableChannelEventExecutor.invokeChannelRegistered(PausableChannelEventExecutor.java:56)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRegistered(AbstractChannelHandlerContext.java:345)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:843)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:519)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$100(AbstractChannel.java:422)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$1.run(AbstractChannel.java:492)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at io.netty.util.internal.chmv8.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1412)
+	at io.netty.util.internal.chmv8.ForkJoinTask.doExec(ForkJoinTask.java:280)
+	at io.netty.util.internal.chmv8.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:877)
+	at io.netty.util.internal.chmv8.ForkJoinPool.scan(ForkJoinPool.java:1706)
+	at io.netty.util.internal.chmv8.ForkJoinPool.runWorker(ForkJoinPool.java:1661)
+	at io.netty.util.internal.chmv8.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:126)
+2017-09-27 20:42:33,832 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1963006a: startup date [Wed Sep 27 20:42:33 CST 2017]; root of context hierarchy
+2017-09-27 20:42:33,920 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 20:42:34,479 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 20:43:43,389 - 客户端启动！！！
+2017-09-27 20:43:44,393 - 服务器端处理程序开始执行
+2017-09-27 20:43:44,946 - 数据处理结果：1
+2017-09-27 20:44:06,487 - 客户端启动！！！
+2017-09-27 20:44:07,534 - 服务器端处理程序开始执行
+2017-09-27 20:44:07,684 - 数据处理结果：1
+2017-09-27 20:57:24,007 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1963006a: startup date [Wed Sep 27 20:57:24 CST 2017]; root of context hierarchy
+2017-09-27 20:57:24,072 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 20:57:24,525 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 20:57:36,570 - 客户端启动！！！
+2017-09-27 20:57:37,574 - 服务器端处理程序开始执行
+2017-09-27 20:57:37,574 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 20:57:38,131 - 数据处理结果：1
+2017-09-27 20:57:52,466 - 客户端启动！！！
+2017-09-27 20:57:53,433 - 服务器端处理程序开始执行
+2017-09-27 20:57:53,433 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 20:57:53,594 - 数据处理结果：1
+2017-09-27 20:59:27,312 - 客户端启动！！！
+2017-09-27 20:59:28,260 - 服务器端处理程序开始执行
+2017-09-27 20:59:28,261 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 20:59:28,418 - 数据处理结果：1
+2017-09-27 21:02:30,963 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1963006a: startup date [Wed Sep 27 21:02:30 CST 2017]; root of context hierarchy
+2017-09-27 21:02:31,058 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 21:02:31,559 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 21:02:41,776 - 客户端启动！！！
+2017-09-27 21:02:42,736 - 服务器端处理程序开始执行
+2017-09-27 21:02:42,736 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 21:02:43,256 - 数据处理结果：1
+2017-09-27 21:03:25,051 - 客户端启动！！！
+2017-09-27 21:03:26,044 - 服务器端处理程序开始执行
+2017-09-27 21:03:26,045 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 21:03:27,251 - 数据处理结果：1
+2017-09-27 21:03:27,252 - 服务器端处理程序开始执行
+2017-09-27 21:03:27,252 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2#
+2017-09-27 21:03:27,432 - 数据处理结果：1
+2017-09-27 21:04:04,885 - 客户端启动！！！
+2017-09-27 21:04:06,038 - 服务器端处理程序开始执行
+2017-09-27 21:04:06,039 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 21:04:06,178 - 数据处理结果：1
+2017-09-27 21:07:08,812 - 客户端启动！！！
+2017-09-27 21:08:07,873 - 客户端启动！！！
+2017-09-27 21:08:35,277 - 客户端启动！！！
+2017-09-27 21:08:36,194 - 服务器端处理程序开始执行
+2017-09-27 21:08:36,195 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 21:08:36,335 - 数据处理结果：1
+2017-09-27 21:08:36,336 - 服务器端处理程序开始执行
+2017-09-27 21:08:36,336 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 21:08:36,490 - 数据处理结果：1
+2017-09-27 21:26:13,005 - 客户端启动！！！
+2017-09-27 21:26:14,201 - 服务器端处理程序开始执行
+2017-09-27 21:26:14,202 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 21:26:15,037 - 数据处理结果：1
+2017-09-27 21:26:15,038 - 服务器端处理程序开始执行
+2017-09-27 21:26:15,038 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 21:26:15,944 - 数据处理结果：1
+2017-09-27 21:27:40,153 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1963006a: startup date [Wed Sep 27 21:27:40 CST 2017]; root of context hierarchy
+2017-09-27 21:27:40,246 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 21:27:40,787 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 21:27:45,583 - 客户端启动！！！
+2017-09-27 21:27:46,601 - 服务器端处理程序开始执行
+2017-09-27 21:27:46,601 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 21:27:47,488 - 数据处理结果：1
+2017-09-27 21:28:20,741 - 客户端启动！！！
+2017-09-27 21:30:13,313 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1963006a: startup date [Wed Sep 27 21:30:13 CST 2017]; root of context hierarchy
+2017-09-27 21:30:13,467 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 21:30:14,049 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 21:30:19,020 - 客户端启动！！！
+2017-09-27 21:30:20,256 - 服务器端处理程序开始执行
+2017-09-27 21:30:20,256 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 21:30:20,828 - 数据处理结果：1
+2017-09-27 21:46:13,195 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1963006a: startup date [Wed Sep 27 21:46:13 CST 2017]; root of context hierarchy
+2017-09-27 21:46:13,281 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 21:46:13,744 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 21:46:30,485 - 客户端启动！！！
+2017-09-27 21:46:31,520 - 服务器端处理程序开始执行
+2017-09-27 21:46:31,520 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 21:46:32,100 - 数据处理结果：1
+2017-09-27 21:50:17,292 - 客户端启动！！！
+2017-09-27 21:50:18,503 - 服务器端处理程序开始执行
+2017-09-27 21:50:18,504 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 21:50:18,732 - 数据处理结果：1
+2017-09-27 21:50:18,733 - 服务器端处理程序开始执行
+2017-09-27 21:50:18,733 - 获取到客户端的原始数据：#14#54#1#23.2##14#54#1#23.2##14#54#1#23.2#
+2017-09-27 21:50:19,044 - 数据处理结果：1
+2017-09-27 22:31:00,100 - 客户端启动！！！
+2017-09-27 22:31:01,180 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a8b3671: startup date [Wed Sep 27 22:31:01 CST 2017]; root of context hierarchy
+2017-09-27 22:31:01,252 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 22:31:01,623 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 22:31:01,730 - 服务器端处理程序开始执行
+2017-09-27 22:31:01,731 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 22:31:02,542 - 数据处理结果：1
+2017-09-27 22:31:03,135 - 服务器端处理程序开始执行
+2017-09-27 22:31:03,135 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 22:31:03,297 - 数据处理结果：1
+2017-09-27 22:31:05,136 - 服务器端处理程序开始执行
+2017-09-27 22:31:05,136 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 22:31:05,321 - 数据处理结果：1
+2017-09-27 22:31:07,135 - 服务器端处理程序开始执行
+2017-09-27 22:31:07,135 - 获取到客户端的原始数据：#14#54#1#23.2#
+2017-09-27 22:31:07,312 - 数据处理结果：1
+2017-09-27 22:35:51,227 - 客户端启动！！！
+2017-09-27 22:37:48,503 - 客户端启动！！！
+2017-09-27 22:41:24,154 - 客户端启动！！！
+2017-09-27 22:42:10,099 - 客户端启动！！！
+2017-09-27 22:42:31,421 - 客户端启动！！！
+2017-09-27 22:43:34,423 - 客户端启动！！！
+2017-09-27 23:00:21,048 - 客户端启动！！！
+2017-09-27 23:01:17,321 - 客户端启动！！！
+2017-09-27 23:01:18,433 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@c5892c: startup date [Wed Sep 27 23:01:18 CST 2017]; root of context hierarchy
+2017-09-27 23:01:18,507 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-27 23:01:18,904 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-27 23:01:19,576 - 数据处理结果：1
+2017-09-27 23:01:19,727 - 数据处理结果：1
+2017-09-27 23:01:19,880 - 数据处理结果：1
+2017-09-27 23:01:20,036 - 数据处理结果：1
+2017-09-27 23:07:41,759 - 客户端启动！！！
+2017-09-27 23:13:23,803 - 客户端启动！！！
+2017-09-28 21:16:05,006 - 客户端启动！！！
+2017-09-28 21:37:02,505 - 客户端启动！！！
+2017-09-28 21:37:04,086 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@60bec40f: startup date [Thu Sep 28 21:37:04 CST 2017]; root of context hierarchy
+2017-09-28 21:37:04,274 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-09-28 21:37:05,426 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-09-28 21:37:07,021 - 数据处理结果：1
+2017-09-28 21:37:07,170 - 数据处理结果：1
+2017-09-28 21:37:07,337 - 数据处理结果：1
+2017-09-28 21:37:07,492 - 数据处理结果：1
+2017-09-28 21:39:20,464 - 客户端启动！！！
+2017-09-28 21:47:17,342 - 客户端启动！！！
+2017-09-28 22:09:25,576 - 客户端启动！！！
+2017-09-28 22:38:17,899 - 客户端启动！！！

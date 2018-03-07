@@ -48,7 +48,10 @@
     <modules>
     <module>vastsum-schedule</module>
     <module>vastsum-core</module>
-    <module>weifactory-browser</module>
     <module>vastsum-social</module>
+    <module>weifactory-browser</module>
+    <module>weifactory-images</module>
+    <module>weifactory-communication</module>
+    <module>weifactory-pay</module>
   </modules>
 </project>

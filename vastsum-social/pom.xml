@@ -7,11 +7,8 @@
     <artifactId>weifactory</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.vastsum</groupId>
   <artifactId>vastsum-social</artifactId>
-  <version>1.0.0-SNAPSHOT</version> 
   <name>vastsum-social</name>
-  <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>

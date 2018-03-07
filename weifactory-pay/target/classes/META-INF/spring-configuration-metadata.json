@@ -1,0 +1,37 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "net.vastsum.weifactory.wechatpay.config.WechatConfig",
+      "name": "wechat",
+      "type": "net.vastsum.weifactory.wechatpay.config.WechatConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "net.vastsum.weifactory.wechatpay.config.WechatConfig",
+      "name": "wechat.apikey",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.vastsum.weifactory.wechatpay.config.WechatConfig",
+      "name": "wechat.app-secret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.vastsum.weifactory.wechatpay.config.WechatConfig",
+      "name": "wechat.appid",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.vastsum.weifactory.wechatpay.config.WechatConfig",
+      "name": "wechat.domain",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "net.vastsum.weifactory.wechatpay.config.WechatConfig",
+      "name": "wechat.mchid",
+      "type": "java.lang.String"
+    }
+  ]
+}

@@ -1,0 +1,2578 @@
+2017-10-11 22:41:48,479 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@dcf3e99: startup date [Wed Oct 11 22:41:48 CST 2017]; root of context hierarchy
+2017-10-11 22:41:48,931 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-11 22:41:50,622 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-11 22:41:51,863 - [id: 0x9cc2a7d0] REGISTERED
+2017-10-11 22:41:51,865 - [id: 0x9cc2a7d0] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-11 22:41:51,870 - [id: 0x9cc2a7d0, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-11 22:43:08,255 - 客户端启动！！！
+2017-10-11 22:43:09,979 - [id: 0x9cc2a7d0, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xdb907211, L:/127.0.0.1:8765 - R:/127.0.0.1:2444]
+2017-10-11 22:43:10,100 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@121f4361: startup date [Wed Oct 11 22:43:10 CST 2017]; root of context hierarchy
+2017-10-11 22:43:10,101 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-11 22:43:10,218 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-11 22:43:10,264 - 获取客户端ip:/127.0.0.1:2444
+2017-10-11 22:43:10,888 - 序列号为ZWGC2017100800001的设备已经激活
+2017-10-11 22:43:11,088 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-10-11 22:43:11,205 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-10-11 22:45:05,821 - 客户端启动！！！
+2017-10-11 22:45:07,189 - [id: 0x9cc2a7d0, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x87528340, L:/127.0.0.1:8765 - R:/127.0.0.1:2498]
+2017-10-11 22:45:07,245 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4a48d682: startup date [Wed Oct 11 22:45:07 CST 2017]; root of context hierarchy
+2017-10-11 22:45:07,246 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-11 22:45:07,367 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-11 22:45:07,411 - 获取客户端ip:/127.0.0.1:2498
+2017-10-11 22:45:07,539 - 序列号为ZWGC2017100800001的设备已经激活
+2017-10-11 22:45:07,691 - 获取的数据为：#ZWGC2017100800000#51#1#23.2#1506786123499-数据处理结果：1
+2017-10-11 22:45:07,837 - 获取的数据为：#ZWGC2017100800000#52#2#23.2#1506786123499-数据处理结果：1
+2017-10-11 22:45:07,988 - 获取的数据为：#ZWGC2017100800000#53#3#23.2#1506786123499-数据处理结果：1
+2017-10-11 22:45:08,144 - 获取的数据为：#ZWGC2017100800000#54#3#23.2#1506786123499-数据处理结果：1
+2017-10-11 23:58:28,676 - 客户端启动！！！
+2017-10-13 21:05:25,039 - 客户端启动！！！
+2017-10-13 21:33:12,313 - 客户端启动！！！
+2017-10-13 22:45:53,536 - 客户端启动！！！
+2017-10-13 22:57:46,965 - 客户端启动！！！
+2017-10-13 22:59:45,709 - 客户端启动！！！
+2017-10-13 23:11:52,632 - 客户端启动！！！
+2017-10-13 23:12:38,238 - 客户端启动！！！
+2017-10-13 23:13:59,397 - 客户端启动！！！
+2017-10-13 23:18:53,722 - 客户端启动！！！
+2017-10-13 23:20:11,679 - 客户端启动！！！
+2017-10-13 23:22:44,273 - 客户端启动！！！
+2017-10-13 23:24:20,413 - 客户端启动！！！
+2017-10-13 23:24:47,710 - 客户端启动！！！
+2017-10-13 23:26:05,495 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@41975e01: startup date [Fri Oct 13 23:26:05 CST 2017]; root of context hierarchy
+2017-10-13 23:26:05,632 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-13 23:26:06,712 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 23:26:08,800 - [id: 0x1a76ac27] REGISTERED
+2017-10-13 23:26:08,802 - [id: 0x1a76ac27] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-13 23:26:08,807 - [id: 0x1a76ac27, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-13 23:26:18,256 - 客户端启动！！！
+2017-10-13 23:26:20,082 - [id: 0x1a76ac27, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xdc29ba16, L:/127.0.0.1:8765 - R:/127.0.0.1:12347]
+2017-10-13 23:26:20,168 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@45b7f9ce: startup date [Fri Oct 13 23:26:20 CST 2017]; root of context hierarchy
+2017-10-13 23:26:20,169 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-13 23:26:20,277 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 23:26:20,321 - 获取客户端ip:/127.0.0.1:12347
+2017-10-13 23:26:20,924 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-13 23:26:21,075 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861232-数据处理结果：1
+2017-10-13 23:26:21,214 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861232-数据处理结果：1
+2017-10-13 23:26:21,340 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861232-数据处理结果：1
+2017-10-13 23:26:21,495 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861232-数据处理结果：1
+2017-10-13 23:26:21,624 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861232-数据处理结果：1
+2017-10-13 23:26:21,758 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861232-数据处理结果：1
+2017-10-13 23:26:21,884 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861232-数据处理结果：1
+2017-10-13 23:26:21,991 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861232-数据处理结果：1
+2017-10-13 23:26:22,123 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861232-数据处理结果：1
+2017-10-13 23:26:22,270 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861232-数据处理结果：1
+2017-10-13 23:26:22,381 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861232-数据处理结果：1
+2017-10-13 23:26:22,522 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861232-数据处理结果：1
+2017-10-13 23:26:22,660 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861232-数据处理结果：1
+2017-10-13 23:26:22,793 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861232-数据处理结果：1
+2017-10-13 23:26:22,987 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861232-数据处理结果：1
+2017-10-13 23:26:23,127 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861232-数据处理结果：1
+2017-10-13 23:26:23,287 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861232-数据处理结果：1
+2017-10-13 23:26:56,269 - 客户端启动！！！
+2017-10-13 23:26:57,753 - [id: 0x1a76ac27, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xc4181fc9, L:/127.0.0.1:8765 - R:/127.0.0.1:12392]
+2017-10-13 23:26:57,779 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5bbebd20: startup date [Fri Oct 13 23:26:57 CST 2017]; root of context hierarchy
+2017-10-13 23:26:57,780 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-13 23:26:57,884 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 23:26:57,922 - 获取客户端ip:/127.0.0.1:12392
+2017-10-13 23:26:58,209 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-13 23:26:58,337 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861232-数据处理结果：1
+2017-10-13 23:26:58,461 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861232-数据处理结果：1
+2017-10-13 23:26:58,611 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861232-数据处理结果：1
+2017-10-13 23:26:58,739 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861232-数据处理结果：1
+2017-10-13 23:26:58,875 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861232-数据处理结果：1
+2017-10-13 23:26:58,998 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861232-数据处理结果：1
+2017-10-13 23:26:59,156 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861232-数据处理结果：1
+2017-10-13 23:26:59,287 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861232-数据处理结果：1
+2017-10-13 23:26:59,416 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861232-数据处理结果：1
+2017-10-13 23:26:59,568 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861232-数据处理结果：1
+2017-10-13 23:26:59,685 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861232-数据处理结果：1
+2017-10-13 23:26:59,820 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861232-数据处理结果：1
+2017-10-13 23:26:59,952 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861232-数据处理结果：1
+2017-10-13 23:27:00,095 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861232-数据处理结果：1
+2017-10-13 23:27:00,216 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861232-数据处理结果：1
+2017-10-13 23:27:00,351 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861232-数据处理结果：1
+2017-10-13 23:27:00,494 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861232-数据处理结果：1
+2017-10-13 23:30:49,948 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@67784306: startup date [Fri Oct 13 23:30:49 CST 2017]; root of context hierarchy
+2017-10-13 23:30:50,099 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-13 23:30:51,196 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 23:30:53,110 - [id: 0xffd6df41] REGISTERED
+2017-10-13 23:30:53,112 - [id: 0xffd6df41] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-13 23:30:53,118 - [id: 0xffd6df41, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-13 23:31:19,620 - 客户端启动！！！
+2017-10-13 23:31:21,226 - [id: 0xffd6df41, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x6952c76e, L:/127.0.0.1:8765 - R:/127.0.0.1:12549]
+2017-10-13 23:31:21,331 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6924b2b9: startup date [Fri Oct 13 23:31:21 CST 2017]; root of context hierarchy
+2017-10-13 23:31:21,332 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-13 23:31:21,474 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 23:31:21,550 - 获取客户端ip:/127.0.0.1:12549
+2017-10-13 23:31:22,377 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-13 23:31:22,516 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:31:22,640 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861233-数据处理结果：1
+2017-10-13 23:31:22,771 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861233-数据处理结果：1
+2017-10-13 23:31:22,890 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861233-数据处理结果：1
+2017-10-13 23:31:23,014 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:31:23,156 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861233-数据处理结果：1
+2017-10-13 23:31:23,283 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861233-数据处理结果：1
+2017-10-13 23:31:23,416 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861233-数据处理结果：1
+2017-10-13 23:31:23,560 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:31:23,691 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861234-数据处理结果：1
+2017-10-13 23:31:23,811 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861234-数据处理结果：1
+2017-10-13 23:31:23,942 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861234-数据处理结果：1
+2017-10-13 23:31:24,062 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861234-数据处理结果：1
+2017-10-13 23:31:24,189 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861234-数据处理结果：1
+2017-10-13 23:31:24,322 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861234-数据处理结果：1
+2017-10-13 23:31:24,448 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861234-数据处理结果：1
+2017-10-13 23:31:24,584 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861234-数据处理结果：1
+2017-10-13 23:33:50,528 - 客户端启动！！！
+2017-10-13 23:35:04,548 - 客户端启动！！！
+2017-10-13 23:36:06,675 - 客户端启动！！！
+2017-10-13 23:36:08,543 - [id: 0xffd6df41, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xaa59b9fa, L:/127.0.0.1:8765 - R:/127.0.0.1:12797]
+2017-10-13 23:36:08,549 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@61907c20: startup date [Fri Oct 13 23:36:08 CST 2017]; root of context hierarchy
+2017-10-13 23:36:08,550 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-13 23:36:08,672 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 23:36:08,735 - 获取客户端ip:/127.0.0.1:12797
+2017-10-13 23:36:08,912 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-13 23:36:09,054 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:36:09,204 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861233-数据处理结果：1
+2017-10-13 23:36:09,349 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861233-数据处理结果：1
+2017-10-13 23:36:09,489 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861233-数据处理结果：1
+2017-10-13 23:36:09,635 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:36:09,749 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861233-数据处理结果：1
+2017-10-13 23:36:09,884 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861233-数据处理结果：1
+2017-10-13 23:36:10,024 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861233-数据处理结果：1
+2017-10-13 23:36:10,156 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:36:10,293 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861234-数据处理结果：1
+2017-10-13 23:36:10,427 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861234-数据处理结果：1
+2017-10-13 23:36:10,568 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861234-数据处理结果：1
+2017-10-13 23:36:10,690 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861234-数据处理结果：1
+2017-10-13 23:36:10,836 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861234-数据处理结果：1
+2017-10-13 23:36:10,975 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861234-数据处理结果：1
+2017-10-13 23:36:12,091 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861234-数据处理结果：1
+2017-10-13 23:36:12,214 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861234-数据处理结果：1
+2017-10-13 23:37:38,859 - 客户端启动！！！
+2017-10-13 23:37:40,677 - [id: 0xffd6df41, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x3a9ddfb6, L:/127.0.0.1:8765 - R:/127.0.0.1:12855]
+2017-10-13 23:37:40,743 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@106747f5: startup date [Fri Oct 13 23:37:40 CST 2017]; root of context hierarchy
+2017-10-13 23:37:40,743 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-13 23:37:40,861 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-13 23:37:40,924 - 获取客户端ip:/127.0.0.1:12855
+2017-10-13 23:37:41,153 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-13 23:37:41,298 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:37:41,435 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861233-数据处理结果：1
+2017-10-13 23:37:41,558 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861233-数据处理结果：1
+2017-10-13 23:37:41,701 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861233-数据处理结果：1
+2017-10-13 23:37:41,833 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:37:41,964 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861233-数据处理结果：1
+2017-10-13 23:37:42,095 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861233-数据处理结果：1
+2017-10-13 23:37:42,219 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861233-数据处理结果：1
+2017-10-13 23:37:42,372 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861233-数据处理结果：1
+2017-10-13 23:37:42,512 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861234-数据处理结果：1
+2017-10-13 23:37:42,631 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861234-数据处理结果：1
+2017-10-13 23:37:42,747 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861234-数据处理结果：1
+2017-10-13 23:37:42,856 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861234-数据处理结果：1
+2017-10-13 23:37:42,987 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861234-数据处理结果：1
+2017-10-13 23:37:43,110 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861234-数据处理结果：1
+2017-10-13 23:37:43,243 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861234-数据处理结果：1
+2017-10-13 23:37:43,378 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861234-数据处理结果：1
+2017-10-13 23:38:07,000 - 客户端启动！！！
+2017-10-14 11:18:50,239 - 客户端启动！！！
+2017-10-14 11:18:56,586 - 客户端启动！！！
+2017-10-14 11:19:31,139 - 客户端启动！！！
+2017-10-14 11:21:16,916 - 客户端启动！！！
+2017-10-14 11:23:43,760 - 客户端启动！！！
+2017-10-14 11:25:35,158 - 客户端启动！！！
+2017-10-14 11:27:24,993 - 客户端启动！！！
+2017-10-14 12:11:18,013 - 客户端启动！！！
+2017-10-14 12:13:26,559 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@41975e01: startup date [Sat Oct 14 12:13:26 CST 2017]; root of context hierarchy
+2017-10-14 12:13:26,828 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 12:13:29,010 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 12:13:30,449 - [id: 0xf01e857c] REGISTERED
+2017-10-14 12:13:30,451 - [id: 0xf01e857c] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 12:13:30,458 - [id: 0xf01e857c, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 12:13:35,692 - 客户端启动！！！
+2017-10-14 12:13:38,094 - [id: 0xf01e857c, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xde335141, L:/127.0.0.1:8765 - R:/127.0.0.1:14876]
+2017-10-14 12:13:38,213 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@369e38cf: startup date [Sat Oct 14 12:13:38 CST 2017]; root of context hierarchy
+2017-10-14 12:13:38,214 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 12:13:38,340 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 12:13:38,378 - 获取客户端ip:/127.0.0.1:14876
+2017-10-14 12:13:39,378 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-14 12:13:39,518 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861233-数据处理结果：1
+2017-10-14 12:13:39,648 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861233-数据处理结果：1
+2017-10-14 12:13:39,767 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861233-数据处理结果：1
+2017-10-14 12:13:39,928 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861233-数据处理结果：1
+2017-10-14 12:13:40,046 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861233-数据处理结果：1
+2017-10-14 12:13:40,175 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861233-数据处理结果：1
+2017-10-14 12:13:40,319 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861233-数据处理结果：1
+2017-10-14 12:13:40,454 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861233-数据处理结果：1
+2017-10-14 12:13:40,592 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861233-数据处理结果：1
+2017-10-14 12:13:40,715 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861234-数据处理结果：1
+2017-10-14 12:13:41,055 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861234-数据处理结果：1
+2017-10-14 12:13:41,188 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861234-数据处理结果：1
+2017-10-14 12:13:41,341 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861234-数据处理结果：1
+2017-10-14 12:13:41,482 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861234-数据处理结果：1
+2017-10-14 12:13:41,603 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861234-数据处理结果：1
+2017-10-14 12:13:41,739 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861234-数据处理结果：1
+2017-10-14 12:13:41,883 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861234-数据处理结果：1
+2017-10-14 20:36:31,431 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@210366b4: startup date [Sat Oct 14 20:36:31 CST 2017]; root of context hierarchy
+2017-10-14 20:36:32,981 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 20:36:37,798 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 20:36:38,190 - Using default implementation for ThreadExecutor
+2017-10-14 20:36:38,327 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 20:36:38,327 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 20:36:38,329 - RAMJobStore initialized.
+2017-10-14 20:36:38,330 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 20:36:38,331 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 20:36:38,331 - Quartz scheduler version: 2.2.3
+2017-10-14 20:36:38,334 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@18e36d14
+2017-10-14 20:36:38,846 - Starting beans in phase 2147483647
+2017-10-14 20:36:38,847 - Starting Quartz Scheduler now
+2017-10-14 20:36:38,847 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 20:36:38,854 - Starting beans in phase 2147483647
+2017-10-14 20:36:52,895 - [id: 0xfb3d2db7] REGISTERED
+2017-10-14 20:36:52,897 - [id: 0xfb3d2db7] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 20:36:52,904 - [id: 0xfb3d2db7, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 20:37:23,495 - 客户端启动！！！
+2017-10-14 20:37:26,238 - [id: 0xfb3d2db7, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x8dd19ce1, L:/127.0.0.1:8765 - R:/127.0.0.1:10675]
+2017-10-14 20:37:26,540 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16ba97ef: startup date [Sat Oct 14 20:37:26 CST 2017]; root of context hierarchy
+2017-10-14 20:37:26,541 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 20:37:26,707 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 20:37:26,759 - Using default implementation for ThreadExecutor
+2017-10-14 20:37:26,761 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 20:37:26,771 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 20:37:26,771 - RAMJobStore initialized.
+2017-10-14 20:37:26,771 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 20:37:26,772 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 20:37:26,772 - Quartz scheduler version: 2.2.3
+2017-10-14 20:37:26,772 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@3dedbe3b
+2017-10-14 20:37:26,816 - Starting beans in phase 2147483647
+2017-10-14 20:37:26,817 - Starting Quartz Scheduler now
+2017-10-14 20:37:26,817 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 20:37:26,818 - 获取客户端ip:/127.0.0.1:10675
+2017-10-14 20:37:28,564 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-14 20:37:28,725 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:28,839 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:28,976 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:29,110 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:29,238 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:29,371 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:29,540 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:29,663 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:29,818 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861234#-数据处理结果：1
+2017-10-14 20:37:29,954 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861244#-数据处理结果：1
+2017-10-14 20:37:30,078 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861244#-数据处理结果：1
+2017-10-14 20:37:30,209 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861244#-数据处理结果：1
+2017-10-14 20:37:30,331 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861244#-数据处理结果：1
+2017-10-14 20:37:30,449 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861244#-数据处理结果：1
+2017-10-14 20:37:30,588 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861244#-数据处理结果：1
+2017-10-14 20:37:30,724 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861244#-数据处理结果：1
+2017-10-14 20:37:30,863 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861244#-数据处理结果：1
+2017-10-14 21:11:40,272 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@210366b4: startup date [Sat Oct 14 21:11:40 CST 2017]; root of context hierarchy
+2017-10-14 21:11:40,543 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:11:44,033 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:11:44,546 - Using default implementation for ThreadExecutor
+2017-10-14 21:11:44,616 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:11:44,616 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:11:44,619 - RAMJobStore initialized.
+2017-10-14 21:11:44,621 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:11:44,622 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:11:44,622 - Quartz scheduler version: 2.2.3
+2017-10-14 21:11:44,626 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@302f7971
+2017-10-14 21:11:44,883 - Starting beans in phase 2147483647
+2017-10-14 21:11:44,884 - Starting Quartz Scheduler now
+2017-10-14 21:11:44,884 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:11:44,892 - Starting beans in phase 2147483647
+2017-10-14 21:11:50,397 - 本次定时任务开始时间：2017-10-14 21:11:50
+2017-10-14 21:11:50,397 - 本次定时任务开始时间：2017-10-14 21:11:50
+2017-10-14 21:11:50,402 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:50,402 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:50,408 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:50,410 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:51,003 - 本次定时任务开始时间：2017-10-14 21:11:51
+2017-10-14 21:11:51,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:51,004 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:52,001 - 本次定时任务开始时间：2017-10-14 21:11:52
+2017-10-14 21:11:52,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:52,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:53,002 - 本次定时任务开始时间：2017-10-14 21:11:53
+2017-10-14 21:11:53,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:53,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:53,853 - [id: 0xede281ed] REGISTERED
+2017-10-14 21:11:53,856 - [id: 0xede281ed] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 21:11:53,861 - [id: 0xede281ed, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 21:11:54,001 - 本次定时任务开始时间：2017-10-14 21:11:54
+2017-10-14 21:11:54,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:54,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:55,001 - 本次定时任务开始时间：2017-10-14 21:11:55
+2017-10-14 21:11:55,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:55,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:56,007 - 本次定时任务开始时间：2017-10-14 21:11:56
+2017-10-14 21:11:56,007 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:56,008 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:57,001 - 本次定时任务开始时间：2017-10-14 21:11:57
+2017-10-14 21:11:57,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:57,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:58,001 - 本次定时任务开始时间：2017-10-14 21:11:58
+2017-10-14 21:11:58,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:58,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:11:59,001 - 本次定时任务开始时间：2017-10-14 21:11:59
+2017-10-14 21:11:59,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:11:59,003 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:00,003 - 本次定时任务开始时间：2017-10-14 21:12:00
+2017-10-14 21:12:00,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:00,003 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:01,000 - 本次定时任务开始时间：2017-10-14 21:12:01
+2017-10-14 21:12:01,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:01,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:02,001 - 本次定时任务开始时间：2017-10-14 21:12:02
+2017-10-14 21:12:02,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:02,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:03,001 - 本次定时任务开始时间：2017-10-14 21:12:03
+2017-10-14 21:12:03,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:03,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:04,002 - 本次定时任务开始时间：2017-10-14 21:12:04
+2017-10-14 21:12:04,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:04,003 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:05,001 - 本次定时任务开始时间：2017-10-14 21:12:05
+2017-10-14 21:12:05,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:05,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:06,001 - 本次定时任务开始时间：2017-10-14 21:12:06
+2017-10-14 21:12:06,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:06,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:07,001 - 本次定时任务开始时间：2017-10-14 21:12:07
+2017-10-14 21:12:07,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:07,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:08,000 - 本次定时任务开始时间：2017-10-14 21:12:08
+2017-10-14 21:12:08,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:08,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:09,001 - 本次定时任务开始时间：2017-10-14 21:12:09
+2017-10-14 21:12:09,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:09,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:10,001 - 本次定时任务开始时间：2017-10-14 21:12:10
+2017-10-14 21:12:10,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:10,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:11,000 - 本次定时任务开始时间：2017-10-14 21:12:11
+2017-10-14 21:12:11,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:11,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:12,002 - 本次定时任务开始时间：2017-10-14 21:12:12
+2017-10-14 21:12:12,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:12,004 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:13,000 - 本次定时任务开始时间：2017-10-14 21:12:13
+2017-10-14 21:12:13,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:13,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:14,002 - 本次定时任务开始时间：2017-10-14 21:12:14
+2017-10-14 21:12:14,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:14,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:15,002 - 本次定时任务开始时间：2017-10-14 21:12:15
+2017-10-14 21:12:15,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:15,004 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:16,000 - 本次定时任务开始时间：2017-10-14 21:12:16
+2017-10-14 21:12:16,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:16,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:17,001 - 本次定时任务开始时间：2017-10-14 21:12:17
+2017-10-14 21:12:17,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:17,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:18,000 - 本次定时任务开始时间：2017-10-14 21:12:18
+2017-10-14 21:12:18,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:18,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:19,001 - 本次定时任务开始时间：2017-10-14 21:12:19
+2017-10-14 21:12:19,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:19,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:20,000 - 本次定时任务开始时间：2017-10-14 21:12:20
+2017-10-14 21:12:20,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:20,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:21,000 - 本次定时任务开始时间：2017-10-14 21:12:21
+2017-10-14 21:12:21,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:21,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:22,001 - 本次定时任务开始时间：2017-10-14 21:12:22
+2017-10-14 21:12:22,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:22,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:23,005 - 本次定时任务开始时间：2017-10-14 21:12:23
+2017-10-14 21:12:23,005 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:23,005 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:24,000 - 本次定时任务开始时间：2017-10-14 21:12:24
+2017-10-14 21:12:24,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:24,000 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:25,001 - 本次定时任务开始时间：2017-10-14 21:12:25
+2017-10-14 21:12:25,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:25,005 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:26,001 - 本次定时任务开始时间：2017-10-14 21:12:26
+2017-10-14 21:12:26,004 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:26,006 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:27,000 - 本次定时任务开始时间：2017-10-14 21:12:27
+2017-10-14 21:12:27,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:27,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:28,002 - 本次定时任务开始时间：2017-10-14 21:12:28
+2017-10-14 21:12:28,004 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:28,005 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:29,001 - 本次定时任务开始时间：2017-10-14 21:12:29
+2017-10-14 21:12:29,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:29,003 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:30,001 - 本次定时任务开始时间：2017-10-14 21:12:30
+2017-10-14 21:12:30,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:30,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:31,000 - 本次定时任务开始时间：2017-10-14 21:12:31
+2017-10-14 21:12:31,000 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:31,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:12:32,001 - 本次定时任务开始时间：2017-10-14 21:12:32
+2017-10-14 21:12:32,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:12:32,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:18:39,777 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@210366b4: startup date [Sat Oct 14 21:18:39 CST 2017]; root of context hierarchy
+2017-10-14 21:18:39,907 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:18:41,612 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:18:41,985 - Using default implementation for ThreadExecutor
+2017-10-14 21:18:42,030 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:18:42,032 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:18:42,035 - RAMJobStore initialized.
+2017-10-14 21:18:42,037 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:18:42,038 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:18:42,038 - Quartz scheduler version: 2.2.3
+2017-10-14 21:18:42,054 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@302f7971
+2017-10-14 21:18:42,156 - Starting beans in phase 2147483647
+2017-10-14 21:18:42,156 - Starting Quartz Scheduler now
+2017-10-14 21:18:42,156 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:18:42,168 - Starting beans in phase 2147483647
+2017-10-14 21:18:43,627 - [id: 0x4c1f7bec] REGISTERED
+2017-10-14 21:18:43,631 - [id: 0x4c1f7bec] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 21:18:43,638 - [id: 0x4c1f7bec, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 21:19:00,017 - 本次定时任务开始时间：2017-10-14 21:19:00
+2017-10-14 21:19:00,018 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:19:00,023 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:33)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:20:59,741 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@210366b4: startup date [Sat Oct 14 21:20:59 CST 2017]; root of context hierarchy
+2017-10-14 21:20:59,886 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:21:00,994 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:21:01,352 - Using default implementation for ThreadExecutor
+2017-10-14 21:21:01,410 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:21:01,411 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:21:01,413 - RAMJobStore initialized.
+2017-10-14 21:21:01,415 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:21:01,416 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:21:01,417 - Quartz scheduler version: 2.2.3
+2017-10-14 21:21:01,420 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@282cb7c7
+2017-10-14 21:21:01,621 - Starting beans in phase 2147483647
+2017-10-14 21:21:01,621 - Starting Quartz Scheduler now
+2017-10-14 21:21:01,621 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:21:01,645 - Starting beans in phase 2147483647
+2017-10-14 21:21:03,291 - [id: 0x0b23e55d] REGISTERED
+2017-10-14 21:21:03,295 - [id: 0x0b23e55d] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 21:21:03,304 - [id: 0x0b23e55d, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 21:21:05,028 - 本次定时任务开始时间：2017-10-14 21:21:05
+2017-10-14 21:21:05,029 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:21:05,033 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:22:05,001 - 本次定时任务开始时间：2017-10-14 21:22:05
+2017-10-14 21:22:05,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:22:05,003 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:23:05,007 - 本次定时任务开始时间：2017-10-14 21:23:05
+2017-10-14 21:23:05,009 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:23:05,009 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:23:35,640 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@210366b4: startup date [Sat Oct 14 21:23:35 CST 2017]; root of context hierarchy
+2017-10-14 21:23:35,762 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:23:37,004 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:23:37,380 - Using default implementation for ThreadExecutor
+2017-10-14 21:23:37,444 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:23:37,445 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:23:37,447 - RAMJobStore initialized.
+2017-10-14 21:23:37,449 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:23:37,450 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:23:37,460 - Quartz scheduler version: 2.2.3
+2017-10-14 21:23:37,463 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@282cb7c7
+2017-10-14 21:23:37,617 - Starting beans in phase 2147483647
+2017-10-14 21:23:37,617 - Starting Quartz Scheduler now
+2017-10-14 21:23:37,618 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:23:37,636 - Starting beans in phase 2147483647
+2017-10-14 21:23:39,496 - [id: 0xdcf08a58] REGISTERED
+2017-10-14 21:23:39,498 - [id: 0xdcf08a58] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 21:23:39,506 - [id: 0xdcf08a58, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 21:24:05,017 - 本次定时任务开始时间：2017-10-14 21:24:05
+2017-10-14 21:24:05,021 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:24:05,026 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:25:05,002 - 本次定时任务开始时间：2017-10-14 21:25:05
+2017-10-14 21:25:05,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:25:05,004 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:26:05,003 - 本次定时任务开始时间：2017-10-14 21:26:05
+2017-10-14 21:26:05,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:26:05,004 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:27:05,001 - 本次定时任务开始时间：2017-10-14 21:27:05
+2017-10-14 21:27:05,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:27:05,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:28:05,000 - 本次定时任务开始时间：2017-10-14 21:28:05
+2017-10-14 21:28:05,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:28:05,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:28:22,730 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@210366b4: startup date [Sat Oct 14 21:28:22 CST 2017]; root of context hierarchy
+2017-10-14 21:28:22,849 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:28:24,001 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:28:24,554 - Using default implementation for ThreadExecutor
+2017-10-14 21:28:24,589 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:28:24,590 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:28:24,592 - RAMJobStore initialized.
+2017-10-14 21:28:24,604 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:28:24,605 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:28:24,612 - Quartz scheduler version: 2.2.3
+2017-10-14 21:28:24,615 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@7d898981
+2017-10-14 21:28:24,787 - Starting beans in phase 2147483647
+2017-10-14 21:28:24,788 - Starting Quartz Scheduler now
+2017-10-14 21:28:24,788 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:28:24,800 - Starting beans in phase 2147483647
+2017-10-14 21:28:26,049 - [id: 0xdeb8def1] REGISTERED
+2017-10-14 21:28:26,050 - [id: 0xdeb8def1] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 21:28:26,056 - [id: 0xdeb8def1, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 21:29:05,021 - 本次定时任务开始时间：2017-10-14 21:29:05
+2017-10-14 21:29:05,023 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:29:05,027 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:30:05,003 - 本次定时任务开始时间：2017-10-14 21:30:05
+2017-10-14 21:30:05,004 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:30:05,004 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:31:05,001 - 本次定时任务开始时间：2017-10-14 21:31:05
+2017-10-14 21:31:05,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:31:05,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:32:05,003 - 本次定时任务开始时间：2017-10-14 21:32:05
+2017-10-14 21:32:05,003 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:32:05,004 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:33:05,001 - 本次定时任务开始时间：2017-10-14 21:33:05
+2017-10-14 21:33:05,001 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:33:05,001 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:34:05,002 - 本次定时任务开始时间：2017-10-14 21:34:05
+2017-10-14 21:34:05,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:34:05,003 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:35:05,001 - 本次定时任务开始时间：2017-10-14 21:35:05
+2017-10-14 21:35:05,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:35:05,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:35)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:48:20,947 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sat Oct 14 21:48:20 CST 2017]; root of context hierarchy
+2017-10-14 21:48:21,087 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:48:22,385 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:48:22,764 - Using default implementation for ThreadExecutor
+2017-10-14 21:48:22,806 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:48:22,807 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:48:22,808 - RAMJobStore initialized.
+2017-10-14 21:48:22,812 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:48:22,813 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:48:22,813 - Quartz scheduler version: 2.2.3
+2017-10-14 21:48:22,816 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6057aebb
+2017-10-14 21:48:22,937 - Starting beans in phase 2147483647
+2017-10-14 21:48:22,938 - Starting Quartz Scheduler now
+2017-10-14 21:48:22,938 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:48:22,988 - Starting beans in phase 2147483647
+2017-10-14 21:48:24,239 - [id: 0x2fe60250] REGISTERED
+2017-10-14 21:48:24,242 - [id: 0x2fe60250] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 21:48:24,249 - [id: 0x2fe60250, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 21:48:25,020 - 本次定时任务开始时间：2017-10-14 21:48:25
+2017-10-14 21:48:25,025 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.utils.SpringConfigUtil.getBean(SpringConfigUtil.java:28)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:30)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:48:25,031 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.utils.SpringConfigUtil.getBean(SpringConfigUtil.java:28)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:30)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:48:30,002 - 本次定时任务开始时间：2017-10-14 21:48:30
+2017-10-14 21:48:30,004 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.utils.SpringConfigUtil.getBean(SpringConfigUtil.java:28)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:30)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:48:30,005 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.utils.SpringConfigUtil.getBean(SpringConfigUtil.java:28)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:30)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:48:35,002 - 本次定时任务开始时间：2017-10-14 21:48:35
+2017-10-14 21:48:35,002 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.vastsum.utils.SpringConfigUtil.getBean(SpringConfigUtil.java:28)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:30)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:48:35,002 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.vastsum.utils.SpringConfigUtil.getBean(SpringConfigUtil.java:28)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:30)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:50:32,465 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sat Oct 14 21:50:32 CST 2017]; root of context hierarchy
+2017-10-14 21:50:32,586 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:50:33,713 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:50:34,084 - Using default implementation for ThreadExecutor
+2017-10-14 21:50:34,134 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:50:34,134 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:50:34,143 - RAMJobStore initialized.
+2017-10-14 21:50:34,144 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:50:34,150 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:50:34,151 - Quartz scheduler version: 2.2.3
+2017-10-14 21:50:34,154 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@53251a66
+2017-10-14 21:50:34,351 - Starting beans in phase 2147483647
+2017-10-14 21:50:34,351 - Starting Quartz Scheduler now
+2017-10-14 21:50:34,351 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:50:34,364 - Starting beans in phase 2147483647
+2017-10-14 21:50:35,033 - 本次定时任务开始时间：2017-10-14 21:50:35
+2017-10-14 21:50:36,050 - [id: 0x1bdf60ff] REGISTERED
+2017-10-14 21:50:36,054 - [id: 0x1bdf60ff] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 21:50:36,060 - [id: 0x1bdf60ff, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 21:50:40,002 - 本次定时任务开始时间：2017-10-14 21:50:40
+2017-10-14 21:50:45,001 - 本次定时任务开始时间：2017-10-14 21:50:45
+2017-10-14 21:50:50,003 - 本次定时任务开始时间：2017-10-14 21:50:50
+2017-10-14 21:50:55,002 - 本次定时任务开始时间：2017-10-14 21:50:55
+2017-10-14 21:51:00,002 - 本次定时任务开始时间：2017-10-14 21:51:00
+2017-10-14 21:51:05,002 - 本次定时任务开始时间：2017-10-14 21:51:05
+2017-10-14 21:51:10,002 - 本次定时任务开始时间：2017-10-14 21:51:10
+2017-10-14 21:51:15,002 - 本次定时任务开始时间：2017-10-14 21:51:15
+2017-10-14 21:51:20,000 - 本次定时任务开始时间：2017-10-14 21:51:20
+2017-10-14 21:51:25,002 - 本次定时任务开始时间：2017-10-14 21:51:25
+2017-10-14 21:51:30,000 - 本次定时任务开始时间：2017-10-14 21:51:30
+2017-10-14 21:51:35,002 - 本次定时任务开始时间：2017-10-14 21:51:35
+2017-10-14 21:51:40,002 - 本次定时任务开始时间：2017-10-14 21:51:40
+2017-10-14 21:51:45,001 - 客户端启动！！！
+2017-10-14 21:51:45,006 - 本次定时任务开始时间：2017-10-14 21:51:45
+2017-10-14 21:51:46,980 - [id: 0x1bdf60ff, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0xcd5c9730, L:/127.0.0.1:8765 - R:/127.0.0.1:12659]
+2017-10-14 21:51:47,045 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3d6b5801: startup date [Sat Oct 14 21:51:47 CST 2017]; root of context hierarchy
+2017-10-14 21:51:47,046 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:51:47,195 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:51:47,252 - Using default implementation for ThreadExecutor
+2017-10-14 21:51:47,253 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:51:47,254 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:51:47,254 - RAMJobStore initialized.
+2017-10-14 21:51:47,254 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:51:47,254 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:51:47,254 - Quartz scheduler version: 2.2.3
+2017-10-14 21:51:47,254 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@2e75c5d5
+2017-10-14 21:51:47,304 - Starting beans in phase 2147483647
+2017-10-14 21:51:47,304 - Starting Quartz Scheduler now
+2017-10-14 21:51:47,304 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:51:47,319 - 获取客户端ip:/127.0.0.1:12659
+2017-10-14 21:51:48,015 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-14 21:51:49,360 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:49,513 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:49,644 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:49,823 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:49,960 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:50,004 - 本次定时任务开始时间：2017-10-14 21:51:50
+2017-10-14 21:51:50,005 - 本次定时任务开始时间：2017-10-14 21:51:50
+2017-10-14 21:51:50,108 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:50,242 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:50,370 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:50,522 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861235#-数据处理结果：1
+2017-10-14 21:51:50,679 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861254#-数据处理结果：1
+2017-10-14 21:51:50,814 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861254#-数据处理结果：1
+2017-10-14 21:51:50,953 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861254#-数据处理结果：1
+2017-10-14 21:51:51,083 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861254#-数据处理结果：1
+2017-10-14 21:51:51,208 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861254#-数据处理结果：1
+2017-10-14 21:51:51,350 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861254#-数据处理结果：1
+2017-10-14 21:51:51,488 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861254#-数据处理结果：1
+2017-10-14 21:51:51,633 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861254#-数据处理结果：1
+2017-10-14 21:51:55,002 - 本次定时任务开始时间：2017-10-14 21:51:55
+2017-10-14 21:51:55,002 - 本次定时任务开始时间：2017-10-14 21:51:55
+2017-10-14 21:51:55,115 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:51:55,118 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:51:55,147 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:51:55,148 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:00,004 - 本次定时任务开始时间：2017-10-14 21:52:00
+2017-10-14 21:52:00,007 - 本次定时任务开始时间：2017-10-14 21:52:00
+2017-10-14 21:52:00,115 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:00,115 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:00,116 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:00,116 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:05,004 - 本次定时任务开始时间：2017-10-14 21:52:05
+2017-10-14 21:52:05,005 - 本次定时任务开始时间：2017-10-14 21:52:05
+2017-10-14 21:52:05,129 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:05,129 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:05,130 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:05,130 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:10,003 - 本次定时任务开始时间：2017-10-14 21:52:10
+2017-10-14 21:52:10,003 - 本次定时任务开始时间：2017-10-14 21:52:10
+2017-10-14 21:52:10,105 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:10,105 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:10,112 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:10,113 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:15,000 - 本次定时任务开始时间：2017-10-14 21:52:15
+2017-10-14 21:52:15,000 - 本次定时任务开始时间：2017-10-14 21:52:15
+2017-10-14 21:52:15,107 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:15,108 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:15,140 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:15,141 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:20,002 - 本次定时任务开始时间：2017-10-14 21:52:20
+2017-10-14 21:52:20,003 - 本次定时任务开始时间：2017-10-14 21:52:20
+2017-10-14 21:52:20,124 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:20,125 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:20,143 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:20,144 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:25,001 - 本次定时任务开始时间：2017-10-14 21:52:25
+2017-10-14 21:52:25,001 - 本次定时任务开始时间：2017-10-14 21:52:25
+2017-10-14 21:52:25,120 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:25,120 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:25,120 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:25,121 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:30,004 - 本次定时任务开始时间：2017-10-14 21:52:30
+2017-10-14 21:52:30,004 - 本次定时任务开始时间：2017-10-14 21:52:30
+2017-10-14 21:52:30,124 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:30,125 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:30,139 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:30,139 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:35,000 - 本次定时任务开始时间：2017-10-14 21:52:35
+2017-10-14 21:52:35,000 - 本次定时任务开始时间：2017-10-14 21:52:35
+2017-10-14 21:52:35,111 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:35,112 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:35,139 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:35,139 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:40,000 - 本次定时任务开始时间：2017-10-14 21:52:40
+2017-10-14 21:52:40,000 - 本次定时任务开始时间：2017-10-14 21:52:40
+2017-10-14 21:52:40,136 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:40,137 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:40,141 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:40,142 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:45,004 - 本次定时任务开始时间：2017-10-14 21:52:45
+2017-10-14 21:52:45,005 - 本次定时任务开始时间：2017-10-14 21:52:45
+2017-10-14 21:52:45,131 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:45,132 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:45,134 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:45,135 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:50,001 - 本次定时任务开始时间：2017-10-14 21:52:50
+2017-10-14 21:52:50,001 - 本次定时任务开始时间：2017-10-14 21:52:50
+2017-10-14 21:52:50,114 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:50,115 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:52:50,147 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:52:50,148 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:53:22,260 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sat Oct 14 21:53:22 CST 2017]; root of context hierarchy
+2017-10-14 21:53:22,444 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:53:23,511 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:53:23,999 - Using default implementation for ThreadExecutor
+2017-10-14 21:53:24,083 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:53:24,083 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:53:24,086 - RAMJobStore initialized.
+2017-10-14 21:53:24,088 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:53:24,088 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:53:24,089 - Quartz scheduler version: 2.2.3
+2017-10-14 21:53:24,099 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@53251a66
+2017-10-14 21:53:24,263 - Starting beans in phase 2147483647
+2017-10-14 21:53:24,264 - Starting Quartz Scheduler now
+2017-10-14 21:53:24,264 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:53:24,273 - Starting beans in phase 2147483647
+2017-10-14 21:53:25,569 - [id: 0x94b35b8d] REGISTERED
+2017-10-14 21:53:25,571 - [id: 0x94b35b8d] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 21:53:25,576 - [id: 0x94b35b8d, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 21:53:31,926 - 客户端启动！！！
+2017-10-14 21:53:33,979 - [id: 0x94b35b8d, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x80504ddc, L:/127.0.0.1:8765 - R:/127.0.0.1:12791]
+2017-10-14 21:53:34,030 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@169c52c9: startup date [Sat Oct 14 21:53:34 CST 2017]; root of context hierarchy
+2017-10-14 21:53:34,035 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:53:34,221 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:53:34,278 - Using default implementation for ThreadExecutor
+2017-10-14 21:53:34,280 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:53:34,280 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:53:34,280 - RAMJobStore initialized.
+2017-10-14 21:53:34,280 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:53:34,280 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:53:34,281 - Quartz scheduler version: 2.2.3
+2017-10-14 21:53:34,281 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@722f6a51
+2017-10-14 21:53:34,324 - Starting beans in phase 2147483647
+2017-10-14 21:53:34,324 - Starting Quartz Scheduler now
+2017-10-14 21:53:34,324 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:53:34,364 - 获取客户端ip:/127.0.0.1:12791
+2017-10-14 21:53:34,982 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-14 21:53:35,120 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:35,293 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:35,672 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:35,810 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:35,940 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:36,072 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:36,203 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:36,357 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:36,492 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861235#-数据处理结果：1
+2017-10-14 21:53:36,627 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861254#-数据处理结果：1
+2017-10-14 21:53:36,769 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861254#-数据处理结果：1
+2017-10-14 21:53:36,886 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861254#-数据处理结果：1
+2017-10-14 21:53:37,014 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861254#-数据处理结果：1
+2017-10-14 21:53:37,208 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861254#-数据处理结果：1
+2017-10-14 21:53:37,337 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861254#-数据处理结果：1
+2017-10-14 21:53:37,451 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861254#-数据处理结果：1
+2017-10-14 21:53:37,581 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861254#-数据处理结果：1
+2017-10-14 21:53:56,354 - 客户端启动！！！
+2017-10-14 21:53:58,144 - [id: 0x94b35b8d, L:/0:0:0:0:0:0:0:0:8765] RECEIVED: [id: 0x693b22a0, L:/127.0.0.1:8765 - R:/127.0.0.1:12836]
+2017-10-14 21:53:58,274 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@36e506aa: startup date [Sat Oct 14 21:53:58 CST 2017]; root of context hierarchy
+2017-10-14 21:53:58,275 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 21:53:58,413 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 21:53:58,463 - Using default implementation for ThreadExecutor
+2017-10-14 21:53:58,465 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 21:53:58,465 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 21:53:58,465 - RAMJobStore initialized.
+2017-10-14 21:53:58,465 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 21:53:58,465 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 21:53:58,465 - Quartz scheduler version: 2.2.3
+2017-10-14 21:53:58,466 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@79e267fa
+2017-10-14 21:53:58,508 - Starting beans in phase 2147483647
+2017-10-14 21:53:58,508 - Starting Quartz Scheduler now
+2017-10-14 21:53:58,508 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 21:53:58,575 - 获取客户端ip:/127.0.0.1:12836
+2017-10-14 21:53:58,685 - 序列号为ZWGC2017100800004的设备已经激活
+2017-10-14 21:53:58,836 - 获取的数据为：#ZWGC2017100800004#1#1#23.2#15067861236#-数据处理结果：1
+2017-10-14 21:53:58,975 - 获取的数据为：#ZWGC2017100800004#2#1#24.2#15067861236#-数据处理结果：1
+2017-10-14 21:53:59,105 - 获取的数据为：#ZWGC2017100800004#3#1#24.2#15067861236#-数据处理结果：1
+2017-10-14 21:53:59,217 - 获取的数据为：#ZWGC2017100800004#4#1#25.2#15067861236#-数据处理结果：1
+2017-10-14 21:53:59,341 - 获取的数据为：#ZWGC2017100800004#5#1#23.2#15067861236#-数据处理结果：1
+2017-10-14 21:53:59,455 - 获取的数据为：#ZWGC2017100800004#6#1#33.2#15067861236#-数据处理结果：1
+2017-10-14 21:53:59,603 - 获取的数据为：#ZWGC2017100800004#7#1#25.2#15067861236#-数据处理结果：1
+2017-10-14 21:53:59,761 - 获取的数据为：#ZWGC2017100800004#8#1#73.2#15067861236#-数据处理结果：1
+2017-10-14 21:53:59,904 - 获取的数据为：#ZWGC2017100800004#9#1#23.2#15067861236#-数据处理结果：1
+2017-10-14 21:54:00,528 - 本次定时任务开始时间：2017-10-14 21:54:00
+2017-10-14 21:54:00,529 - 本次定时任务开始时间：2017-10-14 21:54:00
+2017-10-14 21:54:00,528 - 本次定时任务开始时间：2017-10-14 21:54:00
+2017-10-14 21:54:00,533 - 获取的数据为：#ZWGC2017100800004#10#1#13.2#15067861264#-数据处理结果：1
+2017-10-14 21:54:00,655 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:54:00,658 - 获取的数据为：#ZWGC2017100800004#11#1#53.2#15067861264#-数据处理结果：1
+2017-10-14 21:54:00,660 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:54:00,664 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:54:00,668 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:54:00,668 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:54:00,669 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:54:00,788 - 获取的数据为：#ZWGC2017100800004#12#1#63.2#15067861264#-数据处理结果：1
+2017-10-14 21:54:00,953 - 获取的数据为：#ZWGC2017100800004#13#1#23.4#15067861264#-数据处理结果：1
+2017-10-14 21:54:01,094 - 获取的数据为：#ZWGC2017100800004#14#1#23.2#15067861264#-数据处理结果：1
+2017-10-14 21:54:01,219 - 获取的数据为：#ZWGC2017100800004#15#1#25.2#15067861264#-数据处理结果：1
+2017-10-14 21:54:01,341 - 获取的数据为：#ZWGC2017100800004#16#0#26.2#15067861264#-数据处理结果：1
+2017-10-14 21:54:01,481 - 获取的数据为：#ZWGC2017100800004#17#0#27.2#15067861264#-数据处理结果：1
+2017-10-14 21:55:00,001 - 本次定时任务开始时间：2017-10-14 21:55:00
+2017-10-14 21:55:00,001 - 本次定时任务开始时间：2017-10-14 21:55:00
+2017-10-14 21:55:00,007 - 本次定时任务开始时间：2017-10-14 21:55:00
+2017-10-14 21:55:00,103 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:55:00,103 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:55:00,118 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:55:00,118 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:55:00,121 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:55:00,122 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:56:00,002 - 本次定时任务开始时间：2017-10-14 21:56:00
+2017-10-14 21:56:00,009 - 本次定时任务开始时间：2017-10-14 21:56:00
+2017-10-14 21:56:00,014 - 本次定时任务开始时间：2017-10-14 21:56:00
+2017-10-14 21:56:00,114 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:56:00,114 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:56:00,114 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:56:00,114 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 21:56:00,128 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 21:56:00,128 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result size: expected 1, actual 2
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:74)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 22:37:55,984 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2b2948e2: startup date [Sat Oct 14 22:37:55 CST 2017]; root of context hierarchy
+2017-10-14 22:37:56,118 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 22:37:57,380 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 22:37:57,603 - Using default implementation for ThreadExecutor
+2017-10-14 22:37:57,633 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 22:37:57,634 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 22:37:57,635 - RAMJobStore initialized.
+2017-10-14 22:37:57,640 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 22:37:57,640 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 22:37:57,643 - Quartz scheduler version: 2.2.3
+2017-10-14 22:37:57,648 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@53251a66
+2017-10-14 22:37:57,755 - Starting beans in phase 2147483647
+2017-10-14 22:37:57,755 - Starting Quartz Scheduler now
+2017-10-14 22:37:57,755 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 22:37:57,761 - Starting beans in phase 2147483647
+2017-10-14 22:38:00,039 - 本次定时任务开始时间：2017-10-14 22:38:00
+2017-10-14 22:38:00,217 - [id: 0xa64cf125] REGISTERED
+2017-10-14 22:38:00,220 - [id: 0xa64cf125] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 22:38:00,233 - [id: 0xa64cf125, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 22:38:01,009 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2017-10-14 22:38:01,135 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2017-10-14 22:38:01,266 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.DataIntegrityViolationException: StatementCallback; SQL [CALL process_sensor(75)]; Column 'sensor_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'sensor_id' cannot be null
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:85)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:419)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:443)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:30)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'sensor_id' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2531)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:848)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:742)
+	at org.springframework.jdbc.core.JdbcTemplate$1ExecuteStatementCallback.doInStatement(JdbcTemplate.java:435)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:408)
+	... 6 more
+2017-10-14 22:38:01,269 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.DataIntegrityViolationException: StatementCallback; SQL [CALL process_sensor(75)]; Column 'sensor_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'sensor_id' cannot be null]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.DataIntegrityViolationException: StatementCallback; SQL [CALL process_sensor(75)]; Column 'sensor_id' cannot be null; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'sensor_id' cannot be null
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:85)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:419)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:443)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:30)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Column 'sensor_id' cannot be null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389)
+	at com.mysql.jdbc.Util.getInstance(Util.java:372)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:973)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3835)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3771)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2531)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:848)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:742)
+	at org.springframework.jdbc.core.JdbcTemplate$1ExecuteStatementCallback.doInStatement(JdbcTemplate.java:435)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:408)
+	... 6 more
+2017-10-14 22:40:58,325 - 客户端启动！！！
+2017-10-14 22:41:14,502 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7dc5e7b4: startup date [Sat Oct 14 22:41:14 CST 2017]; root of context hierarchy
+2017-10-14 22:41:14,595 - Loading XML bean definitions from class path resource [spring-context.xml]
+2017-10-14 22:41:15,613 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2017-10-14 22:41:15,899 - Using default implementation for ThreadExecutor
+2017-10-14 22:41:15,960 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2017-10-14 22:41:15,960 - Quartz Scheduler v.2.2.3 created.
+2017-10-14 22:41:15,962 - RAMJobStore initialized.
+2017-10-14 22:41:15,963 - Scheduler meta-data: Quartz Scheduler (v2.2.3) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2017-10-14 22:41:15,964 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2017-10-14 22:41:15,964 - Quartz scheduler version: 2.2.3
+2017-10-14 22:41:15,966 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@3c22fc4c
+2017-10-14 22:41:16,085 - Starting beans in phase 2147483647
+2017-10-14 22:41:16,086 - Starting Quartz Scheduler now
+2017-10-14 22:41:16,086 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2017-10-14 22:41:16,094 - Starting beans in phase 2147483647
+2017-10-14 22:41:18,046 - [id: 0x9d19cdff] REGISTERED
+2017-10-14 22:41:18,048 - [id: 0x9d19cdff] BIND: 0.0.0.0/0.0.0.0:8765
+2017-10-14 22:41:18,054 - [id: 0x9d19cdff, L:/0:0:0:0:0:0:0:0:8765] ACTIVE
+2017-10-14 22:42:00,027 - 本次定时任务开始时间：2017-10-14 22:42:00
+2017-10-14 22:42:00,520 - Job DEFAULT.firstComplexJobDetail threw an unhandled Exception: 
+org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:71)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2017-10-14 22:42:00,522 - Job (DEFAULT.firstComplexJobDetail threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: org.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+	at org.springframework.dao.support.DataAccessUtils.requiredSingleResult(DataAccessUtils.java:71)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForObject(JdbcTemplate.java:495)
+	at org.springframework.jdbc.core.JdbcTemplate.queryForMap(JdbcTemplate.java:489)
+	at com.vastsum.server.Impl.SensorServiceImpl.workData(SensorServiceImpl.java:25)
+	at com.vastsum.quartz.BizJob.executeInternal(BizJob.java:31)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2017-10-14 22:43:00,011 - 本次定时任务开始时间：2017-10-14 22:43:00
+2017-10-14 22:44:00,006 - 本次定时任务开始时间：2017-10-14 22:44:00
+2017-10-14 22:55:35,940 - 客户端启动！！！
+2017-10-14 23:10:27,129 - 客户端启动！！！
+2017-10-14 23:32:37,087 - 客户端启动！！！
+2017-10-14 23:34:45,232 - 客户端启动！！！
