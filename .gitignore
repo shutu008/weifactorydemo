@@ -71,3 +71,11 @@ weifactory-browser/.classpath
 weifactory-browser/.factorypath
 weifactory-browser/.project
 weifactory-browser/.springBeans
+
+weifactory-pay/target
+weifactory-pay/.apt_generated
+weifactory-pay/.settings
+weifactory-pay/.classpath
+weifactory-pay/.factorypath
+weifactory-pay/.project
+weifactory-pay/.springBeans
