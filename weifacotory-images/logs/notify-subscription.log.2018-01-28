@@ -1,0 +1,22 @@
+2018-01-28 19:24:57,610 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3f8f9dd6: startup date [Sun Jan 28 19:24:57 CST 2018]; root of context hierarchy
+2018-01-28 19:24:57,687 - Loading XML bean definitions from class path resource [spring-context.xml]
+2018-01-28 19:24:58,973 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-01-28 19:24:59,955 - [id: 0x44adb814] REGISTERED
+2018-01-28 19:24:59,957 - [id: 0x44adb814] BIND: 0.0.0.0/0.0.0.0:8235
+2018-01-28 19:24:59,960 - [id: 0x44adb814, L:/0:0:0:0:0:0:0:0:8235] ACTIVE
+2018-01-28 19:25:28,982 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3f8f9dd6: startup date [Sun Jan 28 19:25:28 CST 2018]; root of context hierarchy
+2018-01-28 19:25:29,060 - Loading XML bean definitions from class path resource [spring-context.xml]
+2018-01-28 19:25:29,522 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2018-01-28 19:25:30,210 - [id: 0xefed3044] REGISTERED
+2018-01-28 19:25:30,212 - [id: 0xefed3044] BIND: 0.0.0.0/0.0.0.0:8235
+2018-01-28 19:25:30,215 - [id: 0xefed3044, L:/0:0:0:0:0:0:0:0:8235] ACTIVE
+2018-01-28 19:26:04,706 - [id: 0xefed3044, L:/0:0:0:0:0:0:0:0:8235] RECEIVED: [id: 0xd297aff2, L:/127.0.0.1:8235 - R:/127.0.0.1:5320]
+2018-01-28 19:26:04,723 - 我是服务器-已有客户端连接上服务器....
+2018-01-28 19:26:04,724 - 获取客户端ip:/127.0.0.1:5320
+2018-01-28 19:26:04,759 - 设备连接上服务器，返回时间戳：1517138764724
+2018-01-28 19:26:04,777 - 数据写入临时文件
+2018-01-28 19:26:04,778 - 图片位还没有数据
+2018-01-28 19:26:04,778 - 临时大数组前37位的数据为：#ZWGC2017100800003#M001#JPG#00007308#
+2018-01-28 19:26:06,754 - 数据写入临时文件
+2018-01-28 19:26:06,755 - sn:ZWGC2017100800003;sensorType:M001;picType:JPG;dataLenStr:00007308
+2018-01-28 19:26:06,784 - 图片写入成功！
