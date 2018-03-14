@@ -1,9 +1,9 @@
 package com.vastsum.entity.pojo;
 
+import java.util.Collection;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-import java.util.Collection;
 
 /**
  * @author ssj
@@ -11,7 +11,8 @@ import java.util.Collection;
  */
 public class MyUserDetails implements UserDetails {
 
-    private String userName;
+	private static final long serialVersionUID = -8952092538547012357L;
+	private String userName;
     private String userPassword;
     private Collection<? extends GrantedAuthority> authorities;
 

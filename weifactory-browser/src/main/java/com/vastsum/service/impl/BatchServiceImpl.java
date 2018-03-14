@@ -57,12 +57,15 @@ public class BatchServiceImpl implements BatchService {
         return new PageInfo<>(batches);
     }
 
+    //根据设备id获取最新的批次信息
     @Override
     public Batch selectLastBatchByDeviceId(Integer deviceId) {
         BatchExample batchExample = new BatchExample();
         batchExample.createCriteria()
                 .andDeviceIdEqualTo(deviceId)
-                .andStatusEqualTo("1");;
+                .andStatusEqualTo("1");
+        //排序，按照时间倒序
+        batchExample.setOrderByClause("gmt_create desc");
         List<Batch> batches = batchMapper.selectByExample(batchExample);
         if (batches!=null && !batches.isEmpty()) {
             return batches.get(0);

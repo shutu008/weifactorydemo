@@ -7,9 +7,7 @@ public class Device {
 
     private String sn;
 
-    private Double longitude;
-
-    private Double latitude;
+    private String deviceType;
 
     private Integer userId;
 
@@ -35,20 +33,12 @@ public class Device {
         this.sn = sn == null ? null : sn.trim();
     }
 
-    public Double getLongitude() {
-        return longitude;
+    public String getDeviceType() {
+        return deviceType;
     }
 
-    public void setLongitude(Double longitude) {
-        this.longitude = longitude;
-    }
-
-    public Double getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(Double latitude) {
-        this.latitude = latitude;
+    public void setDeviceType(String deviceType) {
+        this.deviceType = deviceType == null ? null : deviceType.trim();
     }
 
     public Integer getUserId() {
@@ -91,8 +81,7 @@ public class Device {
         sb.append("Hash = ").append(hashCode());
         sb.append(", deviceId=").append(deviceId);
         sb.append(", sn=").append(sn);
-        sb.append(", longitude=").append(longitude);
-        sb.append(", latitude=").append(latitude);
+        sb.append(", deviceType=").append(deviceType);
         sb.append(", userId=").append(userId);
         sb.append(", note=").append(note);
         sb.append(", gmtCreate=").append(gmtCreate);

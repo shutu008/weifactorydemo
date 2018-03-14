@@ -17,6 +17,7 @@
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
     <result column="enabled" jdbcType="BIT" property="enabled" />
+    <result column="login_status" jdbcType="VARCHAR" property="loginStatus" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -79,7 +80,7 @@
   <sql id="Base_Column_List">
     user_id, user_name, realname, user_password, user_phone, is_bind_phone, user_email, 
     user_weixin_id, user_weixin_nickname, personal_introduction, app_id, app_secret, 
-    gmt_create, gmt_modified, enabled
+    gmt_create, gmt_modified, enabled, login_status
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.UserExample" resultMap="BaseResultMap">
     select
@@ -116,14 +117,14 @@
       user_password, user_phone, is_bind_phone, 
       user_email, user_weixin_id, user_weixin_nickname, 
       personal_introduction, app_id, app_secret, 
-      gmt_create, gmt_modified, enabled
-      )
+      gmt_create, gmt_modified, enabled, 
+      login_status)
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, 
       #{userPassword,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{isBindPhone,jdbcType=BIT}, 
       #{userEmail,jdbcType=VARCHAR}, #{userWeixinId,jdbcType=VARCHAR}, #{userWeixinNickname,jdbcType=VARCHAR}, 
       #{personalIntroduction,jdbcType=VARCHAR}, #{appId,jdbcType=VARCHAR}, #{appSecret,jdbcType=VARCHAR}, 
-      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, #{enabled,jdbcType=BIT}
-      )
+      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, #{enabled,jdbcType=BIT}, 
+      #{loginStatus,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.User">
     insert into user
@@ -173,6 +174,9 @@
       <if test="enabled != null">
         enabled,
       </if>
+      <if test="loginStatus != null">
+        login_status,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="userId != null">
@@ -219,6 +223,9 @@
       </if>
       <if test="enabled != null">
         #{enabled,jdbcType=BIT},
+      </if>
+      <if test="loginStatus != null">
+        #{loginStatus,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -276,6 +283,9 @@
       <if test="record.enabled != null">
         enabled = #{record.enabled,jdbcType=BIT},
       </if>
+      <if test="record.loginStatus != null">
+        login_status = #{record.loginStatus,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -297,7 +307,8 @@
       app_secret = #{record.appSecret,jdbcType=VARCHAR},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
-      enabled = #{record.enabled,jdbcType=BIT}
+      enabled = #{record.enabled,jdbcType=BIT},
+      login_status = #{record.loginStatus,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -347,6 +358,9 @@
       <if test="enabled != null">
         enabled = #{enabled,jdbcType=BIT},
       </if>
+      <if test="loginStatus != null">
+        login_status = #{loginStatus,jdbcType=VARCHAR},
+      </if>
     </set>
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
@@ -365,7 +379,8 @@
       app_secret = #{appSecret,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
-      enabled = #{enabled,jdbcType=BIT}
+      enabled = #{enabled,jdbcType=BIT},
+      login_status = #{loginStatus,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
 </mapper>

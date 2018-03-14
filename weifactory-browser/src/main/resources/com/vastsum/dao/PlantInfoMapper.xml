@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vastsum.dao.PlantInfoMapper">
+  <resultMap id="BaseResultMap" type="com.vastsum.entity.PlantInfo">
+    <id column="plant_info_id" jdbcType="BIGINT" property="plantInfoId" />
+    <result column="batch_id" jdbcType="BIGINT" property="batchId" />
+    <result column="plant_name_1" jdbcType="VARCHAR" property="plantName1" />
+    <result column="plant_date_1" jdbcType="TIMESTAMP" property="plantDate1" />
+    <result column="recovery_date_1" jdbcType="TIMESTAMP" property="recoveryDate1" />
+    <result column="plant_num_1" jdbcType="INTEGER" property="plantNum1" />
+    <result column="plant_leaf_num_1" jdbcType="INTEGER" property="plantLeafNum1" />
+    <result column="control_mod_1" jdbcType="INTEGER" property="controlMod1" />
+    <result column="plant_name_2" jdbcType="VARCHAR" property="plantName2" />
+    <result column="plant_date_2" jdbcType="TIMESTAMP" property="plantDate2" />
+    <result column="recovery_date_2" jdbcType="TIMESTAMP" property="recoveryDate2" />
+    <result column="plant_num_2" jdbcType="INTEGER" property="plantNum2" />
+    <result column="plant_leaf_num_2" jdbcType="INTEGER" property="plantLeafNum2" />
+    <result column="control_mod_2" jdbcType="INTEGER" property="controlMod2" />
+    <result column="plant_name_3" jdbcType="VARCHAR" property="plantName3" />
+    <result column="plant_date_3" jdbcType="TIMESTAMP" property="plantDate3" />
+    <result column="recovery_date_3" jdbcType="TIMESTAMP" property="recoveryDate3" />
+    <result column="plant_num_3" jdbcType="INTEGER" property="plantNum3" />
+    <result column="plant_leaf_num_3" jdbcType="INTEGER" property="plantLeafNum3" />
+    <result column="control_mod_3" jdbcType="INTEGER" property="controlMod3" />
+    <result column="feed_name" jdbcType="VARCHAR" property="feedName" />
+    <result column="feed_date" jdbcType="TIMESTAMP" property="feedDate" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    plant_info_id, batch_id, plant_name_1, plant_date_1, recovery_date_1, plant_num_1, 
+    plant_leaf_num_1, control_mod_1, plant_name_2, plant_date_2, recovery_date_2, plant_num_2, 
+    plant_leaf_num_2, control_mod_2, plant_name_3, plant_date_3, recovery_date_3, plant_num_3, 
+    plant_leaf_num_3, control_mod_3, feed_name, feed_date, gmt_create, gmt_modified
+  </sql>
+  <select id="selectByExample" parameterType="com.vastsum.entity.PlantInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from plant_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from plant_info
+    where plant_info_id = #{plantInfoId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from plant_info
+    where plant_info_id = #{plantInfoId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.vastsum.entity.PlantInfoExample">
+    delete from plant_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.vastsum.entity.PlantInfo">
+    insert into plant_info (plant_info_id, batch_id, plant_name_1, 
+      plant_date_1, recovery_date_1, plant_num_1, 
+      plant_leaf_num_1, control_mod_1, plant_name_2, 
+      plant_date_2, recovery_date_2, plant_num_2, 
+      plant_leaf_num_2, control_mod_2, plant_name_3, 
+      plant_date_3, recovery_date_3, plant_num_3, 
+      plant_leaf_num_3, control_mod_3, feed_name, 
+      feed_date, gmt_create, gmt_modified
+      )
+    values (#{plantInfoId,jdbcType=BIGINT}, #{batchId,jdbcType=BIGINT}, #{plantName1,jdbcType=VARCHAR}, 
+      #{plantDate1,jdbcType=TIMESTAMP}, #{recoveryDate1,jdbcType=TIMESTAMP}, #{plantNum1,jdbcType=INTEGER}, 
+      #{plantLeafNum1,jdbcType=INTEGER}, #{controlMod1,jdbcType=INTEGER}, #{plantName2,jdbcType=VARCHAR}, 
+      #{plantDate2,jdbcType=TIMESTAMP}, #{recoveryDate2,jdbcType=TIMESTAMP}, #{plantNum2,jdbcType=INTEGER}, 
+      #{plantLeafNum2,jdbcType=INTEGER}, #{controlMod2,jdbcType=INTEGER}, #{plantName3,jdbcType=VARCHAR}, 
+      #{plantDate3,jdbcType=TIMESTAMP}, #{recoveryDate3,jdbcType=TIMESTAMP}, #{plantNum3,jdbcType=INTEGER}, 
+      #{plantLeafNum3,jdbcType=INTEGER}, #{controlMod3,jdbcType=INTEGER}, #{feedName,jdbcType=VARCHAR}, 
+      #{feedDate,jdbcType=TIMESTAMP}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.vastsum.entity.PlantInfo">
+    insert into plant_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="plantInfoId != null">
+        plant_info_id,
+      </if>
+      <if test="batchId != null">
+        batch_id,
+      </if>
+      <if test="plantName1 != null">
+        plant_name_1,
+      </if>
+      <if test="plantDate1 != null">
+        plant_date_1,
+      </if>
+      <if test="recoveryDate1 != null">
+        recovery_date_1,
+      </if>
+      <if test="plantNum1 != null">
+        plant_num_1,
+      </if>
+      <if test="plantLeafNum1 != null">
+        plant_leaf_num_1,
+      </if>
+      <if test="controlMod1 != null">
+        control_mod_1,
+      </if>
+      <if test="plantName2 != null">
+        plant_name_2,
+      </if>
+      <if test="plantDate2 != null">
+        plant_date_2,
+      </if>
+      <if test="recoveryDate2 != null">
+        recovery_date_2,
+      </if>
+      <if test="plantNum2 != null">
+        plant_num_2,
+      </if>
+      <if test="plantLeafNum2 != null">
+        plant_leaf_num_2,
+      </if>
+      <if test="controlMod2 != null">
+        control_mod_2,
+      </if>
+      <if test="plantName3 != null">
+        plant_name_3,
+      </if>
+      <if test="plantDate3 != null">
+        plant_date_3,
+      </if>
+      <if test="recoveryDate3 != null">
+        recovery_date_3,
+      </if>
+      <if test="plantNum3 != null">
+        plant_num_3,
+      </if>
+      <if test="plantLeafNum3 != null">
+        plant_leaf_num_3,
+      </if>
+      <if test="controlMod3 != null">
+        control_mod_3,
+      </if>
+      <if test="feedName != null">
+        feed_name,
+      </if>
+      <if test="feedDate != null">
+        feed_date,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="plantInfoId != null">
+        #{plantInfoId,jdbcType=BIGINT},
+      </if>
+      <if test="batchId != null">
+        #{batchId,jdbcType=BIGINT},
+      </if>
+      <if test="plantName1 != null">
+        #{plantName1,jdbcType=VARCHAR},
+      </if>
+      <if test="plantDate1 != null">
+        #{plantDate1,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recoveryDate1 != null">
+        #{recoveryDate1,jdbcType=TIMESTAMP},
+      </if>
+      <if test="plantNum1 != null">
+        #{plantNum1,jdbcType=INTEGER},
+      </if>
+      <if test="plantLeafNum1 != null">
+        #{plantLeafNum1,jdbcType=INTEGER},
+      </if>
+      <if test="controlMod1 != null">
+        #{controlMod1,jdbcType=INTEGER},
+      </if>
+      <if test="plantName2 != null">
+        #{plantName2,jdbcType=VARCHAR},
+      </if>
+      <if test="plantDate2 != null">
+        #{plantDate2,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recoveryDate2 != null">
+        #{recoveryDate2,jdbcType=TIMESTAMP},
+      </if>
+      <if test="plantNum2 != null">
+        #{plantNum2,jdbcType=INTEGER},
+      </if>
+      <if test="plantLeafNum2 != null">
+        #{plantLeafNum2,jdbcType=INTEGER},
+      </if>
+      <if test="controlMod2 != null">
+        #{controlMod2,jdbcType=INTEGER},
+      </if>
+      <if test="plantName3 != null">
+        #{plantName3,jdbcType=VARCHAR},
+      </if>
+      <if test="plantDate3 != null">
+        #{plantDate3,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recoveryDate3 != null">
+        #{recoveryDate3,jdbcType=TIMESTAMP},
+      </if>
+      <if test="plantNum3 != null">
+        #{plantNum3,jdbcType=INTEGER},
+      </if>
+      <if test="plantLeafNum3 != null">
+        #{plantLeafNum3,jdbcType=INTEGER},
+      </if>
+      <if test="controlMod3 != null">
+        #{controlMod3,jdbcType=INTEGER},
+      </if>
+      <if test="feedName != null">
+        #{feedName,jdbcType=VARCHAR},
+      </if>
+      <if test="feedDate != null">
+        #{feedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.vastsum.entity.PlantInfoExample" resultType="java.lang.Long">
+    select count(*) from plant_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update plant_info
+    <set>
+      <if test="record.plantInfoId != null">
+        plant_info_id = #{record.plantInfoId,jdbcType=BIGINT},
+      </if>
+      <if test="record.batchId != null">
+        batch_id = #{record.batchId,jdbcType=BIGINT},
+      </if>
+      <if test="record.plantName1 != null">
+        plant_name_1 = #{record.plantName1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plantDate1 != null">
+        plant_date_1 = #{record.plantDate1,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.recoveryDate1 != null">
+        recovery_date_1 = #{record.recoveryDate1,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.plantNum1 != null">
+        plant_num_1 = #{record.plantNum1,jdbcType=INTEGER},
+      </if>
+      <if test="record.plantLeafNum1 != null">
+        plant_leaf_num_1 = #{record.plantLeafNum1,jdbcType=INTEGER},
+      </if>
+      <if test="record.controlMod1 != null">
+        control_mod_1 = #{record.controlMod1,jdbcType=INTEGER},
+      </if>
+      <if test="record.plantName2 != null">
+        plant_name_2 = #{record.plantName2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plantDate2 != null">
+        plant_date_2 = #{record.plantDate2,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.recoveryDate2 != null">
+        recovery_date_2 = #{record.recoveryDate2,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.plantNum2 != null">
+        plant_num_2 = #{record.plantNum2,jdbcType=INTEGER},
+      </if>
+      <if test="record.plantLeafNum2 != null">
+        plant_leaf_num_2 = #{record.plantLeafNum2,jdbcType=INTEGER},
+      </if>
+      <if test="record.controlMod2 != null">
+        control_mod_2 = #{record.controlMod2,jdbcType=INTEGER},
+      </if>
+      <if test="record.plantName3 != null">
+        plant_name_3 = #{record.plantName3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.plantDate3 != null">
+        plant_date_3 = #{record.plantDate3,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.recoveryDate3 != null">
+        recovery_date_3 = #{record.recoveryDate3,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.plantNum3 != null">
+        plant_num_3 = #{record.plantNum3,jdbcType=INTEGER},
+      </if>
+      <if test="record.plantLeafNum3 != null">
+        plant_leaf_num_3 = #{record.plantLeafNum3,jdbcType=INTEGER},
+      </if>
+      <if test="record.controlMod3 != null">
+        control_mod_3 = #{record.controlMod3,jdbcType=INTEGER},
+      </if>
+      <if test="record.feedName != null">
+        feed_name = #{record.feedName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.feedDate != null">
+        feed_date = #{record.feedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.gmtCreate != null">
+        gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.gmtModified != null">
+        gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update plant_info
+    set plant_info_id = #{record.plantInfoId,jdbcType=BIGINT},
+      batch_id = #{record.batchId,jdbcType=BIGINT},
+      plant_name_1 = #{record.plantName1,jdbcType=VARCHAR},
+      plant_date_1 = #{record.plantDate1,jdbcType=TIMESTAMP},
+      recovery_date_1 = #{record.recoveryDate1,jdbcType=TIMESTAMP},
+      plant_num_1 = #{record.plantNum1,jdbcType=INTEGER},
+      plant_leaf_num_1 = #{record.plantLeafNum1,jdbcType=INTEGER},
+      control_mod_1 = #{record.controlMod1,jdbcType=INTEGER},
+      plant_name_2 = #{record.plantName2,jdbcType=VARCHAR},
+      plant_date_2 = #{record.plantDate2,jdbcType=TIMESTAMP},
+      recovery_date_2 = #{record.recoveryDate2,jdbcType=TIMESTAMP},
+      plant_num_2 = #{record.plantNum2,jdbcType=INTEGER},
+      plant_leaf_num_2 = #{record.plantLeafNum2,jdbcType=INTEGER},
+      control_mod_2 = #{record.controlMod2,jdbcType=INTEGER},
+      plant_name_3 = #{record.plantName3,jdbcType=VARCHAR},
+      plant_date_3 = #{record.plantDate3,jdbcType=TIMESTAMP},
+      recovery_date_3 = #{record.recoveryDate3,jdbcType=TIMESTAMP},
+      plant_num_3 = #{record.plantNum3,jdbcType=INTEGER},
+      plant_leaf_num_3 = #{record.plantLeafNum3,jdbcType=INTEGER},
+      control_mod_3 = #{record.controlMod3,jdbcType=INTEGER},
+      feed_name = #{record.feedName,jdbcType=VARCHAR},
+      feed_date = #{record.feedDate,jdbcType=TIMESTAMP},
+      gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.vastsum.entity.PlantInfo">
+    update plant_info
+    <set>
+      <if test="batchId != null">
+        batch_id = #{batchId,jdbcType=BIGINT},
+      </if>
+      <if test="plantName1 != null">
+        plant_name_1 = #{plantName1,jdbcType=VARCHAR},
+      </if>
+      <if test="plantDate1 != null">
+        plant_date_1 = #{plantDate1,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recoveryDate1 != null">
+        recovery_date_1 = #{recoveryDate1,jdbcType=TIMESTAMP},
+      </if>
+      <if test="plantNum1 != null">
+        plant_num_1 = #{plantNum1,jdbcType=INTEGER},
+      </if>
+      <if test="plantLeafNum1 != null">
+        plant_leaf_num_1 = #{plantLeafNum1,jdbcType=INTEGER},
+      </if>
+      <if test="controlMod1 != null">
+        control_mod_1 = #{controlMod1,jdbcType=INTEGER},
+      </if>
+      <if test="plantName2 != null">
+        plant_name_2 = #{plantName2,jdbcType=VARCHAR},
+      </if>
+      <if test="plantDate2 != null">
+        plant_date_2 = #{plantDate2,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recoveryDate2 != null">
+        recovery_date_2 = #{recoveryDate2,jdbcType=TIMESTAMP},
+      </if>
+      <if test="plantNum2 != null">
+        plant_num_2 = #{plantNum2,jdbcType=INTEGER},
+      </if>
+      <if test="plantLeafNum2 != null">
+        plant_leaf_num_2 = #{plantLeafNum2,jdbcType=INTEGER},
+      </if>
+      <if test="controlMod2 != null">
+        control_mod_2 = #{controlMod2,jdbcType=INTEGER},
+      </if>
+      <if test="plantName3 != null">
+        plant_name_3 = #{plantName3,jdbcType=VARCHAR},
+      </if>
+      <if test="plantDate3 != null">
+        plant_date_3 = #{plantDate3,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recoveryDate3 != null">
+        recovery_date_3 = #{recoveryDate3,jdbcType=TIMESTAMP},
+      </if>
+      <if test="plantNum3 != null">
+        plant_num_3 = #{plantNum3,jdbcType=INTEGER},
+      </if>
+      <if test="plantLeafNum3 != null">
+        plant_leaf_num_3 = #{plantLeafNum3,jdbcType=INTEGER},
+      </if>
+      <if test="controlMod3 != null">
+        control_mod_3 = #{controlMod3,jdbcType=INTEGER},
+      </if>
+      <if test="feedName != null">
+        feed_name = #{feedName,jdbcType=VARCHAR},
+      </if>
+      <if test="feedDate != null">
+        feed_date = #{feedDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where plant_info_id = #{plantInfoId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.PlantInfo">
+    update plant_info
+    set batch_id = #{batchId,jdbcType=BIGINT},
+      plant_name_1 = #{plantName1,jdbcType=VARCHAR},
+      plant_date_1 = #{plantDate1,jdbcType=TIMESTAMP},
+      recovery_date_1 = #{recoveryDate1,jdbcType=TIMESTAMP},
+      plant_num_1 = #{plantNum1,jdbcType=INTEGER},
+      plant_leaf_num_1 = #{plantLeafNum1,jdbcType=INTEGER},
+      control_mod_1 = #{controlMod1,jdbcType=INTEGER},
+      plant_name_2 = #{plantName2,jdbcType=VARCHAR},
+      plant_date_2 = #{plantDate2,jdbcType=TIMESTAMP},
+      recovery_date_2 = #{recoveryDate2,jdbcType=TIMESTAMP},
+      plant_num_2 = #{plantNum2,jdbcType=INTEGER},
+      plant_leaf_num_2 = #{plantLeafNum2,jdbcType=INTEGER},
+      control_mod_2 = #{controlMod2,jdbcType=INTEGER},
+      plant_name_3 = #{plantName3,jdbcType=VARCHAR},
+      plant_date_3 = #{plantDate3,jdbcType=TIMESTAMP},
+      recovery_date_3 = #{recoveryDate3,jdbcType=TIMESTAMP},
+      plant_num_3 = #{plantNum3,jdbcType=INTEGER},
+      plant_leaf_num_3 = #{plantLeafNum3,jdbcType=INTEGER},
+      control_mod_3 = #{controlMod3,jdbcType=INTEGER},
+      feed_name = #{feedName,jdbcType=VARCHAR},
+      feed_date = #{feedDate,jdbcType=TIMESTAMP},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+    where plant_info_id = #{plantInfoId,jdbcType=BIGINT}
+  </update>
+</mapper>

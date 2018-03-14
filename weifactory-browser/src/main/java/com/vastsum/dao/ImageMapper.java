@@ -1,10 +1,9 @@
 package com.vastsum.dao;
 
-import com.vastsum.entity.ImageExample;
 import com.vastsum.entity.Image;
-import org.apache.ibatis.annotations.Param;
-
+import com.vastsum.entity.ImageExample;
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface ImageMapper {
     long countByExample(ImageExample example);

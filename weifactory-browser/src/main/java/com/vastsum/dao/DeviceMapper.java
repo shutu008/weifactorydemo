@@ -2,12 +2,9 @@ package com.vastsum.dao;
 
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceExample;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
-@Repository
 public interface DeviceMapper {
     long countByExample(DeviceExample example);
 

@@ -235,6 +235,66 @@ public class ImageExample {
             return (Criteria) this;
         }
 
+        public Criteria andBatchIdIsNull() {
+            addCriterion("batch_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdIsNotNull() {
+            addCriterion("batch_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdEqualTo(Long value) {
+            addCriterion("batch_id =", value, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdNotEqualTo(Long value) {
+            addCriterion("batch_id <>", value, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdGreaterThan(Long value) {
+            addCriterion("batch_id >", value, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("batch_id >=", value, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdLessThan(Long value) {
+            addCriterion("batch_id <", value, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdLessThanOrEqualTo(Long value) {
+            addCriterion("batch_id <=", value, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdIn(List<Long> values) {
+            addCriterion("batch_id in", values, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdNotIn(List<Long> values) {
+            addCriterion("batch_id not in", values, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdBetween(Long value1, Long value2) {
+            addCriterion("batch_id between", value1, value2, "batchId");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchIdNotBetween(Long value1, Long value2) {
+            addCriterion("batch_id not between", value1, value2, "batchId");
+            return (Criteria) this;
+        }
+
         public Criteria andSensorMarkIsNull() {
             addCriterion("sensor_mark is null");
             return (Criteria) this;
@@ -305,73 +365,213 @@ public class ImageExample {
             return (Criteria) this;
         }
 
-        public Criteria andPathIsNull() {
-            addCriterion("path is null");
+        public Criteria andOnePicNameIsNull() {
+            addCriterion("one_pic_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andPathIsNotNull() {
-            addCriterion("path is not null");
+        public Criteria andOnePicNameIsNotNull() {
+            addCriterion("one_pic_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andPathEqualTo(String value) {
-            addCriterion("path =", value, "path");
+        public Criteria andOnePicNameEqualTo(String value) {
+            addCriterion("one_pic_name =", value, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathNotEqualTo(String value) {
-            addCriterion("path <>", value, "path");
+        public Criteria andOnePicNameNotEqualTo(String value) {
+            addCriterion("one_pic_name <>", value, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathGreaterThan(String value) {
-            addCriterion("path >", value, "path");
+        public Criteria andOnePicNameGreaterThan(String value) {
+            addCriterion("one_pic_name >", value, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathGreaterThanOrEqualTo(String value) {
-            addCriterion("path >=", value, "path");
+        public Criteria andOnePicNameGreaterThanOrEqualTo(String value) {
+            addCriterion("one_pic_name >=", value, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathLessThan(String value) {
-            addCriterion("path <", value, "path");
+        public Criteria andOnePicNameLessThan(String value) {
+            addCriterion("one_pic_name <", value, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathLessThanOrEqualTo(String value) {
-            addCriterion("path <=", value, "path");
+        public Criteria andOnePicNameLessThanOrEqualTo(String value) {
+            addCriterion("one_pic_name <=", value, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathLike(String value) {
-            addCriterion("path like", value, "path");
+        public Criteria andOnePicNameLike(String value) {
+            addCriterion("one_pic_name like", value, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathNotLike(String value) {
-            addCriterion("path not like", value, "path");
+        public Criteria andOnePicNameNotLike(String value) {
+            addCriterion("one_pic_name not like", value, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathIn(List<String> values) {
-            addCriterion("path in", values, "path");
+        public Criteria andOnePicNameIn(List<String> values) {
+            addCriterion("one_pic_name in", values, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathNotIn(List<String> values) {
-            addCriterion("path not in", values, "path");
+        public Criteria andOnePicNameNotIn(List<String> values) {
+            addCriterion("one_pic_name not in", values, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathBetween(String value1, String value2) {
-            addCriterion("path between", value1, value2, "path");
+        public Criteria andOnePicNameBetween(String value1, String value2) {
+            addCriterion("one_pic_name between", value1, value2, "onePicName");
             return (Criteria) this;
         }
 
-        public Criteria andPathNotBetween(String value1, String value2) {
-            addCriterion("path not between", value1, value2, "path");
+        public Criteria andOnePicNameNotBetween(String value1, String value2) {
+            addCriterion("one_pic_name not between", value1, value2, "onePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameIsNull() {
+            addCriterion("two_pic_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameIsNotNull() {
+            addCriterion("two_pic_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameEqualTo(String value) {
+            addCriterion("two_pic_name =", value, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameNotEqualTo(String value) {
+            addCriterion("two_pic_name <>", value, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameGreaterThan(String value) {
+            addCriterion("two_pic_name >", value, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameGreaterThanOrEqualTo(String value) {
+            addCriterion("two_pic_name >=", value, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameLessThan(String value) {
+            addCriterion("two_pic_name <", value, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameLessThanOrEqualTo(String value) {
+            addCriterion("two_pic_name <=", value, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameLike(String value) {
+            addCriterion("two_pic_name like", value, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameNotLike(String value) {
+            addCriterion("two_pic_name not like", value, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameIn(List<String> values) {
+            addCriterion("two_pic_name in", values, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameNotIn(List<String> values) {
+            addCriterion("two_pic_name not in", values, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameBetween(String value1, String value2) {
+            addCriterion("two_pic_name between", value1, value2, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andTwoPicNameNotBetween(String value1, String value2) {
+            addCriterion("two_pic_name not between", value1, value2, "twoPicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameIsNull() {
+            addCriterion("three_pic_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameIsNotNull() {
+            addCriterion("three_pic_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameEqualTo(String value) {
+            addCriterion("three_pic_name =", value, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameNotEqualTo(String value) {
+            addCriterion("three_pic_name <>", value, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameGreaterThan(String value) {
+            addCriterion("three_pic_name >", value, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameGreaterThanOrEqualTo(String value) {
+            addCriterion("three_pic_name >=", value, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameLessThan(String value) {
+            addCriterion("three_pic_name <", value, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameLessThanOrEqualTo(String value) {
+            addCriterion("three_pic_name <=", value, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameLike(String value) {
+            addCriterion("three_pic_name like", value, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameNotLike(String value) {
+            addCriterion("three_pic_name not like", value, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameIn(List<String> values) {
+            addCriterion("three_pic_name in", values, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameNotIn(List<String> values) {
+            addCriterion("three_pic_name not in", values, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameBetween(String value1, String value2) {
+            addCriterion("three_pic_name between", value1, value2, "threePicName");
+            return (Criteria) this;
+        }
+
+        public Criteria andThreePicNameNotBetween(String value1, String value2) {
+            addCriterion("three_pic_name not between", value1, value2, "threePicName");
             return (Criteria) this;
         }
 

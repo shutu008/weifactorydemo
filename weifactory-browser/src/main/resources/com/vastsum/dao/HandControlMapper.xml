@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vastsum.dao.HandControlMapper">
+  <resultMap id="BaseResultMap" type="com.vastsum.entity.HandControl">
+    <id column="hand_control_id" jdbcType="BIGINT" property="handControlId" />
+    <result column="head_control_mod" jdbcType="VARCHAR" property="headControlMod" />
+    <result column="sky" jdbcType="VARCHAR" property="sky" />
+    <result column="yy" jdbcType="VARCHAR" property="yy" />
+    <result column="wind" jdbcType="VARCHAR" property="wind" />
+    <result column="ys" jdbcType="VARCHAR" property="ys" />
+    <result column="pl" jdbcType="VARCHAR" property="pl" />
+    <result column="grow_inner_1" jdbcType="VARCHAR" property="growInner1" />
+    <result column="grow_middle_1" jdbcType="VARCHAR" property="growMiddle1" />
+    <result column="grow_out_1" jdbcType="VARCHAR" property="growOut1" />
+    <result column="grow_inner_2" jdbcType="VARCHAR" property="growInner2" />
+    <result column="grow_middle_2" jdbcType="VARCHAR" property="growMiddle2" />
+    <result column="grow_out_2" jdbcType="VARCHAR" property="growOut2" />
+    <result column="grow_inner_3" jdbcType="VARCHAR" property="growInner3" />
+    <result column="grow_middle_3" jdbcType="VARCHAR" property="growMiddle3" />
+    <result column="grow_out_3" jdbcType="VARCHAR" property="growOut3" />
+    <result column="add_1" jdbcType="VARCHAR" property="add1" />
+    <result column="add_2" jdbcType="VARCHAR" property="add2" />
+    <result column="add_3" jdbcType="VARCHAR" property="add3" />
+    <result column="inlet_1" jdbcType="VARCHAR" property="inlet1" />
+    <result column="inlet_2" jdbcType="VARCHAR" property="inlet2" />
+    <result column="inlet_3" jdbcType="VARCHAR" property="inlet3" />
+    <result column="out_1" jdbcType="VARCHAR" property="out1" />
+    <result column="out_2" jdbcType="VARCHAR" property="out2" />
+    <result column="out_3" jdbcType="VARCHAR" property="out3" />
+    <result column="feed_led" jdbcType="VARCHAR" property="feedLed" />
+    <result column="feed_pl" jdbcType="VARCHAR" property="feedPl" />
+    <result column="sb" jdbcType="VARCHAR" property="sb" />
+    <result column="fs_1" jdbcType="VARCHAR" property="fs1" />
+    <result column="fs_2" jdbcType="VARCHAR" property="fs2" />
+    <result column="fs_3" jdbcType="VARCHAR" property="fs3" />
+    <result column="bs" jdbcType="VARCHAR" property="bs" />
+    <result column="ps" jdbcType="VARCHAR" property="ps" />
+    <result column="batch_id" jdbcType="INTEGER" property="batchId" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    hand_control_id, head_control_mod, sky, yy, wind, ys, pl, grow_inner_1, grow_middle_1, 
+    grow_out_1, grow_inner_2, grow_middle_2, grow_out_2, grow_inner_3, grow_middle_3, 
+    grow_out_3, add_1, add_2, add_3, inlet_1, inlet_2, inlet_3, out_1, out_2, out_3, 
+    feed_led, feed_pl, sb, fs_1, fs_2, fs_3, bs, ps, batch_id, status, gmt_create, gmt_modified
+  </sql>
+  <select id="selectByExample" parameterType="com.vastsum.entity.HandControlExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from hand_control
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from hand_control
+    where hand_control_id = #{handControlId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from hand_control
+    where hand_control_id = #{handControlId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.vastsum.entity.HandControlExample">
+    delete from hand_control
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.vastsum.entity.HandControl">
+    insert into hand_control (hand_control_id, head_control_mod, sky, 
+      yy, wind, ys, pl, 
+      grow_inner_1, grow_middle_1, grow_out_1, 
+      grow_inner_2, grow_middle_2, grow_out_2, 
+      grow_inner_3, grow_middle_3, grow_out_3, 
+      add_1, add_2, add_3, inlet_1, 
+      inlet_2, inlet_3, out_1, 
+      out_2, out_3, feed_led, 
+      feed_pl, sb, fs_1, fs_2, 
+      fs_3, bs, ps, batch_id, 
+      status, gmt_create, gmt_modified
+      )
+    values (#{handControlId,jdbcType=BIGINT}, #{headControlMod,jdbcType=VARCHAR}, #{sky,jdbcType=VARCHAR}, 
+      #{yy,jdbcType=VARCHAR}, #{wind,jdbcType=VARCHAR}, #{ys,jdbcType=VARCHAR}, #{pl,jdbcType=VARCHAR}, 
+      #{growInner1,jdbcType=VARCHAR}, #{growMiddle1,jdbcType=VARCHAR}, #{growOut1,jdbcType=VARCHAR}, 
+      #{growInner2,jdbcType=VARCHAR}, #{growMiddle2,jdbcType=VARCHAR}, #{growOut2,jdbcType=VARCHAR}, 
+      #{growInner3,jdbcType=VARCHAR}, #{growMiddle3,jdbcType=VARCHAR}, #{growOut3,jdbcType=VARCHAR}, 
+      #{add1,jdbcType=VARCHAR}, #{add2,jdbcType=VARCHAR}, #{add3,jdbcType=VARCHAR}, #{inlet1,jdbcType=VARCHAR}, 
+      #{inlet2,jdbcType=VARCHAR}, #{inlet3,jdbcType=VARCHAR}, #{out1,jdbcType=VARCHAR}, 
+      #{out2,jdbcType=VARCHAR}, #{out3,jdbcType=VARCHAR}, #{feedLed,jdbcType=VARCHAR}, 
+      #{feedPl,jdbcType=VARCHAR}, #{sb,jdbcType=VARCHAR}, #{fs1,jdbcType=VARCHAR}, #{fs2,jdbcType=VARCHAR}, 
+      #{fs3,jdbcType=VARCHAR}, #{bs,jdbcType=VARCHAR}, #{ps,jdbcType=VARCHAR}, #{batchId,jdbcType=INTEGER}, 
+      #{status,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.vastsum.entity.HandControl">
+    insert into hand_control
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="handControlId != null">
+        hand_control_id,
+      </if>
+      <if test="headControlMod != null">
+        head_control_mod,
+      </if>
+      <if test="sky != null">
+        sky,
+      </if>
+      <if test="yy != null">
+        yy,
+      </if>
+      <if test="wind != null">
+        wind,
+      </if>
+      <if test="ys != null">
+        ys,
+      </if>
+      <if test="pl != null">
+        pl,
+      </if>
+      <if test="growInner1 != null">
+        grow_inner_1,
+      </if>
+      <if test="growMiddle1 != null">
+        grow_middle_1,
+      </if>
+      <if test="growOut1 != null">
+        grow_out_1,
+      </if>
+      <if test="growInner2 != null">
+        grow_inner_2,
+      </if>
+      <if test="growMiddle2 != null">
+        grow_middle_2,
+      </if>
+      <if test="growOut2 != null">
+        grow_out_2,
+      </if>
+      <if test="growInner3 != null">
+        grow_inner_3,
+      </if>
+      <if test="growMiddle3 != null">
+        grow_middle_3,
+      </if>
+      <if test="growOut3 != null">
+        grow_out_3,
+      </if>
+      <if test="add1 != null">
+        add_1,
+      </if>
+      <if test="add2 != null">
+        add_2,
+      </if>
+      <if test="add3 != null">
+        add_3,
+      </if>
+      <if test="inlet1 != null">
+        inlet_1,
+      </if>
+      <if test="inlet2 != null">
+        inlet_2,
+      </if>
+      <if test="inlet3 != null">
+        inlet_3,
+      </if>
+      <if test="out1 != null">
+        out_1,
+      </if>
+      <if test="out2 != null">
+        out_2,
+      </if>
+      <if test="out3 != null">
+        out_3,
+      </if>
+      <if test="feedLed != null">
+        feed_led,
+      </if>
+      <if test="feedPl != null">
+        feed_pl,
+      </if>
+      <if test="sb != null">
+        sb,
+      </if>
+      <if test="fs1 != null">
+        fs_1,
+      </if>
+      <if test="fs2 != null">
+        fs_2,
+      </if>
+      <if test="fs3 != null">
+        fs_3,
+      </if>
+      <if test="bs != null">
+        bs,
+      </if>
+      <if test="ps != null">
+        ps,
+      </if>
+      <if test="batchId != null">
+        batch_id,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="handControlId != null">
+        #{handControlId,jdbcType=BIGINT},
+      </if>
+      <if test="headControlMod != null">
+        #{headControlMod,jdbcType=VARCHAR},
+      </if>
+      <if test="sky != null">
+        #{sky,jdbcType=VARCHAR},
+      </if>
+      <if test="yy != null">
+        #{yy,jdbcType=VARCHAR},
+      </if>
+      <if test="wind != null">
+        #{wind,jdbcType=VARCHAR},
+      </if>
+      <if test="ys != null">
+        #{ys,jdbcType=VARCHAR},
+      </if>
+      <if test="pl != null">
+        #{pl,jdbcType=VARCHAR},
+      </if>
+      <if test="growInner1 != null">
+        #{growInner1,jdbcType=VARCHAR},
+      </if>
+      <if test="growMiddle1 != null">
+        #{growMiddle1,jdbcType=VARCHAR},
+      </if>
+      <if test="growOut1 != null">
+        #{growOut1,jdbcType=VARCHAR},
+      </if>
+      <if test="growInner2 != null">
+        #{growInner2,jdbcType=VARCHAR},
+      </if>
+      <if test="growMiddle2 != null">
+        #{growMiddle2,jdbcType=VARCHAR},
+      </if>
+      <if test="growOut2 != null">
+        #{growOut2,jdbcType=VARCHAR},
+      </if>
+      <if test="growInner3 != null">
+        #{growInner3,jdbcType=VARCHAR},
+      </if>
+      <if test="growMiddle3 != null">
+        #{growMiddle3,jdbcType=VARCHAR},
+      </if>
+      <if test="growOut3 != null">
+        #{growOut3,jdbcType=VARCHAR},
+      </if>
+      <if test="add1 != null">
+        #{add1,jdbcType=VARCHAR},
+      </if>
+      <if test="add2 != null">
+        #{add2,jdbcType=VARCHAR},
+      </if>
+      <if test="add3 != null">
+        #{add3,jdbcType=VARCHAR},
+      </if>
+      <if test="inlet1 != null">
+        #{inlet1,jdbcType=VARCHAR},
+      </if>
+      <if test="inlet2 != null">
+        #{inlet2,jdbcType=VARCHAR},
+      </if>
+      <if test="inlet3 != null">
+        #{inlet3,jdbcType=VARCHAR},
+      </if>
+      <if test="out1 != null">
+        #{out1,jdbcType=VARCHAR},
+      </if>
+      <if test="out2 != null">
+        #{out2,jdbcType=VARCHAR},
+      </if>
+      <if test="out3 != null">
+        #{out3,jdbcType=VARCHAR},
+      </if>
+      <if test="feedLed != null">
+        #{feedLed,jdbcType=VARCHAR},
+      </if>
+      <if test="feedPl != null">
+        #{feedPl,jdbcType=VARCHAR},
+      </if>
+      <if test="sb != null">
+        #{sb,jdbcType=VARCHAR},
+      </if>
+      <if test="fs1 != null">
+        #{fs1,jdbcType=VARCHAR},
+      </if>
+      <if test="fs2 != null">
+        #{fs2,jdbcType=VARCHAR},
+      </if>
+      <if test="fs3 != null">
+        #{fs3,jdbcType=VARCHAR},
+      </if>
+      <if test="bs != null">
+        #{bs,jdbcType=VARCHAR},
+      </if>
+      <if test="ps != null">
+        #{ps,jdbcType=VARCHAR},
+      </if>
+      <if test="batchId != null">
+        #{batchId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.vastsum.entity.HandControlExample" resultType="java.lang.Long">
+    select count(*) from hand_control
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update hand_control
+    <set>
+      <if test="record.handControlId != null">
+        hand_control_id = #{record.handControlId,jdbcType=BIGINT},
+      </if>
+      <if test="record.headControlMod != null">
+        head_control_mod = #{record.headControlMod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sky != null">
+        sky = #{record.sky,jdbcType=VARCHAR},
+      </if>
+      <if test="record.yy != null">
+        yy = #{record.yy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.wind != null">
+        wind = #{record.wind,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ys != null">
+        ys = #{record.ys,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pl != null">
+        pl = #{record.pl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growInner1 != null">
+        grow_inner_1 = #{record.growInner1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growMiddle1 != null">
+        grow_middle_1 = #{record.growMiddle1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growOut1 != null">
+        grow_out_1 = #{record.growOut1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growInner2 != null">
+        grow_inner_2 = #{record.growInner2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growMiddle2 != null">
+        grow_middle_2 = #{record.growMiddle2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growOut2 != null">
+        grow_out_2 = #{record.growOut2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growInner3 != null">
+        grow_inner_3 = #{record.growInner3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growMiddle3 != null">
+        grow_middle_3 = #{record.growMiddle3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.growOut3 != null">
+        grow_out_3 = #{record.growOut3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.add1 != null">
+        add_1 = #{record.add1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.add2 != null">
+        add_2 = #{record.add2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.add3 != null">
+        add_3 = #{record.add3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inlet1 != null">
+        inlet_1 = #{record.inlet1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inlet2 != null">
+        inlet_2 = #{record.inlet2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.inlet3 != null">
+        inlet_3 = #{record.inlet3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.out1 != null">
+        out_1 = #{record.out1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.out2 != null">
+        out_2 = #{record.out2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.out3 != null">
+        out_3 = #{record.out3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.feedLed != null">
+        feed_led = #{record.feedLed,jdbcType=VARCHAR},
+      </if>
+      <if test="record.feedPl != null">
+        feed_pl = #{record.feedPl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sb != null">
+        sb = #{record.sb,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fs1 != null">
+        fs_1 = #{record.fs1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fs2 != null">
+        fs_2 = #{record.fs2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fs3 != null">
+        fs_3 = #{record.fs3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.bs != null">
+        bs = #{record.bs,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ps != null">
+        ps = #{record.ps,jdbcType=VARCHAR},
+      </if>
+      <if test="record.batchId != null">
+        batch_id = #{record.batchId,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gmtCreate != null">
+        gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.gmtModified != null">
+        gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update hand_control
+    set hand_control_id = #{record.handControlId,jdbcType=BIGINT},
+      head_control_mod = #{record.headControlMod,jdbcType=VARCHAR},
+      sky = #{record.sky,jdbcType=VARCHAR},
+      yy = #{record.yy,jdbcType=VARCHAR},
+      wind = #{record.wind,jdbcType=VARCHAR},
+      ys = #{record.ys,jdbcType=VARCHAR},
+      pl = #{record.pl,jdbcType=VARCHAR},
+      grow_inner_1 = #{record.growInner1,jdbcType=VARCHAR},
+      grow_middle_1 = #{record.growMiddle1,jdbcType=VARCHAR},
+      grow_out_1 = #{record.growOut1,jdbcType=VARCHAR},
+      grow_inner_2 = #{record.growInner2,jdbcType=VARCHAR},
+      grow_middle_2 = #{record.growMiddle2,jdbcType=VARCHAR},
+      grow_out_2 = #{record.growOut2,jdbcType=VARCHAR},
+      grow_inner_3 = #{record.growInner3,jdbcType=VARCHAR},
+      grow_middle_3 = #{record.growMiddle3,jdbcType=VARCHAR},
+      grow_out_3 = #{record.growOut3,jdbcType=VARCHAR},
+      add_1 = #{record.add1,jdbcType=VARCHAR},
+      add_2 = #{record.add2,jdbcType=VARCHAR},
+      add_3 = #{record.add3,jdbcType=VARCHAR},
+      inlet_1 = #{record.inlet1,jdbcType=VARCHAR},
+      inlet_2 = #{record.inlet2,jdbcType=VARCHAR},
+      inlet_3 = #{record.inlet3,jdbcType=VARCHAR},
+      out_1 = #{record.out1,jdbcType=VARCHAR},
+      out_2 = #{record.out2,jdbcType=VARCHAR},
+      out_3 = #{record.out3,jdbcType=VARCHAR},
+      feed_led = #{record.feedLed,jdbcType=VARCHAR},
+      feed_pl = #{record.feedPl,jdbcType=VARCHAR},
+      sb = #{record.sb,jdbcType=VARCHAR},
+      fs_1 = #{record.fs1,jdbcType=VARCHAR},
+      fs_2 = #{record.fs2,jdbcType=VARCHAR},
+      fs_3 = #{record.fs3,jdbcType=VARCHAR},
+      bs = #{record.bs,jdbcType=VARCHAR},
+      ps = #{record.ps,jdbcType=VARCHAR},
+      batch_id = #{record.batchId,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=VARCHAR},
+      gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.vastsum.entity.HandControl">
+    update hand_control
+    <set>
+      <if test="headControlMod != null">
+        head_control_mod = #{headControlMod,jdbcType=VARCHAR},
+      </if>
+      <if test="sky != null">
+        sky = #{sky,jdbcType=VARCHAR},
+      </if>
+      <if test="yy != null">
+        yy = #{yy,jdbcType=VARCHAR},
+      </if>
+      <if test="wind != null">
+        wind = #{wind,jdbcType=VARCHAR},
+      </if>
+      <if test="ys != null">
+        ys = #{ys,jdbcType=VARCHAR},
+      </if>
+      <if test="pl != null">
+        pl = #{pl,jdbcType=VARCHAR},
+      </if>
+      <if test="growInner1 != null">
+        grow_inner_1 = #{growInner1,jdbcType=VARCHAR},
+      </if>
+      <if test="growMiddle1 != null">
+        grow_middle_1 = #{growMiddle1,jdbcType=VARCHAR},
+      </if>
+      <if test="growOut1 != null">
+        grow_out_1 = #{growOut1,jdbcType=VARCHAR},
+      </if>
+      <if test="growInner2 != null">
+        grow_inner_2 = #{growInner2,jdbcType=VARCHAR},
+      </if>
+      <if test="growMiddle2 != null">
+        grow_middle_2 = #{growMiddle2,jdbcType=VARCHAR},
+      </if>
+      <if test="growOut2 != null">
+        grow_out_2 = #{growOut2,jdbcType=VARCHAR},
+      </if>
+      <if test="growInner3 != null">
+        grow_inner_3 = #{growInner3,jdbcType=VARCHAR},
+      </if>
+      <if test="growMiddle3 != null">
+        grow_middle_3 = #{growMiddle3,jdbcType=VARCHAR},
+      </if>
+      <if test="growOut3 != null">
+        grow_out_3 = #{growOut3,jdbcType=VARCHAR},
+      </if>
+      <if test="add1 != null">
+        add_1 = #{add1,jdbcType=VARCHAR},
+      </if>
+      <if test="add2 != null">
+        add_2 = #{add2,jdbcType=VARCHAR},
+      </if>
+      <if test="add3 != null">
+        add_3 = #{add3,jdbcType=VARCHAR},
+      </if>
+      <if test="inlet1 != null">
+        inlet_1 = #{inlet1,jdbcType=VARCHAR},
+      </if>
+      <if test="inlet2 != null">
+        inlet_2 = #{inlet2,jdbcType=VARCHAR},
+      </if>
+      <if test="inlet3 != null">
+        inlet_3 = #{inlet3,jdbcType=VARCHAR},
+      </if>
+      <if test="out1 != null">
+        out_1 = #{out1,jdbcType=VARCHAR},
+      </if>
+      <if test="out2 != null">
+        out_2 = #{out2,jdbcType=VARCHAR},
+      </if>
+      <if test="out3 != null">
+        out_3 = #{out3,jdbcType=VARCHAR},
+      </if>
+      <if test="feedLed != null">
+        feed_led = #{feedLed,jdbcType=VARCHAR},
+      </if>
+      <if test="feedPl != null">
+        feed_pl = #{feedPl,jdbcType=VARCHAR},
+      </if>
+      <if test="sb != null">
+        sb = #{sb,jdbcType=VARCHAR},
+      </if>
+      <if test="fs1 != null">
+        fs_1 = #{fs1,jdbcType=VARCHAR},
+      </if>
+      <if test="fs2 != null">
+        fs_2 = #{fs2,jdbcType=VARCHAR},
+      </if>
+      <if test="fs3 != null">
+        fs_3 = #{fs3,jdbcType=VARCHAR},
+      </if>
+      <if test="bs != null">
+        bs = #{bs,jdbcType=VARCHAR},
+      </if>
+      <if test="ps != null">
+        ps = #{ps,jdbcType=VARCHAR},
+      </if>
+      <if test="batchId != null">
+        batch_id = #{batchId,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where hand_control_id = #{handControlId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.HandControl">
+    update hand_control
+    set head_control_mod = #{headControlMod,jdbcType=VARCHAR},
+      sky = #{sky,jdbcType=VARCHAR},
+      yy = #{yy,jdbcType=VARCHAR},
+      wind = #{wind,jdbcType=VARCHAR},
+      ys = #{ys,jdbcType=VARCHAR},
+      pl = #{pl,jdbcType=VARCHAR},
+      grow_inner_1 = #{growInner1,jdbcType=VARCHAR},
+      grow_middle_1 = #{growMiddle1,jdbcType=VARCHAR},
+      grow_out_1 = #{growOut1,jdbcType=VARCHAR},
+      grow_inner_2 = #{growInner2,jdbcType=VARCHAR},
+      grow_middle_2 = #{growMiddle2,jdbcType=VARCHAR},
+      grow_out_2 = #{growOut2,jdbcType=VARCHAR},
+      grow_inner_3 = #{growInner3,jdbcType=VARCHAR},
+      grow_middle_3 = #{growMiddle3,jdbcType=VARCHAR},
+      grow_out_3 = #{growOut3,jdbcType=VARCHAR},
+      add_1 = #{add1,jdbcType=VARCHAR},
+      add_2 = #{add2,jdbcType=VARCHAR},
+      add_3 = #{add3,jdbcType=VARCHAR},
+      inlet_1 = #{inlet1,jdbcType=VARCHAR},
+      inlet_2 = #{inlet2,jdbcType=VARCHAR},
+      inlet_3 = #{inlet3,jdbcType=VARCHAR},
+      out_1 = #{out1,jdbcType=VARCHAR},
+      out_2 = #{out2,jdbcType=VARCHAR},
+      out_3 = #{out3,jdbcType=VARCHAR},
+      feed_led = #{feedLed,jdbcType=VARCHAR},
+      feed_pl = #{feedPl,jdbcType=VARCHAR},
+      sb = #{sb,jdbcType=VARCHAR},
+      fs_1 = #{fs1,jdbcType=VARCHAR},
+      fs_2 = #{fs2,jdbcType=VARCHAR},
+      fs_3 = #{fs3,jdbcType=VARCHAR},
+      bs = #{bs,jdbcType=VARCHAR},
+      ps = #{ps,jdbcType=VARCHAR},
+      batch_id = #{batchId,jdbcType=INTEGER},
+      status = #{status,jdbcType=VARCHAR},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+    where hand_control_id = #{handControlId,jdbcType=BIGINT}
+  </update>
+</mapper>

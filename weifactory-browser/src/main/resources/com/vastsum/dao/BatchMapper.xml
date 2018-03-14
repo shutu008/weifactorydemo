@@ -4,39 +4,54 @@
   <resultMap id="BaseResultMap" type="com.vastsum.entity.Batch">
     <id column="batch_id" jdbcType="INTEGER" property="batchId" />
     <result column="device_id" jdbcType="INTEGER" property="deviceId" />
+    <result column="plant_one_type" jdbcType="VARCHAR" property="plantOneType" />
     <result column="plant_one" jdbcType="VARCHAR" property="plantOne" />
     <result column="cult_model_one" jdbcType="VARCHAR" property="cultModelOne" />
     <result column="temperature_one" jdbcType="DOUBLE" property="temperatureOne" />
     <result column="humidity_one" jdbcType="DOUBLE" property="humidityOne" />
-    <result column="ec_one" jdbcType="DOUBLE" property="ecOne" />
-    <result column="ph_one" jdbcType="DOUBLE" property="phOne" />
     <result column="led_one_left" jdbcType="VARCHAR" property="ledOneLeft" />
     <result column="led_one_middle" jdbcType="VARCHAR" property="ledOneMiddle" />
     <result column="led_one_right" jdbcType="VARCHAR" property="ledOneRight" />
     <result column="video_one" jdbcType="VARCHAR" property="videoOne" />
+    <result column="light_one" jdbcType="DOUBLE" property="lightOne" />
+    <result column="plant_two_type" jdbcType="VARCHAR" property="plantTwoType" />
     <result column="plant_two" jdbcType="VARCHAR" property="plantTwo" />
     <result column="cult_model_two" jdbcType="VARCHAR" property="cultModelTwo" />
     <result column="temperature_two" jdbcType="DOUBLE" property="temperatureTwo" />
     <result column="humidity_two" jdbcType="DOUBLE" property="humidityTwo" />
-    <result column="ec_two" jdbcType="DOUBLE" property="ecTwo" />
-    <result column="ph_two" jdbcType="DOUBLE" property="phTwo" />
     <result column="led_two_left" jdbcType="VARCHAR" property="ledTwoLeft" />
     <result column="led_two_middle" jdbcType="VARCHAR" property="ledTwoMiddle" />
     <result column="led_two_right" jdbcType="VARCHAR" property="ledTwoRight" />
     <result column="video_two" jdbcType="VARCHAR" property="videoTwo" />
+    <result column="light_two" jdbcType="DOUBLE" property="lightTwo" />
+    <result column="plant_three_type" jdbcType="VARCHAR" property="plantThreeType" />
     <result column="plant_three" jdbcType="VARCHAR" property="plantThree" />
     <result column="cult_model_three" jdbcType="VARCHAR" property="cultModelThree" />
     <result column="temperature_three" jdbcType="DOUBLE" property="temperatureThree" />
     <result column="humidity_three" jdbcType="DOUBLE" property="humidityThree" />
-    <result column="ec_three" jdbcType="DOUBLE" property="ecThree" />
-    <result column="ph_three" jdbcType="DOUBLE" property="phThree" />
     <result column="led_three_left" jdbcType="VARCHAR" property="ledThreeLeft" />
     <result column="led_three_middle" jdbcType="VARCHAR" property="ledThreeMiddle" />
     <result column="led_three_right" jdbcType="VARCHAR" property="ledThreeRight" />
     <result column="video_three" jdbcType="VARCHAR" property="videoThree" />
+    <result column="light_three" jdbcType="DOUBLE" property="lightThree" />
+    <result column="co2" jdbcType="DOUBLE" property="co2" />
+    <result column="ph" jdbcType="DOUBLE" property="ph" />
+    <result column="ec" jdbcType="DOUBLE" property="ec" />
+    <result column="ox" jdbcType="DOUBLE" property="ox" />
+    <result column="solution_temperature" jdbcType="DOUBLE" property="solutionTemperature" />
+    <result column="outdoor_temperature" jdbcType="DOUBLE" property="outdoorTemperature" />
+    <result column="level_up" jdbcType="DOUBLE" property="levelUp" />
+    <result column="level_down" jdbcType="DOUBLE" property="levelDown" />
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="model_id" jdbcType="INTEGER" property="modelId" />
     <result column="order_status" jdbcType="VARCHAR" property="orderStatus" />
+    <result column="trust_status" jdbcType="VARCHAR" property="trustStatus" />
+    <result column="one_planting_time" jdbcType="TIMESTAMP" property="onePlantingTime" />
+    <result column="one_recovery_time" jdbcType="TIMESTAMP" property="oneRecoveryTime" />
+    <result column="two_planting_time" jdbcType="TIMESTAMP" property="twoPlantingTime" />
+    <result column="two_recovery_time" jdbcType="TIMESTAMP" property="twoRecoveryTime" />
+    <result column="three_planting_time" jdbcType="TIMESTAMP" property="threePlantingTime" />
+    <result column="three_recovery_time" jdbcType="TIMESTAMP" property="threeRecoveryTime" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
   </resultMap>
@@ -99,12 +114,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    batch_id, device_id, plant_one, cult_model_one, temperature_one, humidity_one, ec_one, 
-    ph_one, led_one_left, led_one_middle, led_one_right, video_one, plant_two, cult_model_two, 
-    temperature_two, humidity_two, ec_two, ph_two, led_two_left, led_two_middle, led_two_right, 
-    video_two, plant_three, cult_model_three, temperature_three, humidity_three, ec_three, 
-    ph_three, led_three_left, led_three_middle, led_three_right, video_three, status, 
-    model_id, order_status, gmt_create, gmt_modified
+    batch_id, device_id, plant_one_type, plant_one, cult_model_one, temperature_one, 
+    humidity_one, led_one_left, led_one_middle, led_one_right, video_one, light_one, 
+    plant_two_type, plant_two, cult_model_two, temperature_two, humidity_two, led_two_left, 
+    led_two_middle, led_two_right, video_two, light_two, plant_three_type, plant_three, 
+    cult_model_three, temperature_three, humidity_three, led_three_left, led_three_middle, 
+    led_three_right, video_three, light_three, co2, ph, ec, ox, solution_temperature, 
+    outdoor_temperature, level_up, level_down, status, model_id, order_status, trust_status, 
+    one_planting_time, one_recovery_time, two_planting_time, two_recovery_time, three_planting_time, 
+    three_recovery_time, gmt_create, gmt_modified
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.BatchExample" resultMap="BaseResultMap">
     select
@@ -137,32 +155,42 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.vastsum.entity.Batch">
-    insert into batch (batch_id, device_id, plant_one, 
-      cult_model_one, temperature_one, humidity_one, 
-      ec_one, ph_one, led_one_left, 
-      led_one_middle, led_one_right, video_one, 
-      plant_two, cult_model_two, temperature_two, 
-      humidity_two, ec_two, ph_two, 
-      led_two_left, led_two_middle, led_two_right, 
-      video_two, plant_three, cult_model_three, 
-      temperature_three, humidity_three, ec_three, 
-      ph_three, led_three_left, led_three_middle, 
-      led_three_right, video_three, status, 
-      model_id, order_status, gmt_create, 
-      gmt_modified)
-    values (#{batchId,jdbcType=INTEGER}, #{deviceId,jdbcType=INTEGER}, #{plantOne,jdbcType=VARCHAR}, 
-      #{cultModelOne,jdbcType=VARCHAR}, #{temperatureOne,jdbcType=DOUBLE}, #{humidityOne,jdbcType=DOUBLE}, 
-      #{ecOne,jdbcType=DOUBLE}, #{phOne,jdbcType=DOUBLE}, #{ledOneLeft,jdbcType=VARCHAR}, 
-      #{ledOneMiddle,jdbcType=VARCHAR}, #{ledOneRight,jdbcType=VARCHAR}, #{videoOne,jdbcType=VARCHAR}, 
-      #{plantTwo,jdbcType=VARCHAR}, #{cultModelTwo,jdbcType=VARCHAR}, #{temperatureTwo,jdbcType=DOUBLE}, 
-      #{humidityTwo,jdbcType=DOUBLE}, #{ecTwo,jdbcType=DOUBLE}, #{phTwo,jdbcType=DOUBLE}, 
-      #{ledTwoLeft,jdbcType=VARCHAR}, #{ledTwoMiddle,jdbcType=VARCHAR}, #{ledTwoRight,jdbcType=VARCHAR}, 
-      #{videoTwo,jdbcType=VARCHAR}, #{plantThree,jdbcType=VARCHAR}, #{cultModelThree,jdbcType=VARCHAR}, 
-      #{temperatureThree,jdbcType=DOUBLE}, #{humidityThree,jdbcType=DOUBLE}, #{ecThree,jdbcType=DOUBLE}, 
-      #{phThree,jdbcType=DOUBLE}, #{ledThreeLeft,jdbcType=VARCHAR}, #{ledThreeMiddle,jdbcType=VARCHAR}, 
-      #{ledThreeRight,jdbcType=VARCHAR}, #{videoThree,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
-      #{modelId,jdbcType=INTEGER}, #{orderStatus,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, 
-      #{gmtModified,jdbcType=TIMESTAMP})
+    insert into batch (batch_id, device_id, plant_one_type, 
+      plant_one, cult_model_one, temperature_one, 
+      humidity_one, led_one_left, led_one_middle, 
+      led_one_right, video_one, light_one, 
+      plant_two_type, plant_two, cult_model_two, 
+      temperature_two, humidity_two, led_two_left, 
+      led_two_middle, led_two_right, video_two, 
+      light_two, plant_three_type, plant_three, 
+      cult_model_three, temperature_three, humidity_three, 
+      led_three_left, led_three_middle, led_three_right, 
+      video_three, light_three, co2, 
+      ph, ec, ox, solution_temperature, 
+      outdoor_temperature, level_up, level_down, 
+      status, model_id, order_status, 
+      trust_status, one_planting_time, one_recovery_time, 
+      two_planting_time, two_recovery_time, three_planting_time, 
+      three_recovery_time, gmt_create, gmt_modified
+      )
+    values (#{batchId,jdbcType=INTEGER}, #{deviceId,jdbcType=INTEGER}, #{plantOneType,jdbcType=VARCHAR}, 
+      #{plantOne,jdbcType=VARCHAR}, #{cultModelOne,jdbcType=VARCHAR}, #{temperatureOne,jdbcType=DOUBLE}, 
+      #{humidityOne,jdbcType=DOUBLE}, #{ledOneLeft,jdbcType=VARCHAR}, #{ledOneMiddle,jdbcType=VARCHAR}, 
+      #{ledOneRight,jdbcType=VARCHAR}, #{videoOne,jdbcType=VARCHAR}, #{lightOne,jdbcType=DOUBLE}, 
+      #{plantTwoType,jdbcType=VARCHAR}, #{plantTwo,jdbcType=VARCHAR}, #{cultModelTwo,jdbcType=VARCHAR}, 
+      #{temperatureTwo,jdbcType=DOUBLE}, #{humidityTwo,jdbcType=DOUBLE}, #{ledTwoLeft,jdbcType=VARCHAR}, 
+      #{ledTwoMiddle,jdbcType=VARCHAR}, #{ledTwoRight,jdbcType=VARCHAR}, #{videoTwo,jdbcType=VARCHAR}, 
+      #{lightTwo,jdbcType=DOUBLE}, #{plantThreeType,jdbcType=VARCHAR}, #{plantThree,jdbcType=VARCHAR}, 
+      #{cultModelThree,jdbcType=VARCHAR}, #{temperatureThree,jdbcType=DOUBLE}, #{humidityThree,jdbcType=DOUBLE}, 
+      #{ledThreeLeft,jdbcType=VARCHAR}, #{ledThreeMiddle,jdbcType=VARCHAR}, #{ledThreeRight,jdbcType=VARCHAR}, 
+      #{videoThree,jdbcType=VARCHAR}, #{lightThree,jdbcType=DOUBLE}, #{co2,jdbcType=DOUBLE}, 
+      #{ph,jdbcType=DOUBLE}, #{ec,jdbcType=DOUBLE}, #{ox,jdbcType=DOUBLE}, #{solutionTemperature,jdbcType=DOUBLE}, 
+      #{outdoorTemperature,jdbcType=DOUBLE}, #{levelUp,jdbcType=DOUBLE}, #{levelDown,jdbcType=DOUBLE}, 
+      #{status,jdbcType=VARCHAR}, #{modelId,jdbcType=INTEGER}, #{orderStatus,jdbcType=VARCHAR}, 
+      #{trustStatus,jdbcType=VARCHAR}, #{onePlantingTime,jdbcType=TIMESTAMP}, #{oneRecoveryTime,jdbcType=TIMESTAMP}, 
+      #{twoPlantingTime,jdbcType=TIMESTAMP}, #{twoRecoveryTime,jdbcType=TIMESTAMP}, #{threePlantingTime,jdbcType=TIMESTAMP}, 
+      #{threeRecoveryTime,jdbcType=TIMESTAMP}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.Batch">
     insert into batch
@@ -172,6 +200,9 @@
       </if>
       <if test="deviceId != null">
         device_id,
+      </if>
+      <if test="plantOneType != null">
+        plant_one_type,
       </if>
       <if test="plantOne != null">
         plant_one,
@@ -185,12 +216,6 @@
       <if test="humidityOne != null">
         humidity_one,
       </if>
-      <if test="ecOne != null">
-        ec_one,
-      </if>
-      <if test="phOne != null">
-        ph_one,
-      </if>
       <if test="ledOneLeft != null">
         led_one_left,
       </if>
@@ -202,6 +227,12 @@
       </if>
       <if test="videoOne != null">
         video_one,
+      </if>
+      <if test="lightOne != null">
+        light_one,
+      </if>
+      <if test="plantTwoType != null">
+        plant_two_type,
       </if>
       <if test="plantTwo != null">
         plant_two,
@@ -215,12 +246,6 @@
       <if test="humidityTwo != null">
         humidity_two,
       </if>
-      <if test="ecTwo != null">
-        ec_two,
-      </if>
-      <if test="phTwo != null">
-        ph_two,
-      </if>
       <if test="ledTwoLeft != null">
         led_two_left,
       </if>
@@ -232,6 +257,12 @@
       </if>
       <if test="videoTwo != null">
         video_two,
+      </if>
+      <if test="lightTwo != null">
+        light_two,
+      </if>
+      <if test="plantThreeType != null">
+        plant_three_type,
       </if>
       <if test="plantThree != null">
         plant_three,
@@ -245,12 +276,6 @@
       <if test="humidityThree != null">
         humidity_three,
       </if>
-      <if test="ecThree != null">
-        ec_three,
-      </if>
-      <if test="phThree != null">
-        ph_three,
-      </if>
       <if test="ledThreeLeft != null">
         led_three_left,
       </if>
@@ -263,6 +288,33 @@
       <if test="videoThree != null">
         video_three,
       </if>
+      <if test="lightThree != null">
+        light_three,
+      </if>
+      <if test="co2 != null">
+        co2,
+      </if>
+      <if test="ph != null">
+        ph,
+      </if>
+      <if test="ec != null">
+        ec,
+      </if>
+      <if test="ox != null">
+        ox,
+      </if>
+      <if test="solutionTemperature != null">
+        solution_temperature,
+      </if>
+      <if test="outdoorTemperature != null">
+        outdoor_temperature,
+      </if>
+      <if test="levelUp != null">
+        level_up,
+      </if>
+      <if test="levelDown != null">
+        level_down,
+      </if>
       <if test="status != null">
         status,
       </if>
@@ -271,6 +323,27 @@
       </if>
       <if test="orderStatus != null">
         order_status,
+      </if>
+      <if test="trustStatus != null">
+        trust_status,
+      </if>
+      <if test="onePlantingTime != null">
+        one_planting_time,
+      </if>
+      <if test="oneRecoveryTime != null">
+        one_recovery_time,
+      </if>
+      <if test="twoPlantingTime != null">
+        two_planting_time,
+      </if>
+      <if test="twoRecoveryTime != null">
+        two_recovery_time,
+      </if>
+      <if test="threePlantingTime != null">
+        three_planting_time,
+      </if>
+      <if test="threeRecoveryTime != null">
+        three_recovery_time,
       </if>
       <if test="gmtCreate != null">
         gmt_create,
@@ -286,6 +359,9 @@
       <if test="deviceId != null">
         #{deviceId,jdbcType=INTEGER},
       </if>
+      <if test="plantOneType != null">
+        #{plantOneType,jdbcType=VARCHAR},
+      </if>
       <if test="plantOne != null">
         #{plantOne,jdbcType=VARCHAR},
       </if>
@@ -297,12 +373,6 @@
       </if>
       <if test="humidityOne != null">
         #{humidityOne,jdbcType=DOUBLE},
-      </if>
-      <if test="ecOne != null">
-        #{ecOne,jdbcType=DOUBLE},
-      </if>
-      <if test="phOne != null">
-        #{phOne,jdbcType=DOUBLE},
       </if>
       <if test="ledOneLeft != null">
         #{ledOneLeft,jdbcType=VARCHAR},
@@ -316,6 +386,12 @@
       <if test="videoOne != null">
         #{videoOne,jdbcType=VARCHAR},
       </if>
+      <if test="lightOne != null">
+        #{lightOne,jdbcType=DOUBLE},
+      </if>
+      <if test="plantTwoType != null">
+        #{plantTwoType,jdbcType=VARCHAR},
+      </if>
       <if test="plantTwo != null">
         #{plantTwo,jdbcType=VARCHAR},
       </if>
@@ -327,12 +403,6 @@
       </if>
       <if test="humidityTwo != null">
         #{humidityTwo,jdbcType=DOUBLE},
-      </if>
-      <if test="ecTwo != null">
-        #{ecTwo,jdbcType=DOUBLE},
-      </if>
-      <if test="phTwo != null">
-        #{phTwo,jdbcType=DOUBLE},
       </if>
       <if test="ledTwoLeft != null">
         #{ledTwoLeft,jdbcType=VARCHAR},
@@ -346,6 +416,12 @@
       <if test="videoTwo != null">
         #{videoTwo,jdbcType=VARCHAR},
       </if>
+      <if test="lightTwo != null">
+        #{lightTwo,jdbcType=DOUBLE},
+      </if>
+      <if test="plantThreeType != null">
+        #{plantThreeType,jdbcType=VARCHAR},
+      </if>
       <if test="plantThree != null">
         #{plantThree,jdbcType=VARCHAR},
       </if>
@@ -357,12 +433,6 @@
       </if>
       <if test="humidityThree != null">
         #{humidityThree,jdbcType=DOUBLE},
-      </if>
-      <if test="ecThree != null">
-        #{ecThree,jdbcType=DOUBLE},
-      </if>
-      <if test="phThree != null">
-        #{phThree,jdbcType=DOUBLE},
       </if>
       <if test="ledThreeLeft != null">
         #{ledThreeLeft,jdbcType=VARCHAR},
@@ -376,6 +446,33 @@
       <if test="videoThree != null">
         #{videoThree,jdbcType=VARCHAR},
       </if>
+      <if test="lightThree != null">
+        #{lightThree,jdbcType=DOUBLE},
+      </if>
+      <if test="co2 != null">
+        #{co2,jdbcType=DOUBLE},
+      </if>
+      <if test="ph != null">
+        #{ph,jdbcType=DOUBLE},
+      </if>
+      <if test="ec != null">
+        #{ec,jdbcType=DOUBLE},
+      </if>
+      <if test="ox != null">
+        #{ox,jdbcType=DOUBLE},
+      </if>
+      <if test="solutionTemperature != null">
+        #{solutionTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="outdoorTemperature != null">
+        #{outdoorTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="levelUp != null">
+        #{levelUp,jdbcType=DOUBLE},
+      </if>
+      <if test="levelDown != null">
+        #{levelDown,jdbcType=DOUBLE},
+      </if>
       <if test="status != null">
         #{status,jdbcType=VARCHAR},
       </if>
@@ -384,6 +481,27 @@
       </if>
       <if test="orderStatus != null">
         #{orderStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="trustStatus != null">
+        #{trustStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="onePlantingTime != null">
+        #{onePlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="oneRecoveryTime != null">
+        #{oneRecoveryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="twoPlantingTime != null">
+        #{twoPlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="twoRecoveryTime != null">
+        #{twoRecoveryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="threePlantingTime != null">
+        #{threePlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="threeRecoveryTime != null">
+        #{threeRecoveryTime,jdbcType=TIMESTAMP},
       </if>
       <if test="gmtCreate != null">
         #{gmtCreate,jdbcType=TIMESTAMP},
@@ -408,6 +526,9 @@
       <if test="record.deviceId != null">
         device_id = #{record.deviceId,jdbcType=INTEGER},
       </if>
+      <if test="record.plantOneType != null">
+        plant_one_type = #{record.plantOneType,jdbcType=VARCHAR},
+      </if>
       <if test="record.plantOne != null">
         plant_one = #{record.plantOne,jdbcType=VARCHAR},
       </if>
@@ -419,12 +540,6 @@
       </if>
       <if test="record.humidityOne != null">
         humidity_one = #{record.humidityOne,jdbcType=DOUBLE},
-      </if>
-      <if test="record.ecOne != null">
-        ec_one = #{record.ecOne,jdbcType=DOUBLE},
-      </if>
-      <if test="record.phOne != null">
-        ph_one = #{record.phOne,jdbcType=DOUBLE},
       </if>
       <if test="record.ledOneLeft != null">
         led_one_left = #{record.ledOneLeft,jdbcType=VARCHAR},
@@ -438,6 +553,12 @@
       <if test="record.videoOne != null">
         video_one = #{record.videoOne,jdbcType=VARCHAR},
       </if>
+      <if test="record.lightOne != null">
+        light_one = #{record.lightOne,jdbcType=DOUBLE},
+      </if>
+      <if test="record.plantTwoType != null">
+        plant_two_type = #{record.plantTwoType,jdbcType=VARCHAR},
+      </if>
       <if test="record.plantTwo != null">
         plant_two = #{record.plantTwo,jdbcType=VARCHAR},
       </if>
@@ -449,12 +570,6 @@
       </if>
       <if test="record.humidityTwo != null">
         humidity_two = #{record.humidityTwo,jdbcType=DOUBLE},
-      </if>
-      <if test="record.ecTwo != null">
-        ec_two = #{record.ecTwo,jdbcType=DOUBLE},
-      </if>
-      <if test="record.phTwo != null">
-        ph_two = #{record.phTwo,jdbcType=DOUBLE},
       </if>
       <if test="record.ledTwoLeft != null">
         led_two_left = #{record.ledTwoLeft,jdbcType=VARCHAR},
@@ -468,6 +583,12 @@
       <if test="record.videoTwo != null">
         video_two = #{record.videoTwo,jdbcType=VARCHAR},
       </if>
+      <if test="record.lightTwo != null">
+        light_two = #{record.lightTwo,jdbcType=DOUBLE},
+      </if>
+      <if test="record.plantThreeType != null">
+        plant_three_type = #{record.plantThreeType,jdbcType=VARCHAR},
+      </if>
       <if test="record.plantThree != null">
         plant_three = #{record.plantThree,jdbcType=VARCHAR},
       </if>
@@ -479,12 +600,6 @@
       </if>
       <if test="record.humidityThree != null">
         humidity_three = #{record.humidityThree,jdbcType=DOUBLE},
-      </if>
-      <if test="record.ecThree != null">
-        ec_three = #{record.ecThree,jdbcType=DOUBLE},
-      </if>
-      <if test="record.phThree != null">
-        ph_three = #{record.phThree,jdbcType=DOUBLE},
       </if>
       <if test="record.ledThreeLeft != null">
         led_three_left = #{record.ledThreeLeft,jdbcType=VARCHAR},
@@ -498,6 +613,33 @@
       <if test="record.videoThree != null">
         video_three = #{record.videoThree,jdbcType=VARCHAR},
       </if>
+      <if test="record.lightThree != null">
+        light_three = #{record.lightThree,jdbcType=DOUBLE},
+      </if>
+      <if test="record.co2 != null">
+        co2 = #{record.co2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ph != null">
+        ph = #{record.ph,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ec != null">
+        ec = #{record.ec,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ox != null">
+        ox = #{record.ox,jdbcType=DOUBLE},
+      </if>
+      <if test="record.solutionTemperature != null">
+        solution_temperature = #{record.solutionTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="record.outdoorTemperature != null">
+        outdoor_temperature = #{record.outdoorTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="record.levelUp != null">
+        level_up = #{record.levelUp,jdbcType=DOUBLE},
+      </if>
+      <if test="record.levelDown != null">
+        level_down = #{record.levelDown,jdbcType=DOUBLE},
+      </if>
       <if test="record.status != null">
         status = #{record.status,jdbcType=VARCHAR},
       </if>
@@ -506,6 +648,27 @@
       </if>
       <if test="record.orderStatus != null">
         order_status = #{record.orderStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.trustStatus != null">
+        trust_status = #{record.trustStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.onePlantingTime != null">
+        one_planting_time = #{record.onePlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.oneRecoveryTime != null">
+        one_recovery_time = #{record.oneRecoveryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.twoPlantingTime != null">
+        two_planting_time = #{record.twoPlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.twoRecoveryTime != null">
+        two_recovery_time = #{record.twoRecoveryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.threePlantingTime != null">
+        three_planting_time = #{record.threePlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.threeRecoveryTime != null">
+        three_recovery_time = #{record.threeRecoveryTime,jdbcType=TIMESTAMP},
       </if>
       <if test="record.gmtCreate != null">
         gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
@@ -522,39 +685,54 @@
     update batch
     set batch_id = #{record.batchId,jdbcType=INTEGER},
       device_id = #{record.deviceId,jdbcType=INTEGER},
+      plant_one_type = #{record.plantOneType,jdbcType=VARCHAR},
       plant_one = #{record.plantOne,jdbcType=VARCHAR},
       cult_model_one = #{record.cultModelOne,jdbcType=VARCHAR},
       temperature_one = #{record.temperatureOne,jdbcType=DOUBLE},
       humidity_one = #{record.humidityOne,jdbcType=DOUBLE},
-      ec_one = #{record.ecOne,jdbcType=DOUBLE},
-      ph_one = #{record.phOne,jdbcType=DOUBLE},
       led_one_left = #{record.ledOneLeft,jdbcType=VARCHAR},
       led_one_middle = #{record.ledOneMiddle,jdbcType=VARCHAR},
       led_one_right = #{record.ledOneRight,jdbcType=VARCHAR},
       video_one = #{record.videoOne,jdbcType=VARCHAR},
+      light_one = #{record.lightOne,jdbcType=DOUBLE},
+      plant_two_type = #{record.plantTwoType,jdbcType=VARCHAR},
       plant_two = #{record.plantTwo,jdbcType=VARCHAR},
       cult_model_two = #{record.cultModelTwo,jdbcType=VARCHAR},
       temperature_two = #{record.temperatureTwo,jdbcType=DOUBLE},
       humidity_two = #{record.humidityTwo,jdbcType=DOUBLE},
-      ec_two = #{record.ecTwo,jdbcType=DOUBLE},
-      ph_two = #{record.phTwo,jdbcType=DOUBLE},
       led_two_left = #{record.ledTwoLeft,jdbcType=VARCHAR},
       led_two_middle = #{record.ledTwoMiddle,jdbcType=VARCHAR},
       led_two_right = #{record.ledTwoRight,jdbcType=VARCHAR},
       video_two = #{record.videoTwo,jdbcType=VARCHAR},
+      light_two = #{record.lightTwo,jdbcType=DOUBLE},
+      plant_three_type = #{record.plantThreeType,jdbcType=VARCHAR},
       plant_three = #{record.plantThree,jdbcType=VARCHAR},
       cult_model_three = #{record.cultModelThree,jdbcType=VARCHAR},
       temperature_three = #{record.temperatureThree,jdbcType=DOUBLE},
       humidity_three = #{record.humidityThree,jdbcType=DOUBLE},
-      ec_three = #{record.ecThree,jdbcType=DOUBLE},
-      ph_three = #{record.phThree,jdbcType=DOUBLE},
       led_three_left = #{record.ledThreeLeft,jdbcType=VARCHAR},
       led_three_middle = #{record.ledThreeMiddle,jdbcType=VARCHAR},
       led_three_right = #{record.ledThreeRight,jdbcType=VARCHAR},
       video_three = #{record.videoThree,jdbcType=VARCHAR},
+      light_three = #{record.lightThree,jdbcType=DOUBLE},
+      co2 = #{record.co2,jdbcType=DOUBLE},
+      ph = #{record.ph,jdbcType=DOUBLE},
+      ec = #{record.ec,jdbcType=DOUBLE},
+      ox = #{record.ox,jdbcType=DOUBLE},
+      solution_temperature = #{record.solutionTemperature,jdbcType=DOUBLE},
+      outdoor_temperature = #{record.outdoorTemperature,jdbcType=DOUBLE},
+      level_up = #{record.levelUp,jdbcType=DOUBLE},
+      level_down = #{record.levelDown,jdbcType=DOUBLE},
       status = #{record.status,jdbcType=VARCHAR},
       model_id = #{record.modelId,jdbcType=INTEGER},
       order_status = #{record.orderStatus,jdbcType=VARCHAR},
+      trust_status = #{record.trustStatus,jdbcType=VARCHAR},
+      one_planting_time = #{record.onePlantingTime,jdbcType=TIMESTAMP},
+      one_recovery_time = #{record.oneRecoveryTime,jdbcType=TIMESTAMP},
+      two_planting_time = #{record.twoPlantingTime,jdbcType=TIMESTAMP},
+      two_recovery_time = #{record.twoRecoveryTime,jdbcType=TIMESTAMP},
+      three_planting_time = #{record.threePlantingTime,jdbcType=TIMESTAMP},
+      three_recovery_time = #{record.threeRecoveryTime,jdbcType=TIMESTAMP},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
@@ -566,6 +744,9 @@
     <set>
       <if test="deviceId != null">
         device_id = #{deviceId,jdbcType=INTEGER},
+      </if>
+      <if test="plantOneType != null">
+        plant_one_type = #{plantOneType,jdbcType=VARCHAR},
       </if>
       <if test="plantOne != null">
         plant_one = #{plantOne,jdbcType=VARCHAR},
@@ -579,12 +760,6 @@
       <if test="humidityOne != null">
         humidity_one = #{humidityOne,jdbcType=DOUBLE},
       </if>
-      <if test="ecOne != null">
-        ec_one = #{ecOne,jdbcType=DOUBLE},
-      </if>
-      <if test="phOne != null">
-        ph_one = #{phOne,jdbcType=DOUBLE},
-      </if>
       <if test="ledOneLeft != null">
         led_one_left = #{ledOneLeft,jdbcType=VARCHAR},
       </if>
@@ -596,6 +771,12 @@
       </if>
       <if test="videoOne != null">
         video_one = #{videoOne,jdbcType=VARCHAR},
+      </if>
+      <if test="lightOne != null">
+        light_one = #{lightOne,jdbcType=DOUBLE},
+      </if>
+      <if test="plantTwoType != null">
+        plant_two_type = #{plantTwoType,jdbcType=VARCHAR},
       </if>
       <if test="plantTwo != null">
         plant_two = #{plantTwo,jdbcType=VARCHAR},
@@ -609,12 +790,6 @@
       <if test="humidityTwo != null">
         humidity_two = #{humidityTwo,jdbcType=DOUBLE},
       </if>
-      <if test="ecTwo != null">
-        ec_two = #{ecTwo,jdbcType=DOUBLE},
-      </if>
-      <if test="phTwo != null">
-        ph_two = #{phTwo,jdbcType=DOUBLE},
-      </if>
       <if test="ledTwoLeft != null">
         led_two_left = #{ledTwoLeft,jdbcType=VARCHAR},
       </if>
@@ -626,6 +801,12 @@
       </if>
       <if test="videoTwo != null">
         video_two = #{videoTwo,jdbcType=VARCHAR},
+      </if>
+      <if test="lightTwo != null">
+        light_two = #{lightTwo,jdbcType=DOUBLE},
+      </if>
+      <if test="plantThreeType != null">
+        plant_three_type = #{plantThreeType,jdbcType=VARCHAR},
       </if>
       <if test="plantThree != null">
         plant_three = #{plantThree,jdbcType=VARCHAR},
@@ -639,12 +820,6 @@
       <if test="humidityThree != null">
         humidity_three = #{humidityThree,jdbcType=DOUBLE},
       </if>
-      <if test="ecThree != null">
-        ec_three = #{ecThree,jdbcType=DOUBLE},
-      </if>
-      <if test="phThree != null">
-        ph_three = #{phThree,jdbcType=DOUBLE},
-      </if>
       <if test="ledThreeLeft != null">
         led_three_left = #{ledThreeLeft,jdbcType=VARCHAR},
       </if>
@@ -657,6 +832,33 @@
       <if test="videoThree != null">
         video_three = #{videoThree,jdbcType=VARCHAR},
       </if>
+      <if test="lightThree != null">
+        light_three = #{lightThree,jdbcType=DOUBLE},
+      </if>
+      <if test="co2 != null">
+        co2 = #{co2,jdbcType=DOUBLE},
+      </if>
+      <if test="ph != null">
+        ph = #{ph,jdbcType=DOUBLE},
+      </if>
+      <if test="ec != null">
+        ec = #{ec,jdbcType=DOUBLE},
+      </if>
+      <if test="ox != null">
+        ox = #{ox,jdbcType=DOUBLE},
+      </if>
+      <if test="solutionTemperature != null">
+        solution_temperature = #{solutionTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="outdoorTemperature != null">
+        outdoor_temperature = #{outdoorTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="levelUp != null">
+        level_up = #{levelUp,jdbcType=DOUBLE},
+      </if>
+      <if test="levelDown != null">
+        level_down = #{levelDown,jdbcType=DOUBLE},
+      </if>
       <if test="status != null">
         status = #{status,jdbcType=VARCHAR},
       </if>
@@ -665,6 +867,27 @@
       </if>
       <if test="orderStatus != null">
         order_status = #{orderStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="trustStatus != null">
+        trust_status = #{trustStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="onePlantingTime != null">
+        one_planting_time = #{onePlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="oneRecoveryTime != null">
+        one_recovery_time = #{oneRecoveryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="twoPlantingTime != null">
+        two_planting_time = #{twoPlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="twoRecoveryTime != null">
+        two_recovery_time = #{twoRecoveryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="threePlantingTime != null">
+        three_planting_time = #{threePlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="threeRecoveryTime != null">
+        three_recovery_time = #{threeRecoveryTime,jdbcType=TIMESTAMP},
       </if>
       <if test="gmtCreate != null">
         gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
@@ -678,39 +901,54 @@
   <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.Batch">
     update batch
     set device_id = #{deviceId,jdbcType=INTEGER},
+      plant_one_type = #{plantOneType,jdbcType=VARCHAR},
       plant_one = #{plantOne,jdbcType=VARCHAR},
       cult_model_one = #{cultModelOne,jdbcType=VARCHAR},
       temperature_one = #{temperatureOne,jdbcType=DOUBLE},
       humidity_one = #{humidityOne,jdbcType=DOUBLE},
-      ec_one = #{ecOne,jdbcType=DOUBLE},
-      ph_one = #{phOne,jdbcType=DOUBLE},
       led_one_left = #{ledOneLeft,jdbcType=VARCHAR},
       led_one_middle = #{ledOneMiddle,jdbcType=VARCHAR},
       led_one_right = #{ledOneRight,jdbcType=VARCHAR},
       video_one = #{videoOne,jdbcType=VARCHAR},
+      light_one = #{lightOne,jdbcType=DOUBLE},
+      plant_two_type = #{plantTwoType,jdbcType=VARCHAR},
       plant_two = #{plantTwo,jdbcType=VARCHAR},
       cult_model_two = #{cultModelTwo,jdbcType=VARCHAR},
       temperature_two = #{temperatureTwo,jdbcType=DOUBLE},
       humidity_two = #{humidityTwo,jdbcType=DOUBLE},
-      ec_two = #{ecTwo,jdbcType=DOUBLE},
-      ph_two = #{phTwo,jdbcType=DOUBLE},
       led_two_left = #{ledTwoLeft,jdbcType=VARCHAR},
       led_two_middle = #{ledTwoMiddle,jdbcType=VARCHAR},
       led_two_right = #{ledTwoRight,jdbcType=VARCHAR},
       video_two = #{videoTwo,jdbcType=VARCHAR},
+      light_two = #{lightTwo,jdbcType=DOUBLE},
+      plant_three_type = #{plantThreeType,jdbcType=VARCHAR},
       plant_three = #{plantThree,jdbcType=VARCHAR},
       cult_model_three = #{cultModelThree,jdbcType=VARCHAR},
       temperature_three = #{temperatureThree,jdbcType=DOUBLE},
       humidity_three = #{humidityThree,jdbcType=DOUBLE},
-      ec_three = #{ecThree,jdbcType=DOUBLE},
-      ph_three = #{phThree,jdbcType=DOUBLE},
       led_three_left = #{ledThreeLeft,jdbcType=VARCHAR},
       led_three_middle = #{ledThreeMiddle,jdbcType=VARCHAR},
       led_three_right = #{ledThreeRight,jdbcType=VARCHAR},
       video_three = #{videoThree,jdbcType=VARCHAR},
+      light_three = #{lightThree,jdbcType=DOUBLE},
+      co2 = #{co2,jdbcType=DOUBLE},
+      ph = #{ph,jdbcType=DOUBLE},
+      ec = #{ec,jdbcType=DOUBLE},
+      ox = #{ox,jdbcType=DOUBLE},
+      solution_temperature = #{solutionTemperature,jdbcType=DOUBLE},
+      outdoor_temperature = #{outdoorTemperature,jdbcType=DOUBLE},
+      level_up = #{levelUp,jdbcType=DOUBLE},
+      level_down = #{levelDown,jdbcType=DOUBLE},
       status = #{status,jdbcType=VARCHAR},
       model_id = #{modelId,jdbcType=INTEGER},
       order_status = #{orderStatus,jdbcType=VARCHAR},
+      trust_status = #{trustStatus,jdbcType=VARCHAR},
+      one_planting_time = #{onePlantingTime,jdbcType=TIMESTAMP},
+      one_recovery_time = #{oneRecoveryTime,jdbcType=TIMESTAMP},
+      two_planting_time = #{twoPlantingTime,jdbcType=TIMESTAMP},
+      two_recovery_time = #{twoRecoveryTime,jdbcType=TIMESTAMP},
+      three_planting_time = #{threePlantingTime,jdbcType=TIMESTAMP},
+      three_recovery_time = #{threeRecoveryTime,jdbcType=TIMESTAMP},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
     where batch_id = #{batchId,jdbcType=INTEGER}

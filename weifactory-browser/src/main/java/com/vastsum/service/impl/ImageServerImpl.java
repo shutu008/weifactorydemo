@@ -1,5 +1,16 @@
 package com.vastsum.service.impl;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.apache.commons.lang.time.DateUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.dao.ImageMapper;
@@ -12,13 +23,7 @@ import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.ImageServer;
 import com.vastsum.service.UserRoleService;
-import com.vastsum.utils.ResourceProperty;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import com.vastsum.utils.DateTimeUtils;
 
 /**
  * @author ssj
@@ -92,8 +97,8 @@ public class ImageServerImpl implements ImageServer {
             return new PageInfo<>(images);
         }
         for (Image image : images){
-            String s = path + image.getPath();
-            image.setPath(s);
+            String s = path + image.getOnePicName();
+            image.setOnePicName(s);
 
         }
         return new PageInfo<>(images);
@@ -111,8 +116,8 @@ public class ImageServerImpl implements ImageServer {
             return images;
         }
         for (Image image : images){
-            String s = path + image.getPath();
-            image.setPath(s);
+            String s = path + image.getOnePicName();
+            image.setOnePicName(s);
 
         }
         return images;
@@ -128,8 +133,8 @@ public class ImageServerImpl implements ImageServer {
             return images;
         }
         for (Image image : images){
-            String s = weifactoryProperties.getImage().getHostUrl() + image.getPath();
-            image.setPath(s);
+            String s = weifactoryProperties.getImage().getHostUrl() + image.getOnePicName();
+            image.setOnePicName(s);
 
         }
         return images;
@@ -146,8 +151,8 @@ public class ImageServerImpl implements ImageServer {
             return images;
         }
         for (Image image : images){
-            String s = weifactoryProperties.getImage().getHostUrl() + image.getPath();
-            image.setPath(s);
+            String s = weifactoryProperties.getImage().getHostUrl() + image.getOnePicName();
+            image.setOnePicName(s);
 
         }
         return images;
@@ -179,8 +184,8 @@ public class ImageServerImpl implements ImageServer {
             return images;
         }
         for (Image image : images){
-            String s = weifactoryProperties.getImage().getHostUrl() + image.getPath();
-            image.setPath(s);
+            String s = weifactoryProperties.getImage().getHostUrl() + image.getOnePicName();
+            image.setOnePicName(s);
 
         }
         return images;
@@ -192,7 +197,7 @@ public class ImageServerImpl implements ImageServer {
         List<Image> images = listBySnAndSensorType(sn, sensorType);
         if (images != null && !images.isEmpty()){
             Image image = images.get(0);
-            image.setPath(image.getPath());
+            image.setOnePicName(image.getOnePicName());
             return image;
         }
         return null;
@@ -202,7 +207,7 @@ public class ImageServerImpl implements ImageServer {
     @Override
     public Image getById(Long id) {
         Image image = imageMapper.selectByPrimaryKey(id);
-        image.setPath(weifactoryProperties.getImage().getHostUrl()+image.getPath());
+        image.setOnePicName(weifactoryProperties.getImage().getHostUrl()+image.getOnePicName());
         return image;
     }
 
@@ -210,13 +215,13 @@ public class ImageServerImpl implements ImageServer {
     @Override
     public Image getByPath(String path) {
         ImageExample imageExample = new ImageExample();
-        imageExample.createCriteria().andPathEqualTo(path);
+        imageExample.createCriteria().andOnePicNameEqualTo(path);
         List<Image> images = imageMapper.selectByExample(imageExample);
         if (images == null || images.isEmpty()){
             return null;
         }
         Image image = images.get(0);
-        image.setPath(path+image.getPath());
+        image.setOnePicName(path+image.getOnePicName());
         return image;
     }
 
@@ -231,4 +236,34 @@ public class ImageServerImpl implements ImageServer {
     public Integer update(Image image) {
         return imageMapper.insert(image);
     }
+
+    //根据时间和设备序列号
+	@Override
+	public Image getImageByDate(String sn, Date date) {
+		ImageExample imageExample = new ImageExample();
+		//一天之内的图片
+		imageExample.createCriteria()
+		.andGmtCreateBetween(DateTimeUtils.getNowStartTime(), DateUtils.addDays(date, 1))
+		.andSnEqualTo(sn);
+		return result(imageExample);
+	}
+
+	//获取当天的图片
+	@Override
+	public Image getLastImageByDate(String sn) {
+		ImageExample imageExample = new ImageExample();
+		imageExample.createCriteria()
+		.andSnEqualTo(sn);
+		imageExample.setOrderByClause("gmt_create desc");
+		return result(imageExample);
+	}
+	
+	//获取查询结果
+	private Image result(ImageExample imageExample){
+		List<Image> imageList = imageMapper.selectByExample(imageExample);
+		if (imageList == null || imageList.isEmpty()) {
+			return null;
+		}
+		return imageList.get(0);
+	}
 }

@@ -2,11 +2,9 @@ package com.vastsum.dao;
 
 import com.vastsum.entity.User;
 import com.vastsum.entity.UserExample;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
-@Repository
+import org.apache.ibatis.annotations.Param;
+
 public interface UserMapper {
     long countByExample(UserExample example);
 

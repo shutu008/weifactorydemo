@@ -33,6 +33,8 @@ public class User {
 
     private Boolean enabled;
 
+    private String loginStatus;
+
     public Integer getUserId() {
         return userId;
     }
@@ -153,6 +155,14 @@ public class User {
         this.enabled = enabled;
     }
 
+    public String getLoginStatus() {
+        return loginStatus;
+    }
+
+    public void setLoginStatus(String loginStatus) {
+        this.loginStatus = loginStatus == null ? null : loginStatus.trim();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -174,6 +184,7 @@ public class User {
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append(", gmtModified=").append(gmtModified);
         sb.append(", enabled=").append(enabled);
+        sb.append(", loginStatus=").append(loginStatus);
         sb.append("]");
         return sb.toString();
     }

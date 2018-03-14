@@ -235,123 +235,73 @@ public class DeviceExample {
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeIsNull() {
-            addCriterion("longitude is null");
+        public Criteria andDeviceTypeIsNull() {
+            addCriterion("device_type is null");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeIsNotNull() {
-            addCriterion("longitude is not null");
+        public Criteria andDeviceTypeIsNotNull() {
+            addCriterion("device_type is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeEqualTo(Double value) {
-            addCriterion("longitude =", value, "longitude");
+        public Criteria andDeviceTypeEqualTo(String value) {
+            addCriterion("device_type =", value, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeNotEqualTo(Double value) {
-            addCriterion("longitude <>", value, "longitude");
+        public Criteria andDeviceTypeNotEqualTo(String value) {
+            addCriterion("device_type <>", value, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeGreaterThan(Double value) {
-            addCriterion("longitude >", value, "longitude");
+        public Criteria andDeviceTypeGreaterThan(String value) {
+            addCriterion("device_type >", value, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeGreaterThanOrEqualTo(Double value) {
-            addCriterion("longitude >=", value, "longitude");
+        public Criteria andDeviceTypeGreaterThanOrEqualTo(String value) {
+            addCriterion("device_type >=", value, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeLessThan(Double value) {
-            addCriterion("longitude <", value, "longitude");
+        public Criteria andDeviceTypeLessThan(String value) {
+            addCriterion("device_type <", value, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeLessThanOrEqualTo(Double value) {
-            addCriterion("longitude <=", value, "longitude");
+        public Criteria andDeviceTypeLessThanOrEqualTo(String value) {
+            addCriterion("device_type <=", value, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeIn(List<Double> values) {
-            addCriterion("longitude in", values, "longitude");
+        public Criteria andDeviceTypeLike(String value) {
+            addCriterion("device_type like", value, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeNotIn(List<Double> values) {
-            addCriterion("longitude not in", values, "longitude");
+        public Criteria andDeviceTypeNotLike(String value) {
+            addCriterion("device_type not like", value, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeBetween(Double value1, Double value2) {
-            addCriterion("longitude between", value1, value2, "longitude");
+        public Criteria andDeviceTypeIn(List<String> values) {
+            addCriterion("device_type in", values, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLongitudeNotBetween(Double value1, Double value2) {
-            addCriterion("longitude not between", value1, value2, "longitude");
+        public Criteria andDeviceTypeNotIn(List<String> values) {
+            addCriterion("device_type not in", values, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLatitudeIsNull() {
-            addCriterion("latitude is null");
+        public Criteria andDeviceTypeBetween(String value1, String value2) {
+            addCriterion("device_type between", value1, value2, "deviceType");
             return (Criteria) this;
         }
 
-        public Criteria andLatitudeIsNotNull() {
-            addCriterion("latitude is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeEqualTo(Double value) {
-            addCriterion("latitude =", value, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeNotEqualTo(Double value) {
-            addCriterion("latitude <>", value, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeGreaterThan(Double value) {
-            addCriterion("latitude >", value, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeGreaterThanOrEqualTo(Double value) {
-            addCriterion("latitude >=", value, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeLessThan(Double value) {
-            addCriterion("latitude <", value, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeLessThanOrEqualTo(Double value) {
-            addCriterion("latitude <=", value, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeIn(List<Double> values) {
-            addCriterion("latitude in", values, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeNotIn(List<Double> values) {
-            addCriterion("latitude not in", values, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeBetween(Double value1, Double value2) {
-            addCriterion("latitude between", value1, value2, "latitude");
-            return (Criteria) this;
-        }
-
-        public Criteria andLatitudeNotBetween(Double value1, Double value2) {
-            addCriterion("latitude not between", value1, value2, "latitude");
+        public Criteria andDeviceTypeNotBetween(String value1, String value2) {
+            addCriterion("device_type not between", value1, value2, "deviceType");
             return (Criteria) this;
         }
 

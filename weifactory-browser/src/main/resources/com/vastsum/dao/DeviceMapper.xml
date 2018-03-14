@@ -4,8 +4,7 @@
   <resultMap id="BaseResultMap" type="com.vastsum.entity.Device">
     <id column="device_id" jdbcType="INTEGER" property="deviceId" />
     <result column="sn" jdbcType="VARCHAR" property="sn" />
-    <result column="longitude" jdbcType="DOUBLE" property="longitude" />
-    <result column="latitude" jdbcType="DOUBLE" property="latitude" />
+    <result column="device_type" jdbcType="VARCHAR" property="deviceType" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="note" jdbcType="VARCHAR" property="note" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
@@ -70,7 +69,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    device_id, sn, longitude, latitude, user_id, note, gmt_create, gmt_modified
+    device_id, sn, device_type, user_id, note, gmt_create, gmt_modified
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.DeviceExample" resultMap="BaseResultMap">
     select
@@ -103,12 +102,12 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.vastsum.entity.Device">
-    insert into device (device_id, sn, longitude, 
-      latitude, user_id, note, 
-      gmt_create, gmt_modified)
-    values (#{deviceId,jdbcType=INTEGER}, #{sn,jdbcType=VARCHAR}, #{longitude,jdbcType=DOUBLE}, 
-      #{latitude,jdbcType=DOUBLE}, #{userId,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, 
-      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP})
+    insert into device (device_id, sn, device_type, 
+      user_id, note, gmt_create, 
+      gmt_modified)
+    values (#{deviceId,jdbcType=INTEGER}, #{sn,jdbcType=VARCHAR}, #{deviceType,jdbcType=VARCHAR}, 
+      #{userId,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, 
+      #{gmtModified,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.Device">
     insert into device
@@ -119,11 +118,8 @@
       <if test="sn != null">
         sn,
       </if>
-      <if test="longitude != null">
-        longitude,
-      </if>
-      <if test="latitude != null">
-        latitude,
+      <if test="deviceType != null">
+        device_type,
       </if>
       <if test="userId != null">
         user_id,
@@ -145,11 +141,8 @@
       <if test="sn != null">
         #{sn,jdbcType=VARCHAR},
       </if>
-      <if test="longitude != null">
-        #{longitude,jdbcType=DOUBLE},
-      </if>
-      <if test="latitude != null">
-        #{latitude,jdbcType=DOUBLE},
+      <if test="deviceType != null">
+        #{deviceType,jdbcType=VARCHAR},
       </if>
       <if test="userId != null">
         #{userId,jdbcType=INTEGER},
@@ -180,11 +173,8 @@
       <if test="record.sn != null">
         sn = #{record.sn,jdbcType=VARCHAR},
       </if>
-      <if test="record.longitude != null">
-        longitude = #{record.longitude,jdbcType=DOUBLE},
-      </if>
-      <if test="record.latitude != null">
-        latitude = #{record.latitude,jdbcType=DOUBLE},
+      <if test="record.deviceType != null">
+        device_type = #{record.deviceType,jdbcType=VARCHAR},
       </if>
       <if test="record.userId != null">
         user_id = #{record.userId,jdbcType=INTEGER},
@@ -207,8 +197,7 @@
     update device
     set device_id = #{record.deviceId,jdbcType=INTEGER},
       sn = #{record.sn,jdbcType=VARCHAR},
-      longitude = #{record.longitude,jdbcType=DOUBLE},
-      latitude = #{record.latitude,jdbcType=DOUBLE},
+      device_type = #{record.deviceType,jdbcType=VARCHAR},
       user_id = #{record.userId,jdbcType=INTEGER},
       note = #{record.note,jdbcType=VARCHAR},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
@@ -223,11 +212,8 @@
       <if test="sn != null">
         sn = #{sn,jdbcType=VARCHAR},
       </if>
-      <if test="longitude != null">
-        longitude = #{longitude,jdbcType=DOUBLE},
-      </if>
-      <if test="latitude != null">
-        latitude = #{latitude,jdbcType=DOUBLE},
+      <if test="deviceType != null">
+        device_type = #{deviceType,jdbcType=VARCHAR},
       </if>
       <if test="userId != null">
         user_id = #{userId,jdbcType=INTEGER},
@@ -247,8 +233,7 @@
   <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.Device">
     update device
     set sn = #{sn,jdbcType=VARCHAR},
-      longitude = #{longitude,jdbcType=DOUBLE},
-      latitude = #{latitude,jdbcType=DOUBLE},
+      device_type = #{deviceType,jdbcType=VARCHAR},
       user_id = #{userId,jdbcType=INTEGER},
       note = #{note,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},

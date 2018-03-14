@@ -7,6 +7,8 @@ public class Batch {
 
     private Integer deviceId;
 
+    private String plantOneType;
+
     private String plantOne;
 
     private String cultModelOne;
@@ -14,10 +16,6 @@ public class Batch {
     private Double temperatureOne;
 
     private Double humidityOne;
-
-    private Double ecOne;
-
-    private Double phOne;
 
     private String ledOneLeft;
 
@@ -27,6 +25,10 @@ public class Batch {
 
     private String videoOne;
 
+    private Double lightOne;
+
+    private String plantTwoType;
+
     private String plantTwo;
 
     private String cultModelTwo;
@@ -34,10 +36,6 @@ public class Batch {
     private Double temperatureTwo;
 
     private Double humidityTwo;
-
-    private Double ecTwo;
-
-    private Double phTwo;
 
     private String ledTwoLeft;
 
@@ -47,6 +45,10 @@ public class Batch {
 
     private String videoTwo;
 
+    private Double lightTwo;
+
+    private String plantThreeType;
+
     private String plantThree;
 
     private String cultModelThree;
@@ -54,10 +56,6 @@ public class Batch {
     private Double temperatureThree;
 
     private Double humidityThree;
-
-    private Double ecThree;
-
-    private Double phThree;
 
     private String ledThreeLeft;
 
@@ -67,11 +65,43 @@ public class Batch {
 
     private String videoThree;
 
+    private Double lightThree;
+
+    private Double co2;
+
+    private Double ph;
+
+    private Double ec;
+
+    private Double ox;
+
+    private Double solutionTemperature;
+
+    private Double outdoorTemperature;
+
+    private Double levelUp;
+
+    private Double levelDown;
+
     private String status;
 
     private Integer modelId;
 
     private String orderStatus;
+
+    private String trustStatus;
+
+    private Date onePlantingTime;
+
+    private Date oneRecoveryTime;
+
+    private Date twoPlantingTime;
+
+    private Date twoRecoveryTime;
+
+    private Date threePlantingTime;
+
+    private Date threeRecoveryTime;
 
     private Date gmtCreate;
 
@@ -91,6 +121,14 @@ public class Batch {
 
     public void setDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
+    }
+
+    public String getPlantOneType() {
+        return plantOneType;
+    }
+
+    public void setPlantOneType(String plantOneType) {
+        this.plantOneType = plantOneType == null ? null : plantOneType.trim();
     }
 
     public String getPlantOne() {
@@ -125,22 +163,6 @@ public class Batch {
         this.humidityOne = humidityOne;
     }
 
-    public Double getEcOne() {
-        return ecOne;
-    }
-
-    public void setEcOne(Double ecOne) {
-        this.ecOne = ecOne;
-    }
-
-    public Double getPhOne() {
-        return phOne;
-    }
-
-    public void setPhOne(Double phOne) {
-        this.phOne = phOne;
-    }
-
     public String getLedOneLeft() {
         return ledOneLeft;
     }
@@ -171,6 +193,22 @@ public class Batch {
 
     public void setVideoOne(String videoOne) {
         this.videoOne = videoOne == null ? null : videoOne.trim();
+    }
+
+    public Double getLightOne() {
+        return lightOne;
+    }
+
+    public void setLightOne(Double lightOne) {
+        this.lightOne = lightOne;
+    }
+
+    public String getPlantTwoType() {
+        return plantTwoType;
+    }
+
+    public void setPlantTwoType(String plantTwoType) {
+        this.plantTwoType = plantTwoType == null ? null : plantTwoType.trim();
     }
 
     public String getPlantTwo() {
@@ -205,22 +243,6 @@ public class Batch {
         this.humidityTwo = humidityTwo;
     }
 
-    public Double getEcTwo() {
-        return ecTwo;
-    }
-
-    public void setEcTwo(Double ecTwo) {
-        this.ecTwo = ecTwo;
-    }
-
-    public Double getPhTwo() {
-        return phTwo;
-    }
-
-    public void setPhTwo(Double phTwo) {
-        this.phTwo = phTwo;
-    }
-
     public String getLedTwoLeft() {
         return ledTwoLeft;
     }
@@ -251,6 +273,22 @@ public class Batch {
 
     public void setVideoTwo(String videoTwo) {
         this.videoTwo = videoTwo == null ? null : videoTwo.trim();
+    }
+
+    public Double getLightTwo() {
+        return lightTwo;
+    }
+
+    public void setLightTwo(Double lightTwo) {
+        this.lightTwo = lightTwo;
+    }
+
+    public String getPlantThreeType() {
+        return plantThreeType;
+    }
+
+    public void setPlantThreeType(String plantThreeType) {
+        this.plantThreeType = plantThreeType == null ? null : plantThreeType.trim();
     }
 
     public String getPlantThree() {
@@ -285,22 +323,6 @@ public class Batch {
         this.humidityThree = humidityThree;
     }
 
-    public Double getEcThree() {
-        return ecThree;
-    }
-
-    public void setEcThree(Double ecThree) {
-        this.ecThree = ecThree;
-    }
-
-    public Double getPhThree() {
-        return phThree;
-    }
-
-    public void setPhThree(Double phThree) {
-        this.phThree = phThree;
-    }
-
     public String getLedThreeLeft() {
         return ledThreeLeft;
     }
@@ -333,6 +355,78 @@ public class Batch {
         this.videoThree = videoThree == null ? null : videoThree.trim();
     }
 
+    public Double getLightThree() {
+        return lightThree;
+    }
+
+    public void setLightThree(Double lightThree) {
+        this.lightThree = lightThree;
+    }
+
+    public Double getCo2() {
+        return co2;
+    }
+
+    public void setCo2(Double co2) {
+        this.co2 = co2;
+    }
+
+    public Double getPh() {
+        return ph;
+    }
+
+    public void setPh(Double ph) {
+        this.ph = ph;
+    }
+
+    public Double getEc() {
+        return ec;
+    }
+
+    public void setEc(Double ec) {
+        this.ec = ec;
+    }
+
+    public Double getOx() {
+        return ox;
+    }
+
+    public void setOx(Double ox) {
+        this.ox = ox;
+    }
+
+    public Double getSolutionTemperature() {
+        return solutionTemperature;
+    }
+
+    public void setSolutionTemperature(Double solutionTemperature) {
+        this.solutionTemperature = solutionTemperature;
+    }
+
+    public Double getOutdoorTemperature() {
+        return outdoorTemperature;
+    }
+
+    public void setOutdoorTemperature(Double outdoorTemperature) {
+        this.outdoorTemperature = outdoorTemperature;
+    }
+
+    public Double getLevelUp() {
+        return levelUp;
+    }
+
+    public void setLevelUp(Double levelUp) {
+        this.levelUp = levelUp;
+    }
+
+    public Double getLevelDown() {
+        return levelDown;
+    }
+
+    public void setLevelDown(Double levelDown) {
+        this.levelDown = levelDown;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -355,6 +449,62 @@ public class Batch {
 
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus == null ? null : orderStatus.trim();
+    }
+
+    public String getTrustStatus() {
+        return trustStatus;
+    }
+
+    public void setTrustStatus(String trustStatus) {
+        this.trustStatus = trustStatus == null ? null : trustStatus.trim();
+    }
+
+    public Date getOnePlantingTime() {
+        return onePlantingTime;
+    }
+
+    public void setOnePlantingTime(Date onePlantingTime) {
+        this.onePlantingTime = onePlantingTime;
+    }
+
+    public Date getOneRecoveryTime() {
+        return oneRecoveryTime;
+    }
+
+    public void setOneRecoveryTime(Date oneRecoveryTime) {
+        this.oneRecoveryTime = oneRecoveryTime;
+    }
+
+    public Date getTwoPlantingTime() {
+        return twoPlantingTime;
+    }
+
+    public void setTwoPlantingTime(Date twoPlantingTime) {
+        this.twoPlantingTime = twoPlantingTime;
+    }
+
+    public Date getTwoRecoveryTime() {
+        return twoRecoveryTime;
+    }
+
+    public void setTwoRecoveryTime(Date twoRecoveryTime) {
+        this.twoRecoveryTime = twoRecoveryTime;
+    }
+
+    public Date getThreePlantingTime() {
+        return threePlantingTime;
+    }
+
+    public void setThreePlantingTime(Date threePlantingTime) {
+        this.threePlantingTime = threePlantingTime;
+    }
+
+    public Date getThreeRecoveryTime() {
+        return threeRecoveryTime;
+    }
+
+    public void setThreeRecoveryTime(Date threeRecoveryTime) {
+        this.threeRecoveryTime = threeRecoveryTime;
     }
 
     public Date getGmtCreate() {
@@ -381,39 +531,54 @@ public class Batch {
         sb.append("Hash = ").append(hashCode());
         sb.append(", batchId=").append(batchId);
         sb.append(", deviceId=").append(deviceId);
+        sb.append(", plantOneType=").append(plantOneType);
         sb.append(", plantOne=").append(plantOne);
         sb.append(", cultModelOne=").append(cultModelOne);
         sb.append(", temperatureOne=").append(temperatureOne);
         sb.append(", humidityOne=").append(humidityOne);
-        sb.append(", ecOne=").append(ecOne);
-        sb.append(", phOne=").append(phOne);
         sb.append(", ledOneLeft=").append(ledOneLeft);
         sb.append(", ledOneMiddle=").append(ledOneMiddle);
         sb.append(", ledOneRight=").append(ledOneRight);
         sb.append(", videoOne=").append(videoOne);
+        sb.append(", lightOne=").append(lightOne);
+        sb.append(", plantTwoType=").append(plantTwoType);
         sb.append(", plantTwo=").append(plantTwo);
         sb.append(", cultModelTwo=").append(cultModelTwo);
         sb.append(", temperatureTwo=").append(temperatureTwo);
         sb.append(", humidityTwo=").append(humidityTwo);
-        sb.append(", ecTwo=").append(ecTwo);
-        sb.append(", phTwo=").append(phTwo);
         sb.append(", ledTwoLeft=").append(ledTwoLeft);
         sb.append(", ledTwoMiddle=").append(ledTwoMiddle);
         sb.append(", ledTwoRight=").append(ledTwoRight);
         sb.append(", videoTwo=").append(videoTwo);
+        sb.append(", lightTwo=").append(lightTwo);
+        sb.append(", plantThreeType=").append(plantThreeType);
         sb.append(", plantThree=").append(plantThree);
         sb.append(", cultModelThree=").append(cultModelThree);
         sb.append(", temperatureThree=").append(temperatureThree);
         sb.append(", humidityThree=").append(humidityThree);
-        sb.append(", ecThree=").append(ecThree);
-        sb.append(", phThree=").append(phThree);
         sb.append(", ledThreeLeft=").append(ledThreeLeft);
         sb.append(", ledThreeMiddle=").append(ledThreeMiddle);
         sb.append(", ledThreeRight=").append(ledThreeRight);
         sb.append(", videoThree=").append(videoThree);
+        sb.append(", lightThree=").append(lightThree);
+        sb.append(", co2=").append(co2);
+        sb.append(", ph=").append(ph);
+        sb.append(", ec=").append(ec);
+        sb.append(", ox=").append(ox);
+        sb.append(", solutionTemperature=").append(solutionTemperature);
+        sb.append(", outdoorTemperature=").append(outdoorTemperature);
+        sb.append(", levelUp=").append(levelUp);
+        sb.append(", levelDown=").append(levelDown);
         sb.append(", status=").append(status);
         sb.append(", modelId=").append(modelId);
         sb.append(", orderStatus=").append(orderStatus);
+        sb.append(", trustStatus=").append(trustStatus);
+        sb.append(", onePlantingTime=").append(onePlantingTime);
+        sb.append(", oneRecoveryTime=").append(oneRecoveryTime);
+        sb.append(", twoPlantingTime=").append(twoPlantingTime);
+        sb.append(", twoRecoveryTime=").append(twoRecoveryTime);
+        sb.append(", threePlantingTime=").append(threePlantingTime);
+        sb.append(", threeRecoveryTime=").append(threeRecoveryTime);
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append(", gmtModified=").append(gmtModified);
         sb.append("]");

@@ -4,8 +4,11 @@
   <resultMap id="BaseResultMap" type="com.vastsum.entity.Image">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="sn" jdbcType="VARCHAR" property="sn" />
+    <result column="batch_id" jdbcType="BIGINT" property="batchId" />
     <result column="sensor_mark" jdbcType="VARCHAR" property="sensorMark" />
-    <result column="path" jdbcType="VARCHAR" property="path" />
+    <result column="one_pic_name" jdbcType="VARCHAR" property="onePicName" />
+    <result column="two_pic_name" jdbcType="VARCHAR" property="twoPicName" />
+    <result column="three_pic_name" jdbcType="VARCHAR" property="threePicName" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -67,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, sn, sensor_mark, path, gmt_create
+    id, sn, batch_id, sensor_mark, one_pic_name, two_pic_name, three_pic_name, gmt_create
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.ImageExample" resultMap="BaseResultMap">
     select
@@ -100,10 +103,12 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.vastsum.entity.Image">
-    insert into image (id, sn, sensor_mark, 
-      path, gmt_create)
-    values (#{id,jdbcType=BIGINT}, #{sn,jdbcType=VARCHAR}, #{sensorMark,jdbcType=VARCHAR}, 
-      #{path,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP})
+    insert into image (id, sn, batch_id, 
+      sensor_mark, one_pic_name, two_pic_name, 
+      three_pic_name, gmt_create)
+    values (#{id,jdbcType=BIGINT}, #{sn,jdbcType=VARCHAR}, #{batchId,jdbcType=BIGINT}, 
+      #{sensorMark,jdbcType=VARCHAR}, #{onePicName,jdbcType=VARCHAR}, #{twoPicName,jdbcType=VARCHAR}, 
+      #{threePicName,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.Image">
     insert into image
@@ -114,11 +119,20 @@
       <if test="sn != null">
         sn,
       </if>
+      <if test="batchId != null">
+        batch_id,
+      </if>
       <if test="sensorMark != null">
         sensor_mark,
       </if>
-      <if test="path != null">
-        path,
+      <if test="onePicName != null">
+        one_pic_name,
+      </if>
+      <if test="twoPicName != null">
+        two_pic_name,
+      </if>
+      <if test="threePicName != null">
+        three_pic_name,
       </if>
       <if test="gmtCreate != null">
         gmt_create,
@@ -131,11 +145,20 @@
       <if test="sn != null">
         #{sn,jdbcType=VARCHAR},
       </if>
+      <if test="batchId != null">
+        #{batchId,jdbcType=BIGINT},
+      </if>
       <if test="sensorMark != null">
         #{sensorMark,jdbcType=VARCHAR},
       </if>
-      <if test="path != null">
-        #{path,jdbcType=VARCHAR},
+      <if test="onePicName != null">
+        #{onePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="twoPicName != null">
+        #{twoPicName,jdbcType=VARCHAR},
+      </if>
+      <if test="threePicName != null">
+        #{threePicName,jdbcType=VARCHAR},
       </if>
       <if test="gmtCreate != null">
         #{gmtCreate,jdbcType=TIMESTAMP},
@@ -157,11 +180,20 @@
       <if test="record.sn != null">
         sn = #{record.sn,jdbcType=VARCHAR},
       </if>
+      <if test="record.batchId != null">
+        batch_id = #{record.batchId,jdbcType=BIGINT},
+      </if>
       <if test="record.sensorMark != null">
         sensor_mark = #{record.sensorMark,jdbcType=VARCHAR},
       </if>
-      <if test="record.path != null">
-        path = #{record.path,jdbcType=VARCHAR},
+      <if test="record.onePicName != null">
+        one_pic_name = #{record.onePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.twoPicName != null">
+        two_pic_name = #{record.twoPicName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.threePicName != null">
+        three_pic_name = #{record.threePicName,jdbcType=VARCHAR},
       </if>
       <if test="record.gmtCreate != null">
         gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
@@ -175,8 +207,11 @@
     update image
     set id = #{record.id,jdbcType=BIGINT},
       sn = #{record.sn,jdbcType=VARCHAR},
+      batch_id = #{record.batchId,jdbcType=BIGINT},
       sensor_mark = #{record.sensorMark,jdbcType=VARCHAR},
-      path = #{record.path,jdbcType=VARCHAR},
+      one_pic_name = #{record.onePicName,jdbcType=VARCHAR},
+      two_pic_name = #{record.twoPicName,jdbcType=VARCHAR},
+      three_pic_name = #{record.threePicName,jdbcType=VARCHAR},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -188,11 +223,20 @@
       <if test="sn != null">
         sn = #{sn,jdbcType=VARCHAR},
       </if>
+      <if test="batchId != null">
+        batch_id = #{batchId,jdbcType=BIGINT},
+      </if>
       <if test="sensorMark != null">
         sensor_mark = #{sensorMark,jdbcType=VARCHAR},
       </if>
-      <if test="path != null">
-        path = #{path,jdbcType=VARCHAR},
+      <if test="onePicName != null">
+        one_pic_name = #{onePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="twoPicName != null">
+        two_pic_name = #{twoPicName,jdbcType=VARCHAR},
+      </if>
+      <if test="threePicName != null">
+        three_pic_name = #{threePicName,jdbcType=VARCHAR},
       </if>
       <if test="gmtCreate != null">
         gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
@@ -203,8 +247,11 @@
   <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.Image">
     update image
     set sn = #{sn,jdbcType=VARCHAR},
+      batch_id = #{batchId,jdbcType=BIGINT},
       sensor_mark = #{sensorMark,jdbcType=VARCHAR},
-      path = #{path,jdbcType=VARCHAR},
+      one_pic_name = #{onePicName,jdbcType=VARCHAR},
+      two_pic_name = #{twoPicName,jdbcType=VARCHAR},
+      three_pic_name = #{threePicName,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>

@@ -2,6 +2,7 @@ package com.vastsum.controller.system;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -25,6 +26,7 @@ public class ControllerExceptionHandler {
 		return ResponseEntity.ok(ResultModel.error("服务器异常，请联系管理员"));
 	}
 	
+	//空指针异常
 	@ExceptionHandler(NullPointerException.class)
 	public ResponseEntity<ResultModel> nullException(NullPointerException ex){
 		return ResponseEntity.ok(ResultModel.error("空指针异常"));
@@ -35,5 +37,7 @@ public class ControllerExceptionHandler {
 	public ResponseEntity<ResultModel> orderException(OrderException ex){
 		return ResponseEntity.ok(ResultModel.error(ex.getMessage()));
 	}
+	
+	//可以使用hibernate验证框架
 
 }

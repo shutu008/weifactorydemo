@@ -75,15 +75,13 @@ public class DeviceController extends BaseController {
     @ApiOperation(value="添加设备")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号", required = true),
-            @ApiImplicitParam(paramType = "query",name = "longitude",value = "经度",required = false),
-            @ApiImplicitParam(paramType = "query",name = "latitude",value = "维度",required = false),
+            @ApiImplicitParam(paramType = "query",name = "deviceType",value = "设备类型",required = false),
             @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = false),
             @ApiImplicitParam(paramType = "query",name = "note",value = "备注信息",required = false)
     })
     public ResponseEntity<ResultModel> add(
             @RequestParam(value = "sn",required = true)String sn,
-            @RequestParam(value = "longitude",required = false)Double longitude,
-            @RequestParam(value = "latitude",required = false)Double latitude,
+            @RequestParam(value = "deviceType",required = false)String deviceType,
             @RequestParam(value = "userId",required = false)Integer userId,
             @RequestParam(value = "note",required = false)String note
     )
@@ -110,8 +108,7 @@ public class DeviceController extends BaseController {
 
         Device device = new Device();
         device.setSn(sn);
-        device.setLongitude(longitude);
-        device.setLatitude(latitude);
+        device.setDeviceType(deviceType);
         device.setUserId(userId);
         device.setNote(note);
         device.setGmtCreate(new Date());
@@ -159,16 +156,14 @@ public class DeviceController extends BaseController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "id",value = "设备id",required = true),
             @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号",required = false),
-            @ApiImplicitParam(paramType = "query",name = "longitude",value = "经度",required = false),
-            @ApiImplicitParam(paramType = "query",name = "latitude",value = "维度",required = false),
+            @ApiImplicitParam(paramType = "query",name = "deviceType",value = "设备类型",required = false),
             @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = false),
             @ApiImplicitParam(paramType = "query",name = "note",value = "备注信息",required = false)
     })
     public ResponseEntity<ResultModel> modify(
             @RequestParam(name = "id") Integer id,
             @RequestParam(name = "sn",required = false)String sn,
-            @RequestParam(name = "longitude",required = false)Double longitude,
-            @RequestParam(name = "latitude",required = false)Double latitude,
+            @RequestParam(name = "deviceType",required = false)String deviceType,
             @RequestParam(name = "userId",required = false)Integer userId,
             @RequestParam(name = "note",required = false)String note
     ){
@@ -178,8 +173,7 @@ public class DeviceController extends BaseController {
         }
         device.setDeviceId(id);
         device.setSn(sn);
-        device.setLongitude(longitude);
-        device.setLatitude(latitude);
+        device.setDeviceType(deviceType);
         device.setUserId(userId);
         device.setNote(note);
         //调用修改程序

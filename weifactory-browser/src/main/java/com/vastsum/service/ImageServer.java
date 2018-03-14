@@ -1,13 +1,14 @@
 package com.vastsum.service;
 
+import java.util.Date;
+import java.util.List;
+
 import com.github.pagehelper.PageInfo;
 import com.vastsum.entity.Image;
 import com.vastsum.entity.vo.ImageVO;
 
-import java.util.List;
-
 /**
- * 图片服务
+ * 图片服务 
  * @author ssj
  * @create 2017-11-11 11:28
  */
@@ -83,4 +84,19 @@ public interface ImageServer {
      * @return Integer
      */
     Integer update(Image image);
+    
+    /**
+     * 根据时间和位置获取图片信息
+     * @param sn
+     * @param date
+     * @return Image
+     */
+    Image getImageByDate(String sn, Date date);
+    
+    /**
+     * 根据位置获取最新的图片
+     * @param sn
+     * @return Image
+     */
+    Image getLastImageByDate(String sn);
 }

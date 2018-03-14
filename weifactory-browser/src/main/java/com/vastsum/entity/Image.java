@@ -7,9 +7,15 @@ public class Image {
 
     private String sn;
 
+    private Long batchId;
+
     private String sensorMark;
 
-    private String path;
+    private String onePicName;
+
+    private String twoPicName;
+
+    private String threePicName;
 
     private Date gmtCreate;
 
@@ -29,6 +35,14 @@ public class Image {
         this.sn = sn == null ? null : sn.trim();
     }
 
+    public Long getBatchId() {
+        return batchId;
+    }
+
+    public void setBatchId(Long batchId) {
+        this.batchId = batchId;
+    }
+
     public String getSensorMark() {
         return sensorMark;
     }
@@ -37,12 +51,28 @@ public class Image {
         this.sensorMark = sensorMark == null ? null : sensorMark.trim();
     }
 
-    public String getPath() {
-        return path;
+    public String getOnePicName() {
+        return onePicName;
     }
 
-    public void setPath(String path) {
-        this.path = path == null ? null : path.trim();
+    public void setOnePicName(String onePicName) {
+        this.onePicName = onePicName == null ? null : onePicName.trim();
+    }
+
+    public String getTwoPicName() {
+        return twoPicName;
+    }
+
+    public void setTwoPicName(String twoPicName) {
+        this.twoPicName = twoPicName == null ? null : twoPicName.trim();
+    }
+
+    public String getThreePicName() {
+        return threePicName;
+    }
+
+    public void setThreePicName(String threePicName) {
+        this.threePicName = threePicName == null ? null : threePicName.trim();
     }
 
     public Date getGmtCreate() {
@@ -61,8 +91,11 @@ public class Image {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", sn=").append(sn);
+        sb.append(", batchId=").append(batchId);
         sb.append(", sensorMark=").append(sensorMark);
-        sb.append(", path=").append(path);
+        sb.append(", onePicName=").append(onePicName);
+        sb.append(", twoPicName=").append(twoPicName);
+        sb.append(", threePicName=").append(threePicName);
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append("]");
         return sb.toString();

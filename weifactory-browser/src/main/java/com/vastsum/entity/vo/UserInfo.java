@@ -8,7 +8,8 @@ import java.util.Date;
  * @create 2017-08-12 7:48
  */
 public class UserInfo implements Serializable {
-    private Integer userId;             //用户id
+	private static final long serialVersionUID = -8642874349687483464L;
+	private Integer userId;             //用户id
     private String userName;            //用户名
     private String userPhone;           //手机号
     private String email;               //邮箱

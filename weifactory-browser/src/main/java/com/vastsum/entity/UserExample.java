@@ -1104,6 +1104,76 @@ public class UserExample {
             addCriterion("enabled not between", value1, value2, "enabled");
             return (Criteria) this;
         }
+
+        public Criteria andLoginStatusIsNull() {
+            addCriterion("login_status is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusIsNotNull() {
+            addCriterion("login_status is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusEqualTo(String value) {
+            addCriterion("login_status =", value, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusNotEqualTo(String value) {
+            addCriterion("login_status <>", value, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusGreaterThan(String value) {
+            addCriterion("login_status >", value, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusGreaterThanOrEqualTo(String value) {
+            addCriterion("login_status >=", value, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusLessThan(String value) {
+            addCriterion("login_status <", value, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusLessThanOrEqualTo(String value) {
+            addCriterion("login_status <=", value, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusLike(String value) {
+            addCriterion("login_status like", value, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusNotLike(String value) {
+            addCriterion("login_status not like", value, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusIn(List<String> values) {
+            addCriterion("login_status in", values, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusNotIn(List<String> values) {
+            addCriterion("login_status not in", values, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusBetween(String value1, String value2) {
+            addCriterion("login_status between", value1, value2, "loginStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andLoginStatusNotBetween(String value1, String value2) {
+            addCriterion("login_status not between", value1, value2, "loginStatus");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {
