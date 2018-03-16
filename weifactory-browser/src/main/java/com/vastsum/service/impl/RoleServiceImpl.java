@@ -1,16 +1,22 @@
 package com.vastsum.service.impl;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.dao.RoleMapper;
 import com.vastsum.dao.SysRoleMenuMapper;
 import com.vastsum.dao.UserRoleMapper;
-import com.vastsum.entity.*;
+import com.vastsum.entity.Role;
+import com.vastsum.entity.RoleExample;
+import com.vastsum.entity.SysRoleMenu;
+import com.vastsum.entity.SysRoleMenuExample;
+import com.vastsum.entity.UserRole;
+import com.vastsum.entity.UserRoleExample;
 import com.vastsum.service.RoleService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * 角色管理
@@ -71,7 +77,7 @@ public class RoleServiceImpl implements RoleService {
         //删除旧菜单，初次添加没有旧菜单
         SysRoleMenuExample sysRoleMenuExample = new SysRoleMenuExample();
         sysRoleMenuExample.createCriteria().andRoleIdEqualTo(roleId);
-        int a = sysRoleMenuMapper.deleteByExample(sysRoleMenuExample);
+        sysRoleMenuMapper.deleteByExample(sysRoleMenuExample);
         if (menuString.trim().equals("")){
             return 1;
         }

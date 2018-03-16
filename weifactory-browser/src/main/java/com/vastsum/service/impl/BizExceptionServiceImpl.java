@@ -1,17 +1,17 @@
 package com.vastsum.service.impl;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.vastsum.service.DeviceService;
 import com.vastsum.dao.BizExceptionMapper;
 import com.vastsum.entity.BizException;
 import com.vastsum.entity.BizExceptionExample;
 import com.vastsum.service.BizExceptionService;
 import com.vastsum.service.RoleService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author ssj
@@ -25,8 +25,6 @@ public class BizExceptionServiceImpl implements BizExceptionService {
 
     @Autowired
     private RoleService roleService;
-    @Autowired
-    private DeviceService deviceService;
 
     //列出所有的业务异常信息
     @Override

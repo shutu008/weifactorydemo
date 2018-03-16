@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.vastsum.dao.BatchMapper">
   <resultMap id="BaseResultMap" type="com.vastsum.entity.Batch">
-    <id column="batch_id" jdbcType="INTEGER" property="batchId" />
+    <id column="batch_id" jdbcType="BIGINT" property="batchId" />
     <result column="device_id" jdbcType="INTEGER" property="deviceId" />
     <result column="plant_one_type" jdbcType="VARCHAR" property="plantOneType" />
     <result column="plant_one" jdbcType="VARCHAR" property="plantOne" />
@@ -138,15 +138,15 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from batch
-    where batch_id = #{batchId,jdbcType=INTEGER}
+    where batch_id = #{batchId,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from batch
-    where batch_id = #{batchId,jdbcType=INTEGER}
+    where batch_id = #{batchId,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.vastsum.entity.BatchExample">
     delete from batch
@@ -173,7 +173,7 @@
       two_planting_time, two_recovery_time, three_planting_time, 
       three_recovery_time, gmt_create, gmt_modified
       )
-    values (#{batchId,jdbcType=INTEGER}, #{deviceId,jdbcType=INTEGER}, #{plantOneType,jdbcType=VARCHAR}, 
+    values (#{batchId,jdbcType=BIGINT}, #{deviceId,jdbcType=INTEGER}, #{plantOneType,jdbcType=VARCHAR}, 
       #{plantOne,jdbcType=VARCHAR}, #{cultModelOne,jdbcType=VARCHAR}, #{temperatureOne,jdbcType=DOUBLE}, 
       #{humidityOne,jdbcType=DOUBLE}, #{ledOneLeft,jdbcType=VARCHAR}, #{ledOneMiddle,jdbcType=VARCHAR}, 
       #{ledOneRight,jdbcType=VARCHAR}, #{videoOne,jdbcType=VARCHAR}, #{lightOne,jdbcType=DOUBLE}, 
@@ -354,7 +354,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="batchId != null">
-        #{batchId,jdbcType=INTEGER},
+        #{batchId,jdbcType=BIGINT},
       </if>
       <if test="deviceId != null">
         #{deviceId,jdbcType=INTEGER},
@@ -521,7 +521,7 @@
     update batch
     <set>
       <if test="record.batchId != null">
-        batch_id = #{record.batchId,jdbcType=INTEGER},
+        batch_id = #{record.batchId,jdbcType=BIGINT},
       </if>
       <if test="record.deviceId != null">
         device_id = #{record.deviceId,jdbcType=INTEGER},
@@ -683,7 +683,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update batch
-    set batch_id = #{record.batchId,jdbcType=INTEGER},
+    set batch_id = #{record.batchId,jdbcType=BIGINT},
       device_id = #{record.deviceId,jdbcType=INTEGER},
       plant_one_type = #{record.plantOneType,jdbcType=VARCHAR},
       plant_one = #{record.plantOne,jdbcType=VARCHAR},
@@ -896,7 +896,7 @@
         gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where batch_id = #{batchId,jdbcType=INTEGER}
+    where batch_id = #{batchId,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.Batch">
     update batch
@@ -951,6 +951,6 @@
       three_recovery_time = #{threeRecoveryTime,jdbcType=TIMESTAMP},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
-    where batch_id = #{batchId,jdbcType=INTEGER}
+    where batch_id = #{batchId,jdbcType=BIGINT}
   </update>
 </mapper>

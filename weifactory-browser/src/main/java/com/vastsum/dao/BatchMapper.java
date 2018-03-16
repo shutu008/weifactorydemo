@@ -10,7 +10,7 @@ public interface BatchMapper {
 
     int deleteByExample(BatchExample example);
 
-    int deleteByPrimaryKey(Integer batchId);
+    int deleteByPrimaryKey(Long batchId);
 
     int insert(Batch record);
 
@@ -18,7 +18,7 @@ public interface BatchMapper {
 
     List<Batch> selectByExample(BatchExample example);
 
-    Batch selectByPrimaryKey(Integer batchId);
+    Batch selectByPrimaryKey(Long batchId);
 
     int updateByExampleSelective(@Param("record") Batch record, @Param("example") BatchExample example);
 

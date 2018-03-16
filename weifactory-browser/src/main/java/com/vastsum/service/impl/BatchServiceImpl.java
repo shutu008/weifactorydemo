@@ -74,7 +74,7 @@ public class BatchServiceImpl implements BatchService {
     }
 
     @Override
-    public Batch selectBatchBybatchId(Integer batchId) {
+    public Batch selectBatchBybatchId(Long batchId) {
         return batchMapper.selectByPrimaryKey(batchId);
     }
 
@@ -88,7 +88,7 @@ public class BatchServiceImpl implements BatchService {
             return  null;
         }
         BizOrder bizOrder = bizOrders.get(0);
-        Integer batchId = bizOrder.getBatchId();
+        Long batchId = Long.parseLong(bizOrder.getBatchId()+"");
         return batchMapper.selectByPrimaryKey(batchId);
 
     }
@@ -115,7 +115,7 @@ public class BatchServiceImpl implements BatchService {
     }
 
     @Override
-    public int deleteBatch(Integer batchId) {
+    public int deleteBatch(Long batchId) {
         return batchMapper.deleteByPrimaryKey(batchId);
     }
 
@@ -129,7 +129,7 @@ public class BatchServiceImpl implements BatchService {
 
     //批次关联模型
     @Override
-    public int updateBatchModel(int batchId, int modelId) {
+    public int updateBatchModel(Long batchId, int modelId) {
         Batch batch = new Batch();
         batch.setModelId(modelId);
         batch.setBatchId(batchId);
@@ -138,7 +138,7 @@ public class BatchServiceImpl implements BatchService {
 
     //更改批次的订单状态标识
     @Override
-    public int updateBatchOrderStatus(Integer batchId, String status) {
+    public int updateBatchOrderStatus(Long batchId, String status) {
         Batch batch = new Batch();
         batch.setBatchId(batchId);
         batch.setOrderStatus(status);

@@ -86,12 +86,12 @@ public class OrderController extends BaseController {
         Batch batch = batchService.selectLastBatchByDeviceId(deviceId);
         //分装返回的视图对象
         OrderVO orderVO = new OrderVO();
-        orderVO.setBatchId(batch.getBatchId());
+        orderVO.setBatchId(Integer.parseInt(batch.getBatchId()+""));
         orderVO.setPlantOne(batch.getPlantOne());
         orderVO.setPlantTwo(batch.getPlantTwo());
         orderVO.setPlantThree(batch.getPlantThree());
         orderVO.setCost(0.01);
-        orderVO.setDeposit(deposit);
+        orderVO.setDeposit(deposit);      
         orderVO.setExports(experts);
         orderVO.setSn(deviceService.getSnByDeviceId(batch.getDeviceId()));
         return ResponseEntity.ok(ResultModel.ok(orderVO));
@@ -108,7 +108,7 @@ public class OrderController extends BaseController {
             @ApiImplicitParam(paramType = "query",name = "endTime",value = "托管结束时间",required = false)
     })
     public ResponseEntity<ResultModel> getOrder(String sn, 
-    		Integer batchId, 
+    		Long batchId, 
     		String deposit, 
     		Integer exportId,
     		Date startTime,
@@ -141,7 +141,7 @@ public class OrderController extends BaseController {
         bizOrder.setPlantOne(batch.getPlantOne());
         bizOrder.setPlantThree(batch.getPlantThree());
         bizOrder.setPlantTwo(batch.getPlantTwo());
-        bizOrder.setBatchId(batchId);
+        bizOrder.setBatchId(Integer.parseInt(batchId+""));
         bizOrder.setDeposit(deposit);
         bizOrder.setExpertId(exportId);
         bizOrder.setOrderBody(getOrderBody());

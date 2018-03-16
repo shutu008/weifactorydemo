@@ -123,10 +123,10 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public BizOrder getBizOrderBybatchId(Integer batchId, Byte status) {
+    public BizOrder getBizOrderBybatchId(Long batchId, Byte status) {
         BizOrderExample bizOrderExample = new BizOrderExample();
         bizOrderExample.createCriteria()
-                .andBatchIdEqualTo(batchId)
+                .andBatchIdEqualTo(Integer.parseInt(batchId+""))
                 .andOrderStateEqualTo(status);
         bizOrderExample.setOrderByClause("order_id desc");
         List<BizOrder> bizOrders = bizOrderMapper.selectByExample(bizOrderExample);
@@ -138,7 +138,7 @@ public class OrderServiceImpl implements OrderService {
 
     //批次是否对应有支付成功的订单：有ture无false
     @Override
-    public boolean hasBizOrderBybatchId(Integer batchId) {
+    public boolean hasBizOrderBybatchId(Long batchId) {
         BizOrder bizOrderBybatchId = getBizOrderBybatchId(batchId, new Byte("3"));
         if (bizOrderBybatchId == null){
             return false;

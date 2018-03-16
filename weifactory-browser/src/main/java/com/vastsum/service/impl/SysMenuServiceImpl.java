@@ -1,18 +1,23 @@
 package com.vastsum.service.impl;
 
-import com.vastsum.dao.SysMenuMapper;
-import com.vastsum.dao.UserMapper;
-import com.vastsum.entity.*;
-import com.vastsum.dao.SysRoleMenuMapper;
-import com.vastsum.dao.UserRoleMapper;
-import com.vastsum.entity.vo.Menu;
-import com.vastsum.service.SysMenuService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.vastsum.dao.SysMenuMapper;
+import com.vastsum.dao.SysRoleMenuMapper;
+import com.vastsum.dao.UserRoleMapper;
+import com.vastsum.entity.SysMenu;
+import com.vastsum.entity.SysMenuExample;
+import com.vastsum.entity.SysRoleMenu;
+import com.vastsum.entity.SysRoleMenuExample;
+import com.vastsum.entity.UserRole;
+import com.vastsum.entity.UserRoleExample;
+import com.vastsum.entity.vo.Menu;
+import com.vastsum.service.SysMenuService;
 
 /**
  * @author ssj
@@ -23,8 +28,6 @@ import java.util.List;
 public class SysMenuServiceImpl implements SysMenuService {
     @Autowired
     private SysMenuMapper sysMenuMapper;
-    @Autowired
-    private UserMapper userMapper;
     @Autowired
     private SysRoleMenuMapper sysRoleMenuMapper;
     @Autowired
@@ -162,11 +165,11 @@ public class SysMenuServiceImpl implements SysMenuService {
         for (SysRoleMenu sysRoleMenu : sysRoleMenus){
             menuIdList.add(sysRoleMenu.getMenuId());
         }
-        SysMenuExample sysMenuSpan = new SysMenuExample();
+        //SysMenuExample sysMenuSpan = new SysMenuExample();
         sysMenuExample.createCriteria().andMenuIdIn(menuIdList);
         sysMenuExample.setOrderByClause("order_num asc");
         //角色有的菜单
-        List<SysMenu> sysMenuz = sysMenuMapper.selectByExample(sysMenuSpan);
+       // List<SysMenu> sysMenuz = sysMenuMapper.selectByExample(sysMenuSpan);
 
         //要返回的菜单对象
         List<Menu<SysMenu>> menuList = new ArrayList<>();

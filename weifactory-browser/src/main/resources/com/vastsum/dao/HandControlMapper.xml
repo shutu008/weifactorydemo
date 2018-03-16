@@ -35,7 +35,7 @@
     <result column="fs_3" jdbcType="VARCHAR" property="fs3" />
     <result column="bs" jdbcType="VARCHAR" property="bs" />
     <result column="ps" jdbcType="VARCHAR" property="ps" />
-    <result column="batch_id" jdbcType="INTEGER" property="batchId" />
+    <result column="batch_id" jdbcType="BIGINT" property="batchId" />
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
@@ -156,7 +156,7 @@
       #{inlet2,jdbcType=VARCHAR}, #{inlet3,jdbcType=VARCHAR}, #{out1,jdbcType=VARCHAR}, 
       #{out2,jdbcType=VARCHAR}, #{out3,jdbcType=VARCHAR}, #{feedLed,jdbcType=VARCHAR}, 
       #{feedPl,jdbcType=VARCHAR}, #{sb,jdbcType=VARCHAR}, #{fs1,jdbcType=VARCHAR}, #{fs2,jdbcType=VARCHAR}, 
-      #{fs3,jdbcType=VARCHAR}, #{bs,jdbcType=VARCHAR}, #{ps,jdbcType=VARCHAR}, #{batchId,jdbcType=INTEGER}, 
+      #{fs3,jdbcType=VARCHAR}, #{bs,jdbcType=VARCHAR}, #{ps,jdbcType=VARCHAR}, #{batchId,jdbcType=BIGINT}, 
       #{status,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
       )
   </insert>
@@ -376,7 +376,7 @@
         #{ps,jdbcType=VARCHAR},
       </if>
       <if test="batchId != null">
-        #{batchId,jdbcType=INTEGER},
+        #{batchId,jdbcType=BIGINT},
       </if>
       <if test="status != null">
         #{status,jdbcType=VARCHAR},
@@ -498,7 +498,7 @@
         ps = #{record.ps,jdbcType=VARCHAR},
       </if>
       <if test="record.batchId != null">
-        batch_id = #{record.batchId,jdbcType=INTEGER},
+        batch_id = #{record.batchId,jdbcType=BIGINT},
       </if>
       <if test="record.status != null">
         status = #{record.status,jdbcType=VARCHAR},
@@ -549,7 +549,7 @@
       fs_3 = #{record.fs3,jdbcType=VARCHAR},
       bs = #{record.bs,jdbcType=VARCHAR},
       ps = #{record.ps,jdbcType=VARCHAR},
-      batch_id = #{record.batchId,jdbcType=INTEGER},
+      batch_id = #{record.batchId,jdbcType=BIGINT},
       status = #{record.status,jdbcType=VARCHAR},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
@@ -657,7 +657,7 @@
         ps = #{ps,jdbcType=VARCHAR},
       </if>
       <if test="batchId != null">
-        batch_id = #{batchId,jdbcType=INTEGER},
+        batch_id = #{batchId,jdbcType=BIGINT},
       </if>
       <if test="status != null">
         status = #{status,jdbcType=VARCHAR},
@@ -705,7 +705,7 @@
       fs_3 = #{fs3,jdbcType=VARCHAR},
       bs = #{bs,jdbcType=VARCHAR},
       ps = #{ps,jdbcType=VARCHAR},
-      batch_id = #{batchId,jdbcType=INTEGER},
+      batch_id = #{batchId,jdbcType=BIGINT},
       status = #{status,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}

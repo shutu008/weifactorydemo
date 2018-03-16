@@ -3,7 +3,7 @@ package com.vastsum.entity;
 import java.util.Date;
 
 public class Batch {
-    private Integer batchId;
+    private Long batchId;
 
     private Integer deviceId;
 
@@ -107,11 +107,11 @@ public class Batch {
 
     private Date gmtModified;
 
-    public Integer getBatchId() {
+    public Long getBatchId() {
         return batchId;
     }
 
-    public void setBatchId(Integer batchId) {
+    public void setBatchId(Long batchId) {
         this.batchId = batchId;
     }
 

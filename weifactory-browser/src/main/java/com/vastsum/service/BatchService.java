@@ -38,7 +38,7 @@ public interface BatchService {
      * @param batchId
      * @return批次详细信息
      */
-     Batch selectBatchBybatchId(Integer batchId);
+     Batch selectBatchBybatchId(Long batchId);
 
     /**
      * 根据订单号获取批次信息
@@ -74,7 +74,7 @@ public interface BatchService {
      * @param batchId
      * @return 删除后的状态1:成功，0：失败
      */
-     int deleteBatch(Integer batchId);
+     int deleteBatch(Long batchId);
 
     /**
      * 根据设备序列号，删除批次信息
@@ -88,7 +88,7 @@ public interface BatchService {
      * @param modelId
      * @return int
      */
-     int updateBatchModel(int batchId, int modelId);
+     int updateBatchModel(Long batchId, int modelId);
 
     /**
      * 更改批次的订单状态标识
@@ -96,5 +96,5 @@ public interface BatchService {
      * @param status
      * @return int
      */
-     int updateBatchOrderStatus(Integer batchId, String status);
+     int updateBatchOrderStatus(Long batchId, String status);
 }

@@ -69,7 +69,7 @@ public class HandControl {
 
     private String ps;
 
-    private Integer batchId;
+    private Long batchId;
 
     private String status;
 
@@ -341,11 +341,11 @@ public class HandControl {
         this.ps = ps == null ? null : ps.trim();
     }
 
-    public Integer getBatchId() {
+    public Long getBatchId() {
         return batchId;
     }
 
-    public void setBatchId(Integer batchId) {
+    public void setBatchId(Long batchId) {
         this.batchId = batchId;
     }
 

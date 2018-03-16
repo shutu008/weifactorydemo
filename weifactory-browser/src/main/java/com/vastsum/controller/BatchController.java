@@ -138,7 +138,7 @@ public class BatchController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "batchId",value = "批次id",required = true)
     })
-    public ResponseEntity<ResultModel> delete(@PathVariable Integer batchId){
+    public ResponseEntity<ResultModel> delete(@PathVariable Long batchId){
         if (batchId == null) {
             return new ResponseEntity<ResultModel>(ResultModel.error(ResultStatus.BATCH_ID_NULL), HttpStatus.BAD_REQUEST);
         }
@@ -153,7 +153,7 @@ public class BatchController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "batchId",value = "批次id",required = true)
     })
-    public ResponseEntity<ResultModel> detail(@PathVariable Integer batchId){
+    public ResponseEntity<ResultModel> detail(@PathVariable Long batchId){
         if (batchId == null) {
             return new ResponseEntity<ResultModel>(ResultModel.error(ResultStatus.BATCH_ID_NULL), HttpStatus.BAD_REQUEST);
         }
@@ -263,7 +263,7 @@ public class BatchController {
             @ApiImplicitParam(paramType = "path", name = "batchId", value = "批次ID", required = true),
             @ApiImplicitParam(paramType = "path", name = "modelId", value = "模型ID", required = true)
     })
-    public ResponseEntity<ResultModel> assoc(@PathVariable Integer batchId,
+    public ResponseEntity<ResultModel> assoc(@PathVariable Long batchId,
                                              @PathVariable Integer modelId){
         if (batchId == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.BATCH_ID_NULL));
@@ -284,7 +284,7 @@ public class BatchController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path", name = "batchId", value = "批次ID", required = true)
     })
-    public ResponseEntity<ResultModel> updateStatus(@PathVariable Integer batchId){
+    public ResponseEntity<ResultModel> updateStatus(@PathVariable Long batchId){
         if (batchId == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.BATCH_ID_NULL));
         }

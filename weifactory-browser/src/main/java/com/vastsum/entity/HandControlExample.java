@@ -2415,52 +2415,52 @@ public class HandControlExample {
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdEqualTo(Integer value) {
+        public Criteria andBatchIdEqualTo(Long value) {
             addCriterion("batch_id =", value, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdNotEqualTo(Integer value) {
+        public Criteria andBatchIdNotEqualTo(Long value) {
             addCriterion("batch_id <>", value, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdGreaterThan(Integer value) {
+        public Criteria andBatchIdGreaterThan(Long value) {
             addCriterion("batch_id >", value, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdGreaterThanOrEqualTo(Integer value) {
+        public Criteria andBatchIdGreaterThanOrEqualTo(Long value) {
             addCriterion("batch_id >=", value, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdLessThan(Integer value) {
+        public Criteria andBatchIdLessThan(Long value) {
             addCriterion("batch_id <", value, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdLessThanOrEqualTo(Integer value) {
+        public Criteria andBatchIdLessThanOrEqualTo(Long value) {
             addCriterion("batch_id <=", value, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdIn(List<Integer> values) {
+        public Criteria andBatchIdIn(List<Long> values) {
             addCriterion("batch_id in", values, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdNotIn(List<Integer> values) {
+        public Criteria andBatchIdNotIn(List<Long> values) {
             addCriterion("batch_id not in", values, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdBetween(Integer value1, Integer value2) {
+        public Criteria andBatchIdBetween(Long value1, Long value2) {
             addCriterion("batch_id between", value1, value2, "batchId");
             return (Criteria) this;
         }
 
-        public Criteria andBatchIdNotBetween(Integer value1, Integer value2) {
+        public Criteria andBatchIdNotBetween(Long value1, Long value2) {
             addCriterion("batch_id not between", value1, value2, "batchId");
             return (Criteria) this;
         }

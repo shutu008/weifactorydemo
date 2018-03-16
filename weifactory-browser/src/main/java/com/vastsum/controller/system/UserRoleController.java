@@ -1,17 +1,8 @@
 package com.vastsum.controller.system;
 
-import com.vastsum.dao.UserRoleMapper;
-import com.vastsum.entity.Role;
-import com.vastsum.entity.UserRole;
-import com.vastsum.enums.ResultStatus;
-import com.vastsum.model.ResultModel;
-import com.vastsum.service.RoleService;
-import com.vastsum.service.UserRoleService;
-import com.vastsum.entity.UserRoleExample;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import java.util.Date;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
-import java.util.List;
+import com.vastsum.dao.UserRoleMapper;
+import com.vastsum.entity.Role;
+import com.vastsum.entity.UserRole;
+import com.vastsum.entity.UserRoleExample;
+import com.vastsum.enums.ResultStatus;
+import com.vastsum.model.ResultModel;
+import com.vastsum.service.RoleService;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 
 /**
  * 用户权限管理
@@ -37,8 +38,8 @@ public class UserRoleController extends BaseController {
 
     @Autowired
     private UserRoleMapper userRoleMapper;
-    @Autowired
-    private UserRoleService userRoleService;
+/*    @Autowired
+    private UserRoleService userRoleService;*/
     @Autowired
     private RoleService roleService;
 

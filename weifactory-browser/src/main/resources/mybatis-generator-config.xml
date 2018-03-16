@@ -98,8 +98,10 @@
 		<!--<table tableName="communication_log"></table>-->
 		<!-- <table tableName="sys_param"></table> -->
 		<!-- <table schema="" tableName="device"></table> -->
-		<!-- <table tableName="batch"></table>
+		<!-- 
 		<table tableName="plant_info"></table> -->
-		<table tableName="param_set"></table>
+		<!-- <table tableName="param_set"></table> -->
+		<!-- <table tableName="hand_control"></table> -->
+		<table tableName="batch"></table>
 	</context>
 </generatorConfiguration>

@@ -79,14 +79,14 @@ public interface OrderService {
      * @param batchId
      * @return BizOrder
      */
-    BizOrder getBizOrderBybatchId(Integer batchId, Byte status);
+    BizOrder getBizOrderBybatchId(Long batchId, Byte status);
 
     /**
      * 根据批次id判断这个批次是否有订单
      * @param batchId
      * @return boolean
      */
-    boolean hasBizOrderBybatchId(Integer batchId);
+    boolean hasBizOrderBybatchId(Long batchId);
 
 
 }

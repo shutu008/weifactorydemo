@@ -1,17 +1,17 @@
 package com.vastsum.service.impl;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.dao.BizControlMapper;
 import com.vastsum.entity.BizControl;
 import com.vastsum.entity.BizControlExample;
 import com.vastsum.service.BizControlService;
-import com.vastsum.service.RoleService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author ssj
@@ -22,8 +22,6 @@ public class BizControlServiceImpl implements BizControlService {
 
     @Autowired
     private BizControlMapper bizControlMapper;
-    @Autowired
-    private RoleService roleService;
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

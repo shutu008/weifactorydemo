@@ -1,18 +1,17 @@
 package com.vastsum.service.impl;
 
-import com.vastsum.entity.Role;
-import com.vastsum.entity.UserRole;
-import com.vastsum.service.UserRoleService;
-import com.vastsum.dao.RoleMapper;
-import com.vastsum.dao.UserRoleMapper;
-import com.vastsum.entity.UserRoleExample;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
-import java.util.List;
+import com.vastsum.dao.RoleMapper;
+import com.vastsum.dao.UserRoleMapper;
+import com.vastsum.entity.Role;
+import com.vastsum.entity.UserRole;
+import com.vastsum.entity.UserRoleExample;
+import com.vastsum.service.UserRoleService;
 
 /**
  * @author ssj
@@ -20,7 +19,6 @@ import java.util.List;
  */
 @Service
 public class UserRoleServiceImpl implements UserRoleService {
-    private static Logger logger = LoggerFactory.getLogger(UserRoleServiceImpl.class);
     @Autowired
     private UserRoleMapper userRoleMapper;
     @Autowired
