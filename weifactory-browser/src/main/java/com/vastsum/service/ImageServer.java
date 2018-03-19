@@ -86,7 +86,7 @@ public interface ImageServer {
     Integer update(Image image);
     
     /**
-     * 根据时间和位置获取图片信息
+     * 根据时间和设备序列号获取图片信息
      * @param sn
      * @param date
      * @return Image
@@ -94,7 +94,15 @@ public interface ImageServer {
     Image getImageByDate(String sn, Date date);
     
     /**
-     * 根据位置获取最新的图片
+     * 根据批次和日期获取当日的图片
+     * @param batchId
+     * @param date
+     * @return Image
+     */
+    Image getImageByBatchAndDate(Long batchId, Date date);
+    
+    /**
+     * 根据设备序列号获取最新的图片
      * @param sn
      * @return Image
      */

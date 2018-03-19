@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.github.pagehelper.PageInfo;
+import com.vastsum.controller.system.BaseController;
 import com.vastsum.entity.Batch;
 import com.vastsum.entity.Image;
 import com.vastsum.entity.vo.BatchInfo;
@@ -39,7 +40,7 @@ import springfox.documentation.annotations.ApiIgnore;
 @RestController
 @RequestMapping(value = "/batch")
 @Api(value = "/batch",tags={"批次管理"})
-public class BatchController {
+public class BatchController extends BaseController {
 
     @Autowired
     private BatchService batchService;

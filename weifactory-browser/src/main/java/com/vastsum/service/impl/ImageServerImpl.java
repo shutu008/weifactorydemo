@@ -263,4 +263,15 @@ public class ImageServerImpl implements ImageServer {
 		}
 		return imageList.get(0);
 	}
+
+	//根据批次和日期获取传入日期的图片地址
+	@Override
+	public Image getImageByBatchAndDate(Long batchId, Date date) {
+		ImageExample imageExample = new ImageExample();
+		//一天之内的图片
+		imageExample.createCriteria()
+		.andGmtCreateBetween(DateTimeUtils.getStartTime(date), DateUtils.addDays(date, 1))
+		.andBatchIdEqualTo(batchId);
+		return result(imageExample);
+	}
 }

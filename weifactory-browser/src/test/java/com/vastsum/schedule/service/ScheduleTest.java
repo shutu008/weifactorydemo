@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.vastsum.WeifactoryApplication;
-import com.vastsum.core.utils.SpringContextUtils;
 import com.vastsum.schedule.entity.ScheduleJobEntity;
 import com.vastsum.schedule.utils.ScheduleUtils;
 

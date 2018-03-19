@@ -75,7 +75,7 @@ public class DeviceController extends BaseController {
     @ApiOperation(value="添加设备")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号", required = true),
-            @ApiImplicitParam(paramType = "query",name = "deviceType",value = "设备类型",required = false),
+            @ApiImplicitParam(paramType = "query",name = "deviceType",value = "设备规格",required = false),
             @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = false),
             @ApiImplicitParam(paramType = "query",name = "note",value = "备注信息",required = false)
     })
@@ -156,7 +156,7 @@ public class DeviceController extends BaseController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "id",value = "设备id",required = true),
             @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号",required = false),
-            @ApiImplicitParam(paramType = "query",name = "deviceType",value = "设备类型",required = false),
+            @ApiImplicitParam(paramType = "query",name = "deviceType",value = "设备规格",required = false),
             @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = false),
             @ApiImplicitParam(paramType = "query",name = "note",value = "备注信息",required = false)
     })

@@ -25,6 +25,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @author ssj
@@ -33,6 +34,7 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @RequestMapping("/history")
 @Api(value="/history",tags = {"历史数据管理"})
+@ApiIgnore
 public class SensorController extends BaseController {
 
 
