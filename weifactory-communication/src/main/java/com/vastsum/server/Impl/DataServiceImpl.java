@@ -1,19 +1,21 @@
 package com.vastsum.server.Impl;
 
-import com.vastsum.entity.BizException;
-import com.vastsum.entity.SensorCollection;
-import com.vastsum.pojo.BizExceptionContent;
-import com.vastsum.pojo.ExceptionTypeEnum;
-import com.vastsum.pojo.ModelEntity;
-import com.vastsum.server.DataService;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import com.vastsum.entity.BizException;
+import com.vastsum.entity.HistoryInfo;
+import com.vastsum.entity.SensorCollection;
+import com.vastsum.pojo.BizExceptionContent;
+import com.vastsum.pojo.ExceptionTypeEnum;
+import com.vastsum.pojo.ModelEntity;
+import com.vastsum.server.DataService;
 
 /**
  * @author ssj
@@ -202,5 +204,29 @@ public class DataServiceImpl implements DataService {
         }
         return exceptionInsert(bizException);
     }
+
+    //更新历史信息，数据采集服务
+	@Override
+	public void update(HistoryInfo historyInfo) throws Exception {
+		if(historyInfo == null || historyInfo.getSn() == null){
+			return;
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

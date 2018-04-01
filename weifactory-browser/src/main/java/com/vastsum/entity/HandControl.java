@@ -7,63 +7,69 @@ public class HandControl {
 
     private String headControlMod;
 
-    private String sky;
+    private String wd1;
 
-    private String yy;
+    private String kqxh1;
 
-    private String wind;
+    private String kqxd1;
 
-    private String ys;
+    private String hxf1;
 
-    private String pl;
+    private String syyy1;
 
-    private String growInner1;
+    private String pyyy1;
 
-    private String growMiddle1;
+    private String yyyxd1;
 
-    private String growOut1;
+    private String led11;
 
-    private String growInner2;
+    private String led12;
 
-    private String growMiddle2;
+    private String led13;
 
-    private String growOut2;
+    private String wd2;
 
-    private String growInner3;
+    private String kqxh2;
 
-    private String growMiddle3;
+    private String kqxd2;
 
-    private String growOut3;
+    private String hxf2;
 
-    private String add1;
+    private String syyy2;
 
-    private String add2;
+    private String pyyy2;
 
-    private String add3;
+    private String yyyxd2;
 
-    private String inlet1;
+    private String led21;
 
-    private String inlet2;
+    private String led22;
 
-    private String inlet3;
+    private String led23;
 
-    private String out1;
+    private String wd3;
 
-    private String out2;
+    private String kqxh3;
 
-    private String out3;
+    private String kqxd3;
 
-    private String feedLed;
+    private String hxf3;
 
-    private String feedPl;
+    private String syyy3;
 
-    private String sb;
+    private String pyyy3;
 
-    private String fs1;
+    private String yyyxd3;
 
-    private String fs2;
+    private String led31;
 
-    private String fs3;
+    private String led32;
+
+    private String led33;
+
+    private String ymbg;
+
+    private String mpjs;
 
     private String bs;
 
@@ -93,236 +99,260 @@ public class HandControl {
         this.headControlMod = headControlMod == null ? null : headControlMod.trim();
     }
 
-    public String getSky() {
-        return sky;
+    public String getWd1() {
+        return wd1;
     }
 
-    public void setSky(String sky) {
-        this.sky = sky == null ? null : sky.trim();
+    public void setWd1(String wd1) {
+        this.wd1 = wd1 == null ? null : wd1.trim();
     }
 
-    public String getYy() {
-        return yy;
+    public String getKqxh1() {
+        return kqxh1;
     }
 
-    public void setYy(String yy) {
-        this.yy = yy == null ? null : yy.trim();
+    public void setKqxh1(String kqxh1) {
+        this.kqxh1 = kqxh1 == null ? null : kqxh1.trim();
     }
 
-    public String getWind() {
-        return wind;
+    public String getKqxd1() {
+        return kqxd1;
     }
 
-    public void setWind(String wind) {
-        this.wind = wind == null ? null : wind.trim();
+    public void setKqxd1(String kqxd1) {
+        this.kqxd1 = kqxd1 == null ? null : kqxd1.trim();
     }
 
-    public String getYs() {
-        return ys;
+    public String getHxf1() {
+        return hxf1;
     }
 
-    public void setYs(String ys) {
-        this.ys = ys == null ? null : ys.trim();
+    public void setHxf1(String hxf1) {
+        this.hxf1 = hxf1 == null ? null : hxf1.trim();
     }
 
-    public String getPl() {
-        return pl;
+    public String getSyyy1() {
+        return syyy1;
     }
 
-    public void setPl(String pl) {
-        this.pl = pl == null ? null : pl.trim();
+    public void setSyyy1(String syyy1) {
+        this.syyy1 = syyy1 == null ? null : syyy1.trim();
     }
 
-    public String getGrowInner1() {
-        return growInner1;
+    public String getPyyy1() {
+        return pyyy1;
     }
 
-    public void setGrowInner1(String growInner1) {
-        this.growInner1 = growInner1 == null ? null : growInner1.trim();
+    public void setPyyy1(String pyyy1) {
+        this.pyyy1 = pyyy1 == null ? null : pyyy1.trim();
     }
 
-    public String getGrowMiddle1() {
-        return growMiddle1;
+    public String getYyyxd1() {
+        return yyyxd1;
     }
 
-    public void setGrowMiddle1(String growMiddle1) {
-        this.growMiddle1 = growMiddle1 == null ? null : growMiddle1.trim();
+    public void setYyyxd1(String yyyxd1) {
+        this.yyyxd1 = yyyxd1 == null ? null : yyyxd1.trim();
     }
 
-    public String getGrowOut1() {
-        return growOut1;
+    public String getLed11() {
+        return led11;
     }
 
-    public void setGrowOut1(String growOut1) {
-        this.growOut1 = growOut1 == null ? null : growOut1.trim();
+    public void setLed11(String led11) {
+        this.led11 = led11 == null ? null : led11.trim();
     }
 
-    public String getGrowInner2() {
-        return growInner2;
+    public String getLed12() {
+        return led12;
     }
 
-    public void setGrowInner2(String growInner2) {
-        this.growInner2 = growInner2 == null ? null : growInner2.trim();
+    public void setLed12(String led12) {
+        this.led12 = led12 == null ? null : led12.trim();
     }
 
-    public String getGrowMiddle2() {
-        return growMiddle2;
+    public String getLed13() {
+        return led13;
     }
 
-    public void setGrowMiddle2(String growMiddle2) {
-        this.growMiddle2 = growMiddle2 == null ? null : growMiddle2.trim();
+    public void setLed13(String led13) {
+        this.led13 = led13 == null ? null : led13.trim();
     }
 
-    public String getGrowOut2() {
-        return growOut2;
+    public String getWd2() {
+        return wd2;
     }
 
-    public void setGrowOut2(String growOut2) {
-        this.growOut2 = growOut2 == null ? null : growOut2.trim();
+    public void setWd2(String wd2) {
+        this.wd2 = wd2 == null ? null : wd2.trim();
     }
 
-    public String getGrowInner3() {
-        return growInner3;
+    public String getKqxh2() {
+        return kqxh2;
     }
 
-    public void setGrowInner3(String growInner3) {
-        this.growInner3 = growInner3 == null ? null : growInner3.trim();
+    public void setKqxh2(String kqxh2) {
+        this.kqxh2 = kqxh2 == null ? null : kqxh2.trim();
     }
 
-    public String getGrowMiddle3() {
-        return growMiddle3;
+    public String getKqxd2() {
+        return kqxd2;
     }
 
-    public void setGrowMiddle3(String growMiddle3) {
-        this.growMiddle3 = growMiddle3 == null ? null : growMiddle3.trim();
+    public void setKqxd2(String kqxd2) {
+        this.kqxd2 = kqxd2 == null ? null : kqxd2.trim();
     }
 
-    public String getGrowOut3() {
-        return growOut3;
+    public String getHxf2() {
+        return hxf2;
     }
 
-    public void setGrowOut3(String growOut3) {
-        this.growOut3 = growOut3 == null ? null : growOut3.trim();
+    public void setHxf2(String hxf2) {
+        this.hxf2 = hxf2 == null ? null : hxf2.trim();
     }
 
-    public String getAdd1() {
-        return add1;
+    public String getSyyy2() {
+        return syyy2;
     }
 
-    public void setAdd1(String add1) {
-        this.add1 = add1 == null ? null : add1.trim();
+    public void setSyyy2(String syyy2) {
+        this.syyy2 = syyy2 == null ? null : syyy2.trim();
     }
 
-    public String getAdd2() {
-        return add2;
+    public String getPyyy2() {
+        return pyyy2;
     }
 
-    public void setAdd2(String add2) {
-        this.add2 = add2 == null ? null : add2.trim();
+    public void setPyyy2(String pyyy2) {
+        this.pyyy2 = pyyy2 == null ? null : pyyy2.trim();
     }
 
-    public String getAdd3() {
-        return add3;
+    public String getYyyxd2() {
+        return yyyxd2;
     }
 
-    public void setAdd3(String add3) {
-        this.add3 = add3 == null ? null : add3.trim();
+    public void setYyyxd2(String yyyxd2) {
+        this.yyyxd2 = yyyxd2 == null ? null : yyyxd2.trim();
     }
 
-    public String getInlet1() {
-        return inlet1;
+    public String getLed21() {
+        return led21;
     }
 
-    public void setInlet1(String inlet1) {
-        this.inlet1 = inlet1 == null ? null : inlet1.trim();
+    public void setLed21(String led21) {
+        this.led21 = led21 == null ? null : led21.trim();
     }
 
-    public String getInlet2() {
-        return inlet2;
+    public String getLed22() {
+        return led22;
     }
 
-    public void setInlet2(String inlet2) {
-        this.inlet2 = inlet2 == null ? null : inlet2.trim();
+    public void setLed22(String led22) {
+        this.led22 = led22 == null ? null : led22.trim();
     }
 
-    public String getInlet3() {
-        return inlet3;
+    public String getLed23() {
+        return led23;
     }
 
-    public void setInlet3(String inlet3) {
-        this.inlet3 = inlet3 == null ? null : inlet3.trim();
+    public void setLed23(String led23) {
+        this.led23 = led23 == null ? null : led23.trim();
     }
 
-    public String getOut1() {
-        return out1;
+    public String getWd3() {
+        return wd3;
     }
 
-    public void setOut1(String out1) {
-        this.out1 = out1 == null ? null : out1.trim();
+    public void setWd3(String wd3) {
+        this.wd3 = wd3 == null ? null : wd3.trim();
     }
 
-    public String getOut2() {
-        return out2;
+    public String getKqxh3() {
+        return kqxh3;
     }
 
-    public void setOut2(String out2) {
-        this.out2 = out2 == null ? null : out2.trim();
+    public void setKqxh3(String kqxh3) {
+        this.kqxh3 = kqxh3 == null ? null : kqxh3.trim();
     }
 
-    public String getOut3() {
-        return out3;
+    public String getKqxd3() {
+        return kqxd3;
     }
 
-    public void setOut3(String out3) {
-        this.out3 = out3 == null ? null : out3.trim();
+    public void setKqxd3(String kqxd3) {
+        this.kqxd3 = kqxd3 == null ? null : kqxd3.trim();
     }
 
-    public String getFeedLed() {
-        return feedLed;
+    public String getHxf3() {
+        return hxf3;
     }
 
-    public void setFeedLed(String feedLed) {
-        this.feedLed = feedLed == null ? null : feedLed.trim();
+    public void setHxf3(String hxf3) {
+        this.hxf3 = hxf3 == null ? null : hxf3.trim();
     }
 
-    public String getFeedPl() {
-        return feedPl;
+    public String getSyyy3() {
+        return syyy3;
     }
 
-    public void setFeedPl(String feedPl) {
-        this.feedPl = feedPl == null ? null : feedPl.trim();
+    public void setSyyy3(String syyy3) {
+        this.syyy3 = syyy3 == null ? null : syyy3.trim();
     }
 
-    public String getSb() {
-        return sb;
+    public String getPyyy3() {
+        return pyyy3;
     }
 
-    public void setSb(String sb) {
-        this.sb = sb == null ? null : sb.trim();
+    public void setPyyy3(String pyyy3) {
+        this.pyyy3 = pyyy3 == null ? null : pyyy3.trim();
     }
 
-    public String getFs1() {
-        return fs1;
+    public String getYyyxd3() {
+        return yyyxd3;
     }
 
-    public void setFs1(String fs1) {
-        this.fs1 = fs1 == null ? null : fs1.trim();
+    public void setYyyxd3(String yyyxd3) {
+        this.yyyxd3 = yyyxd3 == null ? null : yyyxd3.trim();
     }
 
-    public String getFs2() {
-        return fs2;
+    public String getLed31() {
+        return led31;
     }
 
-    public void setFs2(String fs2) {
-        this.fs2 = fs2 == null ? null : fs2.trim();
+    public void setLed31(String led31) {
+        this.led31 = led31 == null ? null : led31.trim();
     }
 
-    public String getFs3() {
-        return fs3;
+    public String getLed32() {
+        return led32;
     }
 
-    public void setFs3(String fs3) {
-        this.fs3 = fs3 == null ? null : fs3.trim();
+    public void setLed32(String led32) {
+        this.led32 = led32 == null ? null : led32.trim();
+    }
+
+    public String getLed33() {
+        return led33;
+    }
+
+    public void setLed33(String led33) {
+        this.led33 = led33 == null ? null : led33.trim();
+    }
+
+    public String getYmbg() {
+        return ymbg;
+    }
+
+    public void setYmbg(String ymbg) {
+        this.ymbg = ymbg == null ? null : ymbg.trim();
+    }
+
+    public String getMpjs() {
+        return mpjs;
+    }
+
+    public void setMpjs(String mpjs) {
+        this.mpjs = mpjs == null ? null : mpjs.trim();
     }
 
     public String getBs() {
@@ -381,35 +411,38 @@ public class HandControl {
         sb.append("Hash = ").append(hashCode());
         sb.append(", handControlId=").append(handControlId);
         sb.append(", headControlMod=").append(headControlMod);
-        sb.append(", sky=").append(sky);
-        sb.append(", yy=").append(yy);
-        sb.append(", wind=").append(wind);
-        sb.append(", ys=").append(ys);
-        sb.append(", pl=").append(pl);
-        sb.append(", growInner1=").append(growInner1);
-        sb.append(", growMiddle1=").append(growMiddle1);
-        sb.append(", growOut1=").append(growOut1);
-        sb.append(", growInner2=").append(growInner2);
-        sb.append(", growMiddle2=").append(growMiddle2);
-        sb.append(", growOut2=").append(growOut2);
-        sb.append(", growInner3=").append(growInner3);
-        sb.append(", growMiddle3=").append(growMiddle3);
-        sb.append(", growOut3=").append(growOut3);
-        sb.append(", add1=").append(add1);
-        sb.append(", add2=").append(add2);
-        sb.append(", add3=").append(add3);
-        sb.append(", inlet1=").append(inlet1);
-        sb.append(", inlet2=").append(inlet2);
-        sb.append(", inlet3=").append(inlet3);
-        sb.append(", out1=").append(out1);
-        sb.append(", out2=").append(out2);
-        sb.append(", out3=").append(out3);
-        sb.append(", feedLed=").append(feedLed);
-        sb.append(", feedPl=").append(feedPl);
-        sb.append(", sb=").append(sb);
-        sb.append(", fs1=").append(fs1);
-        sb.append(", fs2=").append(fs2);
-        sb.append(", fs3=").append(fs3);
+        sb.append(", wd1=").append(wd1);
+        sb.append(", kqxh1=").append(kqxh1);
+        sb.append(", kqxd1=").append(kqxd1);
+        sb.append(", hxf1=").append(hxf1);
+        sb.append(", syyy1=").append(syyy1);
+        sb.append(", pyyy1=").append(pyyy1);
+        sb.append(", yyyxd1=").append(yyyxd1);
+        sb.append(", led11=").append(led11);
+        sb.append(", led12=").append(led12);
+        sb.append(", led13=").append(led13);
+        sb.append(", wd2=").append(wd2);
+        sb.append(", kqxh2=").append(kqxh2);
+        sb.append(", kqxd2=").append(kqxd2);
+        sb.append(", hxf2=").append(hxf2);
+        sb.append(", syyy2=").append(syyy2);
+        sb.append(", pyyy2=").append(pyyy2);
+        sb.append(", yyyxd2=").append(yyyxd2);
+        sb.append(", led21=").append(led21);
+        sb.append(", led22=").append(led22);
+        sb.append(", led23=").append(led23);
+        sb.append(", wd3=").append(wd3);
+        sb.append(", kqxh3=").append(kqxh3);
+        sb.append(", kqxd3=").append(kqxd3);
+        sb.append(", hxf3=").append(hxf3);
+        sb.append(", syyy3=").append(syyy3);
+        sb.append(", pyyy3=").append(pyyy3);
+        sb.append(", yyyxd3=").append(yyyxd3);
+        sb.append(", led31=").append(led31);
+        sb.append(", led32=").append(led32);
+        sb.append(", led33=").append(led33);
+        sb.append(", ymbg=").append(ymbg);
+        sb.append(", mpjs=").append(mpjs);
         sb.append(", bs=").append(bs);
         sb.append(", ps=").append(ps);
         sb.append(", batchId=").append(batchId);

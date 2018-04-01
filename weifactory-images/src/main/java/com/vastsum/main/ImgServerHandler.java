@@ -125,13 +125,14 @@ public class ImgServerHandler extends ChannelInboundHandlerAdapter {
 
     //保存图片信息
     private Integer saveImage(String sn, String sensorMark, String path){
-        Image image  = new Image();
+       /* Image image  = new Image();
         image.setSn(sn);
         image.setSensorMark(sensorMark);
         image.setPath(path);
         image.setGmtCreate(new Date());
         Integer i = imageServer.save(image);
-        return i;
+        return i;*/
+    	return 0;
     }
     
     

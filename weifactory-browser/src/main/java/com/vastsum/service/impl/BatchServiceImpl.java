@@ -145,4 +145,13 @@ public class BatchServiceImpl implements BatchService {
         int i = batchMapper.updateByPrimaryKeySelective(batch);
         return i;
     }
+
+	@Override
+	public int updateTrustStatusByDeviceId(Long batchId) {
+
+		Batch batch = new Batch();
+		batch.setBatchId(batchId);
+		batch.setTrustStatus("1");
+		return batchMapper.updateByPrimaryKeySelective(batch);
+	}
 }

@@ -9,8 +9,8 @@
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-	<name>wechat-pay</name>
-	<artifactId>vastsum-images</artifactId>
+	<name>weifactory-pay</name>
+	<artifactId>weifactory-pay</artifactId>
 	<!-- <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -93,14 +93,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<proc>none</proc>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

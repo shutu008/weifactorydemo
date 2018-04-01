@@ -97,4 +97,11 @@ public interface BatchService {
      * @return int
      */
      int updateBatchOrderStatus(Long batchId, String status);
+     
+     /**
+      * 根据批次id更新托管状态
+      * @param batchId
+      * @return int
+      */
+     int updateTrustStatusByDeviceId(Long batchId);
 }

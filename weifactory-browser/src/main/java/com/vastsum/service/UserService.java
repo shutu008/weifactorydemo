@@ -109,6 +109,13 @@ public interface UserService {
      * @return List<User>
      */
      List<User> listExperts();
+     
+     /**
+      * 列出对应角色和登录状态的用户
+      * @param roleId
+      * @param loginStatus
+      */
+     List<User> listOnlineExperts(Integer roleId, String loginStatus);
 
     /**
      * 根据用户名密码获取用户信息
@@ -132,5 +139,12 @@ public interface UserService {
      * @return Integer
      */
     Integer deleteByUserId(Integer userId);
+    
+    /**
+     * 更新登录状态
+     * @param loginStatus
+     * @return int
+     */
+    int updateLoginStatus(Integer userId, String loginStatus);
 
 }

@@ -51,7 +51,7 @@ public class BatchController extends BaseController {
     @Autowired(required = false)
     private ControlService controlService;
     @Autowired
-    private WeifactoryProperties weifactoryProperties;
+    private WeifactoryProperties weifactoryProperties; 
 
     
 	//根据设备id获取最新的批次信息，设备管理显示界面20180311
@@ -101,15 +101,14 @@ public class BatchController extends BaseController {
     }
 
 
-    //根据设备id获取历史上所有的批次信息-管理员
-    @RequestMapping(value = "/history/{deviceId}/{page}/{pageSize}",method = RequestMethod.GET)
-    @ApiOperation(value = "根据设备id获取历史上所有的批次信息-管理员")
+    //根据设备id获取所有的批次信息
+    @GetMapping(value = "/{deviceId}/{page}/{pageSize}")
+    @ApiOperation(value = "根据设备id获取历史上所有的批次信息@20180326")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "deviceId",value = "设备id",required = true),
             @ApiImplicitParam(paramType = "path",name = "page",value = "页码",required = true),
             @ApiImplicitParam(paramType = "path",name = "pageSize",value = "页数",required = true)
     })
-    @ApiIgnore
     public ResponseEntity<ResultModel> batchList(@PathVariable Integer deviceId,
                                                  @PathVariable Integer page,
                                                  @PathVariable Integer pageSize){
@@ -117,17 +116,18 @@ public class BatchController extends BaseController {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.DEVICE_ID_NULL));
         }
         PageInfo<Batch> batchPageInfo = batchService.selectBatchsByDeviceId(deviceId, page, pageSize);
-        return ResponseEntity.ok(ResultModel.ok(batchPageInfo,ResultStatus.BATCH_SELECT_SUCCESS));
+        return V.ok(batchPageInfo);
     }
 
 
-    //获取历史上所有的批次信息(批次管理列表)-管理员
+    //根据设备id获取批次列表
     @RequestMapping(value = "/history/{page}/{pageSize}",method = RequestMethod.GET)
     @ApiOperation(value = "根据获取历史上所有的批次信息(批次管理列表)-管理员")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "page",value = "页码",required = true),
             @ApiImplicitParam(paramType = "path",name = "pageSize",value = "页数",required = true)
     })
+    @ApiIgnore
     public ResponseEntity<ResultModel> adminBatchList(@PathVariable Integer page, @PathVariable Integer pageSize){
         PageInfo<Batch> batchPageInfo = batchService.selectAllBatch(page,pageSize);
         return ResponseEntity.ok(ResultModel.ok(batchPageInfo,ResultStatus.BATCH_SELECT_SUCCESS));
@@ -240,7 +240,7 @@ public class BatchController extends BaseController {
     }
     
     //根据用户id获取用户的批次信息@20171022
-    @GetMapping(value = "/{userId}/{page}/{pageSize}")
+    @GetMapping(value = "/user/{userId}/{page}/{pageSize}")
     @ApiOperation(value = "根据用户id获取用户的批次信息@20171022")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path", name = "userId", value = "用户ID", required = true),

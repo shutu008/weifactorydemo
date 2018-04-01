@@ -1,22 +1,31 @@
 package com.vastsum.controller;
 
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.vastsum.controller.system.BaseController;
+import com.vastsum.entity.BizControl;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
+import com.vastsum.model.V;
+import com.vastsum.pojo.AskBody;
+import com.vastsum.service.BatchService;
 import com.vastsum.service.BizControlService;
 import com.vastsum.service.ControlService;
-import com.vastsum.entity.BizControl;
-import com.vastsum.pojo.AskBody;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * @author ssj
@@ -31,6 +40,9 @@ public class ControlController extends BaseController {
     @Autowired
     private BizControlService bizControlService; //控制管理
 
+    @Autowired
+    private BatchService batchService;
+    
     @PostMapping(value = "/sensor")
     @ApiOperation(value = "设备执行机构控制@20171118")
     @ApiImplicitParams({
@@ -110,4 +122,20 @@ public class ControlController extends BaseController {
         List<BizControl> bizControls = bizControlService.listBySn(sn);
         return ResponseEntity.ok(ResultModel.ok(bizControls));
     }
+    
+    //设备托管给服务器
+    @GetMapping(value = "/trust/{batchId}")
+    @ApiOperation(value = "设备托管给服务器@20180330")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path",name = "batchId",value = "批次id",required = true)
+    })
+    public ResponseEntity<ResultModel> trustStatus(@PathVariable Long batchId){
+
+    	int i = batchService.updateTrustStatusByDeviceId(batchId);
+    	
+    	return V.ok(i);
+    }
+    
+    
+    
 }

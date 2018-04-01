@@ -5,11 +5,11 @@
     <id column="param_set_id" jdbcType="BIGINT" property="paramSetId" />
     <result column="batch_id" jdbcType="BIGINT" property="batchId" />
     <result column="sn" jdbcType="VARCHAR" property="sn" />
-    <result column="day_set" jdbcType="TIMESTAMP" property="daySet" />
-    <result column="day_start_time" jdbcType="TIMESTAMP" property="dayStartTime" />
-    <result column="day_end_time" jdbcType="TIMESTAMP" property="dayEndTime" />
-    <result column="night_start_time" jdbcType="TIMESTAMP" property="nightStartTime" />
-    <result column="night_end_time" jdbcType="TIMESTAMP" property="nightEndTime" />
+    <result column="day_set" jdbcType="VARCHAR" property="daySet" />
+    <result column="day_start_time" jdbcType="VARCHAR" property="dayStartTime" />
+    <result column="day_end_time" jdbcType="VARCHAR" property="dayEndTime" />
+    <result column="night_start_time" jdbcType="VARCHAR" property="nightStartTime" />
+    <result column="night_end_time" jdbcType="VARCHAR" property="nightEndTime" />
     <result column="day_temperature" jdbcType="DOUBLE" property="dayTemperature" />
     <result column="day_humidity" jdbcType="DOUBLE" property="dayHumidity" />
     <result column="day_wind_lenght_time" jdbcType="INTEGER" property="dayWindLenghtTime" />
@@ -54,8 +54,8 @@
     <result column="night_feed_bg_length" jdbcType="INTEGER" property="nightFeedBgLength" />
     <result column="night_feed_water_length" jdbcType="INTEGER" property="nightFeedWaterLength" />
     <result column="night_feed_water_cycle" jdbcType="INTEGER" property="nightFeedWaterCycle" />
-    <result column="yy_before_time" jdbcType="TIMESTAMP" property="yyBeforeTime" />
-    <result column="yy_next_time" jdbcType="TIMESTAMP" property="yyNextTime" />
+    <result column="yy_before_time" jdbcType="VARCHAR" property="yyBeforeTime" />
+    <result column="yy_next_time" jdbcType="VARCHAR" property="yyNextTime" />
     <result column="yy_p_time_1" jdbcType="INTEGER" property="yyPTime1" />
     <result column="yy_p_time_2" jdbcType="INTEGER" property="yyPTime2" />
     <result column="yy_p_time_3" jdbcType="INTEGER" property="yyPTime3" />
@@ -206,8 +206,8 @@
       status, gmt_create, gmt_modified
       )
     values (#{paramSetId,jdbcType=BIGINT}, #{batchId,jdbcType=BIGINT}, #{sn,jdbcType=VARCHAR}, 
-      #{daySet,jdbcType=TIMESTAMP}, #{dayStartTime,jdbcType=TIMESTAMP}, #{dayEndTime,jdbcType=TIMESTAMP}, 
-      #{nightStartTime,jdbcType=TIMESTAMP}, #{nightEndTime,jdbcType=TIMESTAMP}, #{dayTemperature,jdbcType=DOUBLE}, 
+      #{daySet,jdbcType=VARCHAR}, #{dayStartTime,jdbcType=VARCHAR}, #{dayEndTime,jdbcType=VARCHAR}, 
+      #{nightStartTime,jdbcType=VARCHAR}, #{nightEndTime,jdbcType=VARCHAR}, #{dayTemperature,jdbcType=DOUBLE}, 
       #{dayHumidity,jdbcType=DOUBLE}, #{dayWindLenghtTime,jdbcType=INTEGER}, #{dayWindCycleTime,jdbcType=INTEGER}, 
       #{dayBgLenght1,jdbcType=INTEGER}, #{dayBgCycle1,jdbcType=INTEGER}, #{dayBgLenght2,jdbcType=INTEGER}, 
       #{dayBgCycle2,jdbcType=INTEGER}, #{dayBgLenght3,jdbcType=INTEGER}, #{dayBgCycle3,jdbcType=INTEGER}, 
@@ -222,7 +222,7 @@
       #{nightYyLength2,jdbcType=INTEGER}, #{nightYyCycle2,jdbcType=INTEGER}, #{nightYyLength3,jdbcType=INTEGER}, 
       #{nightYyCycle3,jdbcType=INTEGER}, #{nightNewWindLength,jdbcType=INTEGER}, #{nightNewWindTime,jdbcType=INTEGER}, 
       #{nightFeedBgTime,jdbcType=INTEGER}, #{nightFeedBgLength,jdbcType=INTEGER}, #{nightFeedWaterLength,jdbcType=INTEGER}, 
-      #{nightFeedWaterCycle,jdbcType=INTEGER}, #{yyBeforeTime,jdbcType=TIMESTAMP}, #{yyNextTime,jdbcType=TIMESTAMP}, 
+      #{nightFeedWaterCycle,jdbcType=INTEGER}, #{yyBeforeTime,jdbcType=VARCHAR}, #{yyNextTime,jdbcType=VARCHAR}, 
       #{yyPTime1,jdbcType=INTEGER}, #{yyPTime2,jdbcType=INTEGER}, #{yyPTime3,jdbcType=INTEGER}, 
       #{yyCTime,jdbcType=INTEGER}, #{yyKTime,jdbcType=INTEGER}, #{comm,jdbcType=INTEGER}, 
       #{ip,jdbcType=VARCHAR}, #{port,jdbcType=INTEGER}, #{cyCycle,jdbcType=INTEGER}, 
@@ -462,19 +462,19 @@
         #{sn,jdbcType=VARCHAR},
       </if>
       <if test="daySet != null">
-        #{daySet,jdbcType=TIMESTAMP},
+        #{daySet,jdbcType=VARCHAR},
       </if>
       <if test="dayStartTime != null">
-        #{dayStartTime,jdbcType=TIMESTAMP},
+        #{dayStartTime,jdbcType=VARCHAR},
       </if>
       <if test="dayEndTime != null">
-        #{dayEndTime,jdbcType=TIMESTAMP},
+        #{dayEndTime,jdbcType=VARCHAR},
       </if>
       <if test="nightStartTime != null">
-        #{nightStartTime,jdbcType=TIMESTAMP},
+        #{nightStartTime,jdbcType=VARCHAR},
       </if>
       <if test="nightEndTime != null">
-        #{nightEndTime,jdbcType=TIMESTAMP},
+        #{nightEndTime,jdbcType=VARCHAR},
       </if>
       <if test="dayTemperature != null">
         #{dayTemperature,jdbcType=DOUBLE},
@@ -609,10 +609,10 @@
         #{nightFeedWaterCycle,jdbcType=INTEGER},
       </if>
       <if test="yyBeforeTime != null">
-        #{yyBeforeTime,jdbcType=TIMESTAMP},
+        #{yyBeforeTime,jdbcType=VARCHAR},
       </if>
       <if test="yyNextTime != null">
-        #{yyNextTime,jdbcType=TIMESTAMP},
+        #{yyNextTime,jdbcType=VARCHAR},
       </if>
       <if test="yyPTime1 != null">
         #{yyPTime1,jdbcType=INTEGER},
@@ -689,19 +689,19 @@
         sn = #{record.sn,jdbcType=VARCHAR},
       </if>
       <if test="record.daySet != null">
-        day_set = #{record.daySet,jdbcType=TIMESTAMP},
+        day_set = #{record.daySet,jdbcType=VARCHAR},
       </if>
       <if test="record.dayStartTime != null">
-        day_start_time = #{record.dayStartTime,jdbcType=TIMESTAMP},
+        day_start_time = #{record.dayStartTime,jdbcType=VARCHAR},
       </if>
       <if test="record.dayEndTime != null">
-        day_end_time = #{record.dayEndTime,jdbcType=TIMESTAMP},
+        day_end_time = #{record.dayEndTime,jdbcType=VARCHAR},
       </if>
       <if test="record.nightStartTime != null">
-        night_start_time = #{record.nightStartTime,jdbcType=TIMESTAMP},
+        night_start_time = #{record.nightStartTime,jdbcType=VARCHAR},
       </if>
       <if test="record.nightEndTime != null">
-        night_end_time = #{record.nightEndTime,jdbcType=TIMESTAMP},
+        night_end_time = #{record.nightEndTime,jdbcType=VARCHAR},
       </if>
       <if test="record.dayTemperature != null">
         day_temperature = #{record.dayTemperature,jdbcType=DOUBLE},
@@ -836,10 +836,10 @@
         night_feed_water_cycle = #{record.nightFeedWaterCycle,jdbcType=INTEGER},
       </if>
       <if test="record.yyBeforeTime != null">
-        yy_before_time = #{record.yyBeforeTime,jdbcType=TIMESTAMP},
+        yy_before_time = #{record.yyBeforeTime,jdbcType=VARCHAR},
       </if>
       <if test="record.yyNextTime != null">
-        yy_next_time = #{record.yyNextTime,jdbcType=TIMESTAMP},
+        yy_next_time = #{record.yyNextTime,jdbcType=VARCHAR},
       </if>
       <if test="record.yyPTime1 != null">
         yy_p_time_1 = #{record.yyPTime1,jdbcType=INTEGER},
@@ -905,11 +905,11 @@
     set param_set_id = #{record.paramSetId,jdbcType=BIGINT},
       batch_id = #{record.batchId,jdbcType=BIGINT},
       sn = #{record.sn,jdbcType=VARCHAR},
-      day_set = #{record.daySet,jdbcType=TIMESTAMP},
-      day_start_time = #{record.dayStartTime,jdbcType=TIMESTAMP},
-      day_end_time = #{record.dayEndTime,jdbcType=TIMESTAMP},
-      night_start_time = #{record.nightStartTime,jdbcType=TIMESTAMP},
-      night_end_time = #{record.nightEndTime,jdbcType=TIMESTAMP},
+      day_set = #{record.daySet,jdbcType=VARCHAR},
+      day_start_time = #{record.dayStartTime,jdbcType=VARCHAR},
+      day_end_time = #{record.dayEndTime,jdbcType=VARCHAR},
+      night_start_time = #{record.nightStartTime,jdbcType=VARCHAR},
+      night_end_time = #{record.nightEndTime,jdbcType=VARCHAR},
       day_temperature = #{record.dayTemperature,jdbcType=DOUBLE},
       day_humidity = #{record.dayHumidity,jdbcType=DOUBLE},
       day_wind_lenght_time = #{record.dayWindLenghtTime,jdbcType=INTEGER},
@@ -954,8 +954,8 @@
       night_feed_bg_length = #{record.nightFeedBgLength,jdbcType=INTEGER},
       night_feed_water_length = #{record.nightFeedWaterLength,jdbcType=INTEGER},
       night_feed_water_cycle = #{record.nightFeedWaterCycle,jdbcType=INTEGER},
-      yy_before_time = #{record.yyBeforeTime,jdbcType=TIMESTAMP},
-      yy_next_time = #{record.yyNextTime,jdbcType=TIMESTAMP},
+      yy_before_time = #{record.yyBeforeTime,jdbcType=VARCHAR},
+      yy_next_time = #{record.yyNextTime,jdbcType=VARCHAR},
       yy_p_time_1 = #{record.yyPTime1,jdbcType=INTEGER},
       yy_p_time_2 = #{record.yyPTime2,jdbcType=INTEGER},
       yy_p_time_3 = #{record.yyPTime3,jdbcType=INTEGER},
@@ -988,19 +988,19 @@
         sn = #{sn,jdbcType=VARCHAR},
       </if>
       <if test="daySet != null">
-        day_set = #{daySet,jdbcType=TIMESTAMP},
+        day_set = #{daySet,jdbcType=VARCHAR},
       </if>
       <if test="dayStartTime != null">
-        day_start_time = #{dayStartTime,jdbcType=TIMESTAMP},
+        day_start_time = #{dayStartTime,jdbcType=VARCHAR},
       </if>
       <if test="dayEndTime != null">
-        day_end_time = #{dayEndTime,jdbcType=TIMESTAMP},
+        day_end_time = #{dayEndTime,jdbcType=VARCHAR},
       </if>
       <if test="nightStartTime != null">
-        night_start_time = #{nightStartTime,jdbcType=TIMESTAMP},
+        night_start_time = #{nightStartTime,jdbcType=VARCHAR},
       </if>
       <if test="nightEndTime != null">
-        night_end_time = #{nightEndTime,jdbcType=TIMESTAMP},
+        night_end_time = #{nightEndTime,jdbcType=VARCHAR},
       </if>
       <if test="dayTemperature != null">
         day_temperature = #{dayTemperature,jdbcType=DOUBLE},
@@ -1135,10 +1135,10 @@
         night_feed_water_cycle = #{nightFeedWaterCycle,jdbcType=INTEGER},
       </if>
       <if test="yyBeforeTime != null">
-        yy_before_time = #{yyBeforeTime,jdbcType=TIMESTAMP},
+        yy_before_time = #{yyBeforeTime,jdbcType=VARCHAR},
       </if>
       <if test="yyNextTime != null">
-        yy_next_time = #{yyNextTime,jdbcType=TIMESTAMP},
+        yy_next_time = #{yyNextTime,jdbcType=VARCHAR},
       </if>
       <if test="yyPTime1 != null">
         yy_p_time_1 = #{yyPTime1,jdbcType=INTEGER},
@@ -1201,11 +1201,11 @@
     update param_set
     set batch_id = #{batchId,jdbcType=BIGINT},
       sn = #{sn,jdbcType=VARCHAR},
-      day_set = #{daySet,jdbcType=TIMESTAMP},
-      day_start_time = #{dayStartTime,jdbcType=TIMESTAMP},
-      day_end_time = #{dayEndTime,jdbcType=TIMESTAMP},
-      night_start_time = #{nightStartTime,jdbcType=TIMESTAMP},
-      night_end_time = #{nightEndTime,jdbcType=TIMESTAMP},
+      day_set = #{daySet,jdbcType=VARCHAR},
+      day_start_time = #{dayStartTime,jdbcType=VARCHAR},
+      day_end_time = #{dayEndTime,jdbcType=VARCHAR},
+      night_start_time = #{nightStartTime,jdbcType=VARCHAR},
+      night_end_time = #{nightEndTime,jdbcType=VARCHAR},
       day_temperature = #{dayTemperature,jdbcType=DOUBLE},
       day_humidity = #{dayHumidity,jdbcType=DOUBLE},
       day_wind_lenght_time = #{dayWindLenghtTime,jdbcType=INTEGER},
@@ -1250,8 +1250,8 @@
       night_feed_bg_length = #{nightFeedBgLength,jdbcType=INTEGER},
       night_feed_water_length = #{nightFeedWaterLength,jdbcType=INTEGER},
       night_feed_water_cycle = #{nightFeedWaterCycle,jdbcType=INTEGER},
-      yy_before_time = #{yyBeforeTime,jdbcType=TIMESTAMP},
-      yy_next_time = #{yyNextTime,jdbcType=TIMESTAMP},
+      yy_before_time = #{yyBeforeTime,jdbcType=VARCHAR},
+      yy_next_time = #{yyNextTime,jdbcType=VARCHAR},
       yy_p_time_1 = #{yyPTime1,jdbcType=INTEGER},
       yy_p_time_2 = #{yyPTime2,jdbcType=INTEGER},
       yy_p_time_3 = #{yyPTime3,jdbcType=INTEGER},

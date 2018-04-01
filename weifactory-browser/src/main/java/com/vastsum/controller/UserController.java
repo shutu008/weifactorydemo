@@ -21,8 +21,10 @@ import com.github.pagehelper.PageInfo;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.entity.User;
 import com.vastsum.entity.vo.UserInfo;
+import com.vastsum.enums.LoginStatusEnum;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
+import com.vastsum.model.V;
 import com.vastsum.service.UserService;
 
 import io.swagger.annotations.Api;
@@ -273,6 +275,7 @@ public class UserController extends BaseController {
             @ApiImplicitParam(paramType = "query", name = "status", value = "状态", required = true)
     })
     public ResponseEntity<ResultModel> changeExport(Integer userId, String status){
+
         if (userId == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_ID_NULL));
         }
@@ -295,5 +298,13 @@ public class UserController extends BaseController {
             return ResponseEntity.ok(ResultModel.ok());
         }
         return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
+    }
+    
+    //列出所有在线专家
+    @PostMapping(value = "/onlineExpert")
+    @ApiOperation(value = "列出在线专家@20180326")
+    public ResponseEntity<ResultModel> getOnlineExpert(){
+    	List<User> experts = userService.listOnlineExperts(4, LoginStatusEnum.ONLINE.getLoginStatus());
+    	return V.ok(experts);
     }
 }

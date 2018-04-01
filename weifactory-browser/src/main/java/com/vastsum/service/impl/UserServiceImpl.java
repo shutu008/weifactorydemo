@@ -6,6 +6,7 @@ import com.vastsum.dao.JoinMapper;
 import com.vastsum.dao.UserMapper;
 import com.vastsum.entity.UserRole;
 import com.vastsum.entity.vo.UserInfo;
+import com.vastsum.enums.LoginStatusEnum;
 import com.vastsum.service.UserService;
 import com.vastsum.dao.UserRoleMapper;
 import com.vastsum.entity.User;
@@ -185,6 +186,28 @@ public class UserServiceImpl implements UserService {
         List<User> users = userMapper.selectByExample(userExample);
         return users;
     }
+    
+    //列出指定角色和登录状态的用户
+    public List<User> listOnlineExperts(Integer roleId, String loginStatus){
+    	 //查询出拥有专家身份的用户id
+        UserRoleExample userRoleExample = new UserRoleExample();
+        userRoleExample.createCriteria().andRoleIdEqualTo(roleId);
+        List<UserRole> userRoles = userRoleMapper.selectByExample(userRoleExample);
+        List<Integer> listUserId = new ArrayList<>();
+        if (userRoles == null || userRoles.isEmpty()){
+            return new ArrayList<>();
+        }
+        for (UserRole userRole: userRoles) {
+            listUserId.add(userRole.getUserId());
+        }
+        //查询出所有专家
+        UserExample userExample = new UserExample();
+        userExample.createCriteria()
+        .andUserIdIn(listUserId)
+        .andLoginStatusEqualTo(loginStatus);
+        List<User> users = userMapper.selectByExample(userExample);
+        return users;
+    }
 
     @Override
     public User selectUserByUsernameAndPassword(String username, String password) {
@@ -212,6 +235,15 @@ public class UserServiceImpl implements UserService {
     public Integer deleteByUserId(Integer userId) {
         return userMapper.deleteByPrimaryKey(userId);
     }
+
+	@Override
+	public int updateLoginStatus(Integer userId,String loginStatus) {
+		User user = new User();
+		user.setUserId(userId);
+		user.setLoginStatus(loginStatus);
+		int i = userMapper.updateByPrimaryKeySelective(user);
+		return i;
+	}
 
 
 }

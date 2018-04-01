@@ -1,5 +1,14 @@
 Manifest-Version: 1.0
 Built-By: Administrator
+Class-Path: lib/netty-all-4.1.6.Final.jar lib/slf4j-api-1.7.25.jar lib
+ /slf4j-log4j12-1.7.25.jar lib/log4j-1.2.17.jar lib/spring-core-4.3.10
+ .RELEASE.jar lib/spring-context-4.3.10.RELEASE.jar lib/spring-aop-4.3
+ .10.RELEASE.jar lib/spring-beans-4.3.10.RELEASE.jar lib/spring-expres
+ sion-4.3.10.RELEASE.jar lib/spring-context-support-4.3.10.RELEASE.jar
+  lib/spring-jdbc-4.3.10.RELEASE.jar lib/spring-tx-4.3.10.RELEASE.jar 
+ lib/spring-test-4.3.10.RELEASE.jar lib/mysql-connector-java-5.1.43.ja
+ r lib/commons-lang-2.6.jar lib/quartz-2.2.3.jar lib/c3p0-0.9.1.1.jar
 Build-Jdk: 1.8.0_111
 Created-By: Maven Integration for Eclipse
+Main-Class: com.vastsum.WeifactoryApplication
 

@@ -28,8 +28,8 @@ public class ParamSetServiceImpl implements ParamSetService {
 	 */
 	@Override
 	public void saveOrUpdate(ParamSet paramSet) {
-		if (paramSet.getParamSetId() != null) {
-			paramSetMapper.insertSelective(paramSet);
+		if (paramSet.getParamSetId() == null) {
+			paramSetMapper.insert(paramSet);
 		}else {
 			paramSetMapper.updateByPrimaryKeySelective(paramSet);
 		}

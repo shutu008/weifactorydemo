@@ -8,7 +8,11 @@ import java.util.Date;
  * @create 2017-09-25 22:07
  */
 public class TestSensor implements Serializable {
-    private Integer id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 557651604829532705L;
+	private Integer id;
     private String sn;
     private Integer sensor;
     private String data;

@@ -9,15 +9,15 @@ public class ParamSet {
 
     private String sn;
 
-    private Date daySet;
+    private String daySet;
 
-    private Date dayStartTime;
+    private String dayStartTime;
 
-    private Date dayEndTime;
+    private String dayEndTime;
 
-    private Date nightStartTime;
+    private String nightStartTime;
 
-    private Date nightEndTime;
+    private String nightEndTime;
 
     private Double dayTemperature;
 
@@ -107,9 +107,9 @@ public class ParamSet {
 
     private Integer nightFeedWaterCycle;
 
-    private Date yyBeforeTime;
+    private String yyBeforeTime;
 
-    private Date yyNextTime;
+    private String yyNextTime;
 
     private Integer yyPTime1;
 
@@ -171,44 +171,44 @@ public class ParamSet {
         this.sn = sn == null ? null : sn.trim();
     }
 
-    public Date getDaySet() {
+    public String getDaySet() {
         return daySet;
     }
 
-    public void setDaySet(Date daySet) {
-        this.daySet = daySet;
+    public void setDaySet(String daySet) {
+        this.daySet = daySet == null ? null : daySet.trim();
     }
 
-    public Date getDayStartTime() {
+    public String getDayStartTime() {
         return dayStartTime;
     }
 
-    public void setDayStartTime(Date dayStartTime) {
-        this.dayStartTime = dayStartTime;
+    public void setDayStartTime(String dayStartTime) {
+        this.dayStartTime = dayStartTime == null ? null : dayStartTime.trim();
     }
 
-    public Date getDayEndTime() {
+    public String getDayEndTime() {
         return dayEndTime;
     }
 
-    public void setDayEndTime(Date dayEndTime) {
-        this.dayEndTime = dayEndTime;
+    public void setDayEndTime(String dayEndTime) {
+        this.dayEndTime = dayEndTime == null ? null : dayEndTime.trim();
     }
 
-    public Date getNightStartTime() {
+    public String getNightStartTime() {
         return nightStartTime;
     }
 
-    public void setNightStartTime(Date nightStartTime) {
-        this.nightStartTime = nightStartTime;
+    public void setNightStartTime(String nightStartTime) {
+        this.nightStartTime = nightStartTime == null ? null : nightStartTime.trim();
     }
 
-    public Date getNightEndTime() {
+    public String getNightEndTime() {
         return nightEndTime;
     }
 
-    public void setNightEndTime(Date nightEndTime) {
-        this.nightEndTime = nightEndTime;
+    public void setNightEndTime(String nightEndTime) {
+        this.nightEndTime = nightEndTime == null ? null : nightEndTime.trim();
     }
 
     public Double getDayTemperature() {
@@ -563,20 +563,20 @@ public class ParamSet {
         this.nightFeedWaterCycle = nightFeedWaterCycle;
     }
 
-    public Date getYyBeforeTime() {
+    public String getYyBeforeTime() {
         return yyBeforeTime;
     }
 
-    public void setYyBeforeTime(Date yyBeforeTime) {
-        this.yyBeforeTime = yyBeforeTime;
+    public void setYyBeforeTime(String yyBeforeTime) {
+        this.yyBeforeTime = yyBeforeTime == null ? null : yyBeforeTime.trim();
     }
 
-    public Date getYyNextTime() {
+    public String getYyNextTime() {
         return yyNextTime;
     }
 
-    public void setYyNextTime(Date yyNextTime) {
-        this.yyNextTime = yyNextTime;
+    public void setYyNextTime(String yyNextTime) {
+        this.yyNextTime = yyNextTime == null ? null : yyNextTime.trim();
     }
 
     public Integer getYyPTime1() {

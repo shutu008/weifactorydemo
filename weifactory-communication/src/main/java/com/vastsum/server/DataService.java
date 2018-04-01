@@ -1,6 +1,7 @@
 package com.vastsum.server;
 
 import com.vastsum.entity.BizException;
+import com.vastsum.entity.HistoryInfo;
 import com.vastsum.entity.SensorCollection;
 
 /**
@@ -14,7 +15,15 @@ public interface DataService {
      * @param sensorCollection
      * @return int
      */
+	@Deprecated
     int insert(SensorCollection sensorCollection);
+	
+	/**
+	 * 更新历史数据信息
+	 * @param historyInfo
+	 * @return void
+	 */
+	void update(HistoryInfo historyInfo) throws Exception;
 
     /**
      * 获取任务调度开始的位置

@@ -94,6 +94,9 @@ public class ParamSetController extends BaseController {
 		if (paramSet == null) {
 			return V.error("参数设置不能为空");
 		}
+		if(paramSet.getBatchId() == null){
+			return V.error("批次ID不能为空");
+		}
 		paramSetService.saveOrUpdate(paramSet);
 		
 		//远程方法 TODO 

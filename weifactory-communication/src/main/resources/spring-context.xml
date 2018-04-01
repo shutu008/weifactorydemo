@@ -10,9 +10,9 @@
 
     <context:property-placeholder location="classpath:db.properties" />
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
-        <property name="driverClassName" value="${jdbc.driver}"/>
         <property name="password" value="${jdbc.password}"/>
     </bean>
     <!--注册jdbcTemplate-->
@@ -37,20 +37,20 @@
         <property name="dataService" ref="dataService"/>
     </bean>
 
-    <!--jobDetail-->
+<!--     jobDetail
     <bean id="firstComplexJobDetail"
           class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
         <property name="jobClass" value="com.vastsum.quartz.BizJob" />
         <property name="Durability" value="true"/>
     </bean>
 
-    <!-- trigger 每隔5秒钟执行一次 -->
+    trigger 每隔5秒钟执行一次
     <bean id="myCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
         <property name="jobDetail"  ref="firstComplexJobDetail"/>
         <property name="cronExpression"  value="0 0/1 * ? * *"/>
     </bean>
 
-    <!--Scheduler-->
+    Scheduler
     <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
         <property name="jobDetails">
             <list>
@@ -62,5 +62,5 @@
                 <ref bean="myCronTrigger"/>
             </list>
         </property>
-    </bean>
+    </bean> -->
 </beans>

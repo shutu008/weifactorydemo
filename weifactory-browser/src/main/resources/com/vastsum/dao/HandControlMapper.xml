@@ -4,35 +4,38 @@
   <resultMap id="BaseResultMap" type="com.vastsum.entity.HandControl">
     <id column="hand_control_id" jdbcType="BIGINT" property="handControlId" />
     <result column="head_control_mod" jdbcType="VARCHAR" property="headControlMod" />
-    <result column="sky" jdbcType="VARCHAR" property="sky" />
-    <result column="yy" jdbcType="VARCHAR" property="yy" />
-    <result column="wind" jdbcType="VARCHAR" property="wind" />
-    <result column="ys" jdbcType="VARCHAR" property="ys" />
-    <result column="pl" jdbcType="VARCHAR" property="pl" />
-    <result column="grow_inner_1" jdbcType="VARCHAR" property="growInner1" />
-    <result column="grow_middle_1" jdbcType="VARCHAR" property="growMiddle1" />
-    <result column="grow_out_1" jdbcType="VARCHAR" property="growOut1" />
-    <result column="grow_inner_2" jdbcType="VARCHAR" property="growInner2" />
-    <result column="grow_middle_2" jdbcType="VARCHAR" property="growMiddle2" />
-    <result column="grow_out_2" jdbcType="VARCHAR" property="growOut2" />
-    <result column="grow_inner_3" jdbcType="VARCHAR" property="growInner3" />
-    <result column="grow_middle_3" jdbcType="VARCHAR" property="growMiddle3" />
-    <result column="grow_out_3" jdbcType="VARCHAR" property="growOut3" />
-    <result column="add_1" jdbcType="VARCHAR" property="add1" />
-    <result column="add_2" jdbcType="VARCHAR" property="add2" />
-    <result column="add_3" jdbcType="VARCHAR" property="add3" />
-    <result column="inlet_1" jdbcType="VARCHAR" property="inlet1" />
-    <result column="inlet_2" jdbcType="VARCHAR" property="inlet2" />
-    <result column="inlet_3" jdbcType="VARCHAR" property="inlet3" />
-    <result column="out_1" jdbcType="VARCHAR" property="out1" />
-    <result column="out_2" jdbcType="VARCHAR" property="out2" />
-    <result column="out_3" jdbcType="VARCHAR" property="out3" />
-    <result column="feed_led" jdbcType="VARCHAR" property="feedLed" />
-    <result column="feed_pl" jdbcType="VARCHAR" property="feedPl" />
-    <result column="sb" jdbcType="VARCHAR" property="sb" />
-    <result column="fs_1" jdbcType="VARCHAR" property="fs1" />
-    <result column="fs_2" jdbcType="VARCHAR" property="fs2" />
-    <result column="fs_3" jdbcType="VARCHAR" property="fs3" />
+    <result column="wd1" jdbcType="VARCHAR" property="wd1" />
+    <result column="kqxh1" jdbcType="VARCHAR" property="kqxh1" />
+    <result column="kqxd1" jdbcType="VARCHAR" property="kqxd1" />
+    <result column="hxf1" jdbcType="VARCHAR" property="hxf1" />
+    <result column="syyy1" jdbcType="VARCHAR" property="syyy1" />
+    <result column="pyyy1" jdbcType="VARCHAR" property="pyyy1" />
+    <result column="yyyxd1" jdbcType="VARCHAR" property="yyyxd1" />
+    <result column="led11" jdbcType="VARCHAR" property="led11" />
+    <result column="led12" jdbcType="VARCHAR" property="led12" />
+    <result column="led13" jdbcType="VARCHAR" property="led13" />
+    <result column="wd2" jdbcType="VARCHAR" property="wd2" />
+    <result column="kqxh2" jdbcType="VARCHAR" property="kqxh2" />
+    <result column="kqxd2" jdbcType="VARCHAR" property="kqxd2" />
+    <result column="hxf2" jdbcType="VARCHAR" property="hxf2" />
+    <result column="syyy2" jdbcType="VARCHAR" property="syyy2" />
+    <result column="pyyy2" jdbcType="VARCHAR" property="pyyy2" />
+    <result column="yyyxd2" jdbcType="VARCHAR" property="yyyxd2" />
+    <result column="led21" jdbcType="VARCHAR" property="led21" />
+    <result column="led22" jdbcType="VARCHAR" property="led22" />
+    <result column="led23" jdbcType="VARCHAR" property="led23" />
+    <result column="wd3" jdbcType="VARCHAR" property="wd3" />
+    <result column="kqxh3" jdbcType="VARCHAR" property="kqxh3" />
+    <result column="kqxd3" jdbcType="VARCHAR" property="kqxd3" />
+    <result column="hxf3" jdbcType="VARCHAR" property="hxf3" />
+    <result column="syyy3" jdbcType="VARCHAR" property="syyy3" />
+    <result column="pyyy3" jdbcType="VARCHAR" property="pyyy3" />
+    <result column="yyyxd3" jdbcType="VARCHAR" property="yyyxd3" />
+    <result column="led31" jdbcType="VARCHAR" property="led31" />
+    <result column="led32" jdbcType="VARCHAR" property="led32" />
+    <result column="led33" jdbcType="VARCHAR" property="led33" />
+    <result column="ymbg" jdbcType="VARCHAR" property="ymbg" />
+    <result column="mpjs" jdbcType="VARCHAR" property="mpjs" />
     <result column="bs" jdbcType="VARCHAR" property="bs" />
     <result column="ps" jdbcType="VARCHAR" property="ps" />
     <result column="batch_id" jdbcType="BIGINT" property="batchId" />
@@ -99,10 +102,10 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    hand_control_id, head_control_mod, sky, yy, wind, ys, pl, grow_inner_1, grow_middle_1, 
-    grow_out_1, grow_inner_2, grow_middle_2, grow_out_2, grow_inner_3, grow_middle_3, 
-    grow_out_3, add_1, add_2, add_3, inlet_1, inlet_2, inlet_3, out_1, out_2, out_3, 
-    feed_led, feed_pl, sb, fs_1, fs_2, fs_3, bs, ps, batch_id, status, gmt_create, gmt_modified
+    hand_control_id, head_control_mod, wd1, kqxh1, kqxd1, hxf1, syyy1, pyyy1, yyyxd1, 
+    led11, led12, led13, wd2, kqxh2, kqxd2, hxf2, syyy2, pyyy2, yyyxd2, led21, led22, 
+    led23, wd3, kqxh3, kqxd3, hxf3, syyy3, pyyy3, yyyxd3, led31, led32, led33, ymbg, 
+    mpjs, bs, ps, batch_id, status, gmt_create, gmt_modified
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.HandControlExample" resultMap="BaseResultMap">
     select
@@ -135,28 +138,32 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.vastsum.entity.HandControl">
-    insert into hand_control (hand_control_id, head_control_mod, sky, 
-      yy, wind, ys, pl, 
-      grow_inner_1, grow_middle_1, grow_out_1, 
-      grow_inner_2, grow_middle_2, grow_out_2, 
-      grow_inner_3, grow_middle_3, grow_out_3, 
-      add_1, add_2, add_3, inlet_1, 
-      inlet_2, inlet_3, out_1, 
-      out_2, out_3, feed_led, 
-      feed_pl, sb, fs_1, fs_2, 
-      fs_3, bs, ps, batch_id, 
+    insert into hand_control (hand_control_id, head_control_mod, wd1, 
+      kqxh1, kqxd1, hxf1, 
+      syyy1, pyyy1, yyyxd1, 
+      led11, led12, led13, 
+      wd2, kqxh2, kqxd2, 
+      hxf2, syyy2, pyyy2, 
+      yyyxd2, led21, led22, 
+      led23, wd3, kqxh3, 
+      kqxd3, hxf3, syyy3, 
+      pyyy3, yyyxd3, led31, 
+      led32, led33, ymbg, 
+      mpjs, bs, ps, batch_id, 
       status, gmt_create, gmt_modified
       )
-    values (#{handControlId,jdbcType=BIGINT}, #{headControlMod,jdbcType=VARCHAR}, #{sky,jdbcType=VARCHAR}, 
-      #{yy,jdbcType=VARCHAR}, #{wind,jdbcType=VARCHAR}, #{ys,jdbcType=VARCHAR}, #{pl,jdbcType=VARCHAR}, 
-      #{growInner1,jdbcType=VARCHAR}, #{growMiddle1,jdbcType=VARCHAR}, #{growOut1,jdbcType=VARCHAR}, 
-      #{growInner2,jdbcType=VARCHAR}, #{growMiddle2,jdbcType=VARCHAR}, #{growOut2,jdbcType=VARCHAR}, 
-      #{growInner3,jdbcType=VARCHAR}, #{growMiddle3,jdbcType=VARCHAR}, #{growOut3,jdbcType=VARCHAR}, 
-      #{add1,jdbcType=VARCHAR}, #{add2,jdbcType=VARCHAR}, #{add3,jdbcType=VARCHAR}, #{inlet1,jdbcType=VARCHAR}, 
-      #{inlet2,jdbcType=VARCHAR}, #{inlet3,jdbcType=VARCHAR}, #{out1,jdbcType=VARCHAR}, 
-      #{out2,jdbcType=VARCHAR}, #{out3,jdbcType=VARCHAR}, #{feedLed,jdbcType=VARCHAR}, 
-      #{feedPl,jdbcType=VARCHAR}, #{sb,jdbcType=VARCHAR}, #{fs1,jdbcType=VARCHAR}, #{fs2,jdbcType=VARCHAR}, 
-      #{fs3,jdbcType=VARCHAR}, #{bs,jdbcType=VARCHAR}, #{ps,jdbcType=VARCHAR}, #{batchId,jdbcType=BIGINT}, 
+    values (#{handControlId,jdbcType=BIGINT}, #{headControlMod,jdbcType=VARCHAR}, #{wd1,jdbcType=VARCHAR}, 
+      #{kqxh1,jdbcType=VARCHAR}, #{kqxd1,jdbcType=VARCHAR}, #{hxf1,jdbcType=VARCHAR}, 
+      #{syyy1,jdbcType=VARCHAR}, #{pyyy1,jdbcType=VARCHAR}, #{yyyxd1,jdbcType=VARCHAR}, 
+      #{led11,jdbcType=VARCHAR}, #{led12,jdbcType=VARCHAR}, #{led13,jdbcType=VARCHAR}, 
+      #{wd2,jdbcType=VARCHAR}, #{kqxh2,jdbcType=VARCHAR}, #{kqxd2,jdbcType=VARCHAR}, 
+      #{hxf2,jdbcType=VARCHAR}, #{syyy2,jdbcType=VARCHAR}, #{pyyy2,jdbcType=VARCHAR}, 
+      #{yyyxd2,jdbcType=VARCHAR}, #{led21,jdbcType=VARCHAR}, #{led22,jdbcType=VARCHAR}, 
+      #{led23,jdbcType=VARCHAR}, #{wd3,jdbcType=VARCHAR}, #{kqxh3,jdbcType=VARCHAR}, 
+      #{kqxd3,jdbcType=VARCHAR}, #{hxf3,jdbcType=VARCHAR}, #{syyy3,jdbcType=VARCHAR}, 
+      #{pyyy3,jdbcType=VARCHAR}, #{yyyxd3,jdbcType=VARCHAR}, #{led31,jdbcType=VARCHAR}, 
+      #{led32,jdbcType=VARCHAR}, #{led33,jdbcType=VARCHAR}, #{ymbg,jdbcType=VARCHAR}, 
+      #{mpjs,jdbcType=VARCHAR}, #{bs,jdbcType=VARCHAR}, #{ps,jdbcType=VARCHAR}, #{batchId,jdbcType=BIGINT}, 
       #{status,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
       )
   </insert>
@@ -169,92 +176,101 @@
       <if test="headControlMod != null">
         head_control_mod,
       </if>
-      <if test="sky != null">
-        sky,
+      <if test="wd1 != null">
+        wd1,
       </if>
-      <if test="yy != null">
-        yy,
+      <if test="kqxh1 != null">
+        kqxh1,
       </if>
-      <if test="wind != null">
-        wind,
+      <if test="kqxd1 != null">
+        kqxd1,
       </if>
-      <if test="ys != null">
-        ys,
+      <if test="hxf1 != null">
+        hxf1,
       </if>
-      <if test="pl != null">
-        pl,
+      <if test="syyy1 != null">
+        syyy1,
       </if>
-      <if test="growInner1 != null">
-        grow_inner_1,
+      <if test="pyyy1 != null">
+        pyyy1,
       </if>
-      <if test="growMiddle1 != null">
-        grow_middle_1,
+      <if test="yyyxd1 != null">
+        yyyxd1,
       </if>
-      <if test="growOut1 != null">
-        grow_out_1,
+      <if test="led11 != null">
+        led11,
       </if>
-      <if test="growInner2 != null">
-        grow_inner_2,
+      <if test="led12 != null">
+        led12,
       </if>
-      <if test="growMiddle2 != null">
-        grow_middle_2,
+      <if test="led13 != null">
+        led13,
       </if>
-      <if test="growOut2 != null">
-        grow_out_2,
+      <if test="wd2 != null">
+        wd2,
       </if>
-      <if test="growInner3 != null">
-        grow_inner_3,
+      <if test="kqxh2 != null">
+        kqxh2,
       </if>
-      <if test="growMiddle3 != null">
-        grow_middle_3,
+      <if test="kqxd2 != null">
+        kqxd2,
       </if>
-      <if test="growOut3 != null">
-        grow_out_3,
+      <if test="hxf2 != null">
+        hxf2,
       </if>
-      <if test="add1 != null">
-        add_1,
+      <if test="syyy2 != null">
+        syyy2,
       </if>
-      <if test="add2 != null">
-        add_2,
+      <if test="pyyy2 != null">
+        pyyy2,
       </if>
-      <if test="add3 != null">
-        add_3,
+      <if test="yyyxd2 != null">
+        yyyxd2,
       </if>
-      <if test="inlet1 != null">
-        inlet_1,
+      <if test="led21 != null">
+        led21,
       </if>
-      <if test="inlet2 != null">
-        inlet_2,
+      <if test="led22 != null">
+        led22,
       </if>
-      <if test="inlet3 != null">
-        inlet_3,
+      <if test="led23 != null">
+        led23,
       </if>
-      <if test="out1 != null">
-        out_1,
+      <if test="wd3 != null">
+        wd3,
       </if>
-      <if test="out2 != null">
-        out_2,
+      <if test="kqxh3 != null">
+        kqxh3,
       </if>
-      <if test="out3 != null">
-        out_3,
+      <if test="kqxd3 != null">
+        kqxd3,
       </if>
-      <if test="feedLed != null">
-        feed_led,
+      <if test="hxf3 != null">
+        hxf3,
       </if>
-      <if test="feedPl != null">
-        feed_pl,
+      <if test="syyy3 != null">
+        syyy3,
       </if>
-      <if test="sb != null">
-        sb,
+      <if test="pyyy3 != null">
+        pyyy3,
       </if>
-      <if test="fs1 != null">
-        fs_1,
+      <if test="yyyxd3 != null">
+        yyyxd3,
       </if>
-      <if test="fs2 != null">
-        fs_2,
+      <if test="led31 != null">
+        led31,
       </if>
-      <if test="fs3 != null">
-        fs_3,
+      <if test="led32 != null">
+        led32,
+      </if>
+      <if test="led33 != null">
+        led33,
+      </if>
+      <if test="ymbg != null">
+        ymbg,
+      </if>
+      <if test="mpjs != null">
+        mpjs,
       </if>
       <if test="bs != null">
         bs,
@@ -282,92 +298,101 @@
       <if test="headControlMod != null">
         #{headControlMod,jdbcType=VARCHAR},
       </if>
-      <if test="sky != null">
-        #{sky,jdbcType=VARCHAR},
+      <if test="wd1 != null">
+        #{wd1,jdbcType=VARCHAR},
       </if>
-      <if test="yy != null">
-        #{yy,jdbcType=VARCHAR},
+      <if test="kqxh1 != null">
+        #{kqxh1,jdbcType=VARCHAR},
       </if>
-      <if test="wind != null">
-        #{wind,jdbcType=VARCHAR},
+      <if test="kqxd1 != null">
+        #{kqxd1,jdbcType=VARCHAR},
       </if>
-      <if test="ys != null">
-        #{ys,jdbcType=VARCHAR},
+      <if test="hxf1 != null">
+        #{hxf1,jdbcType=VARCHAR},
       </if>
-      <if test="pl != null">
-        #{pl,jdbcType=VARCHAR},
+      <if test="syyy1 != null">
+        #{syyy1,jdbcType=VARCHAR},
       </if>
-      <if test="growInner1 != null">
-        #{growInner1,jdbcType=VARCHAR},
+      <if test="pyyy1 != null">
+        #{pyyy1,jdbcType=VARCHAR},
       </if>
-      <if test="growMiddle1 != null">
-        #{growMiddle1,jdbcType=VARCHAR},
+      <if test="yyyxd1 != null">
+        #{yyyxd1,jdbcType=VARCHAR},
       </if>
-      <if test="growOut1 != null">
-        #{growOut1,jdbcType=VARCHAR},
+      <if test="led11 != null">
+        #{led11,jdbcType=VARCHAR},
       </if>
-      <if test="growInner2 != null">
-        #{growInner2,jdbcType=VARCHAR},
+      <if test="led12 != null">
+        #{led12,jdbcType=VARCHAR},
       </if>
-      <if test="growMiddle2 != null">
-        #{growMiddle2,jdbcType=VARCHAR},
+      <if test="led13 != null">
+        #{led13,jdbcType=VARCHAR},
       </if>
-      <if test="growOut2 != null">
-        #{growOut2,jdbcType=VARCHAR},
+      <if test="wd2 != null">
+        #{wd2,jdbcType=VARCHAR},
       </if>
-      <if test="growInner3 != null">
-        #{growInner3,jdbcType=VARCHAR},
+      <if test="kqxh2 != null">
+        #{kqxh2,jdbcType=VARCHAR},
       </if>
-      <if test="growMiddle3 != null">
-        #{growMiddle3,jdbcType=VARCHAR},
+      <if test="kqxd2 != null">
+        #{kqxd2,jdbcType=VARCHAR},
       </if>
-      <if test="growOut3 != null">
-        #{growOut3,jdbcType=VARCHAR},
+      <if test="hxf2 != null">
+        #{hxf2,jdbcType=VARCHAR},
       </if>
-      <if test="add1 != null">
-        #{add1,jdbcType=VARCHAR},
+      <if test="syyy2 != null">
+        #{syyy2,jdbcType=VARCHAR},
       </if>
-      <if test="add2 != null">
-        #{add2,jdbcType=VARCHAR},
+      <if test="pyyy2 != null">
+        #{pyyy2,jdbcType=VARCHAR},
       </if>
-      <if test="add3 != null">
-        #{add3,jdbcType=VARCHAR},
+      <if test="yyyxd2 != null">
+        #{yyyxd2,jdbcType=VARCHAR},
       </if>
-      <if test="inlet1 != null">
-        #{inlet1,jdbcType=VARCHAR},
+      <if test="led21 != null">
+        #{led21,jdbcType=VARCHAR},
       </if>
-      <if test="inlet2 != null">
-        #{inlet2,jdbcType=VARCHAR},
+      <if test="led22 != null">
+        #{led22,jdbcType=VARCHAR},
       </if>
-      <if test="inlet3 != null">
-        #{inlet3,jdbcType=VARCHAR},
+      <if test="led23 != null">
+        #{led23,jdbcType=VARCHAR},
       </if>
-      <if test="out1 != null">
-        #{out1,jdbcType=VARCHAR},
+      <if test="wd3 != null">
+        #{wd3,jdbcType=VARCHAR},
       </if>
-      <if test="out2 != null">
-        #{out2,jdbcType=VARCHAR},
+      <if test="kqxh3 != null">
+        #{kqxh3,jdbcType=VARCHAR},
       </if>
-      <if test="out3 != null">
-        #{out3,jdbcType=VARCHAR},
+      <if test="kqxd3 != null">
+        #{kqxd3,jdbcType=VARCHAR},
       </if>
-      <if test="feedLed != null">
-        #{feedLed,jdbcType=VARCHAR},
+      <if test="hxf3 != null">
+        #{hxf3,jdbcType=VARCHAR},
       </if>
-      <if test="feedPl != null">
-        #{feedPl,jdbcType=VARCHAR},
+      <if test="syyy3 != null">
+        #{syyy3,jdbcType=VARCHAR},
       </if>
-      <if test="sb != null">
-        #{sb,jdbcType=VARCHAR},
+      <if test="pyyy3 != null">
+        #{pyyy3,jdbcType=VARCHAR},
       </if>
-      <if test="fs1 != null">
-        #{fs1,jdbcType=VARCHAR},
+      <if test="yyyxd3 != null">
+        #{yyyxd3,jdbcType=VARCHAR},
       </if>
-      <if test="fs2 != null">
-        #{fs2,jdbcType=VARCHAR},
+      <if test="led31 != null">
+        #{led31,jdbcType=VARCHAR},
       </if>
-      <if test="fs3 != null">
-        #{fs3,jdbcType=VARCHAR},
+      <if test="led32 != null">
+        #{led32,jdbcType=VARCHAR},
+      </if>
+      <if test="led33 != null">
+        #{led33,jdbcType=VARCHAR},
+      </if>
+      <if test="ymbg != null">
+        #{ymbg,jdbcType=VARCHAR},
+      </if>
+      <if test="mpjs != null">
+        #{mpjs,jdbcType=VARCHAR},
       </if>
       <if test="bs != null">
         #{bs,jdbcType=VARCHAR},
@@ -404,92 +429,101 @@
       <if test="record.headControlMod != null">
         head_control_mod = #{record.headControlMod,jdbcType=VARCHAR},
       </if>
-      <if test="record.sky != null">
-        sky = #{record.sky,jdbcType=VARCHAR},
+      <if test="record.wd1 != null">
+        wd1 = #{record.wd1,jdbcType=VARCHAR},
       </if>
-      <if test="record.yy != null">
-        yy = #{record.yy,jdbcType=VARCHAR},
+      <if test="record.kqxh1 != null">
+        kqxh1 = #{record.kqxh1,jdbcType=VARCHAR},
       </if>
-      <if test="record.wind != null">
-        wind = #{record.wind,jdbcType=VARCHAR},
+      <if test="record.kqxd1 != null">
+        kqxd1 = #{record.kqxd1,jdbcType=VARCHAR},
       </if>
-      <if test="record.ys != null">
-        ys = #{record.ys,jdbcType=VARCHAR},
+      <if test="record.hxf1 != null">
+        hxf1 = #{record.hxf1,jdbcType=VARCHAR},
       </if>
-      <if test="record.pl != null">
-        pl = #{record.pl,jdbcType=VARCHAR},
+      <if test="record.syyy1 != null">
+        syyy1 = #{record.syyy1,jdbcType=VARCHAR},
       </if>
-      <if test="record.growInner1 != null">
-        grow_inner_1 = #{record.growInner1,jdbcType=VARCHAR},
+      <if test="record.pyyy1 != null">
+        pyyy1 = #{record.pyyy1,jdbcType=VARCHAR},
       </if>
-      <if test="record.growMiddle1 != null">
-        grow_middle_1 = #{record.growMiddle1,jdbcType=VARCHAR},
+      <if test="record.yyyxd1 != null">
+        yyyxd1 = #{record.yyyxd1,jdbcType=VARCHAR},
       </if>
-      <if test="record.growOut1 != null">
-        grow_out_1 = #{record.growOut1,jdbcType=VARCHAR},
+      <if test="record.led11 != null">
+        led11 = #{record.led11,jdbcType=VARCHAR},
       </if>
-      <if test="record.growInner2 != null">
-        grow_inner_2 = #{record.growInner2,jdbcType=VARCHAR},
+      <if test="record.led12 != null">
+        led12 = #{record.led12,jdbcType=VARCHAR},
       </if>
-      <if test="record.growMiddle2 != null">
-        grow_middle_2 = #{record.growMiddle2,jdbcType=VARCHAR},
+      <if test="record.led13 != null">
+        led13 = #{record.led13,jdbcType=VARCHAR},
       </if>
-      <if test="record.growOut2 != null">
-        grow_out_2 = #{record.growOut2,jdbcType=VARCHAR},
+      <if test="record.wd2 != null">
+        wd2 = #{record.wd2,jdbcType=VARCHAR},
       </if>
-      <if test="record.growInner3 != null">
-        grow_inner_3 = #{record.growInner3,jdbcType=VARCHAR},
+      <if test="record.kqxh2 != null">
+        kqxh2 = #{record.kqxh2,jdbcType=VARCHAR},
       </if>
-      <if test="record.growMiddle3 != null">
-        grow_middle_3 = #{record.growMiddle3,jdbcType=VARCHAR},
+      <if test="record.kqxd2 != null">
+        kqxd2 = #{record.kqxd2,jdbcType=VARCHAR},
       </if>
-      <if test="record.growOut3 != null">
-        grow_out_3 = #{record.growOut3,jdbcType=VARCHAR},
+      <if test="record.hxf2 != null">
+        hxf2 = #{record.hxf2,jdbcType=VARCHAR},
       </if>
-      <if test="record.add1 != null">
-        add_1 = #{record.add1,jdbcType=VARCHAR},
+      <if test="record.syyy2 != null">
+        syyy2 = #{record.syyy2,jdbcType=VARCHAR},
       </if>
-      <if test="record.add2 != null">
-        add_2 = #{record.add2,jdbcType=VARCHAR},
+      <if test="record.pyyy2 != null">
+        pyyy2 = #{record.pyyy2,jdbcType=VARCHAR},
       </if>
-      <if test="record.add3 != null">
-        add_3 = #{record.add3,jdbcType=VARCHAR},
+      <if test="record.yyyxd2 != null">
+        yyyxd2 = #{record.yyyxd2,jdbcType=VARCHAR},
       </if>
-      <if test="record.inlet1 != null">
-        inlet_1 = #{record.inlet1,jdbcType=VARCHAR},
+      <if test="record.led21 != null">
+        led21 = #{record.led21,jdbcType=VARCHAR},
       </if>
-      <if test="record.inlet2 != null">
-        inlet_2 = #{record.inlet2,jdbcType=VARCHAR},
+      <if test="record.led22 != null">
+        led22 = #{record.led22,jdbcType=VARCHAR},
       </if>
-      <if test="record.inlet3 != null">
-        inlet_3 = #{record.inlet3,jdbcType=VARCHAR},
+      <if test="record.led23 != null">
+        led23 = #{record.led23,jdbcType=VARCHAR},
       </if>
-      <if test="record.out1 != null">
-        out_1 = #{record.out1,jdbcType=VARCHAR},
+      <if test="record.wd3 != null">
+        wd3 = #{record.wd3,jdbcType=VARCHAR},
       </if>
-      <if test="record.out2 != null">
-        out_2 = #{record.out2,jdbcType=VARCHAR},
+      <if test="record.kqxh3 != null">
+        kqxh3 = #{record.kqxh3,jdbcType=VARCHAR},
       </if>
-      <if test="record.out3 != null">
-        out_3 = #{record.out3,jdbcType=VARCHAR},
+      <if test="record.kqxd3 != null">
+        kqxd3 = #{record.kqxd3,jdbcType=VARCHAR},
       </if>
-      <if test="record.feedLed != null">
-        feed_led = #{record.feedLed,jdbcType=VARCHAR},
+      <if test="record.hxf3 != null">
+        hxf3 = #{record.hxf3,jdbcType=VARCHAR},
       </if>
-      <if test="record.feedPl != null">
-        feed_pl = #{record.feedPl,jdbcType=VARCHAR},
+      <if test="record.syyy3 != null">
+        syyy3 = #{record.syyy3,jdbcType=VARCHAR},
       </if>
-      <if test="record.sb != null">
-        sb = #{record.sb,jdbcType=VARCHAR},
+      <if test="record.pyyy3 != null">
+        pyyy3 = #{record.pyyy3,jdbcType=VARCHAR},
       </if>
-      <if test="record.fs1 != null">
-        fs_1 = #{record.fs1,jdbcType=VARCHAR},
+      <if test="record.yyyxd3 != null">
+        yyyxd3 = #{record.yyyxd3,jdbcType=VARCHAR},
       </if>
-      <if test="record.fs2 != null">
-        fs_2 = #{record.fs2,jdbcType=VARCHAR},
+      <if test="record.led31 != null">
+        led31 = #{record.led31,jdbcType=VARCHAR},
       </if>
-      <if test="record.fs3 != null">
-        fs_3 = #{record.fs3,jdbcType=VARCHAR},
+      <if test="record.led32 != null">
+        led32 = #{record.led32,jdbcType=VARCHAR},
+      </if>
+      <if test="record.led33 != null">
+        led33 = #{record.led33,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ymbg != null">
+        ymbg = #{record.ymbg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mpjs != null">
+        mpjs = #{record.mpjs,jdbcType=VARCHAR},
       </if>
       <if test="record.bs != null">
         bs = #{record.bs,jdbcType=VARCHAR},
@@ -518,35 +552,38 @@
     update hand_control
     set hand_control_id = #{record.handControlId,jdbcType=BIGINT},
       head_control_mod = #{record.headControlMod,jdbcType=VARCHAR},
-      sky = #{record.sky,jdbcType=VARCHAR},
-      yy = #{record.yy,jdbcType=VARCHAR},
-      wind = #{record.wind,jdbcType=VARCHAR},
-      ys = #{record.ys,jdbcType=VARCHAR},
-      pl = #{record.pl,jdbcType=VARCHAR},
-      grow_inner_1 = #{record.growInner1,jdbcType=VARCHAR},
-      grow_middle_1 = #{record.growMiddle1,jdbcType=VARCHAR},
-      grow_out_1 = #{record.growOut1,jdbcType=VARCHAR},
-      grow_inner_2 = #{record.growInner2,jdbcType=VARCHAR},
-      grow_middle_2 = #{record.growMiddle2,jdbcType=VARCHAR},
-      grow_out_2 = #{record.growOut2,jdbcType=VARCHAR},
-      grow_inner_3 = #{record.growInner3,jdbcType=VARCHAR},
-      grow_middle_3 = #{record.growMiddle3,jdbcType=VARCHAR},
-      grow_out_3 = #{record.growOut3,jdbcType=VARCHAR},
-      add_1 = #{record.add1,jdbcType=VARCHAR},
-      add_2 = #{record.add2,jdbcType=VARCHAR},
-      add_3 = #{record.add3,jdbcType=VARCHAR},
-      inlet_1 = #{record.inlet1,jdbcType=VARCHAR},
-      inlet_2 = #{record.inlet2,jdbcType=VARCHAR},
-      inlet_3 = #{record.inlet3,jdbcType=VARCHAR},
-      out_1 = #{record.out1,jdbcType=VARCHAR},
-      out_2 = #{record.out2,jdbcType=VARCHAR},
-      out_3 = #{record.out3,jdbcType=VARCHAR},
-      feed_led = #{record.feedLed,jdbcType=VARCHAR},
-      feed_pl = #{record.feedPl,jdbcType=VARCHAR},
-      sb = #{record.sb,jdbcType=VARCHAR},
-      fs_1 = #{record.fs1,jdbcType=VARCHAR},
-      fs_2 = #{record.fs2,jdbcType=VARCHAR},
-      fs_3 = #{record.fs3,jdbcType=VARCHAR},
+      wd1 = #{record.wd1,jdbcType=VARCHAR},
+      kqxh1 = #{record.kqxh1,jdbcType=VARCHAR},
+      kqxd1 = #{record.kqxd1,jdbcType=VARCHAR},
+      hxf1 = #{record.hxf1,jdbcType=VARCHAR},
+      syyy1 = #{record.syyy1,jdbcType=VARCHAR},
+      pyyy1 = #{record.pyyy1,jdbcType=VARCHAR},
+      yyyxd1 = #{record.yyyxd1,jdbcType=VARCHAR},
+      led11 = #{record.led11,jdbcType=VARCHAR},
+      led12 = #{record.led12,jdbcType=VARCHAR},
+      led13 = #{record.led13,jdbcType=VARCHAR},
+      wd2 = #{record.wd2,jdbcType=VARCHAR},
+      kqxh2 = #{record.kqxh2,jdbcType=VARCHAR},
+      kqxd2 = #{record.kqxd2,jdbcType=VARCHAR},
+      hxf2 = #{record.hxf2,jdbcType=VARCHAR},
+      syyy2 = #{record.syyy2,jdbcType=VARCHAR},
+      pyyy2 = #{record.pyyy2,jdbcType=VARCHAR},
+      yyyxd2 = #{record.yyyxd2,jdbcType=VARCHAR},
+      led21 = #{record.led21,jdbcType=VARCHAR},
+      led22 = #{record.led22,jdbcType=VARCHAR},
+      led23 = #{record.led23,jdbcType=VARCHAR},
+      wd3 = #{record.wd3,jdbcType=VARCHAR},
+      kqxh3 = #{record.kqxh3,jdbcType=VARCHAR},
+      kqxd3 = #{record.kqxd3,jdbcType=VARCHAR},
+      hxf3 = #{record.hxf3,jdbcType=VARCHAR},
+      syyy3 = #{record.syyy3,jdbcType=VARCHAR},
+      pyyy3 = #{record.pyyy3,jdbcType=VARCHAR},
+      yyyxd3 = #{record.yyyxd3,jdbcType=VARCHAR},
+      led31 = #{record.led31,jdbcType=VARCHAR},
+      led32 = #{record.led32,jdbcType=VARCHAR},
+      led33 = #{record.led33,jdbcType=VARCHAR},
+      ymbg = #{record.ymbg,jdbcType=VARCHAR},
+      mpjs = #{record.mpjs,jdbcType=VARCHAR},
       bs = #{record.bs,jdbcType=VARCHAR},
       ps = #{record.ps,jdbcType=VARCHAR},
       batch_id = #{record.batchId,jdbcType=BIGINT},
@@ -563,92 +600,101 @@
       <if test="headControlMod != null">
         head_control_mod = #{headControlMod,jdbcType=VARCHAR},
       </if>
-      <if test="sky != null">
-        sky = #{sky,jdbcType=VARCHAR},
+      <if test="wd1 != null">
+        wd1 = #{wd1,jdbcType=VARCHAR},
       </if>
-      <if test="yy != null">
-        yy = #{yy,jdbcType=VARCHAR},
+      <if test="kqxh1 != null">
+        kqxh1 = #{kqxh1,jdbcType=VARCHAR},
       </if>
-      <if test="wind != null">
-        wind = #{wind,jdbcType=VARCHAR},
+      <if test="kqxd1 != null">
+        kqxd1 = #{kqxd1,jdbcType=VARCHAR},
       </if>
-      <if test="ys != null">
-        ys = #{ys,jdbcType=VARCHAR},
+      <if test="hxf1 != null">
+        hxf1 = #{hxf1,jdbcType=VARCHAR},
       </if>
-      <if test="pl != null">
-        pl = #{pl,jdbcType=VARCHAR},
+      <if test="syyy1 != null">
+        syyy1 = #{syyy1,jdbcType=VARCHAR},
       </if>
-      <if test="growInner1 != null">
-        grow_inner_1 = #{growInner1,jdbcType=VARCHAR},
+      <if test="pyyy1 != null">
+        pyyy1 = #{pyyy1,jdbcType=VARCHAR},
       </if>
-      <if test="growMiddle1 != null">
-        grow_middle_1 = #{growMiddle1,jdbcType=VARCHAR},
+      <if test="yyyxd1 != null">
+        yyyxd1 = #{yyyxd1,jdbcType=VARCHAR},
       </if>
-      <if test="growOut1 != null">
-        grow_out_1 = #{growOut1,jdbcType=VARCHAR},
+      <if test="led11 != null">
+        led11 = #{led11,jdbcType=VARCHAR},
       </if>
-      <if test="growInner2 != null">
-        grow_inner_2 = #{growInner2,jdbcType=VARCHAR},
+      <if test="led12 != null">
+        led12 = #{led12,jdbcType=VARCHAR},
       </if>
-      <if test="growMiddle2 != null">
-        grow_middle_2 = #{growMiddle2,jdbcType=VARCHAR},
+      <if test="led13 != null">
+        led13 = #{led13,jdbcType=VARCHAR},
       </if>
-      <if test="growOut2 != null">
-        grow_out_2 = #{growOut2,jdbcType=VARCHAR},
+      <if test="wd2 != null">
+        wd2 = #{wd2,jdbcType=VARCHAR},
       </if>
-      <if test="growInner3 != null">
-        grow_inner_3 = #{growInner3,jdbcType=VARCHAR},
+      <if test="kqxh2 != null">
+        kqxh2 = #{kqxh2,jdbcType=VARCHAR},
       </if>
-      <if test="growMiddle3 != null">
-        grow_middle_3 = #{growMiddle3,jdbcType=VARCHAR},
+      <if test="kqxd2 != null">
+        kqxd2 = #{kqxd2,jdbcType=VARCHAR},
       </if>
-      <if test="growOut3 != null">
-        grow_out_3 = #{growOut3,jdbcType=VARCHAR},
+      <if test="hxf2 != null">
+        hxf2 = #{hxf2,jdbcType=VARCHAR},
       </if>
-      <if test="add1 != null">
-        add_1 = #{add1,jdbcType=VARCHAR},
+      <if test="syyy2 != null">
+        syyy2 = #{syyy2,jdbcType=VARCHAR},
       </if>
-      <if test="add2 != null">
-        add_2 = #{add2,jdbcType=VARCHAR},
+      <if test="pyyy2 != null">
+        pyyy2 = #{pyyy2,jdbcType=VARCHAR},
       </if>
-      <if test="add3 != null">
-        add_3 = #{add3,jdbcType=VARCHAR},
+      <if test="yyyxd2 != null">
+        yyyxd2 = #{yyyxd2,jdbcType=VARCHAR},
       </if>
-      <if test="inlet1 != null">
-        inlet_1 = #{inlet1,jdbcType=VARCHAR},
+      <if test="led21 != null">
+        led21 = #{led21,jdbcType=VARCHAR},
       </if>
-      <if test="inlet2 != null">
-        inlet_2 = #{inlet2,jdbcType=VARCHAR},
+      <if test="led22 != null">
+        led22 = #{led22,jdbcType=VARCHAR},
       </if>
-      <if test="inlet3 != null">
-        inlet_3 = #{inlet3,jdbcType=VARCHAR},
+      <if test="led23 != null">
+        led23 = #{led23,jdbcType=VARCHAR},
       </if>
-      <if test="out1 != null">
-        out_1 = #{out1,jdbcType=VARCHAR},
+      <if test="wd3 != null">
+        wd3 = #{wd3,jdbcType=VARCHAR},
       </if>
-      <if test="out2 != null">
-        out_2 = #{out2,jdbcType=VARCHAR},
+      <if test="kqxh3 != null">
+        kqxh3 = #{kqxh3,jdbcType=VARCHAR},
       </if>
-      <if test="out3 != null">
-        out_3 = #{out3,jdbcType=VARCHAR},
+      <if test="kqxd3 != null">
+        kqxd3 = #{kqxd3,jdbcType=VARCHAR},
       </if>
-      <if test="feedLed != null">
-        feed_led = #{feedLed,jdbcType=VARCHAR},
+      <if test="hxf3 != null">
+        hxf3 = #{hxf3,jdbcType=VARCHAR},
       </if>
-      <if test="feedPl != null">
-        feed_pl = #{feedPl,jdbcType=VARCHAR},
+      <if test="syyy3 != null">
+        syyy3 = #{syyy3,jdbcType=VARCHAR},
       </if>
-      <if test="sb != null">
-        sb = #{sb,jdbcType=VARCHAR},
+      <if test="pyyy3 != null">
+        pyyy3 = #{pyyy3,jdbcType=VARCHAR},
       </if>
-      <if test="fs1 != null">
-        fs_1 = #{fs1,jdbcType=VARCHAR},
+      <if test="yyyxd3 != null">
+        yyyxd3 = #{yyyxd3,jdbcType=VARCHAR},
       </if>
-      <if test="fs2 != null">
-        fs_2 = #{fs2,jdbcType=VARCHAR},
+      <if test="led31 != null">
+        led31 = #{led31,jdbcType=VARCHAR},
       </if>
-      <if test="fs3 != null">
-        fs_3 = #{fs3,jdbcType=VARCHAR},
+      <if test="led32 != null">
+        led32 = #{led32,jdbcType=VARCHAR},
+      </if>
+      <if test="led33 != null">
+        led33 = #{led33,jdbcType=VARCHAR},
+      </if>
+      <if test="ymbg != null">
+        ymbg = #{ymbg,jdbcType=VARCHAR},
+      </if>
+      <if test="mpjs != null">
+        mpjs = #{mpjs,jdbcType=VARCHAR},
       </if>
       <if test="bs != null">
         bs = #{bs,jdbcType=VARCHAR},
@@ -674,35 +720,38 @@
   <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.HandControl">
     update hand_control
     set head_control_mod = #{headControlMod,jdbcType=VARCHAR},
-      sky = #{sky,jdbcType=VARCHAR},
-      yy = #{yy,jdbcType=VARCHAR},
-      wind = #{wind,jdbcType=VARCHAR},
-      ys = #{ys,jdbcType=VARCHAR},
-      pl = #{pl,jdbcType=VARCHAR},
-      grow_inner_1 = #{growInner1,jdbcType=VARCHAR},
-      grow_middle_1 = #{growMiddle1,jdbcType=VARCHAR},
-      grow_out_1 = #{growOut1,jdbcType=VARCHAR},
-      grow_inner_2 = #{growInner2,jdbcType=VARCHAR},
-      grow_middle_2 = #{growMiddle2,jdbcType=VARCHAR},
-      grow_out_2 = #{growOut2,jdbcType=VARCHAR},
-      grow_inner_3 = #{growInner3,jdbcType=VARCHAR},
-      grow_middle_3 = #{growMiddle3,jdbcType=VARCHAR},
-      grow_out_3 = #{growOut3,jdbcType=VARCHAR},
-      add_1 = #{add1,jdbcType=VARCHAR},
-      add_2 = #{add2,jdbcType=VARCHAR},
-      add_3 = #{add3,jdbcType=VARCHAR},
-      inlet_1 = #{inlet1,jdbcType=VARCHAR},
-      inlet_2 = #{inlet2,jdbcType=VARCHAR},
-      inlet_3 = #{inlet3,jdbcType=VARCHAR},
-      out_1 = #{out1,jdbcType=VARCHAR},
-      out_2 = #{out2,jdbcType=VARCHAR},
-      out_3 = #{out3,jdbcType=VARCHAR},
-      feed_led = #{feedLed,jdbcType=VARCHAR},
-      feed_pl = #{feedPl,jdbcType=VARCHAR},
-      sb = #{sb,jdbcType=VARCHAR},
-      fs_1 = #{fs1,jdbcType=VARCHAR},
-      fs_2 = #{fs2,jdbcType=VARCHAR},
-      fs_3 = #{fs3,jdbcType=VARCHAR},
+      wd1 = #{wd1,jdbcType=VARCHAR},
+      kqxh1 = #{kqxh1,jdbcType=VARCHAR},
+      kqxd1 = #{kqxd1,jdbcType=VARCHAR},
+      hxf1 = #{hxf1,jdbcType=VARCHAR},
+      syyy1 = #{syyy1,jdbcType=VARCHAR},
+      pyyy1 = #{pyyy1,jdbcType=VARCHAR},
+      yyyxd1 = #{yyyxd1,jdbcType=VARCHAR},
+      led11 = #{led11,jdbcType=VARCHAR},
+      led12 = #{led12,jdbcType=VARCHAR},
+      led13 = #{led13,jdbcType=VARCHAR},
+      wd2 = #{wd2,jdbcType=VARCHAR},
+      kqxh2 = #{kqxh2,jdbcType=VARCHAR},
+      kqxd2 = #{kqxd2,jdbcType=VARCHAR},
+      hxf2 = #{hxf2,jdbcType=VARCHAR},
+      syyy2 = #{syyy2,jdbcType=VARCHAR},
+      pyyy2 = #{pyyy2,jdbcType=VARCHAR},
+      yyyxd2 = #{yyyxd2,jdbcType=VARCHAR},
+      led21 = #{led21,jdbcType=VARCHAR},
+      led22 = #{led22,jdbcType=VARCHAR},
+      led23 = #{led23,jdbcType=VARCHAR},
+      wd3 = #{wd3,jdbcType=VARCHAR},
+      kqxh3 = #{kqxh3,jdbcType=VARCHAR},
+      kqxd3 = #{kqxd3,jdbcType=VARCHAR},
+      hxf3 = #{hxf3,jdbcType=VARCHAR},
+      syyy3 = #{syyy3,jdbcType=VARCHAR},
+      pyyy3 = #{pyyy3,jdbcType=VARCHAR},
+      yyyxd3 = #{yyyxd3,jdbcType=VARCHAR},
+      led31 = #{led31,jdbcType=VARCHAR},
+      led32 = #{led32,jdbcType=VARCHAR},
+      led33 = #{led33,jdbcType=VARCHAR},
+      ymbg = #{ymbg,jdbcType=VARCHAR},
+      mpjs = #{mpjs,jdbcType=VARCHAR},
       bs = #{bs,jdbcType=VARCHAR},
       ps = #{ps,jdbcType=VARCHAR},
       batch_id = #{batchId,jdbcType=BIGINT},

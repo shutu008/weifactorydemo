@@ -170,6 +170,9 @@ public class HistoryController extends BaseController {
 		
 		//根据批次和选择日期
 		Image image = imageServer.getImageByBatchAndDate(batchId, startTime);
+		if(image == null){
+			return V.ok();
+		}
 		String hostDir = weifactoryProperties.getImage().getHostUrl();
 		String imageUrl = hostDir + image.getOnePicName();
 		return V.ok(imageUrl);

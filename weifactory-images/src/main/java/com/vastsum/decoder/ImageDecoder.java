@@ -10,6 +10,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 
 /**
+ * 图片解码器
  * @author ssj
  * @create 2017-11-05 9:46
  */
@@ -52,7 +53,7 @@ public class ImageDecoder extends ByteToMessageDecoder  {
 		Integer dataLen = Integer.valueOf(sp[3]);
 		
 		if (in.readableBytes()<dataLen) {
-			//读指针重置
+			//读指针重置（图片数据可能没过来完全，重新从包头开始）
 			in.resetReaderIndex();
 			return;
 		}

@@ -17,6 +17,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,8 +32,10 @@ import com.vastsum.entity.User;
 import com.vastsum.entity.UserRole;
 import com.vastsum.entity.vo.RegisterUser;
 import com.vastsum.entity.vo.UserInfo;
+import com.vastsum.enums.LoginStatusEnum;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
+import com.vastsum.model.V;
 import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.service.RegisterService;
 import com.vastsum.service.UserRoleService;
@@ -195,7 +198,7 @@ public class RegisterController extends BaseController {
         AlibabaAliqinFcSmsNumSendRequest req = new AlibabaAliqinFcSmsNumSendRequest();
         req.setExtend(extend);
         req.setSmsType(type);
-        req.setSmsFreeSignName(signname);
+        req.setSmsFreeSignName("微植物工厂");
         req.setSmsParamString("{\"code\":\""+codeParam+"\"}");
         req.setRecNum(cell.trim());
         req.setSmsTemplateCode(templateCode);
@@ -203,7 +206,7 @@ public class RegisterController extends BaseController {
         try {
              rsp = client.execute(req);
              if (rsp.getErrorCode()!=null){
-                 return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
+                 return V.error(rsp.getSubMsg());
              }
             return ResponseEntity.ok(ResultModel.ok(rsp));
         }catch (Exception e){
@@ -239,6 +242,9 @@ public class RegisterController extends BaseController {
         if(!user.getEnabled()){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_CANCLE));
         }
+        if(LoginStatusEnum.AUDIT.getLoginStatus().equals(user.getLoginStatus())){
+        	return V.error("此账号为专家账号，账号正在审核中!");
+        }
         UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(username, password);
         try {
             Authentication authentication = myAuthenticationManager.authenticate(authRequest); //调用loadUserByUsername
@@ -248,6 +254,8 @@ public class RegisterController extends BaseController {
             //登陆成功后的处理
             //根据登陆成功的用户名获取具体的用户信息
             UserInfo userInfo = userService.findUserByUsername(authentication.getName());
+            //更新用户登录状态信息
+            userService.updateLoginStatus(user.getUserId(), LoginStatusEnum.ONLINE.getLoginStatus());
             return ResponseEntity.ok(ResultModel.ok(userInfo));
 
         } catch (AuthenticationException ex) {
@@ -258,6 +266,19 @@ public class RegisterController extends BaseController {
     }
 
 
+    //退出登录
+    @PostMapping(value = "/loginOut")
+    @ApiOperation(value = "用户退出@20180326")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = true)
+    })
+    public ResponseEntity<ResultModel> loginOut(@RequestParam Integer userId){
+       if(userId == null){
+    	   return V.error("用户id不能为空");
+       }
+       userService.updateLoginStatus(userId, LoginStatusEnum.LOGOUT.getLoginStatus());
+       return V.ok();
+    }
 
 
 }

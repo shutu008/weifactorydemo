@@ -305,52 +305,62 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andDaySetEqualTo(Date value) {
+        public Criteria andDaySetEqualTo(String value) {
             addCriterion("day_set =", value, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetNotEqualTo(Date value) {
+        public Criteria andDaySetNotEqualTo(String value) {
             addCriterion("day_set <>", value, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetGreaterThan(Date value) {
+        public Criteria andDaySetGreaterThan(String value) {
             addCriterion("day_set >", value, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetGreaterThanOrEqualTo(Date value) {
+        public Criteria andDaySetGreaterThanOrEqualTo(String value) {
             addCriterion("day_set >=", value, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetLessThan(Date value) {
+        public Criteria andDaySetLessThan(String value) {
             addCriterion("day_set <", value, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetLessThanOrEqualTo(Date value) {
+        public Criteria andDaySetLessThanOrEqualTo(String value) {
             addCriterion("day_set <=", value, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetIn(List<Date> values) {
+        public Criteria andDaySetLike(String value) {
+            addCriterion("day_set like", value, "daySet");
+            return (Criteria) this;
+        }
+
+        public Criteria andDaySetNotLike(String value) {
+            addCriterion("day_set not like", value, "daySet");
+            return (Criteria) this;
+        }
+
+        public Criteria andDaySetIn(List<String> values) {
             addCriterion("day_set in", values, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetNotIn(List<Date> values) {
+        public Criteria andDaySetNotIn(List<String> values) {
             addCriterion("day_set not in", values, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetBetween(Date value1, Date value2) {
+        public Criteria andDaySetBetween(String value1, String value2) {
             addCriterion("day_set between", value1, value2, "daySet");
             return (Criteria) this;
         }
 
-        public Criteria andDaySetNotBetween(Date value1, Date value2) {
+        public Criteria andDaySetNotBetween(String value1, String value2) {
             addCriterion("day_set not between", value1, value2, "daySet");
             return (Criteria) this;
         }
@@ -365,52 +375,62 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeEqualTo(Date value) {
+        public Criteria andDayStartTimeEqualTo(String value) {
             addCriterion("day_start_time =", value, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeNotEqualTo(Date value) {
+        public Criteria andDayStartTimeNotEqualTo(String value) {
             addCriterion("day_start_time <>", value, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeGreaterThan(Date value) {
+        public Criteria andDayStartTimeGreaterThan(String value) {
             addCriterion("day_start_time >", value, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andDayStartTimeGreaterThanOrEqualTo(String value) {
             addCriterion("day_start_time >=", value, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeLessThan(Date value) {
+        public Criteria andDayStartTimeLessThan(String value) {
             addCriterion("day_start_time <", value, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeLessThanOrEqualTo(Date value) {
+        public Criteria andDayStartTimeLessThanOrEqualTo(String value) {
             addCriterion("day_start_time <=", value, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeIn(List<Date> values) {
+        public Criteria andDayStartTimeLike(String value) {
+            addCriterion("day_start_time like", value, "dayStartTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayStartTimeNotLike(String value) {
+            addCriterion("day_start_time not like", value, "dayStartTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayStartTimeIn(List<String> values) {
             addCriterion("day_start_time in", values, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeNotIn(List<Date> values) {
+        public Criteria andDayStartTimeNotIn(List<String> values) {
             addCriterion("day_start_time not in", values, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeBetween(Date value1, Date value2) {
+        public Criteria andDayStartTimeBetween(String value1, String value2) {
             addCriterion("day_start_time between", value1, value2, "dayStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayStartTimeNotBetween(Date value1, Date value2) {
+        public Criteria andDayStartTimeNotBetween(String value1, String value2) {
             addCriterion("day_start_time not between", value1, value2, "dayStartTime");
             return (Criteria) this;
         }
@@ -425,52 +445,62 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeEqualTo(Date value) {
+        public Criteria andDayEndTimeEqualTo(String value) {
             addCriterion("day_end_time =", value, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeNotEqualTo(Date value) {
+        public Criteria andDayEndTimeNotEqualTo(String value) {
             addCriterion("day_end_time <>", value, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeGreaterThan(Date value) {
+        public Criteria andDayEndTimeGreaterThan(String value) {
             addCriterion("day_end_time >", value, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andDayEndTimeGreaterThanOrEqualTo(String value) {
             addCriterion("day_end_time >=", value, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeLessThan(Date value) {
+        public Criteria andDayEndTimeLessThan(String value) {
             addCriterion("day_end_time <", value, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeLessThanOrEqualTo(Date value) {
+        public Criteria andDayEndTimeLessThanOrEqualTo(String value) {
             addCriterion("day_end_time <=", value, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeIn(List<Date> values) {
+        public Criteria andDayEndTimeLike(String value) {
+            addCriterion("day_end_time like", value, "dayEndTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayEndTimeNotLike(String value) {
+            addCriterion("day_end_time not like", value, "dayEndTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayEndTimeIn(List<String> values) {
             addCriterion("day_end_time in", values, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeNotIn(List<Date> values) {
+        public Criteria andDayEndTimeNotIn(List<String> values) {
             addCriterion("day_end_time not in", values, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeBetween(Date value1, Date value2) {
+        public Criteria andDayEndTimeBetween(String value1, String value2) {
             addCriterion("day_end_time between", value1, value2, "dayEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andDayEndTimeNotBetween(Date value1, Date value2) {
+        public Criteria andDayEndTimeNotBetween(String value1, String value2) {
             addCriterion("day_end_time not between", value1, value2, "dayEndTime");
             return (Criteria) this;
         }
@@ -485,52 +515,62 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeEqualTo(Date value) {
+        public Criteria andNightStartTimeEqualTo(String value) {
             addCriterion("night_start_time =", value, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeNotEqualTo(Date value) {
+        public Criteria andNightStartTimeNotEqualTo(String value) {
             addCriterion("night_start_time <>", value, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeGreaterThan(Date value) {
+        public Criteria andNightStartTimeGreaterThan(String value) {
             addCriterion("night_start_time >", value, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andNightStartTimeGreaterThanOrEqualTo(String value) {
             addCriterion("night_start_time >=", value, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeLessThan(Date value) {
+        public Criteria andNightStartTimeLessThan(String value) {
             addCriterion("night_start_time <", value, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeLessThanOrEqualTo(Date value) {
+        public Criteria andNightStartTimeLessThanOrEqualTo(String value) {
             addCriterion("night_start_time <=", value, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeIn(List<Date> values) {
+        public Criteria andNightStartTimeLike(String value) {
+            addCriterion("night_start_time like", value, "nightStartTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightStartTimeNotLike(String value) {
+            addCriterion("night_start_time not like", value, "nightStartTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightStartTimeIn(List<String> values) {
             addCriterion("night_start_time in", values, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeNotIn(List<Date> values) {
+        public Criteria andNightStartTimeNotIn(List<String> values) {
             addCriterion("night_start_time not in", values, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeBetween(Date value1, Date value2) {
+        public Criteria andNightStartTimeBetween(String value1, String value2) {
             addCriterion("night_start_time between", value1, value2, "nightStartTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightStartTimeNotBetween(Date value1, Date value2) {
+        public Criteria andNightStartTimeNotBetween(String value1, String value2) {
             addCriterion("night_start_time not between", value1, value2, "nightStartTime");
             return (Criteria) this;
         }
@@ -545,52 +585,62 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeEqualTo(Date value) {
+        public Criteria andNightEndTimeEqualTo(String value) {
             addCriterion("night_end_time =", value, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeNotEqualTo(Date value) {
+        public Criteria andNightEndTimeNotEqualTo(String value) {
             addCriterion("night_end_time <>", value, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeGreaterThan(Date value) {
+        public Criteria andNightEndTimeGreaterThan(String value) {
             addCriterion("night_end_time >", value, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andNightEndTimeGreaterThanOrEqualTo(String value) {
             addCriterion("night_end_time >=", value, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeLessThan(Date value) {
+        public Criteria andNightEndTimeLessThan(String value) {
             addCriterion("night_end_time <", value, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeLessThanOrEqualTo(Date value) {
+        public Criteria andNightEndTimeLessThanOrEqualTo(String value) {
             addCriterion("night_end_time <=", value, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeIn(List<Date> values) {
+        public Criteria andNightEndTimeLike(String value) {
+            addCriterion("night_end_time like", value, "nightEndTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightEndTimeNotLike(String value) {
+            addCriterion("night_end_time not like", value, "nightEndTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightEndTimeIn(List<String> values) {
             addCriterion("night_end_time in", values, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeNotIn(List<Date> values) {
+        public Criteria andNightEndTimeNotIn(List<String> values) {
             addCriterion("night_end_time not in", values, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeBetween(Date value1, Date value2) {
+        public Criteria andNightEndTimeBetween(String value1, String value2) {
             addCriterion("night_end_time between", value1, value2, "nightEndTime");
             return (Criteria) this;
         }
 
-        public Criteria andNightEndTimeNotBetween(Date value1, Date value2) {
+        public Criteria andNightEndTimeNotBetween(String value1, String value2) {
             addCriterion("night_end_time not between", value1, value2, "nightEndTime");
             return (Criteria) this;
         }
@@ -3245,52 +3295,62 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeEqualTo(Date value) {
+        public Criteria andYyBeforeTimeEqualTo(String value) {
             addCriterion("yy_before_time =", value, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeNotEqualTo(Date value) {
+        public Criteria andYyBeforeTimeNotEqualTo(String value) {
             addCriterion("yy_before_time <>", value, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeGreaterThan(Date value) {
+        public Criteria andYyBeforeTimeGreaterThan(String value) {
             addCriterion("yy_before_time >", value, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andYyBeforeTimeGreaterThanOrEqualTo(String value) {
             addCriterion("yy_before_time >=", value, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeLessThan(Date value) {
+        public Criteria andYyBeforeTimeLessThan(String value) {
             addCriterion("yy_before_time <", value, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeLessThanOrEqualTo(Date value) {
+        public Criteria andYyBeforeTimeLessThanOrEqualTo(String value) {
             addCriterion("yy_before_time <=", value, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeIn(List<Date> values) {
+        public Criteria andYyBeforeTimeLike(String value) {
+            addCriterion("yy_before_time like", value, "yyBeforeTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andYyBeforeTimeNotLike(String value) {
+            addCriterion("yy_before_time not like", value, "yyBeforeTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andYyBeforeTimeIn(List<String> values) {
             addCriterion("yy_before_time in", values, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeNotIn(List<Date> values) {
+        public Criteria andYyBeforeTimeNotIn(List<String> values) {
             addCriterion("yy_before_time not in", values, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeBetween(Date value1, Date value2) {
+        public Criteria andYyBeforeTimeBetween(String value1, String value2) {
             addCriterion("yy_before_time between", value1, value2, "yyBeforeTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyBeforeTimeNotBetween(Date value1, Date value2) {
+        public Criteria andYyBeforeTimeNotBetween(String value1, String value2) {
             addCriterion("yy_before_time not between", value1, value2, "yyBeforeTime");
             return (Criteria) this;
         }
@@ -3305,52 +3365,62 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeEqualTo(Date value) {
+        public Criteria andYyNextTimeEqualTo(String value) {
             addCriterion("yy_next_time =", value, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeNotEqualTo(Date value) {
+        public Criteria andYyNextTimeNotEqualTo(String value) {
             addCriterion("yy_next_time <>", value, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeGreaterThan(Date value) {
+        public Criteria andYyNextTimeGreaterThan(String value) {
             addCriterion("yy_next_time >", value, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeGreaterThanOrEqualTo(Date value) {
+        public Criteria andYyNextTimeGreaterThanOrEqualTo(String value) {
             addCriterion("yy_next_time >=", value, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeLessThan(Date value) {
+        public Criteria andYyNextTimeLessThan(String value) {
             addCriterion("yy_next_time <", value, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeLessThanOrEqualTo(Date value) {
+        public Criteria andYyNextTimeLessThanOrEqualTo(String value) {
             addCriterion("yy_next_time <=", value, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeIn(List<Date> values) {
+        public Criteria andYyNextTimeLike(String value) {
+            addCriterion("yy_next_time like", value, "yyNextTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andYyNextTimeNotLike(String value) {
+            addCriterion("yy_next_time not like", value, "yyNextTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andYyNextTimeIn(List<String> values) {
             addCriterion("yy_next_time in", values, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeNotIn(List<Date> values) {
+        public Criteria andYyNextTimeNotIn(List<String> values) {
             addCriterion("yy_next_time not in", values, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeBetween(Date value1, Date value2) {
+        public Criteria andYyNextTimeBetween(String value1, String value2) {
             addCriterion("yy_next_time between", value1, value2, "yyNextTime");
             return (Criteria) this;
         }
 
-        public Criteria andYyNextTimeNotBetween(Date value1, Date value2) {
+        public Criteria andYyNextTimeNotBetween(String value1, String value2) {
             addCriterion("yy_next_time not between", value1, value2, "yyNextTime");
             return (Criteria) this;
         }

@@ -9,7 +9,11 @@ import java.util.Date;
  */
 public class SensorCollection implements Serializable {
 
-    private Long id;            //序号id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 5497310740247888567L;
+	private Long id;            //序号id
     private String sn;          //设备序列号
     private Integer sensor;     //传感器编号
     private String data;        //数据
