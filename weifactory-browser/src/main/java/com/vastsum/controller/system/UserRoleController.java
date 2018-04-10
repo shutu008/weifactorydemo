@@ -93,6 +93,7 @@ public class UserRoleController extends BaseController {
         return ResponseEntity.ok(ResultModel.error(ResultStatus.ROLE_ADD_FAILED));
     }
 
+    //根据用户Id获取用户角色
     @RequestMapping(value = "/role/{userId}",method = RequestMethod.GET)
     @ApiOperation(value = "根据用户Id获取用户角色@20170914")
     @ApiImplicitParam(paramType = "path",name = "userId",value = "用户id",required = true)

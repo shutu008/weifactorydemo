@@ -2,6 +2,7 @@ package com.vastsum.controller;
 
 import java.util.Date;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -302,16 +303,16 @@ public class BatchController extends BaseController {
 
     //更新批次中的订单状态@20171203
     @PostMapping(value = "/updateOrderStatus")
-    @ApiOperation(value = "更新批次中的订单状态@20171203")
+    @ApiOperation(value = "更新批次中的订单状态@20180410")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query", name = "orderNumber", value = "订单号", required = true),
             @ApiImplicitParam(paramType = "query", name = "orderStatus", value = "订单状态", required = true)
     })
     public ResponseEntity<ResultModel> updateOrderStatus(String orderNumber, String orderStatus){
-       if (orderNumber == null){
+       if (StringUtils.isBlank(orderNumber)){
            return ResponseEntity.ok(ResultModel.error(ResultStatus.ORDER_NUMBER_NULL));
        }
-       if (orderStatus == null){
+       if (StringUtils.isBlank(orderStatus)){
            return  ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
        }
        //根据订单号查询出批次信息
@@ -320,6 +321,10 @@ public class BatchController extends BaseController {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
         }
         batch1.setOrderStatus(orderStatus);
+        //如果订单状态：3 托管成功
+        if ("3".equals(orderStatus)) {
+			batch1.setTrustStatus("1");
+		}
         int i = batchService.updateBatch(batch1);
         if (i > 0){
             return ResponseEntity.ok(ResultModel.ok());

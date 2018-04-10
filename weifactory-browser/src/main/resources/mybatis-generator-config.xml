@@ -7,7 +7,7 @@
 	<!--引入属性文件-->
 	<properties resource="application.properties"></properties>
 	<classPathEntry
-			location="K:\Java\maven\repo\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar" />
+			location="L:\Java\maven\repo\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar" />
 	<context id="testTables" targetRuntime="MyBatis3">
 		<!-- 生成的Java文件的编码 -->
 		<property name="javaFileEncoding" value="UTF-8"/>
@@ -69,7 +69,7 @@
 		<table tableName="sys_menu"></table>
 		<table tableName="sys_role_menu"></table>
 		-->
-		<!-- <table tableName="user"></table> -->
+		<table tableName="user"></table> 
 		<!--<table schema="" tableName="device"></table>
 		<table schema="" tableName="sensor"></table>
 
@@ -102,6 +102,6 @@
 		<!-- <table tableName="param_set"></table> -->
 		<!-- <table tableName="hand_control"></table> -->
 		<!-- <table tableName="batch"></table> -->
-		<table tableName="hand_control"></table> 
+		<!-- <table tableName="hand_control"></table>  -->
 	</context>
 </generatorConfiguration>

@@ -31,7 +31,7 @@ public class SwaggerConfig {
 	 return new ApiInfoBuilder()
 	 .title("微植物工厂网络软件")
 	 .description("微植物工厂网络软件")
-	 .termsOfServiceUrl("http://api.weifactory.vastsum.net:8080/")
+	 .termsOfServiceUrl("http://api.weifactory.vastsum.net:8852/doc.html")
 	 .contact(new Contact("shensj", "www.vastyun.com", "info@vastsum.com"))
 	 .license("The Apache License, Version 2.0")
 	 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")

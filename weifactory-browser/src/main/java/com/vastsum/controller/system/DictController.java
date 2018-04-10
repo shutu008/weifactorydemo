@@ -1,6 +1,8 @@
 package com.vastsum.controller.system;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,7 @@ import com.vastsum.entity.SysDict;
 import com.vastsum.entity.SysDictItem;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
+import com.vastsum.model.V;
 import com.vastsum.service.DictService;
 import com.vastsum.utils.DictUtil;
 
@@ -31,7 +34,7 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/dict")
 @RestController
 @Api(value = "/dict",tags={"系统字典管理"})
-public class DictionaryController extends BaseController {
+public class DictController extends BaseController {
 
     @Autowired
     private DictService dictService;
@@ -156,5 +159,13 @@ public class DictionaryController extends BaseController {
         return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
     }
 
+    
+	//获取所有的字典
+	@GetMapping("/all")
+	@ApiOperation(value="获取所有字典，前端做缓存匹配@20180403")
+	public ResponseEntity<ResultModel> getAll(){
+		Map<String, Set<SysDictItem>> all = DictUtil.getAll();
+		return V.ok(all);
+	}
 
 }

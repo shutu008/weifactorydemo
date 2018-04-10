@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping(value = "/paramSet")
-@Api(value = "/paramSet",tags={"参数设置"})
+@Api(value = "/paramSet",tags={"业务参数设置"})
 public class ParamSetController extends BaseController {
 	
 	@Autowired

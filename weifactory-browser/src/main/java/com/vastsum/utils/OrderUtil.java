@@ -35,11 +35,8 @@ public class OrderUtil {
 			if (startTime == null || endTime == null) {
 				throw new OrderException("订单生成异常");
 			}else{
-				int days = (int) ((endTime.getTime() - startTime.getTime()) / (1000*3600*24));
-				if (days == 0) {
-					//等于0,说明不足一天按照一天计算
-					days = 1;
-				}
+				int days = (int)((endTime.getTime() - startTime.getTime()) / (1000*3600*24-10));
+				days++;
 		        BigDecimal decimal = new BigDecimal(days * Float.valueOf(ParamHelper.getValueByCode("price")));
 		        BigDecimal bigDecimal = decimal.setScale(2, BigDecimal.ROUND_HALF_UP);//四舍五入保留两位小数
 		        return bigDecimal;

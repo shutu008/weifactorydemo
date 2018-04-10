@@ -16,7 +16,8 @@
     <result column="app_secret" jdbcType="VARCHAR" property="appSecret" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
-    <result column="enabled" jdbcType="BIT" property="enabled" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="login_status" jdbcType="VARCHAR" property="loginStatus" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -80,7 +81,7 @@
   <sql id="Base_Column_List">
     user_id, user_name, realname, user_password, user_phone, is_bind_phone, user_email, 
     user_weixin_id, user_weixin_nickname, personal_introduction, app_id, app_secret, 
-    gmt_create, gmt_modified, enabled, login_status
+    gmt_create, gmt_modified, role, status, login_status
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.UserExample" resultMap="BaseResultMap">
     select
@@ -117,14 +118,14 @@
       user_password, user_phone, is_bind_phone, 
       user_email, user_weixin_id, user_weixin_nickname, 
       personal_introduction, app_id, app_secret, 
-      gmt_create, gmt_modified, enabled, 
-      login_status)
+      gmt_create, gmt_modified, role, 
+      status, login_status)
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, 
       #{userPassword,jdbcType=VARCHAR}, #{userPhone,jdbcType=VARCHAR}, #{isBindPhone,jdbcType=BIT}, 
       #{userEmail,jdbcType=VARCHAR}, #{userWeixinId,jdbcType=VARCHAR}, #{userWeixinNickname,jdbcType=VARCHAR}, 
       #{personalIntroduction,jdbcType=VARCHAR}, #{appId,jdbcType=VARCHAR}, #{appSecret,jdbcType=VARCHAR}, 
-      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, #{enabled,jdbcType=BIT}, 
-      #{loginStatus,jdbcType=VARCHAR})
+      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, #{role,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{loginStatus,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.User">
     insert into user
@@ -171,8 +172,11 @@
       <if test="gmtModified != null">
         gmt_modified,
       </if>
-      <if test="enabled != null">
-        enabled,
+      <if test="role != null">
+        role,
+      </if>
+      <if test="status != null">
+        status,
       </if>
       <if test="loginStatus != null">
         login_status,
@@ -221,8 +225,11 @@
       <if test="gmtModified != null">
         #{gmtModified,jdbcType=TIMESTAMP},
       </if>
-      <if test="enabled != null">
-        #{enabled,jdbcType=BIT},
+      <if test="role != null">
+        #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
       </if>
       <if test="loginStatus != null">
         #{loginStatus,jdbcType=VARCHAR},
@@ -280,8 +287,11 @@
       <if test="record.gmtModified != null">
         gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.enabled != null">
-        enabled = #{record.enabled,jdbcType=BIT},
+      <if test="record.role != null">
+        role = #{record.role,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=VARCHAR},
       </if>
       <if test="record.loginStatus != null">
         login_status = #{record.loginStatus,jdbcType=VARCHAR},
@@ -307,7 +317,8 @@
       app_secret = #{record.appSecret,jdbcType=VARCHAR},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
-      enabled = #{record.enabled,jdbcType=BIT},
+      role = #{record.role,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=VARCHAR},
       login_status = #{record.loginStatus,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -355,8 +366,11 @@
       <if test="gmtModified != null">
         gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
       </if>
-      <if test="enabled != null">
-        enabled = #{enabled,jdbcType=BIT},
+      <if test="role != null">
+        role = #{role,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=VARCHAR},
       </if>
       <if test="loginStatus != null">
         login_status = #{loginStatus,jdbcType=VARCHAR},
@@ -379,7 +393,8 @@
       app_secret = #{appSecret,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
-      enabled = #{enabled,jdbcType=BIT},
+      role = #{role,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
       login_status = #{loginStatus,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=INTEGER}
   </update>

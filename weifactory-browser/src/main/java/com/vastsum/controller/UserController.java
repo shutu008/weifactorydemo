@@ -44,6 +44,7 @@ public class UserController extends BaseController {
     @Autowired
     private UserService userService;
 
+    //获取所有用户列表
     @RequestMapping(value = "/userList/{page}/{pageSize}",
             method = RequestMethod.GET)
     @ApiOperation(value = "分页查询用户", notes = "分页查询用户")
@@ -57,9 +58,10 @@ public class UserController extends BaseController {
     }
 
 
+    //分页列出所有专家
     @RequestMapping(value = "/expertList/{page}/{pageSize}",
             method = RequestMethod.GET)
-    @ApiOperation(value = "专家列表@20180103")
+    @ApiOperation(value = "分页列出所有专家@20180103")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name="page",value = "页码",required = true),
             @ApiImplicitParam(paramType = "path",name = "pageSize",value = "页数大小",required = true)
@@ -169,7 +171,7 @@ public class UserController extends BaseController {
         user.setPersonalIntroduction(personalIntroduction);
         user.setGmtCreate(new Date());
         user.setGmtModified(new Date());
-        user.setEnabled(true);
+        user.setStatus("1");
         //保存appid和appseret
         user.setAppId(DigestUtils.md5Hex(userName));
         user.setAppSecret(DigestUtils.md5Hex(password));
@@ -183,9 +185,6 @@ public class UserController extends BaseController {
         }
     }
 
-
-
-
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     @ApiOperation(value ="修改用户信息" )
     @ApiImplicitParams({
@@ -198,21 +197,21 @@ public class UserController extends BaseController {
             @ApiImplicitParam(paramType = "query",name = "personalIntroduction",value = "用户描述",required = false)
 
     })
-    public ResponseEntity<ResultModel> update(@RequestParam(value = "id",required = true) Integer id,
-                   @RequestParam(value = "userPassword",required = false) String password,
-                   @RequestParam(value = "userPhone", required = false) String userPhone,
-                   @RequestParam(value = "userEmail",required = false) String userEmail,
-                   @RequestParam(value = "userWeixinId",required = false) String userWeixinId,
-                   @RequestParam(value = "userWeixinNickname",required = false) String userWeixinNickname,
-                   @RequestParam(value = "personalIntroduction",required = false) String personalIntroduction, @RequestParam(value = "enabled",required = false) boolean enabled){
+    public ResponseEntity<ResultModel> update(Integer id,
+                  String userPassword,
+                  String userPhone,
+                  String userEmail,
+                  String userWeixinId,
+                  String userWeixinNickname,
+                  String personalIntroduction){
         if (id==null || "".equals(id)) {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_ID_NULL));
         }
         User user = new User();
         //修改用户必须要有userId;
         user.setUserId(id);
-        if (password!=null && !"".equals(password)) {
-            user.setUserPassword(DigestUtils.md5Hex(password));
+        if (userPassword!=null && !"".equals(userPassword)) {
+            user.setUserPassword(DigestUtils.md5Hex(userPassword));
         }
         if (userPhone!=null && !"".equals(userPhone)){
             user.setUserPhone(userPhone);
@@ -223,8 +222,10 @@ public class UserController extends BaseController {
         user.setUserWeixinNickname(userWeixinNickname);
         user.setPersonalIntroduction(personalIntroduction);
         user.setGmtModified(new Date());
-        user.setEnabled(enabled);
-        user.setAppSecret(DigestUtils.md5Hex(password));
+        user.setStatus("1");
+        if(StringUtils.isNotBlank(userPassword)){
+        	user.setAppSecret(DigestUtils.md5Hex(userPassword));
+        }
 
         //调用添加程序
         int i = userService.update(user);
@@ -268,6 +269,7 @@ public class UserController extends BaseController {
         return ResponseEntity.ok(ResultModel.error(ResultStatus.FAILED));
     }
 
+    //审批专家操作
     @PostMapping(value = "/changeExport")
     @ApiOperation(value = "审批专家操作@20171022")
     @ApiImplicitParams({
@@ -284,20 +286,14 @@ public class UserController extends BaseController {
         }
         if (status.equals("0")){
             //如果拒绝直接删除用户
-            Integer i = userService.deleteByUserId(userId);
-            if (i>0){
-                return ResponseEntity.ok(ResultModel.ok());
-            }
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
+            userService.deleteByUserId(userId);
+            return V.ok();
         }
         User user = new User();
-        user.setEnabled(true);
+        user.setStatus("1");
         user.setUserId(userId);
-        int i = userService.update(user);
-        if (i > 0){
-            return ResponseEntity.ok(ResultModel.ok());
-        }
-        return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
+       userService.update(user);
+       return V.ok();
     }
     
     //列出所有在线专家

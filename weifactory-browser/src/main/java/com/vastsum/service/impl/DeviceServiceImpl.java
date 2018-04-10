@@ -5,8 +5,11 @@ import com.github.pagehelper.PageInfo;
 import com.vastsum.dao.BizOrderMapper;
 import com.vastsum.dao.DeviceMapper;
 import com.vastsum.entity.*;
+import com.vastsum.entity.vo.UserDevice;
 import com.vastsum.service.DeviceService;
 import com.vastsum.dao.DeviceSnMapper;
+import com.vastsum.dao.JoinMapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +27,8 @@ public class DeviceServiceImpl implements DeviceService {
     private DeviceSnMapper deviceSnMapper;
     @Autowired
     private BizOrderMapper bizOrderMapper;
+    @Autowired
+    private JoinMapper joinMapper;
 
     @Override
     public PageInfo<Device> findAllByPage(int page, int pageSize)
@@ -162,6 +167,15 @@ public class DeviceServiceImpl implements DeviceService {
 	public boolean hasDeviceSn(String sn) {
 		DeviceSn deviceSn = this.getBySn(sn);
 		return deviceSn == null ? false:true;
+	}
+
+	@Override
+	public PageInfo<UserDevice> findByPage(int page, int pageSize) {
+		page = page == 0? 1:page;
+        pageSize = pageSize == 0? 10:pageSize;
+        PageHelper.startPage(page,pageSize);
+		List<UserDevice> list = joinMapper.findByUserDeviceDto();
+		return new PageInfo<>(list);
 	}
     
 }

@@ -3,6 +3,7 @@ package com.vastsum.service;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceSn;
+import com.vastsum.entity.vo.UserDevice;
 
 import java.util.List;
 
@@ -15,6 +16,14 @@ public interface DeviceService {
      * @return PageInfo<Device>
      */
     PageInfo<Device> findAllByPage(int page, int pageSize);
+    
+    /**
+     * 管理员获取所有的设备信息
+     * @param page
+     * @param pageSize
+     * @return PageInfo<UserDevice>
+     */
+    PageInfo<UserDevice> findByPage(int page, int pageSize);
 
     /**
      * 用户获取自己所有的设备信息

@@ -46,7 +46,7 @@ public class DictUtil {
      * @param code
      * @return Set<SysDictItem>
      */
-    public Set<SysDictItem> getSysDictItemsByCode(String code){
+    public static Set<SysDictItem> getSysDictItemsByCode(String code){
         //调用这个方法只能new（getInstance），此时已经被实例化
         Set<SysDictItem> set = dictParentMap.get(code);
         return set;
@@ -66,5 +66,16 @@ public class DictUtil {
             dictParentMap.put(code, set);
         }
     }
+    
+    /**
+     * 获取所有的可用的字典数据
+     * @return
+     */
+   public static  Map<String, Set<SysDictItem>> getAll(){
+	   if (dictParentMap.isEmpty()) {
+		loadCache();
+	}
+	   return dictParentMap;
+   }
 
 }

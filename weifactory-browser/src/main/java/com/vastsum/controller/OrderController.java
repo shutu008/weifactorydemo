@@ -33,6 +33,7 @@ import com.vastsum.enums.DepositEnum;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.exception.OrderException;
 import com.vastsum.model.ResultModel;
+import com.vastsum.model.V;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.OrderService;
@@ -97,8 +98,9 @@ public class OrderController extends BaseController {
         return ResponseEntity.ok(ResultModel.ok(orderVO));
     }
 
+    //根据相关参数生成订单信息
     @PostMapping(value = "/pay")
-    @ApiOperation(value="根据相关参数生成订单信息@20171016")//{sn}/{batchId}/{deposit}/{exportId}
+    @ApiOperation(value="根据相关参数生成订单信息@20180409")//{sn}/{batchId}/{deposit}/{exportId}
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "sn", value = "设备序列号", required = true, dataType = "string"),
             @ApiImplicitParam(paramType = "query",name = "batchId", value = "批次id", required = true, dataType = "string"),
@@ -130,7 +132,7 @@ public class OrderController extends BaseController {
         if (b){
             //支付成功之后，不能再支付
         	logger.info("已有支付成功的订单，设备已托管，不能再次托管");
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.ORDER_EXIST));
+            return V.error("本设备已经被托管，请不要再提交订单！");
         }
         Batch batch = batchService.selectBatchBybatchId(batchId);
         if (batch == null){
@@ -149,7 +151,7 @@ public class OrderController extends BaseController {
         bizOrder.setOrderNumber(orderNumber);
         bizOrder.setOrderPrice(getTotalFee(deposit, startTime, endTime));
         bizOrder.setOrderStart(new Date());
-        bizOrder.setOrderState(new Byte("0"));
+        bizOrder.setOrderState(new Byte("1"));
         bizOrder.setSn(sn);
         Integer saveBizOrder = orderService.saveBizOrder(bizOrder);
         //更改批次的订单状态标识

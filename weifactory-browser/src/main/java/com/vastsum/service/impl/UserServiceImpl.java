@@ -204,7 +204,8 @@ public class UserServiceImpl implements UserService {
         UserExample userExample = new UserExample();
         userExample.createCriteria()
         .andUserIdIn(listUserId)
-        .andLoginStatusEqualTo(loginStatus);
+        .andLoginStatusEqualTo(loginStatus)
+        .andStatusEqualTo("1");//可用专家用户
         List<User> users = userMapper.selectByExample(userExample);
         return users;
     }

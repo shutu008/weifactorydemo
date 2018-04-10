@@ -1,6 +1,8 @@
 package com.vastsum.controller.system;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +14,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.github.pagehelper.PageInfo;
+import com.vastsum.entity.Model;
+import com.vastsum.entity.SysDictItem;
 import com.vastsum.entity.SysParam;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
+import com.vastsum.model.V;
 import com.vastsum.service.SysParamService;
+import com.vastsum.utils.DictUtil;
 import com.vastsum.utils.ParamHelper;
 
 import io.swagger.annotations.Api;
@@ -30,12 +37,33 @@ public class ParamController extends BaseController {
 	@Autowired
 	private SysParamService sysParamService;
 
-	@GetMapping("/list")
+	//列出所有可用的参数列表
+	@GetMapping("/listAll")
 	@ApiOperation(value = "获取所有参数的列表@20171223")
 	public  ResponseEntity<ResultModel> listParam(){
-		List<SysParam> list = sysParamService.list(null);
+		SysParam sysParam = new SysParam();
+		sysParam.setStatus("1");
+		List<SysParam> list = sysParamService.list(sysParam);
 		return ResponseEntity.ok(ResultModel.ok(list));
 	}
+	
+	//根据条件获取参数列表
+	@PostMapping(value = "/list")
+    @ApiOperation(value = "根据条件获取参数列表@20180409")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "query",name = "paramName",value = "参数名称",required = false),
+            @ApiImplicitParam(paramType = "query",name = "paramCode",value = "参数code",required = false),
+            @ApiImplicitParam(paramType = "query",name = "paramValue",value = "参数值",required = false),
+            @ApiImplicitParam(paramType = "query",name = "status",value = "参数状态",required = false),
+            @ApiImplicitParam(paramType = "query",name = "page",value = "页码",required = true),
+            @ApiImplicitParam(paramType = "query",name = "pageSize",value = "行数",required = true)
+    })
+    public ResponseEntity<ResultModel> list(@ModelAttribute SysParam sysParam, Integer page, Integer pageSize){
+        
+       PageInfo<SysParam> pageInfo = sysParamService.listByPage(sysParam, page, pageSize);
+       return V.ok(pageInfo);
+        
+    }
 	
 	@PostMapping(value="saveOrUpdate")
 	@ApiOperation(value="保存或修改参数列表@20171223")
@@ -86,8 +114,5 @@ public class ParamController extends BaseController {
 		return ResponseEntity.ok(ResultModel.ok(sysParam));
 	}
 	
-	
-	
-	
-	
+
 }

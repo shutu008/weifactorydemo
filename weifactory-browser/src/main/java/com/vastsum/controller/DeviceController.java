@@ -22,6 +22,7 @@ import com.github.pagehelper.PageInfo;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceSn;
+import com.vastsum.entity.vo.UserDevice;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
@@ -186,6 +187,7 @@ public class DeviceController extends BaseController {
     }
 
 
+    @ApiIgnore
     @GetMapping(value = "/list/{page}/{pageSize}")
     @ApiOperation(value = "管理员获取所有的设备列表@20180103")
     @ApiImplicitParams({
@@ -194,6 +196,20 @@ public class DeviceController extends BaseController {
     })
     public ResponseEntity<ResultModel> list(@PathVariable Integer page,@PathVariable Integer pageSize){
         PageInfo<Device> pageInfoDevice = deviceService.findAllByPage(page, pageSize);
+        return ResponseEntity.ok(ResultModel.ok(pageInfoDevice));
+    }
+    
+    //管理员获取所有的设备列表
+    @GetMapping(value = "/listAll/{page}/{pageSize}")
+    @ApiOperation(value = "管理员获取所有的设备列表@20180403", 
+    notes="用户名-username；用户真实姓名-realname；手机号-userPhone；邮箱-userEmail；设备序列号-sn；设备类型-deviceType；创建时间-gmtCreate；"
+    		+ "如果用户真实姓名为空，显示用户名，设备类型根据字典获取，展示中文名；")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path",name = "page",value = "页码",required = false),
+            @ApiImplicitParam(paramType = "path",name = "pageSize",value = "每页显示信息数目",required = false)
+    })
+    public ResponseEntity<ResultModel> listUserDevice(@PathVariable Integer page,@PathVariable Integer pageSize){
+        PageInfo<UserDevice> pageInfoDevice = deviceService.findByPage(page, pageSize);
         return ResponseEntity.ok(ResultModel.ok(pageInfoDevice));
     }
 

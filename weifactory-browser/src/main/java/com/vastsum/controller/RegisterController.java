@@ -75,6 +75,7 @@ public class RegisterController extends BaseController {
     private AuthenticationManager myAuthenticationManager;  // 这样就可以自动注入？oh ，mygod ,how can it do so?
 
 
+    //执行用户注册
     @RequestMapping(value = "/doRegister",method = RequestMethod.POST)
     @ApiOperation(value = "用户注册@20171015")
     @ApiImplicitParams({
@@ -114,7 +115,7 @@ public class RegisterController extends BaseController {
             //封装数据
             user.setGmtCreate(new Date());
             user.setGmtModified(new Date());
-            user.setEnabled(true);
+            user.setStatus("1");
             user.setUserName(registerUser.getUserName());
             user.setUserPassword(DigestUtils.md5Hex(registerUser.getUserPassword()));
             user.setUserEmail(registerUser.getUserEmail());
@@ -129,9 +130,11 @@ public class RegisterController extends BaseController {
 
           //保存用户状态,专家注册不能直接使用，需要管理员认证
             if (EXPORT_ROLE_ID.equals(registerUser.getRoleId())){
-                user.setEnabled(false);
+                user.setStatus("0");
+                user.setRole("4");
             }else {
-                user.setEnabled(true);
+                user.setStatus("1");
+                user.setRole("2");
             }
             if (!codeNum.equals(codeParam)){
                 logger.info("验证码不正确！，验证手机号为："+registerUser.getUserPhone());
@@ -218,6 +221,7 @@ public class RegisterController extends BaseController {
         }
     }
 
+    //登录
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ApiOperation(value = "用户登陆")
     @ApiImplicitParams({
@@ -239,7 +243,7 @@ public class RegisterController extends BaseController {
         if (user == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_NOT_FOUND));
         }
-        if(!user.getEnabled()){
+        if("0".equals(user.getStatus())){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_CANCLE));
         }
         if(LoginStatusEnum.AUDIT.getLoginStatus().equals(user.getLoginStatus())){
@@ -264,7 +268,6 @@ public class RegisterController extends BaseController {
         }
 
     }
-
 
     //退出登录
     @PostMapping(value = "/loginOut")

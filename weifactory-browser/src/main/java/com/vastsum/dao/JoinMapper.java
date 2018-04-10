@@ -1,11 +1,13 @@
 package com.vastsum.dao;
 
-import com.vastsum.entity.vo.UserInfo;
-import com.vastsum.entity.Batch;
-import com.vastsum.entity.vo.BatchInfo;
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.vastsum.entity.Batch;
+import com.vastsum.entity.vo.BatchInfo;
+import com.vastsum.entity.vo.UserDevice;
+import com.vastsum.entity.vo.UserInfo;
 
 /**
  * @author ssj
@@ -15,7 +17,7 @@ import java.util.List;
 public interface JoinMapper {
 
     /**
-     * 根据主键获取用户信息，关联查询
+     * 根据用户id获取用户信息
      * @param id
      * @return UserInfo
      */
@@ -29,16 +31,23 @@ public interface JoinMapper {
     List<UserInfo> selectUserInfoByUserName(String userName);
 
     /**
-     * 关联查询出批次和设备信息
+     * 查询批次信息
      * @return List<Batch>
      */
     List<Batch> selectBatchInfos();
 
     /**
-     * 根据用户id获取带有设备号的批次信息
+     * 
      * @param userId
      * @return List<BatchInfo>
      */
     List<BatchInfo> selectBatchInfoByUserId(Integer userId);
+    
+    /**
+     * 查询用户和批次的关联数据，批次为主表
+     * @param userBatchDto
+     * @return List<UserDevice>
+     */
+    List<UserDevice> findByUserDeviceDto();
 
 }

@@ -2,6 +2,7 @@ com\vastsum\decoder\ByteArrayDecoder.class
 com\vastsum\main\ImgClient.class
 com\vastsum\decoder\IntegerToStringDecoder.class
 com\vastsum\encoder\ByteArrayEncoder.class
+com\vastsum\server\impl\DeviceServiceImpl.class
 com\vastsum\codec\CharCodec.class
 com\vastsum\utils\ImgUtils.class
 com\vastsum\main\ImgServer.class
@@ -15,6 +16,8 @@ com\vastsum\utils\ParseIpAddress.class
 com\vastsum\utils\SimpleReWriter.class
 com\vastsum\encoder\FileToByteEncoder.class
 com\vastsum\utils\RegexWriter.class
+com\vastsum\enums\ImageSensorEnum.class
+com\vastsum\utils\DateTimeUtils.class
 com\vastsum\encoder\IntegerToStringEncoder.class
 com\vastsum\entity\ImageData.class
 com\vastsum\listener\ClientChannelFutureListener.class
@@ -27,6 +30,7 @@ com\vastsum\decoder\ByteToCharDecoder.class
 com\vastsum\entity\CommunicationLog.class
 com\vastsum\entity\Image.class
 com\vastsum\utils\NettyChannelMap.class
+com\vastsum\server\DeviceService.class
 com\vastsum\server\ImageServer.class
 com\vastsum\server\impl\ImageServerImpl.class
 com\vastsum\main\ImgClient$1.class

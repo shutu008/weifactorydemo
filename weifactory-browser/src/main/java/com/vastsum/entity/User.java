@@ -31,7 +31,9 @@ public class User {
 
     private Date gmtModified;
 
-    private Boolean enabled;
+    private String role;
+
+    private String status;
 
     private String loginStatus;
 
@@ -147,12 +149,20 @@ public class User {
         this.gmtModified = gmtModified;
     }
 
-    public Boolean getEnabled() {
-        return enabled;
+    public String getRole() {
+        return role;
     }
 
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public void setRole(String role) {
+        this.role = role == null ? null : role.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status == null ? null : status.trim();
     }
 
     public String getLoginStatus() {
@@ -183,7 +193,8 @@ public class User {
         sb.append(", appSecret=").append(appSecret);
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append(", gmtModified=").append(gmtModified);
-        sb.append(", enabled=").append(enabled);
+        sb.append(", role=").append(role);
+        sb.append(", status=").append(status);
         sb.append(", loginStatus=").append(loginStatus);
         sb.append("]");
         return sb.toString();

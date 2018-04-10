@@ -87,4 +87,23 @@
         ON b.device_id = d.device_id
         WHERE d.user_id = #{userId} AND status = '1' ORDER BY batch_id DESC
     </select>
+    
+    <!-- userDevice -->
+      <resultMap id="UserDeviceDto" type="com.vastsum.entity.vo.UserDevice">
+        <id column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="user_name" jdbcType="VARCHAR" property="username"/>
+        <result column="realname" jdbcType="VARCHAR" property="realname" />
+        <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+        <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+        
+        <result column="device_id" jdbcType="INTEGER" property="deviceId"/>
+        <result column="sn" jdbcType="VARCHAR" property="sn" />
+        <result column="note" jdbcType="VARCHAR" property="note" />
+        <result column="device_type" jdbcType="VARCHAR" property="deviceType" />
+        <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+   	 </resultMap>
+   	 
+   	 <select id="findByUserDeviceDto" resultMap="UserDeviceDto">
+        SELECT * FROM device AS D LEFT JOIN user AS U ON D.USER_ID = U.USER_ID ORDER BY D.GMT_CREATE DESC
+    </select>
 </mapper>
