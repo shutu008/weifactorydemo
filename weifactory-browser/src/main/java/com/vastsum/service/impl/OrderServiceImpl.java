@@ -42,6 +42,8 @@ public class OrderServiceImpl implements OrderService {
         bizOrder.setOrderState(new Byte(status));
        return bizOrderMapper.updateByPrimaryKey(bizOrder);
     }
+    
+    
 
     //列出所有订单
     @Override
@@ -145,4 +147,14 @@ public class OrderServiceImpl implements OrderService {
         }
         return true;
     }
+
+    //
+	@Override
+	public Integer updateBizOrderStatusByNo(String orderNo, String status, String payChannel) {
+		BizOrder order = getOrderByOrderNumber(orderNo);
+		order.setOrderState(new Byte(status));
+		order.setPayChannel(payChannel);
+		int i = bizOrderMapper.updateByPrimaryKey(order);
+		return i;
+	}
 }

@@ -24,6 +24,14 @@ public interface OrderService {
      * @return Integer
      */
     Integer updateBizOrderStatus(Integer order, String status);
+    
+    /**
+     * 根据订单号更改订单状态
+     * @param orderNo
+     * @param status
+     * @return Integer
+     */
+    Integer updateBizOrderStatusByNo(String orderNo, String status, String payChannel);
 
     /**
      * 列出所有订单

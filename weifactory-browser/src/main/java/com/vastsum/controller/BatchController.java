@@ -27,6 +27,7 @@ import com.vastsum.service.BatchService;
 import com.vastsum.service.ControlService;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.ImageServer;
+import com.vastsum.service.OrderService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -53,7 +54,8 @@ public class BatchController extends BaseController {
     private ControlService controlService;
     @Autowired
     private WeifactoryProperties weifactoryProperties; 
-
+    @Autowired
+    private OrderService orderService;
     
 	//根据设备id获取最新的批次信息，设备管理显示界面20180311
     @GetMapping(value = "/{deviceId}")
@@ -65,7 +67,7 @@ public class BatchController extends BaseController {
     	//默认图片
     	String defaultFileName = weifactoryProperties.getImage().getDefaultImage();
     	 //默认图片服务器
-    	String hostDir = weifactoryProperties.getImage().getDefaultImage();
+    	String hostDir = weifactoryProperties.getImage().getHostUrl();
         if (deviceId == null) {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.DEVICE_ID_NULL));
         }
@@ -164,26 +166,26 @@ public class BatchController extends BaseController {
     }
 
     
-    //添加批次
+    //添加批次或更新批次
     @PostMapping(value ="/save")
-    @ApiOperation(value = "添加批次信息-用户")
+    @ApiOperation(value = "添加批次信息-用户@20180414")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "deviceId",value = "设备id",required = true),
             
-            @ApiImplicitParam(paramType = "query",name = "plantOne",value = "第一层蔬菜名称",required = true),
-            @ApiImplicitParam(paramType = "query",name = "cultModelOne",value = "第一层生长模式",required = true),
-            @ApiImplicitParam(paramType = "query",name = "onePlantingTime",value = "第一层定植日期",required = true),
-            @ApiImplicitParam(paramType = "query",name = "oneRecoveryTime",value = "第一层采收日期",required = true),
+            @ApiImplicitParam(paramType = "query",name = "plantOne",value = "第一层蔬菜名称",required = false),
+            @ApiImplicitParam(paramType = "query",name = "cultModelOne",value = "第一层生长模式",required = false),
+            @ApiImplicitParam(paramType = "query",name = "onePlantingTime",value = "第一层定植日期",required = false),
+            @ApiImplicitParam(paramType = "query",name = "oneRecoveryTime",value = "第一层采收日期",required = false),
 
-            @ApiImplicitParam(paramType = "query",name = "plantTwo",value = "第二层蔬菜名称",required = true),
-            @ApiImplicitParam(paramType = "query",name = "cultModelTwo",value = "第二层栽培模式",required = true),
-            @ApiImplicitParam(paramType = "query",name = "twoPlantingTime",value = "第二层定植日期",required = true),
-            @ApiImplicitParam(paramType = "query",name = "twoRecoveryTime",value = "第二层采收日期",required = true),
+            @ApiImplicitParam(paramType = "query",name = "plantTwo",value = "第二层蔬菜名称",required = false),
+            @ApiImplicitParam(paramType = "query",name = "cultModelTwo",value = "第二层栽培模式",required = false),
+            @ApiImplicitParam(paramType = "query",name = "twoPlantingTime",value = "第二层定植日期",required = false),
+            @ApiImplicitParam(paramType = "query",name = "twoRecoveryTime",value = "第二层采收日期",required = false),
 
-            @ApiImplicitParam(paramType = "query",name = "plantThree",value = "第三层蔬菜名称",required = true),
-            @ApiImplicitParam(paramType = "query",name = "cultModelThree",value = "第三层栽培模式",required = true),
-            @ApiImplicitParam(paramType = "query",name = "threePlantingTime",value = "第一层定植日期",required = true),
-            @ApiImplicitParam(paramType = "query",name = "threeRecoveryTime",value = "第一层采收日期",required = true)
+            @ApiImplicitParam(paramType = "query",name = "plantThree",value = "第三层蔬菜名称",required = false),
+            @ApiImplicitParam(paramType = "query",name = "cultModelThree",value = "第三层栽培模式",required = false),
+            @ApiImplicitParam(paramType = "query",name = "threePlantingTime",value = "第三层定植日期",required = false),
+            @ApiImplicitParam(paramType = "query",name = "threeRecoveryTime",value = "第三层采收日期",required = false)
 
     })
     public  ResponseEntity<ResultModel> saveOrUpdate(@ModelAttribute Batch batch){
@@ -192,51 +194,20 @@ public class BatchController extends BaseController {
         if (batch == null) {
             return V.error("数据不能为空");
         }
-        if (batch.getPlantOne() == null) {
-			return V.error("第一层植物名称不能为空");
-		}
-        if (batch.getCultModelOne() == null) {
-			return V.error("第一层生长模式不能为空");
-		}
-        if (batch.getOnePlantingTime() == null) {
-			return V.error("第一层定植如期不能为空");
-		}
-        if (batch.getOneRecoveryTime() == null) {
-        	return V.error("第一层采收日期不能为空");
-		}
-        if (batch.getPlantTwo() == null) {
-			return V.error("第二层植物名称不能为空");
-		}
-        if (batch.getCultModelTwo() == null) {
-			return V.error("第二层生长模式不能为空");
-		}
-        if (batch.getTwoPlantingTime() == null) {
-			return V.error("第二层定植如期不能为空");
-		}
-        if (batch.getTwoRecoveryTime() == null) {
-        	return V.error("第二层采收日期不能为空");
-		}
-        if (batch.getPlantThree() == null) {
-			return V.error("第三层植物名称不能为空");
-		}
-        if (batch.getCultModelThree() == null) {
-			return V.error("第三层生长模式不能为空");
-		}
-        if (batch.getThreePlantingTime() == null) {
-			return V.error("第三层定植如期不能为空");
-		}
-        if (batch.getThreeRecoveryTime() == null) {
-        	return V.error("第三层采收日期不能为空");
-		}
-
-       
-            batch.setGmtModified(new Date());
-            batch.setGmtCreate(new Date());
+           batch.setGmtModified(new Date());
            //首次添加默认图片信息，等待采集
            batch.setVideoOne(defaultFileName);
            batch.setVideoTwo(defaultFileName);
            batch.setVideoThree(defaultFileName);
-           batchService.addBatch(batch);
+           //根据设备id获取可用的最新的批次信息
+           Batch batch2 = batchService.selectLastBatchByDeviceId(batch.getDeviceId());
+           if (batch2!=null) {
+			//说明本批次以前保存过，执行更新
+        	   batch.setBatchId(batch2.getBatchId());
+        	   batchService.updateBatch(batch);
+			}else{
+				batchService.addBatch(batch);
+			}
            return V.ok(batch);
     }
     
@@ -259,6 +230,7 @@ public class BatchController extends BaseController {
     }
 
     //批次与模型关联@20171118
+    @ApiIgnore
     @GetMapping(value = "/association/{batchId}/{modelId}")
     @ApiOperation(value = "批次与模型关联@20171118")
     @ApiImplicitParams({
@@ -299,6 +271,24 @@ public class BatchController extends BaseController {
         }
         return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
     }
+    
+    //按照层级废弃批次信息
+    @GetMapping(value = "/remove/{batchId}/{layId}")
+    @ApiOperation(value = "按照层级废弃批次信息@20180414", notes="layId 层级参考字典接口设备层级，1：第一层等")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path", name = "batchId", value = "批次ID", required = true),
+            @ApiImplicitParam(paramType = "path", name = "layId", value = "层级ID", required = true)
+    })
+    public ResponseEntity<ResultModel> deleteLay(@PathVariable Long batchId,
+    		@PathVariable String layId ){
+//        if (batchId == null){
+//            return V.error("批次id不能为空");
+//        }
+//        if (StringUtils.isBlank(layId)) {
+//			return V.error("层级不能为空");
+//		}
+        return null;
+    }
 
 
     //更新批次中的订单状态@20171203
@@ -306,15 +296,21 @@ public class BatchController extends BaseController {
     @ApiOperation(value = "更新批次中的订单状态@20180410")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query", name = "orderNumber", value = "订单号", required = true),
-            @ApiImplicitParam(paramType = "query", name = "orderStatus", value = "订单状态", required = true)
+            @ApiImplicitParam(paramType = "query", name = "orderStatus", value = "订单状态", required = true),
+            @ApiImplicitParam(paramType = "query", name = "payChannel", value = "支付渠道", required = true)
     })
-    public ResponseEntity<ResultModel> updateOrderStatus(String orderNumber, String orderStatus){
+    public ResponseEntity<ResultModel> updateOrderStatus(String orderNumber, String orderStatus, String payChannel){
        if (StringUtils.isBlank(orderNumber)){
            return ResponseEntity.ok(ResultModel.error(ResultStatus.ORDER_NUMBER_NULL));
        }
        if (StringUtils.isBlank(orderStatus)){
            return  ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
        }
+       if (StringUtils.isBlank(payChannel)){
+    	   return V.error("支付渠道不能为空");
+       }
+       //更新订单状态
+       orderService.updateBizOrderStatusByNo(orderNumber, orderStatus, payChannel);
        //根据订单号查询出批次信息
         Batch batch1 = batchService.getBatchByOrderNumber(orderNumber);
         if (batch1 == null){

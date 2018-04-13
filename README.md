@@ -11,6 +11,12 @@ tomcat：8080
 
 mysql:3306
 
+--------
+本地包命令
+mvn install:install-file -DgroupId=com.vastsum -DartifactId=taobao-sdk-java-1.0 -Dversion=1.0 -Dpackaging=jar -Dfile=taobao-1.0.jar
+
+mvn install:install-file -DgroupId=com.alipay.api -DartifactId=alipay-sdk -Dversion=20180104135026 -Dpackaging=jar -Dfile=alipay-sdk-20180104135026.jar
+
 
 
 
