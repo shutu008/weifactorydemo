@@ -18,6 +18,7 @@ import com.github.pagehelper.PageInfo;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.entity.Batch;
 import com.vastsum.entity.Image;
+import com.vastsum.entity.Seed;
 import com.vastsum.entity.vo.BatchInfo;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
@@ -28,6 +29,7 @@ import com.vastsum.service.ControlService;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.ImageServer;
 import com.vastsum.service.OrderService;
+import com.vastsum.service.SeedService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -56,6 +58,8 @@ public class BatchController extends BaseController {
     private WeifactoryProperties weifactoryProperties; 
     @Autowired
     private OrderService orderService;
+    @Autowired
+    private SeedService seedService;
     
 	//根据设备id获取最新的批次信息，设备管理显示界面20180311
     @GetMapping(value = "/{deviceId}")
@@ -281,13 +285,21 @@ public class BatchController extends BaseController {
     })
     public ResponseEntity<ResultModel> deleteLay(@PathVariable Long batchId,
     		@PathVariable String layId ){
-//        if (batchId == null){
-//            return V.error("批次id不能为空");
-//        }
-//        if (StringUtils.isBlank(layId)) {
-//			return V.error("层级不能为空");
-//		}
-        return null;
+        if (batchId == null){
+            return V.error("批次id不能为空");
+        }
+        if (StringUtils.isBlank(layId)) {
+			return V.error("层级不能为空");
+		}
+        if ("1".equals(layId) || "2".equals(layId) || "3".equals(layId)) {
+			batchService.deleteLay(layId, batchId);
+		}else if("4".equals(layId)){
+			Seed seed = seedService.getLastByBatchId(batchId);
+			seedService.abandonSeed(seed.getSeedId());
+		}else {
+			return V.error("请输入正确的层级参数");
+		}
+        return V.ok();
     }
 
 

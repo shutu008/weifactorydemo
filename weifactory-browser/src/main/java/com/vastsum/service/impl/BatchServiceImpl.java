@@ -1,20 +1,22 @@
 package com.vastsum.service.impl;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.dao.BatchMapper;
 import com.vastsum.dao.BizOrderMapper;
 import com.vastsum.dao.JoinMapper;
+import com.vastsum.entity.Batch;
 import com.vastsum.entity.BatchExample;
 import com.vastsum.entity.BizOrder;
 import com.vastsum.entity.BizOrderExample;
-import com.vastsum.entity.Batch;
 import com.vastsum.entity.vo.BatchInfo;
 import com.vastsum.service.BatchService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * @author ssj
@@ -30,7 +32,8 @@ public class BatchServiceImpl implements BatchService {
 
     @Autowired
     private BizOrderMapper orderMapper;
-
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
     @Override
     public PageInfo<Batch> selectAllBatch(Integer page, Integer pageSize) {
         //查询条件
@@ -154,4 +157,27 @@ public class BatchServiceImpl implements BatchService {
 		batch.setTrustStatus("1");
 		return batchMapper.updateByPrimaryKeySelective(batch);
 	}
+	
+	//按照层级废弃批次
+	@Override
+	public void deleteLay(String layId,Long batchId){
+		String sql = null;
+		switch (layId) {
+		case "1":
+			sql = "update batch set plant_one = NULL,cult_model_one = NULL,temperature_one = NULL,humidity_one = NULL,"
+					+ "led_one_left = NULL,led_one_middle = NULL,led_one_right = NULL, one_planting_time = NULL where batch_id = ?";
+			break;
+		case "2":
+			sql = "update batch set plant_one = NULL,cult_model_one = NULL,temperature_one = NULL,humidity_one = NULL,"
+					+ "led_one_left = NULL,led_one_middle = NULL,led_one_right = NULL, one_planting_time = NULL where batch_id = ?";
+			break;
+		case "3":
+			sql = "update batch set plant_one = NULL,cult_model_one = NULL,temperature_one = NULL,humidity_one = NULL,"
+					+ "led_one_left = NULL,led_one_middle = NULL,led_one_right = NULL, one_planting_time = NULL where batch_id = ?";
+			break;
+		default:
+			break;
+		}
+		jdbcTemplate.update(sql, batchId);
+	 }
 }

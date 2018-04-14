@@ -104,4 +104,11 @@ public interface BatchService {
       * @return int
       */
      int updateTrustStatusByDeviceId(Long batchId);
+     
+     /**
+      * 按照层级删除批次对应信息
+      * @param layId 层级，参考字典 
+      * @param batchId 批次id
+      */
+     void deleteLay(String layId, Long batchId);
 }
