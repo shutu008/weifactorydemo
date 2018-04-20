@@ -1,23 +1,19 @@
 package com.vastsum.schedule.service.impl;
 
-import static java.util.stream.Collectors.toList;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import javax.persistence.criteria.Predicate;
 
 import org.apache.commons.lang.StringUtils;
 import org.quartz.Scheduler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.vastsum.schedule.dao.ScheduleJobEntityRepository;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.vastsum.schedule.dao.ScheduleJobEntityMapper;
 import com.vastsum.schedule.entity.ScheduleJobEntity;
+import com.vastsum.schedule.entity.ScheduleJobEntityExample;
+import com.vastsum.schedule.entity.ScheduleJobEntityExample.Criteria;
 import com.vastsum.schedule.service.ScheduleJobService;
 import com.vastsum.schedule.utils.ScheduleUtils;
 
@@ -29,52 +25,46 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 	private Scheduler scheduler;
 
 	@Autowired
-	private ScheduleJobEntityRepository scheduleJobEntityRepository;
+	private ScheduleJobEntityMapper scheduleJobEntityMapper;
 	
 	@Override
 	public ScheduleJobEntity getByJobId(Long jobId) {
-		return scheduleJobEntityRepository.findByJobId(jobId);
+		return scheduleJobEntityMapper.selectByPrimaryKey(jobId);
 	}
 	
 	
-
+	//批量更新
 	@Override
-	public List<ScheduleJobEntity> updateBatch(List<ScheduleJobEntity> list) {
-		List<ScheduleJobEntity> scheduleJobEntities = scheduleJobEntityRepository.save(list);
-		return scheduleJobEntities;
+	public void updateBatch(List<ScheduleJobEntity> list) {
+		for (ScheduleJobEntity scheduleJobEntity : list) {
+			scheduleJobEntityMapper.updateByPrimaryKey(scheduleJobEntity);
+		}
 	}
 
 	@Override
-	public ScheduleJobEntity save(ScheduleJobEntity scheduleJobEntity) {
-		ScheduleJobEntity jobEntity = scheduleJobEntityRepository.save(scheduleJobEntity);
-		return jobEntity;
+	public  ScheduleJobEntity save(ScheduleJobEntity scheduleJobEntity) {
+		int i = scheduleJobEntityMapper.insert(scheduleJobEntity);
+		return scheduleJobEntity;
 	}
 
+	//批量删除
 	@Override
 	public void deleteBatch(Long[] jobIds) {
-		List<Long> asList = Arrays.asList(jobIds);
-		List<ScheduleJobEntity> list = asList.stream().map(s -> {
-			ScheduleJobEntity entity = new ScheduleJobEntity();
-			entity.setJobId(s);
-			return entity;
-		}).collect(toList());
-		//先删除任务再删除数据库
-		Arrays.asList(jobIds).stream().forEach(jobId -> ScheduleUtils.deleteScheduleJob(scheduler, jobId));
-		scheduleJobEntityRepository.delete(list);
+		for (Long id : jobIds) {
+			scheduleJobEntityMapper.deleteByPrimaryKey(id);
+		}
 		
 		
 	}
 
 	@Override
-	public List<ScheduleJobEntity> updateBatch(Long[] jobIds, String status) {
-		List<ScheduleJobEntity> list = Arrays.asList(jobIds).stream().map(s -> {
-			ScheduleJobEntity entity = new ScheduleJobEntity();
-			entity.setStatus(status);
-			entity.setJobId(s);
-			return entity;
-		}).collect(toList());
-		List<ScheduleJobEntity> save = scheduleJobEntityRepository.save(list);
-		return save;
+	public void updateBatch(Long[] jobIds, String status) {
+		for (Long long1 : jobIds) {
+			ScheduleJobEntity scheduleJobEntity = new ScheduleJobEntity();
+			scheduleJobEntity.setJobId(long1);
+			scheduleJobEntity.setStatus(status);
+			scheduleJobEntityMapper.updateByPrimaryKeySelective(scheduleJobEntity);
+		}
 	}
 
 	//运行
@@ -97,37 +87,30 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 
 
 
+	//条件搜索定时任务
 	@Override
-	public Page<ScheduleJobEntity> listAll(ScheduleJobEntity scheduleJobEntity, Pageable pageable) {
-		Specification<ScheduleJobEntity> specification =
-				(root, query,criteriaBuilder)->{
-					List<Predicate> predicates = new ArrayList<>();
-					if (StringUtils.isNotBlank(scheduleJobEntity.getBeanName())) {						
-						String beanName = scheduleJobEntity.getBeanName();
-						predicates.add(criteriaBuilder.like(root.get("beanName"), "%"+beanName+"%"));
-					}
-					if (StringUtils.isNotBlank(scheduleJobEntity.getMethodName())) {
-						String methodName = scheduleJobEntity.getMethodName();
-						predicates.add(criteriaBuilder.like(root.get("methodName"), "%"+methodName+"%"));
-					}
-					if (StringUtils.isNotBlank(scheduleJobEntity.getStatus())) {
-						String status = scheduleJobEntity.getStatus();
-						predicates.add(criteriaBuilder.equal(root.get("status"), status));
-					}
-					return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
- 					
-				};
-
-		Page<ScheduleJobEntity> page = scheduleJobEntityRepository.findAll(specification, pageable);
-		return page;
+	public PageInfo<ScheduleJobEntity> listAll(ScheduleJobEntity scheduleJobEntity, Integer page, Integer pageSize) {
+		ScheduleJobEntityExample scheduleJobEntityExample = new ScheduleJobEntityExample();
+		scheduleJobEntityExample.setOrderByClause("gmt_create desc");
+		Criteria criteria = scheduleJobEntityExample.createCriteria();
+		if (scheduleJobEntity != null) {
+			if (StringUtils.isNotBlank(scheduleJobEntity.getBeanName())) {
+				criteria.andBeanNameLike(scheduleJobEntity.getBeanName());
+			}
+			if (StringUtils.isNotBlank(scheduleJobEntity.getMethodName())) {
+				criteria.andMethodNameLike(scheduleJobEntity.getMethodName());
+			}
+			if (StringUtils.isNotBlank(scheduleJobEntity.getStatus())) {
+				criteria.andStatusEqualTo(scheduleJobEntity.getStatus());
+			}
+		}
+		//查询条件
+        page = page == 0? 1:page;
+        pageSize = pageSize == 0? 10:pageSize;
+        PageHelper.startPage(page,pageSize);
+		List<ScheduleJobEntity> list = scheduleJobEntityMapper.selectByExample(scheduleJobEntityExample);
+		return new PageInfo<>(list);
 	}
 
-
-
-	@Override
-	public Page<ScheduleJobEntity> listAll(Pageable pageable) {
-		Page<ScheduleJobEntity> page = scheduleJobEntityRepository.findAll(pageable);
-		return page;
-	}
 
 }

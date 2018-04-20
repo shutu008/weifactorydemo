@@ -17,6 +17,8 @@ public class Device {
 
     private Date gmtModified;
 
+    private String truestStatus;
+
     public Integer getDeviceId() {
         return deviceId;
     }
@@ -73,6 +75,14 @@ public class Device {
         this.gmtModified = gmtModified;
     }
 
+    public String getTruestStatus() {
+        return truestStatus;
+    }
+
+    public void setTruestStatus(String truestStatus) {
+        this.truestStatus = truestStatus == null ? null : truestStatus.trim();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -86,6 +96,7 @@ public class Device {
         sb.append(", note=").append(note);
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append(", gmtModified=").append(gmtModified);
+        sb.append(", truestStatus=").append(truestStatus);
         sb.append("]");
         return sb.toString();
     }

@@ -2,9 +2,7 @@ package com.vastsum.schedule.service;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
+import com.github.pagehelper.PageInfo;
 import com.vastsum.schedule.entity.ScheduleJobEntity;
 
 /**
@@ -24,9 +22,9 @@ public interface ScheduleJobService {
 	/**
 	 * 更新一组任务状态
 	 * @param list
-	 * @return ScheduleJobEntity
+	 * @return void
 	 */
-	List<ScheduleJobEntity> updateBatch(List<ScheduleJobEntity> list);
+	void updateBatch(List<ScheduleJobEntity> list);
 	
 	/**
 	 * 保存 一个定时任务
@@ -44,7 +42,7 @@ public interface ScheduleJobService {
 	/**
 	 * 批量更新定时任务状态
 	 */
-	List<ScheduleJobEntity> updateBatch(Long[] jobIds, String status);
+	void updateBatch(Long[] jobIds, String status);
 	
 	/**
 	 * 立即执行
@@ -67,18 +65,11 @@ public interface ScheduleJobService {
 	/**
 	 * 根据条件列出所有的调度任务
 	 * @param scheduleJobEntity
-	 * @param pageable
-	 * @return Pageable
+	 * @param page
+	 * @param pageSize
+	 * @return PageInfo<ScheduleJobEntity>
 	 */
-	Page<ScheduleJobEntity> listAll(ScheduleJobEntity scheduleJobEntity, Pageable pageable);
-	
-	/**
-	 * 分页列出所有的定时任务
-	 * @param pageable
-	 * @return Page<ScheduleJobEntity>
-	 */
-	Page<ScheduleJobEntity> listAll(Pageable pageable);
-	
+	PageInfo<ScheduleJobEntity> listAll(ScheduleJobEntity scheduleJobEntity, Integer page, Integer pageSize);
 	
 	
 

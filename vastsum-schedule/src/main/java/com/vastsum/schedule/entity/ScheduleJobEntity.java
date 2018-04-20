@@ -3,115 +3,118 @@ package com.vastsum.schedule.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
-public class ScheduleJobEntity implements Serializable {
-	
-	private static final long serialVersionUID = -8516941346461958464L;
-
+public class ScheduleJobEntity implements Serializable{
 	/**
-	 * 任务调度参数key
+	 * 
 	 */
-    public static final String JOB_PARAM_KEY = "JOB_PARAM_KEY";
-	
-	@Id
-	@GeneratedValue
-	private Long jobId;
-	
-	private String beanName;
-	
-	private String methodName;
-	
-	private String params;
-	
-	private String cronExpression;
-	
-	@Column(length = 2)
-	private String status;//正常：1，暂停：0
-	
-	private String remark;
-	
-	private Date gmtCreate;
-	
-	private Date gmtModified;
+	private static final long serialVersionUID = 5268818877412920573L;
+	public static final String JOB_PARAM_KEY = "VASTSUM";
+    private Long jobId;
 
-	public Long getJobId() {
-		return jobId;
-	}
+    private String cronExpression;
 
-	public void setJobId(Long jobId) {
-		this.jobId = jobId;
-	}
+    private Date gmtCreate;
 
-	public String getMethodName() {
-		return methodName;
-	}
+    private Date gmtModified;
 
-	public void setMethodName(String methodName) {
-		this.methodName = methodName;
-	}
+    private String methodName;
 
-	public String getParams() {
-		return params;
-	}
+    private String params;
 
-	public void setParams(String params) {
-		this.params = params;
-	}
+    private String remark;
 
-	public String getCronExpression() {
-		return cronExpression;
-	}
+    private String status;
 
-	public void setCronExpression(String cronExpression) {
-		this.cronExpression = cronExpression;
-	}
+    private String beanName;
 
-	public String getStatus() {
-		return status;
-	}
+    public Long getJobId() {
+        return jobId;
+    }
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+    public void setJobId(Long jobId) {
+        this.jobId = jobId;
+    }
 
-	public String getRemark() {
-		return remark;
-	}
+    public String getCronExpression() {
+        return cronExpression;
+    }
 
-	public void setRemark(String remark) {
-		this.remark = remark;
-	}
+    public void setCronExpression(String cronExpression) {
+        this.cronExpression = cronExpression == null ? null : cronExpression.trim();
+    }
 
-	public Date getGmtCreate() {
-		return gmtCreate;
-	}
+    public Date getGmtCreate() {
+        return gmtCreate;
+    }
 
-	public void setGmtCreate(Date gmtCreate) {
-		this.gmtCreate = gmtCreate;
-	}
+    public void setGmtCreate(Date gmtCreate) {
+        this.gmtCreate = gmtCreate;
+    }
 
-	public Date getGmtModified() {
-		return gmtModified;
-	}
+    public Date getGmtModified() {
+        return gmtModified;
+    }
 
-	public void setGmtModified(Date gmtModified) {
-		this.gmtModified = gmtModified;
-	}
+    public void setGmtModified(Date gmtModified) {
+        this.gmtModified = gmtModified;
+    }
 
-	public String getBeanName() {
-		return beanName;
-	}
+    public String getMethodName() {
+        return methodName;
+    }
 
-	public void setBeanName(String beanName) {
-		this.beanName = beanName;
-	}
-	
-	
-	
+    public void setMethodName(String methodName) {
+        this.methodName = methodName == null ? null : methodName.trim();
+    }
 
+    public String getParams() {
+        return params;
+    }
+
+    public void setParams(String params) {
+        this.params = params == null ? null : params.trim();
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark == null ? null : remark.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status == null ? null : status.trim();
+    }
+
+    public String getBeanName() {
+        return beanName;
+    }
+
+    public void setBeanName(String beanName) {
+        this.beanName = beanName == null ? null : beanName.trim();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", jobId=").append(jobId);
+        sb.append(", cronExpression=").append(cronExpression);
+        sb.append(", gmtCreate=").append(gmtCreate);
+        sb.append(", gmtModified=").append(gmtModified);
+        sb.append(", methodName=").append(methodName);
+        sb.append(", params=").append(params);
+        sb.append(", remark=").append(remark);
+        sb.append(", status=").append(status);
+        sb.append(", beanName=").append(beanName);
+        sb.append("]");
+        return sb.toString();
+    }
 }

@@ -554,6 +554,76 @@ public class DeviceExample {
             addCriterion("gmt_modified not between", value1, value2, "gmtModified");
             return (Criteria) this;
         }
+
+        public Criteria andTruestStatusIsNull() {
+            addCriterion("truest_status is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusIsNotNull() {
+            addCriterion("truest_status is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusEqualTo(String value) {
+            addCriterion("truest_status =", value, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusNotEqualTo(String value) {
+            addCriterion("truest_status <>", value, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusGreaterThan(String value) {
+            addCriterion("truest_status >", value, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusGreaterThanOrEqualTo(String value) {
+            addCriterion("truest_status >=", value, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusLessThan(String value) {
+            addCriterion("truest_status <", value, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusLessThanOrEqualTo(String value) {
+            addCriterion("truest_status <=", value, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusLike(String value) {
+            addCriterion("truest_status like", value, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusNotLike(String value) {
+            addCriterion("truest_status not like", value, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusIn(List<String> values) {
+            addCriterion("truest_status in", values, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusNotIn(List<String> values) {
+            addCriterion("truest_status not in", values, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusBetween(String value1, String value2) {
+            addCriterion("truest_status between", value1, value2, "truestStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andTruestStatusNotBetween(String value1, String value2) {
+            addCriterion("truest_status not between", value1, value2, "truestStatus");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

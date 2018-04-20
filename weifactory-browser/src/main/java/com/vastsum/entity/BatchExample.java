@@ -365,6 +365,66 @@ public class BatchExample {
             return (Criteria) this;
         }
 
+        public Criteria andBatchTimeOneIsNull() {
+            addCriterion("\" batch_time_one\" is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneIsNotNull() {
+            addCriterion("\" batch_time_one\" is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneEqualTo(Date value) {
+            addCriterion("\" batch_time_one\" =", value, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneNotEqualTo(Date value) {
+            addCriterion("\" batch_time_one\" <>", value, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneGreaterThan(Date value) {
+            addCriterion("\" batch_time_one\" >", value, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneGreaterThanOrEqualTo(Date value) {
+            addCriterion("\" batch_time_one\" >=", value, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneLessThan(Date value) {
+            addCriterion("\" batch_time_one\" <", value, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneLessThanOrEqualTo(Date value) {
+            addCriterion("\" batch_time_one\" <=", value, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneIn(List<Date> values) {
+            addCriterion("\" batch_time_one\" in", values, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneNotIn(List<Date> values) {
+            addCriterion("\" batch_time_one\" not in", values, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneBetween(Date value1, Date value2) {
+            addCriterion("\" batch_time_one\" between", value1, value2, "batchTimeOne");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeOneNotBetween(Date value1, Date value2) {
+            addCriterion("\" batch_time_one\" not between", value1, value2, "batchTimeOne");
+            return (Criteria) this;
+        }
+
         public Criteria andCultModelOneIsNull() {
             addCriterion("cult_model_one is null");
             return (Criteria) this;
@@ -1035,6 +1095,66 @@ public class BatchExample {
             return (Criteria) this;
         }
 
+        public Criteria andBatchTimeTwoIsNull() {
+            addCriterion("batch_time_two is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoIsNotNull() {
+            addCriterion("batch_time_two is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoEqualTo(Date value) {
+            addCriterion("batch_time_two =", value, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoNotEqualTo(Date value) {
+            addCriterion("batch_time_two <>", value, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoGreaterThan(Date value) {
+            addCriterion("batch_time_two >", value, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoGreaterThanOrEqualTo(Date value) {
+            addCriterion("batch_time_two >=", value, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoLessThan(Date value) {
+            addCriterion("batch_time_two <", value, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoLessThanOrEqualTo(Date value) {
+            addCriterion("batch_time_two <=", value, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoIn(List<Date> values) {
+            addCriterion("batch_time_two in", values, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoNotIn(List<Date> values) {
+            addCriterion("batch_time_two not in", values, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoBetween(Date value1, Date value2) {
+            addCriterion("batch_time_two between", value1, value2, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeTwoNotBetween(Date value1, Date value2) {
+            addCriterion("batch_time_two not between", value1, value2, "batchTimeTwo");
+            return (Criteria) this;
+        }
+
         public Criteria andCultModelTwoIsNull() {
             addCriterion("cult_model_two is null");
             return (Criteria) this;
@@ -1702,6 +1822,66 @@ public class BatchExample {
 
         public Criteria andPlantThreeNotBetween(String value1, String value2) {
             addCriterion("plant_three not between", value1, value2, "plantThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeIsNull() {
+            addCriterion("batch_time_three is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeIsNotNull() {
+            addCriterion("batch_time_three is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeEqualTo(Date value) {
+            addCriterion("batch_time_three =", value, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeNotEqualTo(Date value) {
+            addCriterion("batch_time_three <>", value, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeGreaterThan(Date value) {
+            addCriterion("batch_time_three >", value, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeGreaterThanOrEqualTo(Date value) {
+            addCriterion("batch_time_three >=", value, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeLessThan(Date value) {
+            addCriterion("batch_time_three <", value, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeLessThanOrEqualTo(Date value) {
+            addCriterion("batch_time_three <=", value, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeIn(List<Date> values) {
+            addCriterion("batch_time_three in", values, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeNotIn(List<Date> values) {
+            addCriterion("batch_time_three not in", values, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeBetween(Date value1, Date value2) {
+            addCriterion("batch_time_three between", value1, value2, "batchTimeThree");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchTimeThreeNotBetween(Date value1, Date value2) {
+            addCriterion("batch_time_three not between", value1, value2, "batchTimeThree");
             return (Criteria) this;
         }
 

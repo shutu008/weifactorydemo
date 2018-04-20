@@ -645,126 +645,6 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andDayTemperatureIsNull() {
-            addCriterion("day_temperature is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureIsNotNull() {
-            addCriterion("day_temperature is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureEqualTo(Double value) {
-            addCriterion("day_temperature =", value, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureNotEqualTo(Double value) {
-            addCriterion("day_temperature <>", value, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureGreaterThan(Double value) {
-            addCriterion("day_temperature >", value, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureGreaterThanOrEqualTo(Double value) {
-            addCriterion("day_temperature >=", value, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureLessThan(Double value) {
-            addCriterion("day_temperature <", value, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureLessThanOrEqualTo(Double value) {
-            addCriterion("day_temperature <=", value, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureIn(List<Double> values) {
-            addCriterion("day_temperature in", values, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureNotIn(List<Double> values) {
-            addCriterion("day_temperature not in", values, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureBetween(Double value1, Double value2) {
-            addCriterion("day_temperature between", value1, value2, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayTemperatureNotBetween(Double value1, Double value2) {
-            addCriterion("day_temperature not between", value1, value2, "dayTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityIsNull() {
-            addCriterion("day_humidity is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityIsNotNull() {
-            addCriterion("day_humidity is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityEqualTo(Double value) {
-            addCriterion("day_humidity =", value, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityNotEqualTo(Double value) {
-            addCriterion("day_humidity <>", value, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityGreaterThan(Double value) {
-            addCriterion("day_humidity >", value, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityGreaterThanOrEqualTo(Double value) {
-            addCriterion("day_humidity >=", value, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityLessThan(Double value) {
-            addCriterion("day_humidity <", value, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityLessThanOrEqualTo(Double value) {
-            addCriterion("day_humidity <=", value, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityIn(List<Double> values) {
-            addCriterion("day_humidity in", values, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityNotIn(List<Double> values) {
-            addCriterion("day_humidity not in", values, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityBetween(Double value1, Double value2) {
-            addCriterion("day_humidity between", value1, value2, "dayHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andDayHumidityNotBetween(Double value1, Double value2) {
-            addCriterion("day_humidity not between", value1, value2, "dayHumidity");
-            return (Criteria) this;
-        }
-
         public Criteria andDayWindLenghtTimeIsNull() {
             addCriterion("day_wind_lenght_time is null");
             return (Criteria) this;
@@ -1965,126 +1845,6 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
-        public Criteria andNightTemperatureIsNull() {
-            addCriterion("night_temperature is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureIsNotNull() {
-            addCriterion("night_temperature is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureEqualTo(Double value) {
-            addCriterion("night_temperature =", value, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureNotEqualTo(Double value) {
-            addCriterion("night_temperature <>", value, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureGreaterThan(Double value) {
-            addCriterion("night_temperature >", value, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureGreaterThanOrEqualTo(Double value) {
-            addCriterion("night_temperature >=", value, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureLessThan(Double value) {
-            addCriterion("night_temperature <", value, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureLessThanOrEqualTo(Double value) {
-            addCriterion("night_temperature <=", value, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureIn(List<Double> values) {
-            addCriterion("night_temperature in", values, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureNotIn(List<Double> values) {
-            addCriterion("night_temperature not in", values, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureBetween(Double value1, Double value2) {
-            addCriterion("night_temperature between", value1, value2, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightTemperatureNotBetween(Double value1, Double value2) {
-            addCriterion("night_temperature not between", value1, value2, "nightTemperature");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityIsNull() {
-            addCriterion("night_humidity is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityIsNotNull() {
-            addCriterion("night_humidity is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityEqualTo(Double value) {
-            addCriterion("night_humidity =", value, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityNotEqualTo(Double value) {
-            addCriterion("night_humidity <>", value, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityGreaterThan(Double value) {
-            addCriterion("night_humidity >", value, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityGreaterThanOrEqualTo(Double value) {
-            addCriterion("night_humidity >=", value, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityLessThan(Double value) {
-            addCriterion("night_humidity <", value, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityLessThanOrEqualTo(Double value) {
-            addCriterion("night_humidity <=", value, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityIn(List<Double> values) {
-            addCriterion("night_humidity in", values, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityNotIn(List<Double> values) {
-            addCriterion("night_humidity not in", values, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityBetween(Double value1, Double value2) {
-            addCriterion("night_humidity between", value1, value2, "nightHumidity");
-            return (Criteria) this;
-        }
-
-        public Criteria andNightHumidityNotBetween(Double value1, Double value2) {
-            addCriterion("night_humidity not between", value1, value2, "nightHumidity");
-            return (Criteria) this;
-        }
-
         public Criteria andNightWindLenghtTimeIsNull() {
             addCriterion("night_wind_lenght_time is null");
             return (Criteria) this;
@@ -3222,6 +2982,1476 @@ public class ParamSetExample {
 
         public Criteria andNightFeedWaterLengthNotBetween(Integer value1, Integer value2) {
             addCriterion("night_feed_water_length not between", value1, value2, "nightFeedWaterLength");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1IsNull() {
+            addCriterion("batch_no_1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1IsNotNull() {
+            addCriterion("batch_no_1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1EqualTo(String value) {
+            addCriterion("batch_no_1 =", value, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1NotEqualTo(String value) {
+            addCriterion("batch_no_1 <>", value, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1GreaterThan(String value) {
+            addCriterion("batch_no_1 >", value, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1GreaterThanOrEqualTo(String value) {
+            addCriterion("batch_no_1 >=", value, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1LessThan(String value) {
+            addCriterion("batch_no_1 <", value, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1LessThanOrEqualTo(String value) {
+            addCriterion("batch_no_1 <=", value, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1Like(String value) {
+            addCriterion("batch_no_1 like", value, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1NotLike(String value) {
+            addCriterion("batch_no_1 not like", value, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1In(List<String> values) {
+            addCriterion("batch_no_1 in", values, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1NotIn(List<String> values) {
+            addCriterion("batch_no_1 not in", values, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1Between(String value1, String value2) {
+            addCriterion("batch_no_1 between", value1, value2, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo1NotBetween(String value1, String value2) {
+            addCriterion("batch_no_1 not between", value1, value2, "batchNo1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1IsNull() {
+            addCriterion("plant_name_1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1IsNotNull() {
+            addCriterion("plant_name_1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1EqualTo(String value) {
+            addCriterion("plant_name_1 =", value, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1NotEqualTo(String value) {
+            addCriterion("plant_name_1 <>", value, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1GreaterThan(String value) {
+            addCriterion("plant_name_1 >", value, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1GreaterThanOrEqualTo(String value) {
+            addCriterion("plant_name_1 >=", value, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1LessThan(String value) {
+            addCriterion("plant_name_1 <", value, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1LessThanOrEqualTo(String value) {
+            addCriterion("plant_name_1 <=", value, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1Like(String value) {
+            addCriterion("plant_name_1 like", value, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1NotLike(String value) {
+            addCriterion("plant_name_1 not like", value, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1In(List<String> values) {
+            addCriterion("plant_name_1 in", values, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1NotIn(List<String> values) {
+            addCriterion("plant_name_1 not in", values, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1Between(String value1, String value2) {
+            addCriterion("plant_name_1 between", value1, value2, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName1NotBetween(String value1, String value2) {
+            addCriterion("plant_name_1 not between", value1, value2, "plantName1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1IsNull() {
+            addCriterion("growth_pattern_1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1IsNotNull() {
+            addCriterion("growth_pattern_1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1EqualTo(String value) {
+            addCriterion("growth_pattern_1 =", value, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1NotEqualTo(String value) {
+            addCriterion("growth_pattern_1 <>", value, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1GreaterThan(String value) {
+            addCriterion("growth_pattern_1 >", value, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1GreaterThanOrEqualTo(String value) {
+            addCriterion("growth_pattern_1 >=", value, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1LessThan(String value) {
+            addCriterion("growth_pattern_1 <", value, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1LessThanOrEqualTo(String value) {
+            addCriterion("growth_pattern_1 <=", value, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1Like(String value) {
+            addCriterion("growth_pattern_1 like", value, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1NotLike(String value) {
+            addCriterion("growth_pattern_1 not like", value, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1In(List<String> values) {
+            addCriterion("growth_pattern_1 in", values, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1NotIn(List<String> values) {
+            addCriterion("growth_pattern_1 not in", values, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1Between(String value1, String value2) {
+            addCriterion("growth_pattern_1 between", value1, value2, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern1NotBetween(String value1, String value2) {
+            addCriterion("growth_pattern_1 not between", value1, value2, "growthPattern1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1IsNull() {
+            addCriterion("day_temperature_1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1IsNotNull() {
+            addCriterion("day_temperature_1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1EqualTo(String value) {
+            addCriterion("day_temperature_1 =", value, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1NotEqualTo(String value) {
+            addCriterion("day_temperature_1 <>", value, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1GreaterThan(String value) {
+            addCriterion("day_temperature_1 >", value, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1GreaterThanOrEqualTo(String value) {
+            addCriterion("day_temperature_1 >=", value, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1LessThan(String value) {
+            addCriterion("day_temperature_1 <", value, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1LessThanOrEqualTo(String value) {
+            addCriterion("day_temperature_1 <=", value, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1Like(String value) {
+            addCriterion("day_temperature_1 like", value, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1NotLike(String value) {
+            addCriterion("day_temperature_1 not like", value, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1In(List<String> values) {
+            addCriterion("day_temperature_1 in", values, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1NotIn(List<String> values) {
+            addCriterion("day_temperature_1 not in", values, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1Between(String value1, String value2) {
+            addCriterion("day_temperature_1 between", value1, value2, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature1NotBetween(String value1, String value2) {
+            addCriterion("day_temperature_1 not between", value1, value2, "dayTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1IsNull() {
+            addCriterion("night_temperature_1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1IsNotNull() {
+            addCriterion("night_temperature_1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1EqualTo(String value) {
+            addCriterion("night_temperature_1 =", value, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1NotEqualTo(String value) {
+            addCriterion("night_temperature_1 <>", value, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1GreaterThan(String value) {
+            addCriterion("night_temperature_1 >", value, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1GreaterThanOrEqualTo(String value) {
+            addCriterion("night_temperature_1 >=", value, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1LessThan(String value) {
+            addCriterion("night_temperature_1 <", value, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1LessThanOrEqualTo(String value) {
+            addCriterion("night_temperature_1 <=", value, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1Like(String value) {
+            addCriterion("night_temperature_1 like", value, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1NotLike(String value) {
+            addCriterion("night_temperature_1 not like", value, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1In(List<String> values) {
+            addCriterion("night_temperature_1 in", values, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1NotIn(List<String> values) {
+            addCriterion("night_temperature_1 not in", values, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1Between(String value1, String value2) {
+            addCriterion("night_temperature_1 between", value1, value2, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature1NotBetween(String value1, String value2) {
+            addCriterion("night_temperature_1 not between", value1, value2, "nightTemperature1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1IsNull() {
+            addCriterion("day_humidity_1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1IsNotNull() {
+            addCriterion("day_humidity_1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1EqualTo(String value) {
+            addCriterion("day_humidity_1 =", value, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1NotEqualTo(String value) {
+            addCriterion("day_humidity_1 <>", value, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1GreaterThan(String value) {
+            addCriterion("day_humidity_1 >", value, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1GreaterThanOrEqualTo(String value) {
+            addCriterion("day_humidity_1 >=", value, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1LessThan(String value) {
+            addCriterion("day_humidity_1 <", value, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1LessThanOrEqualTo(String value) {
+            addCriterion("day_humidity_1 <=", value, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1Like(String value) {
+            addCriterion("day_humidity_1 like", value, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1NotLike(String value) {
+            addCriterion("day_humidity_1 not like", value, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1In(List<String> values) {
+            addCriterion("day_humidity_1 in", values, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1NotIn(List<String> values) {
+            addCriterion("day_humidity_1 not in", values, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1Between(String value1, String value2) {
+            addCriterion("day_humidity_1 between", value1, value2, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity1NotBetween(String value1, String value2) {
+            addCriterion("day_humidity_1 not between", value1, value2, "dayHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1IsNull() {
+            addCriterion("night_humidity_1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1IsNotNull() {
+            addCriterion("night_humidity_1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1EqualTo(String value) {
+            addCriterion("night_humidity_1 =", value, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1NotEqualTo(String value) {
+            addCriterion("night_humidity_1 <>", value, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1GreaterThan(String value) {
+            addCriterion("night_humidity_1 >", value, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1GreaterThanOrEqualTo(String value) {
+            addCriterion("night_humidity_1 >=", value, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1LessThan(String value) {
+            addCriterion("night_humidity_1 <", value, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1LessThanOrEqualTo(String value) {
+            addCriterion("night_humidity_1 <=", value, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1Like(String value) {
+            addCriterion("night_humidity_1 like", value, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1NotLike(String value) {
+            addCriterion("night_humidity_1 not like", value, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1In(List<String> values) {
+            addCriterion("night_humidity_1 in", values, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1NotIn(List<String> values) {
+            addCriterion("night_humidity_1 not in", values, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1Between(String value1, String value2) {
+            addCriterion("night_humidity_1 between", value1, value2, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity1NotBetween(String value1, String value2) {
+            addCriterion("night_humidity_1 not between", value1, value2, "nightHumidity1");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2IsNull() {
+            addCriterion("batch_no_2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2IsNotNull() {
+            addCriterion("batch_no_2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2EqualTo(String value) {
+            addCriterion("batch_no_2 =", value, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2NotEqualTo(String value) {
+            addCriterion("batch_no_2 <>", value, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2GreaterThan(String value) {
+            addCriterion("batch_no_2 >", value, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2GreaterThanOrEqualTo(String value) {
+            addCriterion("batch_no_2 >=", value, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2LessThan(String value) {
+            addCriterion("batch_no_2 <", value, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2LessThanOrEqualTo(String value) {
+            addCriterion("batch_no_2 <=", value, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2Like(String value) {
+            addCriterion("batch_no_2 like", value, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2NotLike(String value) {
+            addCriterion("batch_no_2 not like", value, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2In(List<String> values) {
+            addCriterion("batch_no_2 in", values, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2NotIn(List<String> values) {
+            addCriterion("batch_no_2 not in", values, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2Between(String value1, String value2) {
+            addCriterion("batch_no_2 between", value1, value2, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo2NotBetween(String value1, String value2) {
+            addCriterion("batch_no_2 not between", value1, value2, "batchNo2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2IsNull() {
+            addCriterion("plant_name_2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2IsNotNull() {
+            addCriterion("plant_name_2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2EqualTo(String value) {
+            addCriterion("plant_name_2 =", value, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2NotEqualTo(String value) {
+            addCriterion("plant_name_2 <>", value, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2GreaterThan(String value) {
+            addCriterion("plant_name_2 >", value, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2GreaterThanOrEqualTo(String value) {
+            addCriterion("plant_name_2 >=", value, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2LessThan(String value) {
+            addCriterion("plant_name_2 <", value, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2LessThanOrEqualTo(String value) {
+            addCriterion("plant_name_2 <=", value, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2Like(String value) {
+            addCriterion("plant_name_2 like", value, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2NotLike(String value) {
+            addCriterion("plant_name_2 not like", value, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2In(List<String> values) {
+            addCriterion("plant_name_2 in", values, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2NotIn(List<String> values) {
+            addCriterion("plant_name_2 not in", values, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2Between(String value1, String value2) {
+            addCriterion("plant_name_2 between", value1, value2, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName2NotBetween(String value1, String value2) {
+            addCriterion("plant_name_2 not between", value1, value2, "plantName2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2IsNull() {
+            addCriterion("growth_pattern_2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2IsNotNull() {
+            addCriterion("growth_pattern_2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2EqualTo(String value) {
+            addCriterion("growth_pattern_2 =", value, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2NotEqualTo(String value) {
+            addCriterion("growth_pattern_2 <>", value, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2GreaterThan(String value) {
+            addCriterion("growth_pattern_2 >", value, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2GreaterThanOrEqualTo(String value) {
+            addCriterion("growth_pattern_2 >=", value, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2LessThan(String value) {
+            addCriterion("growth_pattern_2 <", value, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2LessThanOrEqualTo(String value) {
+            addCriterion("growth_pattern_2 <=", value, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2Like(String value) {
+            addCriterion("growth_pattern_2 like", value, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2NotLike(String value) {
+            addCriterion("growth_pattern_2 not like", value, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2In(List<String> values) {
+            addCriterion("growth_pattern_2 in", values, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2NotIn(List<String> values) {
+            addCriterion("growth_pattern_2 not in", values, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2Between(String value1, String value2) {
+            addCriterion("growth_pattern_2 between", value1, value2, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern2NotBetween(String value1, String value2) {
+            addCriterion("growth_pattern_2 not between", value1, value2, "growthPattern2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2IsNull() {
+            addCriterion("day_temperature_2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2IsNotNull() {
+            addCriterion("day_temperature_2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2EqualTo(String value) {
+            addCriterion("day_temperature_2 =", value, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2NotEqualTo(String value) {
+            addCriterion("day_temperature_2 <>", value, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2GreaterThan(String value) {
+            addCriterion("day_temperature_2 >", value, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2GreaterThanOrEqualTo(String value) {
+            addCriterion("day_temperature_2 >=", value, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2LessThan(String value) {
+            addCriterion("day_temperature_2 <", value, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2LessThanOrEqualTo(String value) {
+            addCriterion("day_temperature_2 <=", value, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2Like(String value) {
+            addCriterion("day_temperature_2 like", value, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2NotLike(String value) {
+            addCriterion("day_temperature_2 not like", value, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2In(List<String> values) {
+            addCriterion("day_temperature_2 in", values, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2NotIn(List<String> values) {
+            addCriterion("day_temperature_2 not in", values, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2Between(String value1, String value2) {
+            addCriterion("day_temperature_2 between", value1, value2, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature2NotBetween(String value1, String value2) {
+            addCriterion("day_temperature_2 not between", value1, value2, "dayTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2IsNull() {
+            addCriterion("night_temperature_2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2IsNotNull() {
+            addCriterion("night_temperature_2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2EqualTo(String value) {
+            addCriterion("night_temperature_2 =", value, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2NotEqualTo(String value) {
+            addCriterion("night_temperature_2 <>", value, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2GreaterThan(String value) {
+            addCriterion("night_temperature_2 >", value, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2GreaterThanOrEqualTo(String value) {
+            addCriterion("night_temperature_2 >=", value, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2LessThan(String value) {
+            addCriterion("night_temperature_2 <", value, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2LessThanOrEqualTo(String value) {
+            addCriterion("night_temperature_2 <=", value, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2Like(String value) {
+            addCriterion("night_temperature_2 like", value, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2NotLike(String value) {
+            addCriterion("night_temperature_2 not like", value, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2In(List<String> values) {
+            addCriterion("night_temperature_2 in", values, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2NotIn(List<String> values) {
+            addCriterion("night_temperature_2 not in", values, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2Between(String value1, String value2) {
+            addCriterion("night_temperature_2 between", value1, value2, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature2NotBetween(String value1, String value2) {
+            addCriterion("night_temperature_2 not between", value1, value2, "nightTemperature2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2IsNull() {
+            addCriterion("day_humidity_2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2IsNotNull() {
+            addCriterion("day_humidity_2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2EqualTo(String value) {
+            addCriterion("day_humidity_2 =", value, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2NotEqualTo(String value) {
+            addCriterion("day_humidity_2 <>", value, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2GreaterThan(String value) {
+            addCriterion("day_humidity_2 >", value, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2GreaterThanOrEqualTo(String value) {
+            addCriterion("day_humidity_2 >=", value, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2LessThan(String value) {
+            addCriterion("day_humidity_2 <", value, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2LessThanOrEqualTo(String value) {
+            addCriterion("day_humidity_2 <=", value, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2Like(String value) {
+            addCriterion("day_humidity_2 like", value, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2NotLike(String value) {
+            addCriterion("day_humidity_2 not like", value, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2In(List<String> values) {
+            addCriterion("day_humidity_2 in", values, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2NotIn(List<String> values) {
+            addCriterion("day_humidity_2 not in", values, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2Between(String value1, String value2) {
+            addCriterion("day_humidity_2 between", value1, value2, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity2NotBetween(String value1, String value2) {
+            addCriterion("day_humidity_2 not between", value1, value2, "dayHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2IsNull() {
+            addCriterion("night_humidity_2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2IsNotNull() {
+            addCriterion("night_humidity_2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2EqualTo(String value) {
+            addCriterion("night_humidity_2 =", value, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2NotEqualTo(String value) {
+            addCriterion("night_humidity_2 <>", value, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2GreaterThan(String value) {
+            addCriterion("night_humidity_2 >", value, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2GreaterThanOrEqualTo(String value) {
+            addCriterion("night_humidity_2 >=", value, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2LessThan(String value) {
+            addCriterion("night_humidity_2 <", value, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2LessThanOrEqualTo(String value) {
+            addCriterion("night_humidity_2 <=", value, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2Like(String value) {
+            addCriterion("night_humidity_2 like", value, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2NotLike(String value) {
+            addCriterion("night_humidity_2 not like", value, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2In(List<String> values) {
+            addCriterion("night_humidity_2 in", values, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2NotIn(List<String> values) {
+            addCriterion("night_humidity_2 not in", values, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2Between(String value1, String value2) {
+            addCriterion("night_humidity_2 between", value1, value2, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity2NotBetween(String value1, String value2) {
+            addCriterion("night_humidity_2 not between", value1, value2, "nightHumidity2");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3IsNull() {
+            addCriterion("batch_no_3 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3IsNotNull() {
+            addCriterion("batch_no_3 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3EqualTo(String value) {
+            addCriterion("batch_no_3 =", value, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3NotEqualTo(String value) {
+            addCriterion("batch_no_3 <>", value, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3GreaterThan(String value) {
+            addCriterion("batch_no_3 >", value, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3GreaterThanOrEqualTo(String value) {
+            addCriterion("batch_no_3 >=", value, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3LessThan(String value) {
+            addCriterion("batch_no_3 <", value, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3LessThanOrEqualTo(String value) {
+            addCriterion("batch_no_3 <=", value, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3Like(String value) {
+            addCriterion("batch_no_3 like", value, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3NotLike(String value) {
+            addCriterion("batch_no_3 not like", value, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3In(List<String> values) {
+            addCriterion("batch_no_3 in", values, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3NotIn(List<String> values) {
+            addCriterion("batch_no_3 not in", values, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3Between(String value1, String value2) {
+            addCriterion("batch_no_3 between", value1, value2, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andBatchNo3NotBetween(String value1, String value2) {
+            addCriterion("batch_no_3 not between", value1, value2, "batchNo3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3IsNull() {
+            addCriterion("plant_name_3 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3IsNotNull() {
+            addCriterion("plant_name_3 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3EqualTo(String value) {
+            addCriterion("plant_name_3 =", value, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3NotEqualTo(String value) {
+            addCriterion("plant_name_3 <>", value, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3GreaterThan(String value) {
+            addCriterion("plant_name_3 >", value, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3GreaterThanOrEqualTo(String value) {
+            addCriterion("plant_name_3 >=", value, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3LessThan(String value) {
+            addCriterion("plant_name_3 <", value, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3LessThanOrEqualTo(String value) {
+            addCriterion("plant_name_3 <=", value, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3Like(String value) {
+            addCriterion("plant_name_3 like", value, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3NotLike(String value) {
+            addCriterion("plant_name_3 not like", value, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3In(List<String> values) {
+            addCriterion("plant_name_3 in", values, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3NotIn(List<String> values) {
+            addCriterion("plant_name_3 not in", values, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3Between(String value1, String value2) {
+            addCriterion("plant_name_3 between", value1, value2, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantName3NotBetween(String value1, String value2) {
+            addCriterion("plant_name_3 not between", value1, value2, "plantName3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3IsNull() {
+            addCriterion("growth_pattern_3 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3IsNotNull() {
+            addCriterion("growth_pattern_3 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3EqualTo(String value) {
+            addCriterion("growth_pattern_3 =", value, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3NotEqualTo(String value) {
+            addCriterion("growth_pattern_3 <>", value, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3GreaterThan(String value) {
+            addCriterion("growth_pattern_3 >", value, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3GreaterThanOrEqualTo(String value) {
+            addCriterion("growth_pattern_3 >=", value, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3LessThan(String value) {
+            addCriterion("growth_pattern_3 <", value, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3LessThanOrEqualTo(String value) {
+            addCriterion("growth_pattern_3 <=", value, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3Like(String value) {
+            addCriterion("growth_pattern_3 like", value, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3NotLike(String value) {
+            addCriterion("growth_pattern_3 not like", value, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3In(List<String> values) {
+            addCriterion("growth_pattern_3 in", values, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3NotIn(List<String> values) {
+            addCriterion("growth_pattern_3 not in", values, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3Between(String value1, String value2) {
+            addCriterion("growth_pattern_3 between", value1, value2, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andGrowthPattern3NotBetween(String value1, String value2) {
+            addCriterion("growth_pattern_3 not between", value1, value2, "growthPattern3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3IsNull() {
+            addCriterion("day_temperature_3 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3IsNotNull() {
+            addCriterion("day_temperature_3 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3EqualTo(String value) {
+            addCriterion("day_temperature_3 =", value, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3NotEqualTo(String value) {
+            addCriterion("day_temperature_3 <>", value, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3GreaterThan(String value) {
+            addCriterion("day_temperature_3 >", value, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3GreaterThanOrEqualTo(String value) {
+            addCriterion("day_temperature_3 >=", value, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3LessThan(String value) {
+            addCriterion("day_temperature_3 <", value, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3LessThanOrEqualTo(String value) {
+            addCriterion("day_temperature_3 <=", value, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3Like(String value) {
+            addCriterion("day_temperature_3 like", value, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3NotLike(String value) {
+            addCriterion("day_temperature_3 not like", value, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3In(List<String> values) {
+            addCriterion("day_temperature_3 in", values, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3NotIn(List<String> values) {
+            addCriterion("day_temperature_3 not in", values, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3Between(String value1, String value2) {
+            addCriterion("day_temperature_3 between", value1, value2, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayTemperature3NotBetween(String value1, String value2) {
+            addCriterion("day_temperature_3 not between", value1, value2, "dayTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3IsNull() {
+            addCriterion("night_temperature_3 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3IsNotNull() {
+            addCriterion("night_temperature_3 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3EqualTo(String value) {
+            addCriterion("night_temperature_3 =", value, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3NotEqualTo(String value) {
+            addCriterion("night_temperature_3 <>", value, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3GreaterThan(String value) {
+            addCriterion("night_temperature_3 >", value, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3GreaterThanOrEqualTo(String value) {
+            addCriterion("night_temperature_3 >=", value, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3LessThan(String value) {
+            addCriterion("night_temperature_3 <", value, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3LessThanOrEqualTo(String value) {
+            addCriterion("night_temperature_3 <=", value, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3Like(String value) {
+            addCriterion("night_temperature_3 like", value, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3NotLike(String value) {
+            addCriterion("night_temperature_3 not like", value, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3In(List<String> values) {
+            addCriterion("night_temperature_3 in", values, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3NotIn(List<String> values) {
+            addCriterion("night_temperature_3 not in", values, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3Between(String value1, String value2) {
+            addCriterion("night_temperature_3 between", value1, value2, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightTemperature3NotBetween(String value1, String value2) {
+            addCriterion("night_temperature_3 not between", value1, value2, "nightTemperature3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3IsNull() {
+            addCriterion("day_humidity_3 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3IsNotNull() {
+            addCriterion("day_humidity_3 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3EqualTo(String value) {
+            addCriterion("day_humidity_3 =", value, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3NotEqualTo(String value) {
+            addCriterion("day_humidity_3 <>", value, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3GreaterThan(String value) {
+            addCriterion("day_humidity_3 >", value, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3GreaterThanOrEqualTo(String value) {
+            addCriterion("day_humidity_3 >=", value, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3LessThan(String value) {
+            addCriterion("day_humidity_3 <", value, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3LessThanOrEqualTo(String value) {
+            addCriterion("day_humidity_3 <=", value, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3Like(String value) {
+            addCriterion("day_humidity_3 like", value, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3NotLike(String value) {
+            addCriterion("day_humidity_3 not like", value, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3In(List<String> values) {
+            addCriterion("day_humidity_3 in", values, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3NotIn(List<String> values) {
+            addCriterion("day_humidity_3 not in", values, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3Between(String value1, String value2) {
+            addCriterion("day_humidity_3 between", value1, value2, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andDayHumidity3NotBetween(String value1, String value2) {
+            addCriterion("day_humidity_3 not between", value1, value2, "dayHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3IsNull() {
+            addCriterion("night_humidity_3 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3IsNotNull() {
+            addCriterion("night_humidity_3 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3EqualTo(String value) {
+            addCriterion("night_humidity_3 =", value, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3NotEqualTo(String value) {
+            addCriterion("night_humidity_3 <>", value, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3GreaterThan(String value) {
+            addCriterion("night_humidity_3 >", value, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3GreaterThanOrEqualTo(String value) {
+            addCriterion("night_humidity_3 >=", value, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3LessThan(String value) {
+            addCriterion("night_humidity_3 <", value, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3LessThanOrEqualTo(String value) {
+            addCriterion("night_humidity_3 <=", value, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3Like(String value) {
+            addCriterion("night_humidity_3 like", value, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3NotLike(String value) {
+            addCriterion("night_humidity_3 not like", value, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3In(List<String> values) {
+            addCriterion("night_humidity_3 in", values, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3NotIn(List<String> values) {
+            addCriterion("night_humidity_3 not in", values, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3Between(String value1, String value2) {
+            addCriterion("night_humidity_3 between", value1, value2, "nightHumidity3");
+            return (Criteria) this;
+        }
+
+        public Criteria andNightHumidity3NotBetween(String value1, String value2) {
+            addCriterion("night_humidity_3 not between", value1, value2, "nightHumidity3");
             return (Criteria) this;
         }
 

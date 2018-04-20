@@ -3,6 +3,9 @@
  */
 package com.vastsum.service;
 
+import java.util.List;
+
+import com.vastsum.entity.GrowthPatternParam;
 import com.vastsum.entity.ParamSet;
 
 /**
@@ -32,6 +35,27 @@ public interface ParamSetService {
 	 * @return ParamSet
 	 */
 	ParamSet getByBatchId(Long batchId);
+	
+	/**
+	 * 根据设备序列号获取最新的参数设置信息
+	 * @param sn
+	 * @return ParamSet
+	 */
+	ParamSet getLastBySn(String sn);
+	
+	/**
+	 * 添加或修改一个参数
+	 * @param growthPatternParam
+	 */
+	void saveOrUpdateGrowthParam(GrowthPatternParam growthPatternParam);
+	
+	/**
+	 * 按照生长模式查询参数设置
+	 * @param growthNo
+	 * @return List<GrowthPatternParam>
+	 */
+	List<GrowthPatternParam> listByGrowthNo(Integer growthNo);
+	
 	
 
 }

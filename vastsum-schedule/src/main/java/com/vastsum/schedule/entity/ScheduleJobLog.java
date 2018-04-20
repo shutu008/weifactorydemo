@@ -3,110 +3,118 @@ package com.vastsum.schedule.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
 public class ScheduleJobLog implements Serializable {
-	
-	private static final long serialVersionUID = -6067676338561327201L;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -3544125469293253370L;
 
-	@Id
-	@GeneratedValue
 	private Long logId;
-	
-	private Long jobId;
-	
-	private String beanName;
-	
-	private String methodName;
-	
-	private String params;
-	
-	@Column(length = 2)
-	private String status;
-	
-	private String errorMessage;
-	
-	private Integer times;
-	
-	private Date gmtCreate;
 
-	public Long getLogId() {
-		return logId;
-	}
+    private String errorMessage;
 
-	public void setLogId(Long logId) {
-		this.logId = logId;
-	}
+    private Date gmtCreate;
 
-	public Long getJobId() {
-		return jobId;
-	}
+    private Long jobId;
 
-	public void setJobId(Long jobId) {
-		this.jobId = jobId;
-	}
+    private String methodName;
 
-	public String getBeanName() {
-		return beanName;
-	}
+    private String params;
 
-	public void setBeanName(String beanName) {
-		this.beanName = beanName;
-	}
+    private String status;
 
-	public String getMethodName() {
-		return methodName;
-	}
+    private Integer times;
 
-	public void setMethodName(String methodName) {
-		this.methodName = methodName;
-	}
+    private String beanName;
 
-	public String getParams() {
-		return params;
-	}
+    public Long getLogId() {
+        return logId;
+    }
 
-	public void setParams(String params) {
-		this.params = params;
-	}
+    public void setLogId(Long logId) {
+        this.logId = logId;
+    }
 
-	public String getStatus() {
-		return status;
-	}
+    public String getErrorMessage() {
+        return errorMessage;
+    }
 
-	public void setStatus(String status) {
-		this.status = status;
-	}
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage == null ? null : errorMessage.trim();
+    }
 
-	public String getErrorMessage() {
-		return errorMessage;
-	}
+    public Date getGmtCreate() {
+        return gmtCreate;
+    }
 
-	public void setErrorMessage(String errorMessage) {
-		this.errorMessage = errorMessage;
-	}
+    public void setGmtCreate(Date gmtCreate) {
+        this.gmtCreate = gmtCreate;
+    }
 
-	public Integer getTimes() {
-		return times;
-	}
+    public Long getJobId() {
+        return jobId;
+    }
 
-	public void setTimes(Integer times) {
-		this.times = times;
-	}
+    public void setJobId(Long jobId) {
+        this.jobId = jobId;
+    }
 
-	public Date getGmtCreate() {
-		return gmtCreate;
-	}
+    public String getMethodName() {
+        return methodName;
+    }
 
-	public void setGmtCreate(Date gmtCreate) {
-		this.gmtCreate = gmtCreate;
-	}
-	
-	
-	
+    public void setMethodName(String methodName) {
+        this.methodName = methodName == null ? null : methodName.trim();
+    }
 
+    public String getParams() {
+        return params;
+    }
+
+    public void setParams(String params) {
+        this.params = params == null ? null : params.trim();
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status == null ? null : status.trim();
+    }
+
+    public Integer getTimes() {
+        return times;
+    }
+
+    public void setTimes(Integer times) {
+        this.times = times;
+    }
+
+    public String getBeanName() {
+        return beanName;
+    }
+
+    public void setBeanName(String beanName) {
+        this.beanName = beanName == null ? null : beanName.trim();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", logId=").append(logId);
+        sb.append(", errorMessage=").append(errorMessage);
+        sb.append(", gmtCreate=").append(gmtCreate);
+        sb.append(", jobId=").append(jobId);
+        sb.append(", methodName=").append(methodName);
+        sb.append(", params=").append(params);
+        sb.append(", status=").append(status);
+        sb.append(", times=").append(times);
+        sb.append(", beanName=").append(beanName);
+        sb.append("]");
+        return sb.toString();
+    }
 }
