@@ -1,10 +1,10 @@
 package com.vastsum.controller;
 
+import java.util.HashMap;
+
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.HandControl;
@@ -33,12 +34,16 @@ public class HandController  extends BaseController  {
 	@Autowired
 	private HandControlService handControlService;
 	
-	@Resource(name="handRemoteService")
+	@Autowired
 	private HandRemoteService handRemoteService;
 	
 	@GetMapping("/test")
 	@ApiOperation(value = "test")
 	public  ResponseEntity<ResultModel> saveOrUpdate(){
+		HashMap<String, Object> hashMap = new HashMap<>();
+		hashMap.put("test", "test");
+		hashMap.put("sn", "ZWGC2017100800003");
+		handRemoteService.sendOrder(hashMap);
 		
 		return V.ok();
     }

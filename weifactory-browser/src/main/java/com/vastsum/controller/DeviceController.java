@@ -4,7 +4,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
@@ -26,10 +25,8 @@ import com.vastsum.entity.vo.UserDevice;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
-import com.vastsum.pojo.AskBody;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.BizControlService;
-import com.vastsum.service.ControlService;
 import com.vastsum.service.DeviceService;
 
 import io.swagger.annotations.Api;
@@ -48,8 +45,6 @@ import springfox.documentation.annotations.ApiIgnore;
 public class DeviceController extends BaseController {
     @Autowired
     private DeviceService deviceService;
-    @Autowired
-    private ControlService controlService;
     @Autowired
     private BizControlService bizControlService;
     @Autowired
@@ -233,16 +228,14 @@ public class DeviceController extends BaseController {
     @GetMapping(value = "/list/onDevice")
     @ApiOperation(value = "获取所有的在线设备列表")
     public ResponseEntity<ResultModel> listOnDevice(){
-        Set<String> strings = controlService.listOnDeviceSn();
-        return ResponseEntity.ok(ResultModel.ok(strings));
+        return V.ok();
     }
 
     @GetMapping(value = "/{sn}")
     @ApiOperation(value = "关闭设备与服务器之间的连接@20171021")
     @ApiImplicitParam(paramType = "path", name = "sn", value = "设备序列号", required = true)
     public ResponseEntity<ResultModel> closeDevice(@PathVariable String sn){
-        AskBody askBody = controlService.closeDeviceChannel(sn);
-        return ResponseEntity.ok(ResultModel.ok(askBody));
+       return V.ok();
     }
 
     @ApiIgnore
@@ -281,13 +274,14 @@ public class DeviceController extends BaseController {
             //获取执行时长
              time = endTime.getTime()-startTime.getTime();
         }
-        AskBody askBody = controlService.controlMsg(sn, sensorId, status, time);
-        if (askBody !=null){
-            if (askBody.getSuccess()){
-                return ResponseEntity.ok(ResultModel.ok());
-            }
-        }
-        return ResponseEntity.ok(new ResultModel(askBody.getCode(),askBody.getMessage(), askBody.getData(),askBody.getSuccess()));
+//        AskBody askBody = controlService.controlMsg(sn, sensorId, status, time);
+//        if (askBody !=null){
+//            if (askBody.getSuccess()){
+//                return ResponseEntity.ok(ResultModel.ok());
+//            }
+//        }
+//        return ResponseEntity.ok(new ResultModel(askBody.getCode(),askBody.getMessage(), askBody.getData(),askBody.getSuccess()));
+        return V.ok();
     }
     
     @GetMapping("/sn/list/{page}/{pageSize}")

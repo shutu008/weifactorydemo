@@ -25,7 +25,6 @@ import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
 import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.service.BatchService;
-import com.vastsum.service.ControlService;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.ImageServer;
 import com.vastsum.service.OrderService;
@@ -52,8 +51,6 @@ public class BatchController extends BaseController {
     private ImageServer imageServer;
     @Autowired
     private DeviceService deviceService;
-    @Autowired(required = false)
-    private ControlService controlService;
     @Autowired
     private WeifactoryProperties weifactoryProperties; 
     @Autowired

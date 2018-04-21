@@ -17,10 +17,8 @@ import com.vastsum.entity.BizControl;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
-import com.vastsum.pojo.AskBody;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.BizControlService;
-import com.vastsum.service.ControlService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -35,8 +33,6 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/control")
 @Api(value="/control",tags = {"远程控制管理"})
 public class ControlController extends BaseController {
-    @Autowired
-    private ControlService controlService;  //rpc
     @Autowired
     private BizControlService bizControlService; //控制管理
 
@@ -102,13 +98,14 @@ public class ControlController extends BaseController {
         bizControl.setGmtModified(new Date());
         //执行更新
         bizControlService.update(bizControl);
-        AskBody askBody = controlService.controlMsg(sn, sensorId, status, time);
-        if (askBody !=null){
-            if (askBody.getSuccess()){
-                return ResponseEntity.ok(ResultModel.ok());
-            }
-        }
-        return ResponseEntity.ok(new ResultModel(askBody.getCode(),askBody.getMessage(), askBody.getData(),askBody.getSuccess()));
+////        AskBody askBody = controlService.controlMsg(sn, sensorId, status, time);
+//        if (askBody !=null){
+//            if (askBody.getSuccess()){
+//                return ResponseEntity.ok(ResultModel.ok());
+//            }
+//        }
+//        return ResponseEntity.ok(new ResultModel(askBody.getCode(),askBody.getMessage(), askBody.getData(),askBody.getSuccess()));
+        return V.ok();
 
     }
 
