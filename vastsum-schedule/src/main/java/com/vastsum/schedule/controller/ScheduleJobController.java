@@ -1,7 +1,5 @@
 package com.vastsum.schedule.controller;
 
-import java.util.List;
-
 import org.apache.commons.lang.StringUtils;
 import org.quartz.Scheduler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +19,12 @@ import com.vastsum.schedule.entity.ScheduleJobEntity;
 import com.vastsum.schedule.service.ScheduleJobService;
 import com.vastsum.schedule.utils.ScheduleUtils;
 
-import io.jsonwebtoken.lang.Arrays;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 @RequestMapping("/schedule")
@@ -54,7 +52,7 @@ public class ScheduleJobController {
 		return R.ok(scheduleJobService.listAll(scheduleJobEntity, page, pageSize));
 	}
 	
-	
+	@ApiIgnore
 	@GetMapping("/jobId/{jobId}")
 	@ApiOperation(value = "根据jobId获取任务详情@20180420")
 	@ApiImplicitParam(paramType = "path",name="jobId" , value="任务id", required = true)
@@ -95,12 +93,53 @@ public class ScheduleJobController {
 			return R.error("cron表达式不能为空");
 		}
 		scheduleJobEntity.setStatus("1");//立即执行
-		ScheduleJobEntity jobEntity = scheduleJobService.save(scheduleJobEntity);
-		//添加完成并立即启动
-		ScheduleUtils.createScheduleJob(scheduler, jobEntity);
-		return ResponseEntity.ok(ResultModel.ok());
+		if (scheduleJobEntity.getJobId() == null) {
+			ScheduleJobEntity jobEntity = scheduleJobService.save(scheduleJobEntity);
+			//添加完成并立即启动
+			ScheduleUtils.createScheduleJob(scheduler, jobEntity);
+		}else {
+			//暂停
+			Long[] jobIds = new Long[] {scheduleJobEntity.getJobId()};
+			scheduleJobService.pause(jobIds);
+			//更新
+			scheduleJobService.update(scheduleJobEntity);
+			//恢复
+			scheduleJobService.resume(jobIds);
+		}
+		
+		return R.ok();
 	}
 	
+	@PostMapping("/option")
+	@ApiOperation(value = "批量任务操作@20180420", notes="2:删除；3:暂停；4:恢复")
+	@ApiImplicitParams({
+		@ApiImplicitParam(paramType = "query",name="scheduleOption" , value="操作", required = true),
+	})
+	public ResponseEntity<ResultModel> option(@ApiParam("任务id")@RequestParam("jobIds[]") Long[] jobIds
+			, Integer scheduleOption){
+		if (jobIds == null) {
+			return R.error("参数不能为空");
+		}
+		if (scheduleOption == null) {
+			return R.error("操作状态不能为空");
+		}
+		switch (scheduleOption) {
+		case 2:
+			scheduleJobService.deleteBatch(jobIds);
+			break;
+		case 3:
+			scheduleJobService.pause(jobIds);
+			break;
+		case 4:
+			scheduleJobService.resume(jobIds);
+			break;
+		default:
+			break;
+		}
+		return R.ok();
+	}
+	
+	@ApiIgnore
 	@PostMapping("/pause")
 	@ApiOperation("批量暂停定时任务@20180420")
 	public ResponseEntity<ResultModel> pause(@ApiParam("任务id")@RequestParam("jobIds[]") Long[] jobIds){
@@ -111,6 +150,7 @@ public class ScheduleJobController {
 		return R.ok();
 	}
 
+	@ApiIgnore
 	@PostMapping("/delete")
 	@ApiOperation("批量删除定时任务@20180420")
 	public ResponseEntity<ResultModel> delete(@ApiParam("任务id")@RequestParam("jobIds[]") Long[] jobIds){
@@ -121,6 +161,7 @@ public class ScheduleJobController {
 		return R.ok();
 	}
 	
+	@ApiIgnore
 	@PostMapping("/resume")
 	@ApiOperation("恢复定时任务@20180420")
 	public ResponseEntity<ResultModel> resume(@ApiParam("任务id")@RequestParam("jobIds[]") Long[] jobIds){
@@ -131,6 +172,7 @@ public class ScheduleJobController {
 		return R.ok();
 	}
 	
+	@ApiIgnore
 	@PostMapping("/run")
 	@ApiOperation(value = "立即运行定时任务", notes="值为逗号分割的数组")
 	public ResponseEntity<ResultModel> run(@ApiParam("任务id")@RequestParam("jobIds[]") Long[] jobIds){

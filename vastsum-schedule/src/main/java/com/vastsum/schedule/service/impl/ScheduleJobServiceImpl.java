@@ -41,9 +41,17 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 		}
 	}
 
+	//保存定时任务基本信息
 	@Override
 	public  ScheduleJobEntity save(ScheduleJobEntity scheduleJobEntity) {
-		int i = scheduleJobEntityMapper.insertSelective(scheduleJobEntity);
+		scheduleJobEntityMapper.insertSelective(scheduleJobEntity);
+		return scheduleJobEntity;
+	}
+	
+	//更新定时任务基本信息
+	@Override
+	public ScheduleJobEntity update(ScheduleJobEntity scheduleJobEntity) {
+		scheduleJobEntityMapper.updateByPrimaryKeySelective(scheduleJobEntity);
 		return scheduleJobEntity;
 	}
 
@@ -71,18 +79,21 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 	//运行
 	@Override
 	public void run(Long[] jobIds) {
+		this.updateBatch(jobIds, "1");
 		Arrays.asList(jobIds).stream().forEach(jobId -> ScheduleUtils.run(scheduler, getByJobId(jobId)));
 	}
 
 	//暂停
 	@Override
 	public void pause(Long[] jobIds) {
+		this.updateBatch(jobIds, "0");
 		Arrays.asList(jobIds).stream().forEach(jobId -> ScheduleUtils.pauseJob(scheduler, jobId));
 	}
 
 	//恢复
 	@Override
 	public void resume(Long[] jobIds) {
+		this.updateBatch(jobIds, "1");
 		Arrays.asList(jobIds).stream().forEach(jobId -> ScheduleUtils.resumeJob(scheduler, jobId));
 	}
 

@@ -34,6 +34,13 @@ public interface ScheduleJobService {
 	ScheduleJobEntity save(ScheduleJobEntity scheduleJobEntity);
 	
 	/**
+	 * 更新定时任务基本信息
+	 * @param scheduleJobEntity
+	 * @return ScheduleJobEntity
+	 */
+	ScheduleJobEntity update(ScheduleJobEntity scheduleJobEntity);
+	
+	/**
 	 * 删除一组定时任务
 	 * @param jobIds
 	 */
