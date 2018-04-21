@@ -2,6 +2,7 @@ package com.vastsum.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,7 +32,7 @@ public class TrustController {
 	private TrustService trustService;
 	
 	//托管设备
-	@PostMapping("/{deviceId}/{trustStatus}")
+	@GetMapping("/device/{deviceId}/trustStatus/{trustStatus}")
 	@ApiOperation(value = " 托管设备@2018-04-15")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "deviceId",value = "设备id",required = true),

@@ -1,5 +1,6 @@
 package com.vastsum.controller;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 @RequestMapping(value = "/paramSet")
@@ -195,6 +197,7 @@ public class ParamSetController extends BaseController {
 	
 	
 	//获取最新的参数设置信息
+	@ApiIgnore
 	@GetMapping("/{batchId}")
 	@ApiOperation(value = "根据批次查看参数设置信息@2018-03-16")
     @ApiImplicitParams({
@@ -209,13 +212,13 @@ public class ParamSetController extends BaseController {
     }
 	
 	//根据设备序列号获取最新的参数设置信息
-	@GetMapping("/{sn}")
+	@GetMapping("/device/{sn}")
 	@ApiOperation(value = "根据设备序列号获取最新的参数设置信息@2018-04-17")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "sn",value = "设备序列号",required = true)
     })
     public ResponseEntity<ResultModel> getLastParamSetBySn( @PathVariable String sn){
-        if (sn == null) {
+        if (StringUtils.isBlank(sn) ) {
             return V.error("设备序列号不能等于空");
         }
        ParamSet paramSet = paramSetService.getLastBySn(sn);
