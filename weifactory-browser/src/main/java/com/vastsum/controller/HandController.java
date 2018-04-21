@@ -1,6 +1,10 @@
 package com.vastsum.controller;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vastsum.controller.system.BaseController;
+import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.HandControl;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
@@ -27,8 +32,18 @@ public class HandController  extends BaseController  {
 
 	@Autowired
 	private HandControlService handControlService;
-
-
+	
+	@Resource(name="handRemoteService")
+	private HandRemoteService handRemoteService;
+	
+	@GetMapping("/test")
+	@ApiOperation(value = "test")
+	public  ResponseEntity<ResultModel> saveOrUpdate(){
+		
+		return V.ok();
+    }
+	
+	
 	//手动控制设置
 	@PostMapping("/saveOrUpdate")
 	@ApiOperation(value = "手动控制设置@2018-03-29")
@@ -77,6 +92,8 @@ public class HandController  extends BaseController  {
 		}
 		//手动控制保存成功
 		handControlService.saveOrUpdate(handControl);
+		//TODO: 实现传送数据到远程接口
+		handRemoteService.sendOrder(handControlService.changeOrder(handControl));
 		return V.ok();
     }
 	

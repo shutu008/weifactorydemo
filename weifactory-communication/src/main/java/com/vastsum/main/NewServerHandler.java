@@ -1,10 +1,20 @@
 package com.vastsum.main;
 
+import java.net.SocketAddress;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.vastsum.entity.BizException;
 import com.vastsum.entity.CommunicationLog;
 import com.vastsum.entity.CommunicationMessage;
 import com.vastsum.entity.SensorCollection;
-import com.vastsum.pojo.*;
+import com.vastsum.pojo.ArrayToEntity;
+import com.vastsum.pojo.ExceptionTypeEnum;
+import com.vastsum.pojo.NewConnection;
+import com.vastsum.pojo.OptionType;
+import com.vastsum.pojo.WrapData;
 import com.vastsum.server.CommunicationService;
 import com.vastsum.server.DataService;
 import com.vastsum.utils.DataUtils;
@@ -12,25 +22,14 @@ import com.vastsum.utils.NettyChannelMap;
 import com.vastsum.utils.ParseIpAddress;
 import com.vastsum.utils.ParserMessageUtils;
 import com.vastsum.utils.ResourceProperty;
+
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.socket.SocketChannel;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.net.SocketAddress;
-
-/**
- * @author ssj
- * @create 2017-09-24 17:02
- */
-public class ServerHandler extends ChannelInboundHandlerAdapter {
-
-    private DataService dataService;
-
-    //Autowired自动装配
+public class NewServerHandler extends ChannelInboundHandlerAdapter {
+	private DataService dataService;
     @Autowired
     private NewConnection newConnection;
     @Autowired
@@ -72,14 +71,12 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception{
         String request = (String)msg;
-        CommunicationMessage cm = ParserMessageUtils.parser((String)msg);
-        
-        LOGGER.info("来自客户端的原始数据："+(String)msg);
+        CommunicationMessage cm = ParserMessageUtils.parser(request);
+        LOGGER.info("来自客户端的原始数据："+request);
         SensorCollection sensorCollection = null;
-        //第一次发消息进行验证，之后连接的消息不进行验证
         if (flag){
         	String sn = cm.getData();
-            LOGGER.info("进行激活验证：返回时间戳为:"+String.valueOf(System.currentTimeMillis()));//连接上去之后只执行一次
+            LOGGER.info("进行激活验证：返回时间戳为:"+String.valueOf(System.currentTimeMillis()));
             //设备序列号与SocketChannel绑定
             NettyChannelMap.add(sn, (SocketChannel)ctx.channel());
             //客户端连接
@@ -128,7 +125,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             sensorCollection.setData(wrapData.getData());
             sensorCollection.setBatchNo(wrapData.getBatchNo());
             Integer i = dataService.insert(sensorCollection);
-            LOGGER.info("获取的数据为："+request+"-数据处理结果："+i);
+            LOGGER.info("获取的数据为："+(String)msg+"-数据处理结果："+i);
             ctx.writeAndFlush(Unpooled.copiedBuffer((""+i).getBytes()));
         }
         //设备异常处理

@@ -1,13 +1,20 @@
 package com.vastsum.service.impl;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.vastsum.dao.HandControlMapper;
+import com.vastsum.entity.Batch;
 import com.vastsum.entity.HandControl;
 import com.vastsum.entity.HandControlExample;
+import com.vastsum.service.BatchService;
+import com.vastsum.service.DeviceService;
 import com.vastsum.service.HandControlService;
 
 
@@ -21,7 +28,13 @@ public class HandControlServiceImpl implements HandControlService {
 	
 	@Autowired
 	private HandControlMapper handControlMapper;
+	
+	@Autowired
+	private BatchService batchService;
 
+	@Autowired
+	private DeviceService deviceService;
+	
 	@Override
 	public HandControl getById(Long handControlId) {
 		return handControlMapper.selectByPrimaryKey(handControlId);
@@ -45,6 +58,32 @@ public class HandControlServiceImpl implements HandControlService {
 			handControlMapper.insertSelective(handControl);
 		}
 		handControlMapper.updateByPrimaryKeySelective(handControl);
+	}
+	
+	@Override
+	public HashMap<String,Object> changeOrder(HandControl handControl) {
+		HandControl dbHandControl = getById(handControl.getHandControlId());
+		Class<HandControl> clazz = HandControl.class;
+		Field[] fields = clazz.getDeclaredFields();
+		HashMap<String,Object> hashMap = new HashMap<>();
+		Batch batch = batchService.selectBatchBybatchId(dbHandControl.getBatchId());
+		String sn = deviceService.getSnByDeviceId(batch.getDeviceId());
+		hashMap.put("sn", sn);
+		for(Field f : fields) {
+			try {
+				String fieldName = f.getName();
+				String publicMethodName = "get"+fieldName.substring(0, 1).toUpperCase()+fieldName.substring(1);
+				Method m = clazz.getMethod(publicMethodName);
+				Object resultCurrent = (Object)m.invoke(handControl);
+				Object resultDb = (Object)m.invoke(dbHandControl);
+				if(!resultCurrent.equals(resultDb)) {
+					hashMap.put(fieldName, resultCurrent);
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return hashMap;
 	}
 
 }
