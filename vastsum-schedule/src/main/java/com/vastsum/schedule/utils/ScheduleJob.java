@@ -1,6 +1,7 @@
 package com.vastsum.schedule.utils;
 
 import java.util.Date;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
@@ -28,9 +29,34 @@ public class ScheduleJob extends QuartzJobBean {
 	
     @Override
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
-        ScheduleJobEntity scheduleJob = (ScheduleJobEntity) context.getMergedJobDataMap()
-        		.get(ScheduleJobEntity.JOB_PARAM_KEY);
-        
+//        ScheduleJobEntity scheduleJob = (ScheduleJobEntity) context.getJobDetail().getJobDataMap()
+//        		.get(ScheduleJobEntity.JOB_PARAM_KEY);
+    	Object object = context.getJobDetail().getJobDataMap().get(ScheduleJobEntity.JOB_PARAM_KEY);
+    	@SuppressWarnings("unchecked")
+		Map<String, Object> map = (Map<String, Object>) objectToMap(object);
+    	ScheduleJobEntity scheduleJob = new ScheduleJobEntity();
+    	if (map.get("beanName") != null) {
+    		scheduleJob.setBeanName(map.get("beanName").toString());
+		}
+    	if (map.get("jobId") != null) {
+    		scheduleJob.setJobId(Long.valueOf(map.get("jobId").toString()));
+		}
+    	if (map.get("cronExpression") != null) {
+    		scheduleJob.setCronExpression(map.get("cronExpression").toString());
+		}
+    	if (map.get("methodName") != null) {
+    		scheduleJob.setMethodName(map.get("methodName").toString());
+		}
+    	if (map.get("params") != null) {
+    		scheduleJob.setParams(map.get("params").toString());
+		}
+    	if (map.get("status") != null) {
+    		scheduleJob.setStatus(map.get("status").toString());
+		}
+    	if (map.get("scheduleName") != null) {
+    		scheduleJob.setStatus(map.get("scheduleName").toString());
+		} 
+
         //获取spring bean
         ScheduleJobLogService scheduleJobLogService = (ScheduleJobLogService) SpringContextUtils.getBean("scheduleJobLogService");
         
@@ -74,5 +100,21 @@ public class ScheduleJob extends QuartzJobBean {
 		}finally {
 			scheduleJobLogService.save(log);
 		}
+    }
+    
+    public static Object mapToObject(Map<String, Object> map, Class<?> beanClass)
+            throws Exception {
+        if (map == null)
+            return null;
+        Object obj = beanClass.newInstance();
+        org.apache.commons.beanutils.BeanUtils.populate(obj, map);
+        return obj;
+    }
+
+    public static Map<?, ?> objectToMap(Object obj) {
+        if (obj == null) {
+            return null;
+        }
+        return new org.apache.commons.beanutils.BeanMap(obj);
     }
 }

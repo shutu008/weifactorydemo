@@ -6,6 +6,7 @@
     <result column="device_id" jdbcType="INTEGER" property="deviceId" />
     <result column="plant_one_type" jdbcType="VARCHAR" property="plantOneType" />
     <result column="plant_one" jdbcType="VARCHAR" property="plantOne" />
+    <result column=" batch_time_one" jdbcType="TIMESTAMP" property="batchTimeOne" />
     <result column="cult_model_one" jdbcType="VARCHAR" property="cultModelOne" />
     <result column="temperature_one" jdbcType="DOUBLE" property="temperatureOne" />
     <result column="humidity_one" jdbcType="DOUBLE" property="humidityOne" />
@@ -16,6 +17,7 @@
     <result column="light_one" jdbcType="DOUBLE" property="lightOne" />
     <result column="plant_two_type" jdbcType="VARCHAR" property="plantTwoType" />
     <result column="plant_two" jdbcType="VARCHAR" property="plantTwo" />
+    <result column="batch_time_two" jdbcType="TIMESTAMP" property="batchTimeTwo" />
     <result column="cult_model_two" jdbcType="VARCHAR" property="cultModelTwo" />
     <result column="temperature_two" jdbcType="DOUBLE" property="temperatureTwo" />
     <result column="humidity_two" jdbcType="DOUBLE" property="humidityTwo" />
@@ -26,6 +28,7 @@
     <result column="light_two" jdbcType="DOUBLE" property="lightTwo" />
     <result column="plant_three_type" jdbcType="VARCHAR" property="plantThreeType" />
     <result column="plant_three" jdbcType="VARCHAR" property="plantThree" />
+    <result column="batch_time_three" jdbcType="TIMESTAMP" property="batchTimeThree" />
     <result column="cult_model_three" jdbcType="VARCHAR" property="cultModelThree" />
     <result column="temperature_three" jdbcType="DOUBLE" property="temperatureThree" />
     <result column="humidity_three" jdbcType="DOUBLE" property="humidityThree" />
@@ -114,15 +117,16 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    batch_id, device_id, plant_one_type, plant_one, cult_model_one, temperature_one, 
-    humidity_one, led_one_left, led_one_middle, led_one_right, video_one, light_one, 
-    plant_two_type, plant_two, cult_model_two, temperature_two, humidity_two, led_two_left, 
-    led_two_middle, led_two_right, video_two, light_two, plant_three_type, plant_three, 
-    cult_model_three, temperature_three, humidity_three, led_three_left, led_three_middle, 
-    led_three_right, video_three, light_three, co2, ph, ec, ox, solution_temperature, 
-    outdoor_temperature, level_up, level_down, status, model_id, order_status, trust_status, 
-    one_planting_time, one_recovery_time, two_planting_time, two_recovery_time, three_planting_time, 
-    three_recovery_time, gmt_create, gmt_modified
+    batch_id, device_id, plant_one_type, plant_one, " batch_time_one", cult_model_one, 
+    temperature_one, humidity_one, led_one_left, led_one_middle, led_one_right, video_one, 
+    light_one, plant_two_type, plant_two, batch_time_two, cult_model_two, temperature_two, 
+    humidity_two, led_two_left, led_two_middle, led_two_right, video_two, light_two, 
+    plant_three_type, plant_three, batch_time_three, cult_model_three, temperature_three, 
+    humidity_three, led_three_left, led_three_middle, led_three_right, video_three, light_three, 
+    co2, ph, ec, ox, solution_temperature, outdoor_temperature, level_up, level_down, 
+    status, model_id, order_status, trust_status, one_planting_time, one_recovery_time, 
+    two_planting_time, two_recovery_time, three_planting_time, three_recovery_time, gmt_create, 
+    gmt_modified
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.BatchExample" resultMap="BaseResultMap">
     select
@@ -156,13 +160,14 @@
   </delete>
   <insert id="insert" parameterType="com.vastsum.entity.Batch">
     insert into batch (batch_id, device_id, plant_one_type, 
-      plant_one, cult_model_one, temperature_one, 
-      humidity_one, led_one_left, led_one_middle, 
-      led_one_right, video_one, light_one, 
-      plant_two_type, plant_two, cult_model_two, 
-      temperature_two, humidity_two, led_two_left, 
-      led_two_middle, led_two_right, video_two, 
-      light_two, plant_three_type, plant_three, 
+      plant_one, " batch_time_one", cult_model_one, 
+      temperature_one, humidity_one, led_one_left, 
+      led_one_middle, led_one_right, video_one, 
+      light_one, plant_two_type, plant_two, 
+      batch_time_two, cult_model_two, temperature_two, 
+      humidity_two, led_two_left, led_two_middle, 
+      led_two_right, video_two, light_two, 
+      plant_three_type, plant_three, batch_time_three, 
       cult_model_three, temperature_three, humidity_three, 
       led_three_left, led_three_middle, led_three_right, 
       video_three, light_three, co2, 
@@ -174,13 +179,14 @@
       three_recovery_time, gmt_create, gmt_modified
       )
     values (#{batchId,jdbcType=BIGINT}, #{deviceId,jdbcType=INTEGER}, #{plantOneType,jdbcType=VARCHAR}, 
-      #{plantOne,jdbcType=VARCHAR}, #{cultModelOne,jdbcType=VARCHAR}, #{temperatureOne,jdbcType=DOUBLE}, 
-      #{humidityOne,jdbcType=DOUBLE}, #{ledOneLeft,jdbcType=VARCHAR}, #{ledOneMiddle,jdbcType=VARCHAR}, 
-      #{ledOneRight,jdbcType=VARCHAR}, #{videoOne,jdbcType=VARCHAR}, #{lightOne,jdbcType=DOUBLE}, 
-      #{plantTwoType,jdbcType=VARCHAR}, #{plantTwo,jdbcType=VARCHAR}, #{cultModelTwo,jdbcType=VARCHAR}, 
-      #{temperatureTwo,jdbcType=DOUBLE}, #{humidityTwo,jdbcType=DOUBLE}, #{ledTwoLeft,jdbcType=VARCHAR}, 
-      #{ledTwoMiddle,jdbcType=VARCHAR}, #{ledTwoRight,jdbcType=VARCHAR}, #{videoTwo,jdbcType=VARCHAR}, 
-      #{lightTwo,jdbcType=DOUBLE}, #{plantThreeType,jdbcType=VARCHAR}, #{plantThree,jdbcType=VARCHAR}, 
+      #{plantOne,jdbcType=VARCHAR}, #{batchTimeOne,jdbcType=TIMESTAMP}, #{cultModelOne,jdbcType=VARCHAR}, 
+      #{temperatureOne,jdbcType=DOUBLE}, #{humidityOne,jdbcType=DOUBLE}, #{ledOneLeft,jdbcType=VARCHAR}, 
+      #{ledOneMiddle,jdbcType=VARCHAR}, #{ledOneRight,jdbcType=VARCHAR}, #{videoOne,jdbcType=VARCHAR}, 
+      #{lightOne,jdbcType=DOUBLE}, #{plantTwoType,jdbcType=VARCHAR}, #{plantTwo,jdbcType=VARCHAR}, 
+      #{batchTimeTwo,jdbcType=TIMESTAMP}, #{cultModelTwo,jdbcType=VARCHAR}, #{temperatureTwo,jdbcType=DOUBLE}, 
+      #{humidityTwo,jdbcType=DOUBLE}, #{ledTwoLeft,jdbcType=VARCHAR}, #{ledTwoMiddle,jdbcType=VARCHAR}, 
+      #{ledTwoRight,jdbcType=VARCHAR}, #{videoTwo,jdbcType=VARCHAR}, #{lightTwo,jdbcType=DOUBLE}, 
+      #{plantThreeType,jdbcType=VARCHAR}, #{plantThree,jdbcType=VARCHAR}, #{batchTimeThree,jdbcType=TIMESTAMP}, 
       #{cultModelThree,jdbcType=VARCHAR}, #{temperatureThree,jdbcType=DOUBLE}, #{humidityThree,jdbcType=DOUBLE}, 
       #{ledThreeLeft,jdbcType=VARCHAR}, #{ledThreeMiddle,jdbcType=VARCHAR}, #{ledThreeRight,jdbcType=VARCHAR}, 
       #{videoThree,jdbcType=VARCHAR}, #{lightThree,jdbcType=DOUBLE}, #{co2,jdbcType=DOUBLE}, 
@@ -206,6 +212,9 @@
       </if>
       <if test="plantOne != null">
         plant_one,
+      </if>
+      <if test="batchTimeOne != null">
+        " batch_time_one",
       </if>
       <if test="cultModelOne != null">
         cult_model_one,
@@ -237,6 +246,9 @@
       <if test="plantTwo != null">
         plant_two,
       </if>
+      <if test="batchTimeTwo != null">
+        batch_time_two,
+      </if>
       <if test="cultModelTwo != null">
         cult_model_two,
       </if>
@@ -266,6 +278,9 @@
       </if>
       <if test="plantThree != null">
         plant_three,
+      </if>
+      <if test="batchTimeThree != null">
+        batch_time_three,
       </if>
       <if test="cultModelThree != null">
         cult_model_three,
@@ -365,6 +380,9 @@
       <if test="plantOne != null">
         #{plantOne,jdbcType=VARCHAR},
       </if>
+      <if test="batchTimeOne != null">
+        #{batchTimeOne,jdbcType=TIMESTAMP},
+      </if>
       <if test="cultModelOne != null">
         #{cultModelOne,jdbcType=VARCHAR},
       </if>
@@ -395,6 +413,9 @@
       <if test="plantTwo != null">
         #{plantTwo,jdbcType=VARCHAR},
       </if>
+      <if test="batchTimeTwo != null">
+        #{batchTimeTwo,jdbcType=TIMESTAMP},
+      </if>
       <if test="cultModelTwo != null">
         #{cultModelTwo,jdbcType=VARCHAR},
       </if>
@@ -424,6 +445,9 @@
       </if>
       <if test="plantThree != null">
         #{plantThree,jdbcType=VARCHAR},
+      </if>
+      <if test="batchTimeThree != null">
+        #{batchTimeThree,jdbcType=TIMESTAMP},
       </if>
       <if test="cultModelThree != null">
         #{cultModelThree,jdbcType=VARCHAR},
@@ -532,6 +556,9 @@
       <if test="record.plantOne != null">
         plant_one = #{record.plantOne,jdbcType=VARCHAR},
       </if>
+      <if test="record.batchTimeOne != null">
+        " batch_time_one" = #{record.batchTimeOne,jdbcType=TIMESTAMP},
+      </if>
       <if test="record.cultModelOne != null">
         cult_model_one = #{record.cultModelOne,jdbcType=VARCHAR},
       </if>
@@ -562,6 +589,9 @@
       <if test="record.plantTwo != null">
         plant_two = #{record.plantTwo,jdbcType=VARCHAR},
       </if>
+      <if test="record.batchTimeTwo != null">
+        batch_time_two = #{record.batchTimeTwo,jdbcType=TIMESTAMP},
+      </if>
       <if test="record.cultModelTwo != null">
         cult_model_two = #{record.cultModelTwo,jdbcType=VARCHAR},
       </if>
@@ -591,6 +621,9 @@
       </if>
       <if test="record.plantThree != null">
         plant_three = #{record.plantThree,jdbcType=VARCHAR},
+      </if>
+      <if test="record.batchTimeThree != null">
+        batch_time_three = #{record.batchTimeThree,jdbcType=TIMESTAMP},
       </if>
       <if test="record.cultModelThree != null">
         cult_model_three = #{record.cultModelThree,jdbcType=VARCHAR},
@@ -687,6 +720,7 @@
       device_id = #{record.deviceId,jdbcType=INTEGER},
       plant_one_type = #{record.plantOneType,jdbcType=VARCHAR},
       plant_one = #{record.plantOne,jdbcType=VARCHAR},
+      " batch_time_one" = #{record.batchTimeOne,jdbcType=TIMESTAMP},
       cult_model_one = #{record.cultModelOne,jdbcType=VARCHAR},
       temperature_one = #{record.temperatureOne,jdbcType=DOUBLE},
       humidity_one = #{record.humidityOne,jdbcType=DOUBLE},
@@ -697,6 +731,7 @@
       light_one = #{record.lightOne,jdbcType=DOUBLE},
       plant_two_type = #{record.plantTwoType,jdbcType=VARCHAR},
       plant_two = #{record.plantTwo,jdbcType=VARCHAR},
+      batch_time_two = #{record.batchTimeTwo,jdbcType=TIMESTAMP},
       cult_model_two = #{record.cultModelTwo,jdbcType=VARCHAR},
       temperature_two = #{record.temperatureTwo,jdbcType=DOUBLE},
       humidity_two = #{record.humidityTwo,jdbcType=DOUBLE},
@@ -707,6 +742,7 @@
       light_two = #{record.lightTwo,jdbcType=DOUBLE},
       plant_three_type = #{record.plantThreeType,jdbcType=VARCHAR},
       plant_three = #{record.plantThree,jdbcType=VARCHAR},
+      batch_time_three = #{record.batchTimeThree,jdbcType=TIMESTAMP},
       cult_model_three = #{record.cultModelThree,jdbcType=VARCHAR},
       temperature_three = #{record.temperatureThree,jdbcType=DOUBLE},
       humidity_three = #{record.humidityThree,jdbcType=DOUBLE},
@@ -751,6 +787,9 @@
       <if test="plantOne != null">
         plant_one = #{plantOne,jdbcType=VARCHAR},
       </if>
+      <if test="batchTimeOne != null">
+        " batch_time_one" = #{batchTimeOne,jdbcType=TIMESTAMP},
+      </if>
       <if test="cultModelOne != null">
         cult_model_one = #{cultModelOne,jdbcType=VARCHAR},
       </if>
@@ -781,6 +820,9 @@
       <if test="plantTwo != null">
         plant_two = #{plantTwo,jdbcType=VARCHAR},
       </if>
+      <if test="batchTimeTwo != null">
+        batch_time_two = #{batchTimeTwo,jdbcType=TIMESTAMP},
+      </if>
       <if test="cultModelTwo != null">
         cult_model_two = #{cultModelTwo,jdbcType=VARCHAR},
       </if>
@@ -810,6 +852,9 @@
       </if>
       <if test="plantThree != null">
         plant_three = #{plantThree,jdbcType=VARCHAR},
+      </if>
+      <if test="batchTimeThree != null">
+        batch_time_three = #{batchTimeThree,jdbcType=TIMESTAMP},
       </if>
       <if test="cultModelThree != null">
         cult_model_three = #{cultModelThree,jdbcType=VARCHAR},
@@ -903,6 +948,7 @@
     set device_id = #{deviceId,jdbcType=INTEGER},
       plant_one_type = #{plantOneType,jdbcType=VARCHAR},
       plant_one = #{plantOne,jdbcType=VARCHAR},
+      " batch_time_one" = #{batchTimeOne,jdbcType=TIMESTAMP},
       cult_model_one = #{cultModelOne,jdbcType=VARCHAR},
       temperature_one = #{temperatureOne,jdbcType=DOUBLE},
       humidity_one = #{humidityOne,jdbcType=DOUBLE},
@@ -913,6 +959,7 @@
       light_one = #{lightOne,jdbcType=DOUBLE},
       plant_two_type = #{plantTwoType,jdbcType=VARCHAR},
       plant_two = #{plantTwo,jdbcType=VARCHAR},
+      batch_time_two = #{batchTimeTwo,jdbcType=TIMESTAMP},
       cult_model_two = #{cultModelTwo,jdbcType=VARCHAR},
       temperature_two = #{temperatureTwo,jdbcType=DOUBLE},
       humidity_two = #{humidityTwo,jdbcType=DOUBLE},
@@ -923,6 +970,7 @@
       light_two = #{lightTwo,jdbcType=DOUBLE},
       plant_three_type = #{plantThreeType,jdbcType=VARCHAR},
       plant_three = #{plantThree,jdbcType=VARCHAR},
+      batch_time_three = #{batchTimeThree,jdbcType=TIMESTAMP},
       cult_model_three = #{cultModelThree,jdbcType=VARCHAR},
       temperature_three = #{temperatureThree,jdbcType=DOUBLE},
       humidity_three = #{humidityThree,jdbcType=DOUBLE},

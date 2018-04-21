@@ -13,7 +13,7 @@ import com.vastsum.social.properties.SocialProperties;
  * @create 2017-12-18 22:23
  */
 @SpringBootApplication
-@MapperScan("com.vastsum.dao")
+@MapperScan({"com.vastsum.dao","com.vastsum.schedule.dao"})
 @EnableConfigurationProperties({WeifactoryProperties.class,
 	SocialProperties.class}) 
 public class WeifactoryApplication {

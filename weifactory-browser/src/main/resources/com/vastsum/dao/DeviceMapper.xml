@@ -9,6 +9,7 @@
     <result column="note" jdbcType="VARCHAR" property="note" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="truest_status" jdbcType="VARCHAR" property="truestStatus" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -69,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    device_id, sn, device_type, user_id, note, gmt_create, gmt_modified
+    device_id, sn, device_type, user_id, note, gmt_create, gmt_modified, truest_status
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.DeviceExample" resultMap="BaseResultMap">
     select
@@ -104,10 +105,10 @@
   <insert id="insert" parameterType="com.vastsum.entity.Device">
     insert into device (device_id, sn, device_type, 
       user_id, note, gmt_create, 
-      gmt_modified)
+      gmt_modified, truest_status)
     values (#{deviceId,jdbcType=INTEGER}, #{sn,jdbcType=VARCHAR}, #{deviceType,jdbcType=VARCHAR}, 
       #{userId,jdbcType=INTEGER}, #{note,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, 
-      #{gmtModified,jdbcType=TIMESTAMP})
+      #{gmtModified,jdbcType=TIMESTAMP}, #{truestStatus,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.Device">
     insert into device
@@ -133,6 +134,9 @@
       <if test="gmtModified != null">
         gmt_modified,
       </if>
+      <if test="truestStatus != null">
+        truest_status,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="deviceId != null">
@@ -155,6 +159,9 @@
       </if>
       <if test="gmtModified != null">
         #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="truestStatus != null">
+        #{truestStatus,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -188,6 +195,9 @@
       <if test="record.gmtModified != null">
         gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.truestStatus != null">
+        truest_status = #{record.truestStatus,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -201,7 +211,8 @@
       user_id = #{record.userId,jdbcType=INTEGER},
       note = #{record.note,jdbcType=VARCHAR},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
-      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      truest_status = #{record.truestStatus,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -227,6 +238,9 @@
       <if test="gmtModified != null">
         gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
       </if>
+      <if test="truestStatus != null">
+        truest_status = #{truestStatus,jdbcType=VARCHAR},
+      </if>
     </set>
     where device_id = #{deviceId,jdbcType=INTEGER}
   </update>
@@ -237,7 +251,8 @@
       user_id = #{userId,jdbcType=INTEGER},
       note = #{note,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
-      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      truest_status = #{truestStatus,jdbcType=VARCHAR}
     where device_id = #{deviceId,jdbcType=INTEGER}
   </update>
 </mapper>

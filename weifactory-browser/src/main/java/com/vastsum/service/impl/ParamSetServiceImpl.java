@@ -8,7 +8,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.vastsum.dao.GrowthPatternParamMapper;
 import com.vastsum.dao.ParamSetMapper;
+import com.vastsum.entity.GrowthPatternParam;
+import com.vastsum.entity.GrowthPatternParamExample;
 import com.vastsum.entity.ParamSet;
 import com.vastsum.entity.ParamSetExample;
 import com.vastsum.service.ParamSetService;
@@ -22,6 +25,8 @@ public class ParamSetServiceImpl implements ParamSetService {
 	
 	@Autowired
 	private ParamSetMapper paramSetMapper;
+	@Autowired
+	private GrowthPatternParamMapper growthPatternParamMapper;
 
 	/* 保存或更新参数设置信息
 	 * @see com.vastsum.service.ParamSetService#saveOrUpdate(com.vastsum.entity.ParamSet)
@@ -51,6 +56,48 @@ public class ParamSetServiceImpl implements ParamSetService {
 	public ParamSet getByBatchId(Long batchId) {
 		ParamSetExample paramSetExample = new ParamSetExample();
 		paramSetExample.createCriteria().andBatchIdEqualTo(batchId);
+		paramSetExample.setOrderByClause("gmt_create desc");
+		List<ParamSet> list = paramSetMapper.selectByExample(paramSetExample);
+		if (list == null || list.isEmpty()) {
+			return null;
+		}
+		return list.get(0);
+	}
+
+	@Override
+	public void saveOrUpdateGrowthParam(GrowthPatternParam growthPatternParam) {
+		if (growthPatternParam.getGrowthId() != null) {
+			update(growthPatternParam);
+		}else {
+			save(growthPatternParam);
+		}
+		
+	}
+	
+	//保存生长模式参数
+	private void save(GrowthPatternParam growthPatternParam) {
+		growthPatternParamMapper.insert(growthPatternParam);
+	}
+	
+	//修改生长模式参数
+	private void update(GrowthPatternParam growthPatternParam) {
+		growthPatternParamMapper.updateByPrimaryKeySelective(growthPatternParam);
+	}
+
+	//根据生长模式来获取对应的列表
+	@Override
+	public List<GrowthPatternParam> listByGrowthNo(Integer growthNo) {
+		GrowthPatternParamExample growthPatternParamExample = new GrowthPatternParamExample();
+		growthPatternParamExample.createCriteria().andGrowthNoEqualTo(growthNo);
+		growthPatternParamExample.setOrderByClause("growth_order desc");
+		return growthPatternParamMapper.selectByExample(growthPatternParamExample);
+	}
+
+	//根据设备序列号获取最新的参数设置信息
+	@Override
+	public ParamSet getLastBySn(String sn) {
+		ParamSetExample paramSetExample = new ParamSetExample();
+		paramSetExample.createCriteria().andSnEqualTo(sn);
 		paramSetExample.setOrderByClause("gmt_create desc");
 		List<ParamSet> list = paramSetMapper.selectByExample(paramSetExample);
 		if (list == null || list.isEmpty()) {

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vastsum.dao.HistoryDataMapper">
+  <resultMap id="BaseResultMap" type="com.vastsum.entity.HistoryData">
+    <id column="history_id" jdbcType="BIGINT" property="historyId" />
+    <result column="sn" jdbcType="VARCHAR" property="sn" />
+    <result column="identify" jdbcType="VARCHAR" property="identify" />
+    <result column="value" jdbcType="VARCHAR" property="value" />
+    <result column="server_time" jdbcType="TIMESTAMP" property="serverTime" />
+    <result column="device_time" jdbcType="TIMESTAMP" property="deviceTime" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    history_id, sn, identify, value, server_time, device_time
+  </sql>
+  <select id="selectByExample" parameterType="com.vastsum.entity.HistoryDataExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from history_data
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from history_data
+    where history_id = #{historyId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from history_data
+    where history_id = #{historyId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.vastsum.entity.HistoryDataExample">
+    delete from history_data
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.vastsum.entity.HistoryData">
+    insert into history_data (history_id, sn, identify, 
+      value, server_time, device_time
+      )
+    values (#{historyId,jdbcType=BIGINT}, #{sn,jdbcType=VARCHAR}, #{identify,jdbcType=VARCHAR}, 
+      #{value,jdbcType=VARCHAR}, #{serverTime,jdbcType=TIMESTAMP}, #{deviceTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.vastsum.entity.HistoryData">
+    insert into history_data
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="historyId != null">
+        history_id,
+      </if>
+      <if test="sn != null">
+        sn,
+      </if>
+      <if test="identify != null">
+        identify,
+      </if>
+      <if test="value != null">
+        value,
+      </if>
+      <if test="serverTime != null">
+        server_time,
+      </if>
+      <if test="deviceTime != null">
+        device_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="historyId != null">
+        #{historyId,jdbcType=BIGINT},
+      </if>
+      <if test="sn != null">
+        #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="identify != null">
+        #{identify,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null">
+        #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="serverTime != null">
+        #{serverTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deviceTime != null">
+        #{deviceTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.vastsum.entity.HistoryDataExample" resultType="java.lang.Long">
+    select count(*) from history_data
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update history_data
+    <set>
+      <if test="record.historyId != null">
+        history_id = #{record.historyId,jdbcType=BIGINT},
+      </if>
+      <if test="record.sn != null">
+        sn = #{record.sn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.identify != null">
+        identify = #{record.identify,jdbcType=VARCHAR},
+      </if>
+      <if test="record.value != null">
+        value = #{record.value,jdbcType=VARCHAR},
+      </if>
+      <if test="record.serverTime != null">
+        server_time = #{record.serverTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.deviceTime != null">
+        device_time = #{record.deviceTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update history_data
+    set history_id = #{record.historyId,jdbcType=BIGINT},
+      sn = #{record.sn,jdbcType=VARCHAR},
+      identify = #{record.identify,jdbcType=VARCHAR},
+      value = #{record.value,jdbcType=VARCHAR},
+      server_time = #{record.serverTime,jdbcType=TIMESTAMP},
+      device_time = #{record.deviceTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.vastsum.entity.HistoryData">
+    update history_data
+    <set>
+      <if test="sn != null">
+        sn = #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="identify != null">
+        identify = #{identify,jdbcType=VARCHAR},
+      </if>
+      <if test="value != null">
+        value = #{value,jdbcType=VARCHAR},
+      </if>
+      <if test="serverTime != null">
+        server_time = #{serverTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deviceTime != null">
+        device_time = #{deviceTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where history_id = #{historyId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.HistoryData">
+    update history_data
+    set sn = #{sn,jdbcType=VARCHAR},
+      identify = #{identify,jdbcType=VARCHAR},
+      value = #{value,jdbcType=VARCHAR},
+      server_time = #{serverTime,jdbcType=TIMESTAMP},
+      device_time = #{deviceTime,jdbcType=TIMESTAMP}
+    where history_id = #{historyId,jdbcType=BIGINT}
+  </update>
+</mapper>

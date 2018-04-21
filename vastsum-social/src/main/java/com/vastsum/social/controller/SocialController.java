@@ -24,10 +24,12 @@ import com.vastsum.social.properties.SocialProperties;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import springfox.documentation.annotations.ApiIgnore;
 
 @Controller
 @RequestMapping("/social")
 @Api(tags="第三方登录管理")
+@ApiIgnore
 public class SocialController {
 
 	@Autowired

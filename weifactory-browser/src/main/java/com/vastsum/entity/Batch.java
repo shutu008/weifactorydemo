@@ -11,6 +11,8 @@ public class Batch {
 
     private String plantOne;
 
+    private Date batchTimeOne;
+
     private String cultModelOne;
 
     private Double temperatureOne;
@@ -31,6 +33,8 @@ public class Batch {
 
     private String plantTwo;
 
+    private Date batchTimeTwo;
+
     private String cultModelTwo;
 
     private Double temperatureTwo;
@@ -50,6 +54,8 @@ public class Batch {
     private String plantThreeType;
 
     private String plantThree;
+
+    private Date batchTimeThree;
 
     private String cultModelThree;
 
@@ -139,6 +145,14 @@ public class Batch {
         this.plantOne = plantOne == null ? null : plantOne.trim();
     }
 
+    public Date getBatchTimeOne() {
+        return batchTimeOne;
+    }
+
+    public void setBatchTimeOne(Date batchTimeOne) {
+        this.batchTimeOne = batchTimeOne;
+    }
+
     public String getCultModelOne() {
         return cultModelOne;
     }
@@ -219,6 +233,14 @@ public class Batch {
         this.plantTwo = plantTwo == null ? null : plantTwo.trim();
     }
 
+    public Date getBatchTimeTwo() {
+        return batchTimeTwo;
+    }
+
+    public void setBatchTimeTwo(Date batchTimeTwo) {
+        this.batchTimeTwo = batchTimeTwo;
+    }
+
     public String getCultModelTwo() {
         return cultModelTwo;
     }
@@ -297,6 +319,14 @@ public class Batch {
 
     public void setPlantThree(String plantThree) {
         this.plantThree = plantThree == null ? null : plantThree.trim();
+    }
+
+    public Date getBatchTimeThree() {
+        return batchTimeThree;
+    }
+
+    public void setBatchTimeThree(Date batchTimeThree) {
+        this.batchTimeThree = batchTimeThree;
     }
 
     public String getCultModelThree() {
@@ -533,6 +563,7 @@ public class Batch {
         sb.append(", deviceId=").append(deviceId);
         sb.append(", plantOneType=").append(plantOneType);
         sb.append(", plantOne=").append(plantOne);
+        sb.append(", batchTimeOne=").append(batchTimeOne);
         sb.append(", cultModelOne=").append(cultModelOne);
         sb.append(", temperatureOne=").append(temperatureOne);
         sb.append(", humidityOne=").append(humidityOne);
@@ -543,6 +574,7 @@ public class Batch {
         sb.append(", lightOne=").append(lightOne);
         sb.append(", plantTwoType=").append(plantTwoType);
         sb.append(", plantTwo=").append(plantTwo);
+        sb.append(", batchTimeTwo=").append(batchTimeTwo);
         sb.append(", cultModelTwo=").append(cultModelTwo);
         sb.append(", temperatureTwo=").append(temperatureTwo);
         sb.append(", humidityTwo=").append(humidityTwo);
@@ -553,6 +585,7 @@ public class Batch {
         sb.append(", lightTwo=").append(lightTwo);
         sb.append(", plantThreeType=").append(plantThreeType);
         sb.append(", plantThree=").append(plantThree);
+        sb.append(", batchTimeThree=").append(batchTimeThree);
         sb.append(", cultModelThree=").append(cultModelThree);
         sb.append(", temperatureThree=").append(temperatureThree);
         sb.append(", humidityThree=").append(humidityThree);

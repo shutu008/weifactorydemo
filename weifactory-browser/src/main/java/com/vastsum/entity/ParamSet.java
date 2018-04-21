@@ -19,10 +19,6 @@ public class ParamSet {
 
     private String nightEndTime;
 
-    private Double dayTemperature;
-
-    private Double dayHumidity;
-
     private Integer dayWindLenghtTime;
 
     private Integer dayWindCycleTime;
@@ -63,10 +59,6 @@ public class ParamSet {
 
     private Integer dayFeedWaterCycle;
 
-    private Double nightTemperature;
-
-    private Double nightHumidity;
-
     private Integer nightWindLenghtTime;
 
     private Integer nightWindCycleTime;
@@ -104,6 +96,48 @@ public class ParamSet {
     private Integer nightFeedBgLength;
 
     private Integer nightFeedWaterLength;
+
+    private String batchNo1;
+
+    private String plantName1;
+
+    private String growthPattern1;
+
+    private String dayTemperature1;
+
+    private String nightTemperature1;
+
+    private String dayHumidity1;
+
+    private String nightHumidity1;
+
+    private String batchNo2;
+
+    private String plantName2;
+
+    private String growthPattern2;
+
+    private String dayTemperature2;
+
+    private String nightTemperature2;
+
+    private String dayHumidity2;
+
+    private String nightHumidity2;
+
+    private String batchNo3;
+
+    private String plantName3;
+
+    private String growthPattern3;
+
+    private String dayTemperature3;
+
+    private String nightTemperature3;
+
+    private String dayHumidity3;
+
+    private String nightHumidity3;
 
     private Integer nightFeedWaterCycle;
 
@@ -209,22 +243,6 @@ public class ParamSet {
 
     public void setNightEndTime(String nightEndTime) {
         this.nightEndTime = nightEndTime == null ? null : nightEndTime.trim();
-    }
-
-    public Double getDayTemperature() {
-        return dayTemperature;
-    }
-
-    public void setDayTemperature(Double dayTemperature) {
-        this.dayTemperature = dayTemperature;
-    }
-
-    public Double getDayHumidity() {
-        return dayHumidity;
-    }
-
-    public void setDayHumidity(Double dayHumidity) {
-        this.dayHumidity = dayHumidity;
     }
 
     public Integer getDayWindLenghtTime() {
@@ -387,22 +405,6 @@ public class ParamSet {
         this.dayFeedWaterCycle = dayFeedWaterCycle;
     }
 
-    public Double getNightTemperature() {
-        return nightTemperature;
-    }
-
-    public void setNightTemperature(Double nightTemperature) {
-        this.nightTemperature = nightTemperature;
-    }
-
-    public Double getNightHumidity() {
-        return nightHumidity;
-    }
-
-    public void setNightHumidity(Double nightHumidity) {
-        this.nightHumidity = nightHumidity;
-    }
-
     public Integer getNightWindLenghtTime() {
         return nightWindLenghtTime;
     }
@@ -553,6 +555,174 @@ public class ParamSet {
 
     public void setNightFeedWaterLength(Integer nightFeedWaterLength) {
         this.nightFeedWaterLength = nightFeedWaterLength;
+    }
+
+    public String getBatchNo1() {
+        return batchNo1;
+    }
+
+    public void setBatchNo1(String batchNo1) {
+        this.batchNo1 = batchNo1 == null ? null : batchNo1.trim();
+    }
+
+    public String getPlantName1() {
+        return plantName1;
+    }
+
+    public void setPlantName1(String plantName1) {
+        this.plantName1 = plantName1 == null ? null : plantName1.trim();
+    }
+
+    public String getGrowthPattern1() {
+        return growthPattern1;
+    }
+
+    public void setGrowthPattern1(String growthPattern1) {
+        this.growthPattern1 = growthPattern1 == null ? null : growthPattern1.trim();
+    }
+
+    public String getDayTemperature1() {
+        return dayTemperature1;
+    }
+
+    public void setDayTemperature1(String dayTemperature1) {
+        this.dayTemperature1 = dayTemperature1 == null ? null : dayTemperature1.trim();
+    }
+
+    public String getNightTemperature1() {
+        return nightTemperature1;
+    }
+
+    public void setNightTemperature1(String nightTemperature1) {
+        this.nightTemperature1 = nightTemperature1 == null ? null : nightTemperature1.trim();
+    }
+
+    public String getDayHumidity1() {
+        return dayHumidity1;
+    }
+
+    public void setDayHumidity1(String dayHumidity1) {
+        this.dayHumidity1 = dayHumidity1 == null ? null : dayHumidity1.trim();
+    }
+
+    public String getNightHumidity1() {
+        return nightHumidity1;
+    }
+
+    public void setNightHumidity1(String nightHumidity1) {
+        this.nightHumidity1 = nightHumidity1 == null ? null : nightHumidity1.trim();
+    }
+
+    public String getBatchNo2() {
+        return batchNo2;
+    }
+
+    public void setBatchNo2(String batchNo2) {
+        this.batchNo2 = batchNo2 == null ? null : batchNo2.trim();
+    }
+
+    public String getPlantName2() {
+        return plantName2;
+    }
+
+    public void setPlantName2(String plantName2) {
+        this.plantName2 = plantName2 == null ? null : plantName2.trim();
+    }
+
+    public String getGrowthPattern2() {
+        return growthPattern2;
+    }
+
+    public void setGrowthPattern2(String growthPattern2) {
+        this.growthPattern2 = growthPattern2 == null ? null : growthPattern2.trim();
+    }
+
+    public String getDayTemperature2() {
+        return dayTemperature2;
+    }
+
+    public void setDayTemperature2(String dayTemperature2) {
+        this.dayTemperature2 = dayTemperature2 == null ? null : dayTemperature2.trim();
+    }
+
+    public String getNightTemperature2() {
+        return nightTemperature2;
+    }
+
+    public void setNightTemperature2(String nightTemperature2) {
+        this.nightTemperature2 = nightTemperature2 == null ? null : nightTemperature2.trim();
+    }
+
+    public String getDayHumidity2() {
+        return dayHumidity2;
+    }
+
+    public void setDayHumidity2(String dayHumidity2) {
+        this.dayHumidity2 = dayHumidity2 == null ? null : dayHumidity2.trim();
+    }
+
+    public String getNightHumidity2() {
+        return nightHumidity2;
+    }
+
+    public void setNightHumidity2(String nightHumidity2) {
+        this.nightHumidity2 = nightHumidity2 == null ? null : nightHumidity2.trim();
+    }
+
+    public String getBatchNo3() {
+        return batchNo3;
+    }
+
+    public void setBatchNo3(String batchNo3) {
+        this.batchNo3 = batchNo3 == null ? null : batchNo3.trim();
+    }
+
+    public String getPlantName3() {
+        return plantName3;
+    }
+
+    public void setPlantName3(String plantName3) {
+        this.plantName3 = plantName3 == null ? null : plantName3.trim();
+    }
+
+    public String getGrowthPattern3() {
+        return growthPattern3;
+    }
+
+    public void setGrowthPattern3(String growthPattern3) {
+        this.growthPattern3 = growthPattern3 == null ? null : growthPattern3.trim();
+    }
+
+    public String getDayTemperature3() {
+        return dayTemperature3;
+    }
+
+    public void setDayTemperature3(String dayTemperature3) {
+        this.dayTemperature3 = dayTemperature3 == null ? null : dayTemperature3.trim();
+    }
+
+    public String getNightTemperature3() {
+        return nightTemperature3;
+    }
+
+    public void setNightTemperature3(String nightTemperature3) {
+        this.nightTemperature3 = nightTemperature3 == null ? null : nightTemperature3.trim();
+    }
+
+    public String getDayHumidity3() {
+        return dayHumidity3;
+    }
+
+    public void setDayHumidity3(String dayHumidity3) {
+        this.dayHumidity3 = dayHumidity3 == null ? null : dayHumidity3.trim();
+    }
+
+    public String getNightHumidity3() {
+        return nightHumidity3;
+    }
+
+    public void setNightHumidity3(String nightHumidity3) {
+        this.nightHumidity3 = nightHumidity3 == null ? null : nightHumidity3.trim();
     }
 
     public Integer getNightFeedWaterCycle() {
@@ -737,8 +907,6 @@ public class ParamSet {
         sb.append(", dayEndTime=").append(dayEndTime);
         sb.append(", nightStartTime=").append(nightStartTime);
         sb.append(", nightEndTime=").append(nightEndTime);
-        sb.append(", dayTemperature=").append(dayTemperature);
-        sb.append(", dayHumidity=").append(dayHumidity);
         sb.append(", dayWindLenghtTime=").append(dayWindLenghtTime);
         sb.append(", dayWindCycleTime=").append(dayWindCycleTime);
         sb.append(", dayBgLenght1=").append(dayBgLenght1);
@@ -759,8 +927,6 @@ public class ParamSet {
         sb.append(", dayFeedBgLength=").append(dayFeedBgLength);
         sb.append(", dayFeedWaterLength=").append(dayFeedWaterLength);
         sb.append(", dayFeedWaterCycle=").append(dayFeedWaterCycle);
-        sb.append(", nightTemperature=").append(nightTemperature);
-        sb.append(", nightHumidity=").append(nightHumidity);
         sb.append(", nightWindLenghtTime=").append(nightWindLenghtTime);
         sb.append(", nightWindCycleTime=").append(nightWindCycleTime);
         sb.append(", nightBgLenght1=").append(nightBgLenght1);
@@ -780,6 +946,27 @@ public class ParamSet {
         sb.append(", nightFeedBgTime=").append(nightFeedBgTime);
         sb.append(", nightFeedBgLength=").append(nightFeedBgLength);
         sb.append(", nightFeedWaterLength=").append(nightFeedWaterLength);
+        sb.append(", batchNo1=").append(batchNo1);
+        sb.append(", plantName1=").append(plantName1);
+        sb.append(", growthPattern1=").append(growthPattern1);
+        sb.append(", dayTemperature1=").append(dayTemperature1);
+        sb.append(", nightTemperature1=").append(nightTemperature1);
+        sb.append(", dayHumidity1=").append(dayHumidity1);
+        sb.append(", nightHumidity1=").append(nightHumidity1);
+        sb.append(", batchNo2=").append(batchNo2);
+        sb.append(", plantName2=").append(plantName2);
+        sb.append(", growthPattern2=").append(growthPattern2);
+        sb.append(", dayTemperature2=").append(dayTemperature2);
+        sb.append(", nightTemperature2=").append(nightTemperature2);
+        sb.append(", dayHumidity2=").append(dayHumidity2);
+        sb.append(", nightHumidity2=").append(nightHumidity2);
+        sb.append(", batchNo3=").append(batchNo3);
+        sb.append(", plantName3=").append(plantName3);
+        sb.append(", growthPattern3=").append(growthPattern3);
+        sb.append(", dayTemperature3=").append(dayTemperature3);
+        sb.append(", nightTemperature3=").append(nightTemperature3);
+        sb.append(", dayHumidity3=").append(dayHumidity3);
+        sb.append(", nightHumidity3=").append(nightHumidity3);
         sb.append(", nightFeedWaterCycle=").append(nightFeedWaterCycle);
         sb.append(", yyBeforeTime=").append(yyBeforeTime);
         sb.append(", yyNextTime=").append(yyNextTime);
