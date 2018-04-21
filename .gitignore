@@ -58,6 +58,7 @@ weifactory-images/.classpath
 weifactory-images/.factorypath
 weifactory-images/.project
 weifactory-images/.springBeans
+weifactory-images/log
 
 weifactory-communication/target
 weifactory-communication/.apt_generated
