@@ -42,6 +42,7 @@ public class ScheduleJobController {
 	@PostMapping("/list")
 	@ApiOperation("获取定时任务列表@20180420")
 	@ApiImplicitParams({
+		@ApiImplicitParam(paramType = "query",name="scheduleName" , value="任务名称", required = false),
 		@ApiImplicitParam(paramType = "query",name="beanName" , value="bean名称", required = false),
 		@ApiImplicitParam(paramType = "query",name="methodName" , value="方法名称", required = false),
 		@ApiImplicitParam(paramType = "query",name="status" , value="状态", required = false),
@@ -70,6 +71,7 @@ public class ScheduleJobController {
 	@ApiOperation("添加或更新一个定时任务,并立即执行@20180420")
 	@ApiImplicitParams({
 		@ApiImplicitParam(paramType = "query",name="jobId" , value="任务id", required = false),
+		@ApiImplicitParam(paramType = "query",name="scheduleName" , value="任务名称", required = true),
 		@ApiImplicitParam(paramType = "query",name="beanName" , value="bean名称", required = true),
 		@ApiImplicitParam(paramType = "query",name="methodName" , value="方法名称", required = true),
 		@ApiImplicitParam(paramType = "query",name="cronExpression" , value="cron表达式", required = true),
@@ -79,6 +81,9 @@ public class ScheduleJobController {
 	public ResponseEntity<ResultModel> addOrUpdate(@ModelAttribute ScheduleJobEntity scheduleJobEntity){
 		if (scheduleJobEntity == null) {
 			return R.error("参数不能为空");
+		}
+		if (StringUtils.isBlank(scheduleJobEntity.getScheduleName())) {
+			return R.error("任务名称不能为空");
 		}
 		if (StringUtils.isBlank(scheduleJobEntity.getBeanName())) {
 			return R.error("beanName不能为空");

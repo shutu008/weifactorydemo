@@ -52,6 +52,9 @@ public class ScheduleJobLogServiceImpl implements ScheduleJobLogService {
 			if (StringUtils.isNotBlank(scheduleJobLog.getStatus())) {
 				criteria.andStatusEqualTo(scheduleJobLog.getStatus());
 			}
+			if (StringUtils.isNotBlank(scheduleJobLog.getScheduleName())) {
+				criteria.andScheduleNameLike(scheduleJobLog.getScheduleName());
+			}
 		}
 		
 		//查询条件

@@ -704,6 +704,76 @@ public class ScheduleJobEntityExample {
             addCriterion("bean_name not between", value1, value2, "beanName");
             return (Criteria) this;
         }
+
+        public Criteria andScheduleNameIsNull() {
+            addCriterion("schedule_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameIsNotNull() {
+            addCriterion("schedule_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameEqualTo(String value) {
+            addCriterion("schedule_name =", value, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameNotEqualTo(String value) {
+            addCriterion("schedule_name <>", value, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameGreaterThan(String value) {
+            addCriterion("schedule_name >", value, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameGreaterThanOrEqualTo(String value) {
+            addCriterion("schedule_name >=", value, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameLessThan(String value) {
+            addCriterion("schedule_name <", value, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameLessThanOrEqualTo(String value) {
+            addCriterion("schedule_name <=", value, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameLike(String value) {
+            addCriterion("schedule_name like", value, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameNotLike(String value) {
+            addCriterion("schedule_name not like", value, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameIn(List<String> values) {
+            addCriterion("schedule_name in", values, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameNotIn(List<String> values) {
+            addCriterion("schedule_name not in", values, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameBetween(String value1, String value2) {
+            addCriterion("schedule_name between", value1, value2, "scheduleName");
+            return (Criteria) this;
+        }
+
+        public Criteria andScheduleNameNotBetween(String value1, String value2) {
+            addCriterion("schedule_name not between", value1, value2, "scheduleName");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

@@ -37,13 +37,13 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 	@Override
 	public void updateBatch(List<ScheduleJobEntity> list) {
 		for (ScheduleJobEntity scheduleJobEntity : list) {
-			scheduleJobEntityMapper.updateByPrimaryKey(scheduleJobEntity);
+			scheduleJobEntityMapper.updateByPrimaryKeySelective(scheduleJobEntity);
 		}
 	}
 
 	@Override
 	public  ScheduleJobEntity save(ScheduleJobEntity scheduleJobEntity) {
-		int i = scheduleJobEntityMapper.insert(scheduleJobEntity);
+		int i = scheduleJobEntityMapper.insertSelective(scheduleJobEntity);
 		return scheduleJobEntity;
 	}
 
@@ -51,6 +51,7 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 	@Override
 	public void deleteBatch(Long[] jobIds) {
 		for (Long id : jobIds) {
+			ScheduleUtils.deleteScheduleJob(scheduler, id);
 			scheduleJobEntityMapper.deleteByPrimaryKey(id);
 		}
 		
@@ -102,6 +103,9 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 			}
 			if (StringUtils.isNotBlank(scheduleJobEntity.getStatus())) {
 				criteria.andStatusEqualTo(scheduleJobEntity.getStatus());
+			}
+			if (StringUtils.isNotBlank(scheduleJobEntity.getScheduleName())) {
+				criteria.andScheduleNameLike(scheduleJobEntity.getScheduleName());
 			}
 		}
 		//查询条件

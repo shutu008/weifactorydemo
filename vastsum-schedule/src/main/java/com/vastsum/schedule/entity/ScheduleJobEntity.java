@@ -7,9 +7,11 @@ public class ScheduleJobEntity implements Serializable{
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 5268818877412920573L;
+	private static final long serialVersionUID = 2737040634052797496L;
+
 	public static final String JOB_PARAM_KEY = "VASTSUM";
-    private Long jobId;
+
+	private Long jobId;
 
     private String cronExpression;
 
@@ -26,6 +28,8 @@ public class ScheduleJobEntity implements Serializable{
     private String status;
 
     private String beanName;
+
+    private String scheduleName;
 
     public Long getJobId() {
         return jobId;
@@ -99,6 +103,14 @@ public class ScheduleJobEntity implements Serializable{
         this.beanName = beanName == null ? null : beanName.trim();
     }
 
+    public String getScheduleName() {
+        return scheduleName;
+    }
+
+    public void setScheduleName(String scheduleName) {
+        this.scheduleName = scheduleName == null ? null : scheduleName.trim();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -114,6 +126,7 @@ public class ScheduleJobEntity implements Serializable{
         sb.append(", remark=").append(remark);
         sb.append(", status=").append(status);
         sb.append(", beanName=").append(beanName);
+        sb.append(", scheduleName=").append(scheduleName);
         sb.append("]");
         return sb.toString();
     }

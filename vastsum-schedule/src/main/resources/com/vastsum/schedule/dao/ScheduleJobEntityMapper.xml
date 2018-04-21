@@ -11,6 +11,7 @@
     <result column="remark" jdbcType="VARCHAR" property="remark" />
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="bean_name" jdbcType="VARCHAR" property="beanName" />
+    <result column="schedule_name" jdbcType="VARCHAR" property="scheduleName" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -72,7 +73,7 @@
   </sql>
   <sql id="Base_Column_List">
     job_id, cron_expression, gmt_create, gmt_modified, method_name, params, remark, status, 
-    bean_name
+    bean_name, schedule_name
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.schedule.entity.ScheduleJobEntityExample" resultMap="BaseResultMap">
     select
@@ -110,10 +111,12 @@
     </selectKey>
     insert into schedule_job_entity (cron_expression, gmt_create, gmt_modified, 
       method_name, params, remark, 
-      status, bean_name)
+      status, bean_name, schedule_name
+      )
     values (#{cronExpression,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, 
       #{methodName,jdbcType=VARCHAR}, #{params,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, 
-      #{status,jdbcType=VARCHAR}, #{beanName,jdbcType=VARCHAR})
+      #{status,jdbcType=VARCHAR}, #{beanName,jdbcType=VARCHAR}, #{scheduleName,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.schedule.entity.ScheduleJobEntity">
     <selectKey keyProperty="jobId" order="AFTER" resultType="java.lang.Long">
@@ -145,6 +148,9 @@
       <if test="beanName != null">
         bean_name,
       </if>
+      <if test="scheduleName != null">
+        schedule_name,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="cronExpression != null">
@@ -170,6 +176,9 @@
       </if>
       <if test="beanName != null">
         #{beanName,jdbcType=VARCHAR},
+      </if>
+      <if test="scheduleName != null">
+        #{scheduleName,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -209,6 +218,9 @@
       <if test="record.beanName != null">
         bean_name = #{record.beanName,jdbcType=VARCHAR},
       </if>
+      <if test="record.scheduleName != null">
+        schedule_name = #{record.scheduleName,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -224,7 +236,8 @@
       params = #{record.params,jdbcType=VARCHAR},
       remark = #{record.remark,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=VARCHAR},
-      bean_name = #{record.beanName,jdbcType=VARCHAR}
+      bean_name = #{record.beanName,jdbcType=VARCHAR},
+      schedule_name = #{record.scheduleName,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -256,6 +269,9 @@
       <if test="beanName != null">
         bean_name = #{beanName,jdbcType=VARCHAR},
       </if>
+      <if test="scheduleName != null">
+        schedule_name = #{scheduleName,jdbcType=VARCHAR},
+      </if>
     </set>
     where job_id = #{jobId,jdbcType=BIGINT}
   </update>
@@ -268,7 +284,8 @@
       params = #{params,jdbcType=VARCHAR},
       remark = #{remark,jdbcType=VARCHAR},
       status = #{status,jdbcType=VARCHAR},
-      bean_name = #{beanName,jdbcType=VARCHAR}
+      bean_name = #{beanName,jdbcType=VARCHAR},
+      schedule_name = #{scheduleName,jdbcType=VARCHAR}
     where job_id = #{jobId,jdbcType=BIGINT}
   </update>
 </mapper>

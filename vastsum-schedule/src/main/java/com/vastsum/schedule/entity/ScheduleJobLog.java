@@ -1,15 +1,9 @@
 package com.vastsum.schedule.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class ScheduleJobLog implements Serializable {
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = -3544125469293253370L;
-
-	private Long logId;
+public class ScheduleJobLog {
+    private Long logId;
 
     private String errorMessage;
 
@@ -26,6 +20,8 @@ public class ScheduleJobLog implements Serializable {
     private Integer times;
 
     private String beanName;
+
+    private String scheduleName;
 
     public Long getLogId() {
         return logId;
@@ -99,6 +95,14 @@ public class ScheduleJobLog implements Serializable {
         this.beanName = beanName == null ? null : beanName.trim();
     }
 
+    public String getScheduleName() {
+        return scheduleName;
+    }
+
+    public void setScheduleName(String scheduleName) {
+        this.scheduleName = scheduleName == null ? null : scheduleName.trim();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -114,6 +118,7 @@ public class ScheduleJobLog implements Serializable {
         sb.append(", status=").append(status);
         sb.append(", times=").append(times);
         sb.append(", beanName=").append(beanName);
+        sb.append(", scheduleName=").append(scheduleName);
         sb.append("]");
         return sb.toString();
     }

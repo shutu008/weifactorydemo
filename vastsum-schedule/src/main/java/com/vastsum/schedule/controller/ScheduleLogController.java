@@ -29,11 +29,12 @@ public class ScheduleLogController {
 	@PostMapping("/list")
 	@ApiOperation("获取定时任务日志列表@20180420")
 	@ApiImplicitParams({
+		@ApiImplicitParam(paramType = "query",name="scheduleName" , value="任务名称", required = false),
 		@ApiImplicitParam(paramType = "query",name="beanName" , value="bean名称", required = false),
 		@ApiImplicitParam(paramType = "query",name="methodName" , value="方法名称", required = false),
 		@ApiImplicitParam(paramType = "query",name="status" , value="状态", required = false),
-		@ApiImplicitParam(paramType = "query",name="page" , value="页数", required = false),
-		@ApiImplicitParam(paramType = "query",name="pageSize" , value="每页条数", required = false)
+		@ApiImplicitParam(paramType = "query",name="page" , value="页数", required = true),
+		@ApiImplicitParam(paramType = "query",name="pageSize" , value="每页条数", required = true)
 	})
 	public ResponseEntity<ResultModel> list(@ModelAttribute ScheduleJobLog scheduleJobLog
 				,Integer page, Integer pageSize){

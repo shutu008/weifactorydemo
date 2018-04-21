@@ -6,7 +6,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.StringUtils;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -53,7 +52,10 @@ public class ScheduleJob extends QuartzJobBean {
 		}
     	if (map.get("status") != null) {
     		scheduleJob.setStatus(map.get("status").toString());
-		}    
+		}
+    	if (map.get("scheduleName") != null) {
+    		scheduleJob.setStatus(map.get("scheduleName").toString());
+		} 
 
         //获取spring bean
         ScheduleJobLogService scheduleJobLogService = (ScheduleJobLogService) SpringContextUtils.getBean("scheduleJobLogService");
