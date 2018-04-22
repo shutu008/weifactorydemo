@@ -1,5 +1,6 @@
 package com.vastsum.pojo;
 
+import com.vastsum.entity.CommunicationMessage;
 import com.vastsum.entity.DeviceSn;
 import com.vastsum.server.DeviceService;
 import org.slf4j.Logger;
@@ -20,11 +21,10 @@ public class NewConnection {
     @Autowired
     private DeviceService deviceService;
 
-    public Integer connStatus(String data){
-        //如果如果设备第一次连接服务器获取开机，则收到的只有设备序列号
-        if (data.indexOf("#") == -1){
-            //没有包含#,说明第一次连接
-            String sn = data;
+    public Integer connStatus(CommunicationMessage cm){
+        // 判定是否为第一次连接
+        if (cm.isFirstConnect()){
+            String sn = cm.getSn();
             DeviceSn deviceSn = deviceService.getBySn(sn);
             if (deviceSn == null){
                 //设备绑定失败，数据库中无此设备
@@ -32,7 +32,7 @@ public class NewConnection {
             }
             int status = deviceSn.getStatus();
             if (status == 0){
-                LOGGER.info("序列号为{}的设备首次激活", data);
+                LOGGER.info("序列号为{}的设备首次激活", sn);
                 //将设备进行激活
                 deviceSn.setStatus(1);
                 int i = deviceService.updateDeviceSnStatus(deviceSn);

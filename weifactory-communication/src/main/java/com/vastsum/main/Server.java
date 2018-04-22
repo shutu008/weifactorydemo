@@ -70,8 +70,8 @@ public class Server {
         workerGroup.shutdownGracefully();
     }
 
-    private static ServerHandler getServerHandler(){
-        ServerHandler serverHandler = (ServerHandler) SpringConfigUtil.getBean("serverHandler");
+    private static NewServerHandler getServerHandler(){
+    	NewServerHandler serverHandler = (NewServerHandler) SpringConfigUtil.getBean("serverHandler");
         LOGGER.info("获取的springbean:"+serverHandler.getClass().getName());
         return serverHandler;
     }

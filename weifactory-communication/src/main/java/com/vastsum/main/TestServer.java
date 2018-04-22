@@ -49,7 +49,7 @@ public class TestServer {
                 socketChannel.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,buf));
                 //设置字符串形式的解码
                 socketChannel.pipeline().addLast(new StringDecoder());
-                socketChannel.pipeline().addLast((ServerHandler)SpringConfigUtil.getBean("serverHandler"));
+                socketChannel.pipeline().addLast((NewServerHandler)SpringConfigUtil.getBean("serverHandler"));
             }
         });
 

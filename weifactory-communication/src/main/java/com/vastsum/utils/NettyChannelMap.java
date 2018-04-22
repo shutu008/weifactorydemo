@@ -15,9 +15,20 @@ import java.util.concurrent.ConcurrentHashMap;
 public class NettyChannelMap implements Serializable {
     private static final long serialVersionUID = 5945996498161834927L;
     private static Map<String,SocketChannel> map=new ConcurrentHashMap<String, SocketChannel>();
-
+    private static Map<SocketChannel, String> mapReverse=new ConcurrentHashMap<SocketChannel, String>();
+    
+    /**
+     * 添加sn对应的channel
+     * @param sn
+     * @param socketChannel
+     */
     public static void add(String sn,SocketChannel socketChannel){
-        map.put(sn,socketChannel);
+		synchronized (map) {
+			synchronized(mapReverse) {
+				map.put(sn,socketChannel);
+				mapReverse.put(socketChannel, sn);
+			}
+		}
     }
 
     public static Channel get(String sn){
@@ -26,23 +37,17 @@ public class NettyChannelMap implements Serializable {
 
     //根据value获取key
     public static String getSn(Channel channel){
-        Set<Map.Entry<String, SocketChannel>> entries = map.entrySet();
-        String sn = "";
-       for (Map.Entry<String, SocketChannel> e: entries){
-           if (e.getValue().equals(channel)){
-               sn = e.getKey();
-               break;
-           }
-       }
-       return sn;
+    	return mapReverse.get(channel);
     }
 
     public static void remove(SocketChannel socketChannel){
-        for (Map.Entry entry:map.entrySet()){
-            if (entry.getValue()==socketChannel){
-                map.remove(entry.getKey());
-            }
-        }
+    	synchronized (mapReverse) {
+			synchronized (map) {
+				String sn = mapReverse.get(socketChannel);
+				map.remove(sn);
+				mapReverse.remove(socketChannel);
+			}
+		}
     }
 
     public static Set<String> listSn(){

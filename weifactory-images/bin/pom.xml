@@ -2,22 +2,39 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	     <modelVersion>4.0.0</modelVersion>
-		  <parent>
-		    <groupId>com.vastsum</groupId>
-		    <artifactId>weifactory</artifactId>
-		    <version>1.0.0-SNAPSHOT</version>
-		  </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>weifactory-communication</artifactId>
-    <packaging>jar</packaging>
+  <parent>
+    <groupId>com.vastsum</groupId>
+    <artifactId>weifactory</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>weifactory-images</artifactId>
+  <name>weifactory-images</name>
+    <properties>
+        <!-- log4j日志文件管理包版本 -->
+        <slf4j.version>1.7.24</slf4j.version>
+        <log4j.version>1.2.17</log4j.version>
+        <!-- junit版本号 -->
+        <junit.version>4.12</junit.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
+            <version>4.1.6.Final</version>
         </dependency>
-        
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
@@ -39,6 +56,7 @@
             <artifactId>spring-jdbc</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
@@ -54,14 +72,6 @@
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
         </dependency>
-        
-        <!-- https://mvnrepository.com/artifact/com.google.collections/google-collections -->
-		<dependency>
-		    <groupId>com.google.collections</groupId>
-		    <artifactId>google-collections</artifactId>
-		    <version>1.0</version>
-		</dependency>
-        
 
         <!--任务调度-->
         <dependency>
@@ -79,45 +89,28 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
         </dependency>
-        
-        <dependency>
-        	<groupId>com.vastsum</groupId>
-        	<artifactId>vastsum-core</artifactId>
-        	<version>${vastsum.version}</version>
-        </dependency>
     </dependencies>
-    <build>
-        <!--<finalName>communication</finalName>-->
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-			      <source>1.8</source>
-			      <target>1.8</target>
-			   	</configuration>
-                <version>1.3.3.RELEASE</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <!--非必填项，即在生成的jar包名称后面追加该分类名称-->
-                           <!-- <classifier>boot</classifier>-->
-                            <mainClass>com.vastsum.main.Server</mainClass>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            
+     <build>
+         <!--<finalName>communication</finalName>-->
+         <plugins>
              <plugin>
-			   <artifactId>maven-compiler-plugin</artifactId>
-			   <configuration>
-			      <source>1.8</source>
-			      <target>1.8</target>
-			   </configuration>
-			</plugin>
-        </plugins>
-    </build>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+                 <version>1.2.5.RELEASE</version>
+                 <executions>
+                     <execution>
+                         <goals>
+                             <goal>repackage</goal>
+                         </goals>
+                         <configuration>
+                             <!--非必填项，即在生成的jar包名称后面追加该分类名称-->
+                             <!-- <classifier>boot</classifier>-->
+                             <mainClass>com.vastsum.main.ImgServer</mainClass>
+                         </configuration>
+                     </execution>
+                 </executions>
+             </plugin>
+         </plugins>
+     </build>
+
 </project>

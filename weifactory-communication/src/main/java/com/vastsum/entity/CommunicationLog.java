@@ -12,7 +12,6 @@ public class CommunicationLog {
     private Long clientConnectionId;
     //设备序列号
     private String sn;
-
     //服务器外网地址
     private String serverNetAddress;
     //客户端ip
