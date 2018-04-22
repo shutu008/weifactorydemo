@@ -100,7 +100,7 @@
                         <configuration>
                             <!--非必填项，即在生成的jar包名称后面追加该分类名称-->
                            <!-- <classifier>boot</classifier>-->
-                            <mainClass>com.vastsum.main.Server</mainClass>
+                            <mainClass>com.vastsum.main.TestServer</mainClass>
                         </configuration>
                     </execution>
                 </executions>
