@@ -5,9 +5,6 @@ import static com.vastsum.utils.OrderUtil.getOutTradeOrder;
 import static com.vastsum.utils.OrderUtil.getTotalFee;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.StringUtils;
@@ -23,13 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.github.pagehelper.PageInfo;
 import com.vastsum.controller.system.BaseController;
-import com.vastsum.entity.Batch;
 import com.vastsum.entity.BizOrder;
+import com.vastsum.entity.Device;
 import com.vastsum.entity.Role;
 import com.vastsum.entity.User;
 import com.vastsum.entity.vo.BizOrderVO;
 import com.vastsum.entity.vo.OrderVO;
-import com.vastsum.enums.DepositEnum;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.exception.OrderException;
 import com.vastsum.model.ResultModel;
@@ -59,8 +55,6 @@ public class OrderController extends BaseController {
     @Autowired
     private UserService userService;
     @Autowired
-    private BatchService batchService;
-    @Autowired
     private OrderService orderService;
     @Autowired
     private DeviceService deviceService;
@@ -68,58 +62,51 @@ public class OrderController extends BaseController {
     private RoleService roleService;
 
     @GetMapping(value = "/device/{deviceId}")
-    @ApiOperation(value = "根据设备id获取托管信息视图@20170115")
+    @ApiOperation(value = "根据设备id获取托管信息视图(点击申请专家托管)@20180422")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "deviceId",value = "设备id-@5",required = true)
     })
     public ResponseEntity<ResultModel> getOrderVO(@PathVariable Integer deviceId){
-        //获取专家
-        if (deviceId == null || "".equals(deviceId)){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.DEVICE_ID_NULL));
+        if (deviceId == null){
+            return V.error(getText("weifactory.device.deviceId.notNull"));
         }
-        List<User> experts = userService.listExperts();
-        //封装托管方式
-        Map<String, String> deposit = new HashMap<>();
-        deposit.put(""+DepositEnum.DEPOSIT_ALL.getValue(), DepositEnum.DEPOSIT_ALL.getName());
-        deposit.put(""+DepositEnum.DEPOSIT_SELF.getValue(), DepositEnum.DEPOSIT_SELF.getName());
-
-        //根据设备id获取最新的批次信息
-        Batch batch = batchService.selectLastBatchByDeviceId(deviceId);
-        //分装返回的视图对象
+        
+        Device deviceC = deviceService.getById(deviceId);
+        if (deviceC != null) {
+			if (!"0".equals(deviceC.getTruestStatus())) {
+				 //支付成功之后，不能再支付
+	        	logger.info("设备已托管，不能再次托管,托管状态："+deviceC.getTruestStatus());
+	            return V.error("本设备已经被托管");
+			}
+		}
+        
         OrderVO orderVO = new OrderVO();
-        orderVO.setBatchId(Integer.parseInt(batch.getBatchId()+""));
-        orderVO.setPlantOne(batch.getPlantOne());
-        orderVO.setPlantTwo(batch.getPlantTwo());
-        orderVO.setPlantThree(batch.getPlantThree());
-        orderVO.setCost(0.01);
-        orderVO.setDeposit(deposit);      
-        orderVO.setExports(experts);
-        orderVO.setSn(deviceService.getSnByDeviceId(batch.getDeviceId()));
-        return ResponseEntity.ok(ResultModel.ok(orderVO));
+        Device device = deviceService.getById(deviceId);
+        if (device == null) {
+			return V.error(getText("weifactory.device.notFound"));
+		}
+        orderVO.setSn(device.getSn());
+        orderVO.setDeviceType(device.getDeviceType());
+        return V.ok(orderVO);
     }
 
     //根据相关参数生成订单信息
     @PostMapping(value = "/pay")
     @ApiOperation(value="根据相关参数生成订单信息@20180409")//{sn}/{batchId}/{deposit}/{exportId}
     @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "query",name = "sn", value = "设备序列号", required = true, dataType = "string"),
-            @ApiImplicitParam(paramType = "query",name = "batchId", value = "批次id", required = true, dataType = "string"),
+            @ApiImplicitParam(paramType = "query",name = "deviceId", value = "设备id", required = true),
             @ApiImplicitParam(paramType = "query",name = "deposit",value = "托管方式",required = true),
             @ApiImplicitParam(paramType = "query",name = "exportId",value = "专家id",required = true),
             @ApiImplicitParam(paramType = "query",name = "startTime",value = "托管开始时间",required = false),
             @ApiImplicitParam(paramType = "query",name = "endTime",value = "托管结束时间",required = false)
     })
-    public ResponseEntity<ResultModel> getOrder(String sn, 
-    		Long batchId, 
+    public ResponseEntity<ResultModel> getOrder(Integer deviceId, 
     		String deposit, 
     		Integer exportId,
     		Date startTime,
     		Date endTime) throws OrderException{
-        if (batchId == null){
-            return  ResponseEntity.ok(ResultModel.error(ResultStatus.BATCH_ID_NULL));
-        }
-        if (StringUtils.isBlank(sn)) {
-			return  ResponseEntity.ok(ResultModel.error(ResultStatus.DEVICE_SN_NULL));
+        if (deviceId == null) {
+        	return V.error(getText("weifactory.device.deviceId.notNull"));
 		}
         if (StringUtils.isBlank(deposit)) {
         	return  ResponseEntity.ok(ResultModel.error(ResultStatus.ORDER_DEPOSIT_NOT_NULL));
@@ -128,22 +115,25 @@ public class OrderController extends BaseController {
         	return  ResponseEntity.ok(ResultModel.error(ResultStatus.ORDER_EXPORTID_NOT_NUL));
 		}
         
-        boolean b = orderService.hasBizOrderBybatchId(batchId);
-        if (b){
-            //支付成功之后，不能再支付
-        	logger.info("已有支付成功的订单，设备已托管，不能再次托管");
-            return V.error("本设备已经被托管，请不要再提交订单！");
-        }
-        Batch batch = batchService.selectBatchBybatchId(batchId);
-        if (batch == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.BATCH_NULL));
-        }
+        /**
+         * 0.查询是否已经被托管
+         * 1.保存订单状态（订单表和设备表）
+         * 2.计算价格
+         * 3.保存订单
+         */
+        
+      // boolean b = orderService.hasBizOrderByDeviceId(deviceId);
+        Device deviceC = deviceService.getById(deviceId);
+        if (deviceC != null) {
+			if (!"0".equals(deviceC.getTruestStatus())) {
+				 //支付成功之后，不能再支付
+	        	logger.info("设备已托管，不能再次托管,托管状态："+deviceC.getTruestStatus());
+	            return V.error("本设备已经被托管");
+			}
+		}
+        
         //生成订单
         BizOrder bizOrder = new BizOrder();
-        bizOrder.setPlantOne(batch.getPlantOne());
-        bizOrder.setPlantThree(batch.getPlantThree());
-        bizOrder.setPlantTwo(batch.getPlantTwo());
-        bizOrder.setBatchId(Integer.parseInt(batchId+""));
         bizOrder.setDeposit(deposit);
         bizOrder.setExpertId(exportId);
         bizOrder.setOrderBody(getOrderBody());
@@ -152,20 +142,14 @@ public class OrderController extends BaseController {
         bizOrder.setOrderPrice(getTotalFee(deposit, startTime, endTime));
         bizOrder.setOrderStart(new Date());
         bizOrder.setOrderState(new Byte("1"));
-        bizOrder.setSn(sn);
-        Integer saveBizOrder = orderService.saveBizOrder(bizOrder);
-        //更改批次的订单状态标识
-        Batch batch1 = new Batch();
-        batch1.setStatus("1");
-        batch1.setBatchId(batchId);
-        int i = batchService.updateBatch(batch1);
-        if (i == 0){
-            //更改批次数据库中订单状态出错
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
-        }
-        if (saveBizOrder == 0){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.ORDER_ERROR));
-        }
+        //获取设备序列号
+        Device device = deviceService.getById(deviceId);
+        bizOrder.setSn(device.getSn());
+        orderService.saveBizOrder(bizOrder);
+        //更改设备的订单状态标识
+        device.setOrderStatus("1");
+        device.setGmtModified(new Date());
+        deviceService.update(device);
         //获取保存好的订单
         BizOrderVO bizOrderVO = new BizOrderVO();
         try {
@@ -183,7 +167,7 @@ public class OrderController extends BaseController {
             String name = user.getUserName();
             bizOrderVO.setExpertName(name);
         }
-        return ResponseEntity.ok(ResultModel.ok(bizOrderVO));
+        return V.error("e");
     }
 
 

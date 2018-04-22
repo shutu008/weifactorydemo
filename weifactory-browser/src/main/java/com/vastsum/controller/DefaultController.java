@@ -1,11 +1,14 @@
 package com.vastsum.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.vastsum.controller.system.BaseController;
+import com.vastsum.core.model.R;
+import com.vastsum.core.model.ResultModel;
 import com.vastsum.entity.User;
 
 import io.swagger.annotations.Api;
@@ -17,7 +20,7 @@ import springfox.documentation.annotations.ApiIgnore;
  */
 @Controller
 @ApiIgnore
-@Api(value = "default",tags = {"后台路由"})
+@Api(value = "default",tags = {"后台路由默认测试入口"})
 public class DefaultController extends BaseController {
 
     //注册页面
@@ -43,6 +46,13 @@ public class DefaultController extends BaseController {
         User user = new User();
         user.setUserName(callback);
         return user;
+    }
+    
+    //国际化测试
+    @GetMapping(value = "/message/test")
+    @ResponseBody
+    public ResponseEntity<ResultModel> message(String callback){
+        return R.error(name(callback));
     }
 
 

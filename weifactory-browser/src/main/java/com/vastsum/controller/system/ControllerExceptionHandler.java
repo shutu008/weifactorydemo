@@ -1,11 +1,11 @@
 package com.vastsum.controller.system;
 
-import javax.servlet.http.HttpServletRequest;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import com.vastsum.controller.ValidationAspectController;
 import com.vastsum.exception.OrderException;
 import com.vastsum.model.ResultModel;
 
@@ -16,14 +16,7 @@ import com.vastsum.model.ResultModel;
  *
  */
 @RestControllerAdvice
-public class ControllerExceptionHandler {
-	
-	
-	//全局异常处理器
-	@ExceptionHandler(Exception.class)
-	public ResponseEntity<ResultModel> globalException(HttpServletRequest request, Exception ex){
-		return ResponseEntity.ok(ResultModel.error("服务器异常，请联系管理员"));
-	}
+public class ControllerExceptionHandler extends ValidationAspectController {
 	
 	//空指针异常
 	@ExceptionHandler(NullPointerException.class)

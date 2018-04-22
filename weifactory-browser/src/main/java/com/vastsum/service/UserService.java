@@ -19,6 +19,13 @@ public interface UserService {
      */
     @Deprecated
     public UserInfo findById(Integer id);
+    
+    /**
+     * 根据用户ID获取用户信息
+     * @param userId
+     * @return User
+     */
+    User getById(Integer userId);
 
     /**
      * 根据用户id查询用户基本信息

@@ -2,8 +2,10 @@ package com.vastsum.controller;
 
 import java.util.HashMap;
 
-import javax.annotation.Resource;
+import javax.validation.Valid;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +15,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.alibaba.dubbo.config.annotation.Reference;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.HandControl;
+import com.vastsum.entity.User;
+import com.vastsum.entity.pojo.Demo;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
 import com.vastsum.service.HandControlService;
@@ -37,15 +40,15 @@ public class HandController  extends BaseController  {
 	@Autowired
 	private HandRemoteService handRemoteService;
 	
-	@GetMapping("/test")
+	@PostMapping("/test")
 	@ApiOperation(value = "test")
-	public  ResponseEntity<ResultModel> saveOrUpdate(){
+	public  ResponseEntity<ResultModel> saveOrUpdate(@Valid Demo demo){
 		HashMap<String, Object> hashMap = new HashMap<>();
 		hashMap.put("test", "test");
 		hashMap.put("sn", "ZWGC2017100800003");
 		handRemoteService.sendOrder(hashMap);
 		
-		return V.ok();
+		return V.ok(demo.getUsername());
     }
 	
 	

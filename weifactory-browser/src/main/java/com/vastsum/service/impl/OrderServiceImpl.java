@@ -1,5 +1,11 @@
 package com.vastsum.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.dao.BizOrderMapper;
@@ -9,11 +15,6 @@ import com.vastsum.entity.BizOrderExample;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceExample;
 import com.vastsum.service.OrderService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 订单服务
@@ -139,6 +140,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     //批次是否对应有支付成功的订单：有ture无false
+    @Deprecated
     @Override
     public boolean hasBizOrderBybatchId(Long batchId) {
         BizOrder bizOrderBybatchId = getBizOrderBybatchId(batchId, new Byte("3"));
@@ -156,5 +158,15 @@ public class OrderServiceImpl implements OrderService {
 		order.setPayChannel(payChannel);
 		int i = bizOrderMapper.updateByPrimaryKey(order);
 		return i;
+	}
+
+	//true:已经被托管，false还没被托管
+	@Override
+	public boolean hasBizOrderByDeviceId(Integer deviceId) {
+		Device device = deviceMapper.selectByPrimaryKey(deviceId);
+		if ("3".equals(device.getOrderStatus())) {
+			return true;
+		}
+		return false;
 	}
 }

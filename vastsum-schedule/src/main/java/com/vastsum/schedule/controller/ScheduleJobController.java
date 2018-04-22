@@ -1,5 +1,7 @@
 package com.vastsum.schedule.controller;
 
+import javax.validation.Valid;
+
 import org.apache.commons.lang.StringUtils;
 import org.quartz.Scheduler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,12 +73,12 @@ public class ScheduleJobController {
 		@ApiImplicitParam(paramType = "query",name="jobId" , value="任务id", required = false),
 		@ApiImplicitParam(paramType = "query",name="scheduleName" , value="任务名称", required = true),
 		@ApiImplicitParam(paramType = "query",name="beanName" , value="bean名称", required = true),
-		@ApiImplicitParam(paramType = "query",name="methodName" , value="方法名称", required = true),
-		@ApiImplicitParam(paramType = "query",name="cronExpression" , value="cron表达式", required = true),
+		@ApiImplicitParam(paramType = "query",name="methodName" , value="方法名称", required = false),
+		@ApiImplicitParam(paramType = "query",name="cronExpression" , value="cron表达式", required = false),
 		@ApiImplicitParam(paramType = "query",name="status" , value="状态", required = false),
 		@ApiImplicitParam(paramType = "query",name="remark" , value="备注", required = false)
 	})
-	public ResponseEntity<ResultModel> addOrUpdate(@ModelAttribute ScheduleJobEntity scheduleJobEntity){
+	public ResponseEntity<ResultModel> addOrUpdate(@Valid @ModelAttribute ScheduleJobEntity scheduleJobEntity){
 		if (scheduleJobEntity == null) {
 			return R.error("参数不能为空");
 		}
@@ -86,12 +88,12 @@ public class ScheduleJobController {
 		if (StringUtils.isBlank(scheduleJobEntity.getBeanName())) {
 			return R.error("beanName不能为空");
 		}
-		if (StringUtils.isBlank(scheduleJobEntity.getMethodName())) {
-			return R.error("methodName不能为空");
-		}
-		if (StringUtils.isBlank(scheduleJobEntity.getCronExpression())) {
-			return R.error("cron表达式不能为空");
-		}
+//		if (StringUtils.isBlank(scheduleJobEntity.getMethodName())) {
+//			return R.error("methodName不能为空");
+//		}
+//		if (StringUtils.isBlank(scheduleJobEntity.getCronExpression())) {
+//			return R.error("cron表达式不能为空");
+//		}
 		scheduleJobEntity.setStatus("1");//立即执行
 		if (scheduleJobEntity.getJobId() == null) {
 			ScheduleJobEntity jobEntity = scheduleJobService.save(scheduleJobEntity);

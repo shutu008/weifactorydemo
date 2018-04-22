@@ -3,6 +3,8 @@ package com.vastsum.schedule.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 public class ScheduleJobEntity implements Serializable{
 	/**
 	 * 
@@ -12,13 +14,15 @@ public class ScheduleJobEntity implements Serializable{
 	public static final String JOB_PARAM_KEY = "VASTSUM";
 
 	private Long jobId;
-
+	
+	@NotBlank(message = "{weifactory.schedule.scheduleJobEntity.cronExpression.notBlank}")
     private String cronExpression;
 
     private Date gmtCreate;
 
     private Date gmtModified;
 
+    @NotBlank(message = "{weifactory.schedule.scheduleJobEntity.methodName.notBlank}")
     private String methodName;
 
     private String params;

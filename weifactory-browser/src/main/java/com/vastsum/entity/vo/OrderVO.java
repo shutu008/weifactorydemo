@@ -20,6 +20,7 @@ public class OrderVO {
     private List<User> exports;          //专家列表//数组
     private Double cost;                 //费用
     private Integer batchId;             //批次id
+    private String deviceType;			//设备规格
 
     public String getPlantOne() {
         return plantOne;
@@ -84,4 +85,14 @@ public class OrderVO {
     public void setBatchId(Integer batchId) {
         this.batchId = batchId;
     }
+
+	public String getDeviceType() {
+		return deviceType;
+	}
+
+	public void setDeviceType(String deviceType) {
+		this.deviceType = deviceType;
+	}
+    
+    
 }

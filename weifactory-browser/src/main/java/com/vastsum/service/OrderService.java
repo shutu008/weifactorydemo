@@ -95,6 +95,13 @@ public interface OrderService {
      * @return boolean
      */
     boolean hasBizOrderBybatchId(Long batchId);
+    
+    /**
+     * 根据设备ID判断是否已经有完成的支付订单
+     * @param deviceId
+     * @return boolean
+     */
+    boolean hasBizOrderByDeviceId(Integer deviceId);
 
 
 }

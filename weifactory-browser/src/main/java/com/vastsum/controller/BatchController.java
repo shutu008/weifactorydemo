@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.entity.Batch;
+import com.vastsum.entity.BizOrder;
+import com.vastsum.entity.Device;
 import com.vastsum.entity.Image;
 import com.vastsum.entity.Seed;
 import com.vastsum.entity.vo.BatchInfo;
@@ -302,7 +304,7 @@ public class BatchController extends BaseController {
 
     //更新批次中的订单状态@20171203
     @PostMapping(value = "/updateOrderStatus")
-    @ApiOperation(value = "更新批次中的订单状态@20180410")
+    @ApiOperation(value = "更新批次中的订单状态，支付成功或支付失败@20180410")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query", name = "orderNumber", value = "订单号", required = true),
             @ApiImplicitParam(paramType = "query", name = "orderStatus", value = "订单状态", required = true),
@@ -320,21 +322,14 @@ public class BatchController extends BaseController {
        }
        //更新订单状态
        orderService.updateBizOrderStatusByNo(orderNumber, orderStatus, payChannel);
-       //根据订单号查询出批次信息
-        Batch batch1 = batchService.getBatchByOrderNumber(orderNumber);
-        if (batch1 == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
-        }
-        batch1.setOrderStatus(orderStatus);
-        //如果订单状态：3 托管成功
-        if ("3".equals(orderStatus)) {
-			batch1.setTrustStatus("1");
-		}
-        int i = batchService.updateBatch(batch1);
-        if (i > 0){
-            return ResponseEntity.ok(ResultModel.ok());
-        }
-        return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
+      
+       //根据订单号获取订单信息
+       BizOrder order = orderService.getOrderByOrderNumber(orderNumber);
+       //获取设备ID
+       Device device = deviceService.getDeviceBySn(order.getSn());
+       device.setOrderStatus(orderStatus);
+       deviceService.update(device);
+       return V.ok();
     }
 
 

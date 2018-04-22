@@ -1,22 +1,22 @@
 package com.vastsum.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.dao.JoinMapper;
 import com.vastsum.dao.UserMapper;
-import com.vastsum.entity.UserRole;
-import com.vastsum.entity.vo.UserInfo;
-import com.vastsum.enums.LoginStatusEnum;
-import com.vastsum.service.UserService;
 import com.vastsum.dao.UserRoleMapper;
 import com.vastsum.entity.User;
 import com.vastsum.entity.UserExample;
+import com.vastsum.entity.UserRole;
 import com.vastsum.entity.UserRoleExample;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.vastsum.entity.vo.UserInfo;
+import com.vastsum.service.UserService;
 
 /**
  * 用户管理
@@ -244,6 +244,11 @@ public class UserServiceImpl implements UserService {
 		user.setLoginStatus(loginStatus);
 		int i = userMapper.updateByPrimaryKeySelective(user);
 		return i;
+	}
+
+	@Override
+	public User getById(Integer userId) {
+		return userMapper.selectByPrimaryKey(userId);
 	}
 
 

@@ -115,4 +115,11 @@ public interface DeviceService {
      */
     int addDeviceSn(DeviceSn deviceSn);
     
+    /**
+     * 根据设备ID获取设备信息
+     * @param deviceId
+     * @return Device
+     */
+    Device getById(Integer deviceId);
+    
 }

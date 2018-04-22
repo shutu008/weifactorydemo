@@ -102,7 +102,7 @@
 		<!-- <table tableName="param_set"></table> -->
 		<!-- <table tableName="hand_control"></table> -->
 		<!--  -->
-		<table tableName="batch"></table>
+		<!-- <table tableName="batch"></table> -->
 		<!-- <table tableName="batch"></table> -->
 		<!-- <table tableName="hand_control"></table>  -->
 		<!-- <table schema="" tableName="device"></table> -->
@@ -110,5 +110,8 @@
 		<table tableName="history_data"></table>
 		<table tableName="param_set"></table> -->
 		<!-- <table tableName="growth_pattern_param"></table> -->
+		<table tableName="device">
+			<generatedKey column="device_id" sqlStatement="MySql" identity="true"/>
+		</table>
 	</context>
 </generatorConfiguration>

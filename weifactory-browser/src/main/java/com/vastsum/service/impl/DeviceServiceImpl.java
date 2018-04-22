@@ -177,5 +177,10 @@ public class DeviceServiceImpl implements DeviceService {
 		List<UserDevice> list = joinMapper.findByUserDeviceDto();
 		return new PageInfo<>(list);
 	}
+
+	@Override
+	public Device getById(Integer deviceId) {
+		return deviceMapper.selectByPrimaryKey(deviceId);
+	}
     
 }

@@ -53,7 +53,7 @@ public class TrustController {
     }
 	
 		//取消托管
-		@PostMapping("/cancle/{deviceId}")
+		@GetMapping("/cancle/deviceId/{deviceId}")
 		@ApiOperation(value = "取消设备托管@2018-04-15")
 	    @ApiImplicitParams({
 	            @ApiImplicitParam(paramType = "path",name = "deviceId",value = "设备id",required = true),
