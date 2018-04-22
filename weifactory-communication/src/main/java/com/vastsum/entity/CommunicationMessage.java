@@ -22,17 +22,14 @@ public class CommunicationMessage {
 	 * @param msg
 	 */
 	public CommunicationMessage(String sn, String msg) {
-		// 验证最后一位
-		if (msg.charAt(msg.length()-1) != '$') {
-			this.setParserResult("格式错误，以$结尾");
-			return;
-		}
 		this.setMsg(msg);
 		this.sn = sn;
-		msg = msg.substring(1);
-		String[] values = msg.split("#");
+		String submsg = msg.substring(1);
+		System.out.println(submsg);
+		String[] values = submsg.split("#");
 		this.setProtocolName(values[0]);
 		this.dataLength = Integer.valueOf(values[1]);
+		
 		this.setModel(Integer.valueOf(values[2]));
 		this.setFunction(Integer.valueOf(values[3]));
 		this.data = values[4];
@@ -50,8 +47,9 @@ public class CommunicationMessage {
 	public CommunicationMessage(String msg) {
 		// 验证最后一位
 		this.setMsg(msg);
-		msg = msg.substring(1);
-		String[] values = msg.split("#");
+		String submsg = msg.substring(1);
+		System.out.println(submsg);
+		String[] values = submsg.split("#");
 		this.setProtocolName(values[0]);
 		this.dataLength = Integer.valueOf(values[1]);
 		this.setModel(Integer.valueOf(values[2]));
