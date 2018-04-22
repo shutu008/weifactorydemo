@@ -29,20 +29,23 @@
     </bean>
 
     <!--数据处理service-->
+    <!--  
     <bean id="dataService" class="com.vastsum.server.Impl.DataServiceImpl" scope="singleton">
         <constructor-arg ref="jdbcTemplate"/>
     </bean>
+    -->
 
     <!--采集数据处理-->
+    <!--  
     <bean id="sensorService" class="com.vastsum.server.Impl.SensorServiceImpl">
         <constructor-arg ref="jdbcTemplate"/>
     </bean>
-
+	-->
     <bean id="SpringConfigUtil" class="com.vastsum.utils.SpringConfigUtil"/>
 
     <!--业务总控处理,每个channel对应一个handle-->
-    <bean id="serverHandler" class="com.vastsum.main.ServerHandler" scope="prototype">
-        <property name="dataService" ref="dataService"/>
+    <bean id="serverHandler" class="com.vastsum.main.NewServerHandler" scope="prototype">
+        <!--  <property name="dataService" ref="dataService"/> -->
     </bean>
 
 <!--     jobDetail

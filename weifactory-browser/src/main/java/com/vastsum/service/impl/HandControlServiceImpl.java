@@ -75,7 +75,7 @@ public class HandControlServiceImpl implements HandControlService {
 				Method m = clazz.getMethod(publicMethodName);
 				Object resultCurrent = (Object)m.invoke(handControl);
 				Object resultDb = (Object)m.invoke(dbHandControl);
-				if(!resultCurrent.equals(resultDb)) {
+				if(resultCurrent!=null&&!resultCurrent.equals(resultDb)) {
 					hashMap.put(fieldName, resultCurrent);
 				}
 			}catch(Exception e) {
