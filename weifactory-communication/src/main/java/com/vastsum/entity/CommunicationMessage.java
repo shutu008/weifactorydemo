@@ -49,10 +49,6 @@ public class CommunicationMessage {
 	 */
 	public CommunicationMessage(String msg) {
 		// 验证最后一位
-		if (msg.charAt(msg.length()-1) != '$') {
-			this.setParserResult("格式错误，以$结尾");
-			return;
-		}
 		this.setMsg(msg);
 		msg = msg.substring(1);
 		String[] values = msg.split("#");

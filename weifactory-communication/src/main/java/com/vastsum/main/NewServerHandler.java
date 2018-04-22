@@ -61,10 +61,11 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
         LOGGER.info("来自客户端的原始数据："+request);
         CommunicationMessage cm = new CommunicationMessage(request);
         if(!cm.parserOk()) {
-			new Exception("解析错误").printStackTrace();;
+			new Exception(cm.getParserResult()).printStackTrace();
         	return;
         }
         String sn = cm.getSn();
+        LOGGER.info("序列号是："+sn);
         if (flag){
         	// 第一次连接时
         	// 创建channel，存入map

@@ -25,8 +25,6 @@ public class TestServer {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// 装载Spring，注册Dubbo服务
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"spring-context.xml"});
-//		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-//                new String[]{"classpath*:/spring-context.xml"});
         context.start();
         // 启动netty服务器
         //1.第一个线程组，用于接收Client端连接的
