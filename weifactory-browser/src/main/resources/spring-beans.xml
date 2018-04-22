@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-    <dubbo:application name="browser-consumer"/>
-    <dubbo:registry protocol="zookeeper" address="121.196.217.247:8366" />
+    <dubbo:application name="consumer-browser"/>
+    <dubbo:registry protocol="zookeeper" address="zookeeper://121.196.217.247:8366" />
     <dubbo:reference id="handRemoteService" interface="com.vastsum.core.service.HandRemoteService" check="false"/>
 </beans>

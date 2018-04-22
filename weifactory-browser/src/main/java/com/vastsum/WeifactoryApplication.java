@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.ImportResource;
 
 import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.social.properties.SocialProperties;
@@ -16,6 +17,7 @@ import com.vastsum.social.properties.SocialProperties;
 @MapperScan({"com.vastsum.dao","com.vastsum.schedule.dao"})
 @EnableConfigurationProperties({WeifactoryProperties.class,
 	SocialProperties.class}) 
+@ImportResource(locations= {"classpath:spring-beans.xml"})
 public class WeifactoryApplication {
 
     public static void main(String[] args){
