@@ -4,8 +4,6 @@ import java.util.HashMap;
 
 import javax.validation.Valid;
 
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.HandControl;
-import com.vastsum.entity.User;
 import com.vastsum.entity.pojo.Demo;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
@@ -57,7 +54,7 @@ public class HandController  extends BaseController  {
 	@ApiOperation(value = "手动控制设置@2018-03-29")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "handControlId",value = "手动控制id，修改手动控制信息时带上"),
-            @ApiImplicitParam(paramType = "query",name = "batchId",value = "批次id",required = false),
+            @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号",required = true),
             @ApiImplicitParam(paramType = "query",name = "wd1",value = "第一层温度"),
             @ApiImplicitParam(paramType = "query",name = "kqxh1",value = "第一层空气循环"),
             @ApiImplicitParam(paramType = "query",name = "kqxd1",value = "第一层空气消毒"),
