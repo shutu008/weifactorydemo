@@ -73,9 +73,9 @@ public class OrderController extends BaseController {
         
         Device deviceC = deviceService.getById(deviceId);
         if (deviceC != null) {
-			if (!"0".equals(deviceC.getTruestStatus())) {
+			if (!"0".equals(deviceC.getTrustStatus())) {
 				 //支付成功之后，不能再支付
-	        	logger.info("设备已托管，不能再次托管,托管状态："+deviceC.getTruestStatus());
+	        	logger.info("设备已托管，不能再次托管,托管状态："+deviceC.getTrustStatus());
 	            return V.error("本设备已经被托管");
 			}
 		}
@@ -125,9 +125,9 @@ public class OrderController extends BaseController {
       // boolean b = orderService.hasBizOrderByDeviceId(deviceId);
         Device deviceC = deviceService.getById(deviceId);
         if (deviceC != null) {
-			if (!"0".equals(deviceC.getTruestStatus())) {
+			if (!"0".equals(deviceC.getTrustStatus())) {
 				 //支付成功之后，不能再支付
-	        	logger.info("设备已托管，不能再次托管,托管状态："+deviceC.getTruestStatus());
+	        	logger.info("设备已托管，不能再次托管,托管状态："+deviceC.getTrustStatus());
 	            return V.error("本设备已经被托管");
 			}
 		}
@@ -160,14 +160,11 @@ public class OrderController extends BaseController {
 		}
         //根据转接id获取专家信息,专家没有昵称就用用户名
         User user = userService.findUserByUserId(exportId);
-        String userName = user.getRealname();
-        if ( userName!= null && "".equals(userName)){
-            bizOrderVO.setExpertName(userName);
-        }else {
-            String name = user.getUserName();
-            bizOrderVO.setExpertName(name);
-        }
-        return V.error("e");
+        String userName = user.getUserName();
+        bizOrderVO.setExpertName(userName);
+        bizOrderVO.setStartTime(startTime);
+        bizOrderVO.setEndTime(endTime);
+        return V.ok(bizOrderVO);
     }
 
 

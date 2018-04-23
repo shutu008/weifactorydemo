@@ -17,7 +17,7 @@ public class TrustServiceImpl implements TrustService {
 	public void trust(Integer deviceId, String trustStatus) {
 		Device device = new Device();
 		device.setDeviceId(deviceId);
-		device.setTruestStatus(trustStatus);
+		device.setTrustStatus(trustStatus);
 		deviceMapper.updateByPrimaryKeySelective(device);
 	}
 

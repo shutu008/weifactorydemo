@@ -17,7 +17,7 @@ public class Device {
 
     private Date gmtModified;
 
-    private String truestStatus;
+    private String trustStatus;
 
     private String orderStatus;
 
@@ -77,12 +77,12 @@ public class Device {
         this.gmtModified = gmtModified;
     }
 
-    public String getTruestStatus() {
-        return truestStatus;
+    public String getTrustStatus() {
+        return trustStatus;
     }
 
-    public void setTruestStatus(String truestStatus) {
-        this.truestStatus = truestStatus == null ? null : truestStatus.trim();
+    public void setTrustStatus(String trustStatus) {
+        this.trustStatus = trustStatus == null ? null : trustStatus.trim();
     }
 
     public String getOrderStatus() {
@@ -106,7 +106,7 @@ public class Device {
         sb.append(", note=").append(note);
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append(", gmtModified=").append(gmtModified);
-        sb.append(", truestStatus=").append(truestStatus);
+        sb.append(", trustStatus=").append(trustStatus);
         sb.append(", orderStatus=").append(orderStatus);
         sb.append("]");
         return sb.toString();

@@ -555,73 +555,73 @@ public class DeviceExample {
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusIsNull() {
-            addCriterion("truest_status is null");
+        public Criteria andTrustStatusIsNull() {
+            addCriterion("trust_status is null");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusIsNotNull() {
-            addCriterion("truest_status is not null");
+        public Criteria andTrustStatusIsNotNull() {
+            addCriterion("trust_status is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusEqualTo(String value) {
-            addCriterion("truest_status =", value, "truestStatus");
+        public Criteria andTrustStatusEqualTo(String value) {
+            addCriterion("trust_status =", value, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusNotEqualTo(String value) {
-            addCriterion("truest_status <>", value, "truestStatus");
+        public Criteria andTrustStatusNotEqualTo(String value) {
+            addCriterion("trust_status <>", value, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusGreaterThan(String value) {
-            addCriterion("truest_status >", value, "truestStatus");
+        public Criteria andTrustStatusGreaterThan(String value) {
+            addCriterion("trust_status >", value, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusGreaterThanOrEqualTo(String value) {
-            addCriterion("truest_status >=", value, "truestStatus");
+        public Criteria andTrustStatusGreaterThanOrEqualTo(String value) {
+            addCriterion("trust_status >=", value, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusLessThan(String value) {
-            addCriterion("truest_status <", value, "truestStatus");
+        public Criteria andTrustStatusLessThan(String value) {
+            addCriterion("trust_status <", value, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusLessThanOrEqualTo(String value) {
-            addCriterion("truest_status <=", value, "truestStatus");
+        public Criteria andTrustStatusLessThanOrEqualTo(String value) {
+            addCriterion("trust_status <=", value, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusLike(String value) {
-            addCriterion("truest_status like", value, "truestStatus");
+        public Criteria andTrustStatusLike(String value) {
+            addCriterion("trust_status like", value, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusNotLike(String value) {
-            addCriterion("truest_status not like", value, "truestStatus");
+        public Criteria andTrustStatusNotLike(String value) {
+            addCriterion("trust_status not like", value, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusIn(List<String> values) {
-            addCriterion("truest_status in", values, "truestStatus");
+        public Criteria andTrustStatusIn(List<String> values) {
+            addCriterion("trust_status in", values, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusNotIn(List<String> values) {
-            addCriterion("truest_status not in", values, "truestStatus");
+        public Criteria andTrustStatusNotIn(List<String> values) {
+            addCriterion("trust_status not in", values, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusBetween(String value1, String value2) {
-            addCriterion("truest_status between", value1, value2, "truestStatus");
+        public Criteria andTrustStatusBetween(String value1, String value2) {
+            addCriterion("trust_status between", value1, value2, "trustStatus");
             return (Criteria) this;
         }
 
-        public Criteria andTruestStatusNotBetween(String value1, String value2) {
-            addCriterion("truest_status not between", value1, value2, "truestStatus");
+        public Criteria andTrustStatusNotBetween(String value1, String value2) {
+            addCriterion("trust_status not between", value1, value2, "trustStatus");
             return (Criteria) this;
         }
 

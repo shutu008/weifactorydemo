@@ -100,7 +100,7 @@
 		<!-- 
 		<table tableName="plant_info"></table> -->
 		<!-- <table tableName="param_set"></table> -->
-		<table tableName="hand_control"></table>
+		<!-- <table tableName="hand_control"></table> -->
 		<!-- <table tableName="batch"></table> -->
 		<!-- <table tableName="batch"></table> -->
 		<!-- <table tableName="hand_control"></table>  -->
@@ -109,8 +109,8 @@
 		<table tableName="history_data"></table>
 		<table tableName="param_set"></table> -->
 		<!-- <table tableName="growth_pattern_param"></table> -->
-		<!-- <table tableName="device">
+		<table tableName="device">
 			<generatedKey column="device_id" sqlStatement="MySql" identity="true"/>
-		</table> -->
+		</table>
 	</context>
 </generatorConfiguration>

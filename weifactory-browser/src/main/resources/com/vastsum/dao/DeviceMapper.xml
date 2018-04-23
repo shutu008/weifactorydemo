@@ -9,7 +9,7 @@
     <result column="note" jdbcType="VARCHAR" property="note" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
-    <result column="truest_status" jdbcType="VARCHAR" property="truestStatus" />
+    <result column="trust_status" jdbcType="VARCHAR" property="trustStatus" />
     <result column="order_status" jdbcType="VARCHAR" property="orderStatus" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -71,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    device_id, sn, device_type, user_id, note, gmt_create, gmt_modified, truest_status, 
+    device_id, sn, device_type, user_id, note, gmt_create, gmt_modified, trust_status, 
     order_status
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.DeviceExample" resultMap="BaseResultMap">
@@ -110,10 +110,10 @@
     </selectKey>
     insert into device (sn, device_type, user_id, 
       note, gmt_create, gmt_modified, 
-      truest_status, order_status)
+      trust_status, order_status)
     values (#{sn,jdbcType=VARCHAR}, #{deviceType,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, 
       #{note,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, 
-      #{truestStatus,jdbcType=VARCHAR}, #{orderStatus,jdbcType=VARCHAR})
+      #{trustStatus,jdbcType=VARCHAR}, #{orderStatus,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.Device">
     <selectKey keyProperty="deviceId" order="AFTER" resultType="java.lang.Integer">
@@ -139,8 +139,8 @@
       <if test="gmtModified != null">
         gmt_modified,
       </if>
-      <if test="truestStatus != null">
-        truest_status,
+      <if test="trustStatus != null">
+        trust_status,
       </if>
       <if test="orderStatus != null">
         order_status,
@@ -165,8 +165,8 @@
       <if test="gmtModified != null">
         #{gmtModified,jdbcType=TIMESTAMP},
       </if>
-      <if test="truestStatus != null">
-        #{truestStatus,jdbcType=VARCHAR},
+      <if test="trustStatus != null">
+        #{trustStatus,jdbcType=VARCHAR},
       </if>
       <if test="orderStatus != null">
         #{orderStatus,jdbcType=VARCHAR},
@@ -203,8 +203,8 @@
       <if test="record.gmtModified != null">
         gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.truestStatus != null">
-        truest_status = #{record.truestStatus,jdbcType=VARCHAR},
+      <if test="record.trustStatus != null">
+        trust_status = #{record.trustStatus,jdbcType=VARCHAR},
       </if>
       <if test="record.orderStatus != null">
         order_status = #{record.orderStatus,jdbcType=VARCHAR},
@@ -223,7 +223,7 @@
       note = #{record.note,jdbcType=VARCHAR},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
-      truest_status = #{record.truestStatus,jdbcType=VARCHAR},
+      trust_status = #{record.trustStatus,jdbcType=VARCHAR},
       order_status = #{record.orderStatus,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -250,8 +250,8 @@
       <if test="gmtModified != null">
         gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
       </if>
-      <if test="truestStatus != null">
-        truest_status = #{truestStatus,jdbcType=VARCHAR},
+      <if test="trustStatus != null">
+        trust_status = #{trustStatus,jdbcType=VARCHAR},
       </if>
       <if test="orderStatus != null">
         order_status = #{orderStatus,jdbcType=VARCHAR},
@@ -267,7 +267,7 @@
       note = #{note,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
       gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
-      truest_status = #{truestStatus,jdbcType=VARCHAR},
+      trust_status = #{trustStatus,jdbcType=VARCHAR},
       order_status = #{orderStatus,jdbcType=VARCHAR}
     where device_id = #{deviceId,jdbcType=INTEGER}
   </update>
