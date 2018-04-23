@@ -13,8 +13,10 @@ public class ParserMessageUtils {
 		hashMap.forEach((k,v)->{
 			try {
 				if(!k.equals("sn")) {
-				Integer commandNumber = Integer.valueOf(ResourceProperty.getProperty(k));
-				listCM.add(new CommunicationMessage(sn, 1, commandNumber, (String)v));
+					Integer commandNumber = Integer.valueOf(ResourceProperty.getProperty(k));
+					CommunicationMessage cm = new CommunicationMessage(sn, 1, commandNumber, (String)v);
+					listCM.add(cm);
+					System.out.println("编码的指令为："+cm.getMsg());
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

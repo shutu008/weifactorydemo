@@ -43,7 +43,7 @@ public class HandController  extends BaseController  {
 		HashMap<String, Object> hashMap = new HashMap<>();
 		hashMap.put("sn", "ZWGC2018032665194");
 		hashMap.put("kqxh1","1");
-		System.out.println(hashMap.get("sn"));
+		System.out.println("正在向"+(String)(hashMap.get("sn"))+"发送指令");
 		handRemoteService.sendOrder(hashMap);
 		return V.ok();
     }
