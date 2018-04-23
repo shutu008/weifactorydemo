@@ -19,7 +19,7 @@ import com.vastsum.service.UserService;
  * @author shutu008
  * security
  */
-@Component
+
 public class MyUserDetailService implements UserDetailsService {
 
 	private static Logger logger = LoggerFactory.getLogger(MyUserDetailService.class);
