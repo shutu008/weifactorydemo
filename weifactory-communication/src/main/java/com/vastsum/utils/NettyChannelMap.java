@@ -29,9 +29,11 @@ public class NettyChannelMap implements Serializable {
 				mapReverse.put(socketChannel, sn);
 			}
 		}
+		System.out.println(sn+"含有："+map.containsValue(sn));
     }
 
     public static Channel get(String sn){
+    	System.out.println("序列号为："+sn);
         return map.get(sn);
     }
 
