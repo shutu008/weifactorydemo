@@ -83,6 +83,8 @@ public class HandControl {
 
     private Date gmtModified;
 
+    private String sn;
+
     public Long getHandControlId() {
         return handControlId;
     }
@@ -403,6 +405,14 @@ public class HandControl {
         this.gmtModified = gmtModified;
     }
 
+    public String getSn() {
+        return sn;
+    }
+
+    public void setSn(String sn) {
+        this.sn = sn == null ? null : sn.trim();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -449,6 +459,7 @@ public class HandControl {
         sb.append(", status=").append(status);
         sb.append(", gmtCreate=").append(gmtCreate);
         sb.append(", gmtModified=").append(gmtModified);
+        sb.append(", sn=").append(sn);
         sb.append("]");
         return sb.toString();
     }

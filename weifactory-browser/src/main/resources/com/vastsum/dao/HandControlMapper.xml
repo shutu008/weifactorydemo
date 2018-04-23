@@ -42,6 +42,7 @@
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="sn" jdbcType="VARCHAR" property="sn" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -105,7 +106,7 @@
     hand_control_id, head_control_mod, wd1, kqxh1, kqxd1, hxf1, syyy1, pyyy1, yyyxd1, 
     led11, led12, led13, wd2, kqxh2, kqxd2, hxf2, syyy2, pyyy2, yyyxd2, led21, led22, 
     led23, wd3, kqxh3, kqxd3, hxf3, syyy3, pyyy3, yyyxd3, led31, led32, led33, ymbg, 
-    mpjs, bs, ps, batch_id, status, gmt_create, gmt_modified
+    mpjs, bs, ps, batch_id, status, gmt_create, gmt_modified, sn
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.HandControlExample" resultMap="BaseResultMap">
     select
@@ -150,8 +151,8 @@
       pyyy3, yyyxd3, led31, 
       led32, led33, ymbg, 
       mpjs, bs, ps, batch_id, 
-      status, gmt_create, gmt_modified
-      )
+      status, gmt_create, gmt_modified, 
+      sn)
     values (#{handControlId,jdbcType=BIGINT}, #{headControlMod,jdbcType=VARCHAR}, #{wd1,jdbcType=VARCHAR}, 
       #{kqxh1,jdbcType=VARCHAR}, #{kqxd1,jdbcType=VARCHAR}, #{hxf1,jdbcType=VARCHAR}, 
       #{syyy1,jdbcType=VARCHAR}, #{pyyy1,jdbcType=VARCHAR}, #{yyyxd1,jdbcType=VARCHAR}, 
@@ -164,8 +165,8 @@
       #{pyyy3,jdbcType=VARCHAR}, #{yyyxd3,jdbcType=VARCHAR}, #{led31,jdbcType=VARCHAR}, 
       #{led32,jdbcType=VARCHAR}, #{led33,jdbcType=VARCHAR}, #{ymbg,jdbcType=VARCHAR}, 
       #{mpjs,jdbcType=VARCHAR}, #{bs,jdbcType=VARCHAR}, #{ps,jdbcType=VARCHAR}, #{batchId,jdbcType=BIGINT}, 
-      #{status,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
-      )
+      #{status,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}, 
+      #{sn,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.HandControl">
     insert into hand_control
@@ -290,6 +291,9 @@
       <if test="gmtModified != null">
         gmt_modified,
       </if>
+      <if test="sn != null">
+        sn,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="handControlId != null">
@@ -411,6 +415,9 @@
       </if>
       <if test="gmtModified != null">
         #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sn != null">
+        #{sn,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -543,6 +550,9 @@
       <if test="record.gmtModified != null">
         gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.sn != null">
+        sn = #{record.sn,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -589,7 +599,8 @@
       batch_id = #{record.batchId,jdbcType=BIGINT},
       status = #{record.status,jdbcType=VARCHAR},
       gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
-      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      sn = #{record.sn,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -714,6 +725,9 @@
       <if test="gmtModified != null">
         gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
       </if>
+      <if test="sn != null">
+        sn = #{sn,jdbcType=VARCHAR},
+      </if>
     </set>
     where hand_control_id = #{handControlId,jdbcType=BIGINT}
   </update>
@@ -757,7 +771,8 @@
       batch_id = #{batchId,jdbcType=BIGINT},
       status = #{status,jdbcType=VARCHAR},
       gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
-      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      sn = #{sn,jdbcType=VARCHAR}
     where hand_control_id = #{handControlId,jdbcType=BIGINT}
   </update>
 </mapper>
