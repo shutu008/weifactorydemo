@@ -32,25 +32,8 @@ public class Client2 {
 
         //121.196.217.247  #设备编号#传感器编号#类型#数据#   121.196.217.247
 
-        ChannelFuture cf1 = bootstrap.connect("121.196.217.247",8765).sync();
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer("ZWGC2017100800008$".getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#1#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#2#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#3#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#4#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#5#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#6#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#7#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#8#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#9#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#10#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#11#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#12#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#13#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#14#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#15#2#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#16#0#传感器出错#15067861553#$").getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800008#17#0#传感器出错#15067861553#$").getBytes()));
+        ChannelFuture cf1 = bootstrap.connect("127.0.0.1",8765).sync();
+        cf1.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2018032621028#1234567890123$".getBytes()));
         cf1.channel().closeFuture().sync();
         workerGroup.shutdownGracefully();
 

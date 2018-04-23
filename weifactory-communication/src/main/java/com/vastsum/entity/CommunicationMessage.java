@@ -34,6 +34,7 @@ public class CommunicationMessage {
 		this.setFunction(Integer.valueOf(values[3]));
 		this.data = values[4];
 		this.setTime(new Date(Long.parseLong(values[5])));
+		System.out.println("数据长度："+this.dataLength+"操作模块："+this.model+"函数："+this.function+"数据："+this.data);
 		if(this.data.length() != this.dataLength) {
 			this.setParserResult("格式错误，数据长度不一致");
 			return;
@@ -45,7 +46,6 @@ public class CommunicationMessage {
 	 * @param msg
 	 */
 	public CommunicationMessage(String msg) {
-		// 验证最后一位
 		this.setMsg(msg);
 		String submsg = msg.substring(1);
 		System.out.println(submsg);
@@ -57,6 +57,7 @@ public class CommunicationMessage {
 		this.data = values[4];
 		this.sn = data;
 		this.setTime(new Date(Long.parseLong(values[5])));
+		System.out.println("数据长度："+this.dataLength+"操作模块："+this.model+"函数："+this.function+"数据："+this.data);
 		if(this.data.length() != this.dataLength) {
 			this.setParserResult("格式错误，数据长度不一致");
 			return;
