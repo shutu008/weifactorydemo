@@ -65,6 +65,20 @@ public class DeviceController extends BaseController {
         List<Device> devices = deviceService.findDevicesByuserId(userId);
         return ResponseEntity.ok(ResultModel.ok(devices));
     }
+    
+    @GetMapping(value="/deviceInfo/{deviceId}")
+    @ApiOperation(value = "获取设备详情@20180423")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path",name = "deviceId",value = "设备id",required = true)
+    })
+    public ResponseEntity<ResultModel> deviceId(
+            @PathVariable Integer deviceId)
+    {
+        if (deviceId == null) {
+           return V.error("设备ID不能为空");
+        }
+       return V.ok(deviceService.getById(deviceId));
+    }
 
 
     @RequestMapping(value="/add",method = RequestMethod.POST)
