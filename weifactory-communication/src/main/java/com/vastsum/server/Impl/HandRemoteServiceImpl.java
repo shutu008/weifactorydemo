@@ -18,9 +18,12 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 	public void sendOrder(HashMap<String, Object> hashMap) {
 		if(hashMap.isEmpty()) return;
 		ArrayList<CommunicationMessage> listCM =  ParserMessageUtils.encodeHashMap(hashMap);
-		String sn = (String)hashMap.get("sn");
+		String sn = (String)(hashMap.get("sn"));
+		
 		Channel channel = NettyChannelMap.get(sn);
+		System.out.println(NettyChannelMap.listSn());
 		for(CommunicationMessage cm : listCM) {
+			System.out.println(cm.getMsg());
 			channel.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
 		}
 	}

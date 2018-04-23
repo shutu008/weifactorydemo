@@ -66,11 +66,13 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
         }
         String sn = cm.getSn();
         LOGGER.info("序列号是："+sn);
+        LOGGER.info(NettyChannelMap.listSn().toString());
         if (flag){
         	// 第一次连接时
         	// 创建channel，存入map
             LOGGER.info("进行激活验证：返回时间戳为:"+String.valueOf(System.currentTimeMillis()));
             NettyChannelMap.add(sn, (SocketChannel)ctx.channel());
+            LOGGER.info(sn+"含有："+NettyChannelMap.get(sn));
             // 存日志
             CommunicationLog c = communicationService.createLog(ctx, OptionType.CONNECT.getValue(), sn);
             communicationService.save(c);
@@ -81,7 +83,7 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
             	CommunicationMessage cmReplay = new CommunicationMessage(sn,5,5,"1");
                 ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
             }else if (status == 1){
-                CommunicationMessage cmReplay = new CommunicationMessage(sn,5,1,"1");
+                CommunicationMessage cmReplay = new CommunicationMessage(sn,5,3,"1");
                 ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
             }
             flag = false;
