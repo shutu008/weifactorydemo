@@ -55,6 +55,7 @@ public class NettyChannelMap implements Serializable {
     }
 
     public void remove(Channel channel){
+    	LOGGER.debug("断开链接，移除channel："+channel);
     	synchronized (mapReverse) {
 			synchronized (map) {
 				String sn = mapReverse.get(channel);

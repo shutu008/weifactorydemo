@@ -15,7 +15,6 @@ import com.vastsum.utils.NettyChannelMap;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.socket.SocketChannel;
 
 
 public class NewServerHandler extends ChannelInboundHandlerAdapter {
@@ -72,13 +71,13 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
         	// 创建channel，存入map
             LOGGER.info("进行激活验证：返回时间戳为:"+String.valueOf(System.currentTimeMillis()));
             NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
-            nettyChannelMap.add(sn, (SocketChannel)ctx.channel());
+            nettyChannelMap.add(sn, ctx.channel());
             LOGGER.info(NettyChannelMap.listSn().toString());
             LOGGER.info(sn+"含有："+nettyChannelMap.get(sn));
             // 存日志
             CommunicationLog c = communicationService.createLog(ctx, OptionType.CONNECT.getValue(), sn);
             communicationService.save(c);
-            LOGGER.info("设备序列号已经与设备绑定,设备序列号："+sn+";Channel对象："+(SocketChannel)ctx.channel());
+            LOGGER.info("设备序列号已经与设备绑定,设备序列号："+sn+";Channel对象："+ctx.channel());
             // 数据库状态改变
             Integer status = newConnection.connStatus(cm);
             if (status == 0 || status== -1){
