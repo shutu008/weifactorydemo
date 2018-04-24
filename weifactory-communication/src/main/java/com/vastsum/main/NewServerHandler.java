@@ -36,6 +36,7 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
         //客户端断开，将断开信息写入到数据库
     	NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
     	String sn = nettyChannelMap.getSn(ctx.channel());
+    	LOGGER.info("设备序列号为{}设备断开链接",sn);
         CommunicationLog c = communicationService.createLog(ctx, OptionType.DISCONNECT.getValue(), sn);
         communicationService.save(c);
         //channel失效，从Map中移除
