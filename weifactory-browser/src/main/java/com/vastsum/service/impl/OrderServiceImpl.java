@@ -106,6 +106,7 @@ public class OrderServiceImpl implements OrderService {
         }
         BizOrderExample bizOrderExample = new BizOrderExample();
         bizOrderExample.createCriteria().andSnIn(snList);
+        bizOrderExample.setOrderByClause("order_start desc");
         page = (page == 0 || page== null)? 1:page;
         pageSize = (pageSize == 0 || pageSize == null)? 10:pageSize;
         PageHelper.startPage(page,pageSize);
