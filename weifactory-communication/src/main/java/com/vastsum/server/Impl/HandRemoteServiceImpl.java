@@ -21,7 +21,7 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 		String sn = (String)(hashMap.get("sn"));
 		System.out.println("需要发送指令的机器序列号为："+sn);
 		Channel channel = NettyChannelMap.get(sn);
-		System.out.println(NettyChannelMap.listSn());
+		System.out.println("channel的列表："+NettyChannelMap.listSn());
 		for(CommunicationMessage cm : listCM) {
 			System.out.println(cm.getMsg());
 			channel.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
