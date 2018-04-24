@@ -28,7 +28,7 @@ public class Demo {
 
         //121.196.217.247  #设备编号#传感器编号#类型#数据#   121.196.217.247
         // 0为整形，1为浮点，2为字符串
-        ChannelFuture cf1 = bootstrap.connect("121.196.217.247",8765).sync();
+        ChannelFuture cf1 = bootstrap.connect("127.0.0.1",8765).sync();
         cf1.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2017100800007#1234567890123$".getBytes()));
         cf1.channel().closeFuture().sync();
         workerGroup.shutdownGracefully();

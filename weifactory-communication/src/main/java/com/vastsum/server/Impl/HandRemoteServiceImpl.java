@@ -3,6 +3,9 @@ package com.vastsum.server.Impl;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.CommunicationMessage;
 import com.vastsum.utils.NettyChannelMap;
@@ -12,6 +15,8 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 
 public class HandRemoteServiceImpl implements HandRemoteService{
+	
+	private static Logger logger = LoggerFactory.getLogger(HandRemoteServiceImpl.class);
 
 	@Override
 	public void sendOrder(HashMap<String, Object> hashMap) {
@@ -23,7 +28,7 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 		NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
 		Channel channel = nettyChannelMap.get(sn);
 		for(CommunicationMessage cm : listCM) {
-			System.out.println(cm.getMsg());
+			logger.info("下达的控制指令："+cm.getMsg());
 			channel.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
 		}
 	}
