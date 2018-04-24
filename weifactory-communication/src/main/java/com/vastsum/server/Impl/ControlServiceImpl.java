@@ -24,7 +24,8 @@ public class ControlServiceImpl implements ControlService, Serializable {
 
     @Override
     public AskBody controlMsg(String sn, String sensorType, String status, Long period) {
-        Channel channel = NettyChannelMap.get(sn);
+    	NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
+        Channel channel = nettyChannelMap.get(sn);
         if (channel != null){
             //组装数据
             String data = "#A001#0000#"+sensorType+"#"+status+"#"+period+"#$";
@@ -38,7 +39,8 @@ public class ControlServiceImpl implements ControlService, Serializable {
 
     @Override
     public AskBody controlData(String sn, String controlType, String extendStr, String data1, String data2, String data3) {
-        Channel channel = NettyChannelMap.get(sn);
+    	NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
+    	Channel channel = nettyChannelMap.get(sn);
         if (channel != null){
             //组装数据
             String data = "#"+controlType+"#"+extendStr+"#"+data1+"#"+data2+"#"+data3+"#$";
@@ -59,7 +61,8 @@ public class ControlServiceImpl implements ControlService, Serializable {
     //关闭指定的设备
     @Override
     public AskBody closeDeviceChannel(String sn) {
-        Channel channel = NettyChannelMap.get(sn);
+    	NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
+        Channel channel = nettyChannelMap.get(sn);
         if (channel == null){
             return new AskBody(200,"设备未连接上服务器",null,true);
         }

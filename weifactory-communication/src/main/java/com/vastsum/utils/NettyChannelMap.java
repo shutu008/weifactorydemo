@@ -23,12 +23,19 @@ public class NettyChannelMap implements Serializable {
     private static final Map<String,SocketChannel> map=new ConcurrentHashMap<String, SocketChannel>();
     private static final Map<SocketChannel, String> mapReverse=new ConcurrentHashMap<SocketChannel, String>();
     
+    private NettyChannelMap() {}
+    
+    private static NettyChannelMap nettyChannelMap = new NettyChannelMap();
+    
+    public static NettyChannelMap getInstance() {
+    	return nettyChannelMap;
+    }
     /**
      * 添加sn对应的channel
      * @param sn
      * @param socketChannel
      */
-    public static void add(String sn,SocketChannel socketChannel){
+    public void add(String sn,SocketChannel socketChannel){
     	LOGGER.info("设备序列号为："+sn +";socketChanndel为："+ReflectionToStringBuilder.toString(socketChannel));
     	
 			map.put(sn,socketChannel);
@@ -37,17 +44,17 @@ public class NettyChannelMap implements Serializable {
 		
     }
 
-    public static Channel get(String sn){
+    public Channel get(String sn){
     	LOGGER.info("通过设备序列号获取通道"+sn);
         return map.get(sn);
     }
 
     //根据value获取key
-    public static String getSn(Channel channel){
+    public String getSn(Channel channel){
     	return mapReverse.get(channel);
     }
 
-    public static void remove(SocketChannel socketChannel){
+    public void remove(SocketChannel socketChannel){
     	synchronized (mapReverse) {
 			synchronized (map) {
 				String sn = mapReverse.get(socketChannel);

@@ -35,11 +35,12 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         //客户端断开，将断开信息写入到数据库
-    	String sn = NettyChannelMap.getSn((SocketChannel)ctx.channel());
+    	NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
+    	String sn = nettyChannelMap.getSn((SocketChannel)ctx.channel());
         CommunicationLog c = communicationService.createLog(ctx, OptionType.DISCONNECT.getValue(), sn);
         communicationService.save(c);
         //channel失效，从Map中移除
-        NettyChannelMap.remove((SocketChannel)ctx.channel());
+        nettyChannelMap.remove((SocketChannel)ctx.channel());
     }
 
     /**
@@ -70,9 +71,10 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
         	// 第一次连接时
         	// 创建channel，存入map
             LOGGER.info("进行激活验证：返回时间戳为:"+String.valueOf(System.currentTimeMillis()));
-            NettyChannelMap.add(sn, (SocketChannel)ctx.channel());
+            NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
+            nettyChannelMap.add(sn, (SocketChannel)ctx.channel());
             LOGGER.info(NettyChannelMap.listSn().toString());
-            LOGGER.info(sn+"含有："+NettyChannelMap.get(sn));
+            LOGGER.info(sn+"含有："+nettyChannelMap.get(sn));
             // 存日志
             CommunicationLog c = communicationService.createLog(ctx, OptionType.CONNECT.getValue(), sn);
             communicationService.save(c);
