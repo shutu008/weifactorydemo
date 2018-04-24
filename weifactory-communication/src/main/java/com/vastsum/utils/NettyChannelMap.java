@@ -23,13 +23,11 @@ public class NettyChannelMap implements Serializable {
      * @param socketChannel
      */
     public static void add(String sn,SocketChannel socketChannel){
-		synchronized (map) {
-			synchronized(mapReverse) {
-				map.put(sn,socketChannel);
-				mapReverse.put(socketChannel, sn);
-			}
-		}
-		System.out.println(sn+"含有："+map.containsValue(sn));
+		
+			map.put(sn,socketChannel);
+			mapReverse.put(socketChannel, sn);
+		
+		
     }
 
     public static Channel get(String sn){

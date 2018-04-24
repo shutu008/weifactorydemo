@@ -37,15 +37,15 @@ public class HandController  extends BaseController  {
 	@Autowired
 	private HandRemoteService handRemoteService;
 	
-	@PostMapping("/test")
+	@GetMapping("/test")
 	@ApiOperation(value = "test")
-	public  ResponseEntity<ResultModel> saveOrUpdate(@Valid Demo demo){
+	public  ResponseEntity<ResultModel> saveOrUpdate(){
 		HashMap<String, Object> hashMap = new HashMap<>();
-		hashMap.put("test", "test");
-		hashMap.put("sn", "ZWGC2017100800003");
+		hashMap.put("sn", "ZWGC2018032665194");
+		hashMap.put("kqxh1","1");
+		System.out.println("正在向"+(String)(hashMap.get("sn"))+"发送指令");
 		handRemoteService.sendOrder(hashMap);
-		
-		return V.ok(demo.getUsername());
+		return V.ok();
     }
 	
 	

@@ -17,10 +17,13 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 	@Override
 	public void sendOrder(HashMap<String, Object> hashMap) {
 		if(hashMap.isEmpty()) return;
+		System.out.println(hashMap.get("sn"));
 		ArrayList<CommunicationMessage> listCM =  ParserMessageUtils.encodeHashMap(hashMap);
-		String sn = (String)hashMap.get("sn");
+		System.out.println("channel的列表："+NettyChannelMap.listSn().toString());
+		String sn = (String)(hashMap.get("sn"));
 		Channel channel = NettyChannelMap.get(sn);
 		for(CommunicationMessage cm : listCM) {
+			System.out.println(cm.getMsg());
 			channel.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
 		}
 	}
