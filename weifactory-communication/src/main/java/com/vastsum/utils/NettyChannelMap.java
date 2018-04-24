@@ -1,8 +1,5 @@
 package com.vastsum.utils;
 
-import io.netty.channel.Channel;
-import io.netty.channel.socket.SocketChannel;
-
 import java.io.Serializable;
 import java.util.Map;
 import java.util.Set;
@@ -12,6 +9,9 @@ import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import io.netty.channel.Channel;
+import io.netty.channel.socket.SocketChannel;
+
 /**
  * @author ssj
  * @create 2017-10-19 21:22
@@ -20,8 +20,8 @@ public class NettyChannelMap implements Serializable {
     private static final long serialVersionUID = 5945996498161834927L;
     
     private static final Logger LOGGER = LoggerFactory.getLogger(NettyChannelMap.class);
-    private static final Map<String,SocketChannel> map=new ConcurrentHashMap<String, SocketChannel>();
-    private static final Map<SocketChannel, String> mapReverse=new ConcurrentHashMap<SocketChannel, String>();
+    private static final Map<String,Channel> map=new ConcurrentHashMap<String, Channel>();
+    private static final Map<Channel, String> mapReverse=new ConcurrentHashMap<Channel, String>();
     
     private NettyChannelMap() {}
     
@@ -35,11 +35,11 @@ public class NettyChannelMap implements Serializable {
      * @param sn
      * @param socketChannel
      */
-    public void add(String sn,SocketChannel socketChannel){
-    	LOGGER.info("设备序列号为："+sn +";socketChanndel为："+ReflectionToStringBuilder.toString(socketChannel));
+    public void add(String sn, Channel channel){
+    	LOGGER.info("设备序列号为："+sn +";socketChanndel为："+ReflectionToStringBuilder.toString(channel));
     	
-			map.put(sn,socketChannel);
-			mapReverse.put(socketChannel, sn);
+			map.put(sn,channel);
+			mapReverse.put(channel, sn);
 		LOGGER.info("已将设备序列号和通道添加到map中");
 		
     }
@@ -54,12 +54,12 @@ public class NettyChannelMap implements Serializable {
     	return mapReverse.get(channel);
     }
 
-    public void remove(SocketChannel socketChannel){
+    public void remove(Channel channel){
     	synchronized (mapReverse) {
 			synchronized (map) {
-				String sn = mapReverse.get(socketChannel);
+				String sn = mapReverse.get(channel);
 				map.remove(sn);
-				mapReverse.remove(socketChannel);
+				mapReverse.remove(channel);
 			}
 		}
     }

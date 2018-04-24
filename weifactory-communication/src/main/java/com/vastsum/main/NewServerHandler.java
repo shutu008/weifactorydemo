@@ -36,11 +36,11 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         //客户端断开，将断开信息写入到数据库
     	NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
-    	String sn = nettyChannelMap.getSn((SocketChannel)ctx.channel());
+    	String sn = nettyChannelMap.getSn(ctx.channel());
         CommunicationLog c = communicationService.createLog(ctx, OptionType.DISCONNECT.getValue(), sn);
         communicationService.save(c);
         //channel失效，从Map中移除
-        nettyChannelMap.remove((SocketChannel)ctx.channel());
+        nettyChannelMap.remove(ctx.channel());
     }
 
     /**
