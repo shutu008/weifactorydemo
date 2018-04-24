@@ -168,12 +168,12 @@ public class BatchServiceImpl implements BatchService {
 					+ "led_one_left = NULL,led_one_middle = NULL,led_one_right = NULL, one_planting_time = NULL where batch_id = ?";
 			break;
 		case "2":
-			sql = "update batch set plant_one = NULL,cult_model_one = NULL,temperature_one = NULL,humidity_one = NULL,"
-					+ "led_one_left = NULL,led_one_middle = NULL,led_one_right = NULL, one_planting_time = NULL where batch_id = ?";
+			sql = "update batch set plant_two = NULL,cult_model_two = NULL,temperature_two = NULL,humidity_two = NULL,"
+					+ "led_two_left = NULL,led_two_middle = NULL,led_two_right = NULL, two_planting_time = NULL where batch_id = ?";
 			break;
 		case "3":
-			sql = "update batch set plant_one = NULL,cult_model_one = NULL,temperature_one = NULL,humidity_one = NULL,"
-					+ "led_one_left = NULL,led_one_middle = NULL,led_one_right = NULL, one_planting_time = NULL where batch_id = ?";
+			sql = "update batch set plant_three = NULL,cult_model_three = NULL,temperature_three = NULL,humidity_three = NULL,"
+					+ "led_three_left = NULL,led_three_middle = NULL,led_three_right = NULL, three_planting_time = NULL where batch_id = ?";
 			break;
 		default:
 			break;

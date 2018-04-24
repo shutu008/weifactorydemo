@@ -3,6 +3,8 @@ package com.vastsum.controller;
 import java.util.Date;
 
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -46,6 +48,8 @@ import springfox.documentation.annotations.ApiIgnore;
 @RequestMapping(value = "/batch")
 @Api(value = "/batch",tags={"批次管理"})
 public class BatchController extends BaseController {
+	
+	private static Logger logger = LoggerFactory.getLogger(BatchController.class);
 
     @Autowired
     private BatchService batchService;
@@ -328,6 +332,8 @@ public class BatchController extends BaseController {
        //获取设备ID
        Device device = deviceService.getDeviceBySn(order.getSn());
        device.setOrderStatus(orderStatus);
+       device.setTrustStatus("2");
+       logger.debug("支付成功，订单状态："+orderStatus);
        deviceService.update(device);
        return V.ok();
     }
