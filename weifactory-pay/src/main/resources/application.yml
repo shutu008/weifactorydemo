@@ -1,17 +1,40 @@
+# 服务器的属性配置
+serverend:
+  ip: 121.196.217.247
+  domain: pay.weifactory.vastsum.net
+
+# 用于微信的配置项
+wechat:
+  token: weixin2016
+  appID: wxc4067348a27be3b9
+  appsecret: 410f2a579f8add4e4054d5806b287854
+  mchID: 1394334902
+  apikey: cqmygysdssjtwmydtsgxs1754299360s
+  notify_url: http://${serverend.domain}/wechat/notify
+
+# 用于支付宝支付的配置项
+alipay:
+  app_id: 2016102302300030
+  app_public_key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAottvUc36lD/F7gzgjkdGprGW2uMSv6Jzrt/rk8BRajoLNXim+60+NwxfxIhS8ppAQkDZH0rA4+yMrbCKWc9tGkq+699VJBt8UGmhckXSu6OvYVvEQMPyzqNO6LlcRgeW/BC+h4eu/TJ1E8mE+akhSh8C+Wrn/UewIxufMVytO0vT+8Le+8PAhDiwUs/OV8CGTqTXZu9J4t2RFt+VGQLi6fJ79K1xEPf+Sr9taSRjjO5H4Ml5i9krfO7cnrHdz7vURn/YYBxw1NieeteU5fqaCG/RZKg7cJ5Tehp00EvSa4ou+8hQqHiEFO24G9Qm5pQoPeEliV+DQ2U1RQ13pEJPmwIDAQAB
+  app_private_key: MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCi229RzfqUP8XuDOCOR0amsZba4xK/onOu3+uTwFFqOgs1eKb7rT43DF/EiFLymkBCQNkfSsDj7IytsIpZz20aSr7r31UkG3xQaaFyRdK7o69hW8RAw/LOo07ouVxGB5b8EL6Hh679MnUTyYT5qSFKHwL5auf9R7AjG58xXK07S9P7wt77w8CEOLBSz85XwIZOpNdm70ni3ZEW35UZAuLp8nv0rXEQ9/5Kv21pJGOM7kfgyXmL2St87tyesd3Pu9RGf9hgHHDU2J5615Tl+poIb9FkqDtwnlN6GnTQS9Jrii77yFCoeIQU7bgb1CbmlCg94SWJX4NDZTVFDXekQk+bAgMBAAECggEAROh4V7LB/gxl4W3NbiY2fL3TyNYfzrocHLheY2wShtH8gCmG7iLFmmE//FZ6UnB2FBKATD9DEq26cJusTof38BIEaqVazyZaGWQ4jbOBkSeXQ6iih4zhphFviAU2R+NaPVmQZKRCpJu+8hpoi4LGtSgeCA72DjNREenUF/zQx6+HBE+RuaORFgpTqAuoTistAv7dSmbF58/NL5CMeYSljIwWcBcV/paB7qN0lGY1FZNKth3TDiQlhpPd65fQeNzMSXhdvu2vdW1WmkfP5G+2gt+yAyBbGEDNb77N5Y1C/UrQryaTv1dqFJ4SIGO8YxjVO/bMS3CiIHdjqsAzGK+JcQKBgQDW3o+UtwgiZ82jiHTVO5TTIEleQ7FxNs4azbg1QxLrHeDcuL+okfu8TIMtbpseqTWm0/1W+zTqjbK6ucxkwG2a/W5ZSQzPo+joh4g/aVpqewMiIuqbwTpRxEsrMvi+k6zBr1YUn/2+JUvwPD5TfbIrKFP7X1hTSlOoFoyWoaGy3wKBgQDCCBKI+o1SgWubTwrRlKuDfNRVlU9iVR4FT9cTOpwh9RSHumQ6N6MEhET41tHtwtVyyQfMj6blpJwoZfqdAKI0bU6CCEbeoNZ9LYpvULj5TO3BrREwTl1TXs5nk/PkT/k3EiT+CFbwvBkkX1/LL4XoI5CroT1wGxoLKJikqZuWxQKBgF3n0tRp0bJHr4XDA1yVt4s11xrNduVF0HnCYrlUYRZEbpvIWmrvshcvUT0v07douDv69gNnsk64Mt6MiRmXR8+u5uU6mdC9j/LgGNmtz4gtzsbCf8omfrhxk3CDzFZt79iOKo7FBX5uimupyItwqcdWzq1TlCSCnWEeyb6jUSn9AoGAakl5vcdiOtviUkVOK9hAy9pJhkgwIDF4LHi73DCy7ncOM/uKg8mOZx79mUIz5QZhXmt49jmKtykg0ZBrZC3ArO9jnh9ikvmQBSo5NxkE+quFYh6n18pVnSHF9z84zsxwPBaYZP+0gFLJgv8rvmXd+Hfi++FrgkmWTp6CX1D5hfECgYAnzQO1YynnioaDwHZXiIhMgpHtaLOExWGgerCUXV9f/jkSzOrzLa+PyoBvVehjL/+yU+o+UZucpv6CbBmYh78S7rQ7xk8StQB7T4ChhaBliJzPLB9YScVPYTepfHOdH7ZjHD1ZbIhYOCbVC+XY5G4LPpsmBbFFrIyo33FY+kGQWw==
+  alipay_public_key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArGlgP6BrzoNlBXqq5yxP+LSJMSRqX0/BMHHNfquaAADw7lYRX3ZxxEnjrFg9afM4KE9UAwORWh+6YsSqTJxQWmi7j1H3EPqpamTNoCUpCIUo32LyCuXAVJBYexLmuvanqpUGV2DuelZ+1LQ8smn3THjX+9+HH1DXDSMP2AcA1FkvXSisNTR3C3Rb3Ua2nXxE6F0EKwpd3fuHHoniv1A+kOps8LnICu2/XKeqX9St1RDfi9RjDYltrkI8vCBaLHvCI9CDAORFQGsFaxyGra0jqMKe5lVdhezud/auexblJh7xRByrL/Hxtw9XT5lJng0Qdhgjgl75huLr5y3yUsL74wIDAQAB
+  gateway: https://openapi.alipay.com/gateway.do
+  format: json
+  charset: UTF-8
+  sign_type: RSA2
+  app_gateway: http://${serverend.domain}/inter/notify
+  app_callback: http://${serverend.domain}/inter/callback
+
 spring:
   jpa:
-    show-sql: true
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://121.196.217.247:3306/weifactory?characterEncoding=utf-8
+    url: jdbc:mysql://${serverend.ip}:3306/weifactory?characterEncoding=utf-8
     username: root
     password: jsdxngyzzy666
     driver-class-name: com.mysql.jdbc.Driver
 
-wechat:
-  appid: wxc4067348a27be3b9
-  appSecret: 410f2a579f8add4e4054d5806b287854
-  domain: saber.nat100.top
-  mchid: 1394334902
-  apikey: cqmygysdssjtwmydtsgxs1754299360s
+
+server:
+  port: 9000
