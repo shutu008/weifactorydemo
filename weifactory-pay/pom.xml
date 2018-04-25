@@ -3,27 +3,26 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.vastsum</groupId>
-	<artifactId>platform-utils</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
-
-	<name>platform-utils</name>
-	<description>Utils for alipay and net.vastsum.weifactory.payapis.wechat</description>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.7.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  <parent>
+	    <groupId>com.vastsum</groupId>
+	    <artifactId>weifactory</artifactId>
+	    <version>1.0.0-SNAPSHOT</version>
+	  </parent>
+	  
+	  
+	 <artifactId>weifactory-pay</artifactId>
+	  <name>weifactory-pay</name>
+	  <packaging>jar</packaging>
+	  
+	  <properties>
+	  	<skipTests>true</skipTests>
+	  	<dubbo-spring-boot>1.0.0</dubbo-spring-boot>
+	  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<jackson.version>2.9.1</jackson.version>
-	</properties>
+	  </properties>
+	
 
 	<dependencies>
 
@@ -72,34 +71,29 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>${jackson.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>4.2-alpha1</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>${jackson.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-			<version>${jackson.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
-			<version>1.10</version>
 		</dependency>
 
 		<dependency>
@@ -107,15 +101,29 @@
 			<artifactId>alipay-sdk</artifactId>
 			<version>20180104135026</version>
 		</dependency>
+		
 
 	</dependencies>
 
 	<build>
+	<finalName>weifactory-pay</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.3.3.RELEASE</version>
+                <configuration>
+                	<mainClass>net.vastsum.weifactory.payapis.PayApisApplication</mainClass>
+                	<layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>	
+            </plugin>
 		</plugins>
 	</build>
 

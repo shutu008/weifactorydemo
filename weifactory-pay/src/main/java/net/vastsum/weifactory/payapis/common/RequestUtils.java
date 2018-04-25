@@ -1,12 +1,13 @@
 package net.vastsum.weifactory.payapis.common;
 
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.HashMap;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 /**
  * 针对Request的操作工具

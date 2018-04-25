@@ -1,7 +1,8 @@
 package net.vastsum.weifactory.payapis.common;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+import java.io.StringWriter;
+import java.security.MessageDigest;
+import java.util.Map;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -12,11 +13,9 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.StringWriter;
-import java.security.MessageDigest;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Map;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 /**
  * @author 赵艺茗
