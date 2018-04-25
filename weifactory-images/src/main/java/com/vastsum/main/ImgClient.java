@@ -38,24 +38,26 @@ public class ImgClient {
                             ch.pipeline().addLast(new ImgClientHandler());
                         }
                     });
-            //ChannelFuture f=b.connect("localhost",8235).sync();
-            ChannelFuture f=b.connect("121.196.217.247",8235).sync();
+            ChannelFuture f=b.connect("localhost",8235).sync();
+            // ChannelFuture f=b.connect("121.196.217.247",8235).sync();
 
             //要发送的数据
-            InputStream in = new FileInputStream("D:\\aaa.jpg");
+            InputStream in = new FileInputStream("/Users/shutu008/Pictures/b.jpg");
             //图片数据处理
-            File file = new File("D:\\aaa.jpg");
+            File file = new File("/Users/shutu008/Pictures/b.jpg");
             long len = file.length();
             DecimalFormat decimalFormat = new DecimalFormat("00000000");
             String dataLen = decimalFormat.format(len);
             Integer intDateLen = Integer.valueOf(dataLen);
             byte[] imageData = new byte[intDateLen];
             in.read(imageData);
-            f.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC2017100800010#M001#JPG#"+dataLen+"#").getBytes()));
+            f.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2017100800007#1234567890123$".getBytes()));
+            f.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC#"+dataLen+"#0003#999#").getBytes()));
             
             f.channel().writeAndFlush(Unpooled.copiedBuffer(imageData)).addListener(new ClientChannelFutureListener());
+            f.channel().writeAndFlush(Unpooled.copiedBuffer(("$").getBytes()));
             in.close();
-            f.channel().closeFuture().sync();
+           // f.channel().closeFuture().sync();
         }catch (Exception e){
         	e.printStackTrace();
         }finally {

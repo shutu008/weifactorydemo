@@ -1,9 +1,13 @@
 package com.vastsum.decoder;
 
 import java.nio.charset.Charset;
+import java.util.Date;
 import java.util.List;
 
-import com.vastsum.entity.ImageData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.vastsum.entity.DataEntity;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -16,10 +20,11 @@ import io.netty.handler.codec.ByteToMessageDecoder;
  */
 public class ImageDecoder extends ByteToMessageDecoder  {
 
+	private static Logger logger = LoggerFactory.getLogger(ImageDecoder.class);
 	@Override
 	protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
-		//判断缓冲区有多少字符，
-		if (in.readableBytes() < 37) {
+		//判断缓冲区有多少字符，#ZWGC#00000100#0003#999#AAAAAAAAAA…#1234567890123$
+		if (in.readableBytes() < 24) {
 			return;
 		}
 		
@@ -29,29 +34,28 @@ public class ImageDecoder extends ByteToMessageDecoder  {
 		//循环寻找包头
 		while(true){
 			//readCharSequence会移动read索引
-			CharSequence sequence = in.readCharSequence(5, Charset.forName("UTF-8"));
-			if (sequence.equals("#ZWGC")) {
+			CharSequence sequence = in.readCharSequence(6, Charset.forName("UTF-8"));
+			if (sequence.equals("#ZWGC#")) {
 				break;
 			}
 		}
 		
-		//读取的是头部信息：#ZWGC2017100800003#M001#JPG#99999999#
-		//已经读取了#ZWGV数据，接下来读取 2017100800003#M001#JPG#99999999# 字符串
-		byte[] header = new byte[32];
+		//读取的是头部信息：#ZWGC#00000100#0003#999#或者#ZWGC#00000017#0005#001#
+		//已经读取了#ZWGC数据
+		byte[] header = new byte[18];
 		//已经读取一部分数据了，读指针已经移动
-		in.readBytes(header);//这句读过数据后，缓存中已经少了37byte
+		in.readBytes(header);//这句读过数据后，缓存中已经少了24byte
 		String headerStr = new String(header);
 		
 		String[] sp = headerStr.split("#");
-		if (sp.length <4) {
+		if (sp.length <3) {
 			ctx.close();
 			throw new RuntimeException("数据解码异常");
 		}
-		String sn = "ZWGC"+sp[0];
-		String sensorType = sp[1];
-		String picType = sp[2];
-		Integer dataLen = Integer.valueOf(sp[3]);
-		
+		logger.info("数据获取正常，正在解析数据！");
+		Integer dataLen = Integer.parseInt(sp[0]);
+		String moduleType = sp[1];
+		String sensorType = sp[2];
 		if (in.readableBytes()<dataLen) {
 			//读指针重置（图片数据可能没过来完全，重新从包头开始）
 			in.resetReaderIndex();
@@ -60,13 +64,13 @@ public class ImageDecoder extends ByteToMessageDecoder  {
 		byte[] data = new byte[dataLen];
 		in.readBytes(data);
 		
-		ImageData imageData = new ImageData();
-		imageData.setSn(sn);
-		imageData.setSensorType(sensorType);
-		imageData.setPicType(picType);
-		imageData.setDataLen(dataLen);
-		imageData.setImageByte(data);
-		out.add(imageData);
-			
-	}
+		DataEntity dataEntity = new DataEntity();
+		dataEntity.setData(data);
+		dataEntity.setDataLen(dataLen);
+		dataEntity.setDate(new Date());
+		dataEntity.setModuleType(moduleType);
+		dataEntity.setSensorType(sensorType);
+		out.add(dataEntity);
+		}
+		
 }

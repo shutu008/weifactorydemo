@@ -14,8 +14,8 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import com.vastsum.entity.CommunicationLog;
+import com.vastsum.entity.DataEntity;
 import com.vastsum.entity.Image;
-import com.vastsum.entity.ImageData;
 import com.vastsum.pojo.OptionType;
 import com.vastsum.server.CommunicationService;
 import com.vastsum.server.ImageServer;
@@ -56,11 +56,11 @@ public class ImgServerHandler extends ChannelInboundHandlerAdapter {
         LOGGER.info("我是服务器-已有客户端连接上服务器....");
         //获取连接的ip地址
         LOGGER.info("获取客户端ip:" + ctx.channel().remoteAddress());
-        Long currentTime = System.currentTimeMillis();
-        //当机器连接上服务器时，返回给客户端的信息
-        ctx.writeAndFlush(Unpooled.copiedBuffer((currentTime+"").getBytes()));
-        LOGGER.info("设备连接上服务器，返回时间戳："+currentTime);
-
+//        Long currentTime = System.currentTimeMillis();
+//        //当机器连接上服务器时，返回给客户端的信息
+//        ctx.writeAndFlush(Unpooled.copiedBuffer((currentTime+"").getBytes()));
+//        LOGGER.info("设备连接上服务器，返回时间戳："+currentTime);
+        
     }
 
     //连接断开时调用的方法
@@ -73,45 +73,47 @@ public class ImgServerHandler extends ChannelInboundHandlerAdapter {
         NettyChannelMap.remove((SocketChannel)ctx.channel());
     }
 
-
-
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception{
-       ImageData imageData = (ImageData)msg;
-       if (imageData != null) {
-	      
-           long currentTime = System.currentTimeMillis();
-           Random random = new Random();
-           int i = random.nextInt(100);
-           String fileName = imageData.getSn()+"_"+currentTime+"_"+i+".jpg";
-           String path= ResourceProperty.getProperty("img.dir")+fileName;
-           File file=new File(path);
-           if(!file.exists()){
-               file.createNewFile();
-           }
-           
-	       try(FileOutputStream fos=new FileOutputStream(file,true)) {
-	           fos.write(imageData.getImageByte());
-	           fos.flush();
-	           //设备序列号与SocketChannel绑定
-	           NettyChannelMap.add(imageData.getSn(), (SocketChannel)ctx.channel());
-	           //将数据写到文件之后将文件地址写入数据库，只需要写入文件名即可，web读取时加上主机名
-	           LOGGER.info("图片写入成功！");
-	           Integer j = saveImage(imageData.getSn(), imageData.getSensorType(), fileName);
-	           //客户端连接
-	           CommunicationLog c = getCommunicationLog(ctx, OptionType.CONNECT.getValue(), imageData.getSn());
+       DataEntity dataEntity = (DataEntity)msg;
+       long currentTime = System.currentTimeMillis();
+       if (dataEntity != null) {
+	      //先获取设备信息，连接上通道，然后再保存数据
+    	   if ("005".equals(dataEntity.getModuleType()) && "001".equals(dataEntity.getSensorType())) {
+			String sn = new String(dataEntity.getData());
+			 NettyChannelMap.add(sn, (SocketChannel)ctx.channel());
+			 LOGGER.info("设备序列号已经与通道绑定："+sn+"通道为："+((SocketChannel)ctx.channel()).toString());
+			   ctx.writeAndFlush(Unpooled.copiedBuffer((ResourceProperty.getProperty("response.success")+currentTime+"$").getBytes()));
+			 //客户端连接
+	           CommunicationLog c = getCommunicationLog(ctx, OptionType.CONNECT.getValue(), sn);
 	           communicationService.save(c);
-	
-	           ctx.writeAndFlush(Unpooled.copiedBuffer((""+j).getBytes()));
-	           ctx.writeAndFlush(Unpooled.copiedBuffer("666666".getBytes()));
-	           //执行成功主动断开连接
-	           ctx.close();
-	       } catch (IOException e) {
-	           ctx.writeAndFlush(Unpooled.copiedBuffer(("0").getBytes()));
-	           ctx.close();
-	           e.printStackTrace();
-	       }
-       
+    	   }else {
+    		   LOGGER.info("开始获取图片数据");
+    		   String sn = NettyChannelMap.getSn(ctx.channel());
+               Random random = new Random();
+               int i = random.nextInt(100);
+               String fileName = sn+"_"+currentTime+"_"+i+".jpg";
+               String path= ResourceProperty.getProperty("img.dir")+fileName;
+               File file=new File(path);
+               if(!file.exists()){
+                   file.createNewFile();
+               }
+               
+    	       try(FileOutputStream fos=new FileOutputStream(file,true)) {
+    	           fos.write(dataEntity.getData());
+    	           fos.flush();
+    	           //将数据写到文件之后将文件地址写入数据库，只需要写入文件名即可，web读取时加上主机名
+    	           LOGGER.info("图片写入成功！,存储路径为："+path+fileName);
+    	            saveImage(sn, dataEntity.getSensorType(), fileName);
+    	       } catch (IOException e) {
+    	           ctx.writeAndFlush(Unpooled.copiedBuffer((ResourceProperty.getProperty("response.success")+currentTime+"$").getBytes()));
+    	           ctx.close();
+    	           e.printStackTrace();
+    	       }
+           
+    	   }//end else
+    	   
+          
        }
     }
     
@@ -124,15 +126,13 @@ public class ImgServerHandler extends ChannelInboundHandlerAdapter {
     }
 
     //保存图片信息
-    private Integer saveImage(String sn, String sensorMark, String path){
-       /* Image image  = new Image();
-        image.setSn(sn);
-        image.setSensorMark(sensorMark);
-        image.setPath(path);
-        image.setGmtCreate(new Date());
-        Integer i = imageServer.save(image);
-        return i;*/
-    	return 0;
+    private void saveImage(String sn, String sensorMark, String fileName){
+      Image image = new Image();
+      image.setSn(sn);
+      image.setSensorMark(sensorMark);
+      image.setOnePicName(fileName);
+      image.setGmtCreate(new Date());
+      imageServer.save(image);
     }
     
     

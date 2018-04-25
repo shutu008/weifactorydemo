@@ -9,7 +9,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import com.vastsum.entity.Image;
-import com.vastsum.server.DeviceService;
 import com.vastsum.server.ImageServer;
 import com.vastsum.utils.DateTimeUtils;
 
@@ -23,26 +22,14 @@ public class ImageServerImpl implements ImageServer {
     @Autowired
     private JdbcTemplate jdbcTemplate;
     
-    @Autowired
-    private DeviceService deviceService;
     
     /**
      * 一天只保存一张图片
      */
     @Override
     public void save(Image image) {
-    	//根据设备id获取最新的批次信息、
-    	Integer deviceId = deviceService.getDeviceIdBySn(image.getSn());
-    	if (deviceId == null) {
-			return;
-		}
-    	Map<String, Object> map = deviceService.getLastByDeviceId(deviceId);
-    	if (map == null || map.isEmpty()) {
-			return;
-		}
-    	String sql = "insert into image (sn, )";
-    	
-        
+    	String sql = "insert into image (sn,sensor_mark,one_pic_name,gmt_create ) values(?,?,?,?)";
+    	jdbcTemplate.update(sql, image.getSn(),image.getSensorMark(),image.getOnePicName(),image.getGmtCreate());
     }
 
     /**

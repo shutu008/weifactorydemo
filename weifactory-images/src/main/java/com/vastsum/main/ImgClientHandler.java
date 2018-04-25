@@ -17,17 +17,24 @@ public class ImgClientHandler extends ChannelInboundHandlerAdapter{
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception{
+    	
+    	 ByteBuf buf = (ByteBuf)msg;
+         byte[] data = new byte[buf.readableBytes()];
+         buf.readBytes(data);
 
-        try {
-            ByteBuf buf = (ByteBuf)msg;
-            byte[] data = new byte[buf.readableBytes()];
-            buf.readBytes(data);
+         String request = new String(data,"utf-8");
+         System.out.println("Client:"+request);
 
-            String request = new String(data,"utf-8");
-            System.out.println("Client:"+request);
-        }finally {
-            ReferenceCountUtil.release(msg);
-        }
+//        try {
+//            ByteBuf buf = (ByteBuf)msg;
+//            byte[] data = new byte[buf.readableBytes()];
+//            buf.readBytes(data);
+//
+//            String request = new String(data,"utf-8");
+//            System.out.println("Client:"+request);
+//        }finally {
+//            ReferenceCountUtil.release(msg);
+//        }
 
     }
 
