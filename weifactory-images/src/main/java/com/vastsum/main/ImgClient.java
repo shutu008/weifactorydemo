@@ -4,12 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.text.DecimalFormat;
-import java.util.Arrays;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.vastsum.listener.ClientChannelFutureListener;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.Unpooled;
@@ -45,8 +42,8 @@ public class ImgClient {
                             ch.pipeline().addLast(new ImgClientHandler());
                         }
                     });
-            ChannelFuture f=b.connect("localhost",8235).sync();
-            // ChannelFuture f=b.connect("121.196.217.247",8235).sync();
+            //ChannelFuture f=b.connect("localhost",8235).sync();
+             ChannelFuture f=b.connect("121.196.217.247",8235).sync();
 
             //要发送的数据
             InputStream in = new FileInputStream("/Users/shutu008/Pictures/b.jpg");
@@ -59,7 +56,7 @@ public class ImgClient {
             Integer intDateLen = Integer.valueOf(dataLen);
             byte[] imageData = new byte[intDateLen];
             in.read(imageData);
-            f.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2017100800007#1234567890123$".getBytes()));
+            f.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2018032665194#1234567890123$".getBytes()));
             byte[] a = ("#ZWGC#"+dataLen+"#0003#999#").getBytes();
             byte[] a1 = "1234567890123#".getBytes();
             byte[] b1 = "$".getBytes();

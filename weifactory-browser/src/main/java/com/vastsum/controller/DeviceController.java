@@ -21,6 +21,7 @@ import com.github.pagehelper.PageInfo;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceSn;
+import com.vastsum.entity.Role;
 import com.vastsum.entity.vo.UserDevice;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
@@ -28,6 +29,7 @@ import com.vastsum.model.V;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.BizControlService;
 import com.vastsum.service.DeviceService;
+import com.vastsum.service.RoleService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -49,20 +51,30 @@ public class DeviceController extends BaseController {
     private BizControlService bizControlService;
     @Autowired
     private BatchService batchService;
+    @Autowired
+    private RoleService roleService;
 
     @RequestMapping(value="/deviceList/{userId}",method = RequestMethod.GET)
     @ApiOperation(value = "根据用户id查询设备",notes = "根据用户id查询设备")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "userId",value = "用户id",required = true)
     })
-    public ResponseEntity<ResultModel> deviceList(
-            @PathVariable Integer userId
-    )
+    public ResponseEntity<ResultModel> deviceList(@PathVariable Integer userId)
     {
-        if (userId == null || "".equals(userId)) {
+        if (userId == null) {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_ID_NULL));
         }
-        List<Device> devices = deviceService.findDevicesByuserId(userId);
+        //判断用户角色，如果是普通用户，获取用户设备，如果是专家，获取托管给专家的设备
+        Role role = roleService.selectRoleByUserId(userId);
+        if (role == null) {
+			return V.error(" 此用户无角色！");
+		}
+        List<Device> devices = null;
+        if ("ROLE_USER".equals(role.getRoleName())) {
+        	devices = deviceService.findDevicesByuserId(userId);
+		}else if ("ROLE_EXPERT".equals(role.getRoleName())) {
+			devices = deviceService.turstDevicesByExpertId(userId);
+		}
         return ResponseEntity.ok(ResultModel.ok(devices));
     }
     
@@ -142,7 +154,7 @@ public class DeviceController extends BaseController {
             @ApiImplicitParam(paramType = "path",name = "id",value = "设备id",required = true)
     })
     public ResponseEntity<ResultModel> delete(@PathVariable Integer id){
-        if (id == null || "".equals(id)) {
+        if (id == null) {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.DEVICE_ID_NULL));
         }
         Device device = new Device();
@@ -178,7 +190,7 @@ public class DeviceController extends BaseController {
             @RequestParam(name = "note",required = false)String note
     ){
         Device device = new Device();
-        if(id == null || "".equals(id)) {
+        if(id == null) {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.DEVICE_ID_NULL));
         }
         device.setDeviceId(id);
@@ -222,6 +234,7 @@ public class DeviceController extends BaseController {
         return ResponseEntity.ok(ResultModel.ok(pageInfoDevice));
     }
 
+    @ApiIgnore
     @GetMapping(value = "/list/trust/{exportId}/{page}/{pageSize}")
     @ApiOperation(value = "根据专家id获取托管设备列表@20171118")
     @ApiImplicitParams({
@@ -232,7 +245,7 @@ public class DeviceController extends BaseController {
     public ResponseEntity<ResultModel> pageTrustDevice(@PathVariable Integer exportId,
                                                        @PathVariable Integer page,
                                                        @PathVariable Integer pageSize){
-        PageInfo<Device> pageInfoDevice = deviceService.pageTurstDevicesByExportId(exportId, page, pageSize);
+        PageInfo<Device> pageInfoDevice = deviceService.pageTurstDevicesByExpertId(exportId, page, pageSize);
         return ResponseEntity.ok(ResultModel.ok(pageInfoDevice));
     }
 

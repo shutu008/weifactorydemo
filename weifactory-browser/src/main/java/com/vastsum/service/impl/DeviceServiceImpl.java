@@ -1,20 +1,25 @@
 package com.vastsum.service.impl;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.vastsum.dao.BizOrderMapper;
-import com.vastsum.dao.DeviceMapper;
-import com.vastsum.entity.*;
-import com.vastsum.entity.vo.UserDevice;
-import com.vastsum.service.DeviceService;
-import com.vastsum.dao.DeviceSnMapper;
-import com.vastsum.dao.JoinMapper;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.vastsum.dao.BizOrderMapper;
+import com.vastsum.dao.DeviceMapper;
+import com.vastsum.dao.DeviceSnMapper;
+import com.vastsum.dao.JoinMapper;
+import com.vastsum.entity.BizOrder;
+import com.vastsum.entity.BizOrderExample;
+import com.vastsum.entity.Device;
+import com.vastsum.entity.DeviceExample;
+import com.vastsum.entity.DeviceSn;
+import com.vastsum.entity.DeviceSnExample;
+import com.vastsum.entity.vo.UserDevice;
+import com.vastsum.service.DeviceService;
 
 /**
  * 设备管理服务器
@@ -124,9 +129,11 @@ public class DeviceServiceImpl implements DeviceService {
 
     //根据专家id，获取被托管的设备信息
     @Override
-    public PageInfo<Device> pageTurstDevicesByExportId(Integer exportId, int page, int pageSize) {
+    public PageInfo<Device> pageTurstDevicesByExpertId(Integer expertId, int page, int pageSize) {
         BizOrderExample bizOrderExample = new BizOrderExample();
-        bizOrderExample.createCriteria().andExpertIdEqualTo(exportId);
+        bizOrderExample.createCriteria()
+        .andExpertIdEqualTo(expertId)
+        .andOrderStateEqualTo(new Byte("3"));
         List<BizOrder> bizOrders = bizOrderMapper.selectByExample(bizOrderExample);
         if (bizOrders == null || bizOrders.isEmpty()){
             return new PageInfo<Device>(new ArrayList<>(0));
@@ -137,12 +144,35 @@ public class DeviceServiceImpl implements DeviceService {
             snList.add(bizOrder.getSn());
         }
        DeviceExample deviceExample = new DeviceExample();
-       deviceExample.createCriteria().andSnIn(snList);
+       deviceExample.createCriteria().andOrderStatusEqualTo("3")
+       .andTrustStatusEqualTo("2");
         page = page == 0? 1:page;
         pageSize = pageSize == 0? 10:pageSize;
         PageHelper.startPage(page,pageSize);
         List<Device> devices = deviceMapper.selectByExample(deviceExample);
         return new PageInfo<>(devices);
+    }
+    
+    @Override
+	public List<Device> turstDevicesByExpertId(Integer expertId){
+    	 BizOrderExample bizOrderExample = new BizOrderExample();
+         bizOrderExample.createCriteria()
+         .andExpertIdEqualTo(expertId)
+         .andOrderStateEqualTo(new Byte("3"));
+         List<BizOrder> bizOrders = bizOrderMapper.selectByExample(bizOrderExample);
+         if (bizOrders == null || bizOrders.isEmpty()){
+             return new ArrayList<>();
+         }
+         //获取设备序列号列表
+         List<String> snList = new ArrayList<>();
+         for (BizOrder bizOrder : bizOrders){
+             snList.add(bizOrder.getSn());
+         }
+        DeviceExample deviceExample = new DeviceExample();
+        deviceExample.createCriteria().andOrderStatusEqualTo("3")
+        .andTrustStatusEqualTo("2");
+         List<Device> devices = deviceMapper.selectByExample(deviceExample);
+         return devices;
     }
 
     //获取设备序列号列表

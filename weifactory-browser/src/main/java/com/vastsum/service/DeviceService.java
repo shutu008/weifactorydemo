@@ -93,12 +93,18 @@ public interface DeviceService {
 
     /**
      * 根据专家id，获取被托管的设备信息
-     * @param exportId
+     * @param expertId
      * @param page
      * @param pageSize
      * @return PageInfo<Device>
      */
-    PageInfo<Device> pageTurstDevicesByExportId(Integer exportId, int page, int pageSize);
+    PageInfo<Device> pageTurstDevicesByExpertId(Integer expertId, int page, int pageSize);
+    /**
+     * 根据专家id，获取被托管的设备信息
+     * @param expertId
+     * @return PageInfo<Device>
+     */
+    List<Device> turstDevicesByExpertId(Integer expertId);
     
     /**
      * 获取设备序列号列表
