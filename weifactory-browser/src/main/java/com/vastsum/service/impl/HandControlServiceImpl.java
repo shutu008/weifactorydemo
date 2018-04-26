@@ -1,5 +1,7 @@
 package com.vastsum.service.impl;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -78,17 +80,24 @@ public class HandControlServiceImpl implements HandControlService {
 			Class<HandControl> clazz = HandControl.class;
 			Field[] fields = clazz.getDeclaredFields();
 			for(Field f : fields) {
-				try {
-					String fieldName = f.getName();
-					String publicMethodName = "get"+fieldName.substring(0, 1).toUpperCase()+fieldName.substring(1);
-					Method m = clazz.getMethod(publicMethodName);
-					Object resultCurrent = (Object)m.invoke(handControl);
-					Object resultDb = (Object)m.invoke(dbHandControl);
-					if(resultCurrent!=null&&!resultCurrent.equals(resultDb)) {
-						hashMap.put(fieldName, resultCurrent);
+				System.out.println("字段的类型："+f.getType().toString());
+				if(f.getType() == String.class || f.getType() == Long.class) {
+					try {
+						String fieldName = f.getName();
+						System.out.println("字段名："+fieldName);
+						String publicMethodName = "get"+fieldName.substring(0, 1).toUpperCase()+fieldName.substring(1);
+						System.out.println("方法名："+publicMethodName);
+						Method m = clazz.getMethod(publicMethodName);
+						Object resultCurrent = (Object)m.invoke(handControl);
+						Object resultDb = (Object)m.invoke(dbHandControl);
+						System.out.println("当前值："+resultCurrent);
+						System.out.println("数据库中值："+resultDb);
+						if(resultCurrent!=null&&!resultCurrent.equals(resultDb)) {
+							hashMap.put(fieldName, resultCurrent);
+						}
+					}catch(Exception e) {
+						e.printStackTrace();
 					}
-				}catch(Exception e) {
-					e.printStackTrace();
 				}
 			}
 		
