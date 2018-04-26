@@ -95,10 +95,10 @@ public class HandController  extends BaseController  {
 		if(handControl == null){
 			return V.error("手动控制参数不能为空");
 		}
+		handRemoteService.sendOrder(handControlService.changeOrder(handControl));
 		//手动控制保存成功
 		handControlService.saveOrUpdate(handControl);
-		//TODO: 实现传送数据到远程接口
-		handRemoteService.sendOrder(handControlService.changeOrder(handControl));
+		
 		return V.ok();
     }
 	
