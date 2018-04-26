@@ -2,9 +2,9 @@ package net.vastsum.weifactory.payapis.controller;
 
 import net.vastsum.weifactory.payapis.common.RequestUtils;
 import net.vastsum.weifactory.payapis.service.AlipayService;
-import net.vastsum.weifactory.payapis.websocket.MyWebSocket;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -25,9 +25,10 @@ public class InterController {
      */
     @ResponseBody
     @GetMapping("/callback")
-    public String server_callback(){
-        MyWebSocket.sendMessage("223900","haha");
-        return "OK";
+    public ModelAndView server_callback(){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("pay-success");
+        return mv;
     }
 
     /**
