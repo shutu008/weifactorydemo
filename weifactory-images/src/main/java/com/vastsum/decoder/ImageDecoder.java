@@ -36,6 +36,7 @@ public class ImageDecoder extends ByteToMessageDecoder  {
 			//readCharSequence会移动read索引
 			CharSequence sequence = in.readCharSequence(6, Charset.forName("UTF-8"));
 			if (sequence.equals("#ZWGC#")) {
+				logger.info("找到数据协议包");
 				break;
 			}
 		}
@@ -52,15 +53,17 @@ public class ImageDecoder extends ByteToMessageDecoder  {
 			ctx.close();
 			throw new RuntimeException("数据解码异常");
 		}
-		logger.info("数据获取正常，正在解析数据！");
 		Integer dataLen = Integer.parseInt(sp[0]);
 		String moduleType = sp[1];
 		String sensorType = sp[2];
 		if (in.readableBytes()<dataLen) {
 			//读指针重置（图片数据可能没过来完全，重新从包头开始）
+			logger.info("指针重置，再次读取数据");
 			in.resetReaderIndex();
 			return;
 		}
+		
+		
 		byte[] data = new byte[dataLen];
 		in.readBytes(data);
 		
@@ -71,6 +74,13 @@ public class ImageDecoder extends ByteToMessageDecoder  {
 		dataEntity.setModuleType(moduleType);
 		dataEntity.setSensorType(sensorType);
 		out.add(dataEntity);
+		
+		//丢弃一部分数据
+//		if ("0005".equals(moduleType) && "001".equals(sensorType)) {
+//			in.readCharSequence(15, Charset.forName("UTF-8"));
+//		}
+		in.readCharSequence(15, Charset.forName("UTF-8"));
+		
 		}
 		
 }

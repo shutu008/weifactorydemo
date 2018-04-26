@@ -4,6 +4,8 @@ import com.vastsum.decoder.ImageDecoder;
 import com.vastsum.utils.ResourceProperty;
 import com.vastsum.utils.SpringConfigUtil;
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -11,6 +13,7 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -35,11 +38,15 @@ public class ImgServer {
         bootstrap.group(bossGroup,workerGroup)
         //自定NioServerSocketChannel这种类型的通信
         .channel(NioServerSocketChannel.class)
-                .option(ChannelOption.SO_BACKLOG,1024)
+                .option(ChannelOption.SO_BACKLOG,10240)
                 .handler(new LoggingHandler(LogLevel.INFO))
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel socketChannel) throws Exception {
+//                    	//设置特殊分隔符
+//                        ByteBuf buf = Unpooled.copiedBuffer("$".getBytes());
+//                        //指定缓冲大小
+//                        socketChannel.pipeline().addLast(new DelimiterBasedFrameDecoder(10240000,buf));
                     	socketChannel.pipeline().addLast("imageDecoder", new ImageDecoder());
                         socketChannel.pipeline().addLast(getServerHandler());
                     }

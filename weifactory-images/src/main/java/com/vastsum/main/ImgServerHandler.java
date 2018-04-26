@@ -7,6 +7,7 @@ import java.net.SocketAddress;
 import java.util.Date;
 import java.util.Random;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,7 +80,7 @@ public class ImgServerHandler extends ChannelInboundHandlerAdapter {
        long currentTime = System.currentTimeMillis();
        if (dataEntity != null) {
 	      //先获取设备信息，连接上通道，然后再保存数据
-    	   if ("005".equals(dataEntity.getModuleType()) && "001".equals(dataEntity.getSensorType())) {
+    	   if ("0005".equals(dataEntity.getModuleType()) && "001".equals(dataEntity.getSensorType())) {
 			String sn = new String(dataEntity.getData());
 			 NettyChannelMap.add(sn, (SocketChannel)ctx.channel());
 			 LOGGER.info("设备序列号已经与通道绑定："+sn+"通道为："+((SocketChannel)ctx.channel()).toString());
@@ -90,14 +91,19 @@ public class ImgServerHandler extends ChannelInboundHandlerAdapter {
     	   }else {
     		   LOGGER.info("开始获取图片数据");
     		   String sn = NettyChannelMap.getSn(ctx.channel());
+    		   if (StringUtils.isBlank(sn)) {
+				throw new NullPointerException("设备序列号不存在！");
+			}
                Random random = new Random();
                int i = random.nextInt(100);
                String fileName = sn+"_"+currentTime+"_"+i+".jpg";
                String path= ResourceProperty.getProperty("img.dir")+fileName;
-               File file=new File(path);
-               if(!file.exists()){
-                   file.createNewFile();
-               }
+               File file = new File(path);
+               File fileParent = file.getParentFile();  
+               if(!fileParent.exists()){  
+                   fileParent.mkdirs();  
+               }  
+               file.createNewFile();
                
     	       try(FileOutputStream fos=new FileOutputStream(file,true)) {
     	           fos.write(dataEntity.getData());

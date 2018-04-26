@@ -4,6 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.text.DecimalFormat;
+import java.util.Arrays;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.vastsum.listener.ClientChannelFutureListener;
 
@@ -22,6 +26,9 @@ import io.netty.channel.socket.nio.NioSocketChannel;
  * @create 2017-11-04 14:19
  */
 public class ImgClient {
+	
+	private static Logger logger = LoggerFactory.getLogger(ImgClient.class);
+	
     public static void main(String[] args) throws Exception{
         ImgClient client=new ImgClient();
         client.connect();
@@ -48,16 +55,31 @@ public class ImgClient {
             long len = file.length();
             DecimalFormat decimalFormat = new DecimalFormat("00000000");
             String dataLen = decimalFormat.format(len);
+            logger.info("数据长度："+dataLen);
             Integer intDateLen = Integer.valueOf(dataLen);
             byte[] imageData = new byte[intDateLen];
             in.read(imageData);
             f.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2017100800007#1234567890123$".getBytes()));
-            f.channel().writeAndFlush(Unpooled.copiedBuffer(("#ZWGC#"+dataLen+"#0003#999#").getBytes()));
-            
-            f.channel().writeAndFlush(Unpooled.copiedBuffer(imageData)).addListener(new ClientChannelFutureListener());
-            f.channel().writeAndFlush(Unpooled.copiedBuffer(("$").getBytes()));
+            byte[] a = ("#ZWGC#"+dataLen+"#0003#999#").getBytes();
+            byte[] a1 = "1234567890123#".getBytes();
+            byte[] b1 = "$".getBytes();
+            byte[] c = new byte[a.length+imageData.length+b1.length+a1.length];
+            for (int i = 0; i < a.length; i++) {
+				c[i] = a[i];
+			}
+            for(int i = 0; i< imageData.length ;i++) {
+            	c[a.length+i] = imageData[i];
+            }
+            for(int i = 0; i< a1.length ;i++) {
+            	c[a.length+imageData.length+i] = a1[i];
+            }
+            for (int i = 0; i < b1.length; i++) {
+				c[a.length+imageData.length+a1.length+i] =b1[i];
+			}
+            f.channel().writeAndFlush(Unpooled.copiedBuffer(c));
+            f.channel().writeAndFlush(Unpooled.copiedBuffer(c));
             in.close();
-           // f.channel().closeFuture().sync();
+            f.channel().closeFuture().sync();
         }catch (Exception e){
         	e.printStackTrace();
         }finally {
