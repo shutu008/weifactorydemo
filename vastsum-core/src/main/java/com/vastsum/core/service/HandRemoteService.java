@@ -1,5 +1,6 @@
 package com.vastsum.core.service;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -9,4 +10,5 @@ import java.util.HashMap;
  */
 public interface HandRemoteService {
 	void sendOrder(HashMap<String, Object> hashMap);
+	ArrayList<String> getOnlineDeviceList();
 }
