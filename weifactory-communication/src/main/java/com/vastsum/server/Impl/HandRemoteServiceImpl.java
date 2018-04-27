@@ -2,6 +2,7 @@ package com.vastsum.server.Impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,5 +33,10 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 			System.out.println("下达的控制指令："+cm.getMsg());
 			channel.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
 		}
+	}
+	
+	public ArrayList<String> getOnlineDeviceList(){
+		Set<String> set = NettyChannelMap.listSn();
+		return new ArrayList<String>(set);
 	}
 }
