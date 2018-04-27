@@ -54,5 +54,6 @@
     <module>weifactory-images</module>
     <module>weifactory-communication</module>
     <module>weifactory-pay</module>
-  </modules>
+    <module>weifactory-common</module>
+    </modules>
 </project>

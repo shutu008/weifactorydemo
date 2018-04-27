@@ -17,7 +17,7 @@
   <dependencies>
 	  <dependency>
 	  	<groupId>com.vastsum</groupId>
-	  	<artifactId>vastsum-core</artifactId>
+	  	<artifactId>weifactory-common</artifactId>
 	  	<version>${vastsum.version}</version>
 	  </dependency>
 	  <dependency>

@@ -6,23 +6,6 @@
 	<settings>
 		<setting name="logImpl" value="STDOUT_LOGGING"/>
 	</settings>
-	<typeAliases>
-		<typeAlias type="com.vastsum.entity.Device" alias="Device"/>
-		<typeAlias type="com.vastsum.entity.Batch" alias="Batch"/>
-		<typeAlias type="com.vastsum.entity.Comment" alias="Comment"/>
-		<typeAlias type="com.vastsum.entity.BizControl" alias="Control"/>
-		<typeAlias type="com.vastsum.entity.Role" alias="Role"/>
-		<typeAlias type="com.vastsum.entity.Humidity" alias="Humidity"/>
-		<typeAlias type="com.vastsum.entity.Image" alias="Image"/>
-		<typeAlias type="com.vastsum.entity.Mechanism" alias="Mechanism"/>
-		<typeAlias type="com.vastsum.entity.Post" alias="Post"/>
-		<typeAlias type="com.vastsum.entity.Sensor" alias="Sensor"/>
-		<typeAlias type="com.vastsum.entity.SysDictionary" alias="SysDictionary"/>
-		<typeAlias type="com.vastsum.entity.SysMenu" alias="SysMenu"/>
-		<typeAlias type="com.vastsum.entity.SysRoleMenu" alias="SysRoleMenu"/>
-		<typeAlias type="com.vastsum.entity.User" alias="User"/>
-		<typeAlias type="com.vastsum.entity.UserRole" alias="UserRole"/>
-	</typeAliases>
 	<plugins>
 		<!-- com.github.pagehelper为PageHelper类所在包名 -->
 		<plugin interceptor="com.github.pagehelper.PageHelper">
