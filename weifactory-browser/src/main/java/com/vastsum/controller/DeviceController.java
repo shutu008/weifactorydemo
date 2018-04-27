@@ -2,6 +2,7 @@ package com.vastsum.controller;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.github.pagehelper.PageInfo;
 import com.vastsum.controller.system.BaseController;
+import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceSn;
 import com.vastsum.entity.Role;
@@ -53,6 +55,9 @@ public class DeviceController extends BaseController {
     private BatchService batchService;
     @Autowired
     private RoleService roleService;
+    //远程服务
+    @Autowired
+    private HandRemoteService handRemoteService;
 
     @RequestMapping(value="/deviceList/{userId}",method = RequestMethod.GET)
     @ApiOperation(value = "根据用户id查询设备",notes = "根据用户id查询设备")
@@ -251,11 +256,11 @@ public class DeviceController extends BaseController {
 
 
 
-    @ApiIgnore
     @GetMapping(value = "/list/onDevice")
-    @ApiOperation(value = "获取所有的在线设备列表")
+    @ApiOperation(value = "获取所有的在线设备列表@20180427")
     public ResponseEntity<ResultModel> listOnDevice(){
-        return V.ok();
+    	ArrayList<String> deviceList = handRemoteService.getOnlineDeviceList();
+        return V.ok(deviceList);
     }
 
     @GetMapping(value = "/{sn}")

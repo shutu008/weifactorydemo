@@ -86,7 +86,7 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
             	LOGGER.info("数据库状态改变失败，即将向客户端发送消息："+cmReplay.getMsg());
                 ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
             }else if (status == 1){
-                CommunicationMessage cmReplay = new CommunicationMessage(sn,5,3,"1");
+                CommunicationMessage cmReplay = new CommunicationMessage(sn,5,2,"1");
                 LOGGER.info("数据库状态改变成功，即将向客户端发送消息："+cmReplay.getMsg());
                 ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
             }

@@ -55,5 +55,7 @@
     <module>weifactory-communication</module>
     <module>weifactory-pay</module>
     <module>weifactory-common</module>
+    <module>vastsum-mqtt</module>
+    <module>vastsum-mqttclient</module>
     </modules>
 </project>
