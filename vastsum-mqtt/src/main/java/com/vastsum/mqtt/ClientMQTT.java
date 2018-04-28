@@ -60,7 +60,6 @@ public class ClientMQTT {
             String[] topic1 = {TOPIC1};  
             //客户端订阅指定的topic1消息，相当与服务器给指定的客户端的传感器发消息
             client.subscribe(topic1, Qos);  
-
         } catch (Exception e) {  
             e.printStackTrace();  
         }  

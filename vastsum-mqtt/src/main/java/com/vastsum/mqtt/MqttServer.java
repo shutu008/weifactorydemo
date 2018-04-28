@@ -34,7 +34,8 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 	     */  
 	    public MqttServer() throws MqttException {  
 	        // MemoryPersistence设置clientid的保存形式，默认为以内存保存  
-	        client = new MqttClient(HOST, clientid, new MemoryPersistence());  
+	        client = new MqttClient(HOST, clientid, new MemoryPersistence()); 
+	        //可以取消订阅，但是对方不知道服务器已经取消topic订阅，可以发条消息，如果没有回复，说明没用了
 	        connect();  
 	    }  
 
@@ -87,7 +88,7 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 	        server.message.setQos(1);  //保证消息能到达一次
 	        server.message.setRetained(true);  
 	        server.message.setPayload("这是推送消息的内容".getBytes());  
-	        server.publish(server.topic11 , server.message);  
+	        server.publish(server.topic11 , server.message); 
 	        System.out.println(server.message.isRetained() + "------ratained状态");  
 	    }  
 	}  
