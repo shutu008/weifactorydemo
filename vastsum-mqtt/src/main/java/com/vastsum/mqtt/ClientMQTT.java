@@ -3,7 +3,8 @@ package com.vastsum.mqtt;
 import java.util.concurrent.ScheduledExecutorService;  
 import org.eclipse.paho.client.mqttv3.MqttClient;  
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;  
-import org.eclipse.paho.client.mqttv3.MqttException;  
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttTopic;  
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;  
 
@@ -42,13 +43,22 @@ public class ClientMQTT {
             options.setKeepAliveInterval(20);  
             // 设置回调  
             client.setCallback(new PushCallback());  
-            MqttTopic topic = client.getTopic(TOPIC1);  
+            
             //setWill方法，如果项目中需要知道客户端是否掉线可以调用该方法。设置最终端口的通知消息  
 //遗嘱        options.setWill(topic, "close".getBytes(), 2, true);  
             client.connect(options);  
+            
+            MqttTopic topic = client.getTopic(TOPIC1);
+            //客户端topic发消息给服务器，相当与传感器发消息给服务器
+            MqttMessage message = new MqttMessage();
+            message.setPayload("23.3".getBytes());
+            topic.publish(message);
+            
+            //数据下发一个topic,数据采集需要另一个topic
             //订阅消息  
             int[] Qos  = {1};  
             String[] topic1 = {TOPIC1};  
+            //客户端订阅指定的topic1消息，相当与服务器给指定的客户端的传感器发消息
             client.subscribe(topic1, Qos);  
 
         } catch (Exception e) {  
