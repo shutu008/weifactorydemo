@@ -30,7 +30,7 @@ public class ClientApplication {
 	 @Bean
 	    public MqttPahoClientFactory mqttClientFactory() {
 	        DefaultMqttPahoClientFactory factory = new DefaultMqttPahoClientFactory();
-	        factory.setServerURIs("tcp://127.0.0.1:1883");
+	        factory.setServerURIs("tcp://121.196.217.247:1883");
 //	        factory.setUserName("username");
 //	        factory.setPassword("password");
 	        return factory;
@@ -40,7 +40,7 @@ public class ClientApplication {
 	    @ServiceActivator(inputChannel = "mqttOutboundChannel")
 	    public MessageHandler mqttOutbound() {
 	        MqttPahoMessageHandler messageHandler =
-	                       new MqttPahoMessageHandler("testClient", mqttClientFactory());
+	                       new MqttPahoMessageHandler("test2Client", mqttClientFactory());
 	        messageHandler.setAsync(true);
 	        messageHandler.setDefaultTopic("topic1");
 	        return messageHandler;
@@ -53,7 +53,6 @@ public class ClientApplication {
 
 	    @MessagingGateway(defaultRequestChannel = "mqttOutboundChannel")
 	    public interface MyGateway {
-
 	        void sendToMqtt(String data);
 
 	    }
