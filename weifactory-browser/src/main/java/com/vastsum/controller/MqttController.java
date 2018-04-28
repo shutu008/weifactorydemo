@@ -1,5 +1,10 @@
 package com.vastsum.controller;
 
+import javax.validation.Valid;
+
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
+import com.vastsum.mqtt.MqttServer;
+import com.vastsum.mqtt.PublishUtils;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -23,43 +30,31 @@ import io.swagger.annotations.ApiOperation;
 public class MqttController {
 
 
-    @PostMapping(value="/add")
-    @ApiOperation(value="添加topic")
+    @PostMapping(value="/publish")
+    @ApiOperation(value="给传感器发送指令@20180428")
     @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号", required = true),
-            @ApiImplicitParam(paramType = "query",name = "deviceType",value = "设备规格",required = false),
-            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户id",required = false),
-            @ApiImplicitParam(paramType = "query",name = "note",value = "备注信息",required = false)
+            @ApiImplicitParam(paramType = "query",name = "clientId",value = "clientId(设备序列号)", required = true),
+            @ApiImplicitParam(paramType = "query",name = "topic",value = "topic（传感器标识）",required = true),
+            @ApiImplicitParam(paramType = "query",name = "message",value = "要发送的消息",required = true)
     })
     public ResponseEntity<ResultModel> add(
-            @RequestParam(value = "sn",required = true)String sn,
-            @RequestParam(value = "deviceType",required = false)String deviceType,
-            @RequestParam(value = "userId",required = false)Integer userId,
-            @RequestParam(value = "note",required = false)String note
+            @RequestParam(value = "clientId",required = true)String clientId,
+            @RequestParam(value = "topic",required = true)String topic,
+            @RequestParam(value = "message",required = true)String message
     ){
-  
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.DEVICE_ADD_FAILED));
+    	MqttMessage mqttMessage = new MqttMessage();
+    	mqttMessage.setQos(1);
+    	mqttMessage.setPayload(message.getBytes());
+    	mqttMessage.setRetained(true);
+    	try {
+			MqttServer mqttServer = new MqttServer(topic, clientId, mqttMessage);
+			PublishUtils.publish(mqttServer);
+		} catch (MqttException e) {
+			e.printStackTrace();
+			return V.error("控制指令发送失败！");
+			
+		}
+            return V.ok();
     }
-
-    //根据设备id获取所有的批次信息
-    @GetMapping(value = "/{deviceId}/{page}/{pageSize}")
-    @ApiOperation(value = "根据设备id获取历史上所有的批次信息@20180326")
-    @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "path",name = "deviceId",value = "设备id",required = true),
-            @ApiImplicitParam(paramType = "path",name = "page",value = "页码",required = true),
-            @ApiImplicitParam(paramType = "path",name = "pageSize",value = "页数",required = true)
-    })
-    public ResponseEntity<ResultModel> batchList(@PathVariable Integer deviceId,
-                                                 @PathVariable Integer page,
-                                                 @PathVariable Integer pageSize){
-        if (deviceId == null) {
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.DEVICE_ID_NULL));
-        }
-        return V.ok(null);
-    }
-    
-    //添加topic
-    //列出所有的topic
-    //指定topic 发布消息
     
 }
