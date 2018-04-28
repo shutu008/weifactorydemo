@@ -2,8 +2,6 @@ package com.vastsum.controller;
 
 import java.util.HashMap;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.HandControl;
-import com.vastsum.entity.pojo.Demo;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
 import com.vastsum.service.HandControlService;
