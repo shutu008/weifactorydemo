@@ -12,11 +12,11 @@ public class ParserMessageUtils {
 	
 	private static Logger logger = LoggerFactory.getLogger(ParserMessageUtils.class);
 	
-	public static ArrayList<CommunicationMessage> encodeHashMap(HashMap<String, Object> hashMap) {
+	public static ArrayList<CommunicationMessage> encodeHashMap(HashMap<String, Object> hashMap, Integer model) {
 		ArrayList<CommunicationMessage> listCM = new ArrayList<>();
 		
 		if (hashMap != null) {
-			logger.info(hashMap.toString());
+			logger.info("准备下发的初始数据："+hashMap.toString());
 		}else {
 			logger.info("下发了空参数：hashmap="+null);
 		}
@@ -24,10 +24,10 @@ public class ParserMessageUtils {
 		hashMap.forEach((k,v)->{
 			try {
 				if(!k.equals("sn")) {
-					Integer commandNumber = Integer.valueOf(ResourceProperty.getProperty(k));
-					CommunicationMessage cm = new CommunicationMessage(sn, 1, commandNumber, (String)v);
+					Integer commandNumber = Integer.valueOf(k.substring(5));//k为8位，后三位为命令号
+					CommunicationMessage cm = new CommunicationMessage(sn, model, commandNumber, (String)v);
 					listCM.add(cm);
-					System.out.println("编码的指令为："+cm.getMsg());
+					logger.info("编码的指令为："+cm.getMsg());
 				}
 			} catch (Exception e) {
 				e.printStackTrace();

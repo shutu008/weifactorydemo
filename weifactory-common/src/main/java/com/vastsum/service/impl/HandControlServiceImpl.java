@@ -1,28 +1,16 @@
 package com.vastsum.service.impl;
 
-import static org.hamcrest.CoreMatchers.instanceOf;
-
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import java.util.TreeSet;
 
-import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.hash.BeanUtilsHashMapper;
 import org.springframework.stereotype.Service;
 
 import com.vastsum.dao.HandControlMapper;
 import com.vastsum.entity.HandControl;
 import com.vastsum.entity.HandControlExample;
 import com.vastsum.service.HandControlService;
-import com.vastsum.utils.BizUtils;
 
 
 /**
@@ -61,58 +49,6 @@ public class HandControlServiceImpl implements HandControlService {
 			handControlMapper.insertSelective(handControl);
 		}
 		handControlMapper.updateByPrimaryKeySelective(handControl);
-	}
-	
-	@Override
-	public HashMap<String,Object> changeOrder(HandControl handControl) {
-		logger.info(ReflectionToStringBuilder.toString(handControl));
-		Set<String> set = new TreeSet<>();
-		set.add("wd1");set.add("wd2");set.add("wd3");
-		HashMap<String,Object> hashMap = new HashMap<>();
-		hashMap.put("sn", handControl.getSn());
-		//判断当前数据库中有没有数据，如果没有，下发所有值
-		if (handControl.getHandControlId() == null) {
-			BeanUtilsHashMapper<HandControl> beanUtilsHashMapper = new BeanUtilsHashMapper<>(HandControl.class);
-			Map<String, String> hash = beanUtilsHashMapper.toHash(handControl);
-			hashMap.putAll(hash);
-		}else {
-			HandControl dbHandControl = getById(handControl.getHandControlId());
-			Class<HandControl> clazz = HandControl.class;
-			Field[] fields = clazz.getDeclaredFields();
-			for(Field f : fields) {
-				System.out.println("字段的类型："+f.getType().toString());
-				if(f.getType() == String.class || f.getType() == Long.class) {
-					try {
-						String fieldName = f.getName();
-						System.out.println("字段名："+fieldName);
-						String publicMethodName = "get"+fieldName.substring(0, 1).toUpperCase()+fieldName.substring(1);
-						System.out.println("方法名："+publicMethodName);
-						Method m = clazz.getMethod(publicMethodName);
-						Object resultCurrent = (Object)m.invoke(handControl);
-						Object resultDb = (Object)m.invoke(dbHandControl);
-						System.out.println("当前值："+resultCurrent);
-						System.out.println("数据库中值："+resultDb);
-						if(resultCurrent!=null&&!resultCurrent.equals(resultDb)) {
-							hashMap.put(fieldName, resultCurrent);
-						}
-					}catch(Exception e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		
-		}
-		//数据处理
-		Set<Entry<String, Object>> entrySet = hashMap.entrySet();
-		for (Entry<String, Object> entry : entrySet) {
-			String key = entry.getKey();
-			if (set.contains(key)) {
-				String b = BizUtils.handle3data(entry.getValue().toString());
-				hashMap.put(key, b);
-			}
-		}
-		logger.info(hashMap.toString());
-		return hashMap;
 	}
 	
 

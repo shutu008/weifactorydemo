@@ -37,6 +37,6 @@ public class BrowserLike {
 		hashMap.put("sn", "ZWGC2018032665194");
 		hashMap.put("kqxh1","1");
 		System.out.println(hashMap.get("sn"));
-		hrs.sendOrder(hashMap);
+		hrs.sendOrder(hashMap, 1);
 	}
 }

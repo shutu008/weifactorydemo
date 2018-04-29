@@ -1,12 +1,12 @@
 package com.vastsum.utils;
 
+import java.io.File;
+import java.util.Properties;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
-
-import java.io.File;
-import java.util.Properties;
 
 /**
  * 获取properties中的xml路径的全路径
@@ -19,19 +19,30 @@ public class ResourceProperty {
 
     //获取短信验证的sms.properties
     private static Properties getProperties() {
-        if (properties == null) {
-            try {
-                properties = PropertiesLoaderUtils.loadProperties(new ClassPathResource("app.properties"));
-                reWriter = new SimpleReWriter(properties);
-                return properties;
-            } catch (Exception e) {
-                logger.error(e);
-            } finally {
-
-            }
-        }
-        return properties;
+       
+        return getProperties("app.properties");
     }
+    
+    /**
+     * 加载指定的properties
+     * @param resourceUri
+     * @return Properties
+     */
+    public  static Properties getProperties(String resourceUri) {
+    	 if (properties == null) {
+             try {
+                 properties = PropertiesLoaderUtils.loadProperties(new ClassPathResource(resourceUri));
+                 reWriter = new SimpleReWriter(properties);
+                 return properties;
+             } catch (Exception e) {
+                 logger.error(e);
+             } finally {
+
+             }
+         }
+         return properties;
+    }
+    
 
     private String getXmlFoleerPath(String xmlFolderPath) {
         return this.getClass().getResource(xmlFolderPath).getPath();

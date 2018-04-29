@@ -1,5 +1,8 @@
 package com.vastsum.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,11 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vastsum.controller.system.BaseController;
+import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.GrowthPatternParam;
 import com.vastsum.entity.ParamSet;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
 import com.vastsum.service.ParamSetService;
+import com.vastsum.service.SensorService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -30,6 +35,10 @@ public class ParamSetController extends BaseController {
 	
 	@Autowired
 	private ParamSetService paramSetService;
+	@Autowired
+	private SensorService sensorService;
+	@Autowired
+	private HandRemoteService handRemoteService;
 
 	//添加或更新参数设置信息
 	@PostMapping("/saveOrUpdate")
@@ -38,7 +47,8 @@ public class ParamSetController extends BaseController {
             @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号",required = true),
             @ApiImplicitParam(paramType = "query",name = "paramSetId",value = "参数设置id,修改时带上"),
             
-            @ApiImplicitParam(paramType = "query",name = "daySet",value = "时间设置"),
+            @ApiImplicitParam(paramType = "query",name = "daySet",value = "植物工厂时间"),
+            @ApiImplicitParam(paramType = "query",name = "checkTime",value = "是否同步植物工厂时间与服务器时间相同"),
             @ApiImplicitParam(paramType = "query",name = "dateLength",value = "日长"),
             @ApiImplicitParam(paramType = "query",name = "dateYi",value = "时移"),
 
@@ -103,7 +113,6 @@ public class ParamSetController extends BaseController {
             @ApiImplicitParam(paramType = "query",name = "nightFeedBgTime",value = "育苗室晚上开启时间/分钟"),
             @ApiImplicitParam(paramType = "query",name = "nightFeedBgLength",value = "育苗室晚上补光时长/分钟"),
             @ApiImplicitParam(paramType = "query",name = "dayFeedWaterLength",value = "喷淋阀白天开启时间/分钟"),
-            //时间的单位为什么是分钟呢？ TODO 
             @ApiImplicitParam(paramType = "query",name = "dayFeedWaterCycle",value = "喷淋阀白天开启时长/分钟"),
             @ApiImplicitParam(paramType = "query",name = "nightFeedWaterLength",value = "喷淋阀晚上开启时间/分钟"),
             @ApiImplicitParam(paramType = "query",name = "nightFeedWaterCycle",value = "喷淋阀晚上开启时长/分钟"),
@@ -116,9 +125,14 @@ public class ParamSetController extends BaseController {
 			return V.error("设备序列号不能为空");
 		}
 		paramSetService.saveOrUpdate(paramSet);
+		ArrayList<String> deviceList = handRemoteService.getOnlineDeviceList();
+		if (!deviceList.contains(paramSet.getSn())) {
+			return V.error("当前设备不在线，无法下发参数信息！");
+		}
 		
-		//远程方法 TODO 
-		return V.ok();
+		//下发参数设置其他数据
+		handRemoteService.sendOrder(sensorService.changeOrder(paramSet), 2);
+		return V.ok("数据下发成功！");
     }
 	
 	
@@ -221,6 +235,15 @@ public class ParamSetController extends BaseController {
         if (StringUtils.isBlank(sn) ) {
             return V.error("设备序列号不能等于空");
         }
+        //先判断当前设备是否在线
+        ArrayList<String> deviceList = handRemoteService.getOnlineDeviceList();
+        if (deviceList.contains(sn)) {
+        	//当前设备在线
+        	//远程请求植物工厂时间
+            HashMap<String,Object> deviceTime = sensorService.getDeviceTime(sn);
+    		handRemoteService.sendOrder(deviceTime, 2);
+       	}
+      
        ParamSet paramSet = paramSetService.getLastBySn(sn);
       return  V.ok(paramSet);
     }

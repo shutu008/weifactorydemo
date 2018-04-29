@@ -20,17 +20,23 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 	private static Logger logger = LoggerFactory.getLogger(HandRemoteServiceImpl.class);
 
 	@Override
-	public void sendOrder(HashMap<String, Object> hashMap) {
-		if(hashMap.isEmpty()) return;
-		System.out.println(hashMap.get("sn"));
-		ArrayList<CommunicationMessage> listCM =  ParserMessageUtils.encodeHashMap(hashMap);
-		System.out.println("channel的列表："+NettyChannelMap.listSn().toString());
+	public void sendOrder(HashMap<String, Object> hashMap, Integer model) {
+		if(hashMap == null || hashMap.isEmpty()) return;
+		logger.info("当前要下发数据给机器："+hashMap.get("sn"));
+		ArrayList<CommunicationMessage> listCM =  ParserMessageUtils.encodeHashMap(hashMap,model);
+		logger.info("下发数据时，当前存在的channel的列表："+NettyChannelMap.listSn().toString());
 		String sn = (String)(hashMap.get("sn"));
 		NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
 		Channel channel = nettyChannelMap.get(sn);
-		System.out.println("一共有"+listCM.size()+"条指令");
+		logger.info("一共有"+listCM.size()+"条指令");
 		for(CommunicationMessage cm : listCM) {
-			System.out.println("下达的控制指令："+cm.getMsg());
+			logger.info("下达的控制指令："+cm.getMsg());
+			try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+				logger.error("发送给机器数据时候sleep失败");
+				e.printStackTrace();
+			}
 			channel.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
 		}
 	}

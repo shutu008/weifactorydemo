@@ -1,97 +1,185 @@
 package com.vastsum.service.impl;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.vastsum.dao.SensorMapper;
-import com.vastsum.entity.SensorExample;
-import com.vastsum.service.SensorService;
-import com.vastsum.dao.SensorCollectionMapper;
-import com.vastsum.entity.Sensor;
-import com.vastsum.entity.SensorCollection;
-import com.vastsum.entity.SensorCollectionExample;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeSet;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.builder.ReflectionToStringBuilder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.hash.BeanUtilsHashMapper;
 import org.springframework.stereotype.Service;
 
-import java.sql.Timestamp;
-import java.util.Date;
-import java.util.List;
+import com.vastsum.dao.HandControlMapper;
+import com.vastsum.dao.ParamSetMapper;
+import com.vastsum.entity.GrowthPatternParam;
+import com.vastsum.entity.HandControl;
+import com.vastsum.entity.ParamSet;
+import com.vastsum.service.SensorService;
+import com.vastsum.utils.BizUtils;
+import com.vastsum.utils.ResourceProperty;
+
 
 /**
- * @author ssj
- * @create 2017-09-16 14:24
+ * 数据下发功能
+ * @author shutu008
+ *
  */
 @Service
 public class SensorServiceImpl implements SensorService {
+	
+	private static final Logger logger = LoggerFactory.getLogger(SensorServiceImpl.class);
+	
+	@Autowired
+	private ParamSetMapper paramSetMapper;
+	
+	@Autowired
+	private HandControlMapper handControlMapper;
 
-    @Autowired
-    private SensorMapper sensorMapper;
-    @Autowired
-    private SensorCollectionMapper sensorCollectionMapper;
+	//手动控制
+	@Override
+	public HashMap<String,Object> changeOrder(HandControl handControl) {
+		logger.info(ReflectionToStringBuilder.toString(handControl));
+		Set<String> set = new TreeSet<>();
+		set.add("T0001110");set.add("T0001210");set.add("T0001310");
+		HashMap<String,Object> hashMap = new HashMap<>();
+		hashMap.put("sn", handControl.getSn());
+		//判断当前数据库中有没有数据，如果没有，下发所有值
+		if (handControl.getHandControlId() == null) {
+			BeanUtilsHashMapper<HandControl> beanUtilsHashMapper = new BeanUtilsHashMapper<>(HandControl.class);
+			Map<String, String> hash = beanUtilsHashMapper.toHash(handControl);
+			hashMap.putAll(hash);
+		}else {
+			HandControl dbHandControl = handControlMapper.selectByPrimaryKey(handControl.getHandControlId());
+			HashMap<String,Object> resultMap = resultMap(handControl, dbHandControl, HandControl.class,"handControl");
+			hashMap.putAll(resultMap);
+		}
+		//数据处理
+		Set<Entry<String, Object>> entrySet = hashMap.entrySet();
+		for (Entry<String, Object> entry : entrySet) {
+			String key = entry.getKey();
+			if (set.contains(key)) {
+				String b = BizUtils.handle3data(entry.getValue().toString());
+				hashMap.put(key, b);
+			}
+		}
+		logger.info(hashMap.toString());
+		return hashMap;
+	}
+	
+	//参数设置
+	@Override
+	public HashMap<String, Object> changeOrder(ParamSet paramSet) {
+		logger.info("准备下发的初始对象"+ReflectionToStringBuilder.toString(paramSet));
+		HashMap<String,Object> hashMap = new HashMap<>();
+		hashMap.put("sn", paramSet.getSn());
+		
+		//同步植物工厂时间和服务器相同，这个操作不落表
+		if (StringUtils.isNotBlank(paramSet.getCheckTime()) && paramSet.getCheckTime().equals("1") ) {
+			hashMap.put("T0002900", new Date());
+		}
+		
+		//判断当前数据库中有没有数据，如果没有，下发所有值
+		if (paramSet.getParamSetId() == null) {
+			BeanUtilsHashMapper<ParamSet> beanUtilsHashMapper = new BeanUtilsHashMapper<>(ParamSet.class);
+			Map<String, String> hash = beanUtilsHashMapper.toHash(paramSet);
+			hashMap.putAll(hash);
+		}else {
+			ParamSet primevalParamSet= paramSetMapper.selectByPrimaryKey(paramSet.getParamSetId());
+			HashMap<String,Object> resultMap = resultMap(paramSet, primevalParamSet, ParamSet.class,"paramSet");
+			hashMap.putAll(resultMap);
+		}
+		
+		//数据处理
+		Set<Entry<String, Object>> entrySet = hashMap.entrySet();
+		for (Entry<String, Object> entry : entrySet) {
+			String key = entry.getKey();
+			//处理同步服务器时间设置
+			if ("T0002900".equals(key)) {
+				String data = BizUtils.dateFormat((Date)hashMap.get(key));
+				hashMap.put(key, data);
+			}
+			
+			//处理一天之内的时间，白天开始时间，晚上开始时间
+			if ("T0002904".equals(key) || "T0002904".equals(key) || "T0002905".equals(key) || "T0002906".equals(key)) {
+				String data = BizUtils.timeFormat((String)hashMap.get(key));
+				hashMap.put(key, data);
+			}
+			
+			//处理温湿度
+			if ("T0002212".equals(key) || "T0002213".equals(key) 
+					|| "T0002214".equals(key) || "T0002215".equals(key)
+					|| "T0002312".equals(key) || "T0002313".equals(key)
+					|| "T0002314".equals(key) || "T0002315".equals(key)
+					|| "T0002112".equals(key) || "T0002113".equals(key)
+					|| "T0002114".equals(key) || "T0002115".equals(key)) {
+				String data = BizUtils.handle3data((String)hashMap.get(key));
+				hashMap.put(key, data);
+			}
+		}
+		
+		logger.info(hashMap.toString());
+		return hashMap;
+	}
+	
+	
+	//生长模式参数设置
+	@Override
+	public HashMap<String, Object> changeOrder(GrowthPatternParam growthPatternParam) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
+	//获取植物工厂时间
+	@Override
+	public HashMap<String, Object> getDeviceTime(String sn) {
+		HashMap<String, Object> hashMap = new HashMap<>();
+		hashMap.put("sn", sn);
+		hashMap.put("T0005003", "1");
+		return hashMap;
+	}
+	
+	/**
+	 *  处理对象，获取差值
+	 * @param dbData
+	 * @param currentData
+	 * @param clazz
+	 * @return
+	 */
+	private <T> HashMap<String, Object> resultMap(T dbData,T currentData, Class<T> clazz, String objectName){
+		HashMap<String, Object> hashMap = new HashMap<>();
+		Field[] fields = clazz.getDeclaredFields();
+		for(Field f : fields) {
+			logger.info("字段的类型："+f.getType().toString());
+				try {
+					String fieldName = f.getName();
+					logger.info("字段名："+fieldName);
+					String publicMethodName = "get"+fieldName.substring(0, 1).toUpperCase()+fieldName.substring(1);
+					logger.info("方法名："+publicMethodName);
+					Method m = clazz.getMethod(publicMethodName);
+					Object resultCurrent = (Object)m.invoke(currentData);
+					Object resultDb = (Object)m.invoke(dbData);
+					logger.info("当前值："+resultCurrent);
+					logger.info("数据库中值："+resultDb);
+					if(resultCurrent!=null&&!resultCurrent.equals(resultDb)) {
+						String function = ResourceProperty.getProperties("dataConvert.properties").getProperty(objectName+"."+fieldName);
+						hashMap.put(function, resultCurrent);
+					}
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+		}
+		
+		return hashMap;
+	}
+	
+	
 
-
-    //根据设备id,开始时间，结束时间，分页信息获取传感器数据
-    @Override
-    public PageInfo<Sensor> selectSensorsBydeviceId(Integer deviceId, Date startTime, Date endTime,Integer page,Integer pageSize) {
-        SensorExample sensorExample = new SensorExample();
-        SensorExample.Criteria criteria = sensorExample.createCriteria();
-        if (deviceId !=null){
-            criteria.andDeviceIdEqualTo(deviceId);
-        }
-        if (startTime !=null){
-            Date startTimestamp = new Timestamp(startTime.getTime());
-            criteria.andGmtCreateGreaterThanOrEqualTo(startTimestamp);
-        }
-        if (endTime != null){
-            Date endTimestamp = new Timestamp(endTime.getTime());
-           criteria.andGmtCreateLessThanOrEqualTo(endTimestamp);
-        }
-        sensorExample.setOrderByClause("sensor_id desc");
-        page = (page == 0 || page== null)? 1:page;
-        pageSize = (pageSize == 0 || pageSize == null)? 10:pageSize;
-        PageHelper.startPage(page,pageSize);
-         List<Sensor> sensors = sensorMapper.selectByExample(sensorExample);
-        return new PageInfo<>(sensors);
-    }
-
-
-    //返回最新的一条数据
-    @Override
-    public Sensor selectLastSensorBydeviceId(Integer deviceId) {
-        SensorExample sensorExample = new SensorExample();
-        sensorExample.createCriteria().andDeviceIdEqualTo(deviceId);
-        sensorExample.setOrderByClause("gmt_create desc");
-        List<Sensor> sensors = sensorMapper.selectByExample(sensorExample);
-        if (sensors != null && !sensors.isEmpty()){
-            return sensors.get(0);
-        }
-
-        return null;
-
-    }
-
-    //根据设备序列号和传感器标识获取最新的数据
-    @Override
-    public SensorCollection getLastSensorCollectionBySnAndSensor(String sn, Integer sensor) {
-        SensorCollectionExample sensorCollectionExample = new SensorCollectionExample();
-        sensorCollectionExample.createCriteria().andSnEqualTo(sn).andSensorEqualTo(sensor);
-        sensorCollectionExample.setOrderByClause("id desc");
-        List<SensorCollection> sensorCollections = sensorCollectionMapper.selectByExample(sensorCollectionExample);
-        if (sensorCollections == null)
-            return null;
-        return sensorCollections.get(0);
-    }
-
-    //根据设备id获取传感器临时表中的数据
-    @Override
-    public PageInfo<SensorCollection> listSensorCollectionBySn(String sn, Integer page,Integer pageSize) {
-        SensorCollectionExample sensorCollectionExample = new SensorCollectionExample();
-        sensorCollectionExample.createCriteria().andSnEqualTo(sn);
-        sensorCollectionExample.setOrderByClause("gmt_create desc");
-        page = (page == 0 || page== null)? 1:page;
-        pageSize = (pageSize == 0 || pageSize == null)? 10:pageSize;
-        PageHelper.startPage(page,pageSize);
-        List<SensorCollection> sensorCollections = sensorCollectionMapper.selectByExample(sensorCollectionExample);
-        return new PageInfo<>(sensorCollections);
-    }
 }

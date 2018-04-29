@@ -1,5 +1,6 @@
 package com.vastsum.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import com.vastsum.entity.HandControl;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
 import com.vastsum.service.HandControlService;
+import com.vastsum.service.SensorService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -33,6 +35,8 @@ public class HandController  extends BaseController  {
 	
 	@Autowired
 	private HandRemoteService handRemoteService;
+	@Autowired
+	private SensorService sensorService;
 	
 	@GetMapping("/test")
 	@ApiOperation(value = "test")
@@ -41,7 +45,7 @@ public class HandController  extends BaseController  {
 		hashMap.put("sn", "ZWGC2018032665194");
 		hashMap.put("kqxh1","1");
 		System.out.println("正在向"+(String)(hashMap.get("sn"))+"发送指令");
-		handRemoteService.sendOrder(hashMap);
+		handRemoteService.sendOrder(hashMap, 1);
 		return V.ok();
     }
 	
@@ -92,7 +96,12 @@ public class HandController  extends BaseController  {
 		if(handControl == null){
 			return V.error("手动控制参数不能为空");
 		}
-		handRemoteService.sendOrder(handControlService.changeOrder(handControl));
+		ArrayList<String> deviceList = handRemoteService.getOnlineDeviceList();
+		if (!deviceList.contains(handControl.getSn())) {
+			return V.error("当前设备不在线，无法进行手动控制！");
+		}
+		//1,代表手动控制模块
+		handRemoteService.sendOrder(sensorService.changeOrder(handControl), 1);
 		//手动控制保存成功
 		handControlService.saveOrUpdate(handControl);
 		

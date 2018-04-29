@@ -1,7 +1,5 @@
 package com.vastsum.service;
 
-import java.util.HashMap;
-
 import com.vastsum.entity.HandControl;
 
 /**
@@ -32,12 +30,6 @@ public interface HandControlService {
 	 */
 	void saveOrUpdate(HandControl handControl);
 	
-	/**
-	 * 生成包含所有与数据库不对应的标记
-	 * @param handControl
-	 * @return
-	 */
-	public HashMap<String,Object> changeOrder(HandControl handControl);
 	
 
 }
