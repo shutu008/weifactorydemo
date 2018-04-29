@@ -10,7 +10,6 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +45,6 @@ public class SensorServiceImpl implements SensorService {
 	//手动控制
 	@Override
 	public HashMap<String,Object> changeOrder(HandControl handControl) {
-		logger.info(ReflectionToStringBuilder.toString(handControl));
 		Set<String> set = new TreeSet<>();
 		set.add("T0001110");set.add("T0001210");set.add("T0001310");
 		HashMap<String,Object> hashMap = new HashMap<>();
@@ -70,14 +68,13 @@ public class SensorServiceImpl implements SensorService {
 				hashMap.put(key, b);
 			}
 		}
-		logger.info(hashMap.toString());
+		logger.info("准备下发的hashmap:"+hashMap.toString());
 		return hashMap;
 	}
 	
 	//参数设置
 	@Override
 	public HashMap<String, Object> changeOrder(ParamSet paramSet) {
-		logger.info("准备下发的初始对象"+ReflectionToStringBuilder.toString(paramSet));
 		HashMap<String,Object> hashMap = new HashMap<>();
 		hashMap.put("sn", paramSet.getSn());
 		
@@ -125,7 +122,7 @@ public class SensorServiceImpl implements SensorService {
 			}
 		}
 		
-		logger.info(hashMap.toString());
+		logger.info("准备下发的hashmap:"+hashMap.toString());
 		return hashMap;
 	}
 	
@@ -168,7 +165,7 @@ public class SensorServiceImpl implements SensorService {
 					Object resultDb = (Object)m.invoke(dbData);
 					logger.info("当前值："+resultCurrent);
 					logger.info("数据库中值："+resultDb);
-					if(resultCurrent!=null&&!resultCurrent.equals(resultDb)) {
+					if(resultCurrent !=null && !resultCurrent.equals(resultDb)) {
 						String function = ResourceProperty.getProperties("dataConvert.properties").getProperty(objectName+"."+fieldName);
 						hashMap.put(function, resultCurrent);
 					}
@@ -179,6 +176,11 @@ public class SensorServiceImpl implements SensorService {
 		
 		return hashMap;
 	}
+	
+//	public static void main(String[] args) {
+//		String function = ResourceProperty.getProperties("dataConvert.properties").getProperty("handControl.mpjs");
+//		System.out.println(function);
+//	}
 	
 	
 

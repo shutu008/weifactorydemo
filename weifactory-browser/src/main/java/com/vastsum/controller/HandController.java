@@ -3,6 +3,8 @@ package com.vastsum.controller;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +31,8 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping(value = "/hand")
 @Api(value = "/hand",tags={"手动控制"})
 public class HandController  extends BaseController  {
+	
+	private static Logger logger = LoggerFactory.getLogger(HandController.class);
 
 	@Autowired
 	private HandControlService handControlService;
@@ -102,6 +106,7 @@ public class HandController  extends BaseController  {
 		}
 		//1,代表手动控制模块
 		handRemoteService.sendOrder(sensorService.changeOrder(handControl), 1);
+		logger.info("手动控制数据下发成功");
 		//手动控制保存成功
 		handControlService.saveOrUpdate(handControl);
 		

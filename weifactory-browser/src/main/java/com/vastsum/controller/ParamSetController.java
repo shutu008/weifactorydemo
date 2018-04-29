@@ -124,7 +124,6 @@ public class ParamSetController extends BaseController {
 		if(paramSet.getSn() == null){
 			return V.error("设备序列号不能为空");
 		}
-		paramSetService.saveOrUpdate(paramSet);
 		ArrayList<String> deviceList = handRemoteService.getOnlineDeviceList();
 		if (!deviceList.contains(paramSet.getSn())) {
 			return V.error("当前设备不在线，无法下发参数信息！");
@@ -132,6 +131,7 @@ public class ParamSetController extends BaseController {
 		
 		//下发参数设置其他数据
 		handRemoteService.sendOrder(sensorService.changeOrder(paramSet), 2);
+		paramSetService.saveOrUpdate(paramSet);
 		return V.ok("数据下发成功！");
     }
 	
