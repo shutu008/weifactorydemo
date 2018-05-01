@@ -65,6 +65,12 @@ public interface ParamSetService {
 	 */
 	List<GrowthPatternParam> listByGrowthNo(Integer growthNo);
 	
+	/**
+	 * 列出所有生长模式参数设置
+	 * @return
+	 */
+	List<GrowthPatternParam> listGrowthAll();
+	
 	
 
 }

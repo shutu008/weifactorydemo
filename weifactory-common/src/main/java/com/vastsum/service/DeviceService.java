@@ -24,6 +24,20 @@ public interface DeviceService {
      * @return PageInfo<UserDevice>
      */
     PageInfo<UserDevice> findByPage(int page, int pageSize);
+    
+    /**
+     * 根据条件获取设备列表
+     * @param device
+     * @return List<Device>
+     */
+    List<Device> findByExample(Device device);
+    
+    /**
+     * 根据托管状态获取设备列表
+     * @param trustStatus
+     * @return List<Device>
+     */
+    List<Device> findByTrustStatus(String trustStatus);
 
     /**
      * 用户获取自己所有的设备信息

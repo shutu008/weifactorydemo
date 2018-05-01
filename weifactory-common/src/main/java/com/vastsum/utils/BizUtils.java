@@ -57,7 +57,7 @@ public class BizUtils {
 		String result = null;
 		String[] split = data.split(":");
 		for (int i = 0; i<split.length; i++) {
-			String str = String.format("%02d", split[i]);
+			String str = String.format("%02d", Integer.parseInt(split[i]));
 			result = str+".";
 		}
 		logger.info("处理过的数据："+data);

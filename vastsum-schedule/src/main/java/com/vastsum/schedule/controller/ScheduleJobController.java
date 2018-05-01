@@ -18,6 +18,7 @@ import com.vastsum.core.model.R;
 import com.vastsum.core.model.ResultModel;
 import com.vastsum.core.model.ResultStatus;
 import com.vastsum.schedule.entity.ScheduleJobEntity;
+import com.vastsum.schedule.handler.DefaultJobHandler;
 import com.vastsum.schedule.service.ScheduleJobService;
 import com.vastsum.schedule.utils.ScheduleUtils;
 
@@ -38,6 +39,8 @@ public class ScheduleJobController {
 	private ScheduleJobService scheduleJobService;
 	@Autowired
 	private Scheduler scheduler;
+	@Autowired
+	private DefaultJobHandler defaultJobHandler;
 	
 	@PostMapping("/list")
 	@ApiOperation("获取定时任务列表@20180420")
@@ -52,6 +55,13 @@ public class ScheduleJobController {
 	public ResponseEntity<ResultModel> list(@ModelAttribute ScheduleJobEntity scheduleJobEntity, 
 				Integer page, Integer pageSize){
 		return R.ok(scheduleJobService.listAll(scheduleJobEntity, page, pageSize));
+	}
+	
+	@PostMapping("/test")
+	@ApiOperation("test")
+	public ResponseEntity<ResultModel> test(){
+		defaultJobHandler.selfParamSet();
+		return R.ok();
 	}
 	
 	@ApiIgnore

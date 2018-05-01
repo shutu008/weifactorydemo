@@ -117,4 +117,10 @@ public class ParamSetServiceImpl implements ParamSetService {
 		paramSetMapper.updateByExampleSelective(paramSet, paramSetExample);
 	}
 
+	@Override
+	public List<GrowthPatternParam> listGrowthAll() {
+		GrowthPatternParamExample example = new GrowthPatternParamExample();
+		return growthPatternParamMapper.selectByExample(example);
+	}
+
 }

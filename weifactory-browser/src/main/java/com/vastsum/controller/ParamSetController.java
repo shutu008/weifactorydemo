@@ -25,6 +25,7 @@ import com.vastsum.service.BatchService;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.ParamSetService;
 import com.vastsum.service.SensorService;
+import com.vastsum.utils.GrowthParamCache;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -226,6 +227,8 @@ public class ParamSetController extends BaseController {
 			return V.error("生长模式不能为空");
 		}
 		paramSetService.saveOrUpdateGrowthParam(growthPatternParam);
+		//重新加载缓存
+		GrowthParamCache.loadCache();
 		return V.ok();
     }
 	

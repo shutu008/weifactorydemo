@@ -3,6 +3,7 @@ package com.vastsum.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +17,7 @@ import com.vastsum.entity.BizOrder;
 import com.vastsum.entity.BizOrderExample;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceExample;
+import com.vastsum.entity.DeviceExample.Criteria;
 import com.vastsum.entity.DeviceSn;
 import com.vastsum.entity.DeviceSnExample;
 import com.vastsum.entity.vo.UserDevice;
@@ -211,6 +213,35 @@ public class DeviceServiceImpl implements DeviceService {
 	@Override
 	public Device getById(Integer deviceId) {
 		return deviceMapper.selectByPrimaryKey(deviceId);
+	}
+
+	@Override
+	public List<Device> findByExample(Device device) {
+		DeviceExample deviceExample = new DeviceExample();
+		Criteria criteria = deviceExample.createCriteria();
+		if (device != null) {
+			if (StringUtils.isNotBlank(device.getSn())) {
+				criteria.andSnEqualTo(device.getSn());
+			}
+			if (StringUtils.isNotBlank(device.getTrustStatus())) {
+				criteria.andTrustStatusEqualTo(device.getTrustStatus());
+			}
+			if (StringUtils.isNotBlank(device.getOrderStatus())) {
+				criteria.andOrderStatusEqualTo(device.getOrderStatus());
+			}
+			if (device.getUserId() != null) {
+				criteria.andUserIdEqualTo(device.getUserId());
+			}
+		}
+		List<Device> list = deviceMapper.selectByExample(deviceExample);
+		return list;
+	}
+
+	@Override
+	public List<Device> findByTrustStatus(String trustStatus) {
+		Device device = new Device();
+		device.setTrustStatus(trustStatus);
+		return this.findByExample(device);
 	}
     
 }
