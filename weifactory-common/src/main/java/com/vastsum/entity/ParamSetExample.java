@@ -1605,6 +1605,196 @@ public class ParamSetExample {
             return (Criteria) this;
         }
 
+        public Criteria andFeedNameIsNull() {
+            addCriterion("feed_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameIsNotNull() {
+            addCriterion("feed_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameEqualTo(String value) {
+            addCriterion("feed_name =", value, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameNotEqualTo(String value) {
+            addCriterion("feed_name <>", value, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameGreaterThan(String value) {
+            addCriterion("feed_name >", value, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameGreaterThanOrEqualTo(String value) {
+            addCriterion("feed_name >=", value, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameLessThan(String value) {
+            addCriterion("feed_name <", value, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameLessThanOrEqualTo(String value) {
+            addCriterion("feed_name <=", value, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameLike(String value) {
+            addCriterion("feed_name like", value, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameNotLike(String value) {
+            addCriterion("feed_name not like", value, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameIn(List<String> values) {
+            addCriterion("feed_name in", values, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameNotIn(List<String> values) {
+            addCriterion("feed_name not in", values, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameBetween(String value1, String value2) {
+            addCriterion("feed_name between", value1, value2, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedNameNotBetween(String value1, String value2) {
+            addCriterion("feed_name not between", value1, value2, "feedName");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeIsNull() {
+            addCriterion("feed_planting_time is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeIsNotNull() {
+            addCriterion("feed_planting_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeEqualTo(Date value) {
+            addCriterion("feed_planting_time =", value, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeNotEqualTo(Date value) {
+            addCriterion("feed_planting_time <>", value, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeGreaterThan(Date value) {
+            addCriterion("feed_planting_time >", value, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("feed_planting_time >=", value, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeLessThan(Date value) {
+            addCriterion("feed_planting_time <", value, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeLessThanOrEqualTo(Date value) {
+            addCriterion("feed_planting_time <=", value, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeIn(List<Date> values) {
+            addCriterion("feed_planting_time in", values, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeNotIn(List<Date> values) {
+            addCriterion("feed_planting_time not in", values, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeBetween(Date value1, Date value2) {
+            addCriterion("feed_planting_time between", value1, value2, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedPlantingTimeNotBetween(Date value1, Date value2) {
+            addCriterion("feed_planting_time not between", value1, value2, "feedPlantingTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeIsNull() {
+            addCriterion("feed_recovery_time is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeIsNotNull() {
+            addCriterion("feed_recovery_time is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeEqualTo(Date value) {
+            addCriterion("feed_recovery_time =", value, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeNotEqualTo(Date value) {
+            addCriterion("feed_recovery_time <>", value, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeGreaterThan(Date value) {
+            addCriterion("feed_recovery_time >", value, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("feed_recovery_time >=", value, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeLessThan(Date value) {
+            addCriterion("feed_recovery_time <", value, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeLessThanOrEqualTo(Date value) {
+            addCriterion("feed_recovery_time <=", value, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeIn(List<Date> values) {
+            addCriterion("feed_recovery_time in", values, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeNotIn(List<Date> values) {
+            addCriterion("feed_recovery_time not in", values, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeBetween(Date value1, Date value2) {
+            addCriterion("feed_recovery_time between", value1, value2, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andFeedRecoveryTimeNotBetween(Date value1, Date value2) {
+            addCriterion("feed_recovery_time not between", value1, value2, "feedRecoveryTime");
+            return (Criteria) this;
+        }
+
         public Criteria andDayFeedBgTimeIsNull() {
             addCriterion("day_feed_bg_time is null");
             return (Criteria) this;

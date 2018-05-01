@@ -15,10 +15,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.core.service.HandRemoteService;
+import com.vastsum.entity.Batch;
+import com.vastsum.entity.Device;
 import com.vastsum.entity.GrowthPatternParam;
 import com.vastsum.entity.ParamSet;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
+import com.vastsum.service.BatchService;
+import com.vastsum.service.DeviceService;
 import com.vastsum.service.ParamSetService;
 import com.vastsum.service.SensorService;
 
@@ -39,6 +43,10 @@ public class ParamSetController extends BaseController {
 	private SensorService sensorService;
 	@Autowired
 	private HandRemoteService handRemoteService;
+	@Autowired
+	private BatchService batchService;
+	@Autowired
+	private DeviceService deviceService;
 
 	//添加或更新参数设置信息
 	@PostMapping("/saveOrUpdate")
@@ -61,7 +69,6 @@ public class ParamSetController extends BaseController {
             @ApiImplicitParam(paramType = "query",name = "nightNewWindLength",value = "晚上换新风时长/分钟"),
             @ApiImplicitParam(paramType = "query",name = "nightNewWindTime",value = "晚上换新风间隔/分钟"),
             
-            //TODO 蔬菜名称和生长模式可以修改吗？蔬菜名称就不下发给机器了，汉字无法编码，因为有自定义的
             @ApiImplicitParam(paramType = "query",name = "plantName1",value = "第一层植物名称"),
             @ApiImplicitParam(paramType = "query",name = "growthPattern1",value = "第一层生长模式"),
             @ApiImplicitParam(paramType = "query",name = "dayTemperature1",value = "第一层白天温度"),
@@ -108,14 +115,17 @@ public class ParamSetController extends BaseController {
             @ApiImplicitParam(paramType = "query",name = "nightYyCycle3",value = "第三层晚上营养液循环间隔/分钟"),
             
             //育苗室
-            @ApiImplicitParam(paramType = "query",name = "dayFeedBgTime",value = "育苗室白天开启时间/分钟"),
+            @ApiImplicitParam(paramType = "query",name = "feedName",value = "育苗室植物名称"),
+            @ApiImplicitParam(paramType = "query",name = "feedPlantingTime",value = "育苗播种时间"),
+            @ApiImplicitParam(paramType = "query",name = "feedRecoveryTime",value = "育苗室预计可值日期"),
             @ApiImplicitParam(paramType = "query",name = "dayFeedBgLength",value = "育苗室白天补光时长/分钟"),
-            @ApiImplicitParam(paramType = "query",name = "nightFeedBgTime",value = "育苗室晚上开启时间/分钟"),
+            @ApiImplicitParam(paramType = "query",name = "dayFeedBgTime",value = "育苗室白天补光间隔/分钟"),
             @ApiImplicitParam(paramType = "query",name = "nightFeedBgLength",value = "育苗室晚上补光时长/分钟"),
-            @ApiImplicitParam(paramType = "query",name = "dayFeedWaterLength",value = "喷淋阀白天开启时间/分钟"),
-            @ApiImplicitParam(paramType = "query",name = "dayFeedWaterCycle",value = "喷淋阀白天开启时长/分钟"),
-            @ApiImplicitParam(paramType = "query",name = "nightFeedWaterLength",value = "喷淋阀晚上开启时间/分钟"),
-            @ApiImplicitParam(paramType = "query",name = "nightFeedWaterCycle",value = "喷淋阀晚上开启时长/分钟"),
+            @ApiImplicitParam(paramType = "query",name = "nightFeedBgTime",value = "育苗室晚上补光间隔/分钟"),
+            @ApiImplicitParam(paramType = "query",name = "dayFeedWaterLength",value = "喷淋阀白天执行时长/分钟"),
+            @ApiImplicitParam(paramType = "query",name = "dayFeedWaterCycle",value = "喷淋阀白天执行间隔/分钟"),
+            @ApiImplicitParam(paramType = "query",name = "nightFeedWaterLength",value = "喷淋阀晚上开启时长/分钟"),
+            @ApiImplicitParam(paramType = "query",name = "nightFeedWaterCycle",value = "喷淋阀晚上开启间隔/分钟")
     })
     public  ResponseEntity<ResultModel> saveOrUpdate(@ModelAttribute ParamSet paramSet){
 		if (paramSet == null) {
@@ -127,6 +137,32 @@ public class ParamSetController extends BaseController {
 		ArrayList<String> deviceList = handRemoteService.getOnlineDeviceList();
 		if (!deviceList.contains(paramSet.getSn())) {
 			return V.error("当前设备不在线，无法下发参数信息！");
+		}
+		
+		//先判断批次号是否存在，如果存在则不修改和添加，如果不存在则生成 1+13
+		Device device = deviceService.getDeviceBySn(paramSet.getSn());
+		Batch batch = batchService.selectLastBatchByDeviceId(device.getDeviceId());
+		if (paramSet.getParamSetId() == null) {
+			if (StringUtils.isNotBlank(batch.getPlantOne())) {
+				paramSet.setBatchNo1("1"+System.currentTimeMillis());
+			}
+			if (StringUtils.isNotBlank(batch.getPlantTwo())) {
+				paramSet.setBatchNo1("2"+System.currentTimeMillis());
+			}
+			if (StringUtils.isNotBlank(batch.getPlantThree())) {
+				paramSet.setBatchNo1("3"+System.currentTimeMillis());
+			}
+		}else {
+			ParamSet set = paramSetService.getById(paramSet.getParamSetId());
+			if (set.getBatchNo1() != null) {
+				paramSet.setBatchNo1("1"+System.currentTimeMillis());
+			}
+			if (set.getBatchNo2() != null) {
+				paramSet.setBatchNo1("2"+System.currentTimeMillis());
+			}
+			if (set.getBatchNo3() != null) {
+				paramSet.setBatchNo1("3"+System.currentTimeMillis());
+			}
 		}
 		
 		//下发参数设置其他数据

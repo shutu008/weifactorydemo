@@ -26,6 +26,9 @@
     <result column="day_yy_cycle_3" jdbcType="INTEGER" property="dayYyCycle3" />
     <result column="day_new_wind_length" jdbcType="INTEGER" property="dayNewWindLength" />
     <result column="day_new_wind_time" jdbcType="INTEGER" property="dayNewWindTime" />
+    <result column="feed_name" jdbcType="VARCHAR" property="feedName" />
+    <result column="feed_planting_time" jdbcType="TIMESTAMP" property="feedPlantingTime" />
+    <result column="feed_recovery_time" jdbcType="TIMESTAMP" property="feedRecoveryTime" />
     <result column="day_feed_bg_time" jdbcType="INTEGER" property="dayFeedBgTime" />
     <result column="day_feed_bg_length" jdbcType="INTEGER" property="dayFeedBgLength" />
     <result column="day_feed_water_length" jdbcType="INTEGER" property="dayFeedWaterLength" />
@@ -155,19 +158,20 @@
     night_end_time, day_wind_lenght_time, day_wind_cycle_time, day_bg_lenght_1, day_bg_cycle_1, 
     day_bg_lenght_2, day_bg_cycle_2, day_bg_lenght_3, day_bg_cycle_3, day_yy_length_1, 
     day_yy_cycle_1, day_yy_length_2, day_yy_cycle_2, day_yy_length_3, day_yy_cycle_3, 
-    day_new_wind_length, day_new_wind_time, day_feed_bg_time, day_feed_bg_length, day_feed_water_length, 
-    day_feed_water_cycle, night_wind_lenght_time, night_wind_cycle_time, night_bg_lenght_1, 
-    night_bg_cycle_1, night_bg_lenght_2, night_bg_cycle_2, night_bg_lenght_3, night_bg_cycle_3, 
-    night_yy_length_1, night_yy_cycle_1, night_yy_length_2, night_yy_cycle_2, night_yy_length_3, 
-    night_yy_cycle_3, night_new_wind_length, night_new_wind_time, night_feed_bg_time, 
-    night_feed_bg_length, night_feed_water_length, batch_no_1, plant_name_1, growth_pattern_1, 
-    day_temperature_1, night_temperature_1, day_humidity_1, night_humidity_1, batch_no_2, 
-    plant_name_2, growth_pattern_2, day_temperature_2, night_temperature_2, day_humidity_2, 
-    night_humidity_2, batch_no_3, plant_name_3, growth_pattern_3, day_temperature_3, 
-    night_temperature_3, day_humidity_3, night_humidity_3, night_feed_water_cycle, yy_before_time, 
-    yy_next_time, yy_p_time_1, yy_p_time_2, yy_p_time_3, yy_c_time, yy_k_time, comm, 
-    ip, port, cy_cycle, st_cycle, out_time, in_time, time_lenght_mod, date_length, date_yi, 
-    status, gmt_create, gmt_modified
+    day_new_wind_length, day_new_wind_time, feed_name, feed_planting_time, feed_recovery_time, 
+    day_feed_bg_time, day_feed_bg_length, day_feed_water_length, day_feed_water_cycle, 
+    night_wind_lenght_time, night_wind_cycle_time, night_bg_lenght_1, night_bg_cycle_1, 
+    night_bg_lenght_2, night_bg_cycle_2, night_bg_lenght_3, night_bg_cycle_3, night_yy_length_1, 
+    night_yy_cycle_1, night_yy_length_2, night_yy_cycle_2, night_yy_length_3, night_yy_cycle_3, 
+    night_new_wind_length, night_new_wind_time, night_feed_bg_time, night_feed_bg_length, 
+    night_feed_water_length, batch_no_1, plant_name_1, growth_pattern_1, day_temperature_1, 
+    night_temperature_1, day_humidity_1, night_humidity_1, batch_no_2, plant_name_2, 
+    growth_pattern_2, day_temperature_2, night_temperature_2, day_humidity_2, night_humidity_2, 
+    batch_no_3, plant_name_3, growth_pattern_3, day_temperature_3, night_temperature_3, 
+    day_humidity_3, night_humidity_3, night_feed_water_cycle, yy_before_time, yy_next_time, 
+    yy_p_time_1, yy_p_time_2, yy_p_time_3, yy_c_time, yy_k_time, comm, ip, port, cy_cycle, 
+    st_cycle, out_time, in_time, time_lenght_mod, date_length, date_yi, status, gmt_create, 
+    gmt_modified
   </sql>
   <select id="selectByExample" parameterType="com.vastsum.entity.ParamSetExample" resultMap="BaseResultMap">
     select
@@ -208,6 +212,7 @@
       day_bg_cycle_3, day_yy_length_1, day_yy_cycle_1, 
       day_yy_length_2, day_yy_cycle_2, day_yy_length_3, 
       day_yy_cycle_3, day_new_wind_length, day_new_wind_time, 
+      feed_name, feed_planting_time, feed_recovery_time, 
       day_feed_bg_time, day_feed_bg_length, day_feed_water_length, 
       day_feed_water_cycle, night_wind_lenght_time, 
       night_wind_cycle_time, night_bg_lenght_1, night_bg_cycle_1, 
@@ -239,6 +244,7 @@
       #{dayBgCycle3,jdbcType=INTEGER}, #{dayYyLength1,jdbcType=INTEGER}, #{dayYyCycle1,jdbcType=INTEGER}, 
       #{dayYyLength2,jdbcType=INTEGER}, #{dayYyCycle2,jdbcType=INTEGER}, #{dayYyLength3,jdbcType=INTEGER}, 
       #{dayYyCycle3,jdbcType=INTEGER}, #{dayNewWindLength,jdbcType=INTEGER}, #{dayNewWindTime,jdbcType=INTEGER}, 
+      #{feedName,jdbcType=VARCHAR}, #{feedPlantingTime,jdbcType=TIMESTAMP}, #{feedRecoveryTime,jdbcType=TIMESTAMP}, 
       #{dayFeedBgTime,jdbcType=INTEGER}, #{dayFeedBgLength,jdbcType=INTEGER}, #{dayFeedWaterLength,jdbcType=INTEGER}, 
       #{dayFeedWaterCycle,jdbcType=INTEGER}, #{nightWindLenghtTime,jdbcType=INTEGER}, 
       #{nightWindCycleTime,jdbcType=INTEGER}, #{nightBgLenght1,jdbcType=INTEGER}, #{nightBgCycle1,jdbcType=INTEGER}, 
@@ -337,6 +343,15 @@
       </if>
       <if test="dayNewWindTime != null">
         day_new_wind_time,
+      </if>
+      <if test="feedName != null">
+        feed_name,
+      </if>
+      <if test="feedPlantingTime != null">
+        feed_planting_time,
+      </if>
+      <if test="feedRecoveryTime != null">
+        feed_recovery_time,
       </if>
       <if test="dayFeedBgTime != null">
         day_feed_bg_time,
@@ -606,6 +621,15 @@
       </if>
       <if test="dayNewWindTime != null">
         #{dayNewWindTime,jdbcType=INTEGER},
+      </if>
+      <if test="feedName != null">
+        #{feedName,jdbcType=VARCHAR},
+      </if>
+      <if test="feedPlantingTime != null">
+        #{feedPlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="feedRecoveryTime != null">
+        #{feedRecoveryTime,jdbcType=TIMESTAMP},
       </if>
       <if test="dayFeedBgTime != null">
         #{dayFeedBgTime,jdbcType=INTEGER},
@@ -885,6 +909,15 @@
       <if test="record.dayNewWindTime != null">
         day_new_wind_time = #{record.dayNewWindTime,jdbcType=INTEGER},
       </if>
+      <if test="record.feedName != null">
+        feed_name = #{record.feedName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.feedPlantingTime != null">
+        feed_planting_time = #{record.feedPlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.feedRecoveryTime != null">
+        feed_recovery_time = #{record.feedRecoveryTime,jdbcType=TIMESTAMP},
+      </if>
       <if test="record.dayFeedBgTime != null">
         day_feed_bg_time = #{record.dayFeedBgTime,jdbcType=INTEGER},
       </if>
@@ -1111,6 +1144,9 @@
       day_yy_cycle_3 = #{record.dayYyCycle3,jdbcType=INTEGER},
       day_new_wind_length = #{record.dayNewWindLength,jdbcType=INTEGER},
       day_new_wind_time = #{record.dayNewWindTime,jdbcType=INTEGER},
+      feed_name = #{record.feedName,jdbcType=VARCHAR},
+      feed_planting_time = #{record.feedPlantingTime,jdbcType=TIMESTAMP},
+      feed_recovery_time = #{record.feedRecoveryTime,jdbcType=TIMESTAMP},
       day_feed_bg_time = #{record.dayFeedBgTime,jdbcType=INTEGER},
       day_feed_bg_length = #{record.dayFeedBgLength,jdbcType=INTEGER},
       day_feed_water_length = #{record.dayFeedWaterLength,jdbcType=INTEGER},
@@ -1251,6 +1287,15 @@
       </if>
       <if test="dayNewWindTime != null">
         day_new_wind_time = #{dayNewWindTime,jdbcType=INTEGER},
+      </if>
+      <if test="feedName != null">
+        feed_name = #{feedName,jdbcType=VARCHAR},
+      </if>
+      <if test="feedPlantingTime != null">
+        feed_planting_time = #{feedPlantingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="feedRecoveryTime != null">
+        feed_recovery_time = #{feedRecoveryTime,jdbcType=TIMESTAMP},
       </if>
       <if test="dayFeedBgTime != null">
         day_feed_bg_time = #{dayFeedBgTime,jdbcType=INTEGER},
@@ -1475,6 +1520,9 @@
       day_yy_cycle_3 = #{dayYyCycle3,jdbcType=INTEGER},
       day_new_wind_length = #{dayNewWindLength,jdbcType=INTEGER},
       day_new_wind_time = #{dayNewWindTime,jdbcType=INTEGER},
+      feed_name = #{feedName,jdbcType=VARCHAR},
+      feed_planting_time = #{feedPlantingTime,jdbcType=TIMESTAMP},
+      feed_recovery_time = #{feedRecoveryTime,jdbcType=TIMESTAMP},
       day_feed_bg_time = #{dayFeedBgTime,jdbcType=INTEGER},
       day_feed_bg_length = #{dayFeedBgLength,jdbcType=INTEGER},
       day_feed_water_length = #{dayFeedWaterLength,jdbcType=INTEGER},

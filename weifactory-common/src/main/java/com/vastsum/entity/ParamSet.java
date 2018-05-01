@@ -8,8 +8,6 @@ public class ParamSet {
     private Long batchId;
 
     private String sn;
-    
-    private String checkTime;
 
     private String daySet;
 
@@ -52,6 +50,12 @@ public class ParamSet {
     private Integer dayNewWindLength;
 
     private Integer dayNewWindTime;
+
+    private String feedName;
+
+    private Date feedPlantingTime;
+
+    private Date feedRecoveryTime;
 
     private Integer dayFeedBgTime;
 
@@ -373,6 +377,30 @@ public class ParamSet {
 
     public void setDayNewWindTime(Integer dayNewWindTime) {
         this.dayNewWindTime = dayNewWindTime;
+    }
+
+    public String getFeedName() {
+        return feedName;
+    }
+
+    public void setFeedName(String feedName) {
+        this.feedName = feedName == null ? null : feedName.trim();
+    }
+
+    public Date getFeedPlantingTime() {
+        return feedPlantingTime;
+    }
+
+    public void setFeedPlantingTime(Date feedPlantingTime) {
+        this.feedPlantingTime = feedPlantingTime;
+    }
+
+    public Date getFeedRecoveryTime() {
+        return feedRecoveryTime;
+    }
+
+    public void setFeedRecoveryTime(Date feedRecoveryTime) {
+        this.feedRecoveryTime = feedRecoveryTime;
     }
 
     public Integer getDayFeedBgTime() {
@@ -894,96 +922,106 @@ public class ParamSet {
     public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
     }
-    
 
-    public String getCheckTime() {
-		return checkTime;
-	}
-
-	public void setCheckTime(String checkTime) {
-		this.checkTime = checkTime;
-	}
-
-	@Override
-	public String toString() {
-		return "ParamSet [paramSetId=" + paramSetId + ", batchId=" + batchId + ", sn=" + sn + ", checkTime=" + checkTime
-				+ ", daySet=" + daySet + ", dayStartTime=" + dayStartTime + ", dayEndTime=" + dayEndTime
-				+ ", nightStartTime=" + nightStartTime + ", nightEndTime=" + nightEndTime + ", dayWindLenghtTime="
-				+ dayWindLenghtTime + ", dayWindCycleTime=" + dayWindCycleTime + ", dayBgLenght1=" + dayBgLenght1
-				+ ", dayBgCycle1=" + dayBgCycle1 + ", dayBgLenght2=" + dayBgLenght2 + ", dayBgCycle2=" + dayBgCycle2
-				+ ", dayBgLenght3=" + dayBgLenght3 + ", dayBgCycle3=" + dayBgCycle3 + ", dayYyLength1=" + dayYyLength1
-				+ ", dayYyCycle1=" + dayYyCycle1 + ", dayYyLength2=" + dayYyLength2 + ", dayYyCycle2=" + dayYyCycle2
-				+ ", dayYyLength3=" + dayYyLength3 + ", dayYyCycle3=" + dayYyCycle3 + ", dayNewWindLength="
-				+ dayNewWindLength + ", dayNewWindTime=" + dayNewWindTime + ", dayFeedBgTime=" + dayFeedBgTime
-				+ ", dayFeedBgLength=" + dayFeedBgLength + ", dayFeedWaterLength=" + dayFeedWaterLength
-				+ ", dayFeedWaterCycle=" + dayFeedWaterCycle + ", nightWindLenghtTime=" + nightWindLenghtTime
-				+ ", nightWindCycleTime=" + nightWindCycleTime + ", nightBgLenght1=" + nightBgLenght1
-				+ ", nightBgCycle1=" + nightBgCycle1 + ", nightBgLenght2=" + nightBgLenght2 + ", nightBgCycle2="
-				+ nightBgCycle2 + ", nightBgLenght3=" + nightBgLenght3 + ", nightBgCycle3=" + nightBgCycle3
-				+ ", nightYyLength1=" + nightYyLength1 + ", nightYyCycle1=" + nightYyCycle1 + ", nightYyLength2="
-				+ nightYyLength2 + ", nightYyCycle2=" + nightYyCycle2 + ", nightYyLength3=" + nightYyLength3
-				+ ", nightYyCycle3=" + nightYyCycle3 + ", nightNewWindLength=" + nightNewWindLength
-				+ ", nightNewWindTime=" + nightNewWindTime + ", nightFeedBgTime=" + nightFeedBgTime
-				+ ", nightFeedBgLength=" + nightFeedBgLength + ", nightFeedWaterLength=" + nightFeedWaterLength
-				+ ", batchNo1=" + batchNo1 + ", plantName1=" + plantName1 + ", growthPattern1=" + growthPattern1
-				+ ", dayTemperature1=" + dayTemperature1 + ", nightTemperature1=" + nightTemperature1
-				+ ", dayHumidity1=" + dayHumidity1 + ", nightHumidity1=" + nightHumidity1 + ", batchNo2=" + batchNo2
-				+ ", plantName2=" + plantName2 + ", growthPattern2=" + growthPattern2 + ", dayTemperature2="
-				+ dayTemperature2 + ", nightTemperature2=" + nightTemperature2 + ", dayHumidity2=" + dayHumidity2
-				+ ", nightHumidity2=" + nightHumidity2 + ", batchNo3=" + batchNo3 + ", plantName3=" + plantName3
-				+ ", growthPattern3=" + growthPattern3 + ", dayTemperature3=" + dayTemperature3 + ", nightTemperature3="
-				+ nightTemperature3 + ", dayHumidity3=" + dayHumidity3 + ", nightHumidity3=" + nightHumidity3
-				+ ", nightFeedWaterCycle=" + nightFeedWaterCycle + ", yyBeforeTime=" + yyBeforeTime + ", yyNextTime="
-				+ yyNextTime + ", yyPTime1=" + yyPTime1 + ", yyPTime2=" + yyPTime2 + ", yyPTime3=" + yyPTime3
-				+ ", yyCTime=" + yyCTime + ", yyKTime=" + yyKTime + ", comm=" + comm + ", ip=" + ip + ", port=" + port
-				+ ", cyCycle=" + cyCycle + ", stCycle=" + stCycle + ", outTime=" + outTime + ", inTime=" + inTime
-				+ ", timeLenghtMod=" + timeLenghtMod + ", dateLength=" + dateLength + ", dateYi=" + dateYi + ", status="
-				+ status + ", gmtCreate=" + gmtCreate + ", gmtModified=" + gmtModified + ", getParamSetId()="
-				+ getParamSetId() + ", getBatchId()=" + getBatchId() + ", getSn()=" + getSn() + ", getDaySet()="
-				+ getDaySet() + ", getDayStartTime()=" + getDayStartTime() + ", getDayEndTime()=" + getDayEndTime()
-				+ ", getNightStartTime()=" + getNightStartTime() + ", getNightEndTime()=" + getNightEndTime()
-				+ ", getDayWindLenghtTime()=" + getDayWindLenghtTime() + ", getDayWindCycleTime()="
-				+ getDayWindCycleTime() + ", getDayBgLenght1()=" + getDayBgLenght1() + ", getDayBgCycle1()="
-				+ getDayBgCycle1() + ", getDayBgLenght2()=" + getDayBgLenght2() + ", getDayBgCycle2()="
-				+ getDayBgCycle2() + ", getDayBgLenght3()=" + getDayBgLenght3() + ", getDayBgCycle3()="
-				+ getDayBgCycle3() + ", getDayYyLength1()=" + getDayYyLength1() + ", getDayYyCycle1()="
-				+ getDayYyCycle1() + ", getDayYyLength2()=" + getDayYyLength2() + ", getDayYyCycle2()="
-				+ getDayYyCycle2() + ", getDayYyLength3()=" + getDayYyLength3() + ", getDayYyCycle3()="
-				+ getDayYyCycle3() + ", getDayNewWindLength()=" + getDayNewWindLength() + ", getDayNewWindTime()="
-				+ getDayNewWindTime() + ", getDayFeedBgTime()=" + getDayFeedBgTime() + ", getDayFeedBgLength()="
-				+ getDayFeedBgLength() + ", getDayFeedWaterLength()=" + getDayFeedWaterLength()
-				+ ", getDayFeedWaterCycle()=" + getDayFeedWaterCycle() + ", getNightWindLenghtTime()="
-				+ getNightWindLenghtTime() + ", getNightWindCycleTime()=" + getNightWindCycleTime()
-				+ ", getNightBgLenght1()=" + getNightBgLenght1() + ", getNightBgCycle1()=" + getNightBgCycle1()
-				+ ", getNightBgLenght2()=" + getNightBgLenght2() + ", getNightBgCycle2()=" + getNightBgCycle2()
-				+ ", getNightBgLenght3()=" + getNightBgLenght3() + ", getNightBgCycle3()=" + getNightBgCycle3()
-				+ ", getNightYyLength1()=" + getNightYyLength1() + ", getNightYyCycle1()=" + getNightYyCycle1()
-				+ ", getNightYyLength2()=" + getNightYyLength2() + ", getNightYyCycle2()=" + getNightYyCycle2()
-				+ ", getNightYyLength3()=" + getNightYyLength3() + ", getNightYyCycle3()=" + getNightYyCycle3()
-				+ ", getNightNewWindLength()=" + getNightNewWindLength() + ", getNightNewWindTime()="
-				+ getNightNewWindTime() + ", getNightFeedBgTime()=" + getNightFeedBgTime() + ", getNightFeedBgLength()="
-				+ getNightFeedBgLength() + ", getNightFeedWaterLength()=" + getNightFeedWaterLength()
-				+ ", getBatchNo1()=" + getBatchNo1() + ", getPlantName1()=" + getPlantName1() + ", getGrowthPattern1()="
-				+ getGrowthPattern1() + ", getDayTemperature1()=" + getDayTemperature1() + ", getNightTemperature1()="
-				+ getNightTemperature1() + ", getDayHumidity1()=" + getDayHumidity1() + ", getNightHumidity1()="
-				+ getNightHumidity1() + ", getBatchNo2()=" + getBatchNo2() + ", getPlantName2()=" + getPlantName2()
-				+ ", getGrowthPattern2()=" + getGrowthPattern2() + ", getDayTemperature2()=" + getDayTemperature2()
-				+ ", getNightTemperature2()=" + getNightTemperature2() + ", getDayHumidity2()=" + getDayHumidity2()
-				+ ", getNightHumidity2()=" + getNightHumidity2() + ", getBatchNo3()=" + getBatchNo3()
-				+ ", getPlantName3()=" + getPlantName3() + ", getGrowthPattern3()=" + getGrowthPattern3()
-				+ ", getDayTemperature3()=" + getDayTemperature3() + ", getNightTemperature3()="
-				+ getNightTemperature3() + ", getDayHumidity3()=" + getDayHumidity3() + ", getNightHumidity3()="
-				+ getNightHumidity3() + ", getNightFeedWaterCycle()=" + getNightFeedWaterCycle()
-				+ ", getYyBeforeTime()=" + getYyBeforeTime() + ", getYyNextTime()=" + getYyNextTime()
-				+ ", getYyPTime1()=" + getYyPTime1() + ", getYyPTime2()=" + getYyPTime2() + ", getYyPTime3()="
-				+ getYyPTime3() + ", getYyCTime()=" + getYyCTime() + ", getYyKTime()=" + getYyKTime() + ", getComm()="
-				+ getComm() + ", getIp()=" + getIp() + ", getPort()=" + getPort() + ", getCyCycle()=" + getCyCycle()
-				+ ", getStCycle()=" + getStCycle() + ", getOutTime()=" + getOutTime() + ", getInTime()=" + getInTime()
-				+ ", getTimeLenghtMod()=" + getTimeLenghtMod() + ", getDateLength()=" + getDateLength()
-				+ ", getDateYi()=" + getDateYi() + ", getStatus()=" + getStatus() + ", getGmtCreate()=" + getGmtCreate()
-				+ ", getGmtModified()=" + getGmtModified() + ", getCheckTime()=" + getCheckTime() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
-	}
-
-	
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", paramSetId=").append(paramSetId);
+        sb.append(", batchId=").append(batchId);
+        sb.append(", sn=").append(sn);
+        sb.append(", daySet=").append(daySet);
+        sb.append(", dayStartTime=").append(dayStartTime);
+        sb.append(", dayEndTime=").append(dayEndTime);
+        sb.append(", nightStartTime=").append(nightStartTime);
+        sb.append(", nightEndTime=").append(nightEndTime);
+        sb.append(", dayWindLenghtTime=").append(dayWindLenghtTime);
+        sb.append(", dayWindCycleTime=").append(dayWindCycleTime);
+        sb.append(", dayBgLenght1=").append(dayBgLenght1);
+        sb.append(", dayBgCycle1=").append(dayBgCycle1);
+        sb.append(", dayBgLenght2=").append(dayBgLenght2);
+        sb.append(", dayBgCycle2=").append(dayBgCycle2);
+        sb.append(", dayBgLenght3=").append(dayBgLenght3);
+        sb.append(", dayBgCycle3=").append(dayBgCycle3);
+        sb.append(", dayYyLength1=").append(dayYyLength1);
+        sb.append(", dayYyCycle1=").append(dayYyCycle1);
+        sb.append(", dayYyLength2=").append(dayYyLength2);
+        sb.append(", dayYyCycle2=").append(dayYyCycle2);
+        sb.append(", dayYyLength3=").append(dayYyLength3);
+        sb.append(", dayYyCycle3=").append(dayYyCycle3);
+        sb.append(", dayNewWindLength=").append(dayNewWindLength);
+        sb.append(", dayNewWindTime=").append(dayNewWindTime);
+        sb.append(", feedName=").append(feedName);
+        sb.append(", feedPlantingTime=").append(feedPlantingTime);
+        sb.append(", feedRecoveryTime=").append(feedRecoveryTime);
+        sb.append(", dayFeedBgTime=").append(dayFeedBgTime);
+        sb.append(", dayFeedBgLength=").append(dayFeedBgLength);
+        sb.append(", dayFeedWaterLength=").append(dayFeedWaterLength);
+        sb.append(", dayFeedWaterCycle=").append(dayFeedWaterCycle);
+        sb.append(", nightWindLenghtTime=").append(nightWindLenghtTime);
+        sb.append(", nightWindCycleTime=").append(nightWindCycleTime);
+        sb.append(", nightBgLenght1=").append(nightBgLenght1);
+        sb.append(", nightBgCycle1=").append(nightBgCycle1);
+        sb.append(", nightBgLenght2=").append(nightBgLenght2);
+        sb.append(", nightBgCycle2=").append(nightBgCycle2);
+        sb.append(", nightBgLenght3=").append(nightBgLenght3);
+        sb.append(", nightBgCycle3=").append(nightBgCycle3);
+        sb.append(", nightYyLength1=").append(nightYyLength1);
+        sb.append(", nightYyCycle1=").append(nightYyCycle1);
+        sb.append(", nightYyLength2=").append(nightYyLength2);
+        sb.append(", nightYyCycle2=").append(nightYyCycle2);
+        sb.append(", nightYyLength3=").append(nightYyLength3);
+        sb.append(", nightYyCycle3=").append(nightYyCycle3);
+        sb.append(", nightNewWindLength=").append(nightNewWindLength);
+        sb.append(", nightNewWindTime=").append(nightNewWindTime);
+        sb.append(", nightFeedBgTime=").append(nightFeedBgTime);
+        sb.append(", nightFeedBgLength=").append(nightFeedBgLength);
+        sb.append(", nightFeedWaterLength=").append(nightFeedWaterLength);
+        sb.append(", batchNo1=").append(batchNo1);
+        sb.append(", plantName1=").append(plantName1);
+        sb.append(", growthPattern1=").append(growthPattern1);
+        sb.append(", dayTemperature1=").append(dayTemperature1);
+        sb.append(", nightTemperature1=").append(nightTemperature1);
+        sb.append(", dayHumidity1=").append(dayHumidity1);
+        sb.append(", nightHumidity1=").append(nightHumidity1);
+        sb.append(", batchNo2=").append(batchNo2);
+        sb.append(", plantName2=").append(plantName2);
+        sb.append(", growthPattern2=").append(growthPattern2);
+        sb.append(", dayTemperature2=").append(dayTemperature2);
+        sb.append(", nightTemperature2=").append(nightTemperature2);
+        sb.append(", dayHumidity2=").append(dayHumidity2);
+        sb.append(", nightHumidity2=").append(nightHumidity2);
+        sb.append(", batchNo3=").append(batchNo3);
+        sb.append(", plantName3=").append(plantName3);
+        sb.append(", growthPattern3=").append(growthPattern3);
+        sb.append(", dayTemperature3=").append(dayTemperature3);
+        sb.append(", nightTemperature3=").append(nightTemperature3);
+        sb.append(", dayHumidity3=").append(dayHumidity3);
+        sb.append(", nightHumidity3=").append(nightHumidity3);
+        sb.append(", nightFeedWaterCycle=").append(nightFeedWaterCycle);
+        sb.append(", yyBeforeTime=").append(yyBeforeTime);
+        sb.append(", yyNextTime=").append(yyNextTime);
+        sb.append(", yyPTime1=").append(yyPTime1);
+        sb.append(", yyPTime2=").append(yyPTime2);
+        sb.append(", yyPTime3=").append(yyPTime3);
+        sb.append(", yyCTime=").append(yyCTime);
+        sb.append(", yyKTime=").append(yyKTime);
+        sb.append(", comm=").append(comm);
+        sb.append(", ip=").append(ip);
+        sb.append(", port=").append(port);
+        sb.append(", cyCycle=").append(cyCycle);
+        sb.append(", stCycle=").append(stCycle);
+        sb.append(", outTime=").append(outTime);
+        sb.append(", inTime=").append(inTime);
+        sb.append(", timeLenghtMod=").append(timeLenghtMod);
+        sb.append(", dateLength=").append(dateLength);
+        sb.append(", dateYi=").append(dateYi);
+        sb.append(", status=").append(status);
+        sb.append(", gmtCreate=").append(gmtCreate);
+        sb.append(", gmtModified=").append(gmtModified);
+        sb.append("]");
+        return sb.toString();
+    }
 }

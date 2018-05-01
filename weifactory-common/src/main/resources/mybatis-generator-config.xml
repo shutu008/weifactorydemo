@@ -5,7 +5,7 @@
 
 <generatorConfiguration>
 	<!--引入属性文件-->
-	<properties resource="application.properties"></properties>
+	<properties resource="db.properties"></properties>
 	<classPathEntry
 			location="/Users/shutu008/eclipse-workspace/weifactory-workspace/weifactory-2.0/doc/mysql-connector-java-5.1.6.jar" />
 	<context id="testTables" targetRuntime="MyBatis3">
@@ -106,11 +106,11 @@
 		<!-- <table tableName="hand_control"></table>  -->
 		<!-- <table schema="" tableName="device"></table> -->
 		<!-- <table tableName="growth_pattern_param"></table>
-		<table tableName="history_data"></table>
-		<table tableName="param_set"></table> -->
+		<table tableName="history_data"></table>-->
+		<table tableName="param_set"></table> 
 		<!-- <table tableName="growth_pattern_param"></table> -->
-		<table tableName="device">
+		<!-- <table tableName="device">
 			<generatedKey column="device_id" sqlStatement="MySql" identity="true"/>
-		</table>
+		</table> -->
 	</context>
 </generatorConfiguration>
