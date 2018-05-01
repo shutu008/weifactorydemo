@@ -166,7 +166,7 @@ public class SensorServiceImpl implements SensorService {
 					logger.info("当前值："+resultCurrent);
 					logger.info("数据库中值："+resultDb);
 					if(resultCurrent !=null && !resultCurrent.equals(resultDb)) {
-						String function = ResourceProperty.getProperties("dataConvert.properties").getProperty(objectName+"."+fieldName);
+						String function = StringUtils.trim(ResourceProperty.getProperties("dataConvert.properties").getProperty(objectName+"."+fieldName));
 						hashMap.put(function, resultCurrent);
 					}
 				}catch(Exception e) {
