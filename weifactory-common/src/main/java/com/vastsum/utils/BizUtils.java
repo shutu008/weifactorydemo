@@ -35,7 +35,7 @@ public class BizUtils {
 			tmp = a+split[1];
 			tmp = String.format("%03d", Integer.parseInt(tmp));
 		}else if (i<0) {
-			tmp = String.format("%03d", Integer.parseInt(data));
+			tmp = String.format("%03d", Integer.parseInt(data)*10);
 		}
 		logger.info("处理过的数据："+data);
 		return tmp;
