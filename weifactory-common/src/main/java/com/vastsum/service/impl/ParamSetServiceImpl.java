@@ -93,17 +93,28 @@ public class ParamSetServiceImpl implements ParamSetService {
 		return growthPatternParamMapper.selectByExample(growthPatternParamExample);
 	}
 
-	//根据设备序列号获取最新的参数设置信息
+	//根据设备序列号获取最新的参数设置信息,有用的
 	@Override
 	public ParamSet getLastBySn(String sn) {
 		ParamSetExample paramSetExample = new ParamSetExample();
-		paramSetExample.createCriteria().andSnEqualTo(sn);
+		paramSetExample.createCriteria().andSnEqualTo(sn).andStatusEqualTo("1");
 		paramSetExample.setOrderByClause("gmt_create desc");
 		List<ParamSet> list = paramSetMapper.selectByExample(paramSetExample);
 		if (list == null || list.isEmpty()) {
 			return null;
 		}
 		return list.get(0);
+	}
+
+	//更改设置的参数设置状态
+	@Override
+	public void updateParamSetStatus(String sn, String status) {
+		ParamSetExample paramSetExample = new ParamSetExample();
+		paramSetExample.createCriteria().andSnEqualTo(sn);
+		
+		ParamSet paramSet = new ParamSet();
+		paramSet.setStatus(status);
+		paramSetMapper.updateByExampleSelective(paramSet, paramSetExample);
 	}
 
 }

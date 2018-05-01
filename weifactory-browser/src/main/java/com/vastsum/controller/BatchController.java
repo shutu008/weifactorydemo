@@ -30,8 +30,10 @@ import com.vastsum.model.V;
 import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.DeviceService;
+import com.vastsum.service.HandControlService;
 import com.vastsum.service.ImageServer;
 import com.vastsum.service.OrderService;
+import com.vastsum.service.ParamSetService;
 import com.vastsum.service.SeedService;
 
 import io.swagger.annotations.Api;
@@ -63,6 +65,10 @@ public class BatchController extends BaseController {
     private OrderService orderService;
     @Autowired
     private SeedService seedService;
+    @Autowired
+    private ParamSetService paramSetService;
+    @Autowired
+    private HandControlService handControlService;
     
 	//根据设备id获取最新的批次信息，设备管理显示界面20180311
     @GetMapping(value = "/{deviceId}")
@@ -153,9 +159,14 @@ public class BatchController extends BaseController {
         if (batchId == null) {
             return new ResponseEntity<ResultModel>(ResultModel.error(ResultStatus.BATCH_ID_NULL), HttpStatus.BAD_REQUEST);
         }
-        int i = batchService.deleteBatch(batchId);
-        return  i>0? ResponseEntity.ok(ResultModel.ok(ResultStatus.BATCH_DELETE_SUCCESS)):
-                    ResponseEntity.ok(ResultModel.error(ResultStatus.BATCH_DELETE_FAILED));
+        //删除批次ID同时要更改对应的参数设置状态
+        Batch batch = batchService.selectBatchBybatchId(batchId);
+        Device device = deviceService.getById(batch.getDeviceId());
+        paramSetService.updateParamSetStatus(device.getSn(), "0");
+        handControlService.updateHandControlStatus(device.getSn(), "0");
+        batchService.deleteBatch(batchId);
+       
+       return V.ok();
     }
 
     //根据批次id获取批次详细信息
@@ -269,14 +280,17 @@ public class BatchController extends BaseController {
         if (batchId == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.BATCH_ID_NULL));
         }
+      //废弃批次也要废弃对应的手动控制
+        Batch b = batchService.selectBatchBybatchId(batchId);
+        Device device = deviceService.getById(b.getDeviceId());
+        paramSetService.updateParamSetStatus(device.getSn(), "0");
+        handControlService.updateHandControlStatus(device.getSn(), "0");  
+      
         Batch batch = new Batch();
         batch.setBatchId(batchId);
         batch.setStatus("0");
-        int i = batchService.updateBatch(batch);
-        if (i > 0){
-            return ResponseEntity.ok(ResultModel.ok());
-        }
-        return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
+        batchService.updateBatch(batch);
+       return V.ok();
     }
     
     //按照层级废弃批次信息

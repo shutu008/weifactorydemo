@@ -30,6 +30,13 @@ public interface HandControlService {
 	 */
 	void saveOrUpdate(HandControl handControl);
 	
+	/**
+	 * 更改手动控制状态
+	 * @param sn
+	 * @param status
+	 */
+	void updateHandControlStatus(String sn, String status);
+	
 	
 
 }

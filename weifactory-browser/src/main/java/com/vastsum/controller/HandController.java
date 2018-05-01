@@ -49,7 +49,7 @@ public class HandController  extends BaseController  {
 		hashMap.put("sn", "ZWGC2018032665194");
 		hashMap.put("kqxh1","1");
 		System.out.println("正在向"+(String)(hashMap.get("sn"))+"发送指令");
-		handRemoteService.sendOrder(hashMap, 1);
+		handRemoteService.sendOrder(hashMap);
 		return V.ok();
     }
 	
@@ -105,7 +105,7 @@ public class HandController  extends BaseController  {
 			return V.error("当前设备不在线，无法进行手动控制！");
 		}
 		//1,代表手动控制模块
-		handRemoteService.sendOrder(sensorService.changeOrder(handControl), 1);
+		handRemoteService.sendOrder(sensorService.changeOrder(handControl));
 		logger.info("手动控制数据下发成功");
 		//手动控制保存成功
 		handControlService.saveOrUpdate(handControl);

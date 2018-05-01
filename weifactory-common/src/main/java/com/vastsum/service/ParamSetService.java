@@ -44,6 +44,15 @@ public interface ParamSetService {
 	ParamSet getLastBySn(String sn);
 	
 	/**
+	 * 更改参数设置状态
+	 * @param sn
+	 * @param status
+	 */
+	void updateParamSetStatus(String sn,String status);
+	
+	
+	
+	/**
 	 * 添加或修改一个参数
 	 * @param growthPatternParam
 	 */

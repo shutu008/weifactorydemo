@@ -12,7 +12,7 @@ public class ParserMessageUtils {
 	
 	private static Logger logger = LoggerFactory.getLogger(ParserMessageUtils.class);
 	
-	public static ArrayList<CommunicationMessage> encodeHashMap(HashMap<String, Object> hashMap, Integer model) {
+	public static ArrayList<CommunicationMessage> encodeHashMap(HashMap<String, Object> hashMap) {
 		ArrayList<CommunicationMessage> listCM = new ArrayList<>();
 		
 		if (hashMap != null) {
@@ -24,8 +24,12 @@ public class ParserMessageUtils {
 		hashMap.forEach((k,v)->{
 			try {
 				if(!k.equals("sn")) {
+					if (k.length() != 8) {
+						logger.info("指令集中有不符合要求的数据,数据为："+k);
+						return;
+					}
 					Integer commandNumber = Integer.valueOf(k.substring(5));//k为8位，后三位为命令号
-					CommunicationMessage cm = new CommunicationMessage(sn, model, commandNumber, v.toString());
+					CommunicationMessage cm = new CommunicationMessage(sn, Integer.valueOf(k.substring(1, 5)), commandNumber, v.toString());
 					listCM.add(cm);
 					logger.info("编码的指令为："+cm.getMsg());
 				}

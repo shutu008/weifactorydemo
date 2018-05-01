@@ -35,8 +35,8 @@ public class BrowserLike {
 		HandRemoteService hrs = new HandRemoteServiceImpl();
 		HashMap<String, Object> hashMap = new HashMap<>();
 		hashMap.put("sn", "ZWGC2018032665194");
-		hashMap.put("kqxh1","1");
+		hashMap.put("T0001101","1");
 		System.out.println(hashMap.get("sn"));
-		hrs.sendOrder(hashMap, 1);
+		hrs.sendOrder(hashMap);
 	}
 }

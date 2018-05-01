@@ -130,7 +130,7 @@ public class ParamSetController extends BaseController {
 		}
 		
 		//下发参数设置其他数据
-		handRemoteService.sendOrder(sensorService.changeOrder(paramSet), 2);
+		handRemoteService.sendOrder(sensorService.changeOrder(paramSet));
 		paramSetService.saveOrUpdate(paramSet);
 		return V.ok("数据下发成功！");
     }
@@ -241,9 +241,9 @@ public class ParamSetController extends BaseController {
         	//当前设备在线
         	//远程请求植物工厂时间
             HashMap<String,Object> deviceTime = sensorService.getDeviceTime(sn);
-    		handRemoteService.sendOrder(deviceTime, 2);
+    		handRemoteService.sendOrder(deviceTime);
        	}
-      
+        //请求结果落表，在通信中间层解决
        ParamSet paramSet = paramSetService.getLastBySn(sn);
       return  V.ok(paramSet);
     }

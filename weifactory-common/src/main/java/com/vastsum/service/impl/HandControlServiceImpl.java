@@ -23,9 +23,7 @@ public class HandControlServiceImpl implements HandControlService {
 	
 	@Autowired
 	private HandControlMapper handControlMapper;
-	
-	private static Logger logger = LoggerFactory.getLogger(HandControlServiceImpl.class);
-	
+		
 	@Override
 	public HandControl getById(Long handControlId) {
 		return handControlMapper.selectByPrimaryKey(handControlId);
@@ -34,7 +32,7 @@ public class HandControlServiceImpl implements HandControlService {
 	@Override
 	public HandControl getByBatchId(Long batchId) {
 		HandControlExample handControlExample = new HandControlExample();
-		handControlExample.createCriteria().andBatchIdEqualTo(batchId);
+		handControlExample.createCriteria().andBatchIdEqualTo(batchId).andStatusEqualTo("1");
 		handControlExample.setOrderByClause("gmt_create desc");
 		List<HandControl> list = handControlMapper.selectByExample(handControlExample);
 		if (list == null || list.isEmpty()) {
@@ -43,12 +41,25 @@ public class HandControlServiceImpl implements HandControlService {
 		return list.get(0);
 	}
 
+	//保存或更新手动控制
 	@Override
 	public void saveOrUpdate(HandControl handControl) {
 		if (handControl.getHandControlId() == null) {
 			handControlMapper.insertSelective(handControl);
 		}
 		handControlMapper.updateByPrimaryKeySelective(handControl);
+	}
+
+	//更新手动控制状态
+	@Override
+	public void updateHandControlStatus(String sn, String status) {
+		HandControl handControl = new HandControl();
+		handControl.setStatus(status);
+		
+		HandControlExample handControlExample = new HandControlExample();
+		handControlExample.createCriteria().andSnEqualTo(sn);
+		handControlMapper.updateByExampleSelective(handControl, handControlExample);
+		
 	}
 	
 

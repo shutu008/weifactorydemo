@@ -20,10 +20,10 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 	private static Logger logger = LoggerFactory.getLogger(HandRemoteServiceImpl.class);
 
 	@Override
-	public void sendOrder(HashMap<String, Object> hashMap, Integer model) {
+	public void sendOrder(HashMap<String, Object> hashMap) {
 		if(hashMap == null || hashMap.isEmpty()) return;
 		logger.info("当前要下发数据给机器："+hashMap.get("sn"));
-		ArrayList<CommunicationMessage> listCM =  ParserMessageUtils.encodeHashMap(hashMap,model);
+		ArrayList<CommunicationMessage> listCM =  ParserMessageUtils.encodeHashMap(hashMap);
 		logger.info("下发数据时，当前存在的channel的列表："+NettyChannelMap.listSn().toString());
 		String sn = (String)(hashMap.get("sn"));
 		NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
@@ -32,7 +32,7 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 		for(CommunicationMessage cm : listCM) {
 			logger.info("下达的控制指令："+cm.getMsg());
 			try {
-				Thread.sleep(20);
+				Thread.sleep(2);
 			} catch (InterruptedException e) {
 				logger.error("发送给机器数据时候sleep失败");
 				e.printStackTrace();

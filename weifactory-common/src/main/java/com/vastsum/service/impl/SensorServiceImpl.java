@@ -78,11 +78,6 @@ public class SensorServiceImpl implements SensorService {
 		HashMap<String,Object> hashMap = new HashMap<>();
 		hashMap.put("sn", paramSet.getSn());
 		
-		//同步植物工厂时间和服务器相同，这个操作不落表
-		if (StringUtils.isNotBlank(paramSet.getCheckTime()) && paramSet.getCheckTime().equals("1") ) {
-			hashMap.put("T0002900", new Date());
-		}
-		
 		//判断当前数据库中有没有数据，如果没有，下发所有值
 		if (paramSet.getParamSetId() == null) {
 			BeanUtilsHashMapper<ParamSet> beanUtilsHashMapper = new BeanUtilsHashMapper<>(ParamSet.class);

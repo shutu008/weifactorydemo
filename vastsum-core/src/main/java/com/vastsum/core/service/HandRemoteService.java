@@ -9,6 +9,6 @@ import java.util.HashMap;
  *
  */
 public interface HandRemoteService {
-	void sendOrder(HashMap<String, Object> hashMap, Integer model);
+	void sendOrder(HashMap<String, Object> hashMap);
 	ArrayList<String> getOnlineDeviceList();
 }
