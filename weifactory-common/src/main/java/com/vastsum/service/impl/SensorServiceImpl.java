@@ -56,7 +56,7 @@ public class SensorServiceImpl implements SensorService {
 			hashMap.putAll(hash);
 		}else {
 			HandControl dbHandControl = handControlMapper.selectByPrimaryKey(handControl.getHandControlId());
-			HashMap<String,Object> resultMap = resultMap(handControl, dbHandControl, HandControl.class,"handControl");
+			HashMap<String,Object> resultMap = resultMap(dbHandControl, handControl, HandControl.class,"handControl");
 			hashMap.putAll(resultMap);
 		}
 		//数据处理
@@ -90,7 +90,7 @@ public class SensorServiceImpl implements SensorService {
 			hashMap.putAll(hash);
 		}else {
 			ParamSet primevalParamSet= paramSetMapper.selectByPrimaryKey(paramSet.getParamSetId());
-			HashMap<String,Object> resultMap = resultMap(paramSet, primevalParamSet, ParamSet.class,"paramSet");
+			HashMap<String,Object> resultMap = resultMap(primevalParamSet, paramSet, ParamSet.class,"paramSet");
 			hashMap.putAll(resultMap);
 		}
 		
@@ -145,8 +145,8 @@ public class SensorServiceImpl implements SensorService {
 	
 	/**
 	 *  处理对象，获取差值
-	 * @param dbData
-	 * @param currentData
+	 * @param dbData 数据库中保存的记录
+	 * @param currentData 目前要下发的记录
 	 * @param clazz
 	 * @return
 	 */
