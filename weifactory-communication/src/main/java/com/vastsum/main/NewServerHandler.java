@@ -94,13 +94,13 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
             return;
         }
         try {
-            //判断如果客户端断开重连接只发送设备号
             if (request == null || "".equals(request)){
             	CommunicationMessage cmReplay = new CommunicationMessage(sn,5,5,"1");
             	ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
                 return;
             }
-            if (cm.getModel() == 1) {
+            //历史数据采集
+            if (cm.getModel() == 4) {
             	histroyDataService.save(cm);
             	ctx.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
             	return;

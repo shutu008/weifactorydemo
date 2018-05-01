@@ -27,6 +27,17 @@
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <constructor-arg ref="datasource"/>
     </bean>
+    
+   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <property name="dataSource" ref="datasource"></property>
+    <property name="mapperLocations" value="classpath:com/vastsum/dao/*.xml"></property>
+   </bean>
+   
+   <!-- 创建Mapper层的对象 -->
+   <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	  <property name="basePackage" value="com.vastsum.dao" />
+	  <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+   </bean>
 
     <!--数据处理service-->
     <!--  

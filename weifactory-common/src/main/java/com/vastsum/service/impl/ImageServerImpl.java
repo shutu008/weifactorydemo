@@ -16,7 +16,6 @@ import com.vastsum.entity.Image;
 import com.vastsum.entity.ImageExample;
 import com.vastsum.entity.Role;
 import com.vastsum.entity.vo.ImageVO;
-import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.ImageServer;
 import com.vastsum.service.UserRoleService;
@@ -28,9 +27,6 @@ import com.vastsum.utils.DateTimeUtils;
  */
 @Service
 public class ImageServerImpl implements ImageServer {
-
-	@Autowired
-	private WeifactoryProperties weifactoryProperties;
 	
 
     @Autowired
@@ -44,7 +40,7 @@ public class ImageServerImpl implements ImageServer {
     @Override
     public PageInfo<Image> pageImage(ImageVO imageVO) {
     	//图片服务器地址
-    	String path = weifactoryProperties.getImage().getHostUrl();
+    	String path = "http://img.weifactory.vastsum.net/";
     	
         Integer page = imageVO.getPage();
         Integer pageSize = imageVO.getPageSize();
@@ -104,7 +100,7 @@ public class ImageServerImpl implements ImageServer {
     @Override
     public List<Image> listBySn(String sn) {
     	//图片服务器地址
-    	String path = weifactoryProperties.getImage().getHostUrl();
+    	String path = "http://img.weifactory.vastsum.net/";
         ImageExample imageExample = new ImageExample();
         imageExample.createCriteria().andSnEqualTo(sn);
         imageExample.setOrderByClause(" gmt_create desc");
@@ -130,7 +126,7 @@ public class ImageServerImpl implements ImageServer {
             return images;
         }
         for (Image image : images){
-            String s = weifactoryProperties.getImage().getHostUrl() + image.getOnePicName();
+            String s = "http://img.weifactory.vastsum.net/"+ image.getOnePicName();
             image.setOnePicName(s);
 
         }
@@ -148,7 +144,7 @@ public class ImageServerImpl implements ImageServer {
             return images;
         }
         for (Image image : images){
-            String s = weifactoryProperties.getImage().getHostUrl() + image.getOnePicName();
+            String s = "http://img.weifactory.vastsum.net/" + image.getOnePicName();
             image.setOnePicName(s);
 
         }
@@ -181,7 +177,7 @@ public class ImageServerImpl implements ImageServer {
             return images;
         }
         for (Image image : images){
-            String s = weifactoryProperties.getImage().getHostUrl() + image.getOnePicName();
+            String s = "http://img.weifactory.vastsum.net/" + image.getOnePicName();
             image.setOnePicName(s);
 
         }
@@ -204,7 +200,7 @@ public class ImageServerImpl implements ImageServer {
     @Override
     public Image getById(Long id) {
         Image image = imageMapper.selectByPrimaryKey(id);
-        image.setOnePicName(weifactoryProperties.getImage().getHostUrl()+image.getOnePicName());
+        image.setOnePicName("http://img.weifactory.vastsum.net/"+image.getOnePicName());
         return image;
     }
 
