@@ -1,7 +1,7 @@
 package com.vastsum.server;
 
-import com.vastsum.entity.CommunicationMessage;
+import com.vastsum.entity.HistoryData;
 
 public interface HistroyDataService {
-	int save(CommunicationMessage cm);
+	int save(HistoryData historyData);
 }

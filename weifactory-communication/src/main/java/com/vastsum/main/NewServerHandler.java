@@ -1,11 +1,14 @@
 package com.vastsum.main;
 
+import java.util.Date;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vastsum.entity.CommunicationLog;
 import com.vastsum.entity.CommunicationMessage;
+import com.vastsum.entity.HistoryData;
 import com.vastsum.pojo.NewConnection;
 import com.vastsum.pojo.OptionType;
 import com.vastsum.server.CommunicationService;
@@ -101,8 +104,16 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
             }
             //历史数据采集
             if (cm.getModel() == 4) {
-            	histroyDataService.save(cm);
-            	ctx.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
+            	
+            	HistoryData historyData = new HistoryData();
+            	historyData.setDeviceTime(cm.getTime());
+            	historyData.setIdentify(cm.getFunction()+"");
+            	historyData.setServerTime(new Date());
+            	historyData.setSn(NettyChannelMap.getInstance().getSn(ctx.channel()));
+            	historyData.setValue(cm.getData());
+            	histroyDataService.save(historyData);
+            	LOGGER.info("保存采集数据："+historyData.toString());
+            	//ctx.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
             	return;
             }
             if (cm.getModel() == 5){
