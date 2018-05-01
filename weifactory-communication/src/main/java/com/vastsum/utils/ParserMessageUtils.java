@@ -25,7 +25,7 @@ public class ParserMessageUtils {
 			try {
 				if(!k.equals("sn")) {
 					Integer commandNumber = Integer.valueOf(k.substring(5));//k为8位，后三位为命令号
-					CommunicationMessage cm = new CommunicationMessage(sn, model, commandNumber, (String)v);
+					CommunicationMessage cm = new CommunicationMessage(sn, model, commandNumber, v.toString());
 					listCM.add(cm);
 					logger.info("编码的指令为："+cm.getMsg());
 				}
@@ -35,4 +35,11 @@ public class ParserMessageUtils {
 		});
 		return listCM;
 	}
+	
+//	public static void main(String[] args) {
+//		Integer aInteger = 12;
+//		Double float1 = 12.3;
+//		System.out.println(aInteger.toString());
+//		System.out.println(float1.toString());
+//	}
 }
