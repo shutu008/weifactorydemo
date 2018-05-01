@@ -19,7 +19,7 @@ public class HistoryDataServiceImpl implements HistroyDataService{
 	
 	@Override
 	public int save(CommunicationMessage cm) {
-		String sql = "INSERT INTO " + tableName + "sn, identify, value, server_time, device_time"
+		String sql = "INSERT INTO " + tableName + " (sn, identify, value, server_time, device_time) "
 				+ "VALUES(?,?,?,?,?)";
 		int i = jdbcTemplate.update(sql,
 				cm.getSn(),
