@@ -5,6 +5,7 @@ import com.vastsum.controller.system.BaseController;
 import com.vastsum.entity.Model;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
+import com.vastsum.model.V;
 import com.vastsum.service.ModelService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -106,14 +107,8 @@ public class ModelController extends BaseController {
             @ApiImplicitParam(paramType = "query", name = "co2Down", value = "二氧化碳浓度下限", required = true),
             @ApiImplicitParam(paramType = "query", name = "ecUp", value = "EC值上限", required = true),
             @ApiImplicitParam(paramType = "query", name = "ecDown", value = "EC值下限",required = true),
-            @ApiImplicitParam(paramType = "query", name = "oxygenUp", value = "氧气浓度上限", required = true),
-            @ApiImplicitParam(paramType = "query", name = "oxygenDown", value = "氧气浓度下限", required = true),
             @ApiImplicitParam(paramType = "query", name = "phUp", value = "ph值上限", required = true),
             @ApiImplicitParam(paramType = "query", name = "phDown", value = "ph值下限", required = true),
-            @ApiImplicitParam(paramType = "query", name = "highLevelUp", value = "高液位上限",required = true),
-            @ApiImplicitParam(paramType = "query", name = "hightLevelDown", value = "高液位下限", required = true),
-            @ApiImplicitParam(paramType = "query", name = "lowLevelUp", value = "低液位上限", required = true),
-            @ApiImplicitParam(paramType = "query", name = "lowLevelDown", value = "低液位下限",required = true),
             @ApiImplicitParam(paramType = "query", name = "modelId", value = "模型ID", required = false)
     })
     public ResponseEntity<ResultModel> addOrUpdate(@ModelAttribute Model model){
@@ -153,29 +148,11 @@ public class ModelController extends BaseController {
         if (model.getEcDown() == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_ECDOWN_NOT_NULL));
         }
-        if (model.getOxygenUp() == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_OXYGENUP_NOT_NULL));
-        }
-        if (model.getOxygenDown() == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_OXYGENDOWN_NOT_NULL));
-        }
         if (model.getPhUp() == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_PHUP_NOT_NULL));
         }
         if (model.getPhDown() == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_PHDOWN_NOT_NULL));
-        }
-        if (model.getHighLevelUp() == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_HIGHLEVELUP_NOT_NULL));
-        }
-        if (model.getHightLevelDown() == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_HIGHTLEVELDOWN_NOT_NULL));
-        }
-        if (model.getLowLevelUp() == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_LOWLEVELUP_NOT_NULL));
-        }
-        if (model.getHightLevelDown() == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.MODEL_LOWLEVELDOWN_NOT_NULL));
         }
         //更新
         if(model.getModelId() != null){
@@ -184,13 +161,11 @@ public class ModelController extends BaseController {
                 return ResponseEntity.ok(ResultModel.ok());
             }
             return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
+        }else {
+        	modelService.saveModel(model);
         }
-        //保存
-        Integer i = modelService.saveModel(model);
-        if (i >0){
-            return ResponseEntity.ok(ResultModel.ok());
-        }
-        return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
+        
+        return V.ok();
     }
 
     @GetMapping(value = "/detail/{modelId}")

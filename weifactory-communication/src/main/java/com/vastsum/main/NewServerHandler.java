@@ -13,6 +13,7 @@ import com.vastsum.pojo.NewConnection;
 import com.vastsum.pojo.OptionType;
 import com.vastsum.server.CommunicationService;
 import com.vastsum.server.HistroyDataService;
+import com.vastsum.service.BizExceptionService;
 import com.vastsum.utils.NettyChannelMap;
 
 import io.netty.buffer.Unpooled;
@@ -28,6 +29,8 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
     private CommunicationService communicationService;
     @Autowired
     private HistroyDataService histroyDataService;
+    @Autowired
+    private BizExceptionService bizExceptionService;
 
     //是否第一次执行标志
     boolean flag = true;
@@ -113,6 +116,7 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
             	historyData.setValue(cm.getData());
             	histroyDataService.save(historyData);
             	LOGGER.info("保存采集数据："+historyData.toString());
+            	bizExceptionService.save(cm.getFunction()+"", NettyChannelMap.getInstance().getSn(ctx.channel()), cm.getData());
             	//ctx.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
             	return;
             }

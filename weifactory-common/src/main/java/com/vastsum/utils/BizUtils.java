@@ -83,7 +83,21 @@ public class BizUtils {
 		
 	}
 	
-	//转化适配器，将Java对象字段，转换成对应的数据 
+	/**
+	 * 解析数据为正常数据 320 ～32.0
+	 * @param data
+	 * @return Double
+	 */
+	public static Double parseData(String data) {
+		if (StringUtils.isBlank(data) || data.length() !=3) {
+			return 0.0;
+		}
+		String num = data.substring(0, 2);
+		String smaill = data.substring(2);
+		Double result = Double.parseDouble(num+"."+smaill);
+		return result;
+	}
+	
 	
 	
 

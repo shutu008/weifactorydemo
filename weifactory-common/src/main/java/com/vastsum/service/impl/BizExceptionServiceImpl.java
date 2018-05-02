@@ -1,17 +1,30 @@
 package com.vastsum.service.impl;
 
+import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.vastsum.dao.BizExceptionMapper;
+import com.vastsum.dao.DeviceMapper;
+import com.vastsum.entity.Batch;
 import com.vastsum.entity.BizException;
 import com.vastsum.entity.BizExceptionExample;
+import com.vastsum.entity.Device;
+import com.vastsum.entity.DeviceExample;
+import com.vastsum.entity.Model;
+import com.vastsum.service.BatchService;
 import com.vastsum.service.BizExceptionService;
+import com.vastsum.service.ModelService;
 import com.vastsum.service.RoleService;
+import com.vastsum.utils.BizUtils;
 
 /**
  * @author ssj
@@ -19,12 +32,20 @@ import com.vastsum.service.RoleService;
  */
 @Service
 public class BizExceptionServiceImpl implements BizExceptionService {
+	
+	private static Logger logger = LoggerFactory.getLogger(BizExceptionServiceImpl.class);
 
     @Autowired
     private BizExceptionMapper bizExceptionMapper;
 
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private DeviceMapper deviceMapper;
+    @Autowired
+    private BatchService batchService;
+    @Autowired
+    private ModelService modelService;
 
     //列出所有的业务异常信息
     @Override
@@ -127,4 +148,66 @@ public class BizExceptionServiceImpl implements BizExceptionService {
     public int delete(long exceptionId) {
         return bizExceptionMapper.deleteByPrimaryKey(exceptionId);
     }
+
+	@Override
+	public void save(String function, String sn, String data) {
+		BizException bizException = new BizException();
+		
+		DeviceExample deviceExample = new DeviceExample();
+		deviceExample.createCriteria().andSnEqualTo("sn");
+		List<Device> list = deviceMapper.selectByExample(deviceExample);
+		if (list == null || list.isEmpty()) {
+			return;
+		}
+		Device device = list.get(0);
+		if (device == null) {
+			return;
+		}
+		Integer deviceId = device.getDeviceId();
+		Integer userId = device.getUserId();
+		//判断当前批次是否关联了模型
+		Batch batch = batchService.selectLastBatchByDeviceId(deviceId);
+		if (batch.getModelId() == null) {
+			logger.info("当前设备没有关联阈值信息");
+			return ;
+		}
+		Model model = modelService.getModelById(batch.getModelId());
+		Double tup = model.getTemperatureUp();
+		Double tdown = model.getTemperatureDown();
+		Double hup = model.getHumidityUp();
+		Double hdown = model.getHumidityDown();
+		Set<String> tset = new HashSet<>();
+		Set<String> hset = new HashSet<>();
+		tset.add("104");
+		hset.add("105");
+		tset.add("204");
+		hset.add("205");
+		tset.add("304");
+		hset.add("305");
+		if (tset.contains(function)) {
+			Double data2 = BizUtils.parseData(data);
+			if (data2 > tup) {
+				bizException.setExceptionContent("温度过高");
+			}
+			if (data2 < tdown) {
+				bizException.setExceptionContent("温度过低");
+			}
+		}
+		if (hset.contains(function)) {
+			Double data3 = BizUtils.parseData(data);
+			if (data3> hup) {
+				bizException.setExceptionContent("湿度过高");
+			}
+			if (data3 < hdown) {
+				bizException.setExceptionContent("湿度过低");
+			}
+		}
+		bizException.setExceptionType(1);
+		bizException.setGmtCreate(new Date());
+		bizException.setSensorNo(Integer.parseInt(function));
+		bizException.setSn(sn);
+		bizException.setUserId(userId);
+		bizExceptionMapper.insertSelective(bizException);
+	}
+	
 }

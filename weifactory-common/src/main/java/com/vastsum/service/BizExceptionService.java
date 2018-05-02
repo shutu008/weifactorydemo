@@ -11,6 +11,14 @@ import java.util.List;
  * @create 2017-11-17 22:03
  */
 public interface BizExceptionService {
+	
+	/**
+	 * 保存业务异常信息
+	 * @param function 传感器标识
+	 * @param sn 设备序列号
+	 * @param data 数据
+	 */
+	void save(String function, String sn, String data);
 
     /**
      * 列出所有业务异常
