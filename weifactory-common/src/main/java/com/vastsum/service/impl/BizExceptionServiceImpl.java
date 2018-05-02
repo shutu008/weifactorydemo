@@ -164,7 +164,9 @@ public class BizExceptionServiceImpl implements BizExceptionService {
 			return;
 		}
 		Integer deviceId = device.getDeviceId();
+		logger.info("植物工厂异常：设备序列号为："+sn);
 		Integer userId = device.getUserId();
+		logger.info("植物工厂异常：用户ID为："+userId);
 		//判断当前批次是否关联了模型
 		Batch batch = batchService.selectLastBatchByDeviceId(deviceId);
 		if (batch.getModelId() == null) {
@@ -184,6 +186,8 @@ public class BizExceptionServiceImpl implements BizExceptionService {
 		hset.add("205");
 		tset.add("304");
 		hset.add("305");
+		logger.info("获取植物工厂原始数据："+data+";function="+function);
+		
 		if (tset.contains(function)) {
 			Double data2 = BizUtils.parseData(data);
 			if (data2 > tup) {

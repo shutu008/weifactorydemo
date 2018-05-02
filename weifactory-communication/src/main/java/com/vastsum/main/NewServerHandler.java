@@ -1,6 +1,8 @@
 package com.vastsum.main;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +16,7 @@ import com.vastsum.pojo.OptionType;
 import com.vastsum.server.CommunicationService;
 import com.vastsum.server.HistroyDataService;
 import com.vastsum.service.BizExceptionService;
+import com.vastsum.utils.BizUtils;
 import com.vastsum.utils.NettyChannelMap;
 
 import io.netty.buffer.Unpooled;
@@ -113,7 +116,17 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
             	historyData.setIdentify(cm.getFunction()+"");
             	historyData.setServerTime(new Date());
             	historyData.setSn(NettyChannelMap.getInstance().getSn(ctx.channel()));
-            	historyData.setValue(cm.getData());
+            	Set<String> set = new HashSet<>();
+            	set.add("104");
+            	set.add("105");
+            	set.add("204");
+            	set.add("205");
+            	set.add("304");
+            	set.add("305");
+        		if (set.contains(cm.getFunction()+"")) {
+        			Double data = BizUtils.parseData(cm.getData());
+        			historyData.setValue(data+"");
+        		}
             	histroyDataService.save(historyData);
             	LOGGER.info("保存采集数据："+historyData.toString());
             	bizExceptionService.save(cm.getFunction()+"", NettyChannelMap.getInstance().getSn(ctx.channel()), cm.getData());
