@@ -154,7 +154,7 @@ public class BizExceptionServiceImpl implements BizExceptionService {
 		BizException bizException = new BizException();
 		
 		DeviceExample deviceExample = new DeviceExample();
-		deviceExample.createCriteria().andSnEqualTo("sn");
+		deviceExample.createCriteria().andSnEqualTo(sn);
 		List<Device> list = deviceMapper.selectByExample(deviceExample);
 		if (list == null || list.isEmpty()) {
 			return;
@@ -169,10 +169,11 @@ public class BizExceptionServiceImpl implements BizExceptionService {
 		logger.info("植物工厂异常：用户ID为："+userId);
 		//判断当前批次是否关联了模型
 		Batch batch = batchService.selectLastBatchByDeviceId(deviceId);
-		if (batch.getModelId() == null) {
+		if (batch == null || batch.getModelId() == null) {
 			logger.info("当前设备没有关联阈值信息");
 			return ;
 		}
+		logger.info("模型关联的批次ID"+batch.getBatchId());
 		Model model = modelService.getModelById(batch.getModelId());
 		Double tup = model.getTemperatureUp();
 		Double tdown = model.getTemperatureDown();
