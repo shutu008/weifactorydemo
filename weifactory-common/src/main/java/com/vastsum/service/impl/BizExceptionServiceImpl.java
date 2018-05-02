@@ -189,6 +189,12 @@ public class BizExceptionServiceImpl implements BizExceptionService {
 		hset.add("305");
 		logger.info("获取植物工厂原始数据："+data+";function="+function);
 		
+		bizException.setExceptionType(1);
+		bizException.setGmtCreate(new Date());
+		bizException.setSensorNo(Integer.parseInt(function));
+		bizException.setSn(sn);
+		bizException.setUserId(userId);
+		
 		if (tset.contains(function)) {
 			Double data2 = BizUtils.parseData(data);
 			if (data2 > tup) {
@@ -197,8 +203,7 @@ public class BizExceptionServiceImpl implements BizExceptionService {
 			if (data2 < tdown) {
 				bizException.setExceptionContent("温度过低");
 			}
-		}
-		if (hset.contains(function)) {
+		}else if (hset.contains(function)) {
 			Double data3 = BizUtils.parseData(data);
 			if (data3> hup) {
 				bizException.setExceptionContent("湿度过高");
@@ -206,12 +211,11 @@ public class BizExceptionServiceImpl implements BizExceptionService {
 			if (data3 < hdown) {
 				bizException.setExceptionContent("湿度过低");
 			}
+		}else {
+			logger.info("数据处于模型之内");
+			return;
 		}
-		bizException.setExceptionType(1);
-		bizException.setGmtCreate(new Date());
-		bizException.setSensorNo(Integer.parseInt(function));
-		bizException.setSn(sn);
-		bizException.setUserId(userId);
+		
 		bizExceptionMapper.insertSelective(bizException);
 	}
 	
