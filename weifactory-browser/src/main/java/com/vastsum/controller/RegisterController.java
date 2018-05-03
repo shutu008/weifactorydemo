@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.codec.digest.Md5Crypt;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +37,7 @@ import com.vastsum.enums.LoginStatusEnum;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
+import com.vastsum.pojo.MD5PasswordEncoder;
 import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.service.RegisterService;
 import com.vastsum.service.UserRoleService;
@@ -249,23 +251,19 @@ public class RegisterController extends BaseController {
         if(LoginStatusEnum.AUDIT.getLoginStatus().equals(user.getLoginStatus())){
         	return V.error("此账号为专家账号，账号正在审核中!");
         }
-        UsernamePasswordAuthenticationToken authRequest = new UsernamePasswordAuthenticationToken(username, password);
-        try {
-            Authentication authentication = myAuthenticationManager.authenticate(authRequest); //调用loadUserByUsername
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-            HttpSession session = request.getSession();
-            session.setAttribute("SPRING_SECURITY_CONTEXT", SecurityContextHolder.getContext()); // 这个非常重要，否则验证后将无法登陆
-            //登陆成功后的处理
-            //根据登陆成功的用户名获取具体的用户信息
-            UserInfo userInfo = userService.findUserByUsername(authentication.getName());
-            //更新用户登录状态信息
-            userService.updateLoginStatus(user.getUserId(), LoginStatusEnum.ONLINE.getLoginStatus());
-            return ResponseEntity.ok(ResultModel.ok(userInfo));
-
-        } catch (AuthenticationException ex) {
-            //用户登陆失败
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_LOGIN_FAILED));
-        }
+        
+        MD5PasswordEncoder md5Password = new MD5PasswordEncoder();
+        String currPassword = md5Password.encode(password);
+        String dbPassword = user.getUserPassword();
+        if (!currPassword.equals(dbPassword)) {
+			return V.error("用户名或密码错误！");
+		}
+        //登陆成功后的处理
+        //根据登陆成功的用户名获取具体的用户信息
+        UserInfo userInfo = userService.findUserByUsername(username);
+        //更新用户登录状态信息
+        userService.updateLoginStatus(user.getUserId(), LoginStatusEnum.ONLINE.getLoginStatus());
+        return ResponseEntity.ok(ResultModel.ok(userInfo));
 
     }
 
