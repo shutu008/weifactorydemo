@@ -11,5 +11,7 @@ get 请求验证可能会失效，一般用post，封装成dto验证。
 
 最后总结Spring boot自动加载messageSource一定要有一个默认的资源文件。也就是basename.properties。好不科学啊，之前没有找到默认会默认取中文，现在没有默认整个就不加载了。
 
+所有操作一定要使用主键，不要使用业务标记操作。delete操作会受影响。
+
 
 
