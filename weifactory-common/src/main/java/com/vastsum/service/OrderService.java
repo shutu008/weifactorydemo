@@ -102,6 +102,8 @@ public interface OrderService {
      * @return boolean
      */
     boolean hasBizOrderByDeviceId(Integer deviceId);
+    
+    void deleteBySn(String sn);
 
 
 }

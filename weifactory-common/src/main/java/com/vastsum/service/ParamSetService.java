@@ -71,6 +71,12 @@ public interface ParamSetService {
 	 */
 	List<GrowthPatternParam> listGrowthAll();
 	
+	/**
+	 * 根据设备序列号删除所有参数设置
+	 * @param sn
+	 */
+	void deleteBySn(String sn);
+	
 	
 
 }

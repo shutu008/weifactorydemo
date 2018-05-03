@@ -270,4 +270,11 @@ public class ImageServerImpl implements ImageServer {
 		.andBatchIdEqualTo(batchId);
 		return result(imageExample);
 	}
+
+	@Override
+	public void deleteBySn(String sn) {
+		ImageExample example = new ImageExample();
+		example.createCriteria().andSnEqualTo(sn);
+		imageMapper.deleteByExample(example);
+	}
 }

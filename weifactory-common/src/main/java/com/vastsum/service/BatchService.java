@@ -77,7 +77,7 @@ public interface BatchService {
      int deleteBatch(Long batchId);
 
     /**
-     * 根据设备序列号，删除批次信息
+     * 根据ID，删除批次信息
      * @param deviceId
      * @return int
      */

@@ -31,6 +31,10 @@ import com.vastsum.model.V;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.BizControlService;
 import com.vastsum.service.DeviceService;
+import com.vastsum.service.HistoryDataService;
+import com.vastsum.service.ImageServer;
+import com.vastsum.service.OrderService;
+import com.vastsum.service.ParamSetService;
 import com.vastsum.service.RoleService;
 
 import io.swagger.annotations.Api;
@@ -55,6 +59,14 @@ public class DeviceController extends BaseController {
     private BatchService batchService;
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private HistoryDataService historyDataService;
+    @Autowired
+    private ImageServer imageServer;
+    @Autowired
+    private OrderService orderService;
+    @Autowired
+    private ParamSetService paramSetService;
     //远程服务
     @Autowired
     private HandRemoteService handRemoteService;
@@ -172,6 +184,10 @@ public class DeviceController extends BaseController {
         bizControlService.deleteBySn(sn);
         //删除和批次相关的信息
         batchService.deleteByDeviceId(id);
+        historyDataService.deleteBySn(sn);
+       orderService.deleteBySn(sn);
+       imageServer.deleteBySn(sn);
+       paramSetService.deleteBySn(sn);
 
         return ResponseEntity.ok(ResultModel.ok(ResultStatus.DEVICE_DELETE_SUCCESS));
 

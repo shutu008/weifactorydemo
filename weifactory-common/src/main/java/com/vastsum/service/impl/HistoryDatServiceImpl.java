@@ -24,6 +24,7 @@ public class HistoryDatServiceImpl implements HistoryDataService {
 	public List<HistoryData> listByTime(String sn,String identify, Date startDate, Date endDate) {
 		HistoryDataExample historyDataExample = new HistoryDataExample();
 		historyDataExample.createCriteria()
+		.andSnEqualTo(sn)
 		.andServerTimeBetween(startDate, endDate)
 		.andIdentifyEqualTo(identify);
 		historyDataExample.setOrderByClause("server_time asc");
@@ -64,6 +65,13 @@ public class HistoryDatServiceImpl implements HistoryDataService {
 			return null;
 		}
 		return list.get(0).getValue();
+	}
+
+	@Override
+	public void deleteBySn(String sn) {
+		HistoryDataExample example = new HistoryDataExample();
+		example.createCriteria().andSnEqualTo(sn);
+		historyDataMapper.deleteByExample(example);
 	}
 
 }

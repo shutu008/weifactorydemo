@@ -29,4 +29,10 @@ public interface HistoryDataService {
 	 * @return String
 	 */
 	String getDataBySnAndFunction(String sn, String function);
+	
+	/**
+	 * 根据设备序列号删除所有历史数据
+	 * @param sn
+	 */
+	void deleteBySn(String sn);
 }

@@ -170,4 +170,11 @@ public class OrderServiceImpl implements OrderService {
 		}
 		return false;
 	}
+
+	@Override
+	public void deleteBySn(String sn) {
+		BizOrderExample example = new BizOrderExample();
+		example.createCriteria().andSnEqualTo(sn);
+		bizOrderMapper.deleteByExample(example);
+	}
 }

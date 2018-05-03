@@ -67,4 +67,6 @@ public interface BizExceptionService {
      * @return int
      */
     int delete(long exceptionId);
+    
+    
 }

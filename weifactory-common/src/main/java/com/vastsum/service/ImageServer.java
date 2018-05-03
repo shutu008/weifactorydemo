@@ -107,4 +107,10 @@ public interface ImageServer {
      * @return Image
      */
     Image getLastImageByDate(String sn);
+    
+    /**
+     * 
+     * @param sn
+     */
+    void deleteBySn(String sn);
 }

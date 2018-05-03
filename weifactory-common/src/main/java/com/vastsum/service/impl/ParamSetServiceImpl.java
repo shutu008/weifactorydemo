@@ -123,4 +123,11 @@ public class ParamSetServiceImpl implements ParamSetService {
 		return growthPatternParamMapper.selectByExample(example);
 	}
 
+	@Override
+	public void deleteBySn(String sn) {
+		ParamSetExample example = new ParamSetExample();
+		example.createCriteria().andSnEqualTo(sn);
+		paramSetMapper.deleteByExample(example);
+	}
+
 }
