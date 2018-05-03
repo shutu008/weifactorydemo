@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.List;
 
 import com.vastsum.entity.HistoryData;
-import com.vastsum.entity.HistoryInfo;
 
 /**
  * 历史数据服务
@@ -22,4 +21,12 @@ public interface HistoryDataService {
 	 * @return List<HistoryData>
 	 */
 	List<HistoryData> listByTime(String sn,String identity, Date startDate, Date endDate);
+	
+	/**
+	 * 根据数据标识，获取最新的数据信息
+	 * @param sn
+	 * @param function
+	 * @return String
+	 */
+	String getDataBySnAndFunction(String sn, String function);
 }

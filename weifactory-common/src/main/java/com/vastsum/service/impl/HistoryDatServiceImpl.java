@@ -53,4 +53,17 @@ public class HistoryDatServiceImpl implements HistoryDataService {
 		return historyData;
 	}
 
+	//获取最新的数据
+	@Override
+	public String getDataBySnAndFunction(String sn, String function) {
+		HistoryDataExample historyDataExample = new HistoryDataExample();
+		historyDataExample.createCriteria().andSnEqualTo(sn).andIdentifyEqualTo(function);
+		historyDataExample.setOrderByClause("server_time desc");
+		List<HistoryData> list = historyDataMapper.selectByExample(historyDataExample);
+		if (list == null || list.isEmpty()) {
+			return null;
+		}
+		return list.get(0).getValue();
+	}
+
 }

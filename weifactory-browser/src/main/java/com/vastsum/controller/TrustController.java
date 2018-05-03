@@ -59,17 +59,19 @@ public class TrustController {
 		if (trustStatus == null) {
 			return V.error("托管状态不能为空");
 		}
-		String sn = deviceService.getSnByDeviceId(deviceId);
-//		ArrayList<String> deviceList = handRemoteService.getOnlineDeviceList();
-//		if (!deviceList.contains(sn)) {
-//			return V.error("当前设备不在线，无法进行手动控制！");
-//		}
-		HashMap<String, Object> hashMap  = new HashMap<>();
-		hashMap.put("sn", sn);
-		hashMap.put("T0006001", trustStatus);
-		//1,代表手动控制模块
-		handRemoteService.sendOrder(hashMap);
-		logger.info("托管数据下发成功");
+		if ("1".equals(trustStatus)) {
+			String sn = deviceService.getSnByDeviceId(deviceId);
+			ArrayList<String> deviceList = handRemoteService.getOnlineDeviceList();
+			if (!deviceList.contains(sn)) {
+				return V.error("当前设备不在线，无法申请服务器托管！");
+			}
+			HashMap<String, Object> hashMap  = new HashMap<>();
+			hashMap.put("sn", sn);
+			hashMap.put("T0006001", trustStatus);
+			//1,代表手动控制模块
+			handRemoteService.sendOrder(hashMap);
+			logger.info("托管数据下发成功");
+		}
 		
 		trustService.trust(deviceId, trustStatus);
 		

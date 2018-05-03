@@ -31,6 +31,7 @@ import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.HandControlService;
+import com.vastsum.service.HistoryDataService;
 import com.vastsum.service.ImageServer;
 import com.vastsum.service.OrderService;
 import com.vastsum.service.ParamSetService;
@@ -69,6 +70,8 @@ public class BatchController extends BaseController {
     private ParamSetService paramSetService;
     @Autowired
     private HandControlService handControlService;
+    @Autowired
+    private HistoryDataService historyDataService;
     
 	//根据设备id获取最新的批次信息，设备管理显示界面20180311
     @GetMapping(value = "/{deviceId}")
@@ -109,6 +112,38 @@ public class BatchController extends BaseController {
 			batch.setVideoThree(defaultFileName);
 		}
         
+        
+        //更新一下温度，LED灯信息
+        String T0004101 = historyDataService.getDataBySnAndFunction(sn, "101");
+        String T0004102 = historyDataService.getDataBySnAndFunction(sn, "102");
+        String T0004103 = historyDataService.getDataBySnAndFunction(sn, "103");
+        String T0004104 = historyDataService.getDataBySnAndFunction(sn, "104");
+        String T0004105 = historyDataService.getDataBySnAndFunction(sn, "105");
+        String T0004201 = historyDataService.getDataBySnAndFunction(sn, "201");
+        String T0004202 = historyDataService.getDataBySnAndFunction(sn, "202");
+        String T0004203 = historyDataService.getDataBySnAndFunction(sn, "203");
+        String T0004204 = historyDataService.getDataBySnAndFunction(sn, "204");
+        String T0004205 = historyDataService.getDataBySnAndFunction(sn, "205");
+        String T0004301 = historyDataService.getDataBySnAndFunction(sn, "301");
+        String T0004302 = historyDataService.getDataBySnAndFunction(sn, "302");
+        String T0004303 = historyDataService.getDataBySnAndFunction(sn, "303");
+        String T0004304 = historyDataService.getDataBySnAndFunction(sn, "304");
+        String T0004305 = historyDataService.getDataBySnAndFunction(sn, "305");
+        batch.setLedOneLeft(T0004101);
+        batch.setLedOneMiddle(T0004102);
+        batch.setLedOneRight(T0004103);
+        batch.setTemperatureOne(Double.parseDouble(T0004104));
+        batch.setHumidityOne(Double.parseDouble(T0004105));
+        batch.setLedTwoLeft(T0004201);
+        batch.setLedTwoMiddle(T0004202);
+        batch.setLedTwoRight(T0004203);
+        batch.setTemperatureTwo(Double.parseDouble(T0004204));
+        batch.setHumidityTwo(Double.parseDouble(T0004205));
+        batch.setLedThreeLeft(T0004301);
+        batch.setLedThreeMiddle(T0004302);
+        batch.setLedThreeRight(T0004303);
+        batch.setTemperatureThree(Double.parseDouble(T0004304));
+        batch.setHumidityThree(Double.parseDouble(T0004305));
         //将图片更新到数据库
         batchService.updateBatch(batch);
         //重新读取最新数据
