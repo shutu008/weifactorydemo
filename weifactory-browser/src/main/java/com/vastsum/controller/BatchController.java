@@ -129,21 +129,51 @@ public class BatchController extends BaseController {
         String T0004303 = historyDataService.getDataBySnAndFunction(sn, "303");
         String T0004304 = historyDataService.getDataBySnAndFunction(sn, "304");
         String T0004305 = historyDataService.getDataBySnAndFunction(sn, "305");
-        batch.setLedOneLeft(T0004101);
-        batch.setLedOneMiddle(T0004102);
-        batch.setLedOneRight(T0004103);
-        batch.setTemperatureOne(Double.parseDouble(T0004104));
-        batch.setHumidityOne(Double.parseDouble(T0004105));
-        batch.setLedTwoLeft(T0004201);
-        batch.setLedTwoMiddle(T0004202);
-        batch.setLedTwoRight(T0004203);
-        batch.setTemperatureTwo(Double.parseDouble(T0004204));
-        batch.setHumidityTwo(Double.parseDouble(T0004205));
-        batch.setLedThreeLeft(T0004301);
-        batch.setLedThreeMiddle(T0004302);
-        batch.setLedThreeRight(T0004303);
-        batch.setTemperatureThree(Double.parseDouble(T0004304));
-        batch.setHumidityThree(Double.parseDouble(T0004305));
+        if (StringUtils.isNotBlank(T0004101)) {
+        	 batch.setLedOneLeft(T0004101);
+		}
+        if (StringUtils.isNotBlank(T0004102)) {
+        	 batch.setLedOneMiddle(T0004102);
+		}
+		if (StringUtils.isNotBlank(T0004103)) {
+			 batch.setLedOneRight(T0004103);
+		}
+		if (StringUtils.isNotBlank(T0004104)) {
+			batch.setTemperatureOne(Double.parseDouble(T0004104));	
+		}
+		if (StringUtils.isNotBlank(T0004105)) {
+			 batch.setHumidityOne(Double.parseDouble(T0004105));
+		}
+		if (StringUtils.isNotBlank(T0004201)) {
+			batch.setLedTwoLeft(T0004201);
+		}
+		if (StringUtils.isNotBlank(T0004202)) {
+			batch.setLedTwoMiddle(T0004202); 	
+		}
+		if (StringUtils.isNotBlank(T0004203)) {
+			batch.setLedTwoRight(T0004203);	
+		}
+		if (StringUtils.isNotBlank(T0004204)) {
+			batch.setTemperatureTwo(Double.parseDouble(T0004204)); 	
+		}
+		if (StringUtils.isNotBlank(T0004205)) {
+			 batch.setHumidityTwo(Double.parseDouble(T0004205));
+		}
+		if (StringUtils.isNotBlank(T0004301)) {
+			batch.setLedThreeLeft(T0004301);	
+		}
+		if (StringUtils.isNotBlank(T0004302)) {
+			batch.setLedThreeMiddle(T0004302);	
+		}
+		if (StringUtils.isNotBlank(T0004303)) {
+			 batch.setLedThreeRight(T0004303);  	
+		}
+		if (StringUtils.isNotBlank(T0004304)) {
+			batch.setTemperatureThree(Double.parseDouble(T0004304));
+		}
+		if (StringUtils.isNotBlank(T0004305)) {
+			batch.setHumidityThree(Double.parseDouble(T0004305)); 	
+		}
         //将图片更新到数据库
         batchService.updateBatch(batch);
         //重新读取最新数据
