@@ -40,7 +40,7 @@ public class ConnectServiceImpl implements ConnectService {
 
     //根据条件查询连接信息
     @Override
-    public PageInfo<CommLogVO> pageByCommunicationLog(CommunicationLog c, int page, int pageSize) {
+    public PageInfo<CommunicationLog> pageByCommunicationLog(CommunicationLog c, int page, int pageSize) {
         CommunicationLogExample commExample = new CommunicationLogExample();
         commExample.setOrderByClause("gmt_create desc");
        
@@ -50,12 +50,7 @@ public class ConnectServiceImpl implements ConnectService {
         if (c == null){
         	 PageHelper.startPage(page,pageSize);
             List<CommunicationLog> communicationLogs = communicationLogMapper.selectByExample(commExample);
-            List<CommLogVO> commLogVOList = new ArrayList<>();
-            communicationLogs.forEach(e -> {
-                CommLogVO commLogVO = getCommLogVO(e);
-                commLogVOList.add(commLogVO);
-            });
-            return new PageInfo<>(commLogVOList);
+            return new PageInfo<>(communicationLogs);
         }
         
         String sn = c.getSn();
@@ -73,12 +68,8 @@ public class ConnectServiceImpl implements ConnectService {
        
         PageHelper.startPage(page,pageSize);
         List<CommunicationLog> communicationLogs = communicationLogMapper.selectByExample(commExample);
-        List<CommLogVO> commLogVOList = new ArrayList<>();
-        communicationLogs.forEach(e -> {
-            CommLogVO commLogVO = getCommLogVO(e);
-            commLogVOList.add(commLogVO);
-        });
-        return new PageInfo<>(commLogVOList);
+       
+        return new PageInfo<>(communicationLogs);
     }
 
     //获取一条记录详情

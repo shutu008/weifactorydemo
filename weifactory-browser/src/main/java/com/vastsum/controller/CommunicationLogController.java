@@ -1,20 +1,24 @@
 package com.vastsum.controller;
 
-import com.github.pagehelper.PageInfo;
-import com.vastsum.controller.system.BaseController;
-import com.vastsum.entity.CommunicationLog;
-import com.vastsum.service.ConnectService;
-import com.vastsum.entity.vo.CommLogVO;
-import com.vastsum.model.ResultModel;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.github.pagehelper.PageInfo;
+import com.vastsum.controller.system.BaseController;
+import com.vastsum.entity.CommunicationLog;
+import com.vastsum.enums.OptionType;
+import com.vastsum.model.ResultModel;
+import com.vastsum.service.ConnectService;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 
 /**
  * @author ssj
@@ -47,7 +51,19 @@ public class CommunicationLogController extends BaseController {
         communicationLog.setSn(sn);
         communicationLog.setServerPort(serverPort);
         communicationLog.setOptionType(optionType);
-        PageInfo<CommLogVO> commLogVOPageInfo = connectService.pageByCommunicationLog(communicationLog, page, pageSize);
+        PageInfo<CommunicationLog> commLogVOPageInfo = connectService.pageByCommunicationLog(communicationLog, page, pageSize);
+        List<CommunicationLog> list = commLogVOPageInfo.getList();
+        list.forEach(e -> {
+            e.setOptionTypeName(getName(e.getOptionType()));
+            });
         return ResponseEntity.ok(ResultModel.ok(commLogVOPageInfo));
     }
+        
+        private String getName(Integer code) {
+        	if (OptionType.CONNECT.getValue().equals(code)){
+              return OptionType.CONNECT.getName();
+            }
+           return OptionType.DISCONNECT.getName();
+        }
+
 }

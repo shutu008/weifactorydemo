@@ -21,6 +21,16 @@ public class CommunicationLog {
 
     private Date gmtCreate;
 
+    private String optionTypeName;
+
+    public String getOptionTypeName() {
+        return optionTypeName;
+    }
+
+    public void setOptionTypeName(String optionTypeName) {
+        this.optionTypeName = optionTypeName;
+    }
+
     public Long getClientConnectionId() {
         return clientConnectionId;
     }

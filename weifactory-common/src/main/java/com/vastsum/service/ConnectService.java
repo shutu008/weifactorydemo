@@ -26,7 +26,7 @@ public interface ConnectService {
      * @param pageSize
      * @return PageInfo<CommunicationLog>
      */
-    PageInfo<CommLogVO> pageByCommunicationLog(CommunicationLog c, int page, int pageSize);
+    PageInfo<CommunicationLog> pageByCommunicationLog(CommunicationLog c, int page, int pageSize);
 
     /**
      * 根据id获取信息
