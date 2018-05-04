@@ -13,7 +13,6 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.hash.BeanUtilsHashMapper;
 import org.springframework.stereotype.Service;
 
 import com.vastsum.dao.HandControlMapper;
@@ -51,8 +50,9 @@ public class SensorServiceImpl implements SensorService {
 		hashMap.put("sn", handControl.getSn());
 		//判断当前数据库中有没有数据，如果没有，下发所有值
 		if (handControl.getHandControlId() == null) {
-			BeanUtilsHashMapper<HandControl> beanUtilsHashMapper = new BeanUtilsHashMapper<>(HandControl.class);
-			Map<String, String> hash = beanUtilsHashMapper.toHash(handControl);
+			//BeanUtilsHashMapper<HandControl> beanUtilsHashMapper = new BeanUtilsHashMapper<>(HandControl.class);
+			Map<String, Object> hash = resultAllMap(handControl, HandControl.class,"handControl");
+//			Map<String, String> hash = beanUtilsHashMapper.toHash(handControl);
 			hashMap.putAll(hash);
 		}else {
 			HandControl dbHandControl = handControlMapper.selectByPrimaryKey(handControl.getHandControlId());
@@ -80,8 +80,9 @@ public class SensorServiceImpl implements SensorService {
 		
 		//判断当前数据库中有没有数据，如果没有，下发所有值
 		if (paramSet.getParamSetId() == null) {
-			BeanUtilsHashMapper<ParamSet> beanUtilsHashMapper = new BeanUtilsHashMapper<>(ParamSet.class);
-			Map<String, String> hash = beanUtilsHashMapper.toHash(paramSet);
+			Map<String, Object> hash = resultAllMap(paramSet, ParamSet.class,"paramSet");
+//			BeanUtilsHashMapper<ParamSet> beanUtilsHashMapper = new BeanUtilsHashMapper<>(ParamSet.class);
+//			Map<String, String> hash = beanUtilsHashMapper.toHash(paramSet);
 			hashMap.putAll(hash);
 		}else {
 			ParamSet primevalParamSet= paramSetMapper.selectByPrimaryKey(paramSet.getParamSetId());
@@ -171,6 +172,39 @@ public class SensorServiceImpl implements SensorService {
 		
 		return hashMap;
 	}
+	
+	/**
+	 *  处理对象，获取差值
+	 * @param currentData 目前要下发的记录
+	 * @param clazz
+	 * @return
+	 */
+	private <T> HashMap<String, Object> resultAllMap(T currentData, Class<T> clazz, String objectName){
+		HashMap<String, Object> hashMap = new HashMap<>();
+		Field[] fields = clazz.getDeclaredFields();
+		for(Field f : fields) {
+			logger.info("字段的类型："+f.getType().toString());
+				try {
+					String fieldName = f.getName();
+					logger.info("字段名："+fieldName);
+					String publicMethodName = "get"+fieldName.substring(0, 1).toUpperCase()+fieldName.substring(1);
+					logger.info("方法名："+publicMethodName);
+					Method m = clazz.getMethod(publicMethodName);
+					Object resultCurrent = (Object)m.invoke(currentData);
+					logger.info("当前值："+resultCurrent);
+					if(resultCurrent !=null) {
+						String function = StringUtils.trim(ResourceProperty.getProperties("dataConvert.properties").getProperty(objectName+"."+fieldName));
+						hashMap.put(function, resultCurrent);
+					}
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+		}
+		
+		return hashMap;
+	}
+	
+	
 	
 //	public static void main(String[] args) {
 //		String function = ResourceProperty.getProperties("dataConvert.properties").getProperty("handControl.mpjs");
