@@ -80,6 +80,7 @@ public class BizExceptionServiceImpl implements BizExceptionService {
     @Override
     public List<BizException> listByBizException(BizException bizException) {
         BizExceptionExample bizExceptionExample = new BizExceptionExample();
+        bizExceptionExample.setOrderByClause("gmt_create desc");
         BizExceptionExample.Criteria criteria = bizExceptionExample.createCriteria();
         //首先保证userid是必须要传的值
         int userId = bizException.getUserId();
@@ -110,6 +111,7 @@ public class BizExceptionServiceImpl implements BizExceptionService {
     public PageInfo<BizException> pageByBizException(BizException bizException, int page, int pageSize) {
 
         BizExceptionExample bizExceptionExample = new BizExceptionExample();
+        bizExceptionExample.setOrderByClause("gmt_create desc");
         BizExceptionExample.Criteria criteria = bizExceptionExample.createCriteria();
         //首先保证userid是必须要传的值
         int userId = bizException.getUserId();

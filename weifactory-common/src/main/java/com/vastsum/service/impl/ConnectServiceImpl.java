@@ -43,13 +43,21 @@ public class ConnectServiceImpl implements ConnectService {
     public PageInfo<CommLogVO> pageByCommunicationLog(CommunicationLog c, int page, int pageSize) {
         CommunicationLogExample commExample = new CommunicationLogExample();
         commExample.setOrderByClause("gmt_create desc");
+       
         page = page == 0? 1:page;
         pageSize = pageSize == 0? 10:pageSize;
         CommunicationLogExample.Criteria criteria = commExample.createCriteria();
         if (c == null){
-            PageHelper.startPage(page,pageSize);
-            return new PageInfo<>(listAll());
+        	 PageHelper.startPage(page,pageSize);
+            List<CommunicationLog> communicationLogs = communicationLogMapper.selectByExample(commExample);
+            List<CommLogVO> commLogVOList = new ArrayList<>();
+            communicationLogs.forEach(e -> {
+                CommLogVO commLogVO = getCommLogVO(e);
+                commLogVOList.add(commLogVO);
+            });
+            return new PageInfo<>(commLogVOList);
         }
+        
         String sn = c.getSn();
         if (sn != null){
             criteria.andSnEqualTo(sn);
@@ -62,7 +70,7 @@ public class ConnectServiceImpl implements ConnectService {
         if (optionType != null){
             criteria.andOptionTypeEqualTo(optionType);
         }
-
+       
         PageHelper.startPage(page,pageSize);
         List<CommunicationLog> communicationLogs = communicationLogMapper.selectByExample(commExample);
         List<CommLogVO> commLogVOList = new ArrayList<>();
