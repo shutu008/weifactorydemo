@@ -161,7 +161,7 @@ public class SensorServiceImpl implements SensorService {
 					Object resultDb = (Object)m.invoke(dbData);
 					logger.info("当前值："+resultCurrent);
 					logger.info("数据库中值："+resultDb);
-					if(resultCurrent !=null && !resultCurrent.equals(resultDb)) {
+					if(resultCurrent !=null && !resultCurrent.equals(resultDb) && !"sn".equals(fieldName)) {
 						String function = StringUtils.trim(ResourceProperty.getProperties("dataConvert.properties").getProperty(objectName+"."+fieldName));
 						hashMap.put(function, resultCurrent);
 					}
@@ -192,7 +192,7 @@ public class SensorServiceImpl implements SensorService {
 					Method m = clazz.getMethod(publicMethodName);
 					Object resultCurrent = (Object)m.invoke(currentData);
 					logger.info("当前值："+resultCurrent);
-					if(resultCurrent !=null) {
+					if(resultCurrent !=null && !"sn".equals(fieldName)) {
 						String function = StringUtils.trim(ResourceProperty.getProperties("dataConvert.properties").getProperty(objectName+"."+fieldName));
 						hashMap.put(function, resultCurrent);
 					}
