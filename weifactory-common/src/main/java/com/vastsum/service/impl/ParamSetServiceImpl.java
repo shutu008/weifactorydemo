@@ -76,7 +76,7 @@ public class ParamSetServiceImpl implements ParamSetService {
 	
 	//保存生长模式参数
 	private void save(GrowthPatternParam growthPatternParam) {
-		growthPatternParamMapper.insert(growthPatternParam);
+		growthPatternParamMapper.insertSelective(growthPatternParam);
 	}
 	
 	//修改生长模式参数
