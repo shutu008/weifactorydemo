@@ -234,6 +234,7 @@ public class ImageServerImpl implements ImageServer {
 	@Override
 	public Image getImageByDate(String sn, Date date) {
 		ImageExample imageExample = new ImageExample();
+		imageExample.setOrderByClause("gmt_create desc");
 		//一天之内的图片
 		imageExample.createCriteria()
 		.andGmtCreateBetween(DateTimeUtils.getNowStartTime(), DateUtils.addDays(date, 1))
