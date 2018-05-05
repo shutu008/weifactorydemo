@@ -16,9 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.vastsum.controller.system.BaseController;
 import com.vastsum.core.service.HandRemoteService;
+import com.vastsum.entity.Batch;
+import com.vastsum.entity.Device;
 import com.vastsum.entity.HandControl;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
+import com.vastsum.service.BatchService;
+import com.vastsum.service.DeviceService;
 import com.vastsum.service.HandControlService;
 import com.vastsum.service.SensorService;
 
@@ -41,6 +45,10 @@ public class HandController  extends BaseController  {
 	private HandRemoteService handRemoteService;
 	@Autowired
 	private SensorService sensorService;
+	@Autowired
+	private DeviceService deviceService;
+	@Autowired
+	private BatchService batchService;
 	
 	@GetMapping("/test")
 	@ApiOperation(value = "test")
@@ -108,6 +116,10 @@ public class HandController  extends BaseController  {
 		handRemoteService.sendOrder(sensorService.changeOrder(handControl));
 		logger.info("手动控制数据下发成功");
 		//手动控制保存成功
+		//获取当前批次
+		Device device = deviceService.getDeviceBySn(handControl.getSn());
+		Batch batch = batchService.selectLastBatchByDeviceId(device.getDeviceId());
+		handControl.setBatchId(batch.getBatchId());
 		handControlService.saveOrUpdate(handControl);
 		
 		return V.ok();
