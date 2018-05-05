@@ -59,6 +59,9 @@ public class ImageDecoder extends ByteToMessageDecoder  {
 		if (in.readableBytes()<dataLen) {
 			//读指针重置（图片数据可能没过来完全，重新从包头开始）
 			logger.info("指针重置，再次读取数据");
+			int i = in.readableBytes();
+			logger.info("数据协议中定义的数据长度："+dataLen);
+			logger.info("当前已经读到的数据长度"+i);
 			in.resetReaderIndex();
 			return;
 		}

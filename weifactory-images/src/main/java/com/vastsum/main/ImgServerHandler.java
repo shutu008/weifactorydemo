@@ -67,6 +67,7 @@ public class ImgServerHandler extends ChannelInboundHandlerAdapter {
     //连接断开时调用的方法
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+    	LOGGER.info("客户端已经与服务器断开："+NettyChannelMap.getSn((SocketChannel)ctx.channel()));
         //客户端断开，将断开信息写入到数据库
         CommunicationLog c = getCommunicationLog(ctx, OptionType.DISCONNECT.getValue(), NettyChannelMap.getSn((SocketChannel)ctx.channel()));
         communicationService.save(c);
