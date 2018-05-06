@@ -165,6 +165,76 @@ public class GrowthPatternParamExample {
             return (Criteria) this;
         }
 
+        public Criteria andPlantNoIsNull() {
+            addCriterion("plant_no is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoIsNotNull() {
+            addCriterion("plant_no is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoEqualTo(String value) {
+            addCriterion("plant_no =", value, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoNotEqualTo(String value) {
+            addCriterion("plant_no <>", value, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoGreaterThan(String value) {
+            addCriterion("plant_no >", value, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoGreaterThanOrEqualTo(String value) {
+            addCriterion("plant_no >=", value, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoLessThan(String value) {
+            addCriterion("plant_no <", value, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoLessThanOrEqualTo(String value) {
+            addCriterion("plant_no <=", value, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoLike(String value) {
+            addCriterion("plant_no like", value, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoNotLike(String value) {
+            addCriterion("plant_no not like", value, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoIn(List<String> values) {
+            addCriterion("plant_no in", values, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoNotIn(List<String> values) {
+            addCriterion("plant_no not in", values, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoBetween(String value1, String value2) {
+            addCriterion("plant_no between", value1, value2, "plantNo");
+            return (Criteria) this;
+        }
+
+        public Criteria andPlantNoNotBetween(String value1, String value2) {
+            addCriterion("plant_no not between", value1, value2, "plantNo");
+            return (Criteria) this;
+        }
+
         public Criteria andDaysIsNull() {
             addCriterion("days is null");
             return (Criteria) this;

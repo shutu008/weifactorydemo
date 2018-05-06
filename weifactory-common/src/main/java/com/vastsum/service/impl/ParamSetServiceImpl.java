@@ -87,9 +87,11 @@ public class ParamSetServiceImpl implements ParamSetService {
 
 	//根据生长模式来获取对应的列表
 	@Override
-	public List<GrowthPatternParam> listByGrowthNo(Integer growthNo) {
+	public List<GrowthPatternParam> listByGrowthNo(String plantNo, Integer growthNo) {
 		GrowthPatternParamExample growthPatternParamExample = new GrowthPatternParamExample();
-		growthPatternParamExample.createCriteria().andGrowthNoEqualTo(growthNo);
+		growthPatternParamExample.createCriteria()
+		.andGrowthNoEqualTo(growthNo)
+		.andPlantNoEqualTo(plantNo);
 		growthPatternParamExample.setOrderByClause("growth_order desc");
 		return growthPatternParamMapper.selectByExample(growthPatternParamExample);
 	}

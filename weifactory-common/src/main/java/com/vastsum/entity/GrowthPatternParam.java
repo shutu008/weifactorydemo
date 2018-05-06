@@ -5,6 +5,8 @@ import java.util.Date;
 public class GrowthPatternParam {
     private Long growthId;
 
+    private String plantNo;
+
     private Integer days;
 
     private Integer growthOrder;
@@ -67,6 +69,14 @@ public class GrowthPatternParam {
 
     public void setGrowthId(Long growthId) {
         this.growthId = growthId;
+    }
+
+    public String getPlantNo() {
+        return plantNo;
+    }
+
+    public void setPlantNo(String plantNo) {
+        this.plantNo = plantNo == null ? null : plantNo.trim();
     }
 
     public Integer getDays() {
@@ -300,6 +310,7 @@ public class GrowthPatternParam {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", growthId=").append(growthId);
+        sb.append(", plantNo=").append(plantNo);
         sb.append(", days=").append(days);
         sb.append(", growthOrder=").append(growthOrder);
         sb.append(", growthName=").append(growthName);

@@ -23,6 +23,7 @@ import com.vastsum.entity.GrowthPatternParam;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.DeviceService;
 import com.vastsum.utils.BizUtils;
+import com.vastsum.utils.DateTimeUtils;
 import com.vastsum.utils.GrowthParamCache;
 import com.vastsum.utils.ResourceProperty;
 
@@ -84,21 +85,26 @@ public class DefaultJobHandler implements JobHandler {
 		for (int i = 0; i < deviceIdList.size(); i++) {
 			batchList.add(batchService.selectLastBatchByDeviceId(deviceIdList.get(i)));
 		}
+		
 		logger.info("调度参数设置-待下发的批次列表："+batchList);
 		for (Batch batch : batchList) {
 			Integer g1 = Integer.parseInt(batch.getCultModelOne());
-			if (g1 != null) {
-				this.sendByGrowthNo(batch, g1);
+			String p1 = batch.getPlantOne();
+			if (g1 != null && StringUtils.isNotBlank(p1)) {
+				this.sendByGrowthNo(batch, g1, p1);
 			}
 			
+			
 			Integer g2 = Integer.parseInt(batch.getCultModelTwo());
-			if (g2 != null) {
-				this.sendByGrowthNo(batch, g2);
+			String p2 = batch.getPlantTwo();
+			if (g2 != null && StringUtils.isNotBlank(p2)) {
+				this.sendByGrowthNo(batch, g2, p2);
 			}
 			
 			Integer g3 = Integer.parseInt(batch.getCultModelThree());
+			String p3 = batch.getPlantThree();
 			if (g3 != null) {
-				this.sendByGrowthNo(batch, g3);
+				this.sendByGrowthNo(batch, g3,p3);
 			}
 		}
 		
@@ -141,10 +147,15 @@ public class DefaultJobHandler implements JobHandler {
 		return hashMap;
 	}
 	
-	private void sendByGrowthNo(Batch batch ,Integer growthNo) {
-		List<GrowthPatternParam> listGrowth = GrowthParamCache.listByModelId(growthNo);
+	/**
+	 * 批次对应生长模式，数据发送
+	 * @param batch
+	 * @param growthNo
+	 */
+	private void sendByGrowthNo(Batch batch ,Integer growthNo, String plantNo) {
+		List<GrowthPatternParam> listGrowth = GrowthParamCache.listByModelId(plantNo,growthNo);
 		if (listGrowth == null || listGrowth.isEmpty()) {
-			logger.info("生长模式为："+growthNo+"没有参数设置数据！");
+			logger.info("植物名称为："+plantNo+"；生长模式为："+growthNo+"没有参数设置数据！");
 			return;
 		}
 		//根据批次生成的日期来处理
@@ -166,12 +177,15 @@ public class DefaultJobHandler implements JobHandler {
 			logger.info("当前时间周期没有要下发的数据，对应的设备ID为："+batch.getDeviceId());
 			return;
 		}
+		//添加对应的设备序列号
+		String sn = deviceService.getSnByDeviceId(batch.getDeviceId());
+		logger.info("设备序列号为："+sn + ";批次为："+batch.getBatchId()+";植物名称为："
+		+plantNo+"；生长模式为："+growthNo+"进行数据自动下发，下发时间为："+DateTimeUtils.nowLocaleDateString());
 		HashMap<String,Object> hashMap = this.hashMap(param);
 		//数据处理
 		hashMap = this.handler(hashMap);
 		if (hashMap != null) {
-			//添加对应的设备序列号
-			String sn = deviceService.getSnByDeviceId(batch.getDeviceId());
+			
 			hashMap.put("sn", sn);
 			handRemoteService.sendOrder(hashMap);
 		}

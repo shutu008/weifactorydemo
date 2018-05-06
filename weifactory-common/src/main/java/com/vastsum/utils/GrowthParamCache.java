@@ -45,14 +45,15 @@ public class GrowthParamCache {
 	}
 	
 	/**
-	 * 获取指定生长模式的参数设置
+	 * 获取指定 植物并对应生长模式的参数设置
+	 * @param plantNo 植物名称编号
 	 * @param growthNo
 	 * @return Set<GrowthPatternParam>
 	 */
-	public static List<GrowthPatternParam> listByModelId(Integer growthNo){
+	public static List<GrowthPatternParam> listByModelId(String plantNo, Integer growthNo){
 		List<GrowthPatternParam> growthList = new ArrayList<>();
 		for (GrowthPatternParam param : set) {
-			if (growthNo.equals(param.getGrowthNo())) {
+			if (growthNo.equals(param.getGrowthNo()) && plantNo.equals(param.getPlantNo())) {
 				growthList.add(param);
 			}
 		}

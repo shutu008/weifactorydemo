@@ -3,6 +3,7 @@
 <mapper namespace="com.vastsum.dao.GrowthPatternParamMapper">
   <resultMap id="BaseResultMap" type="com.vastsum.entity.GrowthPatternParam">
     <id column="growth_id" jdbcType="BIGINT" property="growthId" />
+    <result column="plant_no" jdbcType="VARCHAR" property="plantNo" />
     <result column="days" jdbcType="INTEGER" property="days" />
     <result column="growth_order" jdbcType="INTEGER" property="growthOrder" />
     <result column="growth_name" jdbcType="VARCHAR" property="growthName" />
@@ -91,8 +92,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    growth_id, days, growth_order, growth_name, growth_no, a_sc, a_sy, a_day_start, a_day_end, 
-    a_night_start, a_night_end, a_day_wind_len, a_day_wind_interval, a_nigth_wind_len, 
+    growth_id, plant_no, days, growth_order, growth_name, growth_no, a_sc, a_sy, a_day_start, 
+    a_day_end, a_night_start, a_night_end, a_day_wind_len, a_day_wind_interval, a_nigth_wind_len, 
     a_night_wind_interval, b_day_bg_len, b_day_bg_interval, b_night_bg_len, b_night_bg_interval, 
     b_day_yy_len, b_day_yy_interval, b_night_yy_len, b_night_yy_interval, b_day_temperature, 
     b_night_temperature, b_day_humidity, b_night_humidity, gmt_create, gmt_modified
@@ -128,32 +129,37 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.vastsum.entity.GrowthPatternParam">
-    insert into growth_pattern_param (growth_id, days, growth_order, 
-      growth_name, growth_no, a_sc, 
-      a_sy, a_day_start, a_day_end, 
-      a_night_start, a_night_end, a_day_wind_len, 
-      a_day_wind_interval, a_nigth_wind_len, a_night_wind_interval, 
-      b_day_bg_len, b_day_bg_interval, b_night_bg_len, 
-      b_night_bg_interval, b_day_yy_len, b_day_yy_interval, 
-      b_night_yy_len, b_night_yy_interval, b_day_temperature, 
-      b_night_temperature, b_day_humidity, b_night_humidity, 
-      gmt_create, gmt_modified)
-    values (#{growthId,jdbcType=BIGINT}, #{days,jdbcType=INTEGER}, #{growthOrder,jdbcType=INTEGER}, 
-      #{growthName,jdbcType=VARCHAR}, #{growthNo,jdbcType=INTEGER}, #{aSc,jdbcType=VARCHAR}, 
-      #{aSy,jdbcType=VARCHAR}, #{aDayStart,jdbcType=VARCHAR}, #{aDayEnd,jdbcType=VARCHAR}, 
-      #{aNightStart,jdbcType=VARCHAR}, #{aNightEnd,jdbcType=VARCHAR}, #{aDayWindLen,jdbcType=VARCHAR}, 
-      #{aDayWindInterval,jdbcType=VARCHAR}, #{aNigthWindLen,jdbcType=VARCHAR}, #{aNightWindInterval,jdbcType=VARCHAR}, 
-      #{bDayBgLen,jdbcType=VARCHAR}, #{bDayBgInterval,jdbcType=VARCHAR}, #{bNightBgLen,jdbcType=VARCHAR}, 
-      #{bNightBgInterval,jdbcType=VARCHAR}, #{bDayYyLen,jdbcType=VARCHAR}, #{bDayYyInterval,jdbcType=VARCHAR}, 
-      #{bNightYyLen,jdbcType=VARCHAR}, #{bNightYyInterval,jdbcType=VARCHAR}, #{bDayTemperature,jdbcType=VARCHAR}, 
-      #{bNightTemperature,jdbcType=VARCHAR}, #{bDayHumidity,jdbcType=VARCHAR}, #{bNightHumidity,jdbcType=VARCHAR}, 
-      #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP})
+    insert into growth_pattern_param (growth_id, plant_no, days, 
+      growth_order, growth_name, growth_no, 
+      a_sc, a_sy, a_day_start, 
+      a_day_end, a_night_start, a_night_end, 
+      a_day_wind_len, a_day_wind_interval, a_nigth_wind_len, 
+      a_night_wind_interval, b_day_bg_len, b_day_bg_interval, 
+      b_night_bg_len, b_night_bg_interval, b_day_yy_len, 
+      b_day_yy_interval, b_night_yy_len, b_night_yy_interval, 
+      b_day_temperature, b_night_temperature, b_day_humidity, 
+      b_night_humidity, gmt_create, gmt_modified
+      )
+    values (#{growthId,jdbcType=BIGINT}, #{plantNo,jdbcType=VARCHAR}, #{days,jdbcType=INTEGER}, 
+      #{growthOrder,jdbcType=INTEGER}, #{growthName,jdbcType=VARCHAR}, #{growthNo,jdbcType=INTEGER}, 
+      #{aSc,jdbcType=VARCHAR}, #{aSy,jdbcType=VARCHAR}, #{aDayStart,jdbcType=VARCHAR}, 
+      #{aDayEnd,jdbcType=VARCHAR}, #{aNightStart,jdbcType=VARCHAR}, #{aNightEnd,jdbcType=VARCHAR}, 
+      #{aDayWindLen,jdbcType=VARCHAR}, #{aDayWindInterval,jdbcType=VARCHAR}, #{aNigthWindLen,jdbcType=VARCHAR}, 
+      #{aNightWindInterval,jdbcType=VARCHAR}, #{bDayBgLen,jdbcType=VARCHAR}, #{bDayBgInterval,jdbcType=VARCHAR}, 
+      #{bNightBgLen,jdbcType=VARCHAR}, #{bNightBgInterval,jdbcType=VARCHAR}, #{bDayYyLen,jdbcType=VARCHAR}, 
+      #{bDayYyInterval,jdbcType=VARCHAR}, #{bNightYyLen,jdbcType=VARCHAR}, #{bNightYyInterval,jdbcType=VARCHAR}, 
+      #{bDayTemperature,jdbcType=VARCHAR}, #{bNightTemperature,jdbcType=VARCHAR}, #{bDayHumidity,jdbcType=VARCHAR}, 
+      #{bNightHumidity,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.vastsum.entity.GrowthPatternParam">
     insert into growth_pattern_param
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="growthId != null">
         growth_id,
+      </if>
+      <if test="plantNo != null">
+        plant_no,
       </if>
       <if test="days != null">
         days,
@@ -243,6 +249,9 @@
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="growthId != null">
         #{growthId,jdbcType=BIGINT},
+      </if>
+      <if test="plantNo != null">
+        #{plantNo,jdbcType=VARCHAR},
       </if>
       <if test="days != null">
         #{days,jdbcType=INTEGER},
@@ -342,6 +351,9 @@
       <if test="record.growthId != null">
         growth_id = #{record.growthId,jdbcType=BIGINT},
       </if>
+      <if test="record.plantNo != null">
+        plant_no = #{record.plantNo,jdbcType=VARCHAR},
+      </if>
       <if test="record.days != null">
         days = #{record.days,jdbcType=INTEGER},
       </if>
@@ -434,6 +446,7 @@
   <update id="updateByExample" parameterType="map">
     update growth_pattern_param
     set growth_id = #{record.growthId,jdbcType=BIGINT},
+      plant_no = #{record.plantNo,jdbcType=VARCHAR},
       days = #{record.days,jdbcType=INTEGER},
       growth_order = #{record.growthOrder,jdbcType=INTEGER},
       growth_name = #{record.growthName,jdbcType=VARCHAR},
@@ -469,6 +482,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.vastsum.entity.GrowthPatternParam">
     update growth_pattern_param
     <set>
+      <if test="plantNo != null">
+        plant_no = #{plantNo,jdbcType=VARCHAR},
+      </if>
       <if test="days != null">
         days = #{days,jdbcType=INTEGER},
       </if>
@@ -558,7 +574,8 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.GrowthPatternParam">
     update growth_pattern_param
-    set days = #{days,jdbcType=INTEGER},
+    set plant_no = #{plantNo,jdbcType=VARCHAR},
+      days = #{days,jdbcType=INTEGER},
       growth_order = #{growthOrder,jdbcType=INTEGER},
       growth_name = #{growthName,jdbcType=VARCHAR},
       growth_no = #{growthNo,jdbcType=INTEGER},

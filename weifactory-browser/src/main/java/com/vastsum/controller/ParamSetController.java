@@ -178,6 +178,7 @@ public class ParamSetController extends BaseController {
 	@ApiOperation(value = "添加或更新生长模式参数设置信息@2018-04-17")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "growthId",value = "生长模式参数id",required = true),
+            @ApiImplicitParam(paramType = "query",name = "plantNo",value = "植物名称代号",required = true),
             @ApiImplicitParam(paramType = "query",name = "days",value = "生长天数",required = true),
             
             @ApiImplicitParam(paramType = "query",name = "growthOrder",value = "生长序号",required = true),
@@ -213,6 +214,11 @@ public class ParamSetController extends BaseController {
 			return V.error("参数设置不能为空");
 		}
 		
+		
+		if (StringUtils.isBlank(growthPatternParam.getPlantNo())) {
+			return V.error("植物名称代号");
+		}
+		
 		if (growthPatternParam.getDays() == null) {
 			return V.error("生长天数不能为空");
 		}
@@ -235,16 +241,21 @@ public class ParamSetController extends BaseController {
 	
 	
 	// 获取生长模式对应的生长参数列表
-		@GetMapping("/growth/{growthNo}")
-		@ApiOperation(value = "根据生长模式获取对应的生长模式列表@2018-04-17")
+		@GetMapping("/growth/{growthNo}/plantNo/{plantNo}")
+		@ApiOperation(value = "根据生长模式和植物代号获取对应的生长模式列表@2018-04-17")
 	    @ApiImplicitParams({
-	            @ApiImplicitParam(paramType = "path",name = "growthNo",value = "生长模式",required = true)
+	            @ApiImplicitParam(paramType = "path",name = "growthNo",value = "生长模式",required = true),
+	            @ApiImplicitParam(paramType = "path",name = "plantNo",value = "植物名称代号",required = true)
 	    })
-	    public ResponseEntity<ResultModel> getLastSeed( @PathVariable Integer growthNo){
+	    public ResponseEntity<ResultModel> getLastSeed( @PathVariable Integer growthNo,
+	    		 @PathVariable String plantNo){
 	        if (growthNo == null) {
 	            return V.error("生长模式不能为空");
 	        }
-	       return V.ok(paramSetService.listByGrowthNo(growthNo));
+	        if (StringUtils.isBlank(plantNo)) {
+	            return V.error("植物ID不能为空");
+	        }
+	       return V.ok(paramSetService.listByGrowthNo(plantNo ,growthNo));
 	    }
 	
 	

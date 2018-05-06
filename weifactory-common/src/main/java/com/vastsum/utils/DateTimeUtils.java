@@ -1,5 +1,7 @@
 package com.vastsum.utils;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -59,6 +61,17 @@ public class DateTimeUtils {
 	 */
 	public static Date getNowEndTime(){
 		return getEndTime(new Date());
+	}
+	
+	/**
+	 * 获取当前时间字符串 yyyy-MM-dd HH:mm:ss
+	 * @return String
+	 */
+	public static String nowLocaleDateString() {
+		Date date = new Date();
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String format = dateFormat.format(date);
+		return format;
 	}
 
 }

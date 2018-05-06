@@ -60,10 +60,11 @@ public interface ParamSetService {
 	
 	/**
 	 * 按照生长模式查询参数设置
+	 * @param plantNo
 	 * @param growthNo
 	 * @return List<GrowthPatternParam>
 	 */
-	List<GrowthPatternParam> listByGrowthNo(Integer growthNo);
+	List<GrowthPatternParam> listByGrowthNo(String plantNo ,Integer growthNo);
 	
 	/**
 	 * 列出所有生长模式参数设置
