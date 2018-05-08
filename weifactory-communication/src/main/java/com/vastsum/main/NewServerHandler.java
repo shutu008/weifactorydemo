@@ -74,7 +74,7 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
         	return;
         }
         String sn = cm.getSn();
-        LOGGER.info("序列号是："+sn);
+        LOGGER.info("设备序列号是："+sn);
         
         if (flag){
         	// 第一次连接时

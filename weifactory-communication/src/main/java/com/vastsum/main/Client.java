@@ -32,7 +32,10 @@ public class Client {
         // 0为整形，1为浮点，2为字符串
         ChannelFuture cf1 = bootstrap.connect("121.196.217.247",8765).sync();
         cf1.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2018032645641#1234567890123$".getBytes()));
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000003#0004#104#232#1234567890123$".getBytes()));
+        for (int i = 0; i < 100; i++) {
+        	Thread.sleep(1000);
+        	cf1.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000003#0004#205#669#1234567890123$".getBytes()));
+		}
         cf1.channel().closeFuture().sync();
         workerGroup.shutdownGracefully();
     }

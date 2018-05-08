@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.CommunicationMessage;
 import com.vastsum.utils.NettyChannelMap;
+import com.vastsum.utils.ParamHelper;
 import com.vastsum.utils.ParserMessageUtils;
 
 import io.netty.buffer.Unpooled;
@@ -32,7 +33,7 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 		for(CommunicationMessage cm : listCM) {
 			logger.info("下达的控制指令："+cm.getMsg());
 			try {
-				Thread.sleep(2);
+				Thread.sleep(Integer.parseInt(ParamHelper.getValueByCode("remoteInterval")));
 			} catch (InterruptedException e) {
 				logger.error("发送给机器数据时候sleep失败");
 				e.printStackTrace();
