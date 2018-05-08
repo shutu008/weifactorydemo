@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.SysDict;
 import com.vastsum.entity.SysDictItem;
 import com.vastsum.enums.ResultStatus;
@@ -38,6 +39,8 @@ public class DictController extends BaseController {
 
     @Autowired
     private DictService dictService;
+    @Autowired
+    private HandRemoteService handRemoteService;
 
     @GetMapping(value = "/list")
     @ApiOperation(value = "获取所有字典的列表@20171024")
@@ -84,6 +87,7 @@ public class DictController extends BaseController {
                 DictUtil.loadCache();
                 return ResponseEntity.ok(ResultModel.ok());
             }
+            handRemoteService.updateDictHelper();
             return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
         }
         //字典中code没有对应的字典

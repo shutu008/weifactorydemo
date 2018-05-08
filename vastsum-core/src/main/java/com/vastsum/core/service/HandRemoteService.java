@@ -11,4 +11,14 @@ import java.util.HashMap;
 public interface HandRemoteService {
 	void sendOrder(HashMap<String, Object> hashMap);
 	ArrayList<String> getOnlineDeviceList();
+	
+	/**
+	 * 更新参数设置缓存
+	 */
+	void updateParamHelper();
+	
+	/**
+	 * 更新字典缓存
+	 */
+	void updateDictHelper();
 }

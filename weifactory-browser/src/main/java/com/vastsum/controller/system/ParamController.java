@@ -1,8 +1,6 @@
 package com.vastsum.controller.system;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.github.pagehelper.PageInfo;
-import com.vastsum.entity.Model;
-import com.vastsum.entity.SysDictItem;
+import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.SysParam;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
 import com.vastsum.service.SysParamService;
-import com.vastsum.utils.DictUtil;
 import com.vastsum.utils.ParamHelper;
 
 import io.swagger.annotations.Api;
@@ -36,6 +32,8 @@ import io.swagger.annotations.ApiOperation;
 public class ParamController extends BaseController {
 	@Autowired
 	private SysParamService sysParamService;
+	@Autowired
+	private HandRemoteService handRemoteService;
 
 	//列出所有可用的参数列表
 	@GetMapping("/listAll")
@@ -99,6 +97,8 @@ public class ParamController extends BaseController {
 		
 		//更新缓存
 		ParamHelper.loadCache();
+		//更新远程系统的缓存
+		handRemoteService.updateParamHelper();
 		return	ResponseEntity.ok(ResultModel.ok());
 		
 	}

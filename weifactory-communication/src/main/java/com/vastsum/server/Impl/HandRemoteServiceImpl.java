@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.CommunicationMessage;
+import com.vastsum.utils.DictUtil;
 import com.vastsum.utils.NettyChannelMap;
 import com.vastsum.utils.ParamHelper;
 import com.vastsum.utils.ParserMessageUtils;
@@ -45,5 +46,15 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 	public ArrayList<String> getOnlineDeviceList(){
 		Set<String> set = NettyChannelMap.listSn();
 		return new ArrayList<String>(set);
+	}
+
+	@Override
+	public void updateParamHelper() {
+		ParamHelper.loadCache();
+	}
+
+	@Override
+	public void updateDictHelper() {
+		DictUtil.loadCache();
 	}
 }
