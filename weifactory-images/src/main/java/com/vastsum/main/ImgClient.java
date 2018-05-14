@@ -56,7 +56,7 @@ public class ImgClient {
             Integer intDateLen = Integer.valueOf(dataLen);
             byte[] imageData = new byte[intDateLen];
             in.read(imageData);
-            f.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2018032621027#1234567890123$".getBytes()));
+            f.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2018032645641#1234567890123$".getBytes()));
             byte[] a = ("#ZWGC#"+dataLen+"#0003#999#").getBytes();
             byte[] a1 = "1234567890123#".getBytes();
             byte[] b1 = "$".getBytes();

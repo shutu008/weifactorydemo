@@ -3,8 +3,8 @@ package com.vastsum.core.properties;
 public class SmsProperties {
 	
     private String url = "http://gw.api.taobao.com/router/rest";
-    private String appkey = "24565316";
-    private String secret = "9e2d0a97cc87aa2f20c0a081b123b283";
+    private String appkey = "LTAI1YHNkiVVWSrc";
+    private String secret = "n1EZGsof32RNWBEpiiMLtDkrFNFl6C";
     private int numLength = 6;
 
     public String getUrl() {
