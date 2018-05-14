@@ -62,6 +62,7 @@ import io.swagger.annotations.ApiOperation;
 @Api(value = "/register",tags = {"登陆注册管理"})
 public class RegisterController extends BaseController {
     private static Logger logger = LoggerFactory.getLogger(RegisterController.class);
+    private static final String A = "a";//短信验证手机号前缀
     @Autowired
     private WeifactoryProperties weifactoryProperties;
     
@@ -132,7 +133,11 @@ public class RegisterController extends BaseController {
             //获取验证码，判断验证码是否正确
             String codeNum = registerUser.getCodeNum();
             //获取session中的验证码
-          String codeParam = request.getSession().getAttribute("codeParam").toString();
+          Object obj = request.getSession().getAttribute(A+registerUser.getUserPhone());
+          if (obj == null) {
+			return V.error("该手机号对应的短信验证码不存在!");
+		}
+        String codeParam = obj.toString();
 
           //保存用户状态,专家注册不能直接使用，需要管理员认证
             if (EXPORT_ROLE_ID.equals(registerUser.getRoleId())){
@@ -202,7 +207,7 @@ public class RegisterController extends BaseController {
             codeParam = codeParam+r.nextInt(10);
         }
         HttpSession session = request.getSession();
-        session.setAttribute("codeParam",codeParam);
+        session.setAttribute(A+cell,codeParam);
 //        TaobaoClient client = new DefaultTaobaoClient(url, appkey, secret);
 //        AlibabaAliqinFcSmsNumSendRequest req = new AlibabaAliqinFcSmsNumSendRequest();
 //        req.setExtend(extend);
