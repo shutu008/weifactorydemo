@@ -134,12 +134,24 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
             	return;
             }
             if (cm.getModel() == 5){
-                //说明发送的是设备序列号
-            	String currentTime = String.valueOf(System.currentTimeMillis());
-            	CommunicationMessage cmReplay = new CommunicationMessage(sn,5,4,currentTime);
-                ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
-                LOGGER.info("不再进行激活验证，已经激活的设备再次连接服务器，返回时间戳为："+currentTime);
-                return;
+                if (cm.getFunction() == 4) {
+                	String currentTime = String.valueOf(System.currentTimeMillis());
+                	CommunicationMessage cmReplay = new CommunicationMessage(sn,5,4,currentTime);
+                    ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
+                    return;
+				}
+                if (cm.getFunction() == 6) {
+//                	 //客户端断开，将断开信息写入到数据库
+                	NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
+                	String sndevice = nettyChannelMap.getSn(ctx.channel());
+                	LOGGER.info("设备序列号为{}设备，主动断开链接",sndevice);
+//                    CommunicationLog c = communicationService.createLog(ctx, OptionType.DISCONNECT.getValue(), sndevice);
+//                    communicationService.save(c);
+//                    //channel失效，从Map中移除
+//                    nettyChannelMap.remove(ctx.channel());
+					ctx.close();
+				}
+            	
             }
         }catch (Exception ex){
             ex.getMessage();

@@ -89,7 +89,13 @@ public class ImgServerHandler extends ChannelInboundHandlerAdapter {
 			 //客户端连接
 	           CommunicationLog c = getCommunicationLog(ctx, OptionType.CONNECT.getValue(), sn);
 	           communicationService.save(c);
-    	   }else {
+    	   }else if ("0005".equals(dataEntity.getModuleType()) && "006".equals(dataEntity.getSensorType()) && 1 == (Integer.parseInt(new String(dataEntity.getData())))) {
+			//断开连接协议
+           	String sndevice = NettyChannelMap.getSn(ctx.channel());
+           	LOGGER.info("设备序列号为{}设备，主动断开链接",sndevice);
+    		   ctx.close();
+		}else {
+				//图片数据处理
     		   LOGGER.info("开始获取图片数据");
     		   String sn = NettyChannelMap.getSn(ctx.channel());
     		   if (StringUtils.isBlank(sn)) {

@@ -33,7 +33,8 @@ public class Client2 {
         //121.196.217.247  #设备编号#传感器编号#类型#数据#   121.196.217.247
 
         ChannelFuture cf1 = bootstrap.connect("127.0.0.1",8765).sync();
-        cf1.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2018032645641#1234567890123$".getBytes()));
+        cf1.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#00000017#0005#001#ZWGC2018032203300#1234567890123$".getBytes()));
+        cf1.channel().writeAndFlush(Unpooled.copiedBuffer("#ZWGC#000000001#0005#006#1#1234567890123$".getBytes()));
         cf1.channel().closeFuture().sync();
         workerGroup.shutdownGracefully();
 
