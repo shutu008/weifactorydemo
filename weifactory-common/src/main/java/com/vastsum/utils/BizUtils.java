@@ -8,6 +8,8 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.bytebuddy.asm.Advice.This;
+
 /**
  * 业务处理工具类
  * @author shutu008
@@ -54,12 +56,14 @@ public class BizUtils {
 		if (data.length() <= 2) {
 			return data+"."+"00.00";
 		}
-		String result = null;
+		StringBuffer sb = new StringBuffer();
+		
 		String[] split = data.split(":");
 		for (int i = 0; i<split.length; i++) {
-			String str = String.format("%02d", Integer.parseInt(split[i]));
-			result = str+".";
+			String  str= String.format("%02d", Integer.parseInt(split[i]));
+			sb.append(str+".");
 		}
+		String result = sb.toString();
 		logger.info("处理过的数据："+data);
 		return result.substring(0, result.length()-1);
 		
@@ -96,6 +100,11 @@ public class BizUtils {
 		String smaill = data.substring(2);
 		Double result = Double.parseDouble(num+"."+smaill);
 		return result;
+	}
+	
+	public static void main(String[] args) {
+		String timeFormat = timeFormat("12:23:46");
+		System.out.println(timeFormat);
 	}
 	
 	

@@ -155,15 +155,23 @@ public class ParamSetController extends BaseController {
 			}
 		}else {
 			ParamSet set = paramSetService.getById(paramSet.getParamSetId());
-			if (set.getBatchNo1() != null) {
-				paramSet.setBatchNo1("1"+System.currentTimeMillis());
+			if (StringUtils.isNotBlank(batch.getPlantOne())) {
+				if (StringUtils.isBlank(set.getBatchNo1())) {
+					paramSet.setBatchNo1("1"+System.currentTimeMillis());
+				}
 			}
-			if (set.getBatchNo2() != null) {
-				paramSet.setBatchNo1("2"+System.currentTimeMillis());
+			if (StringUtils.isNotBlank(batch.getPlantTwo())) {
+				if (StringUtils.isBlank(set.getBatchNo2())) {
+					paramSet.setBatchNo1("2"+System.currentTimeMillis());
+				}
 			}
-			if (set.getBatchNo3() != null) {
-				paramSet.setBatchNo1("3"+System.currentTimeMillis());
+			
+			if (StringUtils.isNotBlank(batch.getPlantThree())) {
+				if (StringUtils.isBlank(set.getBatchNo3())) {
+					paramSet.setBatchNo1("3"+System.currentTimeMillis());
+				}
 			}
+			
 		}
 		
 		//下发参数设置其他数据

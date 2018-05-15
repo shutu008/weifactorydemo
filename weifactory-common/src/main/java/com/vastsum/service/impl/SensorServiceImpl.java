@@ -101,7 +101,7 @@ public class SensorServiceImpl implements SensorService {
 			}
 			
 			//处理一天之内的时间，白天开始时间，晚上开始时间
-			if ("T0002904".equals(key) || "T0002904".equals(key) || "T0002905".equals(key) || "T0002906".equals(key)) {
+			if ("T0002903".equals(key) || "T0002904".equals(key) || "T0002905".equals(key) || "T0002906".equals(key)) {
 				String data = BizUtils.timeFormat((String)hashMap.get(key));
 				hashMap.put(key, data);
 			}
