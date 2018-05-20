@@ -152,7 +152,12 @@ public class ParamSetServiceImpl implements ParamSetService {
 		FeedParamSetExample example = new FeedParamSetExample();
 		example.createCriteria().andPlantIdEqualTo(plantId);
 		example.setOrderByClause("gmt_create desc");
-		return feedParamSetMapper.selectByExample(example).get(0);
+		List<FeedParamSet> selectByExample = feedParamSetMapper.selectByExample(example);
+		
+		if (selectByExample == null || selectByExample.isEmpty()) {
+			return null;
+		}
+		return selectByExample.get(0);
 	}
 	
 	private void saveFeedParamSet(FeedParamSet feedParamSet) {
