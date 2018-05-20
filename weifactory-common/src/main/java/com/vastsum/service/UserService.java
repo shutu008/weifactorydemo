@@ -112,13 +112,13 @@ public interface UserService {
     public int deleteByUser(User user);
 
 
-    /**
-     * 查询所有专家用户
-     * @param page
-     * @param pageSize
-     * @return PageInfo<User>
-     */
-    public PageInfo<User> selectExpert(Integer page, Integer pageSize);
+   /**
+    * 根据条件查询专家列表
+    * @param user
+    * @param pageCondition
+    * @return PageInfo<User>
+    */
+    public PageInfo<User> selectExpert(User user , PageCondition pageCondition);
 
     /**
      * 查询所有专家

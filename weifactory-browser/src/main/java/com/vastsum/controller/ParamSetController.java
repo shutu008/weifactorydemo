@@ -2,6 +2,7 @@ package com.vastsum.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +21,13 @@ import com.vastsum.entity.Device;
 import com.vastsum.entity.FeedParamSet;
 import com.vastsum.entity.GrowthPatternParam;
 import com.vastsum.entity.ParamSet;
+import com.vastsum.entity.Seed;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.ParamSetService;
+import com.vastsum.service.SeedService;
 import com.vastsum.service.SensorService;
 import com.vastsum.utils.GrowthParamCache;
 
@@ -49,6 +52,8 @@ public class ParamSetController extends BaseController {
 	private BatchService batchService;
 	@Autowired
 	private DeviceService deviceService;
+	@Autowired
+	private SeedService seedService;
 
 	//添加或更新参数设置信息
 	@PostMapping("/saveOrUpdate")
@@ -303,7 +308,117 @@ public class ParamSetController extends BaseController {
     		handRemoteService.sendOrder(deviceTime);
        	}
         //请求结果落表，在通信中间层解决
+        //根据设备序列号去数据库查询数据，如果存在参数设置数据就读取出来，如果不存在就读取默认的值
        ParamSet paramSet = paramSetService.getLastBySn(sn);
+       if (paramSet == null) {
+		paramSet = new ParamSet();
+		//根据设备序列号去查询对饮的批次
+		Device device = deviceService.getDeviceBySn(sn);
+		Batch batch = batchService.selectLastBatchByDeviceId(device.getDeviceId());
+		if (StringUtils.isNotBlank(batch.getPlantOne()) && StringUtils.isNotBlank(batch.getCultModelOne())) {
+			List<GrowthPatternParam> list = paramSetService.listByGrowthNo(batch.getPlantOne(), Integer.parseInt(batch.getCultModelOne()));
+			if (list != null && !list.isEmpty() ) {
+				GrowthPatternParam param = list.get(0);
+				paramSet.setDayTemperature1(param.getbDayTemperature());
+				paramSet.setNightTemperature1(param.getbNightTemperature());
+				paramSet.setDayHumidity1(param.getbDayHumidity());
+				paramSet.setNightHumidity1(param.getbNightHumidity());
+				
+				paramSet.setDayBgLenght1(Integer.parseInt(param.getbDayBgLen()));
+				paramSet.setDayBgCycle1(Integer.parseInt(param.getbDayBgInterval()));
+				paramSet.setNightBgLenght1(Integer.parseInt(param.getbNightBgLen()));
+				paramSet.setNightBgCycle1(Integer.parseInt(param.getbNightBgInterval()));
+				
+				paramSet.setDayYyLength1(Integer.parseInt(param.getbDayYyLen()));
+				paramSet.setDayYyCycle1(Integer.parseInt(param.getbDayYyInterval()));
+				paramSet.setNightYyLength1(Integer.parseInt(param.getbNightYyLen()));
+				paramSet.setNightYyCycle1(Integer.parseInt(param.getbNightYyInterval()));
+			}
+		}
+		
+		
+		if (StringUtils.isNotBlank(batch.getPlantTwo()) && StringUtils.isNotBlank(batch.getCultModelTwo())) {
+			List<GrowthPatternParam> list = paramSetService.listByGrowthNo(batch.getPlantTwo(), Integer.parseInt(batch.getCultModelTwo()));
+			if (list != null && !list.isEmpty() ) {
+				GrowthPatternParam param = list.get(0);
+				paramSet.setDayTemperature2(param.getbDayTemperature());
+				paramSet.setNightTemperature2(param.getbNightTemperature());
+				paramSet.setDayHumidity2(param.getbDayHumidity());
+				paramSet.setNightHumidity2(param.getbNightHumidity());
+				
+				paramSet.setDayBgLenght2(Integer.parseInt(param.getbDayBgLen()));
+				paramSet.setDayBgCycle2(Integer.parseInt(param.getbDayBgInterval()));
+				paramSet.setNightBgLenght2(Integer.parseInt(param.getbNightBgLen()));
+				paramSet.setNightBgCycle2(Integer.parseInt(param.getbNightBgInterval()));
+				
+				paramSet.setDayYyLength2(Integer.parseInt(param.getbDayYyLen()));
+				paramSet.setDayYyCycle2(Integer.parseInt(param.getbDayYyInterval()));
+				paramSet.setNightYyLength2(Integer.parseInt(param.getbNightYyLen()));
+				paramSet.setNightYyCycle2(Integer.parseInt(param.getbNightYyInterval()));
+			}
+		}
+		
+		if (StringUtils.isNotBlank(batch.getPlantThree()) && StringUtils.isNotBlank(batch.getCultModelThree())) {
+			List<GrowthPatternParam> list = paramSetService.listByGrowthNo(batch.getPlantThree(), Integer.parseInt(batch.getCultModelThree()));
+			if (list != null && !list.isEmpty() ) {
+				GrowthPatternParam param = list.get(0);
+				paramSet.setDayTemperature3(param.getbDayTemperature());
+				paramSet.setNightTemperature3(param.getbNightTemperature());
+				paramSet.setDayHumidity3(param.getbDayHumidity());
+				paramSet.setNightHumidity3(param.getbNightHumidity());
+				
+				paramSet.setDayBgLenght3(Integer.parseInt(param.getbDayBgLen()));
+				paramSet.setDayBgCycle3(Integer.parseInt(param.getbDayBgInterval()));
+				paramSet.setNightBgLenght3(Integer.parseInt(param.getbNightBgLen()));
+				paramSet.setNightBgCycle3(Integer.parseInt(param.getbNightBgInterval()));
+				
+				paramSet.setDayYyLength3(Integer.parseInt(param.getbDayYyLen()));
+				paramSet.setDayYyCycle3(Integer.parseInt(param.getbDayYyInterval()));
+				paramSet.setNightYyLength3(Integer.parseInt(param.getbNightYyLen()));
+				paramSet.setNightYyCycle3(Integer.parseInt(param.getbNightYyInterval()));
+			}
+		}
+		
+		//育苗室
+		Seed seed = seedService.getLastByBatchId(batch.getBatchId());
+		if (StringUtils.isNotBlank(seed.getSeedRoomPlant())) {
+			FeedParamSet feedParamSet = paramSetService.getByPlantId(seed.getSeedRoomPlant());
+			if (feedParamSet !=null) {
+				paramSet.setDayFeedBgLength(feedParamSet.getDayFeedBgLength());
+				paramSet.setDayFeedBgTime(feedParamSet.getDayFeedBgInterval());
+				paramSet.setNightFeedBgLength(feedParamSet.getNightFeedBgLength());
+				paramSet.setNightFeedBgTime(feedParamSet.getNightFeedBgInterval());
+				
+				paramSet.setDayFeedWaterLength(feedParamSet.getDayFeedWaterLength());
+				paramSet.setDayFeedWaterCycle(feedParamSet.getDayFeedWaterInterval());
+				paramSet.setNightFeedWaterLength(feedParamSet.getNightFeedWaterLength());
+				paramSet.setNightFeedWaterCycle(feedParamSet.getNightFeedWaterInterval());
+			}
+			
+		}
+		
+		//整体参数设置 （在植物参数设置表中有个默认 , 默认数据库中有这条记录）
+		List<GrowthPatternParam> list = paramSetService.listByGrowthNo("AAA", 999999);
+		if (list != null && !list.isEmpty()) {
+			GrowthPatternParam param = list.get(0);
+			if (param !=null) {
+				paramSet.setDateLength(Integer.parseInt(param.getaSc()));
+				paramSet.setDateYi(Integer.parseInt(param.getaSy()));
+				paramSet.setDayStartTime(param.getaDayStart());
+				paramSet.setDayEndTime(param.getaDayEnd());
+				
+				paramSet.setNightStartTime(param.getaNightStart());
+				paramSet.setNightEndTime(param.getaNightEnd());
+				
+				paramSet.setDayNewWindLength(Integer.parseInt(param.getaDayWindLen()));
+				paramSet.setDayNewWindTime(Integer.parseInt(param.getaDayWindInterval()));
+				paramSet.setNightNewWindLength(Integer.parseInt(param.getaNigthWindLen()));
+				paramSet.setNightNewWindTime(Integer.parseInt(param.getaNightWindInterval()));
+				
+			}
+		}
+		
+	}
       return  V.ok(paramSet);
     }
 	

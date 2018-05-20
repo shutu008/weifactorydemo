@@ -121,7 +121,7 @@ public class BizExceptionServiceImpl implements BizExceptionService {
         }
         String sn = bizException.getSn();
         if (sn != null){
-            criteria.andSnEqualTo(sn);
+            criteria.andSnLike("%"+sn+"%");
         }
 
         Integer sensorId = bizException.getSensorNo();

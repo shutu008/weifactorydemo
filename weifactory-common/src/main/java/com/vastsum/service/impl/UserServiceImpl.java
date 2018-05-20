@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
-import org.apache.zookeeper.Op.Create;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -150,7 +149,7 @@ public class UserServiceImpl implements UserService {
 
     //待审核获取专家用户
     @Override
-    public PageInfo<User> selectExpert(Integer page, Integer pageSize) {
+    public PageInfo<User> selectExpert(User user, PageCondition pageCondition) {
         //查询出拥有专家身份的用户id
         UserRoleExample userRoleExample = new UserRoleExample();
         userRoleExample.createCriteria().andRoleIdEqualTo(4);
@@ -164,7 +163,21 @@ public class UserServiceImpl implements UserService {
         }
         //查询出所有待审核专家
         UserExample userExample = new UserExample();
-        userExample.createCriteria().andUserIdIn(listUserId);//查询出所有专家
+        Criteria criteria = userExample.createCriteria();
+        criteria.andUserIdIn(listUserId);//查询出所有专家
+        if (StringUtils.isNotBlank(user.getUserName())) {
+			criteria.andUserNameLike("%"+user.getUserName()+"%");
+		}
+		if (StringUtils.isNotBlank(user.getUserPhone())) {
+			criteria.andUserPhoneLike("%"+user.getUserPhone()+"%");
+		}
+		if (StringUtils.isNotBlank(user.getUserEmail())) {
+			criteria.andUserEmailLike("%"+user.getUserEmail()+"%");
+		}
+		if (StringUtils.isNotBlank(user.getStatus())) {
+			criteria.andStatusEqualTo(user.getStatus());
+		}
+		userExample.setOrderByClause("gmt_create desc");
         List<User> users = userMapper.selectByExample(userExample);
         return new PageInfo<>(users);
     }

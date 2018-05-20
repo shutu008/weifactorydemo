@@ -75,15 +75,18 @@ public class UserController extends BaseController {
 
 
     //分页列出所有专家
-    @RequestMapping(value = "/expertList/{page}/{pageSize}",
-            method = RequestMethod.GET)
-    @ApiOperation(value = "分页列出所有专家@20180103")
+    @PostMapping(value = "/expertList")
+    @ApiOperation(value = "查询专家列表@20180520")
     @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "path",name="page",value = "页码",required = true),
-            @ApiImplicitParam(paramType = "path",name = "pageSize",value = "页数大小",required = true)
+            @ApiImplicitParam(paramType = "query",name="page",value = "页码",required = false),
+            @ApiImplicitParam(paramType = "query",name = "pageSize",value = "页数大小",required = false),
+            @ApiImplicitParam(paramType = "query",name = "userName",value = "用户名",required = false),
+            @ApiImplicitParam(paramType = "query",name = "userPhone",value = "手机号",required = false),
+            @ApiImplicitParam(paramType = "query",name = "status",value = "审批状态",required = false),
+            @ApiImplicitParam(paramType = "query",name= "userEmail",value = "邮箱",required = false)
     })
-    public ResponseEntity<ResultModel> expertList(@PathVariable Integer page, @PathVariable Integer pageSize){
-        PageInfo<User> users = userService.selectExpert(page,pageSize);
+    public ResponseEntity<ResultModel> expertList(User user, PageCondition pageCondition){
+        PageInfo<User> users = userService.selectExpert(user, pageCondition);
         return  ResponseEntity.ok(ResultModel.ok(users));
     }
 
