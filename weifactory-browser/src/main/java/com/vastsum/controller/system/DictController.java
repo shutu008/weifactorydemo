@@ -110,6 +110,19 @@ public class DictController extends BaseController {
         if (code == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.DICT_CODE_NULL));
         }
+        Set<SysDictItem> sysDictItemPageInfo = DictUtil.getSysDictItemsByCode(code);
+        return ResponseEntity.ok(ResultModel.ok(sysDictItemPageInfo));
+    }
+    
+    @GetMapping(value = "/dictItemListAll/{code:.+}")
+    @ApiOperation(value = "根据字典CODE获取字典项列表@20170520")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path",name = "code",value = "字典code",required = true)
+    })
+    public ResponseEntity<ResultModel> listDictItemByCodeAll(@PathVariable String code){
+        if (code == null){
+            return ResponseEntity.ok(ResultModel.error(ResultStatus.DICT_CODE_NULL));
+        }
         List<SysDictItem> sysDictItemPageInfo = dictService.listSysDictItemByCode(code);
         return ResponseEntity.ok(ResultModel.ok(sysDictItemPageInfo));
     }
