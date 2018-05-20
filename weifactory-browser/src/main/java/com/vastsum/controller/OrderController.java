@@ -30,7 +30,7 @@ import com.vastsum.enums.ResultStatus;
 import com.vastsum.exception.OrderException;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
-import com.vastsum.service.BatchService;
+import com.vastsum.pojo.PageCondition;
 import com.vastsum.service.DeviceService;
 import com.vastsum.service.OrderService;
 import com.vastsum.service.RoleService;
@@ -168,26 +168,28 @@ public class OrderController extends BaseController {
     }
 
 
-    @GetMapping(value = "list/{userId}/{page}/{pageSize}")
-    @ApiOperation(value = "根据用户id获取订单列表（普通用户和管理员用统一接口）@20171029")
+    @PostMapping(value = "/list/search")
+    @ApiOperation(value = "根据用户id获取订单列表（普通用户和管理员用统一接口）@20170520")
     @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "path",name = "userId",value = "用户ID",required = true),
-            @ApiImplicitParam(paramType = "path",name = "page",value = "页码",required = true),
-            @ApiImplicitParam(paramType = "path",name = "pageSize",value = "页数",required = true)
+            @ApiImplicitParam(paramType = "query",name = "userId",value = "用户ID",required = true),
+            @ApiImplicitParam(paramType = "query",name = "page",value = "页码",required = false),
+            @ApiImplicitParam(paramType = "query",name = "pageSize",value = "页数",required = false),
+            @ApiImplicitParam(paramType = "query",name = "orderNumber",value = "订单号",required = false),
+            @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号",required = false),
+            @ApiImplicitParam(paramType = "query",name = "orderState",value = "订单状态",required = false)
     })
-    public ResponseEntity<ResultModel> listOrderByUserId(@PathVariable Integer userId,
-                                                          @PathVariable Integer page,
-                                                          @PathVariable Integer pageSize){
+    public ResponseEntity<ResultModel> listOrderByUserId(Integer userId,
+                                                         PageCondition pageCondition,BizOrder bizOrder){
         if (userId == null){
-            return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_ID_NULL));
+           return V.error("用户ID不能为空");
         }
         //根据用户id获取用户权限，如果权限为管理员，则查询出所有的订单
         Role role = roleService.selectRoleByUserId(userId);
         if (role.getRoleName()!= null && "ROLE_ADMIN".equals(role.getRoleName())){
-            PageInfo<BizOrder> bizOrderPageInfo = orderService.listAllOrder(page, pageSize);
+            PageInfo<BizOrder> bizOrderPageInfo = orderService.pageByOrder(bizOrder, pageCondition);
             return ResponseEntity.ok(ResultModel.ok(bizOrderPageInfo));
         }
-        PageInfo<BizOrder> bizOrderPageInfo = orderService.listOrderByUserId(userId, page, pageSize);
+        PageInfo<BizOrder> bizOrderPageInfo = orderService.pageOrderByUser(userId, bizOrder, pageCondition);
         return ResponseEntity.ok(ResultModel.ok(bizOrderPageInfo));
     }
     
@@ -212,5 +214,19 @@ public class OrderController extends BaseController {
 		logger.error("beanUtils拷贝异常");
 	}
         return ResponseEntity.ok(ResultModel.ok(bizOrderVO));
+    }
+    
+    
+    @GetMapping(value = "/cancel/{orderId}")
+    @ApiOperation(value = "取消订单@20171029")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "path",name = "orderId",value = "订单ID",required = true)
+    })
+    public ResponseEntity<ResultModel> cancelOrder(@PathVariable Integer orderId){
+        if (orderId == null){
+            return V.error("订单ID不能为空");
+        }
+       orderService.updateBizOrderStatus(orderId, "4");
+    return V.ok();
     }
 }

@@ -10,6 +10,7 @@ import com.vastsum.dao.HistoryDataMapper;
 import com.vastsum.entity.HistoryData;
 import com.vastsum.entity.HistoryDataExample;
 import com.vastsum.service.HistoryDataService;
+import com.vastsum.utils.DateTimeUtils;
 
 @Service
 public class HistoryDatServiceImpl implements HistoryDataService {
@@ -35,10 +36,21 @@ public class HistoryDatServiceImpl implements HistoryDataService {
 			HistoryData startPoint = list.get(0);
 			HistoryData endPoint = list.get(list.size() - 1);
 			if (startPoint.getServerTime().after(startDate)) {
-				list.add(0, getZero(startDate, identify,  sn));
+				//每天补一个空出来
+				long interval = startPoint.getServerTime().getTime() - startDate.getTime();
+				int a = Integer.parseInt(interval/(24*60*60*1000)+"");
+				for(int i = 0;i<a;i++) {
+					list.add(i, getZero(DateTimeUtils.getOffsetHourDate(startDate, i*24), identify,  sn));
+				}
+				
 			}
 			if (endPoint.getServerTime().before(endDate)) {
-				list.add( getZero(endDate, identify, sn));
+				long interval = endDate.getTime() - endPoint.getServerTime().getTime();
+				int a = Integer.parseInt(interval/(24*60*60*1000)+"");
+				for(int i =0; i<a ;i++) {
+					list.add( getZero(DateTimeUtils.getOffsetHourDate(endPoint.getServerTime(), i*24), identify, sn));
+				}
+				
 			}
 		}
 		return list;
@@ -50,7 +62,7 @@ public class HistoryDatServiceImpl implements HistoryDataService {
 		historyData.setDeviceTime(date);
 		historyData.setIdentify(identify);
 		historyData.setServerTime(date);
-		historyData.setValue("0");
+		historyData.setValue(null);
 		return historyData;
 	}
 

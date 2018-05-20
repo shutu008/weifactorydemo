@@ -2,6 +2,7 @@ package com.vastsum.service;
 
 import com.github.pagehelper.PageInfo;
 import com.vastsum.entity.BizOrder;
+import com.vastsum.pojo.PageCondition;
 
 /**
  * 业务订单服务
@@ -40,6 +41,14 @@ public interface OrderService {
      * @return PageInfo<BizOrder>
      */
     PageInfo<BizOrder> listAllOrder(Integer page, Integer pageSize);
+    
+    /**
+     * 根据订单信息条件获取订单信息
+     * @param bizOrder
+     * @param pageCondition
+     * @return  PageInfo<BizOrder>
+     */
+    PageInfo<BizOrder> pageByOrder(BizOrder bizOrder, PageCondition pageCondition);
 
     /**
      * 根据业务渠道获取订单信息
@@ -64,14 +73,14 @@ public interface OrderService {
      */
     BizOrder getOrderByOrderNumber(String orderNumber);
 
-    /**
-     * 根据用户id获取用户的订单信息
-     * @param userId
-     * @param page
-     * @param pageSize
-     * @return Page<BizOrder>
-     */
-    PageInfo<BizOrder> listOrderByUserId(Integer userId, Integer page, Integer pageSize);
+   /**
+    * 根据用户id 以及查询条件获取用户的订单信息
+    * @param userId
+    * @param bizOrder
+    * @param pageCondition
+    * @return PageInfo<BizOrder>
+    */
+    PageInfo<BizOrder> pageOrderByUser(Integer userId,BizOrder bizOrder, PageCondition pageCondition);
 
     /**
      * 根据专家id获取专家要托管的订单

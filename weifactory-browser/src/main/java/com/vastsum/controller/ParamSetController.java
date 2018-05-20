@@ -17,6 +17,7 @@ import com.vastsum.controller.system.BaseController;
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.Batch;
 import com.vastsum.entity.Device;
+import com.vastsum.entity.FeedParamSet;
 import com.vastsum.entity.GrowthPatternParam;
 import com.vastsum.entity.ParamSet;
 import com.vastsum.model.ResultModel;
@@ -305,6 +306,51 @@ public class ParamSetController extends BaseController {
        ParamSet paramSet = paramSetService.getLastBySn(sn);
       return  V.ok(paramSet);
     }
+	
+	
+	
+	
+	//添加或更新生长参数设置信息
+	@PostMapping("/feedParamSet/saveOrUpdate")
+	@ApiOperation(value = "添加或更新育苗室参数设置信息@2018-05-20")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "query",name = "feedParamId",value = "育苗室生长模式参数id",required = true),
+            @ApiImplicitParam(paramType = "query",name = "plantId",value = "植物名称代号",required = true),
+            @ApiImplicitParam(paramType = "query",name = "dayFeedBgLength",value = "育苗灯白天补光时长",required = false),
+            @ApiImplicitParam(paramType = "query",name = "dayFeedBgInterval",value = "育苗室白天补光间隔",required = false),
+            @ApiImplicitParam(paramType = "query",name = "nightFeedBgLength",value = "育苗室晚上补光时长",required = false),
+            @ApiImplicitParam(paramType = "query",name = "nightFeedBgInterval",value = "育苗室晚上补光间隔",required = false),
+            @ApiImplicitParam(paramType = "query",name = "dayFeedWaterLength",value = "喷淋阀白天执行时长",required = false),
+            @ApiImplicitParam(paramType = "query",name = "dayFeedWaterInterval",value = "喷淋阀白天执行间隔",required = false),
+            @ApiImplicitParam(paramType = "query",name = "nightFeedWaterLength",value = "喷淋阀晚上开启时长",required = false),
+            @ApiImplicitParam(paramType = "query",name = "nightFeedWaterInterval",value = "喷淋阀晚上开启间隔",required = false)
+           
+    })
+    public  ResponseEntity<ResultModel> saveOrUpdateFeedParamSet(@ModelAttribute FeedParamSet feedParamSet){
+		if (feedParamSet == null) {
+			return V.error("育苗室参数设置不能为空");
+		}
+		if (StringUtils.isBlank(feedParamSet.getPlantId())){
+			return V.error("植物名称代号");
+		}
+		paramSetService.saveOrUpdateFeedParamSet(feedParamSet);
+		return V.ok();
+    }
+	
+	
+	
+	// 获取生长模式对应的生长参数列表
+		@GetMapping("/feed/{plantId}")
+		@ApiOperation(value = "根据植物名称ID获取育苗参数设置信息@2018-05-20")
+	    @ApiImplicitParams({
+	            @ApiImplicitParam(paramType = "path",name = "plantId",value = "植物名称代号",required = true)
+	    })
+	    public ResponseEntity<ResultModel> getFeedParamSetByPlantNo( @PathVariable String plantId){
+	        if (StringUtils.isBlank(plantId)) {
+	            return V.error("植物ID不能为空");
+	        }
+	       return V.ok(paramSetService.getByPlantId(plantId));
+	    }
 	
 
 

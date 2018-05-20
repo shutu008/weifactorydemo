@@ -46,15 +46,15 @@ public class SysParamImpl implements SysParamService {
 		if (sysParam != null) {
 			Criteria criteria = sysParamExample.createCriteria();
 			if (StringUtils.isNotBlank(sysParam.getParamCode())) {
-				criteria.andParamCodeLike(sysParam.getParamCode());
+				criteria.andParamCodeLike("%"+sysParam.getParamCode()+"%");
 			}
 			
 			if (StringUtils.isNotBlank(sysParam.getParamName())) {
-				criteria.andParamNameLike(sysParam.getParamName());
+				criteria.andParamNameLike("%"+sysParam.getParamName()+"%");
 			}
 			
 			if (StringUtils.isNotBlank(sysParam.getParamValue())) {
-				criteria.andParamValueLike(sysParam.getParamValue());
+				criteria.andParamValueLike("%"+sysParam.getParamValue()+"%");
 			}
 			
 			if (StringUtils.isNotBlank(sysParam.getStatus())) {
@@ -76,15 +76,15 @@ public class SysParamImpl implements SysParamService {
 		if (sysParam != null) {
 			Criteria criteria = sysParamExample.createCriteria();
 			if (StringUtils.isNotBlank(sysParam.getParamCode())) {
-				criteria.andParamCodeLike(sysParam.getParamCode());
+				criteria.andParamCodeLike("%"+sysParam.getParamCode()+"%");
 			}
 			
 			if (StringUtils.isNotBlank(sysParam.getParamName())) {
-				criteria.andParamNameLike(sysParam.getParamName());
+				criteria.andParamNameLike("%"+sysParam.getParamName()+"%");
 			}
 			
 			if (StringUtils.isNotBlank(sysParam.getParamValue())) {
-				criteria.andParamValueLike(sysParam.getParamValue());
+				criteria.andParamValueLike("%"+sysParam.getParamValue()+"%");
 			}
 			
 			if (StringUtils.isNotBlank(sysParam.getStatus())) {

@@ -107,16 +107,16 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 		Criteria criteria = scheduleJobEntityExample.createCriteria();
 		if (scheduleJobEntity != null) {
 			if (StringUtils.isNotBlank(scheduleJobEntity.getBeanName())) {
-				criteria.andBeanNameLike(scheduleJobEntity.getBeanName());
+				criteria.andBeanNameLike("%"+scheduleJobEntity.getBeanName()+"%");
 			}
 			if (StringUtils.isNotBlank(scheduleJobEntity.getMethodName())) {
-				criteria.andMethodNameLike(scheduleJobEntity.getMethodName());
+				criteria.andMethodNameLike("%"+scheduleJobEntity.getMethodName()+"%");
 			}
 			if (StringUtils.isNotBlank(scheduleJobEntity.getStatus())) {
 				criteria.andStatusEqualTo(scheduleJobEntity.getStatus());
 			}
 			if (StringUtils.isNotBlank(scheduleJobEntity.getScheduleName())) {
-				criteria.andScheduleNameLike(scheduleJobEntity.getScheduleName());
+				criteria.andScheduleNameLike("%"+scheduleJobEntity.getScheduleName()+"%");
 			}
 		}
 		//查询条件

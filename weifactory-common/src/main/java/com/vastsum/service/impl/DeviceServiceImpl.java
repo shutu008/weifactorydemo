@@ -1,6 +1,7 @@
 package com.vastsum.service.impl;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
@@ -13,6 +14,7 @@ import com.vastsum.dao.BizOrderMapper;
 import com.vastsum.dao.DeviceMapper;
 import com.vastsum.dao.DeviceSnMapper;
 import com.vastsum.dao.JoinMapper;
+import com.vastsum.dao.UserMapper;
 import com.vastsum.entity.BizOrder;
 import com.vastsum.entity.BizOrderExample;
 import com.vastsum.entity.Device;
@@ -20,7 +22,10 @@ import com.vastsum.entity.DeviceExample;
 import com.vastsum.entity.DeviceExample.Criteria;
 import com.vastsum.entity.DeviceSn;
 import com.vastsum.entity.DeviceSnExample;
+import com.vastsum.entity.User;
+import com.vastsum.entity.UserExample;
 import com.vastsum.entity.vo.UserDevice;
+import com.vastsum.pojo.PageCondition;
 import com.vastsum.service.DeviceService;
 
 /**
@@ -36,24 +41,44 @@ public class DeviceServiceImpl implements DeviceService {
     private BizOrderMapper bizOrderMapper;
     @Autowired
     private JoinMapper joinMapper;
+    @Autowired
+    private UserMapper userMapper;
 
+    //根据条件查询设备列表
     @Override
-    public PageInfo<Device> findAllByPage(int page, int pageSize)
-    {
-        page = page == 0? 1:page;
-        pageSize = pageSize == 0? 10:pageSize;
-        PageHelper.startPage(page,pageSize);
-        List<Device> deviceList = this.findAll();
+    public PageInfo<Device> pageByDevice(Device device,String username, PageCondition pageCondition){
+    	
+        DeviceExample example = new DeviceExample();
+        Criteria criteria = example.createCriteria();
+        
+        if (StringUtils.isNotBlank(device.getSn())) {
+			criteria.andSnLike("%"+device.getSn()+"%");
+		}
+        if (StringUtils.isNotBlank(device.getDeviceType())) {
+			criteria.andDeviceTypeEqualTo(device.getDeviceType());
+		}
+        if (StringUtils.isNotBlank(username)) {
+			UserExample userExample = new UserExample();
+			com.vastsum.entity.UserExample.Criteria createCriteria = userExample.createCriteria();
+			createCriteria.andUserNameLike("%"+username+"%");
+			List<User> userList = userMapper.selectByExample(userExample);
+			if (userList == null || userList.isEmpty()) {
+				PageInfo<Device> pageList = new PageInfo<>();
+				return pageList;
+			}
+			List<Integer> list = new ArrayList<>();
+			for (User user : userList) {
+				list.add(user.getUserId());
+			}
+			criteria.andUserIdIn(list);
+		}
+        
+        example.setOrderByClause("gmt_create desc");
+        PageHelper.startPage(pageCondition.getPage(),pageCondition.getPageSize());
+        List<Device> deviceList = deviceMapper.selectByExample(example);
         return new PageInfo<>(deviceList);
-
     }
 
-    private List<Device> findAll()
-    {
-        DeviceExample deviceExample = new DeviceExample();
-        deviceExample.setOrderByClause("gmt_create desc");
-        return deviceMapper.selectByExample(deviceExample);
-    }
 
     @Override
     public PageInfo<Device> findByUserId(Integer userId,Integer page,Integer pageSize)
@@ -179,13 +204,22 @@ public class DeviceServiceImpl implements DeviceService {
 
     //获取设备序列号列表
 	@Override
-	public PageInfo<DeviceSn> pageDeviceSn(Integer page, Integer pageSize) {
-		page = page == 0? 1:page;
-        pageSize = pageSize == 0? 10:pageSize;
-        DeviceSnExample deviceSnExample = new DeviceSnExample();
-        deviceSnExample.setOrderByClause("gmt_create desc");
-        PageHelper.startPage(page,pageSize);
-        List<DeviceSn> deviceSns = deviceSnMapper.selectByExample(deviceSnExample);
+	public PageInfo<DeviceSn> pageByDeviceSn(DeviceSn deviceSn, Date startTime,Date endTime, PageCondition pageCondition) {
+		
+        DeviceSnExample example = new DeviceSnExample();
+        com.vastsum.entity.DeviceSnExample.Criteria criteria = example.createCriteria();
+        if (StringUtils.isNotBlank(deviceSn.getSn())) {
+			criteria.andSnLike("%"+deviceSn.getSn()+"%");
+		}
+        if (deviceSn.getStatus() !=null) {
+			criteria.andStatusEqualTo(deviceSn.getStatus());
+		}
+        if (startTime!= null && endTime != null) {
+			criteria.andGmtCreateBetween(startTime, endTime);
+		}
+        example.setOrderByClause("gmt_create desc");
+        PageHelper.startPage(pageCondition.getPage(),pageCondition.getPageSize());
+        List<DeviceSn> deviceSns = deviceSnMapper.selectByExample(example);
         return new PageInfo<>(deviceSns);
 	}
 

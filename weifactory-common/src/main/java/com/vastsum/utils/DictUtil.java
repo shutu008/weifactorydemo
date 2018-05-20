@@ -56,11 +56,11 @@ public class DictUtil {
      * 载入字典缓存
      */
     public static void loadCache(){
-        //列出所有有用的字典；
+        //列出所有有用的字典；//列出可用的字典
         List<SysDict> sysDicts = dictUtil.dictService.listSysDictNoPage("1");
         for(SysDict sysDict : sysDicts){
             String code = sysDict.getCode();
-            List<SysDictItem> sysDictItems = dictUtil.dictService.listSysDictItemNoPage(code);
+            List<SysDictItem> sysDictItems = dictUtil.dictService.listSysDictItemNoPage(code);//列出可用的字典项
             Set<SysDictItem> set = new HashSet<>();
             set.addAll(sysDictItems);
             dictParentMap.put(code, set);

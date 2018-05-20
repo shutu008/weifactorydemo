@@ -73,5 +73,17 @@ public class DateTimeUtils {
 		String format = dateFormat.format(date);
 		return format;
 	}
+	
+	/**
+	 * 获取小时偏移量的时间 当前时间2018:12:12 13:12:34，偏移5小时是 2018:12:12 18:12:34
+	 * @param date
+	 * @param hours
+	 * @return Date
+	 */
+	public static Date getOffsetHourDate(Date date, int hours) {
+		long timeLen = date.getTime() ;
+		long resultLen = timeLen + hours*60*60*1000;
+		return new Date(resultLen);
+	}
 
 }

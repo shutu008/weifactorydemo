@@ -3,6 +3,8 @@ package com.vastsum.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
+import org.apache.zookeeper.Op.Create;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +15,11 @@ import com.vastsum.dao.UserMapper;
 import com.vastsum.dao.UserRoleMapper;
 import com.vastsum.entity.User;
 import com.vastsum.entity.UserExample;
+import com.vastsum.entity.UserExample.Criteria;
 import com.vastsum.entity.UserRole;
 import com.vastsum.entity.UserRoleExample;
 import com.vastsum.entity.vo.UserInfo;
+import com.vastsum.pojo.PageCondition;
 import com.vastsum.service.UserService;
 
 /**
@@ -36,7 +40,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserInfo findById(Integer id) {
        return joinMapper.selectUserInfoByPrimaryKey(id);
-       // return userMapper.selectByPrimaryKey(id);
     }
 
     /**
@@ -249,6 +252,26 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User getById(Integer userId) {
 		return userMapper.selectByPrimaryKey(userId);
+	}
+
+	//分页查询用户信息
+	@Override
+	public PageInfo<User> pageByUser(User user, PageCondition pageCondition) {
+		UserExample example = new UserExample();
+		Criteria criteria = example.createCriteria();
+		if (StringUtils.isNotBlank(user.getUserName())) {
+			criteria.andUserNameLike("%"+user.getUserName()+"%");
+		}
+		if (StringUtils.isNotBlank(user.getUserPhone())) {
+			criteria.andUserPhoneLike("%"+user.getUserPhone()+"%");
+		}
+		if (StringUtils.isNotBlank(user.getUserEmail())) {
+			criteria.andUserEmailLike("%"+user.getUserEmail()+"%");
+		}
+		example.setOrderByClause("gmt_create desc");
+        PageHelper.startPage(pageCondition.getPage(),pageCondition.getPageSize());
+       List<User> list = userMapper.selectByExample(example);
+         return new PageInfo<>(list);
 	}
 
 

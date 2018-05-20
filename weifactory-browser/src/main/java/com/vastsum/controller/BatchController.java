@@ -278,16 +278,26 @@ public class BatchController extends BaseController {
             return V.error("数据不能为空");
         }
         //执行校验
-        if (StringUtils.isNotBlank(batch.getPlantOne()) && StringUtils.isBlank(batch.getCultModelOne())) {
-			return V.error("添加对层级批次，生长模式不能为空");
+        if (StringUtils.isNotBlank(batch.getPlantOne())) {
+        	if (StringUtils.isBlank(batch.getCultModelOne())) {
+        		return V.error("添加对层级批次，生长模式不能为空");
+			}
+			batch.setOnePlantingTime(new Date());
 		}
         //执行校验
-        if (StringUtils.isNotBlank(batch.getPlantTwo()) && StringUtils.isBlank(batch.getCultModelTwo())) {
-			return V.error("添加对层级批次，生长模式不能为空");
+        if (StringUtils.isNotBlank(batch.getPlantTwo())) {
+        	if (StringUtils.isBlank(batch.getCultModelTwo())) {
+        		return V.error("添加对层级批次，生长模式不能为空");
+			}
+			batch.setTwoPlantingTime(new Date());
 		}
+        
         //执行校验
-        if (StringUtils.isNotBlank(batch.getPlantThree()) && StringUtils.isBlank(batch.getCultModelThree())) {
-			return V.error("添加对层级批次，生长模式不能为空");
+        if (StringUtils.isNotBlank(batch.getPlantThree())) {
+        	if (StringUtils.isBlank(batch.getCultModelThree())) {
+        		return V.error("添加对层级批次，生长模式不能为空");
+			}
+			batch.setThreePlantingTime(new Date());
 		}
            batch.setGmtModified(new Date());
            //首次添加默认图片信息，等待采集

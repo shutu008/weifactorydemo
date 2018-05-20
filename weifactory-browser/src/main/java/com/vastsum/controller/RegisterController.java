@@ -12,7 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,14 +26,10 @@ import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
-import com.taobao.api.DefaultTaobaoClient;
-import com.taobao.api.TaobaoClient;
-import com.taobao.api.request.AlibabaAliqinFcSmsNumSendRequest;
-import com.taobao.api.response.AlibabaAliqinFcSmsNumSendResponse;
 import com.vastsum.controller.system.BaseController;
-import com.vastsum.core.model.R;
 import com.vastsum.entity.User;
 import com.vastsum.entity.UserRole;
+import com.vastsum.entity.dto.RecoverPassword;
 import com.vastsum.entity.vo.RegisterUser;
 import com.vastsum.entity.vo.UserInfo;
 import com.vastsum.enums.LoginStatusEnum;
@@ -77,11 +72,6 @@ public class RegisterController extends BaseController {
 
     @Autowired
     private UserRoleService userRoleService;
-
-    @Autowired
-    private AuthenticationManager myAuthenticationManager;  // 这样就可以自动注入？oh ，mygod ,how can it do so?
-
-
     //执行用户注册
     @RequestMapping(value = "/doRegister",method = RequestMethod.POST)
     @ApiOperation(value = "用户注册@20171015")
@@ -283,7 +273,7 @@ public class RegisterController extends BaseController {
     @ApiOperation(value = "用户登陆")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "username",value = "用户名",required = true),
-            @ApiImplicitParam(paramType = "query",name = "password",value = "密码",required = true)
+            @ApiImplicitParam(paramType = "query",name = "phoneNumber",value = "手机号",required = true)
     })
     public ResponseEntity<ResultModel> login(@RequestParam String username,
                                              @RequestParam(defaultValue="") String password,
@@ -335,6 +325,51 @@ public class RegisterController extends BaseController {
        userService.updateLoginStatus(userId, LoginStatusEnum.LOGOUT.getLoginStatus());
        return V.ok();
     }
+    
+    
+    
+    //修改密码
+    @PostMapping(value = "/updatePw")
+    @ApiOperation(value = "找回密码@20180520")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "query",name = "phoneNumber",value = "手机号",required = true),
+            @ApiImplicitParam(paramType = "query",name = "password", value = "密码", required = true),
+            @ApiImplicitParam(paramType = "query",name = "enpassword",value = "确认密码",required = true),
+            @ApiImplicitParam(paramType = "query",name = "validateCode",value = "验证码",required = true)
+    })
+    public ResponseEntity<ResultModel> updatePw(RecoverPassword recoverPassword,HttpServletRequest request){
+    	if (recoverPassword == null) {
+			V.error("请传入正确参数");
+		}
+        if (StringUtils.isNotBlank(recoverPassword.getPhoneNumber())) {
+			User user = userService.findUserByPhone(recoverPassword.getPhoneNumber());
+			if (user == null) {
+				return V.error("手机号对应的用户不存在，请直接进行用户注册！");
+			}
+		}
+        
+        if (!StringUtils.equals(recoverPassword.getEnpassword(), recoverPassword.getPassword())) {
+			return V.error("密码与确认密码不相同，请重新输入！");
+		}
+		 Object obj = request.getSession().getAttribute(A+recoverPassword.getPhoneNumber());
+		 if (obj == null) {
+				return V.error("该手机号对应的短信验证码不存在!");
+			}
+        String codeParam = obj.toString();
+        
+        if (!codeParam.equals(recoverPassword.getValidateCode())) {
+			return V.error("验证码不正确！");
+		}
+        
+        User user = userService.findUserByPhone(recoverPassword.getPhoneNumber());
+        MD5PasswordEncoder md5PasswordEncoder = new MD5PasswordEncoder();
+        user.setUserPassword(md5PasswordEncoder.encode(recoverPassword.getPassword()));
+        userService.update(user);
+        return V.ok();
+
+    }
+    
+    
 
 
 }

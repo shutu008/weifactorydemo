@@ -8,8 +8,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.vastsum.dao.FeedParamSetMapper;
 import com.vastsum.dao.GrowthPatternParamMapper;
 import com.vastsum.dao.ParamSetMapper;
+import com.vastsum.entity.FeedParamSet;
+import com.vastsum.entity.FeedParamSetExample;
 import com.vastsum.entity.GrowthPatternParam;
 import com.vastsum.entity.GrowthPatternParamExample;
 import com.vastsum.entity.ParamSet;
@@ -27,6 +30,8 @@ public class ParamSetServiceImpl implements ParamSetService {
 	private ParamSetMapper paramSetMapper;
 	@Autowired
 	private GrowthPatternParamMapper growthPatternParamMapper;
+	@Autowired
+	private FeedParamSetMapper feedParamSetMapper;
 
 	/* 保存或更新参数设置信息
 	 * @see com.vastsum.service.ParamSetService#saveOrUpdate(com.vastsum.entity.ParamSet)
@@ -133,4 +138,28 @@ public class ParamSetServiceImpl implements ParamSetService {
 		paramSetMapper.deleteByExample(example);
 	}
 
+	@Override
+	public void saveOrUpdateFeedParamSet(FeedParamSet feedParamSet) {
+		if (feedParamSet.getFeedParamId() == null) {
+			saveFeedParamSet(feedParamSet);
+		}else {
+			updateFeedParamSet(feedParamSet);
+		}
+	}
+
+	@Override
+	public FeedParamSet getByPlantId(String plantId) {
+		FeedParamSetExample example = new FeedParamSetExample();
+		example.createCriteria().andPlantIdEqualTo(plantId);
+		example.setOrderByClause("gmt_create desc");
+		return feedParamSetMapper.selectByExample(example).get(0);
+	}
+	
+	private void saveFeedParamSet(FeedParamSet feedParamSet) {
+		feedParamSetMapper.insertSelective(feedParamSet);
+	}
+	
+	private void updateFeedParamSet(FeedParamSet feedParamSet) {
+		feedParamSetMapper.updateByPrimaryKeySelective(feedParamSet);
+	}
 }

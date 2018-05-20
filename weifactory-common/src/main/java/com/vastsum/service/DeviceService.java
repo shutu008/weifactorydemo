@@ -4,7 +4,9 @@ import com.github.pagehelper.PageInfo;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceSn;
 import com.vastsum.entity.vo.UserDevice;
+import com.vastsum.pojo.PageCondition;
 
+import java.util.Date;
 import java.util.List;
 
 public interface DeviceService {
@@ -15,7 +17,7 @@ public interface DeviceService {
      * @param pageSize
      * @return PageInfo<Device>
      */
-    PageInfo<Device> findAllByPage(int page, int pageSize);
+    PageInfo<Device> pageByDevice(Device device ,String username, PageCondition pageCondition);
     
     /**
      * 管理员获取所有的设备信息
@@ -24,6 +26,7 @@ public interface DeviceService {
      * @return PageInfo<UserDevice>
      */
     PageInfo<UserDevice> findByPage(int page, int pageSize);
+    
     
     /**
      * 根据条件获取设备列表
@@ -120,13 +123,16 @@ public interface DeviceService {
      */
     List<Device> turstDevicesByExpertId(Integer expertId);
     
-    /**
-     * 获取设备序列号列表
-     * @param page
-     * @param pageSize
-     * @return PageInfo<DeviceSn>
-     */
-    PageInfo<DeviceSn> pageDeviceSn(Integer page, Integer pageSize);
+    
+   /**
+    *  获取设备序列号列表
+    * @param deviceSn
+    * @param startTime
+    * @param endTime
+    * @param pageCondition
+    * @return PageInfo<DeviceSn>
+    */
+    PageInfo<DeviceSn> pageByDeviceSn(DeviceSn deviceSn, Date startTime,Date endTime, PageCondition pageCondition);
     
     /**
      * 添加设备序列号，系统中注册设备序列号信息

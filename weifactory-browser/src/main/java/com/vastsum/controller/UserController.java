@@ -25,6 +25,7 @@ import com.vastsum.enums.LoginStatusEnum;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
+import com.vastsum.pojo.PageCondition;
 import com.vastsum.service.UserService;
 
 import io.swagger.annotations.Api;
@@ -56,6 +57,21 @@ public class UserController extends BaseController {
         PageInfo<User> users = userService.findAllByPage(page,pageSize);
         return  ResponseEntity.ok(ResultModel.ok(users));
     }
+    
+    
+    //根据条件获取用户信息
+    @PostMapping(value = "/search")
+    @ApiOperation(value = "根据条件搜索用户信息@20180520")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "query",name="page",value = "页码",required = false),
+            @ApiImplicitParam(paramType = "query",name = "pageSize",value = "页数大小",required = false),
+            @ApiImplicitParam(paramType = "query",name = "userName",value = "用户名",required = false),
+            @ApiImplicitParam(paramType = "query",name = "userPhone",value = "手机号",required = false),
+            @ApiImplicitParam(paramType = "query",name= "userEmail",value = "邮箱",required = false)
+    })
+    public ResponseEntity<ResultModel> search(User user, PageCondition pageCondition){
+        return V.ok(userService.pageByUser(user, pageCondition));
+    }
 
 
     //分页列出所有专家
@@ -72,7 +88,7 @@ public class UserController extends BaseController {
     }
 
 
-    @RequestMapping(value = "/detail/{userId}",method = RequestMethod.GET)
+    @GetMapping(value = "/detail/{userId}")
     @ApiOperation(value = "根据用户Id获取用户信息")
     @ApiImplicitParam(paramType = "path",name = "userId",value = "用户id",required = true)
     public ResponseEntity<ResultModel> getDetail(@PathVariable Integer userId){
@@ -113,7 +129,7 @@ public class UserController extends BaseController {
     @ApiImplicitParam(paramType = "path",name = "id",value = "用户id",required = true)
     public ResponseEntity<ResultModel> delete(@PathVariable Integer id){
        // Assert.notNull(id,"用户id不能为空");
-        if (id==null || "".equals(id)) {
+        if (id==null) {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_ID_NULL));
         }
         User user = new User();
@@ -204,7 +220,7 @@ public class UserController extends BaseController {
                   String userWeixinId,
                   String userWeixinNickname,
                   String personalIntroduction){
-        if (id==null || "".equals(id)) {
+        if (id==null) {
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_ID_NULL));
         }
         User user = new User();
@@ -268,6 +284,10 @@ public class UserController extends BaseController {
         }
         return ResponseEntity.ok(ResultModel.error(ResultStatus.FAILED));
     }
+    
+    
+    
+    
 
     //审批专家操作
     @PostMapping(value = "/changeExport")

@@ -97,19 +97,18 @@ public class DictServiceImpl implements DictService {
         return i;
     }
 
-    //根据字典code列出字典项（可用的）
+    //根据字典code列出字典项 全部（可以+不可用）
     @Override
     public List<SysDictItem> listSysDictItemByCode(String code) {
         SysDictItemExample sysDictItemExample = new SysDictItemExample();
         sysDictItemExample.createCriteria()
-                .andDictCodeEqualTo(code)
-                .andStatusEqualTo("1");
+                .andDictCodeEqualTo(code);
         sysDictItemExample.setOrderByClause("order_number asc");
         List<SysDictItem> sysDictItems = sysDictItemMapper.selectByExample(sysDictItemExample);
         return sysDictItems;
     }
 
-    //根据字典code列出对应的字典项
+    //根据字典code列出对应的字典项 （可用的）
     @Override
     public List<SysDictItem> listSysDictItemNoPage(String code) {
         SysDictItemExample sysDictItemExample = new SysDictItemExample();

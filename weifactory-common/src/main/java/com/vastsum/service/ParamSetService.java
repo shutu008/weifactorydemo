@@ -5,6 +5,7 @@ package com.vastsum.service;
 
 import java.util.List;
 
+import com.vastsum.entity.FeedParamSet;
 import com.vastsum.entity.GrowthPatternParam;
 import com.vastsum.entity.ParamSet;
 
@@ -65,6 +66,21 @@ public interface ParamSetService {
 	 * @return List<GrowthPatternParam>
 	 */
 	List<GrowthPatternParam> listByGrowthNo(String plantNo ,Integer growthNo);
+	
+	
+	/**
+	 * 修改或添加一个育苗室参数设置
+	 * @param feedParamSet
+	 */
+	void saveOrUpdateFeedParamSet(FeedParamSet feedParamSet);
+	
+	/**
+	 * 根据植物名称列出育苗室参数设置信息
+	 * @param plantNo
+	 * @return FeedParamSet
+	 */
+	FeedParamSet getByPlantId(String plantId);
+	
 	
 	/**
 	 * 列出所有生长模式参数设置

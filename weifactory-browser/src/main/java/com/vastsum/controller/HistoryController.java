@@ -21,6 +21,7 @@ import com.vastsum.model.V;
 import com.vastsum.properties.WeifactoryProperties;
 import com.vastsum.service.HistoryDataService;
 import com.vastsum.service.ImageServer;
+import com.vastsum.utils.DateTimeUtils;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -134,6 +135,9 @@ public class HistoryController extends BaseController {
 			identity = "";
 			break;
 		}
+		
+		//传入一天中的结束时间
+		endTime = DateTimeUtils.getEndTime(endTime);
 
 		List<HistoryData> list = historyDataService.listByTime(sn, identity, startTime, endTime);
 		

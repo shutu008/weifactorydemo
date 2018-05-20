@@ -44,16 +44,16 @@ public class ScheduleJobLogServiceImpl implements ScheduleJobLogService {
 		Criteria criteria = scheduleJobLogExample.createCriteria();
 		if (scheduleJobLog != null) {
 			if (StringUtils.isNotBlank(scheduleJobLog.getBeanName())) {
-				criteria.andBeanNameLike(scheduleJobLog.getBeanName());
+				criteria.andBeanNameLike("%"+scheduleJobLog.getBeanName()+"%");
 			}
 			if (StringUtils.isNotBlank(scheduleJobLog.getMethodName())) {
-				criteria.andMethodNameLike(scheduleJobLog.getMethodName());
+				criteria.andMethodNameLike("%"+scheduleJobLog.getMethodName()+"%");
 			}
 			if (StringUtils.isNotBlank(scheduleJobLog.getStatus())) {
 				criteria.andStatusEqualTo(scheduleJobLog.getStatus());
 			}
 			if (StringUtils.isNotBlank(scheduleJobLog.getScheduleName())) {
-				criteria.andScheduleNameLike(scheduleJobLog.getScheduleName());
+				criteria.andScheduleNameLike("%"+scheduleJobLog.getScheduleName()+"%");
 			}
 		}
 		

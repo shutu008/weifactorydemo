@@ -3,6 +3,7 @@ package com.vastsum.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,8 +13,10 @@ import com.vastsum.dao.BizOrderMapper;
 import com.vastsum.dao.DeviceMapper;
 import com.vastsum.entity.BizOrder;
 import com.vastsum.entity.BizOrderExample;
+import com.vastsum.entity.BizOrderExample.Criteria;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceExample;
+import com.vastsum.pojo.PageCondition;
 import com.vastsum.service.OrderService;
 
 /**
@@ -41,7 +44,7 @@ public class OrderServiceImpl implements OrderService {
         BizOrder bizOrder = new BizOrder();
         bizOrder.setOrderId(orderId);
         bizOrder.setOrderState(new Byte(status));
-       return bizOrderMapper.updateByPrimaryKey(bizOrder);
+       return bizOrderMapper.updateByPrimaryKeySelective(bizOrder);
     }
     
     
@@ -91,10 +94,11 @@ public class OrderServiceImpl implements OrderService {
 
     //获取用户的订单
     @Override
-    public PageInfo<BizOrder> listOrderByUserId(Integer userId, Integer page, Integer pageSize) {
-        //获取用户的设备号
+    public PageInfo<BizOrder>  pageOrderByUser(Integer userId, BizOrder bizOrder, PageCondition pageCondition) {
+    	
+    	 //获取用户的设备号
         DeviceExample deviceExample = new DeviceExample();
-        deviceExample.createCriteria().andUserIdEqualTo(userId);
+        deviceExample.createCriteria().andUserIdEqualTo(userId); 
         List<Device> devices = deviceMapper.selectByExample(deviceExample);
         List<String> snList = new ArrayList<>();
         for (Device device: devices){
@@ -104,14 +108,24 @@ public class OrderServiceImpl implements OrderService {
         if (snList.isEmpty()){
             return new PageInfo<>(new ArrayList<>(0));
         }
-        BizOrderExample bizOrderExample = new BizOrderExample();
-        bizOrderExample.createCriteria().andSnIn(snList);
-        bizOrderExample.setOrderByClause("order_start desc");
-        page = (page == 0 || page== null)? 1:page;
-        pageSize = (pageSize == 0 || pageSize == null)? 10:pageSize;
-        PageHelper.startPage(page,pageSize);
-        List<BizOrder> bizOrders = bizOrderMapper.selectByExample(bizOrderExample);
-        return new PageInfo<>(bizOrders);
+        
+    	BizOrderExample example = new BizOrderExample();
+		Criteria criteria = example.createCriteria();
+		
+		if (StringUtils.isNotBlank(bizOrder.getOrderNumber())) {
+			criteria.andOrderNumberLike("%"+bizOrder.getOrderNumber()+"%");
+		}
+		if (bizOrder.getOrderState() !=null) {
+			criteria.andOrderStateEqualTo(bizOrder.getOrderState());
+		}
+		if (StringUtils.isNotBlank(bizOrder.getSn())) {
+			criteria.andSnLike("%"+bizOrder.getSn()+"%");
+		}
+       
+		
+		 PageHelper.startPage(pageCondition.getPage(),pageCondition.getPageSize());
+		 List<BizOrder> list = bizOrderMapper.selectByExample(example);
+		 return new PageInfo<>(list);
     }
 
     //获取专家托管的订单
@@ -176,5 +190,24 @@ public class OrderServiceImpl implements OrderService {
 		BizOrderExample example = new BizOrderExample();
 		example.createCriteria().andSnEqualTo(sn);
 		bizOrderMapper.deleteByExample(example);
+	}
+
+	@Override
+	public PageInfo<BizOrder> pageByOrder(BizOrder bizOrder, PageCondition pageCondition) {
+		BizOrderExample example = new BizOrderExample();
+		Criteria criteria = example.createCriteria();
+		
+		if (StringUtils.isNotBlank(bizOrder.getOrderNumber())) {
+			criteria.andOrderNumberLike("%"+bizOrder.getOrderNumber()+"%");
+		}
+		if (bizOrder.getOrderState() !=null) {
+			criteria.andOrderStateEqualTo(bizOrder.getOrderState());
+		}
+		if (StringUtils.isNotBlank(bizOrder.getSn())) {
+			criteria.andSnLike("%"+bizOrder.getSn()+"%");
+		}
+		List<BizOrder> list = bizOrderMapper.selectByExample(example);
+		 PageHelper.startPage(pageCondition.getPage(),pageCondition.getPageSize());
+		 return new PageInfo<>(list);
 	}
 }

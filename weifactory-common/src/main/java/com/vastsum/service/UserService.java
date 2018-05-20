@@ -1,10 +1,11 @@
 package com.vastsum.service;
 
-import com.github.pagehelper.PageInfo;
-import com.vastsum.entity.vo.UserInfo;
-import com.vastsum.entity.User;
-
 import java.util.List;
+
+import com.github.pagehelper.PageInfo;
+import com.vastsum.entity.User;
+import com.vastsum.entity.vo.UserInfo;
+import com.vastsum.pojo.PageCondition;
 
 /**
  * @author ssj
@@ -19,6 +20,14 @@ public interface UserService {
      */
     @Deprecated
     public UserInfo findById(Integer id);
+    
+    /**
+     * 根据条件分页查询用户信息
+     * @param user
+     * @param pageCondition
+     * @return PageInfo<User>
+     */
+    PageInfo<User> pageByUser(User user ,PageCondition pageCondition);
     
     /**
      * 根据用户ID获取用户信息

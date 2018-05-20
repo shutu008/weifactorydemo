@@ -8,6 +8,7 @@ import java.util.List;
 
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,10 +25,12 @@ import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.Device;
 import com.vastsum.entity.DeviceSn;
 import com.vastsum.entity.Role;
+import com.vastsum.entity.User;
 import com.vastsum.entity.vo.UserDevice;
 import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
+import com.vastsum.pojo.PageCondition;
 import com.vastsum.service.BatchService;
 import com.vastsum.service.BizControlService;
 import com.vastsum.service.DeviceService;
@@ -36,6 +39,8 @@ import com.vastsum.service.ImageServer;
 import com.vastsum.service.OrderService;
 import com.vastsum.service.ParamSetService;
 import com.vastsum.service.RoleService;
+import com.vastsum.service.UserService;
+import com.vastsum.utils.DateTimeUtils;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -67,6 +72,8 @@ public class DeviceController extends BaseController {
     private OrderService orderService;
     @Autowired
     private ParamSetService paramSetService;
+    @Autowired
+    private UserService userService;
     //远程服务
     @Autowired
     private HandRemoteService handRemoteService;
@@ -229,17 +236,42 @@ public class DeviceController extends BaseController {
     }
 
 
-    @ApiIgnore
-    @GetMapping(value = "/list/{page}/{pageSize}")
-    @ApiOperation(value = "管理员获取所有的设备列表@20180103")
+    @PostMapping(value = "/search")
+    @ApiOperation(value = "根据条件查询设备列表@20180520")
     @ApiImplicitParams({
-            @ApiImplicitParam(paramType = "path",name = "page",value = "页码",required = false),
-            @ApiImplicitParam(paramType = "path",name = "pageSize",value = "每页显示信息数目",required = false)
+            @ApiImplicitParam(paramType = "query",name = "page",value = "页码",required = false),
+            @ApiImplicitParam(paramType = "query",name = "pageSize",value = "每页显示信息数目",required = false),
+            @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号",required = false),
+            @ApiImplicitParam(paramType = "query",name = "deviceType",value = "设备类型",required = false),
+            @ApiImplicitParam(paramType = "query",name = "username",value = "用户名",required = false)
     })
-    public ResponseEntity<ResultModel> list(@PathVariable Integer page,@PathVariable Integer pageSize){
-        PageInfo<Device> pageInfoDevice = deviceService.findAllByPage(page, pageSize);
-        return ResponseEntity.ok(ResultModel.ok(pageInfoDevice));
-    }
+    public ResponseEntity<ResultModel> list(Device device,String username, PageCondition pageCondition){
+       PageInfo<Device> pageInfo = deviceService.pageByDevice(device, username, pageCondition);
+       PageInfo<UserDevice> userDevicePageInfo = new PageInfo<>();
+       List<UserDevice> deviceList = new ArrayList<>();
+       userDevicePageInfo.setList(deviceList);
+       List<Device> list = pageInfo.getList();
+       if (list == null || list.isEmpty()) {
+		return V.ok(userDevicePageInfo);
+       }
+       for (Device d : list) {
+		User user = userService.findUserByUserId(d.getUserId());
+		UserDevice userDevice = new UserDevice();
+		userDevice.setDeviceId(d.getDeviceId());
+		userDevice.setDeviceType(d.getDeviceType());
+		userDevice.setGmtCreate(d.getGmtCreate());
+		userDevice.setNote(d.getNote());
+		userDevice.setRealname(user.getRealname());
+		userDevice.setSn(d.getSn());
+		userDevice.setUserEmail(user.getUserEmail());
+		userDevice.setUserId(user.getUserId());
+		userDevice.setUsername(user.getUserName());
+		userDevice.setUserPhone(user.getUserPhone());
+		deviceList.add(userDevice);
+	}
+       
+       return V.ok(userDevicePageInfo);
+	}
     
     //管理员获取所有的设备列表
     @GetMapping(value = "/listAll/{page}/{pageSize}")
@@ -322,24 +354,24 @@ public class DeviceController extends BaseController {
             //获取执行时长
              time = endTime.getTime()-startTime.getTime();
         }
-//        AskBody askBody = controlService.controlMsg(sn, sensorId, status, time);
-//        if (askBody !=null){
-//            if (askBody.getSuccess()){
-//                return ResponseEntity.ok(ResultModel.ok());
-//            }
-//        }
-//        return ResponseEntity.ok(new ResultModel(askBody.getCode(),askBody.getMessage(), askBody.getData(),askBody.getSuccess()));
         return V.ok();
     }
     
-    @GetMapping("/sn/list/{page}/{pageSize}")
-    @ApiOperation(value = "获取设备序列号列表@20180103")
+    @GetMapping("/sn/search")
+    @ApiOperation(value = "查询设备序列号列表@20180520")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "page",value = "页码",required = false),
-            @ApiImplicitParam(paramType = "path",name = "pageSize",value = "每页显示信息数目",required = false)
+            @ApiImplicitParam(paramType = "path",name = "pageSize",value = "每页显示信息数目",required = false),
+            @ApiImplicitParam(paramType = "query",name = "sn",value = "设备序列号", required = false),
+            @ApiImplicitParam(paramType = "query",name = "status",value = "设备状态", required = false),
+            @ApiImplicitParam(paramType = "query",name = "startTime",value = "添加开始时间", required = false),
+            @ApiImplicitParam(paramType = "query",name = "endTime",value = "添加结束时间", required = false)
     })
-    public ResponseEntity<ResultModel> listDeviceSn(@PathVariable Integer page,@PathVariable Integer pageSize){
-        PageInfo<DeviceSn> pageInfoDevice = deviceService.pageDeviceSn(page, pageSize);
+    public ResponseEntity<ResultModel> listDeviceSn(DeviceSn deviceSn,Date startTime,Date endTime,PageCondition pageCondition){
+    	if (startTime != null && endTime != null) {
+			endTime = DateTimeUtils.getOffsetHourDate(endTime, 24);
+		}
+        PageInfo<DeviceSn> pageInfoDevice = deviceService.pageByDeviceSn(deviceSn, startTime, endTime, pageCondition);
         return ResponseEntity.ok(ResultModel.ok(pageInfoDevice));
     }
     
