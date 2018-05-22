@@ -316,7 +316,14 @@ public class ParamSetController extends BaseController {
 		Device device = deviceService.getDeviceBySn(sn);
 		Batch batch = batchService.selectLastBatchByDeviceId(device.getDeviceId());
 		if (StringUtils.isNotBlank(batch.getPlantOne()) && StringUtils.isNotBlank(batch.getCultModelOne())) {
-			List<GrowthPatternParam> list = paramSetService.listByGrowthNo(batch.getPlantOne(), Integer.parseInt(batch.getCultModelOne()));
+			List<GrowthPatternParam> list = null;
+			if ("0".equals(batch.getCultModelOne())) {
+				//如果生长模式是无，自动选择节能模式参数
+				list = paramSetService.listByGrowthNo(batch.getPlantOne(), 1);
+			}else {
+				list = paramSetService.listByGrowthNo(batch.getPlantOne(), Integer.parseInt(batch.getCultModelOne()));
+			}
+			
 			if (list != null && !list.isEmpty() ) {
 				GrowthPatternParam param = list.get(0);
 				paramSet.setDayTemperature1(param.getbDayTemperature());
@@ -338,7 +345,13 @@ public class ParamSetController extends BaseController {
 		
 		
 		if (StringUtils.isNotBlank(batch.getPlantTwo()) && StringUtils.isNotBlank(batch.getCultModelTwo())) {
-			List<GrowthPatternParam> list = paramSetService.listByGrowthNo(batch.getPlantTwo(), Integer.parseInt(batch.getCultModelTwo()));
+			List<GrowthPatternParam> list = null;
+			if ("0".equals(batch.getCultModelTwo())) {
+				//如果生长模式是无，自动选择节能模式参数
+				list = paramSetService.listByGrowthNo(batch.getPlantTwo(), 1);
+			}else {
+				list = paramSetService.listByGrowthNo(batch.getPlantTwo(), Integer.parseInt(batch.getCultModelTwo()));
+			}
 			if (list != null && !list.isEmpty() ) {
 				GrowthPatternParam param = list.get(0);
 				paramSet.setDayTemperature2(param.getbDayTemperature());
@@ -359,7 +372,13 @@ public class ParamSetController extends BaseController {
 		}
 		
 		if (StringUtils.isNotBlank(batch.getPlantThree()) && StringUtils.isNotBlank(batch.getCultModelThree())) {
-			List<GrowthPatternParam> list = paramSetService.listByGrowthNo(batch.getPlantThree(), Integer.parseInt(batch.getCultModelThree()));
+			List<GrowthPatternParam> list = null;
+			if ("0".equals(batch.getCultModelThree())) {
+				//如果生长模式是无，自动选择节能模式参数
+				list = paramSetService.listByGrowthNo(batch.getPlantThree(), 1);
+			}else {
+				list = paramSetService.listByGrowthNo(batch.getPlantThree(), Integer.parseInt(batch.getCultModelThree()));
+			}
 			if (list != null && !list.isEmpty() ) {
 				GrowthPatternParam param = list.get(0);
 				paramSet.setDayTemperature3(param.getbDayTemperature());
