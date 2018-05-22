@@ -249,9 +249,9 @@ public class DeviceController extends BaseController {
     public ResponseEntity<ResultModel> list(Device device,String username, PageCondition pageCondition){
        PageInfo<Device> pageInfo = deviceService.pageByDevice(device, username, pageCondition);
        PageInfo<UserDevice> userDevicePageInfo = new PageInfo<>();
-      
-       
        List<UserDevice> deviceList = new ArrayList<>();
+       userDevicePageInfo = PageUtils.convert(pageInfo, deviceList);
+       
        userDevicePageInfo.setList(deviceList);
        List<Device> list = pageInfo.getList();
        if (list == null || list.isEmpty()) {
@@ -273,7 +273,6 @@ public class DeviceController extends BaseController {
 		deviceList.add(userDevice);
 	}
        
-       PageUtils.convert(pageInfo, deviceList);
        
        return V.ok(userDevicePageInfo);
 	}
