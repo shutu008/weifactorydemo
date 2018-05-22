@@ -206,8 +206,8 @@ public class OrderServiceImpl implements OrderService {
 		if (StringUtils.isNotBlank(bizOrder.getSn())) {
 			criteria.andSnLike("%"+bizOrder.getSn()+"%");
 		}
+		PageHelper.startPage(pageCondition.getPage(),pageCondition.getPageSize());
 		List<BizOrder> list = bizOrderMapper.selectByExample(example);
-		 PageHelper.startPage(pageCondition.getPage(),pageCondition.getPageSize());
 		 return new PageInfo<>(list);
 	}
 }

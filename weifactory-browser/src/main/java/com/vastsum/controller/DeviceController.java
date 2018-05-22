@@ -41,6 +41,7 @@ import com.vastsum.service.ParamSetService;
 import com.vastsum.service.RoleService;
 import com.vastsum.service.UserService;
 import com.vastsum.utils.DateTimeUtils;
+import com.vastsum.utils.PageUtils;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -248,6 +249,8 @@ public class DeviceController extends BaseController {
     public ResponseEntity<ResultModel> list(Device device,String username, PageCondition pageCondition){
        PageInfo<Device> pageInfo = deviceService.pageByDevice(device, username, pageCondition);
        PageInfo<UserDevice> userDevicePageInfo = new PageInfo<>();
+      
+       
        List<UserDevice> deviceList = new ArrayList<>();
        userDevicePageInfo.setList(deviceList);
        List<Device> list = pageInfo.getList();
@@ -269,6 +272,8 @@ public class DeviceController extends BaseController {
 		userDevice.setUserPhone(user.getUserPhone());
 		deviceList.add(userDevice);
 	}
+       
+       PageUtils.convert(pageInfo, deviceList);
        
        return V.ok(userDevicePageInfo);
 	}
