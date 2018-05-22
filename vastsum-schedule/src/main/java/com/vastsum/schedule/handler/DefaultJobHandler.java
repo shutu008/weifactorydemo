@@ -234,7 +234,8 @@ public class DefaultJobHandler implements JobHandler {
 		Set<String> keySet = hashMap.keySet();
 		for (String key : keySet) {
 			if ("T00071".equals(key.substring(0, 6))) {
-				String newKey = "T0007"+layer;
+				String lastStr = key.substring(6);
+				String newKey = "T0007"+layer+lastStr;
 				newHashmap.put(newKey, hashMap.get(key));
 			}else {
 				newHashmap.put(key, hashMap.get(key));
