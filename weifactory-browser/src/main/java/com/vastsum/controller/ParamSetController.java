@@ -400,7 +400,7 @@ public class ParamSetController extends BaseController {
 		
 		//育苗室
 		Seed seed = seedService.getLastByBatchId(batch.getBatchId());
-		if (StringUtils.isNotBlank(seed.getSeedRoomPlant())) {
+		if (seed != null && StringUtils.isNotBlank(seed.getSeedRoomPlant())) {
 			FeedParamSet feedParamSet = paramSetService.getByPlantId(seed.getSeedRoomPlant());
 			if (feedParamSet !=null) {
 				paramSet.setDayFeedBgLength(feedParamSet.getDayFeedBgLength());
@@ -422,7 +422,9 @@ public class ParamSetController extends BaseController {
 			GrowthPatternParam param = list.get(0);
 			if (param !=null) {
 				paramSet.setDateLength(Integer.parseInt(param.getaSc()));
-				paramSet.setDateYi(Integer.parseInt(param.getaSy()));
+				if (param.getaSy() !=null) {
+					paramSet.setDateYi(Integer.parseInt(param.getaSy()));
+				}
 				paramSet.setDayStartTime(param.getaDayStart());
 				paramSet.setDayEndTime(param.getaDayEnd());
 				
