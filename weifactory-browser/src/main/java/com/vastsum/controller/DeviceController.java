@@ -357,7 +357,7 @@ public class DeviceController extends BaseController {
         return V.ok();
     }
     
-    @GetMapping("/sn/search")
+    @PostMapping("/sn/search")
     @ApiOperation(value = "查询设备序列号列表@20180520")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "path",name = "page",value = "页码",required = false),
