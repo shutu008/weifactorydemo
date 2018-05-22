@@ -91,20 +91,20 @@ public class DefaultJobHandler implements JobHandler {
 			Integer g1 = Integer.parseInt(batch.getCultModelOne());
 			String p1 = batch.getPlantOne();
 			if (g1 != null && StringUtils.isNotBlank(p1)) {
-				this.sendByGrowthNo(batch, g1, p1);
+				this.sendByGrowthNo(batch, g1, p1,1);
 			}
 			
 			
 			Integer g2 = Integer.parseInt(batch.getCultModelTwo());
 			String p2 = batch.getPlantTwo();
 			if (g2 != null && StringUtils.isNotBlank(p2)) {
-				this.sendByGrowthNo(batch, g2, p2);
+				this.sendByGrowthNo(batch, g2, p2,2);
 			}
 			
 			Integer g3 = Integer.parseInt(batch.getCultModelThree());
 			String p3 = batch.getPlantThree();
 			if (g3 != null) {
-				this.sendByGrowthNo(batch, g3,p3);
+				this.sendByGrowthNo(batch, g3,p3,3);
 			}
 		}
 		
@@ -151,8 +151,9 @@ public class DefaultJobHandler implements JobHandler {
 	 * 批次对应生长模式，数据发送
 	 * @param batch
 	 * @param growthNo
+	 * @param layer 层级
 	 */
-	private void sendByGrowthNo(Batch batch ,Integer growthNo, String plantNo) {
+	private void sendByGrowthNo(Batch batch ,Integer growthNo, String plantNo, Integer layer) {
 		List<GrowthPatternParam> listGrowth = GrowthParamCache.listByModelId(plantNo,growthNo);
 		if (listGrowth == null || listGrowth.isEmpty()) {
 			logger.info("植物名称为："+plantNo+"；生长模式为："+growthNo+"没有参数设置数据！");
@@ -184,8 +185,10 @@ public class DefaultJobHandler implements JobHandler {
 		HashMap<String,Object> hashMap = this.hashMap(param);
 		//数据处理
 		hashMap = this.handler(hashMap);
+		//分层转化
+		hashMap = this.reverse(hashMap, layer);
 		if (hashMap != null) {
-			
+		//准备下发	
 			hashMap.put("sn", sn);
 			handRemoteService.sendOrder(hashMap);
 		}
@@ -218,6 +221,26 @@ public class DefaultJobHandler implements JobHandler {
 		
 		logger.info("准备下发的hashmap:"+hashMap.toString());
 		return hashMap;
+	}
+	
+	/**
+	 * 分层数据转化
+	 * @param hashMap
+	 * @param layer
+	 * @return HashMap<String, Object>
+	 */
+	private HashMap<String, Object> reverse(HashMap<String, Object> hashMap, Integer layer){
+		HashMap<String, Object> newHashmap = new HashMap<>();
+		Set<String> keySet = hashMap.keySet();
+		for (String key : keySet) {
+			if ("T00071".equals(key.substring(0, 6))) {
+				String newKey = "T0007"+layer;
+				newHashmap.put(newKey, hashMap.get(key));
+			}else {
+				newHashmap.put(key, hashMap.get(key));
+			}
+		}
+		return newHashmap;
 	}
 	
 	public static void main(String[] args) {
