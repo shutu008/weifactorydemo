@@ -186,7 +186,7 @@ public class DefaultJobHandler implements JobHandler {
 		//数据处理
 		hashMap = this.handler(hashMap);
 		//分层转化
-		hashMap = this.reverse(hashMap, layer);
+		hashMap = this.reverse(hashMap, layer, growthNo);
 		if (hashMap != null) {
 		//准备下发	
 			hashMap.put("sn", sn);
@@ -227,15 +227,19 @@ public class DefaultJobHandler implements JobHandler {
 	 * 分层数据转化
 	 * @param hashMap
 	 * @param layer
+	 * @param groupModel 生长模式
 	 * @return HashMap<String, Object>
 	 */
-	private HashMap<String, Object> reverse(HashMap<String, Object> hashMap, Integer layer){
+	private HashMap<String, Object> reverse(HashMap<String, Object> hashMap, Integer layer, Integer groupModel){
 		HashMap<String, Object> newHashmap = new HashMap<>();
 		Set<String> keySet = hashMap.keySet();
 		for (String key : keySet) {
 			if ("T00071".equals(key.substring(0, 6))) {
 				String lastStr = key.substring(6);
 				String newKey = "T0007"+layer+lastStr;
+				newHashmap.put(newKey, hashMap.get(key));
+			}else if ("T00079".equals(key.substring(0,6))) {
+				String newKey = "T000790"+groupModel;
 				newHashmap.put(newKey, hashMap.get(key));
 			}else {
 				newHashmap.put(key, hashMap.get(key));
