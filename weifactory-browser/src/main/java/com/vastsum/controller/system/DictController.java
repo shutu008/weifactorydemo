@@ -21,7 +21,7 @@ import com.vastsum.enums.ResultStatus;
 import com.vastsum.model.ResultModel;
 import com.vastsum.model.V;
 import com.vastsum.service.DictService;
-import com.vastsum.utils.DictUtil;
+import com.vastsum.utils.DictUtils;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -84,7 +84,7 @@ public class DictController extends BaseController {
             Integer update = dictService.update(sysDict);
             if (update >0){
                 //更新字典缓存
-                DictUtil.loadCache();
+                DictUtils.loadCache();
                 return ResponseEntity.ok(ResultModel.ok());
             }
             handRemoteService.updateDictHelper();
@@ -94,7 +94,7 @@ public class DictController extends BaseController {
         Integer save = dictService.save(sysDict);
         if (save >0){
             //更新字典缓存
-            DictUtil.loadCache();
+            DictUtils.loadCache();
             return ResponseEntity.ok(ResultModel.ok());
         }
         return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
@@ -110,7 +110,7 @@ public class DictController extends BaseController {
         if (code == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.DICT_CODE_NULL));
         }
-        Set<SysDictItem> sysDictItemPageInfo = DictUtil.getSysDictItemsByCode(code);
+        Set<SysDictItem> sysDictItemPageInfo = DictUtils.getSysDictItemsByCode(code);
         return ResponseEntity.ok(ResultModel.ok(sysDictItemPageInfo));
     }
     
@@ -162,7 +162,7 @@ public class DictController extends BaseController {
             Integer save = dictService.saveDictItem(sysDictItem);
             if (save >0){
                 //更新字典缓存
-                DictUtil.loadCache();
+                DictUtils.loadCache();
                 return ResponseEntity.ok(ResultModel.ok());
             }
             return new ResponseEntity<ResultModel>(ResultModel.error(ResultStatus.ERROR), HttpStatus.SERVICE_UNAVAILABLE);
@@ -170,7 +170,7 @@ public class DictController extends BaseController {
         Integer update = dictService.updateDictItem(sysDictItem.getDictCode(),sysDictItem);
         if (update >0){
             //更新字典缓存
-            DictUtil.loadCache();
+            DictUtils.loadCache();
             return ResponseEntity.ok(ResultModel.ok());
         }
         return ResponseEntity.ok(ResultModel.error(ResultStatus.ERROR));
@@ -181,7 +181,7 @@ public class DictController extends BaseController {
 	@GetMapping("/all")
 	@ApiOperation(value="获取所有字典，前端做缓存匹配@20180403")
 	public ResponseEntity<ResultModel> getAll(){
-		Map<String, Set<SysDictItem>> all = DictUtil.getAll();
+		Map<String, Set<SysDictItem>> all = DictUtils.getAll();
 		return V.ok(all);
 	}
 

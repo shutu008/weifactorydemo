@@ -273,7 +273,7 @@ public class RegisterController extends BaseController {
     @ApiOperation(value = "用户登陆")
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "username",value = "用户名",required = true),
-            @ApiImplicitParam(paramType = "query",name = "phoneNumber",value = "手机号",required = true)
+            @ApiImplicitParam(paramType = "query",name = "password",value = "密码",required = true)
     })
     public ResponseEntity<ResultModel> login(@RequestParam String username,
                                              @RequestParam(defaultValue="") String password,
@@ -287,6 +287,9 @@ public class RegisterController extends BaseController {
         username = username.trim();
         //根据用户名获取用户信息，如果enable为0,用户没权限登陆
         User user = userService.getUserByUsername(username);
+       if (user == null) {
+			user = userService.findUserByPhone(username);
+		}
         if (user == null){
             return ResponseEntity.ok(ResultModel.error(ResultStatus.USER_NOT_FOUND));
         }

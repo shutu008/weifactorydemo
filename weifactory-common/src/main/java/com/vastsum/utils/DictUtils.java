@@ -15,12 +15,12 @@ import java.util.*;
  * @create 2017-07-29 12:52
  */
 @Component
-public class DictUtil {
+public class DictUtils {
 
     @Autowired
     private DictService dictService;
 
-    private static DictUtil dictUtil;
+    private static DictUtils dictUtil;
     /**
      * 缓存整个字典信息
      */

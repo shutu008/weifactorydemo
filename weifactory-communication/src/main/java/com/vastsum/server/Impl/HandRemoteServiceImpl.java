@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import com.vastsum.core.service.HandRemoteService;
 import com.vastsum.entity.CommunicationMessage;
-import com.vastsum.utils.DictUtil;
+import com.vastsum.utils.DictUtils;
 import com.vastsum.utils.NettyChannelMap;
 import com.vastsum.utils.ParamHelper;
 import com.vastsum.utils.ParserMessageUtils;
@@ -55,6 +55,6 @@ public class HandRemoteServiceImpl implements HandRemoteService{
 
 	@Override
 	public void updateDictHelper() {
-		DictUtil.loadCache();
+		DictUtils.loadCache();
 	}
 }

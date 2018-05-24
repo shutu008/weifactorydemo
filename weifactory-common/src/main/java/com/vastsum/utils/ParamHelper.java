@@ -56,5 +56,19 @@ public class ParamHelper {
 		return null;
 	}
 	
+	/**
+	 * 根据参数code获取参数的值
+	 * @param code
+	 * @return String
+	 */
+	public static String getParam(String code){
+		for (SysParam sysParam : set) {
+			if (sysParam.getParamCode().equals(code)) {
+				return sysParam.getParamValue();
+			}
+		}
+		return null;
+	}
+	
 
 }
