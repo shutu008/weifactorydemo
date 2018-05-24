@@ -308,7 +308,7 @@ public class RegisterController extends BaseController {
 		}
         //登陆成功后的处理
         //根据登陆成功的用户名获取具体的用户信息
-        UserInfo userInfo = userService.findUserByUsername(username);
+        UserInfo userInfo = userService.findUserByUsername(user.getUserName());
         //更新用户登录状态信息
         userService.updateLoginStatus(user.getUserId(), LoginStatusEnum.ONLINE.getLoginStatus());
         return ResponseEntity.ok(ResultModel.ok(userInfo));
