@@ -3,6 +3,7 @@
  */
 package com.vastsum.service.impl;
 
+import java.text.DateFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -166,5 +167,20 @@ public class ParamSetServiceImpl implements ParamSetService {
 	
 	private void updateFeedParamSet(FeedParamSet feedParamSet) {
 		feedParamSetMapper.updateByPrimaryKeySelective(feedParamSet);
+	}
+
+	//更新页面植物工厂的时间显示20180529201945
+	@Override
+	public void updateParamDeviceTime(String sn, String date) {
+		ParamSet paramSet = getLastBySn(sn);
+		String year = date.substring(0, 4);
+		String mounth = date.substring(4,6);
+		String day = date.substring(6,8);
+		String hours = date.substring(8,10);
+		String miniment = date.substring(10,12);
+		String ss = date.substring(12,14);
+		String newTime = year+"-"+mounth+"-"+day+" "+hours+":"+miniment+":"+ss;
+		paramSet.setDaySet(newTime);
+		saveOrUpdate(paramSet);
 	}
 }

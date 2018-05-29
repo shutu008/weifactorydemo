@@ -16,6 +16,7 @@ import com.vastsum.pojo.OptionType;
 import com.vastsum.server.CommunicationService;
 import com.vastsum.server.HistroyDataService;
 import com.vastsum.service.BizExceptionService;
+import com.vastsum.service.ParamSetService;
 import com.vastsum.utils.BizUtils;
 import com.vastsum.utils.NettyChannelMap;
 
@@ -34,6 +35,8 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
     private HistroyDataService histroyDataService;
     @Autowired
     private BizExceptionService bizExceptionService;
+    @Autowired
+    private ParamSetService paramSetService;
 
     //是否第一次执行标志
     boolean flag = true;
@@ -73,10 +76,10 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
 			new Exception(cm.getParserResult()).printStackTrace();
         	return;
         }
-        String sn = cm.getSn();
-        LOGGER.info("设备序列号是："+sn);
         
         if (flag){
+            String sn = cm.getSn();
+            LOGGER.info("设备序列号是："+sn);
         	// 第一次连接时
         	// 创建channel，存入map
             LOGGER.info("进行激活验证：返回时间戳为:"+String.valueOf(System.currentTimeMillis()));
@@ -104,6 +107,8 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
         }
         try {
             if (request == null || "".equals(request)){
+            	 NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
+            	 String sn = nettyChannelMap.getSn(ctx.channel());
             	CommunicationMessage cmReplay = new CommunicationMessage(sn,5,5,"1");
             	ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
                 return;
@@ -130,14 +135,17 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
             	histroyDataService.save(historyData);
             	LOGGER.info("保存采集数据："+historyData.toString());
             	bizExceptionService.save(cm.getFunction()+"", NettyChannelMap.getInstance().getSn(ctx.channel()), cm.getData());
-            	//ctx.writeAndFlush(Unpooled.copiedBuffer(cm.getMsg().getBytes()));
             	return;
             }
+            //系统级设计
             if (cm.getModel() == 5){
+            	//机器响应给我的指令,保存数据库
                 if (cm.getFunction() == 4) {
-                	String currentTime = String.valueOf(System.currentTimeMillis());
-                	CommunicationMessage cmReplay = new CommunicationMessage(sn,5,4,currentTime);
-                    ctx.writeAndFlush(Unpooled.copiedBuffer(cmReplay.getMsg().getBytes()));
+                	//String currentTime = String.valueOf(System.currentTimeMillis());
+                	 NettyChannelMap nettyChannelMap = NettyChannelMap.getInstance();
+                	 String sn = nettyChannelMap.getSn(ctx.channel());
+                	 //更新
+                	 paramSetService.updateParamDeviceTime(sn, cm.getData());
                     return;
 				}
                 if (cm.getFunction() == 6) {

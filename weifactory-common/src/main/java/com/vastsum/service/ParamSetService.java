@@ -94,6 +94,13 @@ public interface ParamSetService {
 	 */
 	void deleteBySn(String sn);
 	
+	/**
+	 * 更新植物工厂页面上显示的植物工厂时间
+	 * @param sn 设备序列号
+	 * @param date 植物工厂发过来的日期
+	 */
+	void updateParamDeviceTime(String sn, String date);
+	
 	
 
 }
