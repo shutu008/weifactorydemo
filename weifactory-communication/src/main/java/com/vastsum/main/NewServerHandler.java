@@ -131,7 +131,9 @@ public class NewServerHandler extends ChannelInboundHandlerAdapter {
         		if (set.contains(cm.getFunction()+"")) {
         			Double data = BizUtils.parseData(cm.getData());
         			historyData.setValue(data+"");
-        		}
+        		}else {
+					historyData.setValue(cm.getData());
+				}
             	histroyDataService.save(historyData);
             	LOGGER.info("保存采集数据："+historyData.toString());
             	bizExceptionService.save(cm.getFunction()+"", NettyChannelMap.getInstance().getSn(ctx.channel()), cm.getData());
