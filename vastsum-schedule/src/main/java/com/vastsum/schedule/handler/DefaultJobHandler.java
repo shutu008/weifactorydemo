@@ -87,25 +87,31 @@ public class DefaultJobHandler implements JobHandler {
 		}
 		
 		logger.info("调度参数设置-待下发的批次列表："+batchList);
-		for (Batch batch : batchList) {
-			Integer g1 = Integer.parseInt(batch.getCultModelOne());
-			String p1 = batch.getPlantOne();
-			if (g1 != null && StringUtils.isNotBlank(p1)) {
-				this.sendByGrowthNo(batch, g1, p1,1);
+		try {
+			for (Batch batch : batchList) {
+				Integer g1 = Integer.parseInt(batch.getCultModelOne());
+				String p1 = batch.getPlantOne();
+				if (g1 != null && StringUtils.isNotBlank(p1)) {
+					this.sendByGrowthNo(batch, g1, p1,1);
+				}
+				
+					Thread.sleep(500);
+				Integer g2 = Integer.parseInt(batch.getCultModelTwo());
+				String p2 = batch.getPlantTwo();
+				if (g2 != null && StringUtils.isNotBlank(p2)) {
+					this.sendByGrowthNo(batch, g2, p2,2);
+				}
+				
+				Thread.sleep(500);
+				Integer g3 = Integer.parseInt(batch.getCultModelThree());
+				String p3 = batch.getPlantThree();
+				if (g3 != null) {
+					this.sendByGrowthNo(batch, g3,p3,3);
+				}
 			}
-			
-			
-			Integer g2 = Integer.parseInt(batch.getCultModelTwo());
-			String p2 = batch.getPlantTwo();
-			if (g2 != null && StringUtils.isNotBlank(p2)) {
-				this.sendByGrowthNo(batch, g2, p2,2);
-			}
-			
-			Integer g3 = Integer.parseInt(batch.getCultModelThree());
-			String p3 = batch.getPlantThree();
-			if (g3 != null) {
-				this.sendByGrowthNo(batch, g3,p3,3);
-			}
+		} catch (InterruptedException e) {
+			logger.error("下发自定义参数异常，延时异常");
+			e.printStackTrace();
 		}
 		
 	}

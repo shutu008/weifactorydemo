@@ -264,12 +264,15 @@ public class DeviceController extends BaseController {
 		userDevice.setDeviceType(d.getDeviceType());
 		userDevice.setGmtCreate(d.getGmtCreate());
 		userDevice.setNote(d.getNote());
-		userDevice.setRealname(user.getRealname());
+		
 		userDevice.setSn(d.getSn());
-		userDevice.setUserEmail(user.getUserEmail());
-		userDevice.setUserId(user.getUserId());
-		userDevice.setUsername(user.getUserName());
-		userDevice.setUserPhone(user.getUserPhone());
+		if (user !=null) {
+			userDevice.setRealname(user.getRealname());
+			userDevice.setUserEmail(user.getUserEmail());
+			userDevice.setUserId(user.getUserId());
+			userDevice.setUsername(user.getUserName());
+			userDevice.setUserPhone(user.getUserPhone());
+		}
 		deviceList.add(userDevice);
 	}
        
