@@ -25,6 +25,7 @@ import com.vastsum.service.DeviceService;
 import com.vastsum.utils.BizUtils;
 import com.vastsum.utils.DateTimeUtils;
 import com.vastsum.utils.GrowthParamCache;
+import com.vastsum.utils.ParamHelper;
 import com.vastsum.utils.ResourceProperty;
 
 @Service(value ="defaultJobHandler")
@@ -95,14 +96,14 @@ public class DefaultJobHandler implements JobHandler {
 					this.sendByGrowthNo(batch, g1, p1,1);
 				}
 				
-					Thread.sleep(500);
+				Thread.sleep(Integer.parseInt(ParamHelper.getParam("selfParamInterval")));
 				Integer g2 = Integer.parseInt(batch.getCultModelTwo());
 				String p2 = batch.getPlantTwo();
 				if (g2 != null && StringUtils.isNotBlank(p2)) {
 					this.sendByGrowthNo(batch, g2, p2,2);
 				}
 				
-				Thread.sleep(500);
+				Thread.sleep(Integer.parseInt(ParamHelper.getParam("selfParamInterval")));
 				Integer g3 = Integer.parseInt(batch.getCultModelThree());
 				String p3 = batch.getPlantThree();
 				if (g3 != null) {
