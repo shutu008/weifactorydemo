@@ -23,7 +23,7 @@ public class ParserMessageUtils {
 		String sn = (String)(hashMap.get("sn"));
 		hashMap.forEach((k,v)->{
 			try {
-				if(!"sn".equals(k)) {
+				if(!"sn".equals(k) && k != null) {
 					if (k.length() != 8) {
 						logger.info("指令集中有不符合要求的数据,数据为："+k);
 						return;
