@@ -5,6 +5,7 @@
     <id column="param_set_id" jdbcType="BIGINT" property="paramSetId" />
     <result column="batch_id" jdbcType="BIGINT" property="batchId" />
     <result column="sn" jdbcType="VARCHAR" property="sn" />
+    <result column="check_time" jdbcType="VARCHAR" property="checkTime" />
     <result column="day_set" jdbcType="VARCHAR" property="daySet" />
     <result column="day_start_time" jdbcType="VARCHAR" property="dayStartTime" />
     <result column="day_end_time" jdbcType="VARCHAR" property="dayEndTime" />
@@ -154,7 +155,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    param_set_id, batch_id, sn, day_set, day_start_time, day_end_time, night_start_time, 
+    param_set_id, batch_id, sn, check_time, day_set, day_start_time, day_end_time, night_start_time, 
     night_end_time, day_wind_lenght_time, day_wind_cycle_time, day_bg_lenght_1, day_bg_cycle_1, 
     day_bg_lenght_2, day_bg_cycle_2, day_bg_lenght_3, day_bg_cycle_3, day_yy_length_1, 
     day_yy_cycle_1, day_yy_length_2, day_yy_cycle_2, day_yy_length_3, day_yy_cycle_3, 
@@ -205,22 +206,23 @@
   </delete>
   <insert id="insert" parameterType="com.vastsum.entity.ParamSet">
     insert into param_set (param_set_id, batch_id, sn, 
-      day_set, day_start_time, day_end_time, 
-      night_start_time, night_end_time, day_wind_lenght_time, 
-      day_wind_cycle_time, day_bg_lenght_1, day_bg_cycle_1, 
-      day_bg_lenght_2, day_bg_cycle_2, day_bg_lenght_3, 
-      day_bg_cycle_3, day_yy_length_1, day_yy_cycle_1, 
-      day_yy_length_2, day_yy_cycle_2, day_yy_length_3, 
-      day_yy_cycle_3, day_new_wind_length, day_new_wind_time, 
-      feed_name, feed_planting_time, feed_recovery_time, 
-      day_feed_bg_time, day_feed_bg_length, day_feed_water_length, 
-      day_feed_water_cycle, night_wind_lenght_time, 
-      night_wind_cycle_time, night_bg_lenght_1, night_bg_cycle_1, 
-      night_bg_lenght_2, night_bg_cycle_2, night_bg_lenght_3, 
-      night_bg_cycle_3, night_yy_length_1, night_yy_cycle_1, 
-      night_yy_length_2, night_yy_cycle_2, night_yy_length_3, 
-      night_yy_cycle_3, night_new_wind_length, night_new_wind_time, 
-      night_feed_bg_time, night_feed_bg_length, night_feed_water_length, 
+      check_time, day_set, day_start_time, 
+      day_end_time, night_start_time, night_end_time, 
+      day_wind_lenght_time, day_wind_cycle_time, day_bg_lenght_1, 
+      day_bg_cycle_1, day_bg_lenght_2, day_bg_cycle_2, 
+      day_bg_lenght_3, day_bg_cycle_3, day_yy_length_1, 
+      day_yy_cycle_1, day_yy_length_2, day_yy_cycle_2, 
+      day_yy_length_3, day_yy_cycle_3, day_new_wind_length, 
+      day_new_wind_time, feed_name, feed_planting_time, 
+      feed_recovery_time, day_feed_bg_time, day_feed_bg_length, 
+      day_feed_water_length, day_feed_water_cycle, 
+      night_wind_lenght_time, night_wind_cycle_time, 
+      night_bg_lenght_1, night_bg_cycle_1, night_bg_lenght_2, 
+      night_bg_cycle_2, night_bg_lenght_3, night_bg_cycle_3, 
+      night_yy_length_1, night_yy_cycle_1, night_yy_length_2, 
+      night_yy_cycle_2, night_yy_length_3, night_yy_cycle_3, 
+      night_new_wind_length, night_new_wind_time, night_feed_bg_time, 
+      night_feed_bg_length, night_feed_water_length, 
       batch_no_1, plant_name_1, growth_pattern_1, 
       day_temperature_1, night_temperature_1, day_humidity_1, 
       night_humidity_1, batch_no_2, plant_name_2, 
@@ -237,22 +239,23 @@
       status, gmt_create, gmt_modified
       )
     values (#{paramSetId,jdbcType=BIGINT}, #{batchId,jdbcType=BIGINT}, #{sn,jdbcType=VARCHAR}, 
-      #{daySet,jdbcType=VARCHAR}, #{dayStartTime,jdbcType=VARCHAR}, #{dayEndTime,jdbcType=VARCHAR}, 
-      #{nightStartTime,jdbcType=VARCHAR}, #{nightEndTime,jdbcType=VARCHAR}, #{dayWindLenghtTime,jdbcType=INTEGER}, 
-      #{dayWindCycleTime,jdbcType=INTEGER}, #{dayBgLenght1,jdbcType=INTEGER}, #{dayBgCycle1,jdbcType=INTEGER}, 
-      #{dayBgLenght2,jdbcType=INTEGER}, #{dayBgCycle2,jdbcType=INTEGER}, #{dayBgLenght3,jdbcType=INTEGER}, 
-      #{dayBgCycle3,jdbcType=INTEGER}, #{dayYyLength1,jdbcType=INTEGER}, #{dayYyCycle1,jdbcType=INTEGER}, 
-      #{dayYyLength2,jdbcType=INTEGER}, #{dayYyCycle2,jdbcType=INTEGER}, #{dayYyLength3,jdbcType=INTEGER}, 
-      #{dayYyCycle3,jdbcType=INTEGER}, #{dayNewWindLength,jdbcType=INTEGER}, #{dayNewWindTime,jdbcType=INTEGER}, 
-      #{feedName,jdbcType=VARCHAR}, #{feedPlantingTime,jdbcType=TIMESTAMP}, #{feedRecoveryTime,jdbcType=TIMESTAMP}, 
-      #{dayFeedBgTime,jdbcType=INTEGER}, #{dayFeedBgLength,jdbcType=INTEGER}, #{dayFeedWaterLength,jdbcType=INTEGER}, 
-      #{dayFeedWaterCycle,jdbcType=INTEGER}, #{nightWindLenghtTime,jdbcType=INTEGER}, 
-      #{nightWindCycleTime,jdbcType=INTEGER}, #{nightBgLenght1,jdbcType=INTEGER}, #{nightBgCycle1,jdbcType=INTEGER}, 
-      #{nightBgLenght2,jdbcType=INTEGER}, #{nightBgCycle2,jdbcType=INTEGER}, #{nightBgLenght3,jdbcType=INTEGER}, 
-      #{nightBgCycle3,jdbcType=INTEGER}, #{nightYyLength1,jdbcType=INTEGER}, #{nightYyCycle1,jdbcType=INTEGER}, 
-      #{nightYyLength2,jdbcType=INTEGER}, #{nightYyCycle2,jdbcType=INTEGER}, #{nightYyLength3,jdbcType=INTEGER}, 
-      #{nightYyCycle3,jdbcType=INTEGER}, #{nightNewWindLength,jdbcType=INTEGER}, #{nightNewWindTime,jdbcType=INTEGER}, 
-      #{nightFeedBgTime,jdbcType=INTEGER}, #{nightFeedBgLength,jdbcType=INTEGER}, #{nightFeedWaterLength,jdbcType=INTEGER}, 
+      #{checkTime,jdbcType=VARCHAR}, #{daySet,jdbcType=VARCHAR}, #{dayStartTime,jdbcType=VARCHAR}, 
+      #{dayEndTime,jdbcType=VARCHAR}, #{nightStartTime,jdbcType=VARCHAR}, #{nightEndTime,jdbcType=VARCHAR}, 
+      #{dayWindLenghtTime,jdbcType=INTEGER}, #{dayWindCycleTime,jdbcType=INTEGER}, #{dayBgLenght1,jdbcType=INTEGER}, 
+      #{dayBgCycle1,jdbcType=INTEGER}, #{dayBgLenght2,jdbcType=INTEGER}, #{dayBgCycle2,jdbcType=INTEGER}, 
+      #{dayBgLenght3,jdbcType=INTEGER}, #{dayBgCycle3,jdbcType=INTEGER}, #{dayYyLength1,jdbcType=INTEGER}, 
+      #{dayYyCycle1,jdbcType=INTEGER}, #{dayYyLength2,jdbcType=INTEGER}, #{dayYyCycle2,jdbcType=INTEGER}, 
+      #{dayYyLength3,jdbcType=INTEGER}, #{dayYyCycle3,jdbcType=INTEGER}, #{dayNewWindLength,jdbcType=INTEGER}, 
+      #{dayNewWindTime,jdbcType=INTEGER}, #{feedName,jdbcType=VARCHAR}, #{feedPlantingTime,jdbcType=TIMESTAMP}, 
+      #{feedRecoveryTime,jdbcType=TIMESTAMP}, #{dayFeedBgTime,jdbcType=INTEGER}, #{dayFeedBgLength,jdbcType=INTEGER}, 
+      #{dayFeedWaterLength,jdbcType=INTEGER}, #{dayFeedWaterCycle,jdbcType=INTEGER}, 
+      #{nightWindLenghtTime,jdbcType=INTEGER}, #{nightWindCycleTime,jdbcType=INTEGER}, 
+      #{nightBgLenght1,jdbcType=INTEGER}, #{nightBgCycle1,jdbcType=INTEGER}, #{nightBgLenght2,jdbcType=INTEGER}, 
+      #{nightBgCycle2,jdbcType=INTEGER}, #{nightBgLenght3,jdbcType=INTEGER}, #{nightBgCycle3,jdbcType=INTEGER}, 
+      #{nightYyLength1,jdbcType=INTEGER}, #{nightYyCycle1,jdbcType=INTEGER}, #{nightYyLength2,jdbcType=INTEGER}, 
+      #{nightYyCycle2,jdbcType=INTEGER}, #{nightYyLength3,jdbcType=INTEGER}, #{nightYyCycle3,jdbcType=INTEGER}, 
+      #{nightNewWindLength,jdbcType=INTEGER}, #{nightNewWindTime,jdbcType=INTEGER}, #{nightFeedBgTime,jdbcType=INTEGER}, 
+      #{nightFeedBgLength,jdbcType=INTEGER}, #{nightFeedWaterLength,jdbcType=INTEGER}, 
       #{batchNo1,jdbcType=VARCHAR}, #{plantName1,jdbcType=VARCHAR}, #{growthPattern1,jdbcType=VARCHAR}, 
       #{dayTemperature1,jdbcType=VARCHAR}, #{nightTemperature1,jdbcType=VARCHAR}, #{dayHumidity1,jdbcType=VARCHAR}, 
       #{nightHumidity1,jdbcType=VARCHAR}, #{batchNo2,jdbcType=VARCHAR}, #{plantName2,jdbcType=VARCHAR}, 
@@ -280,6 +283,9 @@
       </if>
       <if test="sn != null">
         sn,
+      </if>
+      <if test="checkTime != null">
+        check_time,
       </if>
       <if test="daySet != null">
         day_set,
@@ -558,6 +564,9 @@
       </if>
       <if test="sn != null">
         #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="checkTime != null">
+        #{checkTime,jdbcType=VARCHAR},
       </if>
       <if test="daySet != null">
         #{daySet,jdbcType=VARCHAR},
@@ -846,6 +855,9 @@
       <if test="record.sn != null">
         sn = #{record.sn,jdbcType=VARCHAR},
       </if>
+      <if test="record.checkTime != null">
+        check_time = #{record.checkTime,jdbcType=VARCHAR},
+      </if>
       <if test="record.daySet != null">
         day_set = #{record.daySet,jdbcType=VARCHAR},
       </if>
@@ -1123,6 +1135,7 @@
     set param_set_id = #{record.paramSetId,jdbcType=BIGINT},
       batch_id = #{record.batchId,jdbcType=BIGINT},
       sn = #{record.sn,jdbcType=VARCHAR},
+      check_time = #{record.checkTime,jdbcType=VARCHAR},
       day_set = #{record.daySet,jdbcType=VARCHAR},
       day_start_time = #{record.dayStartTime,jdbcType=VARCHAR},
       day_end_time = #{record.dayEndTime,jdbcType=VARCHAR},
@@ -1224,6 +1237,9 @@
       </if>
       <if test="sn != null">
         sn = #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="checkTime != null">
+        check_time = #{checkTime,jdbcType=VARCHAR},
       </if>
       <if test="daySet != null">
         day_set = #{daySet,jdbcType=VARCHAR},
@@ -1499,6 +1515,7 @@
     update param_set
     set batch_id = #{batchId,jdbcType=BIGINT},
       sn = #{sn,jdbcType=VARCHAR},
+      check_time = #{checkTime,jdbcType=VARCHAR},
       day_set = #{daySet,jdbcType=VARCHAR},
       day_start_time = #{dayStartTime,jdbcType=VARCHAR},
       day_end_time = #{dayEndTime,jdbcType=VARCHAR},

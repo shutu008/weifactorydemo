@@ -9,6 +9,8 @@ public class ParamSet {
 
     private String sn;
 
+    private String checkTime;
+
     private String daySet;
 
     private String dayStartTime;
@@ -209,6 +211,14 @@ public class ParamSet {
 
     public void setSn(String sn) {
         this.sn = sn == null ? null : sn.trim();
+    }
+
+    public String getCheckTime() {
+        return checkTime;
+    }
+
+    public void setCheckTime(String checkTime) {
+        this.checkTime = checkTime == null ? null : checkTime.trim();
     }
 
     public String getDaySet() {
@@ -932,6 +942,7 @@ public class ParamSet {
         sb.append(", paramSetId=").append(paramSetId);
         sb.append(", batchId=").append(batchId);
         sb.append(", sn=").append(sn);
+        sb.append(", checkTime=").append(checkTime);
         sb.append(", daySet=").append(daySet);
         sb.append(", dayStartTime=").append(dayStartTime);
         sb.append(", dayEndTime=").append(dayEndTime);

@@ -107,8 +107,8 @@
 		<!-- <table schema="" tableName="device"></table> -->
 		<!-- <table tableName="growth_pattern_param"></table>
 		<table tableName="history_data"></table>-->
-		<!-- <table tableName="param_set"></table>  -->
-		<table tableName="feed_param_set"></table>
+		<table tableName="param_set"></table>
+		<!-- <table tableName="feed_param_set"></table> -->
 		<!-- <table tableName="device">
 			<generatedKey column="device_id" sqlStatement="MySql" identity="true"/>
 		</table> -->

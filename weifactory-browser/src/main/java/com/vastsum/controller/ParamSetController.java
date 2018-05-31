@@ -149,6 +149,7 @@ public class ParamSetController extends BaseController {
 		//先判断批次号是否存在，如果存在则不修改和添加，如果不存在则生成 1+13
 		Device device = deviceService.getDeviceBySn(paramSet.getSn());
 		Batch batch = batchService.selectLastBatchByDeviceId(device.getDeviceId());
+		paramSet.setBatchId(batch.getBatchId());
 		if (paramSet.getParamSetId() == null) {
 			if (StringUtils.isNotBlank(batch.getPlantOne())) {
 				paramSet.setBatchNo1("1"+System.currentTimeMillis());
@@ -182,6 +183,8 @@ public class ParamSetController extends BaseController {
 		
 		//下发参数设置其他数据
 		handRemoteService.sendOrder(sensorService.changeOrder(paramSet));
+		//同步植物工厂时间到服务器,默认为0
+		paramSet.setCheckTime("0");
 		paramSetService.saveOrUpdate(paramSet);
 		return V.ok("数据下发成功！");
     }
