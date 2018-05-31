@@ -96,7 +96,8 @@ public class SensorServiceImpl implements SensorService {
 			String key = entry.getKey();
 			//处理同步服务器时间设置
 			if ("T0002900".equals(key)) {
-				String data = BizUtils.dateFormat((Date)hashMap.get(key));
+				//当前服务器时间发送给机器
+				String data = BizUtils.dateFormat(new Date());
 				hashMap.put(key, data);
 			}
 			
