@@ -98,7 +98,7 @@ public class ParamSetServiceImpl implements ParamSetService {
 		growthPatternParamExample.createCriteria()
 		.andGrowthNoEqualTo(growthNo)
 		.andPlantNoEqualTo(plantNo);
-		growthPatternParamExample.setOrderByClause("growth_order desc");
+		growthPatternParamExample.setOrderByClause("growth_order asc");
 		return growthPatternParamMapper.selectByExample(growthPatternParamExample);
 	}
 
