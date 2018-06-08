@@ -1,5 +1,7 @@
 package com.vastsum.controller;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,7 +42,6 @@ public class SeedController extends BaseController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "query",name = "batchId",value = "批次id",required = true),
             @ApiImplicitParam(paramType = "query",name = "seedRoomPlant",value = "育苗室植物",required = true),
-            @ApiImplicitParam(paramType = "query",name = "seedPlantingTime",value = "播种时间",required = true),
             @ApiImplicitParam(paramType = "query",name = "seedRecoveryTime",value = "预计可移植日期",required = true)
     })
     public  ResponseEntity<ResultModel> save(@ModelAttribute Seed seed){
@@ -51,13 +52,15 @@ public class SeedController extends BaseController {
 			return V.error("批次号不能为空");
 		}
 		if (seed.getSeedRoomPlant() == null) {
-			return V.error("育苗室植物名称");
-		}
-		if (seed.getSeedPlantingTime() == null) {
-			return V.error("播种日期不能为空");
+			return V.error("植物名称");
 		}
 		if (seed.getSeedRecoveryTime() == null) {
 			return V.error("预计可移植日期不能为空");
+		}
+		//育苗时间
+		seed.setSeedPlantingTime(new Date(new Date().getTime() - 100000));
+		if (seed.getSeedRecoveryTime().compareTo(seed.getSeedPlantingTime()) < 0) {
+			return V.error("预计可移植日期要大于播种日期");
 		}
 		seedService.add(seed);
 		return V.ok();

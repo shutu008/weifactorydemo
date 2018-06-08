@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
-import org.apache.commons.lang.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -99,6 +98,16 @@ public class DeviceController extends BaseController {
         	devices = deviceService.findDevicesByuserId(userId);
 		}else if ("ROLE_EXPERT".equals(role.getRoleName())) {
 			devices = deviceService.turstDevicesByExpertId(userId);
+		}
+        //获取在线设备
+        ArrayList<String> onlineDeviceList = handRemoteService.getOnlineDeviceList();
+        //增加在线状态
+        for (String onDevice : onlineDeviceList) {
+			for (Device device : devices) {
+				if (onDevice != null && onDevice.equals(device.getSn())) {
+					device.setOnlineStatus("1");
+				}
+			}
 		}
         return ResponseEntity.ok(ResultModel.ok(devices));
     }

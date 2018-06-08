@@ -20,6 +20,8 @@ public class Device {
     private String trustStatus;
 
     private String orderStatus;
+    
+    private String onlineStatus = "0";
 
     public Integer getDeviceId() {
         return deviceId;
@@ -111,4 +113,14 @@ public class Device {
         sb.append("]");
         return sb.toString();
     }
+
+	public String getOnlineStatus() {
+		return onlineStatus;
+	}
+
+	public void setOnlineStatus(String onlineStatus) {
+		this.onlineStatus = onlineStatus;
+	}
+    
+    
 }
