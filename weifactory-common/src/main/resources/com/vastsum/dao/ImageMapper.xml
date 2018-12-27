@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vastsum.dao.ImageMapper">
+  <resultMap id="BaseResultMap" type="com.vastsum.entity.Image">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="sn" jdbcType="VARCHAR" property="sn" />
+    <result column="batch_id" jdbcType="BIGINT" property="batchId" />
+    <result column="sensor_mark" jdbcType="VARCHAR" property="sensorMark" />
+    <result column="one_pic_name" jdbcType="VARCHAR" property="onePicName" />
+    <result column="two_pic_name" jdbcType="VARCHAR" property="twoPicName" />
+    <result column="three_pic_name" jdbcType="VARCHAR" property="threePicName" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, sn, batch_id, sensor_mark, one_pic_name, two_pic_name, three_pic_name, gmt_create
+  </sql>
+  <select id="selectByExample" parameterType="com.vastsum.entity.ImageExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from image
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from image
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from image
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.vastsum.entity.ImageExample">
+    delete from image
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.vastsum.entity.Image">
+    insert into image (id, sn, batch_id, 
+      sensor_mark, one_pic_name, two_pic_name, 
+      three_pic_name, gmt_create)
+    values (#{id,jdbcType=BIGINT}, #{sn,jdbcType=VARCHAR}, #{batchId,jdbcType=BIGINT}, 
+      #{sensorMark,jdbcType=VARCHAR}, #{onePicName,jdbcType=VARCHAR}, #{twoPicName,jdbcType=VARCHAR}, 
+      #{threePicName,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.vastsum.entity.Image">
+    insert into image
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sn != null">
+        sn,
+      </if>
+      <if test="batchId != null">
+        batch_id,
+      </if>
+      <if test="sensorMark != null">
+        sensor_mark,
+      </if>
+      <if test="onePicName != null">
+        one_pic_name,
+      </if>
+      <if test="twoPicName != null">
+        two_pic_name,
+      </if>
+      <if test="threePicName != null">
+        three_pic_name,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="sn != null">
+        #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="batchId != null">
+        #{batchId,jdbcType=BIGINT},
+      </if>
+      <if test="sensorMark != null">
+        #{sensorMark,jdbcType=VARCHAR},
+      </if>
+      <if test="onePicName != null">
+        #{onePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="twoPicName != null">
+        #{twoPicName,jdbcType=VARCHAR},
+      </if>
+      <if test="threePicName != null">
+        #{threePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.vastsum.entity.ImageExample" resultType="java.lang.Long">
+    select count(*) from image
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update image
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.sn != null">
+        sn = #{record.sn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.batchId != null">
+        batch_id = #{record.batchId,jdbcType=BIGINT},
+      </if>
+      <if test="record.sensorMark != null">
+        sensor_mark = #{record.sensorMark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.onePicName != null">
+        one_pic_name = #{record.onePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.twoPicName != null">
+        two_pic_name = #{record.twoPicName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.threePicName != null">
+        three_pic_name = #{record.threePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gmtCreate != null">
+        gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update image
+    set id = #{record.id,jdbcType=BIGINT},
+      sn = #{record.sn,jdbcType=VARCHAR},
+      batch_id = #{record.batchId,jdbcType=BIGINT},
+      sensor_mark = #{record.sensorMark,jdbcType=VARCHAR},
+      one_pic_name = #{record.onePicName,jdbcType=VARCHAR},
+      two_pic_name = #{record.twoPicName,jdbcType=VARCHAR},
+      three_pic_name = #{record.threePicName,jdbcType=VARCHAR},
+      gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.vastsum.entity.Image">
+    update image
+    <set>
+      <if test="sn != null">
+        sn = #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="batchId != null">
+        batch_id = #{batchId,jdbcType=BIGINT},
+      </if>
+      <if test="sensorMark != null">
+        sensor_mark = #{sensorMark,jdbcType=VARCHAR},
+      </if>
+      <if test="onePicName != null">
+        one_pic_name = #{onePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="twoPicName != null">
+        two_pic_name = #{twoPicName,jdbcType=VARCHAR},
+      </if>
+      <if test="threePicName != null">
+        three_pic_name = #{threePicName,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.Image">
+    update image
+    set sn = #{sn,jdbcType=VARCHAR},
+      batch_id = #{batchId,jdbcType=BIGINT},
+      sensor_mark = #{sensorMark,jdbcType=VARCHAR},
+      one_pic_name = #{onePicName,jdbcType=VARCHAR},
+      two_pic_name = #{twoPicName,jdbcType=VARCHAR},
+      three_pic_name = #{threePicName,jdbcType=VARCHAR},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

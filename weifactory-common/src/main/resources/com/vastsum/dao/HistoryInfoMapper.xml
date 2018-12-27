@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vastsum.dao.HistoryInfoMapper">
+  <resultMap id="BaseResultMap" type="com.vastsum.entity.HistoryInfo">
+    <id column="history_id" jdbcType="BIGINT" property="historyId" />
+    <result column="batch_id" jdbcType="BIGINT" property="batchId" />
+    <result column="history_no" jdbcType="VARCHAR" property="historyNo" />
+    <result column="sn" jdbcType="VARCHAR" property="sn" />
+    <result column="one_temperature" jdbcType="DOUBLE" property="oneTemperature" />
+    <result column="one_humidity" jdbcType="DOUBLE" property="oneHumidity" />
+    <result column="one_yy" jdbcType="VARCHAR" property="oneYy" />
+    <result column="one_led_1" jdbcType="VARCHAR" property="oneLed1" />
+    <result column="one_led_2" jdbcType="VARCHAR" property="oneLed2" />
+    <result column="one_led_3" jdbcType="VARCHAR" property="oneLed3" />
+    <result column="two_temperature" jdbcType="DOUBLE" property="twoTemperature" />
+    <result column="two_humidity" jdbcType="DOUBLE" property="twoHumidity" />
+    <result column="two_yy" jdbcType="VARCHAR" property="twoYy" />
+    <result column="two_led_1" jdbcType="VARCHAR" property="twoLed1" />
+    <result column="two_led_2" jdbcType="VARCHAR" property="twoLed2" />
+    <result column="two_led_3" jdbcType="VARCHAR" property="twoLed3" />
+    <result column="three_temperature" jdbcType="DOUBLE" property="threeTemperature" />
+    <result column="three_humidity" jdbcType="DOUBLE" property="threeHumidity" />
+    <result column="three_yy" jdbcType="VARCHAR" property="threeYy" />
+    <result column="three_led_1" jdbcType="VARCHAR" property="threeLed1" />
+    <result column="three_led_2" jdbcType="VARCHAR" property="threeLed2" />
+    <result column="three_led_3" jdbcType="VARCHAR" property="threeLed3" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    history_id, batch_id, history_no, sn, one_temperature, one_humidity, one_yy, one_led_1, 
+    one_led_2, one_led_3, two_temperature, two_humidity, two_yy, two_led_1, two_led_2, 
+    two_led_3, three_temperature, three_humidity, three_yy, three_led_1, three_led_2, 
+    three_led_3, gmt_create, gmt_modified
+  </sql>
+  <select id="selectByExample" parameterType="com.vastsum.entity.HistoryInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from history_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from history_info
+    where history_id = #{historyId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from history_info
+    where history_id = #{historyId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.vastsum.entity.HistoryInfoExample">
+    delete from history_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.vastsum.entity.HistoryInfo">
+    insert into history_info (history_id, batch_id, history_no, 
+      sn, one_temperature, one_humidity, 
+      one_yy, one_led_1, one_led_2, 
+      one_led_3, two_temperature, two_humidity, 
+      two_yy, two_led_1, two_led_2, 
+      two_led_3, three_temperature, three_humidity, 
+      three_yy, three_led_1, three_led_2, 
+      three_led_3, gmt_create, gmt_modified
+      )
+    values (#{historyId,jdbcType=BIGINT}, #{batchId,jdbcType=BIGINT}, #{historyNo,jdbcType=VARCHAR}, 
+      #{sn,jdbcType=VARCHAR}, #{oneTemperature,jdbcType=DOUBLE}, #{oneHumidity,jdbcType=DOUBLE}, 
+      #{oneYy,jdbcType=VARCHAR}, #{oneLed1,jdbcType=VARCHAR}, #{oneLed2,jdbcType=VARCHAR}, 
+      #{oneLed3,jdbcType=VARCHAR}, #{twoTemperature,jdbcType=DOUBLE}, #{twoHumidity,jdbcType=DOUBLE}, 
+      #{twoYy,jdbcType=VARCHAR}, #{twoLed1,jdbcType=VARCHAR}, #{twoLed2,jdbcType=VARCHAR}, 
+      #{twoLed3,jdbcType=VARCHAR}, #{threeTemperature,jdbcType=DOUBLE}, #{threeHumidity,jdbcType=DOUBLE}, 
+      #{threeYy,jdbcType=VARCHAR}, #{threeLed1,jdbcType=VARCHAR}, #{threeLed2,jdbcType=VARCHAR}, 
+      #{threeLed3,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.vastsum.entity.HistoryInfo">
+    insert into history_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="historyId != null">
+        history_id,
+      </if>
+      <if test="batchId != null">
+        batch_id,
+      </if>
+      <if test="historyNo != null">
+        history_no,
+      </if>
+      <if test="sn != null">
+        sn,
+      </if>
+      <if test="oneTemperature != null">
+        one_temperature,
+      </if>
+      <if test="oneHumidity != null">
+        one_humidity,
+      </if>
+      <if test="oneYy != null">
+        one_yy,
+      </if>
+      <if test="oneLed1 != null">
+        one_led_1,
+      </if>
+      <if test="oneLed2 != null">
+        one_led_2,
+      </if>
+      <if test="oneLed3 != null">
+        one_led_3,
+      </if>
+      <if test="twoTemperature != null">
+        two_temperature,
+      </if>
+      <if test="twoHumidity != null">
+        two_humidity,
+      </if>
+      <if test="twoYy != null">
+        two_yy,
+      </if>
+      <if test="twoLed1 != null">
+        two_led_1,
+      </if>
+      <if test="twoLed2 != null">
+        two_led_2,
+      </if>
+      <if test="twoLed3 != null">
+        two_led_3,
+      </if>
+      <if test="threeTemperature != null">
+        three_temperature,
+      </if>
+      <if test="threeHumidity != null">
+        three_humidity,
+      </if>
+      <if test="threeYy != null">
+        three_yy,
+      </if>
+      <if test="threeLed1 != null">
+        three_led_1,
+      </if>
+      <if test="threeLed2 != null">
+        three_led_2,
+      </if>
+      <if test="threeLed3 != null">
+        three_led_3,
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create,
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="historyId != null">
+        #{historyId,jdbcType=BIGINT},
+      </if>
+      <if test="batchId != null">
+        #{batchId,jdbcType=BIGINT},
+      </if>
+      <if test="historyNo != null">
+        #{historyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sn != null">
+        #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="oneTemperature != null">
+        #{oneTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="oneHumidity != null">
+        #{oneHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="oneYy != null">
+        #{oneYy,jdbcType=VARCHAR},
+      </if>
+      <if test="oneLed1 != null">
+        #{oneLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="oneLed2 != null">
+        #{oneLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="oneLed3 != null">
+        #{oneLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="twoTemperature != null">
+        #{twoTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="twoHumidity != null">
+        #{twoHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="twoYy != null">
+        #{twoYy,jdbcType=VARCHAR},
+      </if>
+      <if test="twoLed1 != null">
+        #{twoLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="twoLed2 != null">
+        #{twoLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="twoLed3 != null">
+        #{twoLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="threeTemperature != null">
+        #{threeTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="threeHumidity != null">
+        #{threeHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="threeYy != null">
+        #{threeYy,jdbcType=VARCHAR},
+      </if>
+      <if test="threeLed1 != null">
+        #{threeLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="threeLed2 != null">
+        #{threeLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="threeLed3 != null">
+        #{threeLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null">
+        #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.vastsum.entity.HistoryInfoExample" resultType="java.lang.Long">
+    select count(*) from history_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update history_info
+    <set>
+      <if test="record.historyId != null">
+        history_id = #{record.historyId,jdbcType=BIGINT},
+      </if>
+      <if test="record.batchId != null">
+        batch_id = #{record.batchId,jdbcType=BIGINT},
+      </if>
+      <if test="record.historyNo != null">
+        history_no = #{record.historyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sn != null">
+        sn = #{record.sn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.oneTemperature != null">
+        one_temperature = #{record.oneTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="record.oneHumidity != null">
+        one_humidity = #{record.oneHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="record.oneYy != null">
+        one_yy = #{record.oneYy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.oneLed1 != null">
+        one_led_1 = #{record.oneLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.oneLed2 != null">
+        one_led_2 = #{record.oneLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.oneLed3 != null">
+        one_led_3 = #{record.oneLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.twoTemperature != null">
+        two_temperature = #{record.twoTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="record.twoHumidity != null">
+        two_humidity = #{record.twoHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="record.twoYy != null">
+        two_yy = #{record.twoYy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.twoLed1 != null">
+        two_led_1 = #{record.twoLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.twoLed2 != null">
+        two_led_2 = #{record.twoLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.twoLed3 != null">
+        two_led_3 = #{record.twoLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.threeTemperature != null">
+        three_temperature = #{record.threeTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="record.threeHumidity != null">
+        three_humidity = #{record.threeHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="record.threeYy != null">
+        three_yy = #{record.threeYy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.threeLed1 != null">
+        three_led_1 = #{record.threeLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.threeLed2 != null">
+        three_led_2 = #{record.threeLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.threeLed3 != null">
+        three_led_3 = #{record.threeLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gmtCreate != null">
+        gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.gmtModified != null">
+        gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update history_info
+    set history_id = #{record.historyId,jdbcType=BIGINT},
+      batch_id = #{record.batchId,jdbcType=BIGINT},
+      history_no = #{record.historyNo,jdbcType=VARCHAR},
+      sn = #{record.sn,jdbcType=VARCHAR},
+      one_temperature = #{record.oneTemperature,jdbcType=DOUBLE},
+      one_humidity = #{record.oneHumidity,jdbcType=DOUBLE},
+      one_yy = #{record.oneYy,jdbcType=VARCHAR},
+      one_led_1 = #{record.oneLed1,jdbcType=VARCHAR},
+      one_led_2 = #{record.oneLed2,jdbcType=VARCHAR},
+      one_led_3 = #{record.oneLed3,jdbcType=VARCHAR},
+      two_temperature = #{record.twoTemperature,jdbcType=DOUBLE},
+      two_humidity = #{record.twoHumidity,jdbcType=DOUBLE},
+      two_yy = #{record.twoYy,jdbcType=VARCHAR},
+      two_led_1 = #{record.twoLed1,jdbcType=VARCHAR},
+      two_led_2 = #{record.twoLed2,jdbcType=VARCHAR},
+      two_led_3 = #{record.twoLed3,jdbcType=VARCHAR},
+      three_temperature = #{record.threeTemperature,jdbcType=DOUBLE},
+      three_humidity = #{record.threeHumidity,jdbcType=DOUBLE},
+      three_yy = #{record.threeYy,jdbcType=VARCHAR},
+      three_led_1 = #{record.threeLed1,jdbcType=VARCHAR},
+      three_led_2 = #{record.threeLed2,jdbcType=VARCHAR},
+      three_led_3 = #{record.threeLed3,jdbcType=VARCHAR},
+      gmt_create = #{record.gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{record.gmtModified,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.vastsum.entity.HistoryInfo">
+    update history_info
+    <set>
+      <if test="batchId != null">
+        batch_id = #{batchId,jdbcType=BIGINT},
+      </if>
+      <if test="historyNo != null">
+        history_no = #{historyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sn != null">
+        sn = #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="oneTemperature != null">
+        one_temperature = #{oneTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="oneHumidity != null">
+        one_humidity = #{oneHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="oneYy != null">
+        one_yy = #{oneYy,jdbcType=VARCHAR},
+      </if>
+      <if test="oneLed1 != null">
+        one_led_1 = #{oneLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="oneLed2 != null">
+        one_led_2 = #{oneLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="oneLed3 != null">
+        one_led_3 = #{oneLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="twoTemperature != null">
+        two_temperature = #{twoTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="twoHumidity != null">
+        two_humidity = #{twoHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="twoYy != null">
+        two_yy = #{twoYy,jdbcType=VARCHAR},
+      </if>
+      <if test="twoLed1 != null">
+        two_led_1 = #{twoLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="twoLed2 != null">
+        two_led_2 = #{twoLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="twoLed3 != null">
+        two_led_3 = #{twoLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="threeTemperature != null">
+        three_temperature = #{threeTemperature,jdbcType=DOUBLE},
+      </if>
+      <if test="threeHumidity != null">
+        three_humidity = #{threeHumidity,jdbcType=DOUBLE},
+      </if>
+      <if test="threeYy != null">
+        three_yy = #{threeYy,jdbcType=VARCHAR},
+      </if>
+      <if test="threeLed1 != null">
+        three_led_1 = #{threeLed1,jdbcType=VARCHAR},
+      </if>
+      <if test="threeLed2 != null">
+        three_led_2 = #{threeLed2,jdbcType=VARCHAR},
+      </if>
+      <if test="threeLed3 != null">
+        three_led_3 = #{threeLed3,jdbcType=VARCHAR},
+      </if>
+      <if test="gmtCreate != null">
+        gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="gmtModified != null">
+        gmt_modified = #{gmtModified,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where history_id = #{historyId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.vastsum.entity.HistoryInfo">
+    update history_info
+    set batch_id = #{batchId,jdbcType=BIGINT},
+      history_no = #{historyNo,jdbcType=VARCHAR},
+      sn = #{sn,jdbcType=VARCHAR},
+      one_temperature = #{oneTemperature,jdbcType=DOUBLE},
+      one_humidity = #{oneHumidity,jdbcType=DOUBLE},
+      one_yy = #{oneYy,jdbcType=VARCHAR},
+      one_led_1 = #{oneLed1,jdbcType=VARCHAR},
+      one_led_2 = #{oneLed2,jdbcType=VARCHAR},
+      one_led_3 = #{oneLed3,jdbcType=VARCHAR},
+      two_temperature = #{twoTemperature,jdbcType=DOUBLE},
+      two_humidity = #{twoHumidity,jdbcType=DOUBLE},
+      two_yy = #{twoYy,jdbcType=VARCHAR},
+      two_led_1 = #{twoLed1,jdbcType=VARCHAR},
+      two_led_2 = #{twoLed2,jdbcType=VARCHAR},
+      two_led_3 = #{twoLed3,jdbcType=VARCHAR},
+      three_temperature = #{threeTemperature,jdbcType=DOUBLE},
+      three_humidity = #{threeHumidity,jdbcType=DOUBLE},
+      three_yy = #{threeYy,jdbcType=VARCHAR},
+      three_led_1 = #{threeLed1,jdbcType=VARCHAR},
+      three_led_2 = #{threeLed2,jdbcType=VARCHAR},
+      three_led_3 = #{threeLed3,jdbcType=VARCHAR},
+      gmt_create = #{gmtCreate,jdbcType=TIMESTAMP},
+      gmt_modified = #{gmtModified,jdbcType=TIMESTAMP}
+    where history_id = #{historyId,jdbcType=BIGINT}
+  </update>
+</mapper>

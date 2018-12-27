@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatistis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vastsum.dao.JoinMapper">
+    <!--用户角色关联表-->
+    <resultMap id="UserInfoMap" type="com.vastsum.entity.vo.UserInfo">
+        <id column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+        <result column="user_email" jdbcType="VARCHAR" property="email" />
+        <result column="user_weixin_id" jdbcType="VARCHAR" property="weixinId" />
+        <result column="user_weixin_nickname" jdbcType="VARCHAR" property="weixinNickName" />
+        <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+        <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+        <result column="personal_introduction" jdbcType="LONGVARCHAR" property="introduction" />
+        <result column="role_name" jdbcType="VARCHAR" property="roleName" />
+        <result column="enabled" jdbcType="BIT" property="enabled" />
+    </resultMap>
+
+
+    <select id="selectUserInfoByPrimaryKey" parameterType="java.lang.Integer" resultMap="UserInfoMap">
+        select * from `user` as u
+        left JOIN user_role as ur
+        on u.user_id = ur.user_id
+        left JOIN role as r
+        on ur.role_id = r.role_id
+        WHERE u.user_id = #{userId};
+    </select>
+
+    <select id="selectUserInfoByUserName" parameterType="java.lang.String" resultMap="UserInfoMap">
+        select * from `user` as u
+        left JOIN user_role as ur
+        on u.user_id = ur.user_id
+        left JOIN role as r
+        on ur.role_id = r.role_id
+        WHERE u.user_name = #{userName};
+    </select>
+
+    <resultMap id="BatchInfoMap" type="com.vastsum.entity.vo.BatchInfo">
+        <id column="batch_id" jdbcType="INTEGER" property="batchId" />
+        <result column="device_id" jdbcType="INTEGER" property="deviceId"/>
+        <result column="plant_one" jdbcType="VARCHAR" property="plantOne" />
+        <result column="cult_model_one" jdbcType="VARCHAR" property="cultModelOne" />
+        <result column="temperature_one" jdbcType="DOUBLE" property="temperatureOne" />
+        <result column="humidity_one" jdbcType="DOUBLE" property="humidityOne" />
+        <result column="ec_one" jdbcType="DOUBLE" property="ecOne" />
+        <result column="ph_one" jdbcType="DOUBLE" property="phOne" />
+        <result column="led_one_left" jdbcType="VARCHAR" property="ledOneLeft" />
+        <result column="led_one_middle" jdbcType="VARCHAR" property="ledOneMiddle" />
+        <result column="led_one_right" jdbcType="VARCHAR" property="ledOneRight" />
+        <result column="video_one" jdbcType="VARCHAR" property="videoOne" />
+        <result column="plant_two" jdbcType="VARCHAR" property="plantTwo" />
+        <result column="cult_model_two" jdbcType="VARCHAR" property="cultModelTwo" />
+        <result column="temperature_two" jdbcType="DOUBLE" property="temperatureTwo" />
+        <result column="humidity_two" jdbcType="DOUBLE" property="humidityTwo" />
+        <result column="ec_two" jdbcType="DOUBLE" property="ecTwo" />
+        <result column="ph_two" jdbcType="DOUBLE" property="phTwo" />
+        <result column="led_two_left" jdbcType="VARCHAR" property="ledTwoLeft" />
+        <result column="led_two_middle" jdbcType="VARCHAR" property="ledTwoMiddle" />
+        <result column="led_two_right" jdbcType="VARCHAR" property="ledTwoRight" />
+        <result column="video_two" jdbcType="VARCHAR" property="videoTwo" />
+        <result column="plant_three" jdbcType="VARCHAR" property="plantThree" />
+        <result column="cult_model_three" jdbcType="VARCHAR" property="cultModelThree" />
+        <result column="temperature_three" jdbcType="DOUBLE" property="temperatureThree" />
+        <result column="humidity_three" jdbcType="DOUBLE" property="humidityThree" />
+        <result column="ec_three" jdbcType="DOUBLE" property="ecThree" />
+        <result column="ph_three" jdbcType="DOUBLE" property="phThree" />
+        <result column="led_three_left" jdbcType="VARCHAR" property="ledThreeLeft" />
+        <result column="led_three_middle" jdbcType="VARCHAR" property="ledThreeMiddle" />
+        <result column="led_three_right" jdbcType="VARCHAR" property="ledThreeRight" />
+        <result column="video_three" jdbcType="VARCHAR" property="videoThree" />
+        <result column="status" jdbcType="VARCHAR" property="status" />
+        <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+        <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+        <result column="sn" jdbcType="VARCHAR" property="sn"/>
+    </resultMap>
+
+
+    <select id="selectBatchInfos" resultMap="BatchInfoMap">
+        SELECT * FROM batch AS b
+        LEFT JOIN device AS d
+        ON b.device_id = d.device_id ORDER BY b.gmt_create DESC
+    </select>
+
+    <select id="selectBatchInfoByUserId" parameterType="java.lang.Integer" resultMap="BatchInfoMap">
+        SELECT * FROM weifactory.batch AS b
+        LEFT JOIN weifactory.device AS d
+        ON b.device_id = d.device_id
+        WHERE d.user_id = #{userId} AND status = '1' ORDER BY batch_id DESC
+    </select>
+    
+    <!-- userDevice -->
+      <resultMap id="UserDeviceDto" type="com.vastsum.entity.vo.UserDevice">
+        <id column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="user_name" jdbcType="VARCHAR" property="username"/>
+        <result column="realname" jdbcType="VARCHAR" property="realname" />
+        <result column="user_phone" jdbcType="VARCHAR" property="userPhone" />
+        <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
+        
+        <result column="device_id" jdbcType="INTEGER" property="deviceId"/>
+        <result column="sn" jdbcType="VARCHAR" property="sn" />
+        <result column="note" jdbcType="VARCHAR" property="note" />
+        <result column="device_type" jdbcType="VARCHAR" property="deviceType" />
+        <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+   	 </resultMap>
+   	 
+   	 <select id="findByUserDeviceDto" resultMap="UserDeviceDto">
+        SELECT * FROM device AS D LEFT JOIN user AS U ON D.USER_ID = U.USER_ID ORDER BY D.GMT_CREATE DESC
+    </select>
+</mapper>
