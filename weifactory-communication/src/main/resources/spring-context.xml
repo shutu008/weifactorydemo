@@ -6,56 +6,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<dubbo:application name="demo-provider"/>
-    <dubbo:registry protocol="zookeeper" address="121.196.217.247:8366" subscribe="false" />
+    <dubbo:registry protocol="zookeeper" address="" subscribe="false" />
     <dubbo:protocol name="dubbo" port="20880"/>
     <dubbo:service interface="com.vastsum.core.service.HandRemoteService" ref="handRemoteService" />
     <bean id="handRemoteService" class="com.vastsum.server.Impl.HandRemoteServiceImpl"/>
 
 
-    <!--注解注入-->
-    <context:annotation-config/>
-    <context:component-scan base-package="com.vastsum"/>
 
-    <context:property-placeholder location="classpath:db.properties" />
-    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="${jdbc.driver}"/>
-        <property name="url" value="${jdbc.url}"/>
-        <property name="username" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-    </bean>
-    <!--注册jdbcTemplate-->
-    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-        <constructor-arg ref="datasource"/>
-    </bean>
-    
-   <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-    <property name="dataSource" ref="datasource"></property>
-    <property name="mapperLocations" value="classpath:com/vastsum/dao/*.xml"></property>
-   </bean>
-   
-   <!-- 创建Mapper层的对象 -->
-   <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	  <property name="basePackage" value="com.vastsum.dao" />
-	  <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
-   </bean>
-
-    <!--数据处理service-->
-    <!--  
-    <bean id="dataService" class="com.vastsum.server.Impl.DataServiceImpl" scope="singleton">
-        <constructor-arg ref="jdbcTemplate"/>
-    </bean>
-    -->
-
-    <!--采集数据处理-->
-    <!--  
-    <bean id="sensorService" class="com.vastsum.server.Impl.SensorServiceImpl">
-        <constructor-arg ref="jdbcTemplate"/>
-    </bean>
-	-->
-    <bean id="SpringConfigUtil" class="com.vastsum.utils.SpringConfigUtil"/>
-
-    <!--业务总控处理,每个channel对应一个handle-->
-    <bean id="serverHandler" class="com.vastsum.main.NewServerHandler" scope="prototype">
-        <!--  <property name="dataService" ref="dataService"/> -->
-    </bean>
 </beans>
